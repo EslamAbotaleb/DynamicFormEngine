@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "search (2) 1.pdf",
+      "idiom" : "universal"
+    },
+    {
+      "filename" : "search21.pdf",
+      "idiom" : "universal",
+      "locale" : "ar"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "localizable" : true,
+    "preserves-vector-representation" : true,
+    "template-rendering-intent" : "template"
+  }
+}

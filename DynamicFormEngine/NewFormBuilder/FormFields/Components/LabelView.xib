@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LabelView" customModule="CHECK" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="D7p-zW-EGz"/>
+                <outlet property="fieldLabel" destination="Dio-R5-ofy" id="trp-Kv-RJc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="630" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dio-R5-ofy" customClass="AutomaticallyLocalizedLabel" customModule="CHECK" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="630" height="80"/>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <string key="content">TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX TEXT BOX </string>
+                            <attributes>
+                                <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" lineHeightMultiple="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Dio-R5-ofy" secondAttribute="trailing" id="OFp-v6-49x"/>
+                <constraint firstItem="Dio-R5-ofy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ayt-G3-hrR"/>
+                <constraint firstItem="Dio-R5-ofy" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tDM-fk-U3M"/>
+                <constraint firstAttribute="bottom" secondItem="Dio-R5-ofy" secondAttribute="bottom" id="vl2-Sw-uaN"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="294.20289855072468" y="-191.51785714285714"/>
+        </view>
+    </objects>
+</document>

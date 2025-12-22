@@ -1,0 +1,243 @@
+/*
+  Localizable.strings
+  GAZT
+
+  Created by iSlam AbdelAziz on 11/9/20.
+  Copyright © 2020 Youxel. All rights reserved.
+*/
+"dayss ago" = "%@ days ago";
+"hourss ago" = "%@ hours ago";
+"minutess ago" = "%@ minutes ago";
+"minute ago" = "minute ago";
+"secondss ago" = "%@ seconds ago";
+"Send back Levels" = "Send back Levels";
+"Select" = "Select";
+"Sent Back Successfully" = "Sent Back Successfully";
+"Your task has been Sent back successfully" = "Your task has been Sent back successfully";
+"Send Back" = "Send Back";
+"Send Back To" = "Send Back To";
+"Type your comment here" = "Type your comment here";
+"Delegated Successfully" = "Delegated Successfully";
+"The task has been delegated to" = "The task has been delegated to";
+"successfully" = "successfully";
+"Confirm Leave Page" = "Confirm Leave Page";
+"Are you sure you want to leave this page, All unsaved changes will be lost" = "Are you sure you want to leave this page, All unsaved changes will be lost";
+"Leave" = "Leave";
+"Type your reason here" = "Type your reason here";
+"Delegate" = "Delegate";
+"Comment (Optional)" = "Comment (Optional)";
+"Select Name" = "Select Name";
+"Delegate To" = "Delegate To";
+"In order to take action, please, " = "In order to take action, please, ";
+"Click Here" = "Click Here";
+" to add the required data first." = " to add the required data first.";
+"equired data completed.Proceed with submission or " = "equired data completed.Proceed with submission or ";
+" to edit." = " to edit.";
+"View All Services" = "View All Services";
+
+"medicalID" = "Medical ID" ;
+"No Medical Insurance Yet!" = "No Medical Insurance Yet!" ;
+"insuranceCompanyName" = "Insurance Company Name" ;
+"insuranceTier" = "Insurance Tier" ;
+"Edit Medical Insurance" = "Edit Medical Insurance" ;
+"New Medical Insurance" = "New Medical Insurance" ;
+"jobId" = "Job Id";
+"Department" = "Department";
+"jobType" = "Job Type";
+"startDate" = "Start Date" ;
+"endDate" = "End Date" ;
+"organizationName" = "Organization Name" ;
+"jobTitle" = "Job Title" ;
+"date" = "Date" ;
+"name" = "Name" ;
+"issuingOrganization" = "Issuing Organization" ;
+"attachment" = "Attachment" ;
+"Certificates & Courses" = "Certificates & Courses" ;
+"No Certificates & Courses Yet!" = "No Certificates & Courses Yet!" ;
+"Please enter job title" = "Please enter job title";
+"Please enter job title less than 100 characters" = "Please enter job title less than 100 characters";
+"Please enter organization name" = "Please enter organization name";
+"Please enter organization name less than 100 characters" = "Please enter organization name less than 100 characters";
+"Please enter start date of work experience" = "Please enter start date of work experience";
+"Please enter end date of work experience" = "Please enter end date of work experience";
+"min_to_max_vaildation" = "%@ must be between %@ and %@ characters";
+"enter_min_chars_to_search" = "Enter at least %d chars to apply search";
+"required_validation" = "%@ is required. Please enter a value";
+"list_validation" = "Please select an option from %@ list";
+"Invaild_format"  = "Invalid format. Please follow the format %@.";
+"Invaild_entry" = "Invalid entry. Please enter a valid number or character %@.";
+"Your request" = "Your request";
+"Submitted successfully" = "Submitted successfully";
+"Give your Feedback" = "Give your Feedback";
+"Are you satisfied with the service provided to you to build this application?" = "Are you satisfied with the service provided to you to build this application?";
+"Very Bad" = "Very Bad";
+"Bad" = "Bad";
+"Fair" = "Fair";
+"Good" = "Good";
+"Excellent" = "Excellent";
+"Type here the note" = "Type here the note";
+"Note" = "Note";
+"Edit Request" = "Edit Request";
+"Withdraw" = "Withdraw";
+"Latest Newss" = "Latest";
+"Latest Internal News" = "Latest";
+"OperationError" = "Username or password is wrong, if you have a problem you can contact your administrator";
+"Latest News1" = "Latest News";
+"Latest Internal News1" = "Latest";
+"Latest Announcements" = "Latest Announcements";
+"No Latest Deals & Promotions Yet!" = "No Latest Deals & Promotions Yet!";
+"minutes ago" = "%@ minutes ago";
+"weeks ago" = "%@ weeks ago";
+"days ago" = "%@ days ago";
+"hours ago" = "%@ hours ago";
+"Payroll Information" = "Bank Account";
+"Cer Name" = "Name";
+"Work Time Period" = "Time Period";
+"Edu Time Period" = "Time Period";
+"Personal" = "Personal information";
+"Contact" = "Contact & addresses";
+"Emergency" = "Emergency Contacts";
+"Search by request name" = "Search by request Id";
+"and will respond , as soon as we can." = " and will respond as soon as we can.";
+
+/*
+ * Update dialog buttons
+ */
+"MSDistributeUpdateNow" = "Update now";
+"MSDistributeAskMeInADay" = "Ask me in a day";
+"MSDistributeViewReleaseNotes" = "View release notes";
+"MSDistributeClose" = "Close";
+"MSDistributeIgnore" = "Ignore";
+"MSDistributeReinstall" = "Reinstall app";
+
+/*
+ * Update dialog titles/messages
+ */
+
+"MSDistributeAppUpdateAvailable" = "App update available";
+"MSDistributeAppUpdateAvailableMandatoryUpdateMessage" = "The developers of this app require you to update to %@ %@ (%@).";
+"MSDistributeAppUpdateAvailableOptionalUpdateMessage" = "%@ %@ (%@) is available to download and install.";
+"MSDistributeInAppUpdatesAreDisabled" = "In-app updates disabled";
+"MSDistributeInstallFailedMessage" = "This release was either side-loaded or downloaded using a browser in private mode.";
+
+"Latest Requests" = "Latest Requests";
+
+/*
+ * Time Off Request titles/messages
+ */
+"Send To Approve" = "Send To Approve";
+
+
+"My Dashboard" = "Dashboard";
+"password" = "Change Password";
+"notification" = "Notifications";
+"language" = "Default language";
+"accessibility" = "Personal accessability";
+"My Favourites" = "My Favorites";
+"No Tasks Statistics Yet!" = "No Tasks Statistics Yet!";
+"No Requests Statistics Yet!" = "No Requests Statistics Yet!";
+"No Latest News Yet!" = "No Latest News Yet!";
+"Sort By" = "Sort By";
+"Showing" = "Showing";
+"No Active Events Yet!" = "No Active Events Yet!";
+"Latest Deals & Promotions" = "Latest Deals & Promotions";
+"No Pasts Events Found!" = "No Pasts Events Found!";
+"Upcoming" = "Upcoming";
+"Pasts" = "Pasts";
+"Requests" = "Requests";
+"Home" = "Home";
+"Favorite Services" = "Favorite Services";
+"Low" = "Low";
+"Medium" = "Medium";
+"High" = "High";
+"No Media Library Yet!" = "No Media Library Yet!";
+"No Recent media Yet!" = "No Recent media Yet!";
+"Recent Media" = "Recent Media";
+"Active Events" = "Active Events";
+"Acknowledge" = "Acknowledge";
+"Please specify the reason" = "Please specify the reason";
+"Reason" = "Reason";
+"Task Action successfully" = "Task Action %d successfully";
+"Latest Requests" = "Latest Requests";
+
+/*
+ * Time Off Request titles/messages
+ */
+"Send To Approve" = "Send To Approve";
+
+"My Inbox" = "My Tasks";
+"My Dashboard" = "Dashboard";
+"password" = "Change Password";
+"notification" = "Notifications";
+"language" = "Default language";
+"accessibility" = "Personal accessability";
+"No Tasks Statistics Yet!" = "No Tasks Statistics Yet!";
+"No Requests Statistics Yet!" = "No Requests Statistics Yet!";
+"No Latest News Yet!" = "No Latest News Yet!";
+"Sort By" = "Sort By";
+"Showing" = "Showing";
+"No Active Events Yet!" = "No Active Events Yet!";
+"Latest Deals & Promotions" = "Latest Deals & Promotions";
+"No Pasts Events Found!" = "No Pasts Events Found!";
+"Upcoming" = "Upcoming";
+"Pasts" = "Pasts";
+"Requests" = "Requests";
+"Home" = "Home";
+"Favorite Services" = "Favorite Services";
+"Low" = "Low";
+"Medium" = "Medium";
+"High" = "High";
+"No Media Library Yet!" = "No Media Library Yet!";
+"No Recent media Yet!" = "No Recent media Yet!";
+"Recent Media" = "Recent Media";
+"Active Events" = "Active Events";
+"Requested by me" = "Requested by me" ;
+"Welcome Back ," = "Welcome Back ,";
+"Filter" = "Filter";
+"Log out" = "Log out";
+"Replying to " = "Replying to ";
+
+"Total Inbox" = "Total Tasks";
+"Total Requests" = "Total Requests";
+
+"Rejected" = "Rejected";
+"In progress" = "In progress";
+"Pending" = "Pending";
+"Approved" = "Approved";
+"Statistics Performance" = "Statistics Performance";
+"New" = "New";
+"Your request Submitted successfully" = "Your request Submitted successfully";
+"Please wait for a response from management Your request ID:#" = "Please wait for a response from management Your request ID:#";
+"View Requests" = "View Requests";
+"Submit" = "Submit";
+"year" = "year";
+"years" = "years";
+"month" =  "month";
+"months" = "months";
+"week" = "week";
+"weeks" = "weeks";
+"day" = "day";
+"days" = "days";
+"hr" = "hr";
+"hrs" ="hrs";
+"min" = "min";
+"mins" = "mins";
+"sec" = "sec";
+"secs" = "secs";
+"Type your comment here" = "Type your comment here";
+"Take a photo" = "Take a photo";
+"Choose a photo" = "Choose a photo";
+"Remove uploaded image" = "Remove uploaded image";
+"Edit Image" = "Edit Image";
+"My Digital Card" = "My Digital Card";
+"Task Action" = "Task Action";
+"Task Action successfully" = "Task Action successfully";
+"Showing" = "Showing";
+"This is a Required Field" = "This is a Required Field";
+"Discard All Updates" = "Discard All Updates";
+"Do you want to Discard all updates ?" = "Do you want to Discard all updates ?";
+"Confirm Leave Page" = "Confirm Leave Page";
+"You are about to lose all changes" = "You are about to lose all changes";
+"Leave" = "Leave";
+
+

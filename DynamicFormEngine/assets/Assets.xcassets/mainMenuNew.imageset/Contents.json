@@ -1,0 +1,15 @@
+{
+  "images" : [
+    {
+      "filename" : "icon _ outlined _ action _ main _ menu.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "template"
+  }
+}

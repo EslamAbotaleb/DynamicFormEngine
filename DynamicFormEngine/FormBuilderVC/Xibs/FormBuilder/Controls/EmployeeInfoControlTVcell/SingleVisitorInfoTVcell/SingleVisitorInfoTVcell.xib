@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SST Arabic Roman.ttf">
+            <string>SSTArabic-Roman</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="261" id="KGk-i7-Jjw" customClass="SingleVisitorInfoTVcell" customModule="GAZT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="261"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hbu-sE-wg7">
+                        <rect key="frame" x="8" y="8" width="304" height="245"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-C3-8wx">
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="22"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhz-mB-Utk">
+                                        <rect key="frame" x="274" y="0.0" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="N2z-E8-4lO"/>
+                                        </constraints>
+                                        <color key="tintColor" name="coralTwo"/>
+                                        <state key="normal" image="minus"/>
+                                        <connections>
+                                            <action selector="removeBtnTapped" destination="KGk-i7-Jjw" eventType="touchUpInside" id="et9-ZU-Qs3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jhz-mB-Utk" secondAttribute="bottom" id="d6G-7M-PBV"/>
+                                    <constraint firstAttribute="trailing" secondItem="jhz-mB-Utk" secondAttribute="trailing" constant="8" id="nOD-HY-VUa"/>
+                                    <constraint firstAttribute="height" constant="22" id="vvK-sg-d27"/>
+                                    <constraint firstItem="jhz-mB-Utk" firstAttribute="top" secondItem="bbc-C3-8wx" secondAttribute="top" id="wEe-qf-Fll"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="rjy-mg-mXK">
+                                <rect key="frame" x="0.0" y="30" width="304" height="56"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Name " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACH-ym-0a7" customClass="LocalizedLabel" customModule="GAZT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="JAJ-7j-bjf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="10"/>
+                                        <color key="textColor" name="blue_grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="1UW-14-M7a">
+                                        <rect key="frame" x="0.0" y="22" width="304" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="gk7-NZ-eeY"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="KGk-i7-Jjw" id="Xzr-qN-crW"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="yuO-gb-fCo">
+                                <rect key="frame" x="0.0" y="94" width="304" height="77"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="National Id / Iqama" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gA-4L-Tkm" customClass="LocalizedLabel" customModule="GAZT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Jzl-qd-kQU"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="10"/>
+                                        <color key="textColor" name="blue_grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="National ID must start with 1,Iqama must start with 2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01t-hP-Xjt" customClass="LocalizedLabel" customModule="GAZT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="32" width="304" height="9"/>
+                                        <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="10"/>
+                                        <color key="textColor" name="blue_grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="e05-9c-jdO">
+                                        <rect key="frame" x="0.0" y="43" width="304" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="iUn-7W-8zd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="KGk-i7-Jjw" id="emF-mY-7SH"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dY0-Eo-gks">
+                                <rect key="frame" x="0.0" y="179" width="304" height="66"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Mobile Number " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJf-Pf-Mg2" customClass="LocalizedLabel" customModule="GAZT" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="KHc-xH-gbF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="10"/>
+                                        <color key="textColor" name="blue_grey"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="9no-T6-ouB">
+                                        <rect key="frame" x="0.0" y="32" width="304" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="oXG-ap-E1S"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="KGk-i7-Jjw" id="Xlk-w7-0TO"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hbu-sE-wg7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="9w2-1B-Lnw"/>
+                    <constraint firstAttribute="trailing" secondItem="hbu-sE-wg7" secondAttribute="trailing" constant="8" id="AQy-O0-LNe"/>
+                    <constraint firstItem="hbu-sE-wg7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="QqJ-Zb-Fzb"/>
+                    <constraint firstAttribute="bottom" secondItem="hbu-sE-wg7" secondAttribute="bottom" constant="8" id="Quf-Ps-Xja"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="idNumberTF" destination="e05-9c-jdO" id="qvB-mP-YQn"/>
+                <outlet property="mobileTF" destination="9no-T6-ouB" id="mHp-Ps-7LD"/>
+                <outlet property="nameTF" destination="1UW-14-M7a" id="xbP-L0-9Re"/>
+                <outlet property="removeBtn" destination="jhz-mB-Utk" id="a2z-NV-9kK"/>
+                <outlet property="removeView" destination="bbc-C3-8wx" id="HTB-gE-XhB"/>
+            </connections>
+            <point key="canvasLocation" x="57.971014492753625" y="156.36160714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="minus" width="128" height="128"/>
+        <namedColor name="blue_grey">
+            <color red="0.52499997615814209" green="0.53299999237060547" blue="0.57999998331069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="coralTwo">
+            <color red="0.92156862745098034" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

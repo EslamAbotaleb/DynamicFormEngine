@@ -1,0 +1,28 @@
+//
+//  FormViewModel.swift
+//  FormBuilderEngine
+//
+//  Created by hassan elshaer on 28/02/2024.
+//
+
+import Foundation
+import RxCocoa
+import RxSwift
+import Photos
+import UIKit
+
+public class  FormDFViewModel: BaseViewModel {
+    
+    // MARK: - Variables
+    
+    private let service: cerqel_NetworkService
+    private let disposeBag = DisposeBag()
+    var view: UIViewController
+
+    
+    init(_ service:  cerqel_NetworkService, view: UIViewController) {
+        self.service = service
+        self.view = view
+        super.init()
+    }
+}

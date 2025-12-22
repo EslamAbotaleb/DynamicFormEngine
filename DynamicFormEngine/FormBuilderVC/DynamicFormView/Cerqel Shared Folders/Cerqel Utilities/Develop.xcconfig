@@ -1,0 +1,48 @@
+//
+//  Develop.xcconfig
+//  GAZT
+//
+//  Created by iSlam on 10/6/20.
+//  Copyright © 2020 Youxel. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-CERQEL/Pods-CERQEL.Develop_Debug.xcconfig"
+
+Self_Service_URL = https:/$()/dev.cerqel.com/dev/gw/selfservices/api/
+User_Manager_URL = https:/$()/dev.cerqel.com/dev/gw/usermanager/api/
+
+API_Base_URL = https:/$()/dev.cerqel.com/dev/gw/
+CONTENT_Base_URL = https:/$()/dev.cerqel.com/dev/gw/content/api/
+Share_Link_URL =  https:/$()/dev.cerqel.com/dev/gw/Portal/landing/
+Notification_Base_URL = https:/$()/dev.cerqel.com/dev/gw/notifications/api/
+FileManager_Base_URL = https:/$()/dev.cerqel.com/dev/gw/Storage/api/
+Mocking_Base_URL = https:/$()/my.api.mockaroo.com/
+
+Base_Url_Without_Http = dev.cerqel.com/dev/gw/
+Base_Url_Format = https:/$()/
+
+External_App_Name = instagram
+
+App_Name = CERQEL_TST
+
+client_id = 8018162825ddd06beac8942aac24e50c
+
+client_secret = 2fe88021465a0681edf1f6d4991de6f7
+
+iv = f17b4d2ab5bfe4cb7d9331fd5760fd38
+
+encryptionKey = FD3F6D32B845F640AA90E9266CE1576A23DBB70F1CA18FE45C6EA027AE76AAAB
+
+X_IBM_Client_Id = 8018162825ddd06beac8942aac24e50c
+
+appCenterKey = 567dc443-b978-4924-910c-37c20424a1ad
+
+
+notificationHubNamespace = YouxelNS
+notificationHubName = YouxelHub
+notificationHubKeyName = DefaultListenSharedAccessSignature
+notificationHubKey = ktoqQR+TguxI8Z0fQIaZ4jqi5g+sdSwIF5PmUJcNstI=
+

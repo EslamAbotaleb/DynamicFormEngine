@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Rubik-Medium.ttf">
+            <string>Rubik-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="302" id="KGk-i7-Jjw" customClass="NPSTableViewCell" customModule="CHECK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="590" height="302"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="590" height="302"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gU6-df-phr">
+                        <rect key="frame" x="24" y="24" width="542" height="254"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MWh-3c-aKM" customClass="LabelView" customModule="CHECK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="542" height="113"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="Jdd-Px-Kcd"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLR-z5-DpF">
+                                <rect key="frame" x="0.0" y="121" width="542" height="75"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rj0-m8-ipl">
+                                        <rect key="frame" x="0.0" y="0.0" width="542" height="47"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfC-OF-7rh">
+                                                <rect key="frame" x="0.0" y="0.0" width="47" height="47"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DfC-OF-7rh" secondAttribute="height" multiplier="1:1" id="GjP-ib-ik5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="KXv-fc-RoI"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ER-lX-Fko">
+                                                <rect key="frame" x="55" y="0.0" width="47" height="47"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Bi-B1-x0H"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQq-c2-XpP">
+                                                <rect key="frame" x="110" y="0.0" width="47" height="47"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ETe-3Q-jvj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jaw-4R-6Lz">
+                                                <rect key="frame" x="165" y="0.0" width="47" height="47"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SgO-7D-32t"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmh-fJ-Ioc">
+                                                <rect key="frame" x="220" y="0.0" width="47" height="47"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LbU-QN-Ust"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehi-Lb-h9a">
+                                                <rect key="frame" x="275" y="0.0" width="47" height="47"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aq1-zu-UjQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2x-R6-oNN">
+                                                <rect key="frame" x="330" y="0.0" width="47" height="47"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ooY-pj-qXX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DqU-Gf-td8">
+                                                <rect key="frame" x="385" y="0.0" width="47" height="47"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gU6-ar-oPh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRp-ea-7yb">
+                                                <rect key="frame" x="440" y="0.0" width="47" height="47"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hqa-r0-FWZ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1y-9w-1So">
+                                                <rect key="frame" x="495" y="0.0" width="47" height="47"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="12"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="10">
+                                                    <color key="titleColor" name="checkText"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="rateAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gxw-AH-AaG"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not at all Likely" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0Q-Ph-fj6" customClass="AutomaticallyLocalizedLabel" customModule="CHECK" customModuleProvider="target">
+                                        <rect key="frame" x="-0.5" y="51" width="48" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="S1g-NR-rYT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="10"/>
+                                        <color key="textColor" name="checkText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Extremely Likely" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQF-3Y-uLl" customClass="AutomaticallyLocalizedLabel" customModule="CHECK" customModuleProvider="target">
+                                        <rect key="frame" x="493.5" y="51" width="50" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="EID-LD-n45"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="10"/>
+                                        <color key="textColor" name="checkText"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="kQF-3Y-uLl" firstAttribute="centerX" secondItem="E1y-9w-1So" secondAttribute="centerX" id="DH5-7U-zBT"/>
+                                    <constraint firstAttribute="bottom" secondItem="kQF-3Y-uLl" secondAttribute="bottom" id="Dc3-e4-fZR"/>
+                                    <constraint firstItem="Rj0-m8-ipl" firstAttribute="top" secondItem="ZLR-z5-DpF" secondAttribute="top" id="Gx7-d1-QFr"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rj0-m8-ipl" secondAttribute="trailing" id="ZOM-IL-VNU"/>
+                                    <constraint firstAttribute="bottom" secondItem="J0Q-Ph-fj6" secondAttribute="bottom" id="grA-zK-jYK"/>
+                                    <constraint firstItem="Rj0-m8-ipl" firstAttribute="leading" secondItem="ZLR-z5-DpF" secondAttribute="leading" id="gyI-1e-e1N"/>
+                                    <constraint firstItem="J0Q-Ph-fj6" firstAttribute="top" secondItem="Rj0-m8-ipl" secondAttribute="bottom" constant="4" id="lcG-mF-Q6J"/>
+                                    <constraint firstItem="kQF-3Y-uLl" firstAttribute="top" secondItem="Rj0-m8-ipl" secondAttribute="bottom" constant="4" id="rsY-hX-WX4"/>
+                                    <constraint firstItem="J0Q-Ph-fj6" firstAttribute="centerX" secondItem="DfC-OF-7rh" secondAttribute="centerX" id="tmV-w9-KH5"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WzN-ft-V32" customClass="AttachmentNoteView" customModule="CHECK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="204" width="542" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="1KJ-gS-oYR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="gU6-df-phr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="02q-ed-9vc"/>
+                    <constraint firstAttribute="bottom" secondItem="gU6-df-phr" secondAttribute="bottom" constant="24" id="2y3-IY-t2Q"/>
+                    <constraint firstItem="gU6-df-phr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="962-uM-f4u"/>
+                    <constraint firstAttribute="trailing" secondItem="gU6-df-phr" secondAttribute="trailing" constant="24" id="gis-JF-NAf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="attachmentNoteView" destination="WzN-ft-V32" id="66X-ap-SjC"/>
+                <outlet property="labelView" destination="MWh-3c-aKM" id="Nni-Od-b1D"/>
+                <outletCollection property="buttonsCollection" destination="DfC-OF-7rh" collectionClass="NSMutableArray" id="LPP-Iu-ohb"/>
+                <outletCollection property="buttonsCollection" destination="Ehi-Lb-h9a" collectionClass="NSMutableArray" id="PeV-Be-tpg"/>
+                <outletCollection property="buttonsCollection" destination="DqU-Gf-td8" collectionClass="NSMutableArray" id="yiY-lh-UlW"/>
+                <outletCollection property="buttonsCollection" destination="Jaw-4R-6Lz" collectionClass="NSMutableArray" id="0sQ-wY-1JK"/>
+                <outletCollection property="buttonsCollection" destination="8ER-lX-Fko" collectionClass="NSMutableArray" id="zgM-xh-Vw9"/>
+                <outletCollection property="buttonsCollection" destination="kQq-c2-XpP" collectionClass="NSMutableArray" id="aSJ-3V-lqz"/>
+                <outletCollection property="buttonsCollection" destination="E1y-9w-1So" collectionClass="NSMutableArray" id="Ll3-U5-I4Z"/>
+                <outletCollection property="buttonsCollection" destination="yRp-ea-7yb" collectionClass="NSMutableArray" id="RjE-ud-UDK"/>
+                <outletCollection property="buttonsCollection" destination="dmh-fJ-Ioc" collectionClass="NSMutableArray" id="j2K-xd-pkG"/>
+                <outletCollection property="buttonsCollection" destination="h2x-R6-oNN" collectionClass="NSMutableArray" id="TXG-6U-MbD"/>
+            </connections>
+            <point key="canvasLocation" x="333.33333333333337" y="186.16071428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="checkText">
+            <color red="0.12156862745098039" green="0.19607843137254902" blue="0.34509803921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

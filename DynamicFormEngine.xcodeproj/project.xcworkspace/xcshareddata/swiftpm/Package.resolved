@@ -1,0 +1,564 @@
+{
+  "originHash" : "4df4469a19537c8e8ca799678b6b560b702cee7fb03670126e39682fc30d23fd",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "state" : {
+        "revision" : "7be73f6c2b5cd90e40798b06ebd5da8f9f79cf88",
+        "version" : "5.11.0"
+      }
+    },
+    {
+      "identity" : "alignedcollectionviewflowlayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mischa-hildebrand/AlignedCollectionViewFlowLayout.git",
+      "state" : {
+        "revision" : "236094ac389234d528cc782c140bcb20724b86bf",
+        "version" : "1.1.3"
+      }
+    },
+    {
+      "identity" : "charts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ChartsOrg/Charts.git",
+      "state" : {
+        "revision" : "dd9c72e3d7e751e769971092a6bd72d39198ae63",
+        "version" : "5.1.0"
+      }
+    },
+    {
+      "identity" : "cosmos",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/Cosmos.git",
+      "state" : {
+        "revision" : "40ba10aaf175bf50abefd0e518bd3b40862af3b1",
+        "version" : "25.0.1"
+      }
+    },
+    {
+      "identity" : "cryptoswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/krzyzanowskim/CryptoSwift.git",
+      "state" : {
+        "revision" : "e45a26384239e028ec87fbcc788f513b67e10d8f",
+        "version" : "1.9.0"
+      }
+    },
+    {
+      "identity" : "dropdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AssistoLab/DropDown.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2ab6f6ce19f0117d1a76ea043ef8f57722c65d16"
+      }
+    },
+    {
+      "identity" : "dynamicblurview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/KyoheiG3/DynamicBlurView.git",
+      "state" : {
+        "revision" : "d69b09d70a689dc7b8ea6aa6de3e63f9e6c545ce",
+        "version" : "5.0.5"
+      }
+    },
+    {
+      "identity" : "easytipview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/teodorpatras/EasyTipView.git",
+      "state" : {
+        "revision" : "1cba0e75f745da03773cd7092480c5fa8cde4a72",
+        "version" : "2.1.0"
+      }
+    },
+    {
+      "identity" : "efqrcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/EFPrefix/EFQRCode.git",
+      "state" : {
+        "revision" : "07ff9e2e83a4bbd384e5a8e33b47f389c9aac762",
+        "version" : "7.0.3"
+      }
+    },
+    {
+      "identity" : "expression",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nicklockwood/Expression.git",
+      "state" : {
+        "revision" : "95ffe4c352e456cede933d9910d25b9c84039d1b",
+        "version" : "0.13.9"
+      }
+    },
+    {
+      "identity" : "ezpopup",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/huynguyencong/EzPopup.git",
+      "state" : {
+        "revision" : "a8429ff1372cdaa5ba6f2e9daf756b6b489542d0",
+        "version" : "1.2.4"
+      }
+    },
+    {
+      "identity" : "fittedsheets",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gordontucker/FittedSheets.git",
+      "state" : {
+        "revision" : "ba34781367fb7c947e2a19334318cf440c92968c",
+        "version" : "2.7.1"
+      }
+    },
+    {
+      "identity" : "fscalendar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WenchaoD/FSCalendar.git",
+      "state" : {
+        "revision" : "0fbdec5172fccb90f707472eeaea4ffe095278f6",
+        "version" : "2.8.4"
+      }
+    },
+    {
+      "identity" : "fspagerview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/WenchaoD/FSPagerView.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "f90ab7d2ee6847823708a0a4e11e87c3ee4e6e48"
+      }
+    },
+    {
+      "identity" : "fxpagecontrol",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nicklockwood/FXPageControl.git",
+      "state" : {
+        "revision" : "a94633402ba98c52f86c2a70e61ff086dec9de78",
+        "version" : "1.6.0"
+      }
+    },
+    {
+      "identity" : "initialsimageview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bachonk/InitialsImageView.git",
+      "state" : {
+        "revision" : "c668dabb2b9b6ed1264626a1f3676ac597b4de33",
+        "version" : "0.8.0"
+      }
+    },
+    {
+      "identity" : "iqkeyboardcore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardCore.git",
+      "state" : {
+        "revision" : "6501e93b03161ce1c9355d2d689bad91c534104e",
+        "version" : "1.0.8"
+      }
+    },
+    {
+      "identity" : "iqkeyboardmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
+      "state" : {
+        "revision" : "555472fdb20a96127643d48d101ef981a40993b6",
+        "version" : "8.0.1"
+      }
+    },
+    {
+      "identity" : "iqkeyboardnotification",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardNotification.git",
+      "state" : {
+        "revision" : "08bdc90e7db64ac88f51da5dc9e82f4c247e7057",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "iqkeyboardreturnmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardReturnManager.git",
+      "state" : {
+        "revision" : "495f694a6e62e431d776b4926a18fc26c62db317",
+        "version" : "1.0.6"
+      }
+    },
+    {
+      "identity" : "iqkeyboardtoolbar",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardToolbar.git",
+      "state" : {
+        "revision" : "9fef421f6fb39a3e0495f0004f9111b8eaaf0e69",
+        "version" : "1.1.3"
+      }
+    },
+    {
+      "identity" : "iqkeyboardtoolbarmanager",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQKeyboardToolbarManager.git",
+      "state" : {
+        "revision" : "ebbb417870237c4ed8d7a4876c18970c3ae54264",
+        "version" : "1.1.4"
+      }
+    },
+    {
+      "identity" : "iqtextinputviewnotification",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQTextInputViewNotification.git",
+      "state" : {
+        "revision" : "723784a2197121bb76a940cc6d79fd2fa6c23f43",
+        "version" : "1.0.9"
+      }
+    },
+    {
+      "identity" : "iqtextview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/hackiftekhar/IQTextView.git",
+      "state" : {
+        "revision" : "76f514eba5218bdf67659168ba227c77da5f75fe",
+        "version" : "1.0.5"
+      }
+    },
+    {
+      "identity" : "jgprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JonasGessner/JGProgressHUD.git",
+      "state" : {
+        "revision" : "78d7cd35f1d90ff74fd82e486f2cbe4b24be8cf9",
+        "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "keychain-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/evgenyneu/keychain-swift.git",
+      "state" : {
+        "revision" : "5e1b02b6a9dac2a759a1d5dbc175c86bd192a608",
+        "version" : "24.0.0"
+      }
+    },
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e0c7eebc5a4465a3c4680764f26b7a61f567cdaf"
+      }
+    },
+    {
+      "identity" : "kingfisher",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/onevcat/Kingfisher.git",
+      "state" : {
+        "revision" : "d30a5fad881137e2267f96a8e3fc35c58999bb94",
+        "version" : "8.6.2"
+      }
+    },
+    {
+      "identity" : "lottie-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-ios.git",
+      "state" : {
+        "revision" : "b4bd0604ded9574807f41b4004b57dd1226a30a4",
+        "version" : "3.5.0"
+      }
+    },
+    {
+      "identity" : "mantis",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/guoyingtao/Mantis.git",
+      "state" : {
+        "revision" : "d471b02c6ab8c1432b612738b0f63eaff980df1c",
+        "version" : "2.27.0"
+      }
+    },
+    {
+      "identity" : "molh",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MoathOthman/MOLH.git",
+      "state" : {
+        "revision" : "c78502b5a5e9d5add901c2c6de546d6b320e7b73",
+        "version" : "1.4.3"
+      }
+    },
+    {
+      "identity" : "multislider",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yonat/MultiSlider",
+      "state" : {
+        "revision" : "a5dbf58e5b05a55a771607f77547eb2067c601e9",
+        "version" : "2.2.1"
+      }
+    },
+    {
+      "identity" : "netfox",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kasketis/netfox.git",
+      "state" : {
+        "revision" : "557576032736fd3140422baefb68b8f76c55088f",
+        "version" : "1.21.0"
+      }
+    },
+    {
+      "identity" : "nicoprogress",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nicorichard/NicoProgress.git",
+      "state" : {
+        "revision" : "8696b2e3e89dd3a5dc502f53329b0d70858c4175",
+        "version" : "0.4.0"
+      }
+    },
+    {
+      "identity" : "objectmapper",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/tristanhimmelman/ObjectMapper.git",
+      "state" : {
+        "revision" : "6021c6035e83a306047348666f6400dc61445d3b",
+        "version" : "4.4.3"
+      }
+    },
+    {
+      "identity" : "ohhttpstubs",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AliSoftware/OHHTTPStubs.git",
+      "state" : {
+        "revision" : "12f19662426d0434d6c330c6974d53e2eb10ecd9",
+        "version" : "9.1.0"
+      }
+    },
+    {
+      "identity" : "panmodal",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/slackhq/PanModal.git",
+      "state" : {
+        "revision" : "b012aecb6b67a8e46369227f893c12544846613f",
+        "version" : "1.2.7"
+      }
+    },
+    {
+      "identity" : "phonenumberkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/marmelroy/PhoneNumberKit.git",
+      "state" : {
+        "revision" : "16bb5d46b82540280c5aab8976a94d8a9cda8135",
+        "version" : "4.2.2"
+      }
+    },
+    {
+      "identity" : "popupdialog",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/EslamAbotaleb/PopupDialog.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "d41ac7c7fa7b940c355490281ea8b2fc39c8f599"
+      }
+    },
+    {
+      "identity" : "promises",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/google/promises.git",
+      "state" : {
+        "revision" : "540318ecedd63d883069ae7f1ed811a2df00b6ac",
+        "version" : "2.4.0"
+      }
+    },
+    {
+      "identity" : "prynttrimmerview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HHK1/PryntTrimmerView",
+      "state" : {
+        "revision" : "ac1b60a22c7e6a6514de7a66d2f3d5b537c956d5",
+        "version" : "4.0.2"
+      }
+    },
+    {
+      "identity" : "reachability.swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ashleymills/Reachability.swift.git",
+      "state" : {
+        "revision" : "6b50ea803760a781b9abe0ba2412092ecef165e4",
+        "version" : "4.3.0"
+      }
+    },
+    {
+      "identity" : "richeditorview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/T-Pro/RichEditorView.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "0f90dfcfd2e6b8f63b8d6cdddeb70cc103dd2afd"
+      }
+    },
+    {
+      "identity" : "rxalamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RxSwiftCommunity/RxAlamofire.git",
+      "state" : {
+        "revision" : "9535b58695b91fb67f56d58d6fd0c76462d7743a",
+        "version" : "6.1.2"
+      }
+    },
+    {
+      "identity" : "rxswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ReactiveX/RxSwift.git",
+      "state" : {
+        "revision" : "5004a18539bd68905c5939aa893075f578f4f03d",
+        "version" : "6.9.1"
+      }
+    },
+    {
+      "identity" : "sdwebimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImage.git",
+      "state" : {
+        "revision" : "36e79ba485e9bb4d3cd4e3318908866dac5e7b51",
+        "version" : "5.21.5"
+      }
+    },
+    {
+      "identity" : "sdwebimagesvgcoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageSVGCoder.git",
+      "state" : {
+        "revision" : "85b5d58ad02c207c496fa34426dc6560d6ae32f0",
+        "version" : "1.8.0"
+      }
+    },
+    {
+      "identity" : "sidemenu",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kukushi/SideMenu.git",
+      "state" : {
+        "revision" : "fc892bfb2cd91881e392a7746d7702b404c45bde",
+        "version" : "2.1.1"
+      }
+    },
+    {
+      "identity" : "skeletonview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Juanpe/SkeletonView.git",
+      "state" : {
+        "revision" : "2f5274827d310e32c09325dd3e0007120940988e",
+        "version" : "1.31.0"
+      }
+    },
+    {
+      "identity" : "stevia",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/freshOS/Stevia",
+      "state" : {
+        "revision" : "6192b6216f821b7132e9b772108f25af8cf8ebc5",
+        "version" : "6.2.2"
+      }
+    },
+    {
+      "identity" : "sweeterswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/yonat/SweeterSwift",
+      "state" : {
+        "revision" : "c9e34c454ba4d5b7b6a81c766bb3337fb6e21dfc",
+        "version" : "1.2.6"
+      }
+    },
+    {
+      "identity" : "swift-docc-plugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-docc-plugin",
+      "state" : {
+        "revision" : "3e4f133a77e644a5812911a0513aeb7288b07d06",
+        "version" : "1.4.5"
+      }
+    },
+    {
+      "identity" : "swift-docc-symbolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftlang/swift-docc-symbolkit",
+      "state" : {
+        "revision" : "b45d1f2ed151d057b54504d653e0da5552844e34",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swift_qrcodejs",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/EFPrefix/swift_qrcodejs.git",
+      "state" : {
+        "revision" : "d1605333f7edac39b4518538ef4f2638fdd2e4d6",
+        "version" : "2.3.1"
+      }
+    },
+    {
+      "identity" : "swiftdraw",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swhitty/SwiftDraw.git",
+      "state" : {
+        "revision" : "a19594794cdcdee5135caad3bc119096c50c92c2",
+        "version" : "0.22.0"
+      }
+    },
+    {
+      "identity" : "swiftmessages",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftKickMobile/SwiftMessages.git",
+      "state" : {
+        "revision" : "c0ff6c65bfc00e6a707957cb7069988c5cde2a30",
+        "version" : "10.0.2"
+      }
+    },
+    {
+      "identity" : "swiftyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON.git",
+      "state" : {
+        "revision" : "af76cf3ef710b6ca5f8c05f3a31307d44a3c5828",
+        "version" : "5.0.2"
+      }
+    },
+    {
+      "identity" : "taglistview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ElaWorkshop/TagListView.git",
+      "state" : {
+        "revision" : "b30b61826736f4d9ec04aef5df891f3914423f16",
+        "version" : "1.4.1"
+      }
+    },
+    {
+      "identity" : "toast-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/scalessec/Toast-Swift.git",
+      "state" : {
+        "revision" : "ddccd20d6fb718448d9b179c454c561653fda7d5",
+        "version" : "5.1.1"
+      }
+    },
+    {
+      "identity" : "tocropviewcontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:EslamAbotaleb/TOCropViewController.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "640f0d5c0ce650faedd92ef67a3185bae9c3b453"
+      }
+    },
+    {
+      "identity" : "xlpagertabstrip",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/xmartlabs/XLPagerTabStrip.git",
+      "state" : {
+        "revision" : "211ed62aa376722cf93c429802a8b6ff66a8bd52",
+        "version" : "9.1.0"
+      }
+    },
+    {
+      "identity" : "ypimagepicker",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Yummypets/YPImagePicker.git",
+      "state" : {
+        "revision" : "a1dbf277792dbfa6e15719e57bb552c9f471b94a",
+        "version" : "5.3.2"
+      }
+    }
+  ],
+  "version" : 3
+}

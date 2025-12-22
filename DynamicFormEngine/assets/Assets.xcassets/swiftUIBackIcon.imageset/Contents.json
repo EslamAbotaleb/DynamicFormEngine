@@ -1,0 +1,18 @@
+{
+  "images" : [
+    {
+      "filename" : "backIcon.pdf",
+      "idiom" : "universal",
+      "language-direction" : "left-to-right"
+    },
+    {
+      "filename" : "backIconAr.pdf",
+      "idiom" : "universal",
+      "language-direction" : "right-to-left"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

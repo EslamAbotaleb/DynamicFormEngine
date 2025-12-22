@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="502" id="KGk-i7-Jjw" customClass="RichTextAreaTableViewCell" customModule="CHECK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="583" height="502"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="583" height="502"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iwv-EN-rrN" customClass="LabelView" customModule="CHECK" customModuleProvider="target">
+                        <rect key="frame" x="24" y="16" width="535" height="32"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="wyA-7b-a0C"/>
+                        </constraints>
+                    </view>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W59-DN-1O9">
+                        <rect key="frame" x="24" y="94" width="535" height="214"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qtf-MO-VMc" customClass="RichTextView" customModule="CHECK" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="535" height="160"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="FFK-Tg-hXZ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Qtf-MO-VMc" secondAttribute="trailing" id="KSm-jh-jLb"/>
+                            <constraint firstItem="Qtf-MO-VMc" firstAttribute="top" secondItem="W59-DN-1O9" secondAttribute="top" id="j8X-Rv-eEF"/>
+                            <constraint firstAttribute="bottom" secondItem="Qtf-MO-VMc" secondAttribute="bottom" id="nO9-fQ-Lpp"/>
+                            <constraint firstItem="Qtf-MO-VMc" firstAttribute="leading" secondItem="W59-DN-1O9" secondAttribute="leading" id="oAk-Zf-TBk"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VxE-2q-LiH" customClass="AttachmentNoteView" customModule="CHECK" customModuleProvider="target">
+                        <rect key="frame" x="24" y="343" width="535" height="32"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="egl-Ck-hx6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iwv-EN-rrN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="0DK-VZ-5w1"/>
+                    <constraint firstAttribute="trailing" secondItem="VxE-2q-LiH" secondAttribute="trailing" constant="24" id="4nu-wz-kM3"/>
+                    <constraint firstItem="VxE-2q-LiH" firstAttribute="top" secondItem="W59-DN-1O9" secondAttribute="bottom" constant="8" id="6mX-Hu-1Y7"/>
+                    <constraint firstAttribute="bottom" secondItem="VxE-2q-LiH" secondAttribute="bottom" constant="24" id="7lV-8Y-680"/>
+                    <constraint firstAttribute="trailing" secondItem="iwv-EN-rrN" secondAttribute="trailing" constant="24" id="G58-k5-quF"/>
+                    <constraint firstAttribute="trailing" secondItem="W59-DN-1O9" secondAttribute="trailing" constant="24" id="LEg-l6-C2x"/>
+                    <constraint firstItem="VxE-2q-LiH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="OaS-eR-TcG"/>
+                    <constraint firstItem="iwv-EN-rrN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="UP3-O7-ddS"/>
+                    <constraint firstItem="W59-DN-1O9" firstAttribute="top" secondItem="iwv-EN-rrN" secondAttribute="bottom" constant="8" id="Vig-km-sQG"/>
+                    <constraint firstItem="W59-DN-1O9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="W8U-4B-e1Q"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="attachmentNoteView" destination="VxE-2q-LiH" id="xiB-u6-PVB"/>
+                <outlet property="labelView" destination="iwv-EN-rrN" id="oLD-Ly-k4V"/>
+                <outlet property="richTextView" destination="Qtf-MO-VMc" id="eb6-Wg-ikl"/>
+            </connections>
+            <point key="canvasLocation" x="306.52173913043481" y="235.04464285714283"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

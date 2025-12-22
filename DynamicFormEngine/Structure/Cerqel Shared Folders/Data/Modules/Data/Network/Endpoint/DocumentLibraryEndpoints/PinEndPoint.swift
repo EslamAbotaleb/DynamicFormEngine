@@ -1,0 +1,24 @@
+//
+//  PinEndPoint.swift
+//  CERQEL
+//
+//  Created by ahmed maher on 05/09/2023.
+//  Copyright © 2023 Youxel. All rights reserved.
+//
+
+import Foundation
+
+struct PinEndPoint: Endpoint {
+   var urlPrefix: String = ""
+   var service: EndpointService = .pin
+   var method: EndpointMethod = .patch
+   var encoding: EndpointEncoding = .json
+   var auth: AuthorizationHandler = UserAuthoriationHandler()
+   var parameters: [String: Any] = [:]
+   var headers: [String: String] = [:]
+   
+    init(fileId: String) {
+        urlPrefix  = urlPrefix + "\(fileId)"
+
+    }
+}

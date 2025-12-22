@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "abc_medical_tourism_ll_130930_16x9_1600.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "abc_medical_tourism_ll_130930_16x9_1600@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "abc_medical_tourism_ll_130930_16x9_1600@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

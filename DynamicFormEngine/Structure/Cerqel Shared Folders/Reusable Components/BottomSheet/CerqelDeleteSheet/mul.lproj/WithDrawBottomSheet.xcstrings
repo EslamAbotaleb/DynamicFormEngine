@@ -1,0 +1,78 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "0cU-VM-RNp.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Yes\"; ObjectID = \"0cU-VM-RNp\";",
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نعم"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Yes"
+          }
+        }
+      }
+    },
+    "9RS-8W-Xqk.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Are you sure, you want to withdraw your request?\"; ObjectID = \"9RS-8W-Xqk\";",
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل أنت متأكد أنك تريد سحب طلبك؟"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Are you sure, you want to withdraw your request?"
+          }
+        }
+      }
+    },
+    "FuU-Vi-i12.text" : {
+      "comment" : "Class = \"UILabel\"; text = \"Withdraw Request\"; ObjectID = \"FuU-Vi-i12\";",
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "طلب سحب"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Withdraw Request"
+          }
+        }
+      }
+    },
+    "xT5-gR-pno.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"NO\"; ObjectID = \"xT5-gR-pno\";",
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "NO"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -1,0 +1,2015 @@
+/*
+ Localizable.strings
+ GAZT
+
+ Created by iSlam AbdelAziz on 11/9/20.
+ Copyright © 2020 Youxel. All rights reserved.
+ */
+
+"No Form Fields available" = "لا يوجد خدمة متاحة";
+"Access Denied" = "ليس لديك صلاحيه" ;
+"Valid to: " = "صالح حتى: ";
+"You are not authorized to login to the portal, call admin to get the permissions" = "غير مسموح لك بتسجيل الدخول إلى البوابة، اتصل بالمسؤول للحصول على الأذونات" ;
+"No Articles Yet" = "لا توجد مقالات حتى الآن";
+"Please Fill All Fields" = "من فضلك املاء كل الحقول";
+"All Requests" = "كل الطلبات";
+"All Tasks" = "كل المهام";
+"Medical ID" = "المعرف الطبي" ;
+"No Medical Insurance Yet!" = "لا يوجد تأمين طبي بعد!" ;
+"insuranceCompanyName" = "اسم شركة التأمين" ;
+"insuranceTier" = "مستوى التأمين" ;
+"Edit Medical Insurance" = "تعديل التامين الطبي" ;
+"New Medical Insurance" = "إضافه تامين طبي" ;
+"jobId" = "معرف الوظيفة";
+"Department" = "القسم";
+"jobType" = "نوع الوظيفة";
+"Job Type" = "نوع الوظيفة";
+"Social Media Platform" = "منصة التواصل الاجتماعي";
+"Please select social media" = "يرجى تحديد وسائل التواصل الاجتماعي" ;
+"Please enter link starts with https://" = "الرجاء إدخال الرابط الذي يبدأ بـ https://" ;
+"startDate" = "تاريخ بدايه" ;
+"endDate" = "تاريخ نهايه" ;
+"organizationName" = "اسم المنظمه" ;
+"jobTitle" = "اسم الوظيفه" ;
+"name" = "الاسم" ;
+"issuingOrganization" = "إصدار المنظمة" ;
+"attachment" = "المرفق" ;
+"Certificates & Courses" = "الشهادات والدورات" ;
+"No Certificates & Courses Yet!" = "لا توجد شهادات ودورات حتى الآن!" ;
+"jobTitle" = "المسمى وظيفي";
+"organizationName" = "اسم المنظمة";
+"date" = "التاريخ";
+"description" = "الوصف";
+"Please enter job title" = "الرجاء إدخال المسمى الوظيفي";
+"Please enter job title less than 100 characters" = "الرجاء إدخال المسمى الوظيفي أقل من 100 حرف";
+"Please enter organization name" = "لرجاء إدخال اسم المنظمة";
+"Please enter organization name less than 100 characters" = "الرجاء إدخال اسم المؤسسة أقل من 100 حرف";
+"Please enter start date of work experience" = "الرجاء إدخال تاريخ بدء خبرة العمل";
+"Please enter end date of work experience" = "الرجاء إدخال تاريخ انتهاء خبرة العمل";
+"Extension number" = "رقم التحويلة";
+"Department name" = "إسم الإدارة";
+"More" = "المزيد";
+"Delegators Name" = "أسماء المندوبين";
+"In order to take action, please, Click Here to add the required data first." = "من أجل استكمال الطلب. من فضلك انقر هنا لإضافة المعلومات المطلوبة أولا";
+"Required data completed.Proceed with submission or Click Here to edit." = "تم استكمال البيانات المطلوبة. تابع التقديم أو انقر هنا للتعديل";
+"Select" = "اختر";
+"Send back Levels" = "ارسال الي";
+"Sent Back Successfully" = "تم إعادة الإرسال بنجاح";
+"Your task has been Sent back successfully" = "تم إعادة إرسال مهمتك بنجاح";
+"Send Back" = "ارسال مره اخري";
+"Send Back To" = "اعاده ارسال الي";
+"Type your comment here" = "اكتب تعليقك هنا";
+"Delegated Successfully" = "تم التفويض بنجاح";
+"The task has been delegated to" = "تم تفويض المهمة إلى";
+"successfully" = "بنجاح";
+"Confirm Leave Page" = "تأكيد مغادرة الصفحة";
+"Are you sure you want to leave this page, All unsaved changes will be lost" = "هل أنت متأكد من رغبتك في مغادرة هذه الصفحة، سيتم فقدان جميع التغييرات غير المحفوظة";
+"Leave" = "مغادره";
+"Type your reason here" = "اكتب السبب هنا";
+"Delegate" = "تفويض";
+"Comment (Optional)" = "تعليق (اختياري)";
+"Select Name" = "اختر اسمًا";
+"Delegate To" = "تفويض الي";
+"has been Submitted successfully" = "تم الإرسال بنجاح";
+"Your Feedback has been submitted Successfully" = "لقد تم إرسال تقييمك بنجاح";
+"Please submit your note first" = " الرجاء تقديم ملاحظتك أولاً";
+"Request Summary" = "ملخص الطلب";
+"View All Services" = "عرض جميع الخدمات";
+"Your request" = "طلبك";
+"Submitted successfully" = "تم الإرسال بنجاح";
+"Give your Feedback" = "إعطاء ملاحظاتك";
+"How was your experience in the ease of using this service?" = "كيف كانت تجربتك في سهولة استخدام هذه الخدمة؟";
+"Are you satisfied with the service provided to you to build this application?" = "هل أنت راض عن الخدمة المقدمة لك لبناء هذا التطبيق؟";
+"Very Bad" = "سيء جدًا";
+"Bad" = "سيئ";
+"Fair" = "عادل";
+"Good" = "جيد";
+"The file has been reported successfully" = "تم الابلاغ عن هذا الملف بنجاح";
+"The file has been acknowledged successfully" = "تم الاقرار بهذا الملف بنجاح";
+"Company Profile" = "ملف الشركة";
+"Org. Structure" = "الهيكل التنظيمي";
+"Excellent" = "ممتاز";
+"Type here your notes." = ".اكتب هنا ملاحظاتك";
+"Note" = "ملاحظة";
+"Delegator Names" = "أسماء المفوضين";
+"Approve" =  "قبول";
+"Reject" = "رفض";
+"Send back" = "اعادة طلب";
+"Are you sure, you want to withdraw your request?" = "هل أنت متأكد أنك تريد سحب طلبك؟";
+"Withdraw Request" = "سحب الطلب";
+"Your task has been sent back successfully" = "لقد تم إرجاع مهمتك بنجاح";
+"Delegated Successfully" = "تم التفويض بنجاح";
+"Our task has been delegated to " = " تم تفويض مهمتنا إلى";
+"Request has been submitted successfully." = "تم تقديم الطلب بنجاح.";
+"Request Submitted" = "تم تقديم الطلب";
+"Task Details" = "التفاصيل";
+"Latest News" = "أحدث الأخبار";
+"Latest Newss" = "آخر الأخبار";
+"Favorite News" = "الأخبار المفضلة";
+"Latest" = "أحدث الأخبار";
+"Favorite" = "المفضلة";
+"Attachements" = "المرفقات";
+"Saved Successfully" = "تم الحفظ بنجاح";
+"Announcment" = "تعميم";
+"Showing" = "يتم عرض";
+"Newest" = "الأحدث";
+"Oldest" = "الأقدم";
+"Expiring Soon" = "على وشك الانتهاء";
+"There is no favorite News yet" = "لا يوجد أخبار مفضلة حاليًا";
+"No Metrics On This Dashboard Yet!" = "لا توجد مقاييس في لوحة المعلومات حتى الآن!";
+"Deals & Promotions Details" = "تفاصيل العروض والتخفيضات";
+"Deals & Promotions" = "العروض والتخفيضات";
+"Session expired, please login again" = "انتهت صلاحية الجلسة، يرجى تسجيل الدخول مرة أخرى";
+"A dream doesn’t become reality through magic; it takes sweat, determination and hard work." = "الحلم لا يتحول الي حقيقة من خلال السحر, يتطلب الأمر عرقا و تصميما و عملا شاقا.";
+"Basic Info" = "المعلومات الرئيسية";
+"Basic info." = "المعلومات الرئيسية";
+"First Name" = "الاسم الاول";
+"Last Name" = "الاسم الاخير";
+"Display Name" = "اسم العرض";
+"Deparment" = "القسم";
+"Title" = "المسمي";
+"Grandfather Name" = "اسم العائلة";
+"Father Name" = "اسم الأب";
+"Family Name" = "اسم الجد";
+"Employee ID" = "رقم الموظف";
+"Civil identity Number " = "رقم الهوية / الإقامة";
+"Religion" = "الديانة";
+"Place of birth (Country)" = "محل ميلاد - الدولة";
+"Place of birth (City)" = "محل ميلاد - المدينة";
+"Place of birth (Region)" = "محل ميلاد - المنطقة";
+"Marital status" = "الحالة الاجتماعية";
+"Country" = "البلد";
+"Home Number" = "رقم المنزل";
+"Home " = "المنزل";
+"Office" = "المكتب";
+"Office Number" = "رقم المكتب";
+"Phone Types" = "أنواع الهواتف";
+"Phone Type" = "نوع الهاتف";
+"Phone Type Number" = "نوع رقم الهاتف";
+"EXT (Work Number)" = "تحويلة (رقم العمل)";
+"EXT (Office)" = "رقم تحويلة (المكتب)";
+"Main Address" = "العنوان الرئيسي";
+"Home Address" = "عنوان المنزل";
+"Short Address" = "العنوان المختصر";
+"Building No" = "رقم المبني";
+"Secondary No" = " الرقم الثانوي";
+"District" = "المنطقة";
+"title" = "اللقب";
+"Contact Phone Number" = "رقم الجوال";
+"+  Add Number" = "أضف رقم  +";
+"Enter at least %d chars to apply search" = "أدخل حرفين على الأقل لتطبيق البحث";
+
+
+
+"Company" = "الشركة";
+"Report to" = "يقدم تقارير إلي";
+"Email" = "البريد الإلكتروني";
+"Telephone" = "رقم الهاتف";
+"Mobile Number" = "رقم الهاتف المحمول";
+"Mobile number" = "رقم الهاتف المحمول";
+"Memberships" = "العضوية";
+"My Contact details" = "بيانات الإتصال بي";
+"My contact details" = "بيانات الإتصال بي";
+"Scan QR code to directly apply the offer." = "امسح الرمز لتطبيق العرض مباشرة.";
+"Share" = "مشاركة";
+"Close" = "إغلاق";
+"Try add a Tasks and Requests" = "أضف مهام او طلبات";
+"No Services Added Yet" = "لا توجد خدمات مضافة بعد";
+"No Services Yet!" = "لا توجد خدمات مضافة!";
+"Please Try after sometime" = "يمكنك المحاولة لاحقًا";
+"Latest Internal News" = "آخر الأخبار الداخلية";
+"Favorite Internal News" = "الأخبار المفضلة الداخلية";
+"There is no favorite Internal News yet" = "لا يوجد أخبار مفضلة حاليًا";
+"There’s no Internal News yet" = "لا يوجد أخبار حاليًا";
+"From date" = "من تاريخ";
+"To date" = "حتي تاريخ";
+"Confirm" = "تأكيد";
+"Event History" = "أرشيف الفعاليات";
+"To" = "إلي";
+"All Deals & Promotions" = "جميع العروض و التخفيضات";
+"Location" = "الموقع";
+"No Upcoming Events Yet!" = "لا يوجد فعاليات";
+"No Latest Deals & Promotions Yet!" = " لا يوجد عروض حتي الآن";
+"No Latest Offers Yet!" = " لا يوجد عروض حتي الآن";
+"No Favourites Deals & Promotions Yet!" = " لا يوجد عروض مفضلة حتي الآن";
+"Available until" = "متاح حتي";
+"More Details" = "تفاصيل اكتر";
+"More" = "المزيد";
+"Media Center" = "المركز الاعلامي";
+"Details" = "التفاصيل";
+"Terms" = "الشروط";
+"Our Offers" = "عروض الموظفين";
+"Filter By" = "التصنيف";
+"Special Offers" = "عروض الموظفين";
+"Internal News" = "الأخبار الداخلية";
+"View All" = "إظهار الكل";
+"View Profile" = "عرض الصفحه الشخصيه";
+"Our Events" = "الفعاليات";
+"Events History" = "أرشيف الفعاليات";
+"Dashboard" = "لوحة البيانات";
+"Newest" = "الأجدد";
+"Oldest" = "الأقدم";
+"Categories" = "الفئات";
+"Sort" = "الترتيب";
+"Filters" = "التصنيفات";
+"By Date" = "حسب التاريخ";
+"Latest Internal News" = "أخر الاخبار الداخلية";
+"Login to your Account" = "تسجيل الدخول لحسابك";
+"Welcome Back !" = "مرحبًا بك!";
+"Login" = "تسجيل الدخول";
+"Dfrom" = "منذ";
+"days" = "أيام";
+"Username" = "اسم المستخدم";
+"Password" = "كلمة المرور";
+"Enter OTP" = "ادخل رمز التأكيد";
+"Resend Code" = "اعادة ارسال الرمز";
+"Didn’t Recieve the Code?" = "لم يصلك الرمز؟";
+"Verfiy" = "تأكيد";
+"OTP code has been sent to you via SMS for the mobile number that ends with" = "تم ارسال رمز التفعيل الي جوالك برقم: ";
+"My Inbox" = "صندوق الوارد";
+"Check all requests received and sent ." = "تحقق من جميع الطلبات الواردة والمرسلة.";
+"What Category are you looking in?" = "في أي فئة تبحث؟";
+"What's New" = "ما الجديد";
+"Services" = "الخدمات";
+"All Services" = "كل الخدمات";
+"All services" = "كل الخدمات";
+"All Categories" = "جميع الاقسام ";
+"My Profile" = "الملف الشخصي";
+"Profile Picture" = "الصوره الشخصيه";
+"Edit My Profile" = "تعديل بياناتي";
+"Diwan Home" = "الصفحة الرئيسية";
+"My Dashboard" = "لوحة البيانات";
+"About GAZT" = "عن ديوان";
+"About Cerqel" = "عن سيركيل";
+"LOG OUT" = "تسجيل الخروج";
+//"Inbox" = "مهماتي";
+"Inbox" = "صندوق الوارد";
+"My Requests" = "طلباتي";
+"Search by request name" = "البحث عن طريق رقم الطلب";
+"Submit" = "إرسال";
+"Sent" = "أرسلت";
+"Show Less" = "اقل";
+"Show All" = "المزيد";
+"Profile" = "الملف الشخصي";
+"You can not delete this image" = "لا يمكنك مسح هذه الصوره";
+"Settings" = "الإعدادات";
+"Basic Information" = "المعلومات الأساسية";
+"My Settings" = "الاعدادات";
+"Manage your account settings, Notifications & your prefered Language." = "تحكم في حسابك، اشعاراتك ، لغتك الممفضلة.";
+"Notifications" = "الإشعارات";
+"Language" = "اللغة";
+"Previous Actions" = "العمليات السابقة";
+"There is no previous action yet" = "لا يوجد عمليات سابقة";
+"Processed As" = "تمت من جهة";
+"Process Date" = "تاريخ العملية";
+"Personal" = "معلوماتي الرئيسية";
+"Personal Info" = "المعلومات الرئيسية";
+"Personal Information" = "المعلومات الشخصية";
+"First Name(En)" = "الاسم الأول (En)";
+"Second Name(En)" = "اسم الأب(En)";
+"Third Name(En)" = "اسم الجد(En)";
+"Last name(En)" = "اسم العائلة(En)";
+"First Name(Ar)" = "الاسم الأول (ع)";
+"Second Name(Ar)" = "اسم الأب(ع)";
+"Third Name(Ar)" = "اسم الجد(ع)";
+"Last name(Ar)" = "اسم العائلة(ع)";
+"Salutation" = "اللقب";
+"Formal Name" = "الاسم الرسمي";
+"Gender" = "الجنس";
+"Marital Status" = "الحالة الاجتماعية";
+"Nationality" = "الجنسية";
+"Second Nationality" = "الجنسية الثانية";
+"Native Language" = "اللغة الام";
+"Home" = "الرئيسية";
+
+"Please enter your user name" = "أدخل اسم المستخدم الخاص بك";
+"Please enter Password" = "أدخل كلمة المرور ";
+
+"OperationError" = "خطأ في اسم المستخدم أو كلمة المرور ، اذا كنت تواجه مشكلة يمكنك التواصل مع الادارة";
+
+"Latest News1" = "آخر الأخبار ";
+"Latest Internal News1" = "آخر الأخبار الداخلية";
+"Latest Announcements" = "آخر الإعلانات";
+"You can drag or drop items to re order" = "يمكنك سحب واسقاط الأقسام لإعادة الترتيب";
+"Save" = "حفظ";
+"Language" = "اللغة";
+"Choose the Preferred Language." = "اختر اللغة المفضلة.";
+"Arabic" = "اللغة العربية";
+"English" = "الإنجليزية";
+"Event" = "الفعالية";
+"Enter Valid OTP" = "ادخل الرمز بشكل صحيح";
+"Write here" = "اكتب هنا";
+"From" = "من";
+"Select Request Type" = "اختر نوع الطلب";
+"Select Date" = "اختر تاريخ";
+"Request Type" = "نوع الطلب";
+"Requestor" = "صاحب الطلب";
+"Requestor Name" = "ادخل اسم الموظف";
+"Filters" = "تصفية النتائج";
+"Apply" = "تطبيق";
+"Clear Filter" = "حذف التصفية";
+"Pending On:" = "متوقف على :";
+"Last Edit" = "آخر تعديل";
+"Contact" = "معلومات التواصل";
+"Contact & Addresses" = "معلومات التواصل & العناوين";
+"Emergency" = "الاتصال بالطوارئ";
+"Work email" = "البريد الالكتروني";
+"Mobile Number" = "رقم الجوال";
+"City Name" = "اسم المدينة";
+"Street Name" = "اسم الشارع";
+"Building Number" = "رقم المبنى";
+"Secondry Number" = "الرقم الثانوي";
+"Zip Code" = "رقم البريد";
+"Effective as of" = "ساري من تاريخ";
+"Bank Name" = "اسم المصرف";
+"Account Owner" = "اسم مالك الحساب";
+"Request Details" = "التفاصيل";
+"Discussions" = "المناقشات";
+"IBAN Number" = "رقم الحساب البنكى الدولى";
+"Bank Account" = "الحساب البنكي";
+"Benefits" = "فوائد";
+"Name" = "الاسم الاول";
+"Rela­tion­ship" = "العلاقة";
+"Institution" = "الهيئة / المركز";
+"Certificates and Courses" = "شهادات تعليمية تدريبية";
+"Effective date" = "تاريخ اصدار الشهادة";
+"Expire date" = "تاريخ النهاية";
+"Education" = "التعليم";
+"Work Experience" = "خبرة العمل";
+"Career" = "المسار المهني";
+"Regular" = "منتظم";
+"Temporary" = "مؤقت";
+"Employee ID" = "هوية الموظف";
+"Hire date" = "تاريخ التعيين";
+"Supervisor" = "المشرف";
+"Job title" = "المسمى الوظيفي";
+"Employee Class" = "فئة الموظف";
+"Division" = "القطاع";
+"Regular/Temporary" = "منتظم / مؤقت";
+"Department" = "القسم";
+"Section" = "إدارة";
+"Employment Details" = "تفاصيل الموظف";
+"Date of Birth" = "تاريخ الميلاد";
+"Dependents" = "المعالين";
+"Add Dependents" = "مُعال جديد";
+"Time Period" = "الفترة الزمنية";
+"Work Time Period" = "فترة العمل";
+"Edu Time Period" = "فترة الدراسة";
+"Com­pany Name" = "الشركة";
+"Job Title" = "المسمى الوظيفي";
+"School" = "المدرسة/الجامعة";
+"Major" = "الاختصاص";
+"Degree" = "الشهادة";
+"This is just a quick note to let you know that we have received your Request " = "هذه مجرد ملاحظة سريعة لإعلامك بأننا تلقينا طلبك";
+" and will respond , as soon as we can." = " وسوف نرد بأسرع ما يمكن.";
+"Your request submitted successfully" = "تم تقديم طلبك بنجاح";
+"View My Requests" = "عرض طلباتي";
+"Comment" = "تعليق";
+"Please check Web app to view all details " = "يرجى التحقق من تطبيق الويب لعرض جميع التفاصيل";
+"There is No Discussion" = "لا يوجد مناقشة";
+"Unfortunately you can't take your action from here, Please go to Web app" = "للأسف لا يمكنك اتخاذ الإجراء الخاص بك من هنا ، يرجى الانتقال إلى تطبيق الويب";
+"Favorites" = "المفضلة";
+"No Favourite Services Added Yet" = "لم يتم إضافة خدمات مفضلة بعد";
+"Try add a service as a favourite" = "قم بإضافة خدمة للمفضلة";
+"weeks ago" = "قبل %@ اسابيع";
+"days ago" = "قبل %@ ايام";
+"dayss ago" = "قبل %@ يوم";
+"hours ago" = "قبل %@ ساعات";
+"hourss ago" = "قبل %@ ساعه";
+"minutes ago" = "قبل %@ دقائق";
+"minutess ago" = "قبل %@ دقيقه";
+"seconds ago" = "قبل %@ ثوان";
+"secondss ago" = "قبل %@ ثانيه";
+"second ago" = "قبل ثوان";
+"hour ago" = "قبل ساعة";
+"minute ago" = "قبل دقيقة";
+"day ago" = "قبل يوم";
+"ID" = "رقم الطلب";
+"Today" = "اليوم";
+"There are no Notifications yet" = "لا يوجد إشعارات حالياً";
+"Business Unit" = "الوكالة";
+"Add attachment" = "اضافة المرفقات";
+"Attachments" = "المرفقات";
+"Deadline" = "الموعد النهائي";
+"Vacation Request" = "طلب الاجازة";
+"Choose Image Source" = "اختر مصدر الوسائط";
+"Camera" = "كاميرا";
+"Photo Library" = "مكتبة الصور";
+"File" = "الملفات";
+"Payroll Information" = "الحساب البنكي";
+"Description" = "شرح تفاصيل الشهادة";
+"Cer Name" = "اسم الشهادة";
+"By choosing another choice your entered data will be permanently removed" = "عند اختيارك خيار آخر فستفقد جميع البيانات التي أدخلتها في الخيار الحالي";
+"There is no tasks yet" = "لا يوجد رسائل حتى الآن";
+"Requests Found" = "طلبات";
+"Tasks Found" = "رسائل";
+"Favourites" = "المفضلة";
+"See all" = "إظهار الكل";
+"See More" = "عرض الكل";
+"Read More" = "اقرأ المزيد";
+"Read Less" = "أقرأ أقل";
+"There is no dependents yet" = "لا يوجد معالين حتى الان";
+"There is no Education yet" = "لا يوجد معلومات تعليم حتى الان";
+"No Education Information" = "لا يوجد معلومات تعليم حتى الان";
+"There is no work Experience yet" = "لا يوجد خبرات مهنية حتى الان";
+"There is no Courses yet" = "لا يوجد شهادات تعليمية حتى الان";
+"There is no Emegency Contacts yet" = "لا يوجد متصلون للطوارئ حتى الان";
+"Max Attachment Number is reached!" = "وصلت لاقصي حد من المرفقات";
+"Can't upload Media Size is > 5 MB" = "لم نتمكن من رفع الملف الحجم > ٥ ميجا بايت";
+"By" = "بواسطة";
+"Ticket" = "التذكرة";
+"Comment is Required" = "برجاء كتابة التعليق";
+"Attachements are Required" = "برجاء إرفاق المرفقات";
+"Comments" = "التعليقات";
+"Example of additional information to provide: Any error messages received or description of issue(s)" = "مثال على المعلومات الإضافية التي يجب تقديمها: أي رسائل خطأ مستلمة أو وصف للمشكلة (المشكلات)";
+"Request Action" = "الإجراءات";
+"Reopen the Request" = "إعادة فتح الطلب";
+"No internect connection" = "لا يوجد اتصال بالإنترنت";
+"Please check your internet connection and try again" = "يرجى التحقق من اتصالك بالإنترنت وحاول مرة أخرى";
+"The maximun length of letters are 200" = "الحد الأقصى للأحرف هو ٢٠٠";
+"Ok" = "موافق";
+"Search By User Or Service Name" = "البحث عن طريق اسم المستخدم أو الخدمة";
+"Type a keyword" = "اكتب كلمة للبحث";
+"Recent search" = "البحث الأخير";
+"Clear All" = "حذف الكل";
+"Employees" = "الموظفين";
+"There is no Services" = "لا توجد خدمات";
+"There is no Employees" = "لا يوجد موظفين";
+"Enter at least 3 Characters To Search" = "أدخل 3 أحرف على الأقل للبحث";
+/*
+ * Update dialog buttons
+ */
+"MSDistributeUpdateNow" = "تحديث الان";
+"MSDistributeAskMeInADay" = "اسألني في يوم واحد";
+"MSDistributeViewReleaseNotes" = "عرض ملاحظات الإصدار";
+"MSDistributeClose" = "أغلق";
+"MSDistributeIgnore" = "تجاهل";
+"MSDistributeReinstall" = "أعد تثبيت التطبيق";
+
+/*
+ * Update dialog titles/messages
+ */
+"MSDistributeAppUpdateAvailable" = "تحديث التطبيق متاح";
+"MSDistributeAppUpdateAvailableMandatoryUpdateMessage" = "يطلب منك مطورو هذا التطبيق التحديث إلى %@ %@ (%@).";
+"MSDistributeAppUpdateAvailableOptionalUpdateMessage" = "%@ %@ (%@) متاح للتنزيل والتثبيت.";
+"MSDistributeInAppUpdatesAreDisabled" = "تم تعطيل التحديثات داخل التطبيق";
+"MSDistributeInstallFailedMessage" = "تم تحميل هذا الإصدار من الجانب أو تنزيله باستخدام متصفح في الوضع الخاص.";
+
+"results related to " = "من النتائج مرتبطة بـالبحث  ";
+"No results for " = "لا يوجد نتائج ل ";
+"Please try a different keyword." = "برجاء تجربة كلمة أخرى";
+"Search Results For Services" = "نتائج البحث عن خدمات";
+"No Results For Services" = "لا توجد نتائج بحث في الخدمات";
+"Search Results For Users" = "نتائج البحث عن مستخدمين";
+"No Results For Users" = "لا توجد نتائج بحث في المستخدمين";
+"Search by users or services" = "ابحث عن مستخدمين أو خدمات";
+"Try another keyword" = "استخدم كلمة أخرى";
+"No search result" = "لا توجد نتائج بحث";
+"Withdraw Request" = "إلغاء الطلب";
+" Withdraw Request " = "    إلغاء الطلب    ";
+"Actions" = "الإجراءات";
+"Are you sure you want to withdraw the request?" = "هل تريد بالتأكيد إلغاء هذا الطلب ؟";
+"Expand card to see full process details" = "قم بتوسيع البطاقة للاطلاع على تفاصيل العملية كاملة";
+"Subservice List" = "قائمة الخدمة";
+" awaiting approval" = " في انتظار الموافقة";
+"You Have " = "لديك ";
+"View All Requests" = "عرض جميع الطلبات";
+"Hala" = "أهلا";
+"Requests" = "الطلبات";
+"by" = "بواسطة";
+"Media Library" = "مكتبة الوسائط";
+"Libraries" = "المكتبات";
+"Media" = "مكتبة الوسائط";
+"Photos" = "الصور";
+"Videos" = "فيديو";
+"Audio" = "صوتيات";
+"Latest Requests" = "أحدث الطلبات";
+"Favorite Services" = "الخدمات المفضلة";
+"You don't have any requests awaiting your approval" = "ليس لديك أي طلبات تنتظر الموافقة";
+"There is no Requests yet" = "لا توجد طلبات حتى الآن";
+"If you close this request you will permanently lose the data" = " إذا أغلقت هذا الطلب، فستفقد البيانات بشكل دائم";
+/*
+ * Time Off Request titles/messages
+ */
+"Send To Approve" = "إرسال للموافقة";
+"Please, Select Dates From Calendar" = "برجاء إختيار الأيام من النتيجة";
+"please enter the username and password" = "الرجاء إدخال اسم المستخدم وكلمة المرور";
+"date" = "التاريخ";
+"Change Language" = "تغيير اللغة";
+"App Needs to Restart" = "التطبيق يحتاج إلى إعادة التشغيل";
+"Forgot password?" = "هل نسيت كلمة السر؟";
+"My Request" = "طلبي";
+"Change Password" = "تغيير الرقم السري";
+"My Dashboard" = "لوحة البيانات";
+"password" = "تتغير الرقم السري";
+"notification" = "الإشعارات";
+"language" = "اللغة المفضلة";
+"accessibility" = "إمكانية الوصول الشخصية";
+"See All" = "إظهار الكل";
+"Active Events" = "الفعاليات الحاليه";
+"My Favourites" = "المفضلة";
+"My Tasks" = "مهامي";
+"Latest Deals & Promotions" = "آخر العروض";
+"No Tasks Statistics Yet!" = "لاتوجد إحصاءات للمهام حتى الآن";
+"No Requests Statistics Yet!" = "لاتوجد إحصاءات للطلبات حتى الآن";
+"Latest Offers" = "آخر العروض";
+"Offers" = "العروض";
+"No Tasks Yet!" = "! لا يوجد مهمات ";
+"No Requests Yet!" = "! لا يوجد طلبات ";
+"Showing" = "إظهار";
+"Priorities:" = "الأهمية:";
+" Latest " = "آخر الإعلانات";
+"Newest" = "الأحدث";
+"Oldest" = "الأقدم";
+"Alphabetical A-Z" = "أبجدي  تصاعدي";
+"Alphabetical Z-A" = "أبجدي تنازلي";
+"Low Priority" = "ذا اولوية ضعيفه";
+"High Priority" = "ذا أهمية عليا";
+"Close" = "إغلاق";
+"language" = "اللغة الافتراضية";
+"MainRequests" = "الطلبات";
+"No Notifications Yet!" = "لا يوجد اشعارات حتى الان!";
+"You have no notifications right now.
+Come back later" = "ليس لديك اشعارات الان.
+يمكنك العودة لاحقًا";
+"You have no notifications right now." = "ليس لديك اشعارات الان";
+"Come back later" = "يمكنك العودة لاحقًا";
+"Logout" = "تسجيل الخروج";
+"Are you sure you want to logout?" = "هل أنت متأكد أنك تريد تسجيل الخروج؟";
+"Apply for services and respond to your assigned tasks in a few steps" = "تقدم بطلب للحصول على الخدمات واستجب للمهام المعينة لك في بضع خطوات";
+ "  Welcome to KAFD !
+ We’re glad you’re here." = "مرحبا بكم في مركز الملك عبد الله المالي!
+  نحن سعداء لتواجدك هنا.";
+"Let's Get Started" = "هيا بنا نبدأ";
+"  Welcome to YOUXEL ! We’re glad you’re here." = "مرحبا بك في يوكسل!
+نحن سعداء لأنك هنا.";
+"Add-ons" = "الإضافات";
+"App Version" = "نسخة التطبيق";
+"NEW" = "جديد";
+"No Recent media Yet!" = "لا توجد أي وسائل إعلام ";
+"No Recent Apps Yet!" = "لا توجد تطبيقات حتي الان ";
+"Recent Media" = "احدث الوسائط";
+"My Applications" = "التطبيقات";
+"Recently used apps" = "التطبيقات المستخدمة مؤخرًا";
+
+"Help" = "المساعدة";
+"FAQs" = "الأسئلة الشائعة";
+"Knowledge Base" = "قاعدة المعرفة";
+"FAQ" = "الأسئلة الشائعة";
+"Search FAQ" = "بحث الأسئلة الشائعة";
+"No FAQs Yet!" = "لا توجد أسئلة شائعة حتى الآن";
+"Please try another Filter." = "الرجاء محاولة عامل تصفية آخر";
+"Search KB" = "بحث قاعدة المعرفة";
+"No Knowledge Base Yet!" = "لا توجد قاعدة معرفة حتى الآن";
+"Recently Used" = "المستخدمة حديثًا";
+"No Applications Yet!" = "لا يوجد تطبيقات حتى الآن";
+"Search Apps" = "بحث التطبيقات";
+"Can't open this url" = "لا يمكن فتح هذا الرابط";
+"Unread Only" = "غير المقروءة فقط";
+"Earlier" = "السابق";
+"Yesterday" = "أمس";
+"Today" = "اليوم";
+"Suggestion" = "الاقتراحات";
+"Try searching with Keywords" = "حاول البحث باستخدام الكلمات";
+"See All" = "عرض الكل";
+"Acknowledge" = "إقرار";
+"Acknowledgment" = "تحتوى على إقرار ";
+"None Acknowledgment" = "لا تحتوى على إقرار ";
+"Please specify the reason" = "من فضلك ضع السبب";
+"Reason" = "السبب";
+"Edit Quote" = "Edit Quote";
+
+/*
+ * Document library
+ */
+"Documents Library" = "مركز الوثائق";
+"Documents" = "الوثائق";
+"Recent" = "الملفات الحديثة";
+"Pinned" = "الملفات المثبتة";
+"View" = "مشاهدة";
+"Download" = "تحميل";
+"Arabic Version" = "النسخة العربية";
+"English Version"= "النسخة الانجليزية";
+"Report" = "ابلاغ";
+"Acknowledge" = "اقرار";
+"Pin" = "تثبيت";
+"All Files" = "كل الملفات";
+"Showing" = "عرض";
+"Upload File" = "رفع ملف";
+"Add short description for the file and who you want to share it with" =  "أضف وصفًا موجزًا للملف ومع من تريد مشاركته";
+"Filter" = "تصفية";
+"Report File" = "ابلاغ عن ملف";
+"By Category" = "حسب الفئة";
+"By Sub-Category" = "بالفئة الفرعية";
+"File Type" = "نوع الملف";
+"Acknowledgement" = "إقرار";
+"No Files Yet!" = "لا توجد ملفات حتى الآن!";
+"Sorry no results found!" = "ناسف لم يتم العثور على النتائج!";
+"Starting downloading the file" = "بدأ تنزيل الملف";
+"Starting downloading the files" = "بدأ تنزيل الملفات";
+"File Downloaded Successfully" = "تم تنزيل الملف بنجاح";
+"Select Category" = "اختر فئة";
+"Select Sub-Category" = "اختر فئة فرعية";
+"Please select category first" = "اختر الفئة الرئيسية اولا";
+"The attachment size should be less than 25MB" = "حجم المرفق يجب ان يكون اقل من 25 م.ب ";
+"No Recent Document Yet!" = "لا توجد ملفات حديثه حتى الآن!";
+"Recent Documents" = "احدث المستندات";
+"Customize Widgets" = "تعديل عرض الأقسام";
+"“Submit ” " = "“ارسال ”";
+"Please confirm that you have reviewed the uploaded file by checking the box below and clicking " = "يرجي التاكد من قيامك بمراجعة الملف الذي تم تحميله عن طريق المربع ادناه والنقر علي ";
+".\n By doing so, you agree to the information contained within the document. Contact the administrator if you have any questions." = ". \n ومن خلال القيام بذلك فإنك توافق علي المعلومات الواردة في الوثيقة. اتصل بالمسؤول اذا كان لديك اي أسئلة.";
+
+
+// MARK: - Weather
+"Weather Details" = "تفاصيل الطقس";
+"No Prayers Founded" = "لا يوجد معلومات عن الصلاه";
+"Prayer Times" = "وقت الصلاه";
+"Daily Forecast" = "التوقعات اليومية";
+"Hourly Forecast" = "توقعات كل ساعة";
+"Next Prayer" = "الصلاه القادمه";
+"After" = "بعد";
+"M" = "د";
+"H" = "س";
+"Forecast Details" = "تفاصيل الطقس";
+"Weather Settings" = "إعدادات الطقس";
+"Weather Location" = "موقع الطقس";
+"Locations" = "الموقع";
+"My Current Location" = "موقعي الحالي";
+"Enter Cities" = "ادخل المدينه";
+"Temperature Unit" = "وحدة قياس الطقس";
+"Forecast" = "الطقس";
+"No Weather Data" = "لا يوجد معلومات عن الطقس";
+"Location Services" = "خدمات الموقع";
+"Please enable location services in Settings" = "يرجى تمكين خدمات الموقع في الإعدادات";
+
+// MARK: - My Profile
+"Edit Emergency Contact" = "تعديل جهة اتصال للطوارئ";
+"New Emergency Contact" = "إضافة جهة اتصال للطوارئ";
+"Edit Dependent" = "تعديل معال";
+"New Dependent" = "إضافة معال";
+"Edit Education" = "تعديل التعليم";
+"New Education" = "إضافة تعليم جديد";
+"Edit Work Experience" = "تعديل الخبرة المهنية";
+"New Work Experience" = "إضافة الخبرة المهنية";
+"Edit Certificate & Course" = "تعديل شهادة ودورة";
+"New Certificate & Course" = "إضافة شهادة ودورة";
+"New Social Media" = "إضافة وسيلة اتصال اجتماعي";
+"Edit Social Media" = "تعديل وسيلة اتصال اجتماعي";
+"No Social Media Yet!" = "لا يوجد وسائل تواصل اجتماعي حتى الآن!";
+"Add New " = "اضف ";
+"New Social Media" = "وسيلة تواصل اجتماعى جديدة";
+"View Picture" = "عرض الصورة";
+"Upload Picture" = "رفع الصورة";
+"Capture your Picture" = "التقط صورتك";
+"Remove picture" = "حذف الصورة";
+"View Picture" = "عرض الصورة";
+"Edit Picture" = "تعديل الصورة";
+"unPin" = "الغاء التثبيت";
+"Suggestion results" = "نتائج الاقتراحات";
+
+
+"Add your inspiring quote here" = "أضف اقتباسك الملهم هنا";
+"Please enter your quote" = "الرجاء إدخال الاقتباس الخاص بك" ;
+"Please enter your quote at least 20 characters" = "الرجاء إدخال الاقتباس الخاص بك على الأقل 20 حرفا" ;
+"Please enter your quote maximum 100 characters" = "الرجاء إدخال عرض الأسعار الخاص بك بحد أقصى 100 حرف" ;
+"Personal information" = "المعلومات الشخصية";
+"Emergency Contacts" = "ارقام الطوارئ";
+"emergency contact" = "رقم الطوارئ";
+"Social Media" = "وسائل التواصل الاجتماعي";
+"social media" = "وسائل التواصل الاجتماعي";
+"Basic Info" = "المعلومات الاساسية";
+"Job Details" = "تفاصيل الوظيفة";
+"Contact Info." = "معلومات الاتصال";
+"Medical Insurance" = "تأمين طبي";
+"dependant" = "المعالين";
+"education" = "التعليم";
+"work experience" = "خبرة العمل";
+"certificate" = "الشهادات والدورات";
+"Certificate" = "الشهادات والدورات";
+"relatives" = "الأقارب";
+"private work" = "العمل الخاص";
+"Select From" = "إختر من";
+
+"Address Details" = "تفاصيل العنوان";
+"Full Name" = "الاسم بالكامل";
+"Date of birth" = "تاريخ الميلاد";
+"Gender" = "النوع";
+"Nationality" = "الجنسية";
+"Job Title" = "المسمى الوظيفي";
+"Job ID" = "الرقم الوظيفي";
+"Department" = "القسم";
+"Report To" = "ابلاغ الى";
+"Company Name" = "اسم الشركة";
+"Joining Date" = "تاريخ بدء العمل";
+"Email" = "البريد الإلكتروني";
+"Phone" = "رقم الهاتف";
+"Mobile" = "رقم الجوال";
+"Mobile " = "الجوال";
+"EXT" = "الرقم / الكود الداخلي";
+"Phone number" = "رقم الهاتف";
+"Phone Number" = "رقم الهاتف";
+"Has medical insurance?" = "هل لديك تأمين طبي؟";
+"Insurance Company Name" = "إسم شركة التأمين";
+"Yes / no" = "نعم / لا";
+"Insurance Tier" = "مستوى التأمين";
+"No Emergency Contacts Yet!" = "لا توجد ارقام طوارئ حتى الآن!" ;
+"No Emergency Contacts!" = "لا توجد ارقام طوارئ!" ;
+"No Dependents Yet!" = "لا يوجد معالين حتى الآن!" ;
+"No Dependants Yet!" = "لا يوجد معالين حتى الآن!" ;
+"No Education Yet!" = "لا يوجد تعليم حتى الآن!" ;
+"No Work Experience Yet!" = "لا يوجد خبرة عمل حتى الآن!" ;
+"No Certificates & Courses Yet!" = "لا توجد شهادات ودورات حتى الآن!" ;
+"No Relatives Yet!" = "لا يوجد أقارب حتى الآن!";
+"No Private Work Yet!" = "لا يوجد عمل خاص حتى الآن!";
+
+"Are you sure, you want to remove your profile picture?" = "هل أنت متأكد أنك تريد حذف صورة ملفك الشخصي ؟";
+"Sorry, There is issue in your request" = "عذرا، هناك مشكلة في طلبك" ;
+"please select cv to upload" = "الرجاء تحديد السيرة الذاتية للتحميل";
+"Your request has been edited successfully" = "لقد تم تعديل طلبك بنجاح";
+"Your request has been added successfully" = "تمت إرسال طلبك بنجاح";
+"Your file has been uploaded successfully" = "لقد تم رفع الملف بنجاح";
+
+
+
+
+
+
+/* My Salary */
+"My Salary" = "راتبي";
+"Report of salary" = "تقرير الراتب";
+"Report of Salary" = "تقرير الراتب";
+"Your salary hasn’t been released yet" = "لم يتم إصدار راتبك بعد";
+"Basic Salary" = "الراتب الأساسي";
+"Benefits" = "الحوافز";
+"Deductions" = "الخصومات";
+"Total Income" = "الدخل الكلي";
+//
+
+/* Emergency Contacts */
+"Contact No." = "رقم الاتصال";
+"Input Name" = "ادخل الإسم";
+"Select Relation" = "اختر القرابة";
+"Select Social" = "اختر وسيلة التواصل الاجتماعي";
+"Select Date" = "اختر التاريخ";
+"Select Degree Level" = "اختر الدرجة العلمية";
+"Input Field Of Study" = "ادخل مجال الدراسة / التخصص";
+"Input Organization Name" = "ادخل اسم المؤسسة";
+"Input Grade" = "ادخل الدرجة";
+"Upload Files here..." = "ادخل المرفقات هنا...";
+"Input Job Title" = "ادخل المسمى الوظيفي";
+"I am currently working in this role" = "مازلت اعمل في هذه الوظيفة";
+"Start date" = "تاريخ بداية الوظيفة";
+"End date" = "تاريخ نهاية الوظيفة";
+"Type your input" = "ادخل الوصف";
+"Upload CV" = "ارفع السيرة الذاتية";
+"Input Organization" = "ادخل جهة ومكان الإصدار";
+//
+
+/* Education */
+"Degree Level" = "الدرجة العلمية";
+//
+
+"Type" = "النوع";
+"Full time" = "دوام كامل";
+"part time" = "دوام جزئي";
+"freelance" = "دوام مستقل";
+"Phone number" = "رقم الهاتف";
+"Mobile number" = "رقم الجوال";
+"My salary" = "راتبي";
+"Date" = "التاريخ";
+"Gross salary" = "الراتب الكلي";
+"Net salary" = "الراتب الصافي";
+"Allowances" = "البدلات";
+"Allowance type" = "نوع البدل";
+"Allowance amount" = "قيمة البدل";
+"Deductions" = "الخصومات";
+"Deduction type" = "نوع الخصم";
+"Deduction amount" = "قيمة الخصم";
+"Link" = "الرابط";
+"Emergency contacts" = "ارقام الطوارئ";
+"Add new" = "اضافة";
+"Delete" = "حذف";
+"Edit" = "تعديل";
+"Name" = "الاسم";
+"Relation" = "القرابة";
+"Contact number" = "رقم التواصل";
+"Education" = "التعليم";
+"Field of study" = "مجال الدراسة / التخصص";
+"Organization Name" = "اسم المؤسسة";
+"About Us" = "معلومات عنا";
+"Date from – to" = "من تاريخ – الى تاريخ";
+"Grade" = "الدرجة";
+"Description" = "الوصف";
+"Attachment" = "المرفقات";
+"ex. company card" = "بطاقة شركة على سبيل المثال";
+"Edit Contact Info." = "تعديل معلومات الاتصال.";
+
+"Attach relevant documents or files here" = "قم بإرفاق المستندات أو الملفات ذات الصلة هنا";
+"old Values" = "القيم القديمة";
+"updated Values" = "القيم المحدثة";
+"added Values" = "القيم المضافة";
+"deleted Values" = "القيم المحذوفة";
+
+"Work experience" = "خبرة العمل";
+"Upload your CV" = "ارفع سيرتك الذاتية";
+"Current" = "الحالي";
+"Certificates & Courses" = "الشهادات والدورات";
+"Relatives" = "الأقارب";
+"Private Work" = "العمل الخاص";
+"Name" = "الاسم";
+"Issuing Organization" = "جهة ومكان الاصدار";
+"Work Experience CV" = "السيرة الذاتية لخبرات العمل";
+//
+
+// MARK: - News Screen
+"NEW" = "جديد";
+"Pinned News" = "الأخبار المثبتة";
+"No Search Results Yet!" = "لا توجد نتائج بحث حتى الآن!";
+"Whoops ... this information is not available for a moment" = "عفوًا ... هذه المعلومات غير متوفرة الآن";
+"No Favourites News Yet!" = "لا يوجد أخبار مفضلة حاليًا";
+"No Latest News Yet!" = "لا يوجد أخبار حاليًا";
+"News" = "الأخبار";
+"Sort By" = "ترتيب حسب";
+"Showing" = "عرض";
+"News Details" = "تفاصيل الخبر";
+//
+
+// MARK: - Announcements Screen
+"Announcements" = "الإعلانات";
+"All" = "الكل";
+"Showing" = "عرض";
+"No Search Results Yet!" = "لا توجد نتائج بحث حتى الآن!";
+"Whoops ... this information is not available for a moment" = "عفوًا ... هذه المعلومات غير متوفرة الآن";
+"No Favourites Announcements Yet!" = "لا يوجد إعلانات مفضلة حاليًا";
+"No Latest Announcements Yet!" = "لا يوجد إعلانات حاليًا";
+"Low" = "أقل أهمية";
+"Medium" = "مهم";
+"High" = "عاجل";
+"Sort By" = "ترتيب حسب";
+"Announcement details" = "تفاصيل الإعلان ";
+//
+
+// MARK: - Events Screen
+"Happening Now" = "يحدث الان";
+"Upcoming" = "القادمه";
+"View My Calendar" = "عرض التقويم الخاص بي";
+"Add to Calender" = "إضافة إلى التقويم";
+"Showing" = "عرض";
+"No Search Results Yet!" = "لا توجد نتائج بحث حتى الآن!";
+"Whoops ... this information is not available for a moment" = "عفوًا ... هذه المعلومات غير متوفرة الآن";
+"No Pasts Events Found!" = "لم يتم العثور على أحداث سابقة!";
+"No Active Events Yet!" = "لا يوجد فعاليات قادمه حتى الان!";
+" has been added to your calendar successfully" = " تم إضافته إلى جدولك بنجاح";
+" has been deleted from your calendar successfully" = " تم حذفه من جدولك بنجاح";
+"Events" = "الفعاليات";
+"Active" = "المجدولة";
+"Past" = "السابقة";
+"Sort By" = "ترتيب حسب";
+"Event Details" = "تفاصيل الفعاليات";
+//
+
+// MARK: - Offers Screen
+"Promocode" = "كود الخصم";
+"Off" = "خصم";
+"SAR" = "ريال";
+"Category : " = "الفئة :";
+"No Search Results Yet!" = "لا توجد نتائج بحث حتى الآن!";
+"Whoops ... this information is not available for a moment" = "عفوًا ... هذه المعلومات غير متوفرة الآن";
+"No Offers Yet!" = " لا يوجد عروض حتي الآن";
+"Sort By" = "ترتيب حسب";
+"Showing" = "عرض";
+"Offers" = "العروض";
+"Discount" = "خصم";
+"Offer Details" = "تفاصيل العرض";
+"Promocode Copied" = "تم نسخ كود الخصم";
+//
+
+// MARK: - Media Library Screen
+"No Media Library Yet!" = "لا توجد أي وسائل إعلام ";
+"Media Library" = "مكتبة الوسائط";
+"Photo Album" = "ألبوم صور";
+"Video" = "فيديو";
+"Audio" = "صوتي";
+//
+
+//MARK: - Calendar
+"Back" = "رجوع";
+"My Calendar" = "التقويم الخاص بي";
+" has been removed" = " تم مسحه";
+"Search" = "البحث";
+"Select date" = "اختر التاريخ";
+"Select time" = "اختر الوقت";
+"Are you sure you need to delete this event " = "هل تريد حذف هذا الحدث ";
+"Are you sure you want to delete this" = "هل انت متاكد انك تريد حذف";
+"Add New Event" = "إضافة حدث جديد";
+"Edit Event" = "تعديل الحدث";
+"Title " = "عنوان الحدث";
+"Add your title" = "أضف عنوان الحدث";
+"Invite People" = "ادعو الأشخاص";
+"Date " = "التاريخ";
+"Select date " = "اختر التاريخ";
+"Select Date" = "اختر تاريخ";
+"Time From" = "الوقت من";
+"Select Time" = "اختر الوقت";
+"To" = "الوقت إلى";
+"Location" = "الموقع";
+"Add Location" = "اضف الموقع";
+"Add" = "إضافة";
+"Done" = "تم";
+"Event View" = "تفاصيل الحدث";
+"People Invited" = "الأشخاص المدعوة";
+"Edit" = "تعديل";
+"Delete" = "حذف";
+"Confirmation Delete" = "تأكيد الحذف";
+"You have Selected Past Date" = "لقد تم اختيار تاريخ سابق";
+"Success" = "تم بنجاح";
+"Event Edited Successfully" = "تم تعديل الحدث بنجاح";
+"You can check it from the Calendar" = "يمكنك التأكد من التقويم الخاص بك";
+"Close" = "إغلاق";
+"Event Added Successfully" = "تم إضافة الحدث بنجاح";
+"Remove" = "حذف";
+"Recent Services" = "الخدمات المستخدمة مؤخرا";
+"Sub-Categories" = "الفئات الفرعية";
+//
+
+
+// MARK: - Shared Folders
+
+// MARK: - Recent Search Screen
+"Recent Search" = "عمليات البحث الأخيرة";
+"Enter at least 3 chars to apply search" = "من فضلك أدخل 3 حروف على الأقل لتطبيق البحث";
+//
+
+// MARK: - Filter Screen
+"Date" = "التاريخ";
+"Filter" = "تصفية";
+"Apply Filters" = "تطبيق";
+"Reset" = "إعادة";
+//
+
+// MARK: - Search-Filter Result Screen
+"Category" = "الفئة";
+"Sorry no results found!" = "عذرًا لم يتم العثور على نتائج";
+"Please try another search." = "الرجاء محاولة بحث آخر";
+"Sort By" = "ترتيب حسب";
+"Results" = "النتائج";
+//
+
+//
+
+// MARK: - Favorite Services
+"Add Request" = "إضافة طلب";
+"Rejected" = "مرفوض";
+"In progress" = "قيد التقدم";
+"Pending" = "قيد الانتظار";
+"Approved" = "تمت الموافقه";
+"Statistics Performance" = "أداء الإحصائيات";
+"Total Inbox" = "إجمالي المهام";
+"Total Requests" = "إجمالي الطلبات";
+"Total" = "الإجمالي";
+"Requested by me" = "طلباتي";
+//
+"Task Action successfully" = "تم %d إجراءك بنجاح";
+"Search Results For Services" = "نتائج البحث عن خدمات";
+"No Results For Services" = "لا توجد نتائج بحث في الخدمات";
+"Search Results For Users" = "نتائج البحث عن مستخدمين";
+"No Results For Users" = "لا توجد نتائج بحث في المستخدمين";
+"Search by users or services" = "ابحث عن مستخدمين أو خدمات";
+"Try another keyword" = "استخدم كلمة أخرى";
+"No search result" = "لا توجد نتائج بحث";
+"Withdraw Request" = "إلغاء الطلب";
+" Withdraw Request " = "    إلغاء الطلب    ";
+"Actions" = "الإجراءات";
+"Are you sure you want to withdraw the request?" = "هل تريد بالتأكيد إلغاء هذا الطلب ؟";
+"Expand card to see full process details" = "قم بتوسيع البطاقة للاطلاع على تفاصيل العملية كاملة";
+"Subservice List" = "قائمة الخدمة";
+" awaiting approval" = " في انتظار الموافقة";
+"You Have " = "لديك ";
+"View All Requests" = "عرض جميع الطلبات";
+"Hala" = "أهلا";
+"Requests" = "الطلبات";
+"by" = "بواسطة";
+"Media Library" = "مكتبة الوسائط";
+"Libraries" = "المكتبات";
+"Media" = "مكتبة الوسائط";
+"Photos" = "الصور";
+"Videos" = "فيديو";
+"Audios" = "صوتيات";
+"Latest Requests" = "أحدث الطلبات";
+"Favorite Services" = "الخدمات المفضلة";
+"You don't have any requests awaiting your approval" = "ليس لديك أي طلبات تنتظر الموافقة";
+"There is no Requests yet" = "لا توجد طلبات حتى الآن";
+"If you close this request you will permanently lose the data" = " إذا أغلقت هذا الطلب، فستفقد البيانات بشكل دائم";
+"The Sections display settings have been modified by the system admin" = "تم تعديل اعدادات عرض الأقسام من قبل مدير النظام";
+/*
+ * Time Off Request titles/messages
+ */
+"Send To Approve" = "إرسال للموافقة";
+"Please, Select Dates From Calendar" = "برجاء إختيار الأيام من النتيجة";
+"please enter the username and password" = "الرجاء إدخال اسم المستخدم وكلمة المرور";
+"date" = "التاريخ";
+"Change Language" = "تغيير اللغة";
+"App Needs to Restart" = "التطبيق يحتاج إلى إعادة التشغيل";
+"Forgot password?" = "هل نسيت كلمة السر؟";
+"My Request" = "طلبي";
+"Change Password" = "تغيير الرقم السري";
+"My Dashboard" = "لوحة البيانات";
+"password" = "تتغير الرقم السري";
+"notification" = "الإشعارات";
+"language" = "اللغة المفضلة";
+"accessibility" = "إمكانية الوصول الشخصية";
+"See All" = "إظهار الكل";
+"Active Events" = "الأحداث الجارية";
+"My Tasks" = "مهامي";
+"Latest Deals & Promotions" = "آخر العروض";
+"No Tasks Statistics Yet!" = "لاتوجد إحصاءات للمهام حتى الآن";
+"No Requests Statistics Yet!" = "لاتوجد إحصاءات للطلبات حتى الآن";
+"Latest Offers" = "آخر العروض";
+"Promocode Copied" = "تم نسخ كود الخصم";
+"Showing" = "إظهار";
+"Priorities:" = "الأهمية:";
+" Latest " = "آخر الإعلانات";
+"Announcement details" = "تفاصيل الإعلان ";
+"Newest" = "الأحدث";
+"Oldest" = "الأقدم";
+"Low Priority" = "ذا اولوية ضعيفه";
+"High Priority" = "ذا أهمية عليا";
+"Close" = "إغلاق";
+"NEW" = "جديد";
+"Sort By" =  "ترتيب حسب";
+"Showing" = "عرض";
+"No Active Events Yet!" = "لا يوجد فعاليات قادمه حتى الان!";
+"No Pasts Events Found!" = "لم يتم العثور على أحداث سابقة!";
+"Upcoming" = "القادمه";
+"Past" = "السابقة";
+"language" = "اللغة الافتراضية";
+"MainRequests" = "الطلبات";
+"No Notifications Yet!" = "لا يوجد اشعارات حتى الان!";
+"You have no notifications right now.
+Come back later" = "ليس لديك اشعارات الان";
+"Logout" = "تسجيل الخروج";
+"Log out" = "تسجيل الخروج";
+"Are you sure you want to logout?" = "هل أنت متأكد أنك تريد تسجيل الخروج؟";
+"Apply for services and respond to your assigned tasks in a few steps" = "تقدم بطلب للحصول على الخدمات واستجب للمهام المعينة لك في بضع خطوات";
+ "  Welcome to KAFD !
+ We’re glad you’re here." = "مرحبا بكم في مركز الملك عبد الله المالي!
+  نحن سعداء لتواجدك هنا.";
+"Let's Get Started" = "هيا بنا نبدأ";
+"Add-ons" = "قائمة التنقل";
+"App Version" = "نسخة التطبيق";
+"Active" = "المجدولة";
+"Happening Now" = "يحدث الان";
+"NEW" = "جديد";
+"No Media Library Yet!" = "لا توجد أي وسائل إعلام ";
+"No Recent media Yet!" = "لا توجد أي وسائل إعلام ";
+"Recent Media" = "أحدث الوسائط";
+"Media Library" = "مكتبة الوسائط";
+
+
+
+//storyboard
+"In order to take action, please, " = "من أجل اتخاذ إجراء، من فضلك، ";
+"Click Here" = "انقر هنا";
+" to add the required data first." = "لإضافة البيانات المطلوبة أولا. ";
+"equired data completed.Proceed with submission or " = "اكتملت البيانات المطلوبة. تابع الإرسال أو ";
+" to edit." = " للتعديل ";
+"Username/Email" = "اسم المستخدم / البريد الإلكتروني";
+"Sign In" = "تسجيل الدخول";
+"Reset your password" = "إعادة ضبط كلمة السر";
+"Username" = "إسم المستخدم";
+"Next" = "التالي";
+"Passcode" = "رمز المرور";
+"Enter your email or username" = "ادخل اسم المستخدم أو البريد الإلكتروني لاسترجاع حسابك";
+"<" = ">";
+"New Password" = "كلمة السر";
+"Confirm Password" = "تأكيد كلمة السر";
+"Submit" = "إرسال";
+"Password" = "كلمة السر";
+"Forgot Your Password" = "نسيت كلمة السر";
+"Forgot your password?" = "نسيت كلمة السر؟";
+"Send Thanks" = "إرسال";
+"Thanks alot" = "شكراً جزيلاً";
+"Awesome!" = "رائع!";
+"Back" = "رجوع";
+"Reset your password?" = "إعادة ضبط كلمة السر";
+"Earned points" = "النقاط المكتسبة";
+"Balance" = "الرصيد";
+"My Appraisals" = "جوائزي";
+"My Trends" = "أوسمتي";
+"My Profile" = "حسابي";
+"Reply" = "إرسال";
+"Tags" = "مرات الإشارة";
+"Total points" = "إجمالي النقاط";
+"Points" = "النقاط";
+"This Month" = "هذا الشهر";
+"Resend Passcode" = "إعادة إرسال رمز المرور";
+
+//Sign in
+"Username" = "إسم المستخدم";
+"Password" = "كلمة السر";
+"Please, enter your username" = "من فضلك، أدخل إسم المستخدم";
+"Please, enter your password" = "من فضلك، أدخل كلمة السر";
+"Email and password don't match" = "بيانات الدخول غير صحيحة";
+"Unable to connect to the internet, Please try again later" = "لا يوجد إتصال بالإنترنت، من فضلك، حاول مرة أخرى لاحقاً";
+"No internet connection" = "لا يوجد إتصال بالإنترنت";
+"Please check your internet connection" = "الرجاء التحقق من إتصال الإنترنت الخاص بك";
+"Yes" = "نعم";
+"No" = "لا";
+//Forgot
+"Please, enter your username/email" = "من فضلك، أدخل البريد الإليكتروني/إسم المستخدم";
+"Username/email does not exist" = "لا يوجد لدينا مستخدم بهذا البريد الإليكتروني/إسم المستخدم";
+
+//Reset
+"Please, enter the userId" = "من فضلك، أدخل معرف المستخدم";
+"Please, enter the new password" = "من فضلك، أدخل كلمة السر الجديدة";
+"Passwords don't match" = "كلمتا السر غير متطابقتان";
+"Password must be at least 6 characters long and contain at least one digit and one uppercase letter and one non-letter or digit character" = "كلمة السر يجب أن تكون اطول من خمسة أحرف وتحتوى على حرف كبير (A-Z) ورقم واحد ورمز واحد على الأقل";
+"An error occurred, Please try again later" = "حدث خطأ، يرجي المحاولة مرة أخرى لاحقاً";
+"Password changed successfully" = "تم تغيير كلمة السر بنجاح";
+"We sent you an email with the passcode" = "تم إرسال الكود في رسالة إلى بريدك الإليكتروني";
+"Please, enter the passcode" = "من فضلك، أدخل الكود";
+"Invalid passcode" = "كود غير صحيح";
+"Passcode" = "رمز المرور";
+"Confirm Password" = "تأكيد كلمة السر";
+"We resent you the email with the passcode" = "تم إعادة إرسال الكود في رسالة إلى بريدك";
+
+
+//PostAdd
+"Please, enter the post content" = "من فضلك، أدخل نص الرسالة";
+"Error" = "خطأ";
+"OK" = "تم";
+"Please allow Motivay to access the camera from the device settings" = "من فضلك، إسمح لMotivay بإستخدام الكاميرا من إعدادات الجهاز";
+"Please, allow Motivay to access the Photos from the device settings" = "من فضلك، إسمح لMotivay بإستخدام الصور من إعدادات الجهاز";
+"Some error occurred, Please try again" = "حدث خطأ، من فضلك حاول مرة أخرى";
+"Your Balance" = " رصيد النقاط الحالي";
+"You've successfully given" = "لقد أعطيت";
+"Successfully" = "بنجاح";
+"You can only attach one image" = "لا يمكنك إدراج أكثر من صورة واحدة";
+"Your post has been sent and waiting for approval from the Admin." = "تم ارسال منشورك وفي انتظار موافقة مسؤول النظام";
+
+//Home
+" to " = " إلى ";
+"Say Bravo" = "برافو";
+"Comment" = "تعليق";
+"Search" = "بحث";
+"Cancel" = "إلغاء";
+"Close" = "إغلاق";
+"Dismiss" = "إلغاء";
+"Sorry! We can't find what you're looking for" = "لا توجد نتائج!";
+"Uh-oh...looks like there aren't any posts yet!" = "لا توجد مشاراكات حتى الآن";
+"Try something different and we'll look again" = "حاول إستخدام كلمات أو محددات أخرى";
+"Go ahead and start posting" = "إبدأ وحفز زملائك";
+"Awesome!" = "برافو";
+"Pull to refresh" = "إسحب لإعادة التحميل";
+"Loading..." = "...جاري التحميل";
+"Loading more" = "جاري تحميل المزيد";
+"No more data" = "لا مزيد من المنشورات";
+"Home" = "الرئيسية";
+"Replying to " = "رد على";
+//Filters
+"Filter" = "تصفية النتائج";
+"Department" = "القسم";
+"Are you sure you want to reset all filters?" = "هل أنت متأكد من إزالة جميع المحددات؟";
+"Reset" = "إعادة تعيين";
+"Select department(s)" = "اختر القسم (الأقسام)";
+"Select trend(s)" = "اختر الوسام (الأوسمة)";
+"Select date range" = "اختر نطاق التاريخ";
+"Date range" = "نطاق التاريخ";
+"Select person(s)" = "اختر الشخص (الأشخاص)";
+"Trend" = "الوسام";
+"Date" = "التاريخ";
+"Person" = "الشخص";
+"Apply filters" = "تطبيق المحددات";
+"Are you sure you want to reset all filters?" = "هل أنت متأكد من إزالة جميع المحددات؟";
+"Try different keywords" = "حاول إستخدام كلمات أخرى";
+
+//Filters Departments
+"Select department" = "اختر القسم";
+"Departments" = "القسم";
+"Select" = "إختر";
+"Apply" = "حفظ";
+"Employees" = "موظفين";
+"ApplyF" = "تطبيق";
+"Apply filters" = "تطبيق";
+
+//Filters Trends
+"Select Trend" = "إختر الوسام";
+"Trends" = "الأوسمة";
+
+//Filters Calendar
+"Done" = "تم";
+
+//Fitlers Persons
+"Praises Received" = "يعطي الشكر";
+"Compliments Given" = "يتلقى الشكر";
+"All" = "الكل";
+"Show posts as" = "نوع المنشورات";
+"Select Person" =  "إختر الشخص";
+
+//Menu
+"Are you sure you want to logout?" = "هل متأكد من الخروج؟";
+"Logout" = "خروج";
+
+//Post details
+"Motive post" = "منشور محفز";
+"Reply to " = "رد على ";
+"Reply added successfully" = "تم إضافة الرد بنجاح";
+"Delete" = "حذف";
+"Options" = "الخيارات";
+"Reply" = "إرسال";
+"Update" = "تعديل";
+"Type your reply here..." = " اكتب ردك";
+"Show more" = "عرض المزيد";
+"Show less" = "عرض القليل";
+"Bravos" = "برافو";
+"Bravo said by" = "أحسنت قيلت من قبل";
+"Kafu said by" = "كفؤ قيلت من قبل";
+//My Profile
+"My Profile" = "حسابي";
+"Edit" = "تعديل";
+"Save" = "حفظ";
+"Earned points" = "النقاط المكتسبة";
+"Balance" = "الرصيد";
+"Change photo" = "تغيير الصورة";
+"Remove photo" = "حذف الصورة";
+"Take Photo" = "التقاط صورة";
+"Choose Photo" = "اختيار صورة";
+"Department" = "القسم";
+"Email" = "البريد الإلكتروني";
+"Mobile Number" = "رقم الهاتف";
+"Join Date" = "تاريخ الإنضمام";
+"Change" = "تغيير";
+"Name" = "الاسم";
+"Position" = "الوظيفة";
+"Mobile Number" = "رقم الهاتف";
+"mobile Number" = "رقم الهاتف";
+"Twitter account" = "حساب تويتر";
+"Facebook account" = "حساب الفيسبوك";
+"LinkedIn account" = "حساب لينكد إن";
+"Link Facebook account" = "إضافة حساب الفيسبوك";
+"Link Twitter account" = "إضافة حساب تويتر";
+"Link LinkedIn account" = "إضافة حساب لينكد إن";
+"Status" = "الحالة";
+"Departments" = "الأقسام";
+"Please, enter your name" = "من فضلك، أدخل إسم";
+"You have edited your profile info successfully." = "لقد تم تعديل بيانات ملفك الشخصي بنجاح.";
+"Error updating profile info" = "خطأ في تعديل البيانات";
+"You have exceeded characters limit which is 35 characters." = "لقد تجاوزت الحد الأقصي للحروف وهو 35 حرف.";
+"You have exceeded numbers limit which is 35 numbers." = "لقد تجاوزت الحد الأقصي للأرقام وهو 35 رقم.";
+"You have exceeded characters limit which is 50 characters." = "لقد تجاوزت الحد الأقصي للحروف وهو 50 حرف.";
+"Business Card" = "بطاقة العمل";
+"Quote" = "الإقتباس";
+"Edit Quote" = "تعديل الإقتباس";
+
+
+// Personal information
+"Please select country first" = "من فضلك اختر البلد اولا";
+"Edit Basic Info." = "تعديل المعلومات الأساسية";
+"Edit Address Details" = "تعديل تفاصيل العنوان";
+"Do you want to Discard all updates ?" = "هل تريد الغاء جميع التحديثات ؟";
+"Discard All Updates" = "الغاء جميع التحديثات";
+
+// private work
+
+"Private Work" = "العمل الخاص";
+"Company Name" = "اسم الشركة";
+"Commercial Registration No" = "رقم السجل التجاري";
+"Company Type" = "نوع الشركة";
+"Relation list" = "علاقتك بالشركة";
+"New Private Work" = "عمل خاص جديد";
+"Edit Private Work" = "تعديل العمل الخاص";
+"Work Relation Name" = "علاقتك بالشركة";
+
+// Relatives
+"New Relatives" = "أقارب جدد";
+"Edit Relatives" = "تعديل الاقارب";
+"Relative Employee Name" = "اسم الموظف";
+"Relationship" = "العلاقة الاجتماعية";
+
+// Education
+"Date" = "التاريخ";
+"Grade" = "الصف";
+"Graduation place" = "مكان التخرج";
+"University name" = "اسم الجامعة";
+"Field of Study" = "مجال الدراسه";
+"education degree level" = "درجة المؤهل";
+
+// Emergency
+"Title" = "اللقب";
+"First Name" = "الاسم الأول";
+"If you want to delete the primary contact,you should select another one firstly" = "إذا كنت تريد حذف جهة الاتصال الأساسية، فيجب عليك تحديد جهة اتصال أخرى أولاً";
+"You don't have main address please fill your main address first" = "ليس لديك عنوان رئيسي، يرجى ملء عنوانك الرئيسي أولاً";
+
+// Depandants
+"Edit Dependents" = "تعديل المعالين";
+"New Dependents" = "المعالين الجدد";
+"Dependants" = "معالين";
+
+
+"Father Name" = "اسم الاب";
+"Grand Father Name" = "اسم الجد";
+"Family Name" = "اسم العائلة";
+"Contact Phone Number" = "رقم الجوال";
+"Relationship start date" = "تاريخ بداية العلاقة الاجتماعية";
+"Address Type" = "نوع العنوان";
+"Short Address" = "العنوان المختصر";
+"Street Name" = "اسم الشارع";
+"Building No" = "رقم المبني";
+"Secondary No" = "الرقم الثانوي";
+"Distrect" = "المنطقة";
+"Education" = "التعليم";
+"Edit Education" = "تعديل التعليم";
+"New Education" = "التعليم الجديد";
+
+
+"Please check the acknowledge" = "يرجى التحقق من الإقرار";
+"min_to_max_vaildation" = "%@ يجب ان تكون بين %@ و %@ حرفًا";
+"required_validation" = "%@ مطلوب. الرجاء إدخال قيمة";
+"list_validation" = "الرجاء تحديد خيار من قائمة %@ ";
+"Invaild_format" = " %@ تنسيق غير صالح. يرجى اتباع التنسيق المحدد.";
+"Invaild_entry" = " %@ إدخال غير صالح. الرجاء إدخال رقم أو حرف صالح.";
+
+
+
+//My Awards
+"My Appraisals" = "جوائزي";
+"Total Points" = "إجمالي النقاط";
+"This Month" = "هذا الشهر";
+"Uh-oh...looks like you don't have any awards yet!" = "لا يوجد جوائز بعد!";
+
+//My Trends
+"Trending" = "أوسمتي";
+
+//Stats
+"Stats" = "الإحصائيات";
+"My Stats" = "نتائجي";
+"Stars" = "النجوم";
+"Top Trends" = "أعلي  الأوسمة";
+"Earned Points" = "النقاط المكتسبة";
+"Sent Points" = "النقاط المرسلة";
+"Total Posts" = "إجمالي المنشورات";
+"Said Bravo" = "قلت أحسنت";
+"posts" = "منشور";
+"Top Performer" = "الأفضل أداءً";
+"Top Giver" = "الأكثر عطاءً";
+"Top Posting" = "الأكثر نشراً";
+"Top Contributor" = "الأكثر مساهمة";
+"Points" = "نقاط";
+"Posts" = "منشورات";
+"Reactions" = "تفاعل";
+
+//Settings
+"Settings" = "الإعدادات";
+"LANGUAGE" = "اللغة";
+"NOTIFICATIONS" = "الإشعارات";
+"Push Notifications" = "الإشعارات";
+"pushNotificationsOn" = "السماح  بالإشعارات الخاصة بالعمليات.";
+"pushNotificationsOff" = "إيقاف الإشعارات الخاصة بالعمليات.";
+"emailNotificationsOn" = "السماح بإشعارات البريد الإلكتروني الخاصة بالعمليات.";
+"emailNotificationsOff" = "إيقاف إشعارات البريد الإلكتروني الخاصة بالعمليات.";
+"Allow push notification for your transactions." = "السماح  بالإشعارات الخاصة بالعمليات.";
+"Email Notifications" = "إشعارات البريد الإلكتروني";
+"You won’t receive email notifications." = "إيقاف إشعارات البريد الإلكتروني.";
+"TERMS & POLICY" = "الشروط والسياسات";
+"Terms & conditions" = "الشروط والأحكام";
+"Privacy policy" = "سياسة الخصوصية";
+"Help" = "المساعدة";
+"Send feedback" = "إرسال تعليق";
+"Feedback Type" = "نوع التعليق";
+"Contact us" = "إتصل بنا";
+"Logout " = "الخروج";
+
+"You'll be notified of all the activities that occurring on your profile" = "سوف يتم اشعارك بجميع انشطه ملفك الشخصي";
+"You won't be notified of any activities that occurring on your profile" = "لن يتم اشعارك باي نشاط خاص بملفك الشخصي";
+
+"You'll be notified by email of all the activities occurring on your profile" = "سوف نقوم باشعارك عبر البريد الالكتروني بجميع انشطه ملفك الشخصي";
+"You won't be notified by email of any activities occurring on your profile" = "لن يتم اشعارك عبر البريد الالكتروني باي نشاط خاص بملفك الشخصي";
+
+"Please, allow Motivay to send you push notifications from the device settings" = "من فضلك، إسمح لMotivay بإرسال إشعارات لك من إعدادات الجهاز";
+"Go to settings" = "الذهاب للإعدادات";
+
+
+//Notifications
+"Notifications" = "الإشعارات";
+"There's no notification yet," = "لا توجد إشعارات الآن,";
+"Check back later for updates" = "برجاء التحقق مرة أخري في وقت لاحق.";
+"replied" = "قاموا بالرد";
+"said" = "قالوا";
+"said1" = "قال";
+"Bravo" = "أحسنت";
+"Kafu" = "كفؤ";
+"replied1" = "قام بالرد";
+"said Bravo1" = "أحسنت";
+"points" = "نقطة";
+"point" = "نقاط";
+"and" = "و";
+"gave you" = "أعطاك";
+"for your" = "ل";
+"other" = "آخرين";
+"others" = "آخر";
+"on" = "على";
+"thank of you" = "منشور";
+"Unfortunately, you didn't receive enough points this month. We believe that you can do better." = "للاسف لم تحصل علي عدد كافي من النقاط هذا الشهر. نحن نؤمن بانك تستطيع ان تقوم بالافضل.";
+"Congratulations! You are one of the stars, Keep it up." = "تهانينا! لقد اصبحت من النجوم، استمر بهذا.";
+"has been approved." = "لقد تم الموافقه علي منشورك التحفيزي ل";
+"has been pinned." = "لقد تم تثبيت منشورك التحفيزي ل";
+"has been rejected." = "لقد تم رفض منشورك التحفيزي ل";
+"post " = "منشور ";
+"motive " = " التحفيزي";
+"You still have " = "ما زال لديك ";
+"in your balance, " = "في حسابك، ";
+"try to motivate your colleagues." = "حاول تحفيز زملائك .";
+"your motive post to " = "منشورك التحفيزي ل ";
+
+//Rewards
+"All" = "الكل";
+"Bookmarked" = "المفضلة";
+"Bookmark" = "تفضيل";
+"Redeem" = "إسترداد";
+"Redeem now" = "إسترداد";
+"Redeemed" = "المشتريات";
+"Rewards" = "الجوائز";
+"There are no bookmarked rewards yet" = "لا توجد جوائز في المفضلة حتى الآن";
+"You haven't redeemed any rewards yet" = "لا توجد جوائز مستردة بعد";
+"There are no rewards yet" = "لا توجد جوائز بعد";
+"Redeem now" = "إسترداد الآن";
+"See All" = "شاهد الكل";
+"Reward details" = "تفاصيل البطاقة";
+"Awards points" = "نقاط الجوائز";
+"bought it!" = "شخص قاموا بشراء هذا المنتج!";
+"to Redeem this item" = "متبقية لإسترداد هذا المنتج";
+"Are you sure you want to redeem" = "هل تريد إسترداد";
+"with" = "ب";
+"?" = "؟";
+"Congratulations" = "تهانينا";
+"You've successfully redeemed" = "لقد تم بنجاح إسترداد";
+"Your code is" = "رمز الاستخدام ";
+"Back to rewards" = "رجوع إلى الجوائز";
+"Redeemed " = "إستردت";
+"Code" = "كود";
+"State" = "الحالة";
+
+"KAFU" = "كفؤ";
+"Said Kafu" = "قال كفؤ";
+
+
+"Upload Files here..." = "أضف المرفقات هنا...";
+"Add Attachments" = "إضافة المرفقات";
+
+
+//Login
+"Username" = "اسم المستخدم";
+"Password" = "كلمة المرور";
+"Sign in" = "تسجيل الدخول";
+
+//Dashboard
+"History" = "السجل";
+"Event Types" = "أنواع الأحداث";
+"See All" = "إظهار الكل";
+"Locations" = "المواقع";
+"Record" = "السجل";
+"Today" = "اليوم";
+"Yesterday" = "أمس";
+"There are no event types." = "لم يتم إيجاد أنواع الأحداث.";
+"Inspectors" = "المفتشون";
+"0" = "صفر";
+"No location" = "لا يوجد موقع";
+"No activity" = "لا يوجد نشاط";
+"Options" = "الاختيارات";
+"Check in" = "تسجيل الموقع";
+"Check out" = "تسجيل الخروج من الموقع";
+"Check in history" = "تاريخ تسجيل الموقع";
+"Check in completed" = "اكتمل تسجيل الموقع";
+"Check out completed" = "اكتمل تسجيل الخروج من الموقع";
+"Check in failed" = "فشل تسجيل الموقع";
+"Check in " = "تسجيل دخول ";
+"Check out " = "تسجيل خروج ";
+"There is no check in history." = "لا يوجد مواقع مسجلة";
+"Select" = "أختر";
+"Skip" = "تخطي";
+"Navigate to Location" = "الانتقال الى الموقع";
+"Activities" = "الأنشطة";
+
+//Form
+"Location" = "الموقع";
+"Attachments" = "المرفقات";
+"Save" = "حفظ";
+"Submit" = "إرسال";
+"Take Photo" = "التقاط صورة";
+"Choose Photo" = "اختيار صورة";
+"Select Date" = "إختر التاريخ";
+"Select Time" = "إختر الوقت";
+"Activity" = "الأنشطة السابقة";
+"Back to Home" = "العودة للرئيسية";
+"#Event submitted successfully" = "تم تسليم #Event بنجاح";
+"#Event updated successfully" = "تم تعديل #Event بنجاح";
+"Event Id" = "رقم التقرير";
+"Enter your notes" = "أدخل ملاحظاتك";
+"Add Action Comment" = "اضف تعليقك";
+"You will be awarded outstanding points if the report is properly closed." = "سوف يتم منحك النقاط المستحقه في حال اغلاق التقرير بشكل سليم.";
+"Edit" = "تعديل";
+"Remove" = "حذف";
+"Please fill all required fields" = "من فضلك ادخل كل الحقول المطلوبه";
+"Failed to submit events" = "فشل في ارسال الحدث";
+"Failed to update  events" = "فشل في تحديث الحدث";
+"Failed to get form" = "فشل في استرجاع القائمة";
+"Please Enter your location" = "من فضلك ادخل موقعك";
+"You reached maximum number of attachments" = "لقد تجاوزت الحد الأقصي للمرفقات المسموح بها";
+"Event saved successfully" = "تم حفظ الحدث بنجاح";
+"Event deleted successfully" = "تم حذف الحدث بنجاح";
+"Reject" = "رفض";
+"Enter a reason for rejection" = "أدخل سبب الرفض";
+"reason" = "السبب";
+"Event rejected successfully" = "تم رفض الحدث بنجاح";
+"Are you sure you want to leave?" = "هل أنت متأكد انك تريد ان تغادر؟";
+"Assign to" = "تحويل الى";
+"Accept" = "موافقة";
+"Please select Assign to value" = "من فضلك اختار المحول اليه";
+"Notes" = "ملاحظات";
+"Check in failed, you have to be at the location to Check in successfully." = "فشل تسجيل الدخول في الموقع، يجب ان تكون متواجد في الموقع فعلياً ليتم تسجيل دخولك بنجاح";
+"Actions" = "الإجرائات";
+"View Actions" = "عرض الإجرائات";
+"Action submitted successfully" = "تم اخذ الإجراء بنجاح";
+"Others" = "آخرون";
+"issue" = "مشكلة";
+"You don't have access to submit report" = "ليس لديك حق الوصول لإرسال التقرير";
+"Pick Location" = "اختر الموقع";
+"Confirm" = "تأكيد";
+"You don't have access to this form" = "ليس لديك صلاحية لهذا النموذج";
+"You don't have access to this location" = "ليس لديك صلاحية لهذا الموقع";
+"Should be between MIN - MAX" = "يجب ان يكون بين MIN - MAX";
+"Should be between MIN% - MAX%" = "يجب ان يكون بين MIN% - MAX%";
+"Very Dissatisfied" = "غير راضي تماماً";
+"Dissatisfied" = "غير راضي";
+"Neutral" = "محايد";
+"Satisfied" = "راضي";
+"Very Satisfied" = "راضي تماماً";
+"Invalid input" = "مدخل غير صالح";
+"Min Attachment: MIN" = "الحد الأدنى للمرفقات: MIN";
+"Max Attachment: MAX" = "الحد الأقصى للمرفقات: MAX";
+"Should be more than MIN" = "يجب ان يكون أكثر من MIN";
+"Should be less than MAX" = "يجب ان يكون أقل من MAX";
+"Are you sure you want to leave before submitting the report?" = "هل أنت متأكد أنك تريد المغادرة قبل إرسال التقرير؟";
+
+//History
+"Saved Events" = "الأحداث المحفوظة";
+"Search" = "بحث";
+"There are no saved events." = "لا يوجد أحداث محفوظة.";
+"There are no events yet." = "لا يوجد أحداث حتي الآن.";
+
+//Notifications
+"Notifications" = "التنبيهات";
+"There are no notifications yet," = "لا توجد تنبيهات حتي الأن,";
+
+//Tasks
+"Tasks" = "المهام";
+"There are no tasks yet," = "لا توجد مهام حتي الأن,";
+"Due Date" = "تاريخ الإنتهاء";
+
+//Profile
+"No Data Available" = "لا توجد بيانات";
+"There is no data" = "لا توجد بيانات";
+"Name" = "الإسم";
+"Phone" = "الهاتف";
+"Job" = "المهنة";
+"Direct Manager" = "المدير المباشر";
+"Email" = "البريد الإلكتروني";
+"points" = "نقطة";
+
+//Settings
+"System of inspectors and supervisors Riyadh Airports" = "نظام مفتشي ومشرفي مرافق مطارات الرياض";
+"System of inspectors and supervisors Check Plus" = "نظام مفتشي ومشرفي مرافق";
+"System of inspectors and supervisors GEA" = "نظام مفتشي ومشرفي مرافق الهيئة العامة للترفيه";
+"System of inspectors and supervisors ELM" = "نظام مفتشي ومشرفي مرافق علم";
+"System of inspectors and supervisors HOUSING"  = "نظام مفتشي ومشرفي مرافق وزارة الإسكان";
+"System of inspectors and supervisors SEHA"  = "نظام مفتشي ومشرفي مرافق وزارة الصحة";
+"System of inspectors and supervisors" = "نظام مفتشي ومشرفي مرافق";
+"System of inspectors and supervisors Licuas" = "نظام مفتشي ومشرفي مرافق";
+"System of inspectors and supervisors Tourism" = "نظام مفتشي ومشرفي مرافق وزارة السياحة";
+"English" = "اللغة الإنجليزية";
+"Settings" = "الإعدادات";
+"About" = "عن النظام";
+"About" = "عن";
+"User guide" = "دليل الاستخدام";
+"Sign out" = "تسجيل الخروج";
+"Version" = "نسخة";
+"Yes" = "نعم";
+"No" = "لا";
+"Language" = "اللغة";
+"Withdraw" = "سحب الطلب";
+"Edit Request" = "تعديل الطلب";
+
+//General
+"Close" = "إغلاق";
+"Cancel" = "إلغاء";
+"Done" = "تم";
+"Yes" = "نعم";
+"YES" = "نعم";
+"No" = "لا";
+"NO" = "لا";
+"No internet connection" = "لا يوجد إتصال بالإنترنت";
+"Please check your internet connection" = "الرجاء التحقق من إتصال الإنترنت الخاص بك";
+"Please try again later" = "الرجاء المعاودة لاحقاً";
+"Unexpected error" = "خطأ غير متوقع";
+"There are no inspectors." = "لا يوجد مفتشين.";
+
+//Documents
+"Documents" = "مستندات";
+"There are no documents." = "لا يوجد مستندات";
+"This file has been deleted" = "لقد تم حذف هذا الملف";
+"Files" = "الملفات";
+
+//Error Messages
+"Username or password is incorrect, please try again." = "اسم المستخدم أو كلمة المرور غير صحيحة، يرجى المحاولة مرة أخرى.";
+"Your account is locked, Please contact with system administrator." = "حسابك غير مفعل، من فضلك تواصل مع مسئول النظام.";
+"Please enter your username " = "من فضلك ادخل اسم المستخدم";
+"Please enter your password " = "من فضلك ادخل كلمة المرور";
+"This passcode has been expired, please request new one" = "لقد انتهت صلاحيه كلمه المرور ، من فضلك اطلب رمز مرور اخر";
+"Unexpected error, please try again." = "خطأ غير متوقع، يرجى المحاولة مرة أخرى";
+"Please allow Check to access the camera from settings" = "يرجى تمكين الوصول للكاميرا من الاعدادات";
+"Please allow Check to access the Photos from settings" = "يرجى تمكين الوصول للصور من الاعدادات";
+"Are you sure you want to log out?" = "هل أنت متأكد أنك تريد تسجيل الخروج؟";
+"Please allow Check to access the Location from settings" = "يرجى تمكين الوصول للموقع من الاعدادات";
+"Change Password" = "تغيير كلمة المرور";
+"Old Password" = "كلمة المرور القديمة";
+"New Password" = "كلمة المرور الجديدة";
+"Confirm New Password" = "تأكيد كلمة المرور الجديدة";
+"Please enter your old password." = "الرجاء إدخال كلمة المرور القديمة.";
+"Please enter your new password." = "الرجاء إدخال كلمة المرور الجديدة.";
+"Please enter confirm new password." = "الرجاء إدخال تأكيد كلمة المرور الجديدة.";
+"Password changed successfully" = "تم تغيير كلمة المرور بنجاح";
+"PHOTO" = "صورة";
+"AEAF_LOCK_TEXT" = "AE/AF LOCK";
+"API_CANCEL_TITLE" = "إلغاء";
+"HDR_AUTO" = "تلقائي";
+"HDR_ON" = "مُشغَّل";
+"HDR_OFF" = "متوقف";
+"TIMER_OFF_TEXT" = "متوقف";
+"USE_PHOTO" = "استخدام الصورة";
+"RETAKE" = "إعادة الالتقاط";
+"ZOOM_FACTOR_SYMBOL" = "x1";
+"ZOOM_FACTOR_TEXT" = "x1";
+"Choose File" = "اختيار ملف";
+"File extension not supported" = "نوع الملف غير مدعوم";
+"Max attachment size is 4 MB" = "الحد الأقصى لحجم المرفق هو 4 ميجا بايت";
+"Max attachment size is 25 MB" = "الحد الأقصى لحجم المرفق هو 25 ميجا بايت";
+"File size can't be greater than 20 MB" = "لا يمكن أن يكون حجم الملف أكبر من 20 ميجا";
+"Error uploading image, please try again" = "خطأ في رفع الصورة، من يرجى المحاولة مرة أخرى";
+"Submitting Answers" = "إرسال الإجابات";
+"There is no location to visit now." = "لا يوجد موقع لزيارته الآن.";
+"Clear" = "إزالة";
+"You don't have any activities right now." = "ليس لديك أي أنشطة في الوقت الحالي.";
+
+"Description" = "الوصف";
+"Severity" = "الخطورة";
+"Status" = "الحالة";
+"Department" = "القسم المسند إليه";
+"Assignee" = "المسند إليه";
+"Due date" = "تاريخ الإنتهاء";
+"Recent Activities" = "الانشطة السابقة";
+"Action Details" = "تفاصيل الإجراء";
+"You haven't made any changes to action details." = "لم تقم بتغيير اي بيانات في تفاصيل الإجراء.";
+"There are no actions yet," = "لا توجد إجرائات حتي الأن,";
+"You can't save an empty report." = "لا يمكنك حفظ تقرير فارغ.";
+
+//Registration
+"Don't have an account? Sign Up" = "ليس لديك حساب؟ انشئ حساب";
+"Register your account" = "إنشاء حساب جديد";
+"Full name" = "الإسم";
+"Email address" = "البريد الإلكتروني";
+"Phone number" = "الهاتف";
+"Confirm password" = "تأكيد كلمة المرور";
+"Sign Up" = "تسجيل مستخدم";
+"Please enter your username." = "من فضلك ادخل اسم المستخدم.";
+"Please enter your password." = "من فضلك ادخل كلمة المرور.";
+"Please enter your full name." = "من فضلك ادخل اسمك.";
+"Please enter your email address." = "من فضلك ادخل البريد الإلكتروني.";
+"Please enter valid email address." = "من فضلك ادخل بريد إلكتروني صحيح.";
+"Please enter confirm password." = "من فضلك ادخل تأكيد كلمة المرور.";
+"Please enter matching passwords." = "من فضلك ادخل كلمة مرور مطابقة.";
+"Your password and password confirmation do not match." = "كلمة المرور وتأكيد كلمة المرور غير متطابقين.";
+"User registered successfully." = "تم إنشاء الحساب بنجاح.";
+"* Optional" = "* اختياري";
+
+//Location Details
+"Location Details" = "تفاصيل الموقع";
+"Category" = "التصنيف";
+"Type" = "النوع";
+"Importance level" = "درجة الأهمية";
+"Allow reports submission" = "السماح بتسليم التقارير";
+"Location Readiness" = "جاهزية الموقع";
+"Location Issues" = "مشاكل الموقع";
+"Resolved" = "منتهية";
+"Pending" = "قيد التنفيذ";
+"Location Hierarchy" = "تسلسل الموقع";
+"Location hierarchy" = "تسلسل الموقع";
+"Details" = "تفاصيل";
+"Running" = "يعمل";
+"Blocked" = "معطل";
+"Allowed" = "مسموح";
+"Not allowed" = "غير مسموح";
+"This location is not assigned to you." = "هذا الموقع غير معين اليك.";
+"You don't have access to this location/asset." = "ليس لديك صلاحية لهذا الموقع/الأصل.";
+"No locations found." = "لم يتم العثور على مواقع.";
+"There are no locations yet." = "لا توجد مواقع حتى الآن.";
+"Additional info" = "معلومات إضافية";
+"Additional Info" = "معلومات إضافية";
+"Additional files" = "ملفات إضافية";
+"Additional Files" = "ملفات إضافية";
+
+//Assets
+"Locations & Assets" = "المواقع والأصول";
+"Assets" = "الأصول";
+"Asset Details" = "تفاصيل الأصل";
+"Vendor" = "المُصَنِّع";
+"Site" = "الموقع";
+"Serial" = "الرقم المسلسل";
+"Warranty expiration date" = "تاريخ انتهاء صلاحية الضمان";
+"Purchase date" = "تاريخ الشراء";
+"Placed in service on" = "وُضِعَ في الخدمة في";
+"Asset Issues" = "مشاكل الأصل";
+"This asset is not assigned to you." = "هذا الأصل غير معين اليك.";
+"You don't have access to this asset." = "ليس لديك صلاحية لهذا الأصل.";
+"No assets found." = "لم يتم العثور على أصول.";
+"There are no assets yet." = "لا توجد أصول حتى الآن.";
+"No Content Yet!" = "لا يوجد محتوى بعد!";
+"Your company information will appear here." = "سوف تظهر معلومات شركتك هنا.";
+"Asset type" = "نوع الأصل";
+
+"No matching results found." = "لم يتم العثور على نتائج مطابقة.";
+"Are you sure you want to delete this event?" = "هل أنت متأكد من حذف هذا الحدث؟";
+"No Internet Connection." = "لا يوجد اتصال بالإنترنت.";
+"Connected." = "متصل.";
+"There are no tasks yet." = "لا توجد مهام بعد.";
+"View file" = "عرض الملف";
+"Download file" = "تنزيل الملف";
+"Back to Report" = "العودة إلى التقرير";
+
+//New Design
+"Show all" = "عرض الكل";
+"Show less" = "عرض أقل";
+"year" = "سنة";
+"years" = "سنوات";
+"month" = "شهر";
+"months" = "شهور";
+"week" = "أسبوع";
+"weeks" = "أسابيع";
+"day" = "يوم";
+"days" = "أيام";
+"hour" = "ساعة";
+"hours" = "ساعات";
+"minute" = "دقيقة";
+"minutes" = "دقائق";
+"second" = "ثانية";
+"seconds" = "ثواني";
+" remaining" = " متبقية";
+" overdue" = " متأخر";
+"locations" = "مواقع";
+"assets" = "أصول";
+"Schedule" = "الجدول";
+"Help" = "المساعدة";
+"Log out" = "تسجيل الخروج";
+"Status:" = "الحالة:";
+"Due" = "تاريخ الانتهاء";
+"All" = "الكل";
+"Visited" = "التي تمت زيارتها";
+"Not Visited" = "التي لم تتم زيارتها";
+"Activity Details" = "تفاصيل النشاط";
+"Menu" = "قائمة";
+"Filter" = "تصفية";
+"Canceled" = "ألغيت";
+"Completed" = "مكتملة";
+"Planned" = "مخطط";
+"In progress" = "قيد التنفيذ";
+"at" = "في";
+"of" = "من";
+"Open" = "مفتوحة";
+"Closed" = "مغلقة";
+"Approved" = "مقبولة";
+"Rejected" = "مرفوضة";
+"Completed" = "مكتملة";
+"There are no activities today." = "لا يوجد أنشطة اليوم.";
+"There are no tasks today." = "لا يوجد مهام اليوم.";
+"There are no schedules." = "لا يوجد أنشطة.";
+"Update" = "تعديل";
+"Activity " = "الأنشطة";
+"Changes saved successfully." = "تم حفظ التعديلات بنجاح.";
+"Push Notifications" = "الإشعارات";
+"Email Notifications" = "إشعارات البريد الإلكتروني";
+"Profile" = "الملف الشخصي";
+
+//Conference
+"Error in joining the call." = "خطأ في الانضمام إلى المكالمة.";
+"The call has been ended." = "تم إنهاء المكالمة.";
+"Sorry unexpected error, the call will be terminated." = "آسف .خطأ غير متوقع، سيتم إنهاء المكالمة";
+"Live Inspection" = "فحص مباشر";
+"Accept" = "قبول";
+"Reject" = "رفض";
+"LIVE" = "مباشر";
+
+"Contacts" = "جهات الاتصال";
+"Participants" = "المشاركون";
+"members" = "أعضاء";
+"member" = "عضو";
+"Are you sure you want to leave before submitting the report?" = "هل أنت متأكد أنك تريد المغادرة قبل إرسال التقرير؟";
+"Live Chat" = "دردشة مباشرة";
+"Unit Users" = "مستخدمو الوحدة";
+"Technical Support Users" = "مستخدمو الدعم الفني";
+"Enter message here" = "أدخل الرسالة هنا";
+"Partipant already in Conference" = "مشارك بالفعل في المؤتمر";
+"User is not available at the moment." = "المستخدم غير متوفر في الوقت الحالي.";
+"No Answer" = "لم يتم الرد";
+"Call declined" = "تم رفض المكالمة";
+
+"VTUX_CONFERENCE_STATE_CALLING" = "نحن ننتظر وصول المتصلين الآخرين.";
+"VTUX_CONFERENCE_STATE_ENDED" = "تم إنهاء المكالمة.";
+"VTUX_CONFERENCE_STATE_DECLINED" = "مكالمة مرفوضة.";
+
+"VTUX_MICROPHONE_ALERT_TITLE" = "إذن الميكروفون";
+"VTUX_MICROPHONE_ALERT_MESSAGE" = "مطلوب إذن الميكروفون للتواصل مع الآخرين";
+"VTUX_MICROPHONE_ALERT_BUTTON_CANCEL" = "إلغاء";
+"VTUX_MICROPHONE_ALERT_BUTTON_SETTINGS" = "الإعدادات";
+
+"VTUX_CAMERA_ALERT_TITLE" = "إذن الكاميرا";
+"VTUX_CAMERA_ALERT_MESSAGE" = "مطلوب إذن الكاميرا لتنشيط الفيديو";
+"VTUX_CAMERA_ALERT_BUTTON_CANCEL" = "إلغاء";
+"VTUX_CAMERA_ALERT_BUTTON_SETTINGS" = "الإعدادات";
+
+//Text Limit
+"Your Minimum Characters is #min & Maximum is #max." = "الحد الأدنى للأحرف هو #min والحد الأقصى #max.";
+"Your Minimum Characters is #min." = "الحد الأدنى للأحرف هو #min.";
+"Your Maximum Characters is #max." = "الحد الأقصى للأحرف هو #max.";
+"Your Minimum Words is #min & Maximum is #max." = "الحد الأدنى للكلمات هو #min والحد الأقصى #max.";
+"Your Minimum Words is #min." = "الحد الأدنى للكلمات هو #min.";
+"Your Maximum Words is #max." = "الحد الأقصى للكلمات هو #max.";
+
+"Other" = "آخر";
+"Please type another option here" = "الرجاء كتابة اختيار آخر هنا";
+"Wrong code, please try again." = "رمز خاطئ ، يرجى المحاولة مرة أخرى.";
+"Verify Account" = "التحقق من الحساب";
+"Please enter verification code sent to your email" = "الرجاء إدخال رمز التحقق المرسل إلى بريدك الإلكتروني";
+"Did not receive the code!" = "لم يصلك الرمز!";
+"RESEND" = "إعادة إرسال";
+"Task" = "المهام";
+"Requested by me" = "طلباتي";
+"Welcome Back ," = "مرحبًا بعودتك ،";
+
+"Total
+Inbox" = "إجمالي
+المهام";
+
+"Total
+Requests" = "إجمالي
+الطلبات";
+
+"Rejected" = "مرفوض";
+"In progress" = "قيد التقدم";
+"Pending" = "قيد الانتظار";
+"Approved" = "تمت الموافقه";
+"Statistics Performance" = "أداء الإحصائيات";
+"Add Request" = "إضافة طلب";
+"New" = "جديد";
+"Your request Submitted successfully" = "تم استلام طلبك بنجاح";
+"Please wait for a response from management Your request ID:#" = "يرجى الانتظار للحصول على رد من الإدارة، رقم طلبك:#";
+"View Requests" = "عرض الطلبات";
+"SubmitRequest" = "تقديم الطلب";
+"year" = "سنة";
+"years" = "سنوات";
+"month" =  "شهر";
+"months" = "أشهر";
+"week" = "أسبوع";
+"weeks" = "أسابيع";
+"day" = "يوم";
+"days" = "أيام";
+"hr" = "ساعة";
+"hrs" = "ساعات";
+"min" =  "دقيقة";
+"mins" = "دقائق";
+"sec" = "ثانية";
+"secs" = "ثواني";
+"Type your comment here" = "اكتب تعليقك هنا";
+"You" = "انت";
+"Supports : " = "يدعم : ";
+"Max files : " = "العدد ألاقصي للملفات : ";
+"Max size : " = "الحد الأقصي للحجم : ";
+"MB" = "ميجابايت";
+"Add discussion comment...." = "اضف تعليق المناقشة";
+"Social media" = "وسائل التواصل الاجتماعي";
+"LinkedIn" = "لينكد ان";
+"Facebook" = "فيسبوك";
+"Twitter" = "تويتر";
+"Instagram" = "انستجرام";
+"TikTok" = "تيك توك";
+"Downloaded Successfully" = "تم التنزيل";
+"AM" = "ص";
+"PM" = "م";
+"Take a photo" = "التقاط صورة";
+"Choose a photo" = "اختيار صورة";
+"Remove uploaded image" = "إزالة الصورة المرفوعة";
+"Edit Image" = "تعديل الصورة";
+"Task approval" = "الموافقة على المهمة";
+"You approved the task Successfully" = "لقد وافقت على المهمة بنجاح";
+"This task will be moved to your tasks history" = "سيتم نقل هذه المهمة إلى محفوظات المهام الخاصة بك";
+"Task rejection" = "رفض المهمة";
+"You rejected the task Successfully" = "لقد رفضت المهمة بنجاح";
+"Paste link" = "لصق الرابط";
+"My Digital Card" = "بطاقتي الرقمية";
+"Date From" = "التاريخ من";
+"Date To" = "التاريخ الى";
+"Time From" = "الوقت من";
+"Time To" = "الوقت الى";
+"Add New" = "أضف المزيد";
+"Add" = "اضافة";
+"Documents" = "مستندات";
+"Task Action" = "إجراءات المهمة";
+"Task Action %@ successfully" = "تم %@ إجراءك بنجاح";
+"By Date" = "حسب التاريخ";
+"Showing " = " عرض";
+"Please enter education degree level" = "من فضلك ادخل مستوى الدرجة التعليمية";
+"Please enter education field of study" = "من فضلك ادخل مجال الدراسة التعليمية";
+"Please enter education field of study not exceed 100 characters" = "الرجاء إدخال المجال التعليمي للدراسة بحيث لا يتعدى 100 حرف";
+"Please enter education organization name" = "من فضلك ادخل اسم المؤسسة التعليمية";
+"Please enter education organization name not exceed 100 characters" = "الرجاء إدخال اسم المؤسسة التعليمية  بحيث لا يتعدى 100 حرف";
+"Please enter start date of education" = "من فضلك ادخل تاريخ بدء التعليم";
+"Please enter end date of education" = "من فضلك ادخل تاريخ نهاية التعليم";
+"Something went wrong, please try again later" = "هناك شئ خاطئ، يرجى المحاولة فى وقت لاحق";
+"Something Went Wrong" = "هناك شئ خاطئ";
+
+"Add Your Suggestion" = "أضف اقتراحك";
+"Add Suggestions" = "إضافة اقتراحات";
+"Suggestion" = "اقتراح";
+"Your Request has been submitted Successfully" = "لقد تم تقديم الطلب الخاص بك بنجاح";
+"Your suggestion has been sent successfully." = "لقد تم إرسال اقتراحك بنجاح.";
+
+"Downloaded" = "تم التحميل";
+"This is a Required Field" = "هذا الحقل مطلوب";
+
+"Warning" = "تحذير";
+"You should display at least one item." = "يجب عليك عرض عنصر واحد على الأقل.";
+
+"Whoops ... this information is not available at the moment." = "عفوًا... هذه المعلومات غير متوفرة في الوقت الحالي.";
+
+"Place of Graduation" = "مكان التخرج";
+"Educational level" = "المستوى التعليمي";
+"Address Type" = "نوع العنوان";
+"City" = "المدينة";
+"Postal Code" = "الرمز البريدي";
+"PO Box" = "صندوق البريد";
+"Short Address" = "العنوان المختصر";
+"National ID Number" = "رقم الهوية الوطنية";
+"Place of birth (City)" = "مكان الميلاد (المدينة)";
+"Place of birth (Region)" = "مكان الميلاد (المنطقة)";
+"Delegator Names" = "أسماء المفوضين";
+"Approve" =  "قبول";
+"Reject" = "رفض";
+"Send back" = "اعادة طلب";
+"Are you sure, you want to withdraw your request?" = "هل أنت متأكد أنك تريد سحب طلبك؟";
+"Withdraw Request" = "سحب الطلب";
+"Your task has been sent back successfully" = "لقد تم إرجاع مهمتك بنجاح";
+"Delegated Successfully" = "تم التفويض بنجاح";
+"Our task has been delegated to " = " تم تفويض مهمتنا إلى";
+"Request has been submitted successfully." = "تم تقديم الطلب بنجاح.";
+"Request Submitted" = "تم تقديم الطلب";
+"Discard All Updates" = "تجاهل كافة التحديثات";
+"Do you want to Discard all updates ?" = "هل تريد تجاهل كافة التحديثات؟";
+"Confirm Leave Page" = "تأكيد مغادرة الصفحة";
+"You are about to lose all changes" = "أنت على وشك فقدان كافة التغييرات";
+"Are you sure you want to leave this page, All unsaved changes will be lost" = "هل أنت متأكد أنك تريد مغادرة هذه الصفحة؟ سيتم فقدان جميع التغييرات غير المحفوظة";
+"Leave" = "غادر";
+"Place of birth (Country)" = "مكان الميلاد (البلد)";
+"Show Empty Fields" = "إظهار الحقول الفارغة";
+"Download Album" = "تحميل الألبوم";
+"Album Size :" = "حجم الألبوم";
+"Publish" = "نشر";
+"Relatives Names" = "أسماء الأقارب";
+"Upload Files here..." = "قم برفع الملفات هنا...";
+"Application Name" = "إسم التطبيق";
+"Logo" = "الشعار";
+"Employee Name" = "إسم الموظف";
+"National ID/Iqama/Passport" = "الهوية الوطنية/الإقامة/جواز السفر";
+"Title Name" = "اسم اللقب";
+"Relation Name" = "اسم العلاقة";
+"Nationality Name" = "اسم الجنسية";
+"isPrimary" = "أساسي";
+"Country Name" = "اسم الدولة";
+"Contact Phone Number Code" = "رمز رقم الهاتف للتواصل";
+"Contact Phone Number Flag" = "رقم هاتف جهة الاتصال";
+"is Main Address" = "العنوان الرئيسي";
+"Enter Insurance Tier" = "أدخل مستوى التأمين";
+"Enter Company Name" = "أدخل اسم الشركة";
+"Enter ID" = "أدخل معرف";
+"The attachment size should be less than 50MB" = "يجب أن يكون حجم المرفق أقل من 50 ميجابايت";
+"Discard" = "إلغاء";
+"enter_min_chars_to_search" = "أدخل على الأقل %d حروف لبدء البحث";
+"Primary" = "أساسي";
+"Uploaded CV" = "السيرة الذاتية المرفوعة";
+"Download Failed" = "فشل التنزيل";
+"Something went wrong, please retry again..." = "حدث خطأ ما، يُرجى إعادة المحاولة...";
+"Retry" = "إعادة المحاولة";
+"The business card has been saved to your Photos app." = "تم حفظ بطاقة الأعمال في تطبيق الصور.";
+"Upload Files here..." = "قم برفع الملفات هنا...";
+"Approval History" = "تاريخ الموافقة";
+"The event was added successfully." = "تمت إضافة الحدث بنجاح";
+"Send" = "إرسال";
+"Unable to view attachment, Server error" = "تعذر عرض المرفق، خطأ في الخادم";
+"Unable to download attachment, Server error" = "تعذر تنزيل المرفق، خطأ في الخادم";

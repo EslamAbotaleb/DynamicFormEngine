@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="114" id="KGk-i7-Jjw" customClass="DownloadAttTvcell" customModule="CERQEL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="359" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="359" height="114"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hda-61-Yk0">
+                        <rect key="frame" x="0.0" y="8" width="351" height="98"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pdf" translatesAutoresizingMaskIntoConstraints="NO" id="a57-Nc-riQ">
+                                <rect key="frame" x="0.0" y="33" width="28" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="2bw-RB-QjE"/>
+                                    <constraint firstAttribute="width" constant="28" id="8ZQ-lW-iC8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ASY-Z7-mvn">
+                                <rect key="frame" x="36" y="4" width="287" height="90"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_cloud-download-outline" translatesAutoresizingMaskIntoConstraints="NO" id="IKb-B8-z5i">
+                                <rect key="frame" x="331" y="42" width="20" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="RHd-Zv-otP"/>
+                                    <constraint firstAttribute="height" constant="14" id="Vjb-ed-DFe"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ASY-Z7-mvn" firstAttribute="top" secondItem="hda-61-Yk0" secondAttribute="top" constant="4" id="5sO-FM-ohw"/>
+                            <constraint firstItem="ASY-Z7-mvn" firstAttribute="centerY" secondItem="hda-61-Yk0" secondAttribute="centerY" id="8IX-Jw-cPb"/>
+                            <constraint firstItem="IKb-B8-z5i" firstAttribute="leading" secondItem="ASY-Z7-mvn" secondAttribute="trailing" constant="8" id="EBi-yc-n08"/>
+                            <constraint firstItem="a57-Nc-riQ" firstAttribute="centerY" secondItem="hda-61-Yk0" secondAttribute="centerY" id="gvV-Jv-FVp"/>
+                            <constraint firstAttribute="bottom" secondItem="ASY-Z7-mvn" secondAttribute="bottom" constant="4" id="hZN-hM-m8F"/>
+                            <constraint firstItem="IKb-B8-z5i" firstAttribute="centerY" secondItem="hda-61-Yk0" secondAttribute="centerY" id="iCh-nn-cb2"/>
+                            <constraint firstItem="a57-Nc-riQ" firstAttribute="leading" secondItem="hda-61-Yk0" secondAttribute="leading" id="izy-jp-qYp"/>
+                            <constraint firstAttribute="trailing" secondItem="IKb-B8-z5i" secondAttribute="trailing" id="lbr-hj-U6t"/>
+                            <constraint firstItem="ASY-Z7-mvn" firstAttribute="leading" secondItem="a57-Nc-riQ" secondAttribute="trailing" constant="8" id="pN3-jK-CGi"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="hda-61-Yk0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0XU-u4-Dqp"/>
+                    <constraint firstItem="hda-61-Yk0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="E6V-KT-Yfa"/>
+                    <constraint firstAttribute="bottom" secondItem="hda-61-Yk0" secondAttribute="bottom" constant="8" id="SaF-Mi-g62"/>
+                    <constraint firstAttribute="trailing" secondItem="hda-61-Yk0" secondAttribute="trailing" constant="8" id="xyt-2L-Xdl"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                        <real key="value" value="4"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="primaryLight"/>
+            <connections>
+                <outlet property="attachIcon" destination="a57-Nc-riQ" id="PbY-Z9-ECg"/>
+                <outlet property="downloadAttachIcon" destination="IKb-B8-z5i" id="QEc-H1-mHX"/>
+                <outlet property="nameLbl" destination="ASY-Z7-mvn" id="2zw-Mn-a0d"/>
+            </connections>
+            <point key="canvasLocation" x="165.94202898550725" y="69.642857142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_cloud-download-outline" width="24" height="24"/>
+        <image name="pdf" width="40.5" height="40"/>
+        <namedColor name="primaryLight">
+            <color red="0.94499999284744263" green="0.96100002527236938" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

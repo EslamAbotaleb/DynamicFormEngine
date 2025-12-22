@@ -1,0 +1,60 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "bP7-uT-zty.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Approve\"; ObjectID = \"bP7-uT-zty\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "موافقة"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Approve"
+          }
+        }
+      }
+    },
+    "eaz-8c-WFn.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"More\"; ObjectID = \"eaz-8c-WFn\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المزيد"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "More"
+          }
+        }
+      }
+    },
+    "Y7A-Bc-TfY.normalTitle" : {
+      "comment" : "Class = \"UIButton\"; normalTitle = \"Reject\"; ObjectID = \"Y7A-Bc-TfY\";",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفض"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Reject"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

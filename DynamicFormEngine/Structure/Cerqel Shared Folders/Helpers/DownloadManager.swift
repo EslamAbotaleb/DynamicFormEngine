@@ -7,7 +7,7 @@
 //
 
 import Foundation
-internal import Alamofire
+public import Alamofire
 
 class DownloadManager {
     static let shared = DownloadManager()

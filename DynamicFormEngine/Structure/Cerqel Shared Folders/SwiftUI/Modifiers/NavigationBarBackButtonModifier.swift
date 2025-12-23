@@ -12,7 +12,7 @@ public struct NavigationBarBackButtonTitleHiddenModifier: ViewModifier {
 
   @Environment(\.dismiss) var dismiss
 
-  @ViewBuilder @MainActor func body(content: Content) -> some View {
+  @ViewBuilder @MainActor public func body(content: Content) -> some View {
     content
       .navigationBarBackButtonHidden(true)
       .navigationBarItems(

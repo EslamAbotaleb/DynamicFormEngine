@@ -12,7 +12,7 @@ import SwiftUI
 public struct ReverseScrollViewModifier: ViewModifier {
     let layoutDirection: LayoutDirection
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .offset(x: layoutDirection == .rightToLeft ? UIScreen.main.bounds.width : 0)
     }

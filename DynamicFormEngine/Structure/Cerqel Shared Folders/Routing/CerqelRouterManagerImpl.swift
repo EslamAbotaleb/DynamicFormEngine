@@ -12,13 +12,13 @@ import PanModal
 import AVFoundation
 import AVKit
 
-enum CerqelView {
-    static func baseController<ViewController: UIViewController>(viewControllerType: ViewController.Type) -> ViewController {
+public enum CerqelView {
+    static public func baseController<ViewController: UIViewController>(viewControllerType: ViewController.Type) -> ViewController {
         let controller =  ViewController(nibName: ViewController.identifier , bundle: nil)
         return controller
     }
 
-    static func controller<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type,viewModel: viewModel.Type, item: Item) -> BaseView<viewModel, Item> {
+    static public func controller<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type,viewModel: viewModel.Type, item: Item) -> BaseView<viewModel, Item> {
         let controller =  ViewController(nibName: controller.identifier , bundle: nil) as! BaseView<viewModel, Item>
         controller.item = item
         return controller

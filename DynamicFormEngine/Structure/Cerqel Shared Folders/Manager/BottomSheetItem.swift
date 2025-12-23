@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-public typealias SelectedCallBack = ((ListModel) -> Void)
-public typealias MultiSelectedCallBack = (([ListModel]) -> Void)
-public typealias CerqelSelectedCallBack = ((CerqelListModel) -> Void)
+public typealias SelectedCallBack = ((ListModel) -> ())
+public typealias MultiSelectedCallBack = (([ListModel]) -> ())
+public typealias CerqelSelectedCallBack = ((CerqelListModel) -> ())
 
 public class BottomSheetItem: BaseItem,Equatable {
 

@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import DynamicFormEngine
+
 class DelegatorsViewModel : BaseVM {
     
     private var userUseCase: UserUseCase!

@@ -8,7 +8,7 @@
 
 import Foundation
 import RxCocoa
-import RxSwift
+internal import RxSwift
 
 public class BaseViewModel {
     var errorsObservable: Observable<Error>!

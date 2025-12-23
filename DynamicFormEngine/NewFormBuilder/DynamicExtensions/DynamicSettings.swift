@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import MOLH
+internal import MOLH
 import Network
 import Toast
 import JGProgressHUD

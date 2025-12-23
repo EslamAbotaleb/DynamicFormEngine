@@ -70,7 +70,7 @@ enum DynamicViewControllerName {
 
 }
 
-class DynamicSharedRouter {
+public class DynamicSharedRouter {
 
     static func goTo(viewName: DynamicViewControllerName)-> BottomSheetVCCerqel{
         switch viewName {

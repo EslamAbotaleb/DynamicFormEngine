@@ -10,7 +10,7 @@ import UIKit
 import EzPopup
 import JGProgressHUD
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import Photos
 
 private struct cerqel_HUDHolder {

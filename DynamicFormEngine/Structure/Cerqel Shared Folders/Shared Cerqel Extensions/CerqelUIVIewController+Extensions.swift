@@ -5,10 +5,9 @@
 //  Created by iSlam AbdelAziz on 10/31/20.
 //  Copyright © 2020 Youxel. All rights reserved.
 //
-
 import UIKit
 import JGProgressHUD
-import FittedSheets
+internal import FittedSheetsDF
 import MobileCoreServices
 import UniformTypeIdentifiers
 

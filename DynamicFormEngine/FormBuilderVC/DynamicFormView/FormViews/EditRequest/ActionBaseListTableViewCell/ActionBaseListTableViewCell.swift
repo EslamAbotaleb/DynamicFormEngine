@@ -8,16 +8,18 @@
 
 import UIKit
 
-class ActionBaseListTableViewCell: UITableViewCell {
+public class ActionBaseListTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var icon: UIImageView!
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var bottomView: UIView!
-    override func awakeFromNib() {
+    
+    public override func awakeFromNib() {
         super.awakeFromNib()
         
     }
-    func configure(indexPath: IndexPath, totalRows: Int, item: ListModel) {
+    
+    public func configure(indexPath: IndexPath, totalRows: Int, item: ListModel) {
         if indexPath.row == totalRows - 1 {
             bottomView.isHidden = true
         } else {
@@ -39,7 +41,7 @@ class ActionBaseListTableViewCell: UITableViewCell {
         }
     }
     
-    func configureAction(item: Action) {
+    public func configureAction(item: Action) {
         titleLbl.text = item.name
         titleLbl.textColor = typographyTitle
         titleLbl.font = UIFont.bodyLRegular()

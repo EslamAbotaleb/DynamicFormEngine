@@ -8,7 +8,7 @@
 
 import UIKit
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import EasyTipView
 
 protocol UploadMedia: AnyObject {

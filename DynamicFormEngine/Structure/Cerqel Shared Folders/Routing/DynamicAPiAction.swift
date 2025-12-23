@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import Alamofire
+internal import Alamofire
 
 enum Dynamic_BasicAction: cerqel_APIAction {
-    var basicAction: cerqel_BasicAction{return .none}
+    var basicAction: cerqel_BasicActionDynamicForm{return .none}
     
     case submitService(Id: String, payload: [String: Any])
     case requestDetails(id: String)

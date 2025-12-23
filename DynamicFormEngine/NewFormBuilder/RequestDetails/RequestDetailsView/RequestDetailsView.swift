@@ -9,8 +9,8 @@
 import UIKit
 import MobileCoreServices
 import DropDown
-import MOLH
-import FittedSheets
+internal import MOLH
+internal import FittedSheetsDF
 
 struct dataSoruceTableModel {
     var parentid: String?

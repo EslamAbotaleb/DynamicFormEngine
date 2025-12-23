@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FittedSheets
+internal import FittedSheetsDF
 
 class NewDropDownTVCell: ParentFieldTableViewCell {
     

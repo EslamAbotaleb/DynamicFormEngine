@@ -8,8 +8,8 @@
 
 import Foundation
 import RxCocoa
-import RxSwift
-import MOLH
+internal import RxSwift
+internal import MOLH
 import SideMenu
 import UIKit
 

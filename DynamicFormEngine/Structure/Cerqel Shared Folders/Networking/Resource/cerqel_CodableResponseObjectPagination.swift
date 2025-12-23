@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import RxSwift
-import Alamofire
+internal import RxSwift
+internal import Alamofire
 
 class cerqel_CodableResponseObjectPagination<T: Decodable>: cerqel_CodableResponseObject<T> {
     fileprivate(set) var next:String?

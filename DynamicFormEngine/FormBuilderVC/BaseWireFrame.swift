@@ -9,7 +9,7 @@
 import UIKit
 import RxCocoa
 import RxRelay
-import RxSwift
+internal import RxSwift
 import JGProgressHUD
 import Kingfisher
 import SideMenu

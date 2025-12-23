@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import RxSwift
-import Alamofire
+internal import RxSwift
+internal import Alamofire
 
 class cerqel_CodableResponseObjectOther<T: Decodable, X: Decodable>: cerqel_CodableResponseObject<T> {
     // x = Other

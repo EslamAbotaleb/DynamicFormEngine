@@ -6,12 +6,12 @@
 //  Copyright © 2024 Youxel. All rights reserved.
 //
 
-import Alamofire
+internal import Alamofire
 import Expression
 import Foundation
 import ObjectMapper
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import UIKit
 
 extension FormBuilder {

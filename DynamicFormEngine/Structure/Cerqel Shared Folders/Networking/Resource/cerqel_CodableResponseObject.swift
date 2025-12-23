@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import RxSwift
-import Alamofire
-import MOLH
+internal import RxSwift
+internal import Alamofire
+internal import MOLH
 
-class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_CodableResponseProtocol {
+public class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_CodableResponseProtocol {
     fileprivate(set) var success: Bool?
     fileprivate(set) var item: cerqel_CodableResponseObjectData<T>?
 
@@ -30,7 +30,7 @@ class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_CodableRespo
 
     
 //    fileprivate let objectType = T.self
-    var action: cerqel_APIAction = cerqel_BasicAction.none
+    var action: cerqel_APIAction = cerqel_BasicActionDynamicForm.none
 
     init(action: cerqel_APIAction,keyResult:String = "result") {
         self.action = action
@@ -38,7 +38,7 @@ class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_CodableRespo
         
     }
     
-    required init(from decoder:Decoder) throws {
+    required public init(from decoder:Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         do {
             success = try values.decode(Bool.self, forKey: .success)
@@ -77,9 +77,7 @@ class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_CodableRespo
                     
                     print("printinggg \(dictionary)")
                     print("printinggg \(dictionary.value(forKey: "detail"))")
-                    
-
-                    
+                
                 }
             }catch{
                 
@@ -99,19 +97,15 @@ class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_CodableRespo
                 return Disposables.create()
             }
             
-            
 //            observer.onNext(result)
             return Disposables.create()
         }
     }
-    
-    
 }
 
-
-class cerqel_CodableResponseObjectData<T: Decodable>: Decodable {
-    fileprivate(set) var data: T?
-    fileprivate(set) var arrData : [T]? = []
+public class cerqel_CodableResponseObjectData<T: Decodable>: Decodable {
+    fileprivate(set) public var data: T?
+    fileprivate(set) public var arrData : [T]? = []
     var totalCount: Int = 0
 
     private enum CodingKeys: String, CodingKey {
@@ -119,10 +113,7 @@ class cerqel_CodableResponseObjectData<T: Decodable>: Decodable {
         case totalCount
     }
 
-    
-
-    
-    required init(from decoder:Decoder) throws {
+    required public init(from decoder:Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         do {
             data = try values.decodeIfPresent(T.self, forKey: .data)
@@ -150,11 +141,5 @@ class cerqel_CodableResponseObjectData<T: Decodable>: Decodable {
         } catch let err{
             print("⛔️⛔️⛔️  ITEMS Decoding Error : \(err) ⛔️⛔️⛔️")
         }
-
-
-        
     }
-
-    
-    
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIFont{
+public extension UIFont{
     
     static func Poppins_regular(ofSize: CGFloat) -> UIFont {
         return UIFont(name: "Poppins-Regular", size: ofSize) ?? UIFont.boldSystemFont(ofSize: ofSize)
@@ -18,11 +18,9 @@ extension UIFont{
         return UIFont(name: "Poppins-Bold", size: ofSize)!
     }
     
-    
     static func Poppins_semiBold(ofSize: CGFloat) -> UIFont {
         return UIFont(name: "Poppins-SemiBold", size: ofSize)!
     }
-    
     
     static func button(ofSize: CGFloat = 16.0) -> UIFont {
         return UIFont(name: "Poppins-SemiBold", size: ofSize)!
@@ -35,7 +33,6 @@ extension UIFont{
     static func textStyle16Regular(ofSize: CGFloat = 16.0) -> UIFont {
         return UIFont(name: "Poppins-Regular", size: ofSize)!
     }
-    
     
     static func subtitle2(ofSize: CGFloat = 14.0) -> UIFont {
         return UIFont(name: "Poppins-Medium", size: ofSize)!
@@ -52,7 +49,5 @@ extension UIFont{
     static func caption(ofSize: CGFloat = 10.0) -> UIFont {
         return UIFont(name: "Poppins-Regular", size: ofSize)!
     }
-    
-
 }
 

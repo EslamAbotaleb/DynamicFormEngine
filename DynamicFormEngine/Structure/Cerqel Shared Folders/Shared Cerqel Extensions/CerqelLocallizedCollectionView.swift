@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import MOLH
+internal import MOLH
+
 class LocallizedCollectionViewCerqel: UICollectionViewFlowLayout {
     override var flipsHorizontallyInOppositeLayoutDirection: Bool {
         return MOLHLanguage.isArabic()

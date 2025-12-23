@@ -8,7 +8,7 @@
 
 import Foundation
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import Expression
 import UIKit
 
@@ -61,7 +61,7 @@ class FormBuilderViewModel: BaseViewModel {
 //            return
 //        }
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<ModelForm>(action: cerqel_BasicAction.fetchService(Id: id))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObject<ModelForm>(action: cerqel_BasicActionDynamicForm.fetchService(Id: id))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             if let item = response.item?.data{
@@ -81,7 +81,7 @@ class FormBuilderViewModel: BaseViewModel {
             return
         }
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<ModelSubServiceData>(action: cerqel_BasicAction.fetchSubServicesByParent(parentId: id))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObject<ModelSubServiceData>(action: cerqel_BasicActionDynamicForm.fetchSubServicesByParent(parentId: id))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             //sorry for this bad handling but this just to show error if there is a sub parent services but don't have children services so the request is succes but they need to show error message
@@ -392,7 +392,7 @@ class FormBuilderViewModel: BaseViewModel {
                 return
             }
             self.loadingSubject.onNext(.show)
-            self.service.load(cerqel_CodableResponseObject<String>(action: cerqel_BasicAction.submitService(Id: id, payload: payloadJSON))).subscribe(onNext: {
+            self.service.load(cerqel_CodableResponseObject<String>(action: cerqel_BasicActionDynamicForm.submitService(Id: id, payload: payloadJSON))).subscribe(onNext: {
                 [weak self] (response) in
                 self?.loadingSubject.onNext(.hide)
                 if let item = response.item?.data{
@@ -585,7 +585,7 @@ class FormBuilderViewModel: BaseViewModel {
     
     func fetchCascadingOptionsList(url: String, controlIdx: Int){
         self.loadingSubject.onNext(.show)
-//        self.service.load(cerqel_CodableResponseObject<Options>(action: cerqel_BasicAction.fetchCascadingOptions(endPoint: url))).subscribe(onNext: {
+//        self.service.load(cerqel_CodableResponseObject<Options>(action: cerqel_BasicActionDynamicForm.fetchCascadingOptions(endPoint: url))).subscribe(onNext: {
 //            [weak self] (response) in
 //            self?.loadingSubject.onNext(.hide)
 //            if let opts = response.item?.arrData{
@@ -718,7 +718,7 @@ class FormBuilderViewModel: BaseViewModel {
         if !baseURL.isEmpty, !url.isEmpty{
             let fullURL = baseURL + url + searchText
             self.loadingSubject.onNext(.show)
-            cerqel_NormalAPIcall.sendRequest(action: cerqel_BasicAction.performSearchFromSearchControlInFormBuilder(url: fullURL)) { [weak self] responseJSON in
+            cerqel_NormalAPIcall.sendRequest(action: cerqel_BasicActionDynamicForm.performSearchFromSearchControlInFormBuilder(url: fullURL)) { [weak self] responseJSON in
                 self?.loadingSubject.onNext(.hide)
 
                 if let result = responseJSON?["result"] as? [String: Any], let data = result["data"] as? [[String : Any]]{

@@ -26,9 +26,9 @@
 import Foundation
 import SafariServices
 import KeychainAccess
-import Alamofire
+internal import Alamofire
 import SwiftyJSON
-import MOLH
+internal import MOLH
 
 
 open class OAuth2Client {

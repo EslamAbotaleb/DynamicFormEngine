@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 import SwiftUI
-import RxSwift
+internal import RxSwift
 
 class DelegateActionViewModel : BaseVM {
     var router: CerqelRouterManager

@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import RxSwift
-import Alamofire
-import MOLH
+internal import RxSwift
+internal import Alamofire
+internal import MOLH
 import UIKit
 
 class cerqel_NormalAPIcall{
@@ -27,7 +27,7 @@ class cerqel_NormalAPIcall{
     }
 
     
-    class func sendRequest(action: cerqel_BasicAction, closure: @escaping ([String: Any]?) -> Void){
+    class func sendRequest(action: cerqel_BasicActionDynamicForm, closure: @escaping ([String: Any]?) -> Void){
         
         let URL1 = action.baseURL + action.path
                 
@@ -91,7 +91,7 @@ class cerqel_NormalAPIcall{
         
     }
     
-    func uploadFile(action: cerqel_BasicAction, photo: UIImage?, fileUrl: URL?, onCompletion: (([String: Any]?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil) {
+    func uploadFile(action: cerqel_BasicActionDynamicForm, photo: UIImage?, fileUrl: URL?, onCompletion: (([String: Any]?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil) {
         let URL1 = action.baseURL + action.path
         
         AF.upload(multipartFormData: { multipartFormData in

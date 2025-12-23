@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ListModel: Codable {
+public struct ListModel: Codable {
     var id: String? = ""
     var name: String?
     var items: [ListModel]?
@@ -29,7 +29,7 @@ struct ListModel: Codable {
         return isArabic() ? nameAr  ?? nameEn : nameEn
     }
     
-    init() {
+   public init() {
         self.id = ""
         self.name = ""
         self.icon = ""
@@ -45,7 +45,7 @@ struct ListModel: Codable {
         self.action = []
     }
     
-    init(id: String?, name: String? = "", nameEn: String? = "", nameAr: String? = "", items: [ListModel]? = [], isSelected: Bool? = nil , icon : String = "", logo: String = "", actionCode: String? = "", actionFormId: String? = "", isCommentRequired : Bool? = false, isDimmed: Bool = false, isEditable: Bool? = nil, isWithdrawal: Bool? = nil, action: [Action]? = [])  {
+    public init(id: String?, name: String? = "", nameEn: String? = "", nameAr: String? = "", items: [ListModel]? = [], isSelected: Bool? = nil , icon : String = "", logo: String = "", actionCode: String? = "", actionFormId: String? = "", isCommentRequired : Bool? = false, isDimmed: Bool = false, isEditable: Bool? = nil, isWithdrawal: Bool? = nil, action: [Action]? = [])  {
         self.id = id
         self.nameAr = nameAr
         self.nameEn = nameEn
@@ -78,10 +78,9 @@ struct ListModel: Codable {
     }
     
 }
-//extension ListModel {
-//    
-//    func toCerqelCategoriesModel () -> CerqelCategoriesModel {
-//        return CerqelCategoriesModel(id: id, name: name, isSelected: isSelected ?? false, representation: .CheckBox)
-//    }
-//    
-//}
+
+extension ListModel {
+    func toCerqelCategoriesModel () -> CerqelCategoriesModel {
+        return CerqelCategoriesModel(id: id, name: name, isSelected: isSelected ?? false, representation: .CheckBox)
+    }
+}

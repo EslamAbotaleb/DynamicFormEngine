@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Alamofire
+internal import Alamofire
 import Promises
 
 class AlamofireService: EndpointExecuter {

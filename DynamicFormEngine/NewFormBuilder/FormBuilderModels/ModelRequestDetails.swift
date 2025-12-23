@@ -1292,7 +1292,7 @@ struct ReqDetailsAttachmentValue : Codable, FormValue, Mappable {
     }
 }
 
-struct Action : Codable, Mappable {
+public struct Action : Codable, Mappable {
    var id : String?
    var name : String?
    var label : String?

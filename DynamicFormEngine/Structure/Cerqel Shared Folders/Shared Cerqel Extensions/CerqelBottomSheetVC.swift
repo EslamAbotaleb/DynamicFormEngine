@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import FittedSheets
-
+internal import FittedSheetsDF
 
 class BottomSheetVCCerqel: UIViewController {
 

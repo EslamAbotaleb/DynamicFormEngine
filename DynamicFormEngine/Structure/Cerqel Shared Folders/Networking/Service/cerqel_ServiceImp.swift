@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import RxSwift
+internal import RxSwift
 import RxAlamofire
 import UIKit
-import Alamofire
+internal import Alamofire
 import CommonCrypto
 import JGProgressHUD
 

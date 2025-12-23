@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Alamofire
+internal import Alamofire
 import UIKit
 
 class UploadMediaUIModel {

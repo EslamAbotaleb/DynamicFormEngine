@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RxSwift
+internal import RxSwift
 
 struct cerqel_SingleItemResource<T: Codable> {
     let objectType = T.self

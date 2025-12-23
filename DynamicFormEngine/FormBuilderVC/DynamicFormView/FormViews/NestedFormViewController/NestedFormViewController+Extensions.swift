@@ -8,10 +8,10 @@
 
 import UIKit
 import EzPopup
-import FittedSheets
+internal import FittedSheetsDF
 import Expression
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import SwiftUI
 
 

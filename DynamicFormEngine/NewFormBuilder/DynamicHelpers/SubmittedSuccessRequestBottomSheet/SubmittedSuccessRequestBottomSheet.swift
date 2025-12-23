@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import FittedSheets
+internal import FittedSheetsDF
 import RxCocoa
-import RxSwift
+internal import RxSwift
 
 protocol Popup {
     func popup()

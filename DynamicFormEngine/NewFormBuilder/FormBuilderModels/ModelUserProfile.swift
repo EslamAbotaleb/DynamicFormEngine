@@ -498,7 +498,7 @@ struct GenericProfile : Codable {
     }
 }
 
-struct UserProfileInfoAD : Codable {
+public struct UserProfileInfoAD : Codable {
     let cn : String?
     let company : String?
     let mail : String?

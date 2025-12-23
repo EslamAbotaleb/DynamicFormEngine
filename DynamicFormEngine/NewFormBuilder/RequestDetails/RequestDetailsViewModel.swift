@@ -8,9 +8,9 @@
 
 import Foundation
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import Photos
-import FittedSheets
+internal import FittedSheetsDF
 import SwiftUI
 import DropDown
 
@@ -385,7 +385,7 @@ class RequestDetailsViewModel: BaseVM {
     /// - Parameter id: current request id
     func getRequestDetails(id: String) {
 //        self.loadingSubject.onNext(.show)
-//            self.service.load(cerqel_CodableResponseObject<ModelRequestDetailsData>(action: cerqel_BasicAction.requestDetails(id: id))).subscribe(onNext: {
+//            self.service.load(cerqel_CodableResponseObject<ModelRequestDetailsData>(action: cerqel_BasicActionDynamicForm.requestDetails(id: id))).subscribe(onNext: {
 //                [weak self] (response) in
 //                self?.loadingSubject.onNext(.hide)
 //                
@@ -408,7 +408,7 @@ class RequestDetailsViewModel: BaseVM {
     
     func getBackwardRequestDetails(id: String) {
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<BackwardModelRequestDetailsData>(action: cerqel_BasicAction.requestDetails(id: id))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObject<BackwardModelRequestDetailsData>(action: cerqel_BasicActionDynamicForm.requestDetails(id: id))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             
@@ -431,7 +431,7 @@ class RequestDetailsViewModel: BaseVM {
     /// - Parameter id: current task id
     func getTaskDetails(id: String) {
 //        self.loadingSubject.onNext(.show)
-//        self.service.load(cerqel_CodableResponseObject<ModelRequestDetailsData>(action: cerqel_BasicAction.taskDetails(id: id))).subscribe(onNext: {
+//        self.service.load(cerqel_CodableResponseObject<ModelRequestDetailsData>(action: cerqel_BasicActionDynamicForm.taskDetails(id: id))).subscribe(onNext: {
 //            [weak self] (response) in
 //            self?.loadingSubject.onNext(.hide)
 //            if let details = response.item?.data {
@@ -451,7 +451,7 @@ class RequestDetailsViewModel: BaseVM {
     /// - Parameter id: current task id
     func getBackwardTaskDetails(id: String) {
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<BackwardModelRequestDetailsData>(action: cerqel_BasicAction.taskDetails(id: id))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObject<BackwardModelRequestDetailsData>(action: cerqel_BasicActionDynamicForm.taskDetails(id: id))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             if let details = response.item?.data {
@@ -470,7 +470,7 @@ class RequestDetailsViewModel: BaseVM {
     /// Getting chat
     func getChat() {
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<ModelDicussionMessageData>(action: cerqel_BasicAction.fetchRequestChat(id: details.value?.id ?? ""))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObject<ModelDicussionMessageData>(action: cerqel_BasicActionDynamicForm.fetchRequestChat(id: details.value?.id ?? ""))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             if let details = response.item?.arrData{
@@ -495,7 +495,7 @@ class RequestDetailsViewModel: BaseVM {
         if let att = attachment{
             pay["attachments"] = att
         }
-        self.service.load(cerqel_CodableResponseObject<Bool>(action: cerqel_BasicAction.addChatComment(payload: pay))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObject<Bool>(action: cerqel_BasicActionDynamicForm.addChatComment(payload: pay))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             
@@ -557,7 +557,7 @@ class RequestDetailsViewModel: BaseVM {
         //
         //        }
         
-        self.service.load(cerqel_CodableResponseObject<TakeActionResponse>(action: cerqel_BasicAction.executeAction(payload: pay))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObject<TakeActionResponse>(action: cerqel_BasicActionDynamicForm.executeAction(payload: pay))).subscribe(onNext: {
             [weak self] (response) in
             guard let `self` = self else {return}
             self.loadingSubject.onNext(.hide)
@@ -619,7 +619,7 @@ class RequestDetailsViewModel: BaseVM {
         pay["requestId"] = requestId
         pay["comment"] = comment
         
-        self.service.load(cerqel_CodableResponseObject<Bool>(action: cerqel_BasicAction.reopenRequest(payload: pay))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObject<Bool>(action: cerqel_BasicActionDynamicForm.reopenRequest(payload: pay))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             self?.requestReopenedSuccessfully.accept(true)
@@ -635,7 +635,7 @@ class RequestDetailsViewModel: BaseVM {
     
     func doWithdrawAction(requestId: String) {
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<Bool>(action: cerqel_BasicAction.withdrawRequest(requestId: requestId))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObject<Bool>(action: cerqel_BasicActionDynamicForm.withdrawRequest(requestId: requestId))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             self?.router.dismiss()

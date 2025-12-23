@@ -13,18 +13,18 @@ protocol NestedFormViewDelegate: AnyObject {
     func didDismiss()
 }
 
-extension UIViewController {
-    func showToastWithError(_ message: String) {
+public extension UIViewController {
+    public func showToastWithError(_ message: String) {
         self.view.makeToast(message, duration: 3.0, position: .center)
     }
 }
 
 
 import UIKit
-import FittedSheets
+internal import FittedSheetsDF
 import EzPopup
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import Toast
 
 class NestedFormViewController: FormBaseViewController {

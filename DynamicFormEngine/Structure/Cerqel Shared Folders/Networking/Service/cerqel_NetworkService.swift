@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RxSwift
+internal import RxSwift
 
 protocol cerqel_NetworkService {
     func load<T>(_ resource: T) -> Observable<T> where T : cerqel_CodableResponseProtocol

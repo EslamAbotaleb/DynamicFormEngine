@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Alamofire
+internal import Alamofire
 
 enum cerqel_URLType{
     case Content
@@ -39,7 +39,7 @@ protocol cerqel_APIAction: URLRequestConvertible {
     var encoding: ParameterEncoding { get }
     var isMock: Bool { get }
     var urlType: cerqel_URLType { get }
-    var basicAction: cerqel_BasicAction { get }
+    var basicAction: cerqel_BasicActionDynamicForm { get }
 }
 
 extension cerqel_APIAction {

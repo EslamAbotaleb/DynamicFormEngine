@@ -10,7 +10,7 @@
 
 import AVFoundation
 import UIKit
-import Alamofire
+internal import Alamofire
 import MobileCoreServices
 
 

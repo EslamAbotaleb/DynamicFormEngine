@@ -95,6 +95,9 @@
 		AA7196A32EF44E6E00D31A70 /* FastCircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7196742EF44E6E00D31A70 /* FastCircleLayer.swift */; };
 		AA820A1C2EF6308D0022BCA4 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = AA820A1B2EF6308D0022BCA4 /* DGCharts */; };
 		AA8FB7DB2EF3F9EC0073665D /* PopupDialog in Frameworks */ = {isa = PBXBuildFile; productRef = AA8FB7DA2EF3F9EC0073665D /* PopupDialog */; };
+		AA9933B72EF9927A00893A3A /* FittedSheetsDF in Frameworks */ = {isa = PBXBuildFile; productRef = AA9933B62EF9927A00893A3A /* FittedSheetsDF */; };
+		AA9DB5EF2EFA9024005A0D5E /* cerqel_APIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB5ED2EFA9024005A0D5E /* cerqel_APIAction.swift */; };
+		AA9DB5F02EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB5EE2EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift */; };
 		AAA4CE502EF872490027ABEC /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4CE4F2EF872480027ABEC /* DownloadManager.swift */; };
 		AAA4CE532EF872F80027ABEC /* CustomCalender.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAA4CE522EF872F80027ABEC /* CustomCalender.xib */; };
 		AAA4CE542EF872F80027ABEC /* CustomCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4CE512EF872F80027ABEC /* CustomCalender.swift */; };
@@ -367,7 +370,6 @@
 		AAA6A4962EF303B300520357 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4952EF303B300520357 /* IQKeyboardManagerSwift */; };
 		AAA6A4992EF303F000520357 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4982EF303F000520357 /* Kingfisher */; };
 		AAA6A49C2EF3041E00520357 /* MOLH in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A49B2EF3041E00520357 /* MOLH */; };
-		AAA6A49F2EF30A9400520357 /* FittedSheets in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A49E2EF30A9400520357 /* FittedSheets */; };
 		AAA6A4A52EF30C7000520357 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4A42EF30C7000520357 /* ObjectMapper */; };
 		AAA6A4A82EF30CB600520357 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4A72EF30CB600520357 /* CryptoSwift */; };
 		AAA6A4AB2EF30D3400520357 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4AA2EF30D3400520357 /* netfox */; };
@@ -565,7 +567,6 @@
 		AAC0EE382EF61E0B00DDE9FF /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECA42EF61E0B00DDE9FF /* Document.swift */; };
 		AAC0EE412EF61E0B00DDE9FF /* cerqel_ServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED922EF61E0B00DDE9FF /* cerqel_ServiceImp.swift */; };
 		AAC0EE432EF61E0B00DDE9FF /* CerqelUITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDA92EF61E0B00DDE9FF /* CerqelUITextField+Extensions.swift */; };
-		AAC0EE442EF61E0B00DDE9FF /* cerqel_BasicAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED872EF61E0B00DDE9FF /* cerqel_BasicAction.swift */; };
 		AAC0EE452EF61E0B00DDE9FF /* CerqelUIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDA42EF61E0B00DDE9FF /* CerqelUIColor+Extensions.swift */; };
 		AAC0EE462EF61E0B00DDE9FF /* CerqelBaseWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EE262EF61E0B00DDE9FF /* CerqelBaseWireFrame.swift */; };
 		AAC0EE512EF61E0B00DDE9FF /* CerqelUISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDAE2EF61E0B00DDE9FF /* CerqelUISearchBar+Extensions.swift */; };
@@ -657,7 +658,6 @@
 		AAC0EF1C2EF61E0B00DDE9FF /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECB62EF61E0B00DDE9FF /* TableViewExtensions.swift */; };
 		AAC0EF1F2EF61E0B00DDE9FF /* CerqelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED792EF61E0B00DDE9FF /* CerqelListModel.swift */; };
 		AAC0EF202EF61E0B00DDE9FF /* CerqelUIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDAC2EF61E0B00DDE9FF /* CerqelUIApplication+Extension.swift */; };
-		AAC0EF222EF61E0B00DDE9FF /* cerqel_APIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED862EF61E0B00DDE9FF /* cerqel_APIAction.swift */; };
 		AAC0EF232EF61E0B00DDE9FF /* ImagePickerExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECA12EF61E0B00DDE9FF /* ImagePickerExternal.swift */; };
 		AAC0EF252EF61E0B00DDE9FF /* CodableHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECA72EF61E0B00DDE9FF /* CodableHelpers.swift */; };
 		AAC0EF2E2EF61E0B00DDE9FF /* SuccessBottomSheetViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED172EF61E0B00DDE9FF /* SuccessBottomSheetViewController.strings */; };
@@ -782,6 +782,8 @@
 		AA71968A2EF44E6E00D31A70 /* CRRefreshHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRefreshHeaderView.swift; sourceTree = "<group>"; };
 		AA71968B2EF44E6E00D31A70 /* CRRefreshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRefreshProtocol.swift; sourceTree = "<group>"; };
 		AA71968C2EF44E6E00D31A70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		AA9DB5ED2EFA9024005A0D5E /* cerqel_APIAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_APIAction.swift; sourceTree = "<group>"; };
+		AA9DB5EE2EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_BasicActionDynamicForm.swift; sourceTree = "<group>"; };
 		AAA4CE4F2EF872480027ABEC /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		AAA4CE512EF872F80027ABEC /* CustomCalender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalender.swift; sourceTree = "<group>"; };
 		AAA4CE522EF872F80027ABEC /* CustomCalender.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCalender.xib; sourceTree = "<group>"; };
@@ -1278,8 +1280,6 @@
 		AAC0ED792EF61E0B00DDE9FF /* CerqelListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelListModel.swift; sourceTree = "<group>"; };
 		AAC0ED802EF61E0B00DDE9FF /* ModelQuoteCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelQuoteCerqel.swift; sourceTree = "<group>"; };
 		AAC0ED812EF61E0B00DDE9FF /* SuccessMessageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessMessageResponse.swift; sourceTree = "<group>"; };
-		AAC0ED862EF61E0B00DDE9FF /* cerqel_APIAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_APIAction.swift; sourceTree = "<group>"; };
-		AAC0ED872EF61E0B00DDE9FF /* cerqel_BasicAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_BasicAction.swift; sourceTree = "<group>"; };
 		AAC0ED882EF61E0B00DDE9FF /* cerqel_SingleItemResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_SingleItemResource.swift; sourceTree = "<group>"; };
 		AAC0ED892EF61E0B00DDE9FF /* cerqel_CodableResponseObjectOther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_CodableResponseObjectOther.swift; sourceTree = "<group>"; };
 		AAC0ED8A2EF61E0B00DDE9FF /* cerqel_CodableResponseObjectPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_CodableResponseObjectPagination.swift; sourceTree = "<group>"; };
@@ -1341,7 +1341,6 @@
 			files = (
 				AAB7BA372EF33958000E4A20 /* PanModal in Frameworks */,
 				AAB7BA0D2EF332C8000E4A20 /* AlignedCollectionViewFlowLayout in Frameworks */,
-				AAA6A49F2EF30A9400520357 /* FittedSheets in Frameworks */,
 				AAB7BA512EF373D4000E4A20 /* SDWebImageSVGCoder in Frameworks */,
 				AAC0E63F2EF6068100DDE9FF /* KeychainAccess in Frameworks */,
 				AAB7BA1F2EF334C3000E4A20 /* NicoProgress in Frameworks */,
@@ -1378,6 +1377,7 @@
 				AAB7BA282EF336B0000E4A20 /* SwiftyJSON in Frameworks */,
 				AA71963D2EF44A1900D31A70 /* Lottie in Frameworks */,
 				AAB7BA192EF333F1000E4A20 /* RichEditorView in Frameworks */,
+				AA9933B72EF9927A00893A3A /* FittedSheetsDF in Frameworks */,
 				AAB7B9F82EF32FC1000E4A20 /* DropDown in Frameworks */,
 				AAB7BA3D2EF34641000E4A20 /* PhoneNumberKit in Frameworks */,
 				AAB7BA4E2EF37272000E4A20 /* EFQRCode in Frameworks */,
@@ -3894,8 +3894,8 @@
 		AAC0ED942EF61E0B00DDE9FF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				AAC0ED862EF61E0B00DDE9FF /* cerqel_APIAction.swift */,
-				AAC0ED872EF61E0B00DDE9FF /* cerqel_BasicAction.swift */,
+				AA9DB5ED2EFA9024005A0D5E /* cerqel_APIAction.swift */,
+				AA9DB5EE2EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift */,
 				AAC0ED902EF61E0B00DDE9FF /* Resource */,
 				AAC0ED932EF61E0B00DDE9FF /* Service */,
 			);
@@ -4119,7 +4119,6 @@
 				AAA6A4952EF303B300520357 /* IQKeyboardManagerSwift */,
 				AAA6A4982EF303F000520357 /* Kingfisher */,
 				AAA6A49B2EF3041E00520357 /* MOLH */,
-				AAA6A49E2EF30A9400520357 /* FittedSheets */,
 				AAA6A4A42EF30C7000520357 /* ObjectMapper */,
 				AAA6A4A72EF30CB600520357 /* CryptoSwift */,
 				AAA6A4AA2EF30D3400520357 /* netfox */,
@@ -4157,6 +4156,7 @@
 				AA71963C2EF44A1900D31A70 /* Lottie */,
 				AAC0E63E2EF6068100DDE9FF /* KeychainAccess */,
 				AA820A1B2EF6308D0022BCA4 /* DGCharts */,
+				AA9933B62EF9927A00893A3A /* FittedSheetsDF */,
 			);
 			productName = DynamicFormEngine;
 			productReference = E47B1BE22B8F5D9D00E22A45 /* DynamicFormEngine.framework */;
@@ -4215,7 +4215,6 @@
 				AAA6A4942EF303B300520357 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				AAA6A4972EF303F000520357 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				AAA6A49A2EF3041E00520357 /* XCRemoteSwiftPackageReference "MOLH" */,
-				AAA6A49D2EF30A9400520357 /* XCRemoteSwiftPackageReference "FittedSheets" */,
 				AAA6A4A32EF30C7000520357 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 				AAA6A4A62EF30CB600520357 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 				AAA6A4A92EF30D3400520357 /* XCRemoteSwiftPackageReference "netfox" */,
@@ -4252,6 +4251,7 @@
 				AA71963B2EF44A1900D31A70 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				AAC0E63D2EF6068100DDE9FF /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				AA820A1A2EF6308D0022BCA4 /* XCRemoteSwiftPackageReference "Charts" */,
+				AA9933B52EF9927A00893A3A /* XCRemoteSwiftPackageReference "FittedSheets" */,
 			);
 			productRefGroup = E47B1BE32B8F5D9D00E22A45 /* Products */;
 			projectDirPath = "";
@@ -4697,6 +4697,8 @@
 				AAADBA4E2EF84BAB00F696F3 /* FileTypesEndPoint.swift in Sources */,
 				AAADBA502EF84BAB00F696F3 /* SendReportEndPoint.swift in Sources */,
 				AAADBA512EF84BAB00F696F3 /* FilesEndPoint.swift in Sources */,
+				AA9DB5EF2EFA9024005A0D5E /* cerqel_APIAction.swift in Sources */,
+				AA9DB5F02EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift in Sources */,
 				AAADBA522EF84BAB00F696F3 /* DocumentLibraryRepo.swift in Sources */,
 				AAADBA532EF84BAB00F696F3 /* CategoriesEndPoint.swift in Sources */,
 				AAADBA542EF84BAB00F696F3 /* AcknowledgEndPoint.swift in Sources */,
@@ -4767,7 +4769,6 @@
 				AAC0EE382EF61E0B00DDE9FF /* Document.swift in Sources */,
 				AAC0EE412EF61E0B00DDE9FF /* cerqel_ServiceImp.swift in Sources */,
 				AAC0EE432EF61E0B00DDE9FF /* CerqelUITextField+Extensions.swift in Sources */,
-				AAC0EE442EF61E0B00DDE9FF /* cerqel_BasicAction.swift in Sources */,
 				AAC0EE452EF61E0B00DDE9FF /* CerqelUIColor+Extensions.swift in Sources */,
 				AAC0EE462EF61E0B00DDE9FF /* CerqelBaseWireFrame.swift in Sources */,
 				AAC0EE512EF61E0B00DDE9FF /* CerqelUISearchBar+Extensions.swift in Sources */,
@@ -4870,7 +4871,6 @@
 				AAC0EF1F2EF61E0B00DDE9FF /* CerqelListModel.swift in Sources */,
 				AAC0EF202EF61E0B00DDE9FF /* CerqelUIApplication+Extension.swift in Sources */,
 				AAA8098E2EF941E9001E845F /* MaskedImageView.swift in Sources */,
-				AAC0EF222EF61E0B00DDE9FF /* cerqel_APIAction.swift in Sources */,
 				AA3C31192EF954A900C2778C /* AcknowledgeVC.swift in Sources */,
 				AAC0EF232EF61E0B00DDE9FF /* ImagePickerExternal.swift in Sources */,
 				AAC0EF252EF61E0B00DDE9FF /* CodableHelpers.swift in Sources */,
@@ -5333,6 +5333,14 @@
 				kind = branch;
 			};
 		};
+		AA9933B52EF9927A00893A3A /* XCRemoteSwiftPackageReference "FittedSheets" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EslamAbotaleb/FittedSheets";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -5382,15 +5390,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.2.0;
-			};
-		};
-		AAA6A49D2EF30A9400520357 /* XCRemoteSwiftPackageReference "FittedSheets" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/gordontucker/FittedSheets.git";
-			requirement = {
-				kind = versionRange;
-				maximumVersion = 3.0.0;
-				minimumVersion = 1.3.0;
 			};
 		};
 		AAA6A4A32EF30C7000520357 /* XCRemoteSwiftPackageReference "ObjectMapper" */ = {
@@ -5692,6 +5691,11 @@
 			package = AA8FB7D92EF3F9EC0073665D /* XCRemoteSwiftPackageReference "PopupDialog" */;
 			productName = PopupDialog;
 		};
+		AA9933B62EF9927A00893A3A /* FittedSheetsDF */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA9933B52EF9927A00893A3A /* XCRemoteSwiftPackageReference "FittedSheets" */;
+			productName = FittedSheetsDF;
+		};
 		AAA6A48A2EF3032F00520357 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -5726,11 +5730,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAA6A49A2EF3041E00520357 /* XCRemoteSwiftPackageReference "MOLH" */;
 			productName = MOLH;
-		};
-		AAA6A49E2EF30A9400520357 /* FittedSheets */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AAA6A49D2EF30A9400520357 /* XCRemoteSwiftPackageReference "FittedSheets" */;
-			productName = FittedSheets;
 		};
 		AAA6A4A42EF30C7000520357 /* ObjectMapper */ = {
 			isa = XCSwiftPackageProductDependency;

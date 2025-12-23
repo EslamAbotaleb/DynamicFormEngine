@@ -5,12 +5,12 @@
 //  Created by Yasser Osama on 24/10/2021.
 //
 
-import Alamofire
+internal import Alamofire
 import Expression
 import Foundation
 import ObjectMapper
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import UIKit
 
 

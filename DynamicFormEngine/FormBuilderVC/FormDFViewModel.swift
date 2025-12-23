@@ -7,7 +7,7 @@
 
 import Foundation
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import Photos
 import UIKit
 

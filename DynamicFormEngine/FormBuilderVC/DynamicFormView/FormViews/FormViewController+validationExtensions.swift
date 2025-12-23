@@ -1,10 +1,10 @@
 import UIKit
 import EzPopup
-import FittedSheets
+internal import FittedSheetsDF
 import Expression
 import SwiftMessages
 import RxCocoa
-import RxSwift
+internal import RxSwift
 import SwiftUI
 import JGProgressHUD
 import EasyTipView

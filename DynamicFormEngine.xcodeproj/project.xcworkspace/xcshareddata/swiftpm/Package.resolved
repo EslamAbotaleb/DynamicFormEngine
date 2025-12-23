@@ -1,5 +1,5 @@
 {
-  "originHash" : "4df4469a19537c8e8ca799678b6b560b702cee7fb03670126e39682fc30d23fd",
+  "originHash" : "1ef9ee1ab98f007acf7de222bf5e6a474f0fda72fa444862e84abddddadc330a",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -103,10 +103,10 @@
     {
       "identity" : "fittedsheets",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/gordontucker/FittedSheets.git",
+      "location" : "https://github.com/EslamAbotaleb/FittedSheets",
       "state" : {
-        "revision" : "ba34781367fb7c947e2a19334318cf440c92968c",
-        "version" : "2.7.1"
+        "branch" : "main",
+        "revision" : "9ec7283459112c5052423650b9903be4846131d4"
       }
     },
     {

@@ -505,7 +505,6 @@
 		AAB7BA342EF3390F000E4A20 /* XLPagerTabStrip in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA332EF3390F000E4A20 /* XLPagerTabStrip */; };
 		AAB7BA372EF33958000E4A20 /* PanModal in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA362EF33958000E4A20 /* PanModal */; };
 		AAB7BA3A2EF33A27000E4A20 /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA392EF33A27000E4A20 /* SkeletonView */; };
-		AAB7BA3D2EF34641000E4A20 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA3C2EF34641000E4A20 /* PhoneNumberKit */; };
 		AAB7BA402EF34728000E4A20 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA3F2EF34728000E4A20 /* KeychainAccess */; };
 		AAB7BA432EF347AB000E4A20 /* SwiftMessages in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA422EF347AB000E4A20 /* SwiftMessages */; };
 		AAB7BA4B2EF35732000E4A20 /* Mantis in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA4A2EF35732000E4A20 /* Mantis */; };
@@ -1379,7 +1378,6 @@
 				AAB7BA192EF333F1000E4A20 /* RichEditorView in Frameworks */,
 				AA9933B72EF9927A00893A3A /* FittedSheetsDF in Frameworks */,
 				AAB7B9F82EF32FC1000E4A20 /* DropDown in Frameworks */,
-				AAB7BA3D2EF34641000E4A20 /* PhoneNumberKit in Frameworks */,
 				AAB7BA4E2EF37272000E4A20 /* EFQRCode in Frameworks */,
 				AAB7BA222EF334FB000E4A20 /* TagListView in Frameworks */,
 				AAB7BA342EF3390F000E4A20 /* XLPagerTabStrip in Frameworks */,
@@ -4144,7 +4142,6 @@
 				AAB7BA332EF3390F000E4A20 /* XLPagerTabStrip */,
 				AAB7BA362EF33958000E4A20 /* PanModal */,
 				AAB7BA392EF33A27000E4A20 /* SkeletonView */,
-				AAB7BA3C2EF34641000E4A20 /* PhoneNumberKit */,
 				AAB7BA422EF347AB000E4A20 /* SwiftMessages */,
 				AAB7BA4A2EF35732000E4A20 /* Mantis */,
 				AAB7BA4D2EF37272000E4A20 /* EFQRCode */,
@@ -4240,7 +4237,6 @@
 				AAB7BA322EF3390F000E4A20 /* XCRemoteSwiftPackageReference "XLPagerTabStrip" */,
 				AAB7BA352EF33958000E4A20 /* XCRemoteSwiftPackageReference "PanModal" */,
 				AAB7BA382EF33A27000E4A20 /* XCRemoteSwiftPackageReference "SkeletonView" */,
-				AAB7BA3B2EF34641000E4A20 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
 				AAB7BA412EF347AB000E4A20 /* XCRemoteSwiftPackageReference "SwiftMessages" */,
 				AAB7BA492EF35732000E4A20 /* XCRemoteSwiftPackageReference "Mantis" */,
 				AAB7BA4C2EF37272000E4A20 /* XCRemoteSwiftPackageReference "EFQRCode" */,
@@ -5598,15 +5594,6 @@
 				minimumVersion = 1.8.2;
 			};
 		};
-		AAB7BA3B2EF34641000E4A20 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit.git";
-			requirement = {
-				kind = versionRange;
-				maximumVersion = 5.0.0;
-				minimumVersion = 4.2.1;
-			};
-		};
 		AAB7BA3E2EF34728000E4A20 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
@@ -5855,11 +5842,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAB7BA382EF33A27000E4A20 /* XCRemoteSwiftPackageReference "SkeletonView" */;
 			productName = SkeletonView;
-		};
-		AAB7BA3C2EF34641000E4A20 /* PhoneNumberKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AAB7BA3B2EF34641000E4A20 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
-			productName = PhoneNumberKit;
 		};
 		AAB7BA3F2EF34728000E4A20 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;

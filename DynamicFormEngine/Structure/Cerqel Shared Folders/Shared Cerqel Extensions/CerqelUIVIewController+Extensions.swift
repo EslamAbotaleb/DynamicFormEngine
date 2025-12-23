@@ -7,11 +7,11 @@
 //
 import UIKit
 import JGProgressHUD
-internal import FittedSheetsDF
+public import FittedSheetsDF
 import MobileCoreServices
 import UniformTypeIdentifiers
 
-protocol WireframeInterfaceCerqel: class {
+public protocol WireframeInterfaceCerqel: class {
     func cerqel_popFromNavigationController(animated: Bool)
     func cerqel_dismiss(animated: Bool)
     
@@ -23,7 +23,7 @@ protocol WireframeInterfaceCerqel: class {
 
 extension UIViewController: WireframeInterfaceCerqel {
     
-    func cerqel_showError(error:Error){
+   public func cerqel_showError(error:Error){
         var message:String = error.localizedDescription
         if let error = error as? BaseError {
             
@@ -68,7 +68,7 @@ extension UIViewController: WireframeInterfaceCerqel {
         }
     }
     
-    func showError(error:Error, flashNow: Bool = false){
+    public func showError(error:Error, flashNow: Bool = false){
         var message:String = error.localizedDescription
         if flashNow {
             let hud = flashHud(message: message, view: self.view, indicator: JGProgressHUDErrorIndicatorView())
@@ -101,36 +101,36 @@ extension UIViewController: WireframeInterfaceCerqel {
         }
     }
 
-    func cerqel_popFromNavigationController(animated: Bool) {
+    public func cerqel_popFromNavigationController(animated: Bool) {
         let _ = navigationController?.popViewController(animated: animated)
     }
     
-    func cerqel_dismiss(animated: Bool) {
+    public func cerqel_dismiss(animated: Bool) {
         navigationController?.dismiss(animated: animated)
     }
     
-    func cerqel_showErrorAlert(with message: String?) {
+    public func cerqel_showErrorAlert(with message: String?) {
         let okAction = UIAlertAction(title: "OK".localized, style: .default, handler: nil)
         cerqel_showAlert(with: "Something went wrong", message: message, actions: [okAction])
     }
     
-    func cerqel_showAlert(with title: String?, message: String?) {
+    public func cerqel_showAlert(with title: String?, message: String?) {
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         cerqel_showAlert(with: title, message: message, actions: [okAction])
     }
     
-    func cerqel_showAlert(with title: String?, message: String?, actions: [UIAlertAction]) {
+    public func cerqel_showAlert(with title: String?, message: String?, actions: [UIAlertAction]) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         actions.forEach { alert.addAction($0) }
         navigationController?.present(alert, animated: true, completion: nil)
     }
     
-    func cerqel_showLoading(){
+    public func cerqel_showLoading(){
         cerqel_HUD.showHUD()
 //        HUD.show(in: self.view)
     }
     
-    func cerqel_hideLoading(){
+    public func cerqel_hideLoading(){
 //        HUD.dismiss()
         cerqel_HUD.stopHUD()
     }
@@ -142,7 +142,7 @@ extension UIViewController: WireframeInterfaceCerqel {
 extension UIViewController {
     
     // Not using static as it wont be possible to override to provide custom storyboardID then
-    class var cerqel_storyboardID : String {
+    public class var cerqel_storyboardID : String {
         
         return "\(self)"
     }
@@ -156,7 +156,7 @@ extension UIViewController {
 
 extension UIViewController{
 
-    func cerqel_presentSheetController(viewToPresent: BottomSheetVCCerqel, fullScreenModel: Bool = false, height: CGFloat, bottomControl: Bool = true){
+    public func cerqel_presentSheetController(viewToPresent: BottomSheetVCCerqel, fullScreenModel: Bool = false, height: CGFloat, bottomControl: Bool = true){
         
         let mySize: SheetSize = .fixed(CGFloat(height))
         
@@ -174,8 +174,7 @@ extension UIViewController{
         
     }
 
-
-    func cerqel_openMediaMenu(isFileOnly: Bool = false, isImgOnly: Bool = false){
+    public func cerqel_openMediaMenu(isFileOnly: Bool = false, isImgOnly: Bool = false){
         let alert = UIAlertController(title: "Choose Image Source".localized, message: "", preferredStyle: .actionSheet)
         
         let actionCamera = UIAlertAction(title: "Camera".localized, style: .default) { (_) in
@@ -209,7 +208,7 @@ extension UIViewController{
 
     }
     
-    func documentType(forFileExtension fileExtension: String) -> String? {
+    public  func documentType(forFileExtension fileExtension: String) -> String? {
         if #available(iOS 14.0, *) {
             switch fileExtension.lowercased() {
             case "pdf":
@@ -245,7 +244,7 @@ extension UIViewController{
         }
     }
     
-    func openMFileMenu(attachmentExtensions: String) {
+    public func openMFileMenu(attachmentExtensions: String) {
         DynamicAuthManager.shared.documentTypesOfExtensions.removeAll()
         var alertStyle: UIAlertController.Style = .actionSheet
         
@@ -316,17 +315,17 @@ extension UIViewController{
         self.present(alert, animated: true, completion: nil)
     }
 
-    func isFileType(_ attachExtension: String) -> Bool {
+    public func isFileType(_ attachExtension: String) -> Bool {
         let fileExtensions = ["pdf", "excel", "powerpoint", "word", "txt", "msg"]
         return fileExtensions.contains(attachExtension.lowercased())
     }
 
-    func isImageType(_ attachExtension: String) -> Bool {
+    public func isImageType(_ attachExtension: String) -> Bool {
         let imageExtensions = ["jpg", "png", "jpeg"]
         return imageExtensions.contains(attachExtension.lowercased())
     }
     
-    func isVideoType(_ attachExtension: String) -> Bool {
+    public func isVideoType(_ attachExtension: String) -> Bool {
         let videoExtensions = ["mp4", "mov"]
         return videoExtensions.contains(attachExtension.lowercased())
     }

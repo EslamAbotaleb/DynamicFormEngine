@@ -8,7 +8,7 @@
 
 import Foundation
 import RxCocoa
-internal import RxSwift
+public import RxSwift
 import Expression
 import UIKit
 
@@ -16,7 +16,7 @@ protocol NestedFormDelegate {
     func passDataToParentForm(parentControlIndex: Int?, controlData: [ModelControl]?, editNestedRowIndex: Int?)
 }
 
-class FormBuilderViewModel: BaseViewModel {
+public class FormBuilderViewModel: BaseViewModel {
     
     private let service: cerqel_NetworkService
     private let disposeBag = DisposeBag()
@@ -51,12 +51,12 @@ class FormBuilderViewModel: BaseViewModel {
     var editNestedRowIndex: Int? = nil
 
  
-    init(_ service: cerqel_NetworkService) {
+    public init(_ service: cerqel_NetworkService) {
         self.service = service
         super.init()
     }
 
-    func fetchService(id: String) {
+    public func fetchService(id: String) {
 //        guard let id = selectedServiceId else{
 //            return
 //        }
@@ -76,7 +76,7 @@ class FormBuilderViewModel: BaseViewModel {
         }).disposed(by: self.disposeBag)
     }
     
-    func fetchSubServices(){
+    public func fetchSubServices(){
         guard let id = selectedServiceId else {
             return
         }

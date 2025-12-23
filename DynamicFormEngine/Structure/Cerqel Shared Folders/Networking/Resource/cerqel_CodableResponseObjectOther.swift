@@ -7,12 +7,12 @@
 //
 
 import Foundation
-internal import RxSwift
-internal import Alamofire
+public import RxSwift
+public import Alamofire
 
-class cerqel_CodableResponseObjectOther<T: Decodable, X: Decodable>: cerqel_CodableResponseObject<T> {
+public class cerqel_CodableResponseObjectOther<T: Decodable, X: Decodable>: cerqel_CodableResponseObject<T> {
     // x = Other
-    fileprivate(set) var other:X?
+    fileprivate(set) public var other:X?
 
 
     private enum CodingKeys: String, CodingKey {
@@ -20,13 +20,13 @@ class cerqel_CodableResponseObjectOther<T: Decodable, X: Decodable>: cerqel_Coda
         case other
     }
     
-    required init(from decoder:Decoder) throws {
+    required public init(from decoder:Decoder) throws {
         try super.init(from: decoder)
         let values = try decoder.container(keyedBy: CodingKeys.self)
         other = try? values.decode(X.self, forKey: .other)
     }
     
-    override init(action: cerqel_APIAction, keyResult: String = "result") {
+    override public init(action: cerqel_APIAction, keyResult: String = "result") {
         super.init(action: action, keyResult: keyResult)
     }
     

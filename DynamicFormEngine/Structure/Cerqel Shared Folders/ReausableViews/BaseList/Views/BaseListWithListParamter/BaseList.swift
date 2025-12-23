@@ -10,8 +10,8 @@ import UIKit
 import PanModal
 
 
-class BaseListItem: BaseItem,Equatable {
-    static func == (lhs: BaseListItem, rhs: BaseListItem) -> Bool {
+public class BaseListItem: BaseItem,Equatable {
+    static public func == (lhs: BaseListItem, rhs: BaseListItem) -> Bool {
         return true
     }
     
@@ -24,7 +24,7 @@ class BaseListItem: BaseItem,Equatable {
     var selectedItem: SelectedCallBack
     var multiSelectedItems: MultiSelectedCallBack
     var action: [Action]?
-    init(list: [ListModel],title: String,type: BottomSheetType,currentSelectedItem: ListModel = ListModel(),currentMultiSelectedItems: [ListModel]? = [],isSingleSelection: Bool, selectedItem: @escaping SelectedCallBack,multiSelectedItems: @escaping MultiSelectedCallBack, action: [Action]? = [] ) {
+    public init(list: [ListModel],title: String,type: BottomSheetType,currentSelectedItem: ListModel = ListModel(),currentMultiSelectedItems: [ListModel]? = [],isSingleSelection: Bool, selectedItem: @escaping SelectedCallBack,multiSelectedItems: @escaping MultiSelectedCallBack, action: [Action]? = [] ) {
         self.list = list
         self.title = title
         self.type = type

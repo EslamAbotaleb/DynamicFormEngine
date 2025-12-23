@@ -7,10 +7,10 @@
 //
 
 import Foundation
-internal import Alamofire
+public import Alamofire
 
-enum Dynamic_BasicAction: cerqel_APIAction {
-    var basicAction: cerqel_BasicActionDynamicForm{return .none}
+public enum Dynamic_BasicAction: cerqel_APIAction {
+    public var basicAction: cerqel_BasicActionDynamicForm{return .none}
     
     case submitService(Id: String, payload: [String: Any])
     case requestDetails(id: String)
@@ -40,7 +40,7 @@ enum Dynamic_BasicAction: cerqel_APIAction {
     case submitEditRequestService(Id: String, payload: [String: Any])
     case none
 
-    var actionParameters: [String : Any]{
+    public var actionParameters: [String : Any]{
         switch self {
     
             
@@ -158,7 +158,7 @@ enum Dynamic_BasicAction: cerqel_APIAction {
         }
     }
 
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         switch self {
    
         case .submitService, .addChatComment, .uploadFile, .executeAction, .updateRequest, .reopenRequest, .withdrawRequest,.submitEditRequestService:
@@ -180,7 +180,7 @@ enum Dynamic_BasicAction: cerqel_APIAction {
         }
     }
     
-    var path: String {
+    public var path: String {
         switch self {
 
         case .submitService(let id, _):
@@ -245,7 +245,7 @@ enum Dynamic_BasicAction: cerqel_APIAction {
     }
 
     
-    var authHeader: [String : String]{
+    public  var authHeader: [String : String]{
         switch self {
         default:
             let head = [
@@ -261,7 +261,7 @@ enum Dynamic_BasicAction: cerqel_APIAction {
         }
     }
     
-    var encoding: ParameterEncoding {
+    public var encoding: ParameterEncoding {
         switch method {
         case .post, .put, .delete, .patch :
             return JSONEncoding.default
@@ -271,14 +271,14 @@ enum Dynamic_BasicAction: cerqel_APIAction {
     }
     
     
-    var isMock: Bool{
+    public   var isMock: Bool{
         switch self {
         default:
             return false
         }
     }
     
-    var urlType: cerqel_URLType{
+    public  var urlType: cerqel_URLType{
         switch self {
         case .submitService, .getServicesList, .getCategorieswithServices, .addServiceToFavourite, .getFavoriteServices, .getRecentServices,.submitEditRequestService:
             return .selfService

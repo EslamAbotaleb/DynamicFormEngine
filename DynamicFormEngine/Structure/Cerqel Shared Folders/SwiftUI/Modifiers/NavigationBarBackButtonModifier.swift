@@ -8,7 +8,7 @@ extension View {
 }
 
 
-struct NavigationBarBackButtonTitleHiddenModifier: ViewModifier {
+public struct NavigationBarBackButtonTitleHiddenModifier: ViewModifier {
 
   @Environment(\.dismiss) var dismiss
 

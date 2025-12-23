@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BackwardModelRequestDetailsData : Codable {
+public struct BackwardModelRequestDetailsData : Codable {
     var id: String?
     var requestSubmissionMobileVisibilityAndroid : Bool?
     var status : Status?
@@ -78,7 +78,7 @@ struct BackwardModelRequestDetailsData : Codable {
     }
 
 //    init(){}
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         requestSubmissionMobileVisibilityAndroid = try values.decodeIfPresent(Bool.self, forKey: .requestSubmissionMobileVisibilityAndroid)
         id = try values.decodeIfPresent(String.self, forKey: .id)
@@ -118,7 +118,7 @@ struct BackwardModelRequestDetailsData : Codable {
 
 }
 
-struct BackwardRequestPendingOn: Codable {
+public struct BackwardRequestPendingOn: Codable {
     let id : String?
     let name : String?
     let pendingOnCode: String?
@@ -127,7 +127,7 @@ struct BackwardRequestPendingOn: Codable {
         case id, name, pendingOnCode
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(String.self, forKey: .id)
         name = try values.decodeIfPresent(String.self, forKey: .name)
@@ -135,7 +135,7 @@ struct BackwardRequestPendingOn: Codable {
     }
 }
 
-struct BackwardDropdownDefaultAnswerValue : Codable, FormValue {
+public struct BackwardDropdownDefaultAnswerValue : Codable, FormValue {
     let key : String?
     let text : String?
     let selectedKey : String?
@@ -147,7 +147,7 @@ struct BackwardDropdownDefaultAnswerValue : Codable, FormValue {
         case selectedKey = "selectedKey"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         key = try values.decodeIfPresent(String.self, forKey: .key)
         text = try values.decodeIfPresent(String.self, forKey: .text)

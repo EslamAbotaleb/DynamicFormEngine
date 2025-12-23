@@ -7,18 +7,18 @@
 //
 
 import Foundation
-internal import RxSwift
-internal import Alamofire
-internal import MOLH
+public import RxSwift
+public import Alamofire
+public import MOLH
 
 public class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_CodableResponseProtocol {
-    fileprivate(set) var success: Bool?
-    fileprivate(set) var item: cerqel_CodableResponseObjectData<T>?
+    fileprivate(set) public var success: Bool?
+    fileprivate(set) public var item: cerqel_CodableResponseObjectData<T>?
 
-    var error: BaseError?
-    var errors: [String: BaseError]?
+    public var error: BaseError?
+    public var errors: [String: BaseError]?
 //    fileprivate(set) var data:Any?
-    var keyResult: String = "result"
+    public var keyResult: String = "result"
 
     private enum CodingKeys: String, CodingKey {
         case success
@@ -30,9 +30,9 @@ public class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_Codab
 
     
 //    fileprivate let objectType = T.self
-    var action: cerqel_APIAction = cerqel_BasicActionDynamicForm.none
+    public var action: cerqel_APIAction = cerqel_BasicActionDynamicForm.none
 
-    init(action: cerqel_APIAction,keyResult:String = "result") {
+    public init(action: cerqel_APIAction,keyResult:String = "result") {
         self.action = action
         self.keyResult = keyResult
         
@@ -69,7 +69,7 @@ public class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_Codab
         }
     }
 
-    func parse<T: Decodable>(_ data: Data) -> Observable<T> {
+    public func parse<T: Decodable>(_ data: Data) -> Observable<T> {
         return Observable.create { observer in
             
             do{
@@ -106,7 +106,7 @@ public class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_Codab
 public class cerqel_CodableResponseObjectData<T: Decodable>: Decodable {
     fileprivate(set) public var data: T?
     fileprivate(set) public var arrData : [T]? = []
-    var totalCount: Int = 0
+    public var totalCount: Int = 0
 
     private enum CodingKeys: String, CodingKey {
         case data

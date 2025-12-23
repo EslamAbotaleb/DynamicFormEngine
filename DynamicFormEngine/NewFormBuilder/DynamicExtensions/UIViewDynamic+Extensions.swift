@@ -9,8 +9,8 @@
 import Foundation
 import UIKit
 
-extension UIView {
-    func addNormalShadow(){
+public extension UIView {
+     func addNormalShadow(){
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOffset = CGSize(width: 0, height: 0)
         self.layer.shadowOpacity = 0.2

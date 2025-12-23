@@ -12,18 +12,18 @@ import Network
 import Toast
 import JGProgressHUD
 
-func openAttachment(withURLString: String) {
+public func openAttachment(withURLString: String) {
     
     guard let url = URL(string: withURLString) else { return }
     UIApplication.shared.open(url)
 }
 
-let dateFormatterLocale_ar = Locale(identifier: "ar")
-let dateFormatterLocal_en_US = Locale(identifier: "en_US")
-let hijriCalendar = Calendar.init(identifier: .islamicUmmAlQura)
-let hijriCalendarType: Calendar.Identifier = .islamicUmmAlQura
+public let dateFormatterLocale_ar = Locale(identifier: "ar")
+public let dateFormatterLocal_en_US = Locale(identifier: "en_US")
+public let hijriCalendar = Calendar.init(identifier: .islamicUmmAlQura)
+public let hijriCalendarType: Calendar.Identifier = .islamicUmmAlQura
 
-func delay(seconds: Double, completion: @escaping () -> ()) {
+public func delay(seconds: Double, completion: @escaping () -> ()) {
     let popTime = DispatchTime.now() + Double(Int64( Double(NSEC_PER_SEC) * seconds )) / Double(NSEC_PER_SEC)
     
     DispatchQueue.main.asyncAfter(deadline: popTime) {
@@ -31,12 +31,12 @@ func delay(seconds: Double, completion: @escaping () -> ()) {
     }
 }
 
-func isArabic()-> Bool{
+public func isArabic()-> Bool{
     return MOLHLanguage.isArabic()
 }
 
 
-func getTimeDifference(dt: Date, includeDays: Bool, includeDaysIfCurrentIsLess: Bool)-> (String?, String?, String?, String?){
+public func getTimeDifference(dt: Date, includeDays: Bool, includeDaysIfCurrentIsLess: Bool)-> (String?, String?, String?, String?){
     var cal = Calendar.current
     cal.timeZone = timeZone_UTC
     let comps = cal.dateComponents([.hour, .minute, .second, .day], from: dt)

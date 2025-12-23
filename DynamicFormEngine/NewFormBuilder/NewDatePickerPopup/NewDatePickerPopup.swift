@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewDatePickerPopup: BottomSheetVCCerqel {
+public class NewDatePickerPopup: BottomSheetVCCerqel {
     
     // MARK: - IBOutlets
     
@@ -57,7 +57,7 @@ class NewDatePickerPopup: BottomSheetVCCerqel {
     
     // MARK: - LifeCycle
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         doneBtn.setTitle("Confirm".localized, for: .normal)
         datePicker.addTarget(self, action: #selector(handleConfirmButtonStatus), for: .allEvents)
@@ -65,7 +65,7 @@ class NewDatePickerPopup: BottomSheetVCCerqel {
         closeIcon.tintColor =  primaryMain
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         containerView.layer.cornerRadius = 12
         containerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -106,7 +106,7 @@ class NewDatePickerPopup: BottomSheetVCCerqel {
     
     /// setting date picker popup instance
     /// - Returns: date picker popup view
-    static func instance() -> NewDatePickerPopup {
+    static public func instance() -> NewDatePickerPopup {
         let vc = NewDatePickerPopup(nibName: "NewDatePickerPopup", bundle: nil)
         vc.cerqel_sheetHeight = 600
         return vc
@@ -114,7 +114,7 @@ class NewDatePickerPopup: BottomSheetVCCerqel {
     
     /// handling done button behavior
     /// - Parameter enabled: if it's enabled or not
-    func handleDoneButton(enabled: Bool) {
+    public func handleDoneButton(enabled: Bool) {
         doneBtn.isUserInteractionEnabled = enabled
         doneBtn.backgroundColor = !enabled ? .alertClosed : primaryMain
     }
@@ -122,7 +122,7 @@ class NewDatePickerPopup: BottomSheetVCCerqel {
     /// checking if we should disable dates
     /// - Parameter date: date to be disabled or not
     /// - Returns: disable the date or not
-    func datePicker(shouldDisableDate date: Date) -> Bool {
+    public func datePicker(shouldDisableDate date: Date) -> Bool {
         
         if let disabledDates = disabledDates {
             var disabledDatesInDate = [Date]()
@@ -166,7 +166,7 @@ class NewDatePickerPopup: BottomSheetVCCerqel {
     ///   - presentedFormat: format
     ///   - regularFormat: format
     ///   - from: is it 'date from' or not
-    func showDate(vc: UIViewController, sender: Any?, mode: UIDatePicker.Mode, minimum: Date?, maximum: Date? , currentDate: Date? = nil, disabledDates: [String]? = [], disabledDays: [Int]? = [], presentedFormat: String? = "", regularFormat: String? = "",from: Bool? = nil, isFromCustomCalender: Bool = false) {
+    public func showDate(vc: UIViewController, sender: Any?, mode: UIDatePicker.Mode, minimum: Date?, maximum: Date? , currentDate: Date? = nil, disabledDates: [String]? = [], disabledDays: [Int]? = [], presentedFormat: String? = "", regularFormat: String? = "",from: Bool? = nil, isFromCustomCalender: Bool = false) {
         OperationQueue.main.addOperation {
 
             self.currentVC = vc
@@ -200,7 +200,7 @@ class NewDatePickerPopup: BottomSheetVCCerqel {
     /// converting hijri string date to gregorian date
     /// - Parameter stringDate: hijri string date
     /// - Returns: gregorian date
-    func convertDateToGregorianDate(stringDate: String) -> Date {
+    public func convertDateToGregorianDate(stringDate: String) -> Date {
         let hijri = hijriCalendar
         let formatter = DateFormatter()
         formatter.calendar = hijri
@@ -217,7 +217,7 @@ class NewDatePickerPopup: BottomSheetVCCerqel {
     
     /// check if it's valid date or not
     /// - Returns: result of valid date or not
-    func valid() -> Bool {
+    public func valid() -> Bool {
         if datePickerMode != .time {
                 guard !datePicker(shouldDisableDate: datePicker.date) else {return false}
         }

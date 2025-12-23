@@ -7,7 +7,7 @@
 //
 
 import UIKit
-internal import MOLH
+public import MOLH
 import PopupDialog
 import Network
 import Toast
@@ -16,7 +16,7 @@ import Kingfisher
 import Photos
 import UIKit
 
-var appsDicCerqel: [String : String] = [
+public var appsDicCerqel: [String : String] = [
     "facebook" : "fb://" ,
     "kiloloco" : "kilolocossss://",
     "instagram" : "instagram://",
@@ -29,7 +29,7 @@ var appsDicCerqel: [String : String] = [
     "youtube" : "youtube://",
 ]
 
-let globalHeaders = [
+public let globalHeaders = [
     "Authorization": "Bearer " + AuthManager.shared.token,
 //    "TenantId": AuthManager.shared.tenant?.tenantId ?? "",
     "LanguageCode": isArabicCerqel() ? "Ar" : "En",
@@ -39,7 +39,7 @@ let globalHeaders = [
     "TimeZone": TimeZone.current.identifier,
 ]
 
-let modifier = AnyModifier { request in
+public let modifier = AnyModifier { request in
     var r = request
 
     let token = AuthManager.shared.token
@@ -48,45 +48,45 @@ let modifier = AnyModifier { request in
     return r
 }
 
-let dummyEmptyImgNameCerqel = "empty-dummy"
-let tempServiceImgNameCerqel = "service1"
-let avatarImgNameCerqel = "User"
+public let dummyEmptyImgNameCerqel = "empty-dummy"
+public let tempServiceImgNameCerqel = "service1"
+public let avatarImgNameCerqel = "User"
 
-let dummyEmptyImgCerqel = UIImage(named: "empty-dummy")
-let favEmptyImgCerqel = UIImage(named: "heart")
-let favImageCerqel = UIImage(named: "filledFav")
-let notFavImageCerqel = UIImage(named: "Favorite")
-let favImageForDetailsCerqel = UIImage(named: "fav-Undimmed")
-let notFavImageForDetailsCerqel = UIImage(named: "fav-dimmed")
-let tempServiceImgCerqel = UIImage(named: "service1")
-let tempVacationImgCerqel = UIImage(named: "vacation")
-var loadingUserInteractionEnabledCerqel = false
-let avatarCerqel = UIImage(named: "User")
-let avatar_BigCerqel = UIImage(named: "avatar_Big")
-var offersCountInDashboardCerqel = 0
-var recentSearchKeyCerqel = "RECENT_SEARCH_LIST"
-var kbRecentSearchKeyCerqel = "kb_RECENT_SEARCH_LIST"
-let FF_New_Form_DesignCerqel = true
-let timeZone_UTC = TimeZone(abbreviation: "UTC") ?? TimeZone.current
+public let dummyEmptyImgCerqel = UIImage(named: "empty-dummy")
+public let favEmptyImgCerqel = UIImage(named: "heart")
+public let favImageCerqel = UIImage(named: "filledFav")
+public let notFavImageCerqel = UIImage(named: "Favorite")
+public let favImageForDetailsCerqel = UIImage(named: "fav-Undimmed")
+public let notFavImageForDetailsCerqel = UIImage(named: "fav-dimmed")
+public let tempServiceImgCerqel = UIImage(named: "service1")
+public let tempVacationImgCerqel = UIImage(named: "vacation")
+public var loadingUserInteractionEnabledCerqel = false
+public let avatarCerqel = UIImage(named: "User")
+public let avatar_BigCerqel = UIImage(named: "avatar_Big")
+public var offersCountInDashboardCerqel = 0
+public var recentSearchKeyCerqel = "RECENT_SEARCH_LIST"
+public var kbRecentSearchKeyCerqel = "kb_RECENT_SEARCH_LIST"
+public let FF_New_Form_DesignCerqel = true
+public let timeZone_UTC = TimeZone(abbreviation: "UTC") ?? TimeZone.current
 
-let dateFormatterLocale_arCerqel = Locale(identifier: "ar")
-let dateFormatterLocal_en_USCerqel = Locale(identifier: "en_US")
-let utc_TimeZoneCerqel = TimeZone(abbreviation: "UTC")
-let currentTimeZoneCerqel = TimeZone.current
-let favImageForDetails = UIImage(named: "fav-Undimmed")
-let notFavImageForDetails = UIImage(named: "fav-dimmed")
-let FF_New_Form_Design = true
-let favStar = UIImage(named: "starfilled")
-let unFavStar = UIImage(named: "starunfill")
-let tempServiceImg = UIImage(named: "service1")
+public let dateFormatterLocale_arCerqel = Locale(identifier: "ar")
+public let dateFormatterLocal_en_USCerqel = Locale(identifier: "en_US")
+public let utc_TimeZoneCerqel = TimeZone(abbreviation: "UTC")
+public let currentTimeZoneCerqel = TimeZone.current
+public let favImageForDetails = UIImage(named: "fav-Undimmed")
+public let notFavImageForDetails = UIImage(named: "fav-dimmed")
+public let FF_New_Form_Design = true
+public let favStar = UIImage(named: "starfilled")
+public let unFavStar = UIImage(named: "starunfill")
+public let tempServiceImg = UIImage(named: "service1")
 
-let peoplesInvitedImgBaseURLCerqel = "https://cerqel-be.azurewebsites.net/content_youxel/api/Calendar/attendsProfilePicture/"
+public let peoplesInvitedImgBaseURLCerqel = "https://cerqel-be.azurewebsites.net/content_youxel/api/Calendar/attendsProfilePicture/"
 
-func isArabicCerqel()-> Bool{
+public func isArabicCerqel()-> Bool{
     return MOLHLanguage.isArabic()
 }
 
-func changeLanguageCerqel(){
+public func changeLanguageCerqel(){
     if let url = NSURL(string: UIApplication.openSettingsURLString) as URL? {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }else{
@@ -100,7 +100,7 @@ func changeLanguageCerqel(){
 
 
 
-func findDateDiffCerqel(time1Str: String, time2Str: String, timeFormat: String) -> String {
+public func findDateDiffCerqel(time1Str: String, time2Str: String, timeFormat: String) -> String {
     let timeformatter = DateFormatter()
     timeformatter.dateFormat = timeFormat
 
@@ -118,7 +118,7 @@ func findDateDiffCerqel(time1Str: String, time2Str: String, timeFormat: String) 
 
 
 
-func hexStringToUIColor(hex: String) -> UIColor {
+public func hexStringToUIColor(hex: String) -> UIColor {
     var cString = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
 
     if cString.hasPrefix("#") {
@@ -142,7 +142,7 @@ func hexStringToUIColor(hex: String) -> UIColor {
     return UIColor(red: red, green: green, blue: blue, alpha: alpha)
 }
 
-func delayCerqel(seconds: Double, completion: @escaping () -> ()) {
+public func delayCerqel(seconds: Double, completion: @escaping () -> ()) {
     let popTime = DispatchTime.now() + Double(Int64( Double(NSEC_PER_SEC) * seconds )) / Double(NSEC_PER_SEC)
 
     DispatchQueue.main.asyncAfter(deadline: popTime) {
@@ -151,7 +151,7 @@ func delayCerqel(seconds: Double, completion: @escaping () -> ()) {
 }
 
 
-func setNavUserImageBtnCerqel(btn: UIBarButtonItem){
+public func setNavUserImageBtnCerqel(btn: UIBarButtonItem){
 
 }
 
@@ -169,12 +169,12 @@ func setNavUserImageBtnCerqel(btn: UIBarButtonItem){
 //
 //}
 
-func openAttachmentCerqel(withURLString: String) {
+public func openAttachmentCerqel(withURLString: String) {
     guard let url = URL(string: withURLString) else { return }
     UIApplication.shared.open(url)
 }
 
-func openAppFromCerqelAppCerqel(appStoreURL: String) -> Bool {
+public func openAppFromCerqelAppCerqel(appStoreURL: String) -> Bool {
     for key in appsDicCerqel.keys {
         //        if key == appStoreURL {
         if appStoreURL.contains(key) {
@@ -185,7 +185,7 @@ func openAppFromCerqelAppCerqel(appStoreURL: String) -> Bool {
     return openAppCerqel(scheme: appStoreURL, appStoreURL: appStoreURL)
 }
 
-func verifyUrlCerqel(urlString: String?) -> Bool {
+public func verifyUrlCerqel(urlString: String?) -> Bool {
     if let urlString = urlString {
         if let url = NSURL(string: urlString) {
             return UIApplication.shared.canOpenURL(url as URL)
@@ -194,7 +194,7 @@ func verifyUrlCerqel(urlString: String?) -> Bool {
     return false
 }
 
-func openAppCerqel(scheme: String?, appStoreURL: String) -> Bool {
+public func openAppCerqel(scheme: String?, appStoreURL: String) -> Bool {
     let url = URL(string: scheme ?? "")!
     let application = UIApplication.shared
     // Check if the App is installed
@@ -231,7 +231,7 @@ func openAppCerqel(scheme: String?, appStoreURL: String) -> Bool {
 //    }
 //}
 
-func convertDateStringToAnotherFormatCerqel(oldFormat: String, newFormat: String, dateString: String) -> String {
+public func convertDateStringToAnotherFormatCerqel(oldFormat: String, newFormat: String, dateString: String) -> String {
     let myDateString = dateString
 
     let dateFormatter = DateFormatter()
@@ -247,7 +247,7 @@ func convertDateStringToAnotherFormatCerqel(oldFormat: String, newFormat: String
     return newDate
 }
 
-func compareBetweenTwoDatesCerqel(start: String, end: String) -> Bool {
+public func compareBetweenTwoDatesCerqel(start: String, end: String) -> Bool {
 
     let formatter = DateFormatter()
     formatter.dateFormat = "dd/mm/yyyy"
@@ -265,7 +265,7 @@ func compareBetweenTwoDatesCerqel(start: String, end: String) -> Bool {
 
 }
 
-func getTimeDifferenceCerqel(dt: Date, includeDays: Bool, includeDaysIfCurrentIsLess: Bool)-> (String?, String?, String?, String?){
+public func getTimeDifferenceCerqel(dt: Date, includeDays: Bool, includeDaysIfCurrentIsLess: Bool)-> (String?, String?, String?, String?){
     var cal = Calendar.current
     cal.timeZone = currentTimeZoneCerqel
     let comps = cal.dateComponents([.hour, .minute, .second, .day], from: dt)
@@ -321,7 +321,7 @@ func getTimeDifferenceCerqel(dt: Date, includeDays: Bool, includeDaysIfCurrentIs
 
 }
 
-func showToastCerqel(parentView: UIViewController, msg: String){
+public func showToastCerqel(parentView: UIViewController, msg: String){
 
     var style = ToastStyle()
     style.imageSize = CGSize(width: 20, height: 20)
@@ -334,7 +334,7 @@ func showToastCerqel(parentView: UIViewController, msg: String){
 }
 
 
-func showNoConnectionPopupCerqel(parentView: UIViewController){
+public func showNoConnectionPopupCerqel(parentView: UIViewController){
 //    let vc = CERQELShared_Router.goTo(viewName: .NoConnectionPopup)
 //    let popup = PopupDialog(viewController: vc)
 //    if let v = vc as? CerqelConnectionPopup{
@@ -346,7 +346,7 @@ func showNoConnectionPopupCerqel(parentView: UIViewController){
 //    parentView.present(popup, animated: true, completion: nil)
 }
 
-func getCurrentDateCerqel(dateFormat: String) -> String {
+public func getCurrentDateCerqel(dateFormat: String) -> String {
     let date = Date()
     let formatter = DateFormatter()
     formatter.timeZone = currentTimeZoneCerqel //TimeZone.current//
@@ -356,7 +356,7 @@ func getCurrentDateCerqel(dateFormat: String) -> String {
     return today
 }
 
-func checkReachabilityCerqel(){
+public func checkReachabilityCerqel(){
     DispatchQueue.main.async {
         let monitor = NWPathMonitor()
         monitor.pathUpdateHandler = { path in
@@ -386,7 +386,7 @@ func checkReachabilityCerqel(){
 
 }
 
-func createInitialsImage(name: String, backgroundColor: UIColor, textColor: UIColor, size: CGSize, font: UIFont) -> UIImage? {
+public func createInitialsImage(name: String, backgroundColor: UIColor, textColor: UIColor, size: CGSize, font: UIFont) -> UIImage? {
     let initials = name.split(separator: " ").compactMap { $0.first }.prefix(2)
     let initialsString = isArabicCerqel() ? initials.map { String($0) }.joined(separator: "\u{00A0}") : initials.map { String($0) }.joined(separator: "")
 
@@ -424,7 +424,7 @@ func createInitialsImage(name: String, backgroundColor: UIColor, textColor: UICo
     return image
 }
 
-func handleImageWithKFCerqel(
+public func handleImageWithKFCerqel(
     imgUrl: String?,
     img: UIImageView,
     name: String?,
@@ -458,7 +458,7 @@ func handleImageWithKFCerqel(
 }
 
 
-func textToImageCerqel(drawText text: String, inImage image: UIImage, atPoint point: CGPoint, textSize: CGSize,textColor:UIColor) -> UIImage {
+public func textToImageCerqel(drawText text: String, inImage image: UIImage, atPoint point: CGPoint, textSize: CGSize,textColor:UIColor) -> UIImage {
     // let textColor = UIColor.white
     let textFont = UIFont.SST_Arabic_Medium(ofSize: 18)
 
@@ -482,7 +482,7 @@ func textToImageCerqel(drawText text: String, inImage image: UIImage, atPoint po
     return newImage!
 }
 
-func makeACallCerqel(num: String){
+public func makeACallCerqel(num: String){
     guard let url = URL(string: "tel://\(num)"),
           UIApplication.shared.canOpenURL(url) else { return }
     if #available(iOS 10, *) {
@@ -493,7 +493,7 @@ func makeACallCerqel(num: String){
 
 }
 
-func sendAnEmailCerqel(email: String){
+public func sendAnEmailCerqel(email: String){
     if let url = URL(string: "mailto:\(email)") {
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url)
@@ -505,7 +505,7 @@ func sendAnEmailCerqel(email: String){
 }
 
 
-func mergeDatesCerqel(usingDateFrom: Date, UsingTimeFrom: Date) -> Date?{
+public func mergeDatesCerqel(usingDateFrom: Date, UsingTimeFrom: Date) -> Date?{
     var cal = Calendar.current
     cal.timeZone = currentTimeZoneCerqel
     var dateComps = cal.dateComponents([.day, .month, .year, .hour , .minute], from: usingDateFrom)
@@ -519,7 +519,7 @@ func mergeDatesCerqel(usingDateFrom: Date, UsingTimeFrom: Date) -> Date?{
 
 }
 
-func getDatesDifferenceInDaysCerqel(fromDate: Date?, toDate: Date?) -> Int?{
+public func getDatesDifferenceInDaysCerqel(fromDate: Date?, toDate: Date?) -> Int?{
 
     guard let fromDate = fromDate, let toDate = toDate else{
         return nil
@@ -546,7 +546,7 @@ func getDatesDifferenceInDaysCerqel(fromDate: Date?, toDate: Date?) -> Int?{
 }
 
 @MainActor
-func handleImageWithKF(imgUrl:String? ,img:UIImageView ,name:String?, color: UIColor, textColor: UIColor){
+public func handleImageWithKF(imgUrl:String? ,img:UIImageView ,name:String?, color: UIColor, textColor: UIColor){
     let imgTo = UIImage(color: color)
     let to = imgTo?.resized(to: CGSize(width: 40, height: 40))
     var placeHolder: UIImage?
@@ -560,7 +560,7 @@ func handleImageWithKF(imgUrl:String? ,img:UIImageView ,name:String?, color: UIC
     })
 }
 
-func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint, textSize: CGSize,textColor:UIColor) -> UIImage {
+public func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint, textSize: CGSize,textColor:UIColor) -> UIImage {
     // let textColor = UIColor.white
     let textFont = UIFont.SST_Arabic_Medium(ofSize: 18)
     let scale = UIScreen.main.scale

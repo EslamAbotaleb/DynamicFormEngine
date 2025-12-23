@@ -9,51 +9,51 @@
 import Foundation
 import UIKit
 
-class BaseVM : BaseViewModel,ObservableObject{
+public class BaseVM: BaseViewModel,ObservableObject{
     
-    override init() {
+    override public init() {
         super.init()
         self.hydrate()
     }
     
-    func hydrate() {}
+    public func hydrate() {}
     
     private var errorMessage: DynamicObjects<String> = DynamicObjects("")
     private var alertMessage: DynamicObjects<String> = DynamicObjects("")
-    var isLoading: DynamicObjects<Bool> = DynamicObjects(false)
-    var hudLoading: DynamicObjects<Bool> = DynamicObjects(false)
+    public var isLoading: DynamicObjects<Bool> = DynamicObjects(false)
+    public var hudLoading: DynamicObjects<Bool> = DynamicObjects(false)
     
-    func showSystemError(error: Error) {
+    public func showSystemError(error: Error) {
         errorMessage.value = error.localizedDescription
     }
     
-    func showErrorAlert(message: String) {
+    public func showErrorAlert(message: String) {
         errorMessage.value = message
     }
     
-    func showSystemAlert(alert: String) {
+    public func showSystemAlert(alert: String) {
         alertMessage.value = alert
     }
     
-    func implementErrorMessage(_ listener: @escaping (String) -> Void) {
+    public func implementErrorMessage(_ listener: @escaping (String) -> Void) {
         errorMessage.bind(listener)
     }
     
-    func implementAlert(_ listener: @escaping (String) -> Void) {
+    public func implementAlert(_ listener: @escaping (String) -> Void) {
         alertMessage.bind(listener)
     }
     
-    func showHudLoading() {
+    public func showHudLoading() {
         hudLoading.value = true
     }
-    func hideHudLoading() {
+    public func hideHudLoading() {
         hudLoading.value = false
     }
-    func showLoadingCerqel() {
+    public func showLoadingCerqel() {
         isLoading.value = true
     }
     
-    func hideLoadingCerqel() {
+    public func hideLoadingCerqel() {
         isLoading.value = false
     }
     

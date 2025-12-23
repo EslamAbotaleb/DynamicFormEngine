@@ -56,10 +56,7 @@ enum DynamicAppStoryboard : String {
     }
 }
 
-
-
-enum DynamicViewControllerName {
-    
+public enum DynamicViewControllerName {
     case backwardRequestDetails(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: BackwardModelRequestDetailsData? = nil, view: UIViewController?,commentID: String? = "")
     case requestDetails(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: ModelRequestDetailsData? = nil, view: UIViewController?,commentID: String? = "")
     case newFormBuilderDropDown
@@ -72,7 +69,7 @@ enum DynamicViewControllerName {
 
 public class DynamicSharedRouter {
 
-    static func goTo(viewName: DynamicViewControllerName)-> BottomSheetVCCerqel{
+    static public func goTo(viewName: DynamicViewControllerName)-> BottomSheetVCCerqel{
         switch viewName {
                 
         case .serviceSummaryPagesVC(let buttonId, let actionId,let isEditable, let isApproverForm, let requestIdForApprover, let view):

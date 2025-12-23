@@ -7,23 +7,23 @@
 //
 
 import Foundation
-internal import RxSwift
-import RxAlamofire
+public import RxSwift
+public import RxAlamofire
 import UIKit
-internal import Alamofire
+public import Alamofire
 import CommonCrypto
 import JGProgressHUD
 
 
-struct cerqel_BasicNetworkServiceImpl: cerqel_NetworkService {
+public struct cerqel_BasicNetworkServiceImpl: cerqel_NetworkService {
 
 
-    static let shared = cerqel_BasicNetworkServiceImpl()
+    static public let shared = cerqel_BasicNetworkServiceImpl()
 
 //    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
 
-    func load<T>(_ resource: T) -> Observable<T> where T : cerqel_CodableResponseProtocol {
+    public func load<T>(_ resource: T) -> Observable<T> where T : cerqel_CodableResponseProtocol {
         return
         RxAlamofire
             .request(resource.action)
@@ -51,7 +51,7 @@ struct cerqel_BasicNetworkServiceImpl: cerqel_NetworkService {
             .flatMap(resource.parse)
     }
     //
-    func uploadImage<T>(_ resource: cerqel_CodableResponseObject<T>,
+    public func uploadImage<T>(_ resource: cerqel_CodableResponseObject<T>,
                         image: UIImage?,
                         imageParam: String) -> Observable<cerqel_CodableResponseObject<T>> where T: Decodable {
         
@@ -114,7 +114,7 @@ struct cerqel_BasicNetworkServiceImpl: cerqel_NetworkService {
         }
     }
 
-    func load<T>(_ resource: cerqel_ArrayResource<T>) -> Observable<[T]> where T : Codable {
+    public func load<T>(_ resource: cerqel_ArrayResource<T>) -> Observable<[T]> where T : Codable {
         return
         RxAlamofire
             .request(resource.action)

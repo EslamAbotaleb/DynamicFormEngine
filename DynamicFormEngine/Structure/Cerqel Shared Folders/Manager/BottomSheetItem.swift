@@ -8,11 +8,11 @@
 import Foundation
 import UIKit
 
-typealias SelectedCallBack =  ((ListModel)->())
-typealias MultiSelectedCallBack =  (([ListModel])->())
-typealias CerqelSelectedCallBack =  ((CerqelListModel)->())
+public typealias SelectedCallBack = ((ListModel) -> Void)
+public typealias MultiSelectedCallBack = (([ListModel]) -> Void)
+public typealias CerqelSelectedCallBack = ((CerqelListModel) -> Void)
 
-class BottomSheetItem: BaseItem,Equatable {
+public class BottomSheetItem: BaseItem,Equatable {
 
     var repo: BaseRepo
     var endPoint: EndPointServiceCerqel
@@ -21,7 +21,7 @@ class BottomSheetItem: BaseItem,Equatable {
     var selectedItem: SelectedCallBack
     var multiSelectedItems : MultiSelectedCallBack
     
-    init(repo: BaseRepo,endPoint:EndPointServiceCerqel,type: BottomSheetType,isSingleSelection: Bool? = false, selectedItem: @escaping SelectedCallBack, multiSelectedItems : @escaping MultiSelectedCallBack) {
+    public init(repo: BaseRepo,endPoint:EndPointServiceCerqel,type: BottomSheetType,isSingleSelection: Bool? = false, selectedItem: @escaping SelectedCallBack, multiSelectedItems : @escaping MultiSelectedCallBack) {
         self.type = type
         self.repo = repo
         self.endPoint = endPoint
@@ -30,7 +30,7 @@ class BottomSheetItem: BaseItem,Equatable {
         self.multiSelectedItems = multiSelectedItems
     }
 
-    static func == (lhs: BottomSheetItem, rhs: BottomSheetItem) -> Bool {
+    static public func == (lhs: BottomSheetItem, rhs: BottomSheetItem) -> Bool {
         return true
 
     }

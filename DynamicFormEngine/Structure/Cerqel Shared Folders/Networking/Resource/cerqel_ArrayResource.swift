@@ -9,7 +9,7 @@
 import Foundation
 internal import RxSwift
 
-struct cerqel_ArrayResource<T: Codable> {
+public struct cerqel_ArrayResource<T: Codable> {
     let objectType = T.self
     let action: cerqel_APIAction
     

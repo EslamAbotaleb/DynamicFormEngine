@@ -7,10 +7,10 @@
 //
 
 import Foundation
-internal import RxSwift
-internal import Alamofire
+public import RxSwift
+public import Alamofire
 
-protocol cerqel_CodableResponseProtocol: Decodable {
+public protocol cerqel_CodableResponseProtocol: Decodable {
     func parse<T: Decodable>(_ data: Data) -> Observable<T>
     var action: cerqel_APIAction { get }
 }

@@ -11,7 +11,7 @@ import PanModal
 
 typealias SuccessCallBack =  (()->())
 
-class SuccessItem: BaseItem {
+public class SuccessItem: BaseItem {
     var successCallBack: SuccessCallBack
     var successMessage:String
     var successDescription:String?
@@ -24,7 +24,7 @@ class SuccessItem: BaseItem {
 }
 
 
-class SuccessBottomSheetViewController: BaseView<FileActionsViewModel, SuccessItem> {
+public class SuccessBottomSheetViewController: BaseView<FileActionsViewModel, SuccessItem> {
 
     @IBOutlet weak var successBodyLbl: UILabel!
     @IBOutlet weak var sheetView: UIView!
@@ -33,7 +33,7 @@ class SuccessBottomSheetViewController: BaseView<FileActionsViewModel, SuccessIt
     @IBOutlet weak var closeButton: LocalizedButton!
     @IBOutlet weak var describtionLbl: UILabel!
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureUI()
 
@@ -51,20 +51,20 @@ class SuccessBottomSheetViewController: BaseView<FileActionsViewModel, SuccessIt
 
     // MARK: - PanModalPresentable
 
-    override var panScrollable: UIScrollView? {
+    override public var panScrollable: UIScrollView? {
         return nil
     }
 
-    override var longFormHeight: PanModalHeight {
+    override public var longFormHeight: PanModalHeight {
         return .contentHeight(420)
     }
     
-    override var allowsDragToDismiss: Bool {
+    override public var allowsDragToDismiss: Bool {
         return false
     }
 
 
-    override  var allowsTapToDismiss: Bool {
+    override public var allowsTapToDismiss: Bool {
         return false
     }
 

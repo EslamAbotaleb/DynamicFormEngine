@@ -13,12 +13,12 @@ public typealias JSON2 = [String : Any]
 
 extension String {
     
-    func isValidRegex(regex: String) -> Bool {
+    public func isValidRegex(regex: String) -> Bool {
         let pred = NSPredicate(format:"SELF MATCHES %@", regex)
         return pred.evaluate(with: self)
     }
     
-    func getDateFromString(timeZone: Bool = true) -> Date? {
+    public func getDateFromString(timeZone: Bool = true) -> Date? {
         let dateFormatter = DateFormatter()
 //        if timeZone {
 //            dateFormatter.timeZone = .current
@@ -41,7 +41,7 @@ extension String {
 
 extension UnicodeScalar {
     
-    var isEmoji: Bool {
+    public var isEmoji: Bool {
         
         switch value {
         case 0x1F600...0x1F64F, // Emoticons
@@ -60,7 +60,7 @@ extension UnicodeScalar {
         }
     }
     
-    var isZeroWidthJoiner: Bool {
+    public var isZeroWidthJoiner: Bool {
         
         return value == 8205
     }
@@ -68,12 +68,12 @@ extension UnicodeScalar {
 extension String {
     
     
-    var y_containsEmoji: Bool {
+    public var y_containsEmoji: Bool {
         
         return unicodeScalars.contains { $0.isEmoji }
     }
     
-    var y_trimmed: String {
+    public  var y_trimmed: String {
         return trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
     }
     
@@ -95,15 +95,15 @@ extension String {
         }
     }
     
-    func y_containsIgnoringCase(_ find: String) -> Bool{
+    public func y_containsIgnoringCase(_ find: String) -> Bool{
         return self.range(of: find, options: .caseInsensitive) != nil
     }
     
-    func y_containsNumbers() -> Bool{
+    public  func y_containsNumbers() -> Bool{
         return self.rangeOfCharacter(from: .decimalDigits) != nil
     }
     
-    func y_getonlyDateFromString() -> Date
+    public func y_getonlyDateFromString() -> Date
     {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone =  TimeZone(abbreviation: "UTC")
@@ -115,7 +115,7 @@ extension String {
         return dateFormatter.date(from: self)!
     }
     
-    func y_getDateFromString() -> Date?
+    public func y_getDateFromString() -> Date?
     {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = timeZone_UTC//TimeZone(abbreviation: "UTC") //TimeZone.current//
@@ -170,7 +170,7 @@ extension String {
         }
         return nil
     }
-    func y_toJson() -> [String: Any]?
+    public func y_toJson() -> [String: Any]?
     {
         if let data = self.data(using: String.Encoding.utf8) {
             do {
@@ -181,7 +181,7 @@ extension String {
         }
         return nil
     }
-    func y_heightForWithFont() -> CGFloat {
+    public func y_heightForWithFont() -> CGFloat {
         
         let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: CGFloat.greatestFiniteMagnitude))
         label.numberOfLines = 0
@@ -191,7 +191,7 @@ extension String {
         return label.frame.height
     }
     
-    func y_countInstances(of stringToFind: String) -> Int {
+    public func y_countInstances(of stringToFind: String) -> Int {
         assert(!stringToFind.isEmpty)
         var searchRange: Range<String.Index>?
         var count = 0
@@ -202,7 +202,7 @@ extension String {
         return count
     }
     
-    func y_withLanguageDirectionInvisibleMarksAdded() -> String {
+    public func y_withLanguageDirectionInvisibleMarksAdded() -> String {
         
         var awardDescriptionWords = self.components(separatedBy: " ")
         var currentLangIsArabic = self.y_firstAlphabetIsArabic()
@@ -227,7 +227,7 @@ extension String {
         self = self.y_replaceRegexMatches(pattern: "\u{200E}", replaceWith: "")
     }
     
-    func y_firstAlphabetIsArabic() -> Bool! {
+    public  func y_firstAlphabetIsArabic() -> Bool! {
         if self.count > 0 {
             var charIndex : Int = 1
             var index = self.index(self.startIndex, offsetBy: 1)
@@ -248,7 +248,7 @@ extension String {
         return false
     }
     
-    func y_firstCharIsArabic() -> Bool! {
+    public func y_firstCharIsArabic() -> Bool! {
         if self.count > 0 {
 //            var charIndex : Int = 1
             let index = self.index(self.startIndex, offsetBy: 1)
@@ -260,7 +260,7 @@ extension String {
         return false
     }
     
-    func y_containsArabic() -> Bool! {
+    public  func y_containsArabic() -> Bool! {
         if self.count > 0 {
             
             let index = self.index(self.startIndex, offsetBy: self.count)
@@ -272,12 +272,12 @@ extension String {
         return false
     }
     
-    func substring(with nsrange: NSRange) -> String? {
+    public  func substring(with nsrange: NSRange) -> String? {
         guard let range = Range(nsrange, in: self) else { return nil }
         return String(self[range])
     }
     
-    func y_isAlphabet() -> Bool {
+    public func y_isAlphabet() -> Bool {
         let letters = CharacterSet.letters
         for uni in self.unicodeScalars {
             if letters.contains(uni) == false {
@@ -287,11 +287,11 @@ extension String {
         return true
     }
     
-    func y_trimmedLength() -> Int {
+    public func y_trimmedLength() -> Int {
         return self.trimmingCharacters(in: .whitespacesAndNewlines).count//lengthOfBytes(using: .utf8)
     }
     
-    func y_wordRangeAtIndex(_ index:Int, inString str:NSString) -> NSRange {
+    public  func y_wordRangeAtIndex(_ index:Int, inString str:NSString) -> NSRange {
         let tagger = NSLinguisticTagger(tagSchemes: [NSLinguisticTagScheme.tokenType], options: 0)
         var r : NSRange = NSMakeRange(0,0)
         tagger.string = str as String
@@ -299,11 +299,11 @@ extension String {
         return r
     }
     
-    func y_wordAtIndex(_ index:Int) -> String? {
+    public func y_wordAtIndex(_ index:Int) -> String? {
         return self.substring(with: y_wordRangeAtIndex(index, inString: self as NSString))
     }
     
-    func numbersToArabic() -> String {
+    public func numbersToArabic() -> String {
         if isArabicCerqel() {
             let number = NSNumber(value: Int(self)!)
             let format = NumberFormatter()
@@ -315,14 +315,14 @@ extension String {
         }
     }
     
-    func extractNumbers() -> [Int] {
+    public func extractNumbers() -> [Int] {
         let regex = try! NSRegularExpression(pattern: "\\d+")
         let matches = regex.matches(in: self, range: NSRange(self.startIndex..., in: self))
         return matches.map { Int((self as NSString).substring(with: $0.range)) ?? 0 }
     }
 
     
-    func y_getLinesArrayOfString(in label: UILabel) -> [String] {
+    public func y_getLinesArrayOfString(in label: UILabel) -> [String] {
         
         /// An empty string's array
         var linesArray = [String]()
@@ -352,7 +352,7 @@ extension String {
         return linesArray
     }
     
-    func y_getRegexMatches(pattern: String) -> [String] {
+    public func y_getRegexMatches(pattern: String) -> [String] {
         do {
             let regex = try NSRegularExpression(pattern: pattern, options: [])
             let range = NSMakeRange(0, self.count)
@@ -365,7 +365,7 @@ extension String {
         }
     }
     
-    func y_getRegexMatchesRanges(pattern: String) -> [NSRange] {
+    public func y_getRegexMatchesRanges(pattern: String) -> [NSRange] {
         do {
             let regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
             let range = NSMakeRange(0, self.count)
@@ -378,7 +378,7 @@ extension String {
         }
     }
     
-    func y_replaceRegexMatches(pattern: String, replaceWith: String) -> String {
+    public  func y_replaceRegexMatches(pattern: String, replaceWith: String) -> String {
         do {
             let regex = try NSRegularExpression(pattern: pattern, options: NSRegularExpression.Options.caseInsensitive)
             let range = NSMakeRange(0, self.count)
@@ -388,7 +388,7 @@ extension String {
         }
     }
     
-    func indices(of occurrence: String) -> [Int] {
+    public  func indices(of occurrence: String) -> [Int] {
         var indices = [Int]()
         var position = startIndex
         while let range = range(of: occurrence, range: position..<endIndex) {
@@ -407,13 +407,13 @@ extension String {
         return indices
     }
     
-    func ranges(of searchString: String) -> [Range<String.Index>] {
+    public func ranges(of searchString: String) -> [Range<String.Index>] {
         let _indices = indices(of: searchString)
         let count = searchString.count
         return _indices.map({ index(startIndex, offsetBy: $0)..<index(startIndex, offsetBy: $0+count) })
     }
     
-    func CreateMediaURL()-> String{
+    public func CreateMediaURL()-> String{
         return self
         let fManager = "/filemanager"
         let strr = self.replacingOccurrences(of: "FileManager", with: "filemanager")
@@ -628,14 +628,14 @@ extension String {
         return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
     
-    func replace(target: String, withString: String) -> String
+    public func replace(target: String, withString: String) -> String
     {
         return self.replacingOccurrences(of: target, with: withString, options: NSString.CompareOptions.literal, range: nil)
     }
 }
 
 extension UINavigationController {
-    func removeBackButtonTitle() {
+    public func removeBackButtonTitle() {
         self.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "Back".localized, style: .plain, target: nil, action: nil)
     }
 }

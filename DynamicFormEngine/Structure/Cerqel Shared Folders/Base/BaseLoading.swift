@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum BaseLoading {
+public enum BaseLoading {
     case show
     case hide
     case withText(text: String)

@@ -41,7 +41,7 @@ enum ViewFormType: /*Codable,*/ Mappable {
     }
 }
 
-struct ModelRequestDetailsData: /*Codable,*/Mappable {
+public struct ModelRequestDetailsData: /*Codable,*/Mappable {
     var id: String?
     var requestSubmissionMobileVisibilityAndroid : Bool?
     var status : Status?
@@ -76,7 +76,7 @@ struct ModelRequestDetailsData: /*Codable,*/Mappable {
     var commentsCount: Int?
     var customerSystemCode: String?
     
-    init?(map: Map) {}
+    public  init?(map: Map) {}
     
 //    init(id: String? = nil, requestSubmissionMobileVisibilityAndroid: Bool? = nil, status: Status? = nil, isCompleted: Bool? = nil, isWithdrawal: Bool? = nil, serviceName: String? = nil, serviceId: String? = nil, previousActions: [PreviousActions]? = nil, formCode: String? = nil, itRequestId: String? = nil, modifiedDate: String? = nil, hasComments: Bool? = nil, requestOrder: String? = nil, createdDate: String? = nil, employee: Employee? = nil, attachments: [ReqDetailsAttachmentValue]? = nil, isEditable: Bool? = nil, isTaskEditable: Bool? = nil, viewFromMobile: Bool? = nil, displayServiceName: String? = nil, requestSubmissionMobileVisibilityIos: Bool? = nil, isReopenAllowed: Bool? = nil, actions: [Action]? = nil, bpmTaskId: String? = nil, taskId: String? = nil, viewForm: ViewFormType? = nil, actionsMobileVisibility: Bool? = nil, serviceImage: String? = nil, requestPendingOn: RequestPendingOn? = nil, requestPendingOnText: String? = nil, attachmentsCount: Int? = nil, commentsCount: Int? = nil, customerSystemCode: String? = nil) {
 //        self.id = id
@@ -114,7 +114,7 @@ struct ModelRequestDetailsData: /*Codable,*/Mappable {
 //        self.customerSystemCode = customerSystemCode
 //    }
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id <- map["id"]
         requestSubmissionMobileVisibilityAndroid <- map["requestSubmissionMobileVisibilityAndroid"]
         status <- map["status"]

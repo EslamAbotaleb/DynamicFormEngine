@@ -157,14 +157,14 @@ struct ProfilePicture : Codable, Equatable {
 }
 
 
-enum BottomSheetType : String {
+public enum BottomSheetType : String {
     case radio
     case checkBox
     case action
     case profilePhoneTypes
 }
 
-enum AppState {
+public enum AppState {
     case initial
     case Loading
     case LoadingPagination
@@ -184,7 +184,7 @@ enum AppState {
     }
 }
 
-enum AttachmentState: Codable {
+public enum AttachmentState: Codable {
     case old
     case new
 }

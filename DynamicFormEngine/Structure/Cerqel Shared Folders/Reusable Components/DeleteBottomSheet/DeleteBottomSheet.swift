@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DeleteBottomSheet: BottomSheetVCCerqel {
+public class DeleteBottomSheet: BottomSheetVCCerqel {
     
     @IBOutlet weak var confirmationDeleteLbl: UILabel!
     @IBOutlet weak var deleteMsgLbl: UILabel!
@@ -16,12 +16,12 @@ class DeleteBottomSheet: BottomSheetVCCerqel {
     @IBOutlet weak var xBtn: UIButton!
     @IBOutlet weak var deleteBtn: UIButton!
     
-    var fullDeleteMsg: String?
-    var deleteMsg: String?
-    var deleteObjectString: String?
-    var didTapDelete: (()->())?
+    public var fullDeleteMsg: String?
+    public var deleteMsg: String?
+    public var deleteObjectString: String?
+    public var didTapDelete: (()->())?
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         if (fullDeleteMsg != nil){

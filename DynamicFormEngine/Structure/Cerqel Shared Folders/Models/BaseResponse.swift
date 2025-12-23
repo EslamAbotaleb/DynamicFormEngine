@@ -8,50 +8,68 @@
 
 import Foundation
 
-struct BaseUploadResponse<T: Codable>: Codable {
-    let message: String?
-    let result: T
-    
+public struct BaseUploadResponse<T: Codable>: Codable {
+    public let message: String?
+    public let result: T
 }
 
-struct BaseResponse<T: Codable>: Codable {
-    let message: String?
-    let result: Result<T>
+public struct BaseResponse<T: Codable>: Codable {
+    public let message: String?
+    public let result: Result<T>
     
+    public init(message: String?, result: Result<T>) {
+         self.message = message
+         self.result = result
+     }
 }
 
-struct BaseResponseWithoutCodable<T> {
-    let message: String?
-    let result: ResultWithoutCodable<T>
+public struct BaseResponseWithoutCodable<T> {
+    public let message: String?
+    public let result: ResultWithoutCodable<T>
     
+    public init(message: String?, result: ResultWithoutCodable<T>) {
+        self.message = message
+        self.result = result
+    }
 }
 
-struct BaseSuccessResponse: Codable {
-    let message: String?
-    let success: Bool?
-    let errorCode: String?
+public struct BaseSuccessResponse: Codable {
+    public let message: String?
+    public let success: Bool?
+    public let errorCode: String?
 }
 
 // MARK: - Result
-struct Result<T: Codable>: Codable {
-    var totalCount: Int?
-    var data:T
-    var pagesCount: Int?
-  
+public struct Result<T: Codable>: Codable {
+    public var totalCount: Int?
+    public var data:T
+    public var pagesCount: Int?
+    
+    public init(totalCount: Int?, data: T, pagesCount: Int?) {
+        self.totalCount = totalCount
+        self.data = data
+        self.pagesCount = pagesCount
+    }
 }
 
-struct ResultWithoutCodable<T> {
-    var totalCount: Int?
-    var data:T
-    var pagesCount: Int?
-  
+public struct ResultWithoutCodable<T> {
+    public var totalCount: Int?
+    public var data:T
+    public var pagesCount: Int?
+    
+    public init(totalCount: Int?, data: T, pagesCount: Int?) {
+        self.totalCount = totalCount
+        self.data = data
+        self.pagesCount = pagesCount
+    }
 }
 
-struct GeneralPaginateModel<T:Codable> : Codable{
-    var totalCount: Int?
-    var data:T
-    var pagesCount: Int?
+public struct GeneralPaginateModel<T:Codable> : Codable{
+    public var totalCount: Int?
+    public var data:T
+    public var pagesCount: Int?
 }
-struct EmptyModel: Codable {
+
+public struct EmptyModel: Codable {
    
 }

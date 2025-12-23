@@ -7,9 +7,9 @@
 //
 
 import Foundation
-internal import Alamofire
+public import Alamofire
 
-enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
+public enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
     case fetchService(Id: String)
     case fetchSubServicesByParent(parentId: String)
     case submitService(Id: String, payload: [String: Any])
@@ -22,14 +22,13 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
     case executeAction(payload: [String: Any])
     case reopenRequest(payload: [String: Any])
     case withdrawRequest(requestId: String)
-
     case fetchSubServices(serviceId: String)
     case fetchAwaitingRequests
     case performSearchFromSearchControlInFormBuilder(url: String)
     case searchList(payload:SearchPayload)
     case none
 
-    var actionParameters: [String : Any]{
+    public var actionParameters: [String : Any]{
         switch self {
         case .submitService(_, let payload):
             return payload
@@ -61,7 +60,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
         }
     }
     
-    var method: HTTPMethod {
+    public var method: HTTPMethod {
         switch self {
         case .searchList:
             return .post
@@ -80,7 +79,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
         }
     }
     
-    var path: String {
+    public var path: String {
         switch self {
         case .fetchService(let id):
             return "SelfServices/RequestService/\(id)"
@@ -130,7 +129,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
     }
     
     
-    var authHeader: [String : String]{
+    public var authHeader: [String : String]{
         switch self {
         default:
             var head = [
@@ -147,7 +146,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
         }
     }
     
-    var encoding: ParameterEncoding {
+    public var encoding: ParameterEncoding {
         switch method {
         case .post, .put, .delete, .patch :
             return JSONEncoding.default
@@ -157,7 +156,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
     }
     
     
-    var isMock: Bool{
+    public  var isMock: Bool{
         switch self {
         case .requestDetails, .taskDetails:
             return false
@@ -166,7 +165,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
         }
     }
     
-    var urlType: cerqel_URLType{
+    public var urlType: cerqel_URLType{
         switch self {
         case .requestDetails, .taskDetails, .fetchSubServices:
             return .selfService
@@ -190,7 +189,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIAction {
         }
     }
     
-    var basicAction: cerqel_BasicActionDynamicForm {
+    public var basicAction: cerqel_BasicActionDynamicForm {
         switch self {
         case .requestDetails(_):
             return .requestDetails(id: "")

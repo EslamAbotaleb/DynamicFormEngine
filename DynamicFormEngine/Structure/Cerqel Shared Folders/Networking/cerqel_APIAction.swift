@@ -7,9 +7,9 @@
 //
 
 import Foundation
-internal import Alamofire
+public import Alamofire
 
-enum cerqel_URLType{
+public enum cerqel_URLType{
     case Content
     case selfService
     case userManager
@@ -21,7 +21,7 @@ enum cerqel_URLType{
     case none
 }
 
-enum UrlBaseEndpoints: String {
+public enum UrlBaseEndpoints: String {
     case content = "gw/content/api/"
     case selfService = "gw/selfservices/api/"
     case userManager = "gw/usermanager/api/"
@@ -30,7 +30,7 @@ enum UrlBaseEndpoints: String {
     case mocking = "https:/$()/m6djv.wiremockapi.cloud/"
 }
 
-protocol cerqel_APIAction: URLRequestConvertible {
+public protocol cerqel_APIAction: URLRequestConvertible {
     var method: HTTPMethod { get }
     var path: String { get }
     var actionParameters: [String: Any] { get }
@@ -55,7 +55,8 @@ extension cerqel_APIAction {
         ]
 
     }
-    var baseURL: String {
+    
+   public var baseURL: String {
         if isMock{
             switch basicAction {
             case .requestDetails(_):
@@ -98,7 +99,7 @@ extension cerqel_APIAction {
 
 extension cerqel_APIAction {
     
-    func asURLRequest() throws -> URLRequest {
+    public func asURLRequest() throws -> URLRequest {
         let urlString = baseURL.appending(path)
         let encoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed)
         let url = URL(string: encoded ?? "")

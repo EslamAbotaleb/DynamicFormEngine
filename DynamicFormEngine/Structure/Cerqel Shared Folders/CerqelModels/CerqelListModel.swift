@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct CerqelListModel: Codable {
+public struct CerqelListModel: Codable {
     var id: String?
     var collapsed: Bool? = true
     var isSelected: Bool?
     var nameEn: String?
     var nameAr: String?
     
-    init()  {
+    public init()  {
         self.isSelected = false
     }
     

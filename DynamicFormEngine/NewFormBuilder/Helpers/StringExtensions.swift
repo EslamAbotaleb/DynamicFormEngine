@@ -31,7 +31,7 @@ extension String {
 //        return nil
 //    }
     
-    var toEnglish: String {
+    public var toEnglish: String {
         let arabicNumbers = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"]
         let englishNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         var temp = self
@@ -43,7 +43,7 @@ extension String {
         return temp
     }
     
-    func changeFormat(fromFormat: String, toFormat: String) -> String? {
+    public func changeFormat(fromFormat: String, toFormat: String) -> String? {
         let dateFormatter = DateFormatter()
 
         // step 1
@@ -58,7 +58,7 @@ extension String {
         return ""
     }
     
-    var toArabic: String {
+    public var toArabic: String {
         let arabicNumbers = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"]
         let englishNumbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
         var temp = self
@@ -70,7 +70,7 @@ extension String {
         return temp
     }
     
-    var getDay: Int? {
+    public var getDay: Int? {
         if let date = self.cerqel_getDateFromString() {
             let day = date.get(.weekday)
             return day
@@ -78,19 +78,19 @@ extension String {
         return nil
     }
     
-    var isMCQOtherID: Bool {
+    public var isMCQOtherID: Bool {
         return self == "00000000-0000-0000-0000-000000000000"
     }
     
-    var isMCQNAID: Bool {
+    public var isMCQNAID: Bool {
         return self == "00000000-0000-0000-0000-000000000001"
     }
     
-    var isNotEmpty: Bool {
+    public var isNotEmpty: Bool {
         return !isEmpty
     }
     
-    func replaceValidationWith(_ value: Any?) -> String? {
+    public func replaceValidationWith(_ value: Any?) -> String? {
         if let value = value {
             return self.replacingOccurrences(of: "{0}", with: "\(value)")
         } else {
@@ -98,7 +98,7 @@ extension String {
         }
     }
     /// Converts an HTML string to plain text.
-     func htmlToPlainText() -> String {
+    public func htmlToPlainText() -> String {
          guard let data = self.data(using: .utf8) else {
              return self // Return the original string if encoding fails
          }

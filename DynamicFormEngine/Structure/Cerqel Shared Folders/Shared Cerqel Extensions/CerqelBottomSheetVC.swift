@@ -7,14 +7,14 @@
 //
 
 import UIKit
-internal import FittedSheetsDF
+public import FittedSheetsDF
 
-class BottomSheetVCCerqel: UIViewController {
+open class BottomSheetVCCerqel: UIViewController {
 
-    var cerqel_sheetCtl: SheetViewController!
-    var cerqel_sheetHeight: CGFloat = 200
+    public var cerqel_sheetCtl: SheetViewController!
+    public var cerqel_sheetHeight: CGFloat = 200
 
-    func setupBackButton() {
+    public func setupBackButton() {
         let titleLabel = UILabel()
         titleLabel.text = "Back".localized
         titleLabel.textColor = typographyTitle
@@ -43,7 +43,7 @@ class BottomSheetVCCerqel: UIViewController {
         navigationItem.leftBarButtonItem = leftBarButtonItem
     }
     
-    @objc func goBack() {
+    @objc public func goBack() {
         navigationController?.popViewController(animated: true)
     }
 }

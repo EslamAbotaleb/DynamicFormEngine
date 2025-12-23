@@ -7,9 +7,9 @@
 
 import UIKit
 
-class Services {
+public class Services {
     
-    static let shared = Services()
+    static public let shared = Services()
     
     /// Get DynamicForm
     /// - Parameters:
@@ -349,7 +349,7 @@ class Services {
     
 }
 
-struct Utilities {
+public struct Utilities {
     static func deviceIsIpad() -> Bool {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     }

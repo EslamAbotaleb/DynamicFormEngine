@@ -9,24 +9,24 @@
 import UIKit
 import SideMenu
 
-protocol CerqelFilterV {
-    func hideFilter()
+public protocol CerqelFilterV {
+     func hideFilter()
 }
 
-protocol CerqelSearchInNewController {
-    func disableSearch()
+public protocol CerqelSearchInNewController {
+     func disableSearch()
 }
 
 @IBDesignable
-class CerqelReusableHeader: UIView, CerqelFilterV, CerqelSearchInNewController {
+public class CerqelReusableHeader: UIView, CerqelFilterV, CerqelSearchInNewController {
         
-    func hideFilter() {
+    public func hideFilter() {
         filterButton.isHidden = true
         filterV.isHidden = true
 //        buttonsStackV.isHidden = true
     }
     
-    func disableSearch() {
+    public func disableSearch() {
         searchBtn.isHidden = false
     }
 
@@ -42,12 +42,12 @@ class CerqelReusableHeader: UIView, CerqelFilterV, CerqelSearchInNewController {
     @IBOutlet private weak var redDotImageView: UIImageView!
     @IBOutlet private weak var filterButton: UIButton!
     @IBOutlet private weak var clearView: UIView!
-    @IBOutlet weak var buttonsView: UIView!
-    @IBOutlet weak var searchNewVBtn: UIButton!
-    @IBOutlet weak var filterV: UIView!
-    @IBOutlet weak var buttonsStackV: UIStackView!
-    @IBOutlet weak var closeImgV: UIImageView!
-    @IBOutlet weak var searchBtn: UIButton!
+    @IBOutlet weak public var buttonsView: UIView!
+    @IBOutlet weak public var searchNewVBtn: UIButton!
+    @IBOutlet weak public var filterV: UIView!
+    @IBOutlet weak public var buttonsStackV: UIStackView!
+    @IBOutlet weak public var closeImgV: UIImageView!
+    @IBOutlet weak public var searchBtn: UIButton!
     
     @IBInspectable var firstButtonTitle: String = "First" {
         didSet {
@@ -74,20 +74,20 @@ class CerqelReusableHeader: UIView, CerqelFilterV, CerqelSearchInNewController {
 
     
     /// closure to be set in the view controller
-    var didChangeSearchText: ((String?) -> ())?
-    var didTapFilterButton: (() -> ())?
-    var didTapFirstRadioButton: (() -> ())?
-    var didTapSecondRadioButton: (() -> ())?
-    var didTapThirdRadioButton: (() -> ())?
-    var didTapFourthRadioButton: (() -> ())?
-    var didSearchNewViewButton: (() -> ())?
+    public var didChangeSearchText: ((String?) -> ())?
+    public var didTapFilterButton: (() -> ())?
+    public var didTapFirstRadioButton: (() -> ())?
+    public var didTapSecondRadioButton: (() -> ())?
+    public var didTapThirdRadioButton: (() -> ())?
+    public var didTapFourthRadioButton: (() -> ())?
+    public var didSearchNewViewButton: (() -> ())?
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
@@ -130,27 +130,27 @@ class CerqelReusableHeader: UIView, CerqelFilterV, CerqelSearchInNewController {
         
     }
     
-    func hideRadioBtns() {
+    public func hideRadioBtns() {
         buttonsView.isHidden = true
     }
     
-    func hideSearchBar() {
+    public func hideSearchBar() {
         searchBarContainerV.isHidden = true
     }
     
-    func showRedDot(show: Bool) {
+    public func showRedDot(show: Bool) {
         redDotImageView.isHidden = !show
     }
 
-    func handleClearViewVisibilty(show: Bool) {
+    public func handleClearViewVisibilty(show: Bool) {
         clearView.isHidden = !show
     }
 
     
-    func showThirdButton(show: Bool) {
+    public func showThirdButton(show: Bool) {
         thirdButton.isHidden = !show
     }
-    func showFourthButton(show: Bool) {
+    public  func showFourthButton(show: Bool) {
         fourthButton.isHidden = !show
     }
     @objc private func searchTextDidChange(_ textField: UITextField) {

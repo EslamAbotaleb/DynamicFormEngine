@@ -8,18 +8,17 @@
 
 import Foundation
 import RxCocoa
-internal import RxSwift
+public import RxSwift
 
 public class BaseViewModel {
-    var errorsObservable: Observable<Error>!
-    var errorsSubject = PublishSubject<Error>()
+    public var errorsObservable: Observable<Error>!
+    public var errorsSubject = PublishSubject<Error>()
     
-    var loadingObservable: Observable<BaseLoading>!
-    let loadingSubject = PublishSubject<BaseLoading>()
+    public var loadingObservable: Observable<BaseLoading>!
+    public let loadingSubject = PublishSubject<BaseLoading>()
     // this should be required by all
-   init() {
+   public init() {
         self.errorsObservable = errorsSubject.asObservable()
         self.loadingObservable = loadingSubject.asObservable()
     }
-    
 }

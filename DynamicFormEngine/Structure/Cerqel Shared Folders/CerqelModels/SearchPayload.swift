@@ -14,7 +14,7 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 import Foundation
 import ObjectMapper
 
-struct SearchPayload : Codable, Mappable {
+public struct SearchPayload : Codable, Mappable {
     var keyword : String?
     var categories : [String]?
     var pagination : Pagination?
@@ -26,14 +26,14 @@ struct SearchPayload : Codable, Mappable {
        
     }
 
-    init?(map: Map) {
+    public init?(map: Map) {
 
     }
     init() {
         
     }
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
 
         keyword <- map["keyword"]
         categories <- map["categories"]

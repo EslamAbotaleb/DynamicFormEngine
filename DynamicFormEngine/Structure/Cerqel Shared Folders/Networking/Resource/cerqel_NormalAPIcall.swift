@@ -110,7 +110,7 @@ class cerqel_NormalAPIcall{
                 multipartFormData.append(url, withName: "files")
             }
             
-        }, to: URL1, method: action.method, headers: HTTPHeaders(action.authHeader))
+        }, to: URL1, usingThreshold: UInt64.init(), method: action.method, headers: HTTPHeaders(action.authHeader))
         .uploadProgress { progress in
             print("Upload Progress: \(progress.fractionCompleted)")
         }

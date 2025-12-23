@@ -9,10 +9,10 @@
 import Foundation
 import SwiftUI
 
-struct CalculateHeight: ViewModifier {
+public struct CalculateHeight: ViewModifier {
     @Binding var height: CGFloat
 
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .background(
                 GeometryReader { proxy in

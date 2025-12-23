@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum BaseError: Error {
+public enum BaseError: Error {
     
     case authLogin
     case authMobileNumber
@@ -38,7 +38,7 @@ enum BaseError: Error {
 }
 
 extension BaseError: LocalizedError {
-    var errorDescription: String? {
+    public var errorDescription: String? {
         switch self {
         case .authProduct:
             return "LoginToFavorite".localized

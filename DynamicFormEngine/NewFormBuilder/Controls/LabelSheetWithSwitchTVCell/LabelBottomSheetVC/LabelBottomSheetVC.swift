@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LabelBottomSheetVC: BottomSheetVCCerqel {
+public class LabelBottomSheetVC: BottomSheetVCCerqel {
     
     
     // MARK: - IBOutlets
@@ -25,19 +25,19 @@ class LabelBottomSheetVC: BottomSheetVCCerqel {
     var item: FormViewModelItem?
     var currentVC: UIViewController!
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         setData()
     }
     
-    static func instance(item: FormViewModelItem?) -> LabelBottomSheetVC{
+    static public func instance(item: FormViewModelItem?) -> LabelBottomSheetVC{
         let vc = LabelBottomSheetVC(nibName: "LabelBottomSheetVC", bundle: nil)
         vc.cerqel_sheetHeight = 400
         vc.item = item
         return vc
     }
     
-    func show(vc: UIViewController, sender: Any?) {
+    public func show(vc: UIViewController, sender: Any?) {
         OperationQueue.main.addOperation {
             
             self.currentVC = vc

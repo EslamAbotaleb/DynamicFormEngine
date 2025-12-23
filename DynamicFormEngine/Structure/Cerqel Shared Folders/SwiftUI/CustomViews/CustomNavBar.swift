@@ -9,13 +9,21 @@
 import SwiftUI
 import EasyTipView
 
-struct CustomNavBar<Trailing: View>: View {
+public struct CustomNavBar<Trailing: View>: View {
 
     let title : String?
     let trailing : Trailing?
-    let onBack: (()->())? 
-
-    var body: some View {
+    let onBack: (()->())?
+    
+    public init(title: String? = nil,
+                trailing: Trailing? = nil,
+                onBack: (() -> ())? = nil) {
+        self.title = title
+        self.trailing = trailing
+        self.onBack = onBack
+    }
+    
+    public var body: some View {
         VStack(){
             HStack{
                 BackButton( onBack: { onBack!()})

@@ -7,10 +7,10 @@
 //
 
 import Foundation
-internal import Alamofire
+public import Alamofire
 import Promises
 
-class AlamofireService: EndpointExecuter {
+public class AlamofireService: EndpointExecuter {
  
 //
     private let manager: Session = {

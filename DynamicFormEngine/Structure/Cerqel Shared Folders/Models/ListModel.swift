@@ -9,23 +9,24 @@
 import Foundation
 
 public struct ListModel: Codable {
-    var id: String? = ""
-    var name: String?
-    var items: [ListModel]?
-    var collapsed: Bool? = true
-    var isSelected: Bool? = false
-    var nameEn: String?
-    var nameAr: String?
-    var icon: String?
-    var logo: String?
-    var actionCode: String?
-    var actionFormId: String?
-    var isCommentRequired : Bool?
-    var isDimmed: Bool?
-    var isEditable: Bool?
-    var isWithdrawal: Bool?
-    var action: [Action]?
-   func getName() -> String? {
+    public var id: String? = ""
+    public var name: String?
+    public var items: [ListModel]?
+    public var collapsed: Bool? = true
+    public var isSelected: Bool? = false
+    public var nameEn: String?
+    public var nameAr: String?
+    public var icon: String?
+    public var logo: String?
+    public var actionCode: String?
+    public var actionFormId: String?
+    public var isCommentRequired : Bool?
+    public var isDimmed: Bool?
+    public var isEditable: Bool?
+    public var isWithdrawal: Bool?
+    public var action: [Action]?
+    
+    public func getName() -> String? {
         return isArabic() ? nameAr  ?? nameEn : nameEn
     }
     
@@ -73,7 +74,7 @@ public struct ListModel: Codable {
 
     }
     
-    var collapseImage : String {
+    public var collapseImage : String {
         return collapsed ?? true  ? "arrow_down" : "arrow_up"
     }
     

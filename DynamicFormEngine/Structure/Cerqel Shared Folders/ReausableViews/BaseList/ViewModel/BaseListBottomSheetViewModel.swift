@@ -11,48 +11,48 @@ import Foundation
 import Promises
 
 
-class BaseListBottomSheetViewModel: BaseVM {
+public class BaseListBottomSheetViewModel: BaseVM {
     
     // Dependencies
     
     private var router:CerqelRouterManager
     
-    var list: DynamicObjects<[ListModel]> = DynamicObjects([])
-    var selectedList: DynamicObjects<[ListModel]> = DynamicObjects([])
-    var searchList: DynamicObjects<[ListModel]> = DynamicObjects([])
-    var searchText: DynamicObjects<String> = DynamicObjects("")
+    public var list: DynamicObjects<[ListModel]> = DynamicObjects([])
+    public var selectedList: DynamicObjects<[ListModel]> = DynamicObjects([])
+    public var searchList: DynamicObjects<[ListModel]> = DynamicObjects([])
+    public var searchText: DynamicObjects<String> = DynamicObjects("")
     
-    var bottomSheetItem: BottomSheetItem?
-    var baseListItem: BaseListItem?
+     var bottomSheetItem: BottomSheetItem?
+     var baseListItem: BaseListItem?
     
     
-    init( router: CerqelRouterManager, bottomSheetItem: BottomSheetItem) {
+    public init( router: CerqelRouterManager, bottomSheetItem: BottomSheetItem) {
         self.router = router
         self.bottomSheetItem = bottomSheetItem
     }
     
-    init( router: CerqelRouterManager, baseListItem: BaseListItem) {
+    public init( router: CerqelRouterManager, baseListItem: BaseListItem) {
         self.router = router
         self.baseListItem = baseListItem
     }
     
-    override func hydrate() {
+    public override func hydrate() {
         
     }
     
     
-    func checkForSelectedItem(){
+    public func checkForSelectedItem(){
         
     }
     
-    func selectItem(index: Int){
+    public func selectItem(index: Int){
         let currentItem = self.list.value[index]
         bottomSheetItem?.selectedItem(currentItem)
         baseListItem?.selectedItem(currentItem)
         self.list.value = self.list.value.map{var item = $0; item.isSelected = $0.id == currentItem.id ; return item;}
     }
     
-    func multiSelectItem(index: Int) {
+    public  func multiSelectItem(index: Int) {
         let item = self.list.value[index]
         self.list.value = self.list.value.map { listItem in
             var updatedItem = listItem
@@ -63,21 +63,21 @@ class BaseListBottomSheetViewModel: BaseVM {
         }
     }
     
-    func saveMultiSelectionArray() {
+    public  func saveMultiSelectionArray() {
         self.selectedList.value.removeAll()
         self.selectedList.value = list.value.filter { $0.isSelected ?? false }
         baseListItem?.multiSelectedItems(self.selectedList.value)
         bottomSheetItem?.multiSelectedItems(self.selectedList.value)
     }
     
-    func searchBar() {
+    public  func searchBar() {
        
             searchList.value = list.value.filter({$0.nameEn!.lowercased().contains(searchText.value.lowercased())})
 
       }
     
     //endPoint
-    func setlist() {
+    public  func setlist() {
         if self.baseListItem?.isSingleSelection == true {
             self.list.value = baseListItem?.list.map{var item = $0;
                 if $0.id == baseListItem?.currentSelectedItem?.id {
@@ -106,7 +106,7 @@ class BaseListBottomSheetViewModel: BaseVM {
         }
     }
     
-    func listEndPoint() {
+    public func listEndPoint() {
         self.showLoadingCerqel()
         var request: Promise<BaseResponse<[ListModel]>>!
         switch bottomSheetItem?.endPoint {

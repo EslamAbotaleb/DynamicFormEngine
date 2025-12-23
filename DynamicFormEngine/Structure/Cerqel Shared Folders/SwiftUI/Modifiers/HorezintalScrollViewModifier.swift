@@ -8,7 +8,8 @@
 
 import Foundation
 import SwiftUI
-struct ReverseScrollViewModifier: ViewModifier {
+
+public struct ReverseScrollViewModifier: ViewModifier {
     let layoutDirection: LayoutDirection
 
     func body(content: Content) -> some View {

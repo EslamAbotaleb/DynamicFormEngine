@@ -13,7 +13,7 @@ import SkeletonView
 import JGProgressHUD
 import Toast
 
-open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, PanModalPresentable {
+public class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, PanModalPresentable {
     public var panScrollable: UIScrollView? {
         return nil
     }

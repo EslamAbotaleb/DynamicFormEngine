@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-open class BaseVM: BaseViewModel,ObservableObject{
+public class BaseVM: BaseViewModel,ObservableObject{
     
     override public init() {
         super.init()
         self.hydrate()
     }
     
-    open func hydrate() {}
+    public func hydrate() {}
     
     private var errorMessage: DynamicObjects<String> = DynamicObjects("")
     private var alertMessage: DynamicObjects<String> = DynamicObjects("")

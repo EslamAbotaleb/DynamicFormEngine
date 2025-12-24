@@ -9,17 +9,17 @@
 import Foundation
 import ObjectMapper
 
-let Service_Name_Leaves = "Leaves"
-let service_Name_NewEmployeeImprovement_Plan = "newEmployeeImprovementPlan"
-let Service_Name_newEmployeeStatus = "newEmployeeStatus"
-let Service_Name_newtransferRequest = "newtransferRequest"
-let Service_Name_EmployeeInfo = "EmployeeInfo"
+public let Service_Name_Leaves = "Leaves"
+public let service_Name_NewEmployeeImprovement_Plan = "newEmployeeImprovementPlan"
+public let Service_Name_newEmployeeStatus = "newEmployeeStatus"
+public let Service_Name_newtransferRequest = "newtransferRequest"
+public let Service_Name_EmployeeInfo = "EmployeeInfo"
 
 
-struct ModelForm : Codable {
-    let requestForm : RequestForm?
-    let serviceName : String?
-    let formVersion: String?
+public struct ModelForm : Codable {
+    public let requestForm : RequestForm?
+    public let serviceName : String?
+    public let formVersion: String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -29,8 +29,8 @@ struct ModelForm : Codable {
     }
 }
 
-struct ModelNestedFormValue {
-    let val : [FormViewModelItem]? //[ModelControl]?
+public struct ModelNestedFormValue {
+    public let val : [FormViewModelItem]? //[ModelControl]?
 //    enum CodingKeys: String, CodingKey {
 //
 //        case val = "val"
@@ -39,104 +39,104 @@ struct ModelNestedFormValue {
 }
 
 
-protocol FormValue: Codable {}
+public protocol FormValue: Codable {}
 
 extension String: FormValue {}
 extension Bool: FormValue {}
 
-typealias dic = [String:String]
+public typealias dic = [String:String]
 extension dic: FormValue {}
 
 
 
-struct ModelControl : Codable, FormValue {
-    var options : [Options]?
-    var id : String?
-    var type : ControlType?
-    var format : String?
-    var index : Int?
-    var formCode : String?
-    var value : [FormValue?]?
-    var readOnly : Bool?
-    var isVisibleInViewMode : Bool?
-    var isRequired : Bool?
-    var isValueDynamic : Bool?
-    var dataSourceType : String?
-    var dataSourceId : String?
-    var name : String?
-    var translations : String?
-    var label : String?
-    var description : String?
-    var placeHolder : String?
-    var dateFromPlaceholder : String?
-    var dateToPlaceholder : String?
-    var timeFromPlaceholder : String?
-    var timeToPlaceholder : String?
-    var isVisible : Bool?
-    var isMultiSelect : Bool?
-    var roles : [String]?
-    var icon : String?
-    var style : Style?
-    var validations : [Validations]?
-    var dependencies : [String]?
-    var conditionalView : ConditionalView?
-    var isExpanded: Bool = false
-    var isHidden: Bool = false
-    var isValid = false
-    var notValidType: ValidationName?
-    var contentType: ContentType?
-    var filesNumber : Int?
+public struct ModelControl : Codable, FormValue {
+    public var options : [Options]?
+    public var id : String?
+    public var type : ControlType?
+    public var format : String?
+    public var index : Int?
+    public var formCode : String?
+    public var value : [FormValue?]?
+    public var readOnly : Bool?
+    public var isVisibleInViewMode : Bool?
+    public var isRequired : Bool?
+    public var isValueDynamic : Bool?
+    public var dataSourceType : String?
+    public var dataSourceId : String?
+    public var name : String?
+    public var translations : String?
+    public var label : String?
+    public var description : String?
+    public var placeHolder : String?
+    public var dateFromPlaceholder : String?
+    public var dateToPlaceholder : String?
+    public var timeFromPlaceholder : String?
+    public var timeToPlaceholder : String?
+    public var isVisible : Bool?
+    public var isMultiSelect : Bool?
+    public var roles : [String]?
+    public var icon : String?
+    public var style : Style?
+    public var validations : [Validations]?
+    public var dependencies : [String]?
+    public var conditionalView : ConditionalView?
+    public var isExpanded: Bool = false
+    public var isHidden: Bool = false
+    public var isValid = false
+    public var notValidType: ValidationName?
+    public var contentType: ContentType?
+    public var filesNumber : Int?
     
-    let valuePathEn : String?
-    let valuePathAr : String?
-    let dataSourceUrl : String?
-    let isSubmitted : Bool?
-    let calendarType : CalendarType?
+    public let valuePathEn : String?
+    public let valuePathAr : String?
+    public let dataSourceUrl : String?
+    public let isSubmitted : Bool?
+    public let calendarType : CalendarType?
     /// in Days
-    let maxDate : Int?
+    public let maxDate : Int?
     /// in Days
-    let minDate : Int?
+    public let minDate : Int?
     /// in minutes
-    let maxTime : Int?
+    public let maxTime : Int?
     /// in minutes
     let minTime : Int?
     let startMin: DateValidationObject?
-    let startMax: DateValidationObject?
-    let endMin: DateValidationObject?
-    let endMax: DateValidationObject?
-    let isMaxMonth: Bool?
-    let isMinMonth: Bool?
-    let datePlaceholder : String?
-    let timePlaceholder : String?
-    var dateFormat : String?
-    let timeFormat : String?
-    let cascadingChildrenIndexes : [Int]?
-    let cascadingParentIndexes : [Int]?
-    let isLovDataSource : Bool?
-    var relationEquation: RelationEquation?
-    let multipleValue: Bool?
+    public let startMax: DateValidationObject?
+    public let endMin: DateValidationObject?
+    public let endMax: DateValidationObject?
+    public let isMaxMonth: Bool?
+    public let isMinMonth: Bool?
+    public let datePlaceholder : String?
+    public let timePlaceholder : String?
+    public var dateFormat : String?
+    public let timeFormat : String?
+    public let cascadingChildrenIndexes : [Int]?
+    public let cascadingParentIndexes : [Int]?
+    public let isLovDataSource : Bool?
+    public var relationEquation: RelationEquation?
+    public let multipleValue: Bool?
 
     /// for NestedForm (control -> Table)
-    var controls : [ModelControl]?
-    var coltrolRow : [[ModelControl]]?
+    public var controls : [ModelControl]?
+    public var coltrolRow : [[ModelControl]]?
     
-    var additionalProperty01: AdditionalProperty?
-    var additionalProperty02: AdditionalProperty?
-    var additionalProperty03: AdditionalProperty?
-    var additionalProperty04: AdditionalProperty?
+    public var additionalProperty01: AdditionalProperty?
+    public var additionalProperty02: AdditionalProperty?
+    public var additionalProperty03: AdditionalProperty?
+    public var additionalProperty04: AdditionalProperty?
 
     /// to show thumbnail
-    var isImagePreview: Bool?
+    public var isImagePreview: Bool?
     
-    var searchChildrenIndexes: [Int]?
-    var searchMappingModel: String?
-    var dataSourceBaseUrl: String?
+    public var searchChildrenIndexes: [Int]?
+    public var searchMappingModel: String?
+    public var dataSourceBaseUrl: String?
     /// this is a local value not comming from API
-    var searchResultValue: [SearchControlResult]?
+    public var searchResultValue: [SearchControlResult]?
     /// this is a local value not comming from API
-    var searchedText: String?
+    public var searchedText: String?
     
-    var mappedValue: String?
+    public var mappedValue: String?
     
     
     
@@ -212,7 +212,7 @@ struct ModelControl : Codable, FormValue {
     }
     
     
-     init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         options = try values.decodeIfPresent([Options].self, forKey: .options)
         id = try values.decodeIfPresent(String.self, forKey: .id)
@@ -321,26 +321,26 @@ struct ModelControl : Codable, FormValue {
         }
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         
     }
 
 
 }
 
-struct AdditionalProperty : Codable {
-    var contentType : String?
-    var isRequired : Bool?
-    var isVisible : Bool?
-    var id : String?
-    var label : String?
-    var name : String?
-    var placeHolder : String?
-    var readOnly : Bool?
-    var translations : String?
-    var type : String?
-    var value : String?
-    var validations : [Validations]?
+public struct AdditionalProperty : Codable {
+    public var contentType : String?
+    public var isRequired : Bool?
+    public var isVisible : Bool?
+    public var id : String?
+    public var label : String?
+    public var name : String?
+    public var placeHolder : String?
+    public var readOnly : Bool?
+    public var translations : String?
+    public var type : String?
+    public var value : String?
+    public var validations : [Validations]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -362,12 +362,12 @@ struct AdditionalProperty : Codable {
 
 }
 
-struct RequestForm : Codable {
-    var id : String?
-    var name : String?
-    var controls : [ModelControl]?
-    var formCode : String?
-    var version : Int?
+public struct RequestForm : Codable {
+    public var id : String?
+    public var name : String?
+    public var controls : [ModelControl]?
+    public var formCode : String?
+    public var version : Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -379,14 +379,14 @@ struct RequestForm : Codable {
     }
 }
 
-struct OptionsInProp : Codable, Mappable {
-    var id : String?
-    var name : String?
-    var name_ar : String?
+public struct OptionsInProp : Codable, Mappable {
+    public var id : String?
+    public var name : String?
+    public var name_ar : String?
 
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         name_ar <- map["name_ar"]
@@ -399,7 +399,7 @@ struct OptionsInProp : Codable, Mappable {
         case name_ar = "name_ar"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(String.self, forKey: .id)
         name = try values.decodeIfPresent(String.self, forKey: .name)
@@ -408,13 +408,13 @@ struct OptionsInProp : Codable, Mappable {
 
 }
 
-struct Options : Codable, Mappable, FormValue {
-    var key : String?
-    var text : String?
-    var icon : String?
-    var selectedKey : String?
+public struct Options : Codable, Mappable, FormValue {
+    public var key : String?
+    public var text : String?
+    public var icon : String?
+    public var selectedKey : String?
     
-    var isSelected: Bool = false
+    public var isSelected: Bool = false
 
     enum CodingKeys: String, CodingKey {
 
@@ -424,21 +424,21 @@ struct Options : Codable, Mappable, FormValue {
         case selectedKey
     }
     
-    func encode(to encoder: Encoder) throws {}
+    public func encode(to encoder: Encoder) throws {}
 
-    init(){}
-    init?(map: Map) {}
+    public init(){}
+    public init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
     }
     
 
 }
 
-struct ConditionalView : Codable {
-    var validConditions : Int?
-    var conditions : [Modelcondition]?
-    var minimumAcceptableConditionsNumber: Int?
+public struct ConditionalView : Codable {
+    public var validConditions : Int?
+    public var conditions : [Modelcondition]?
+    public var minimumAcceptableConditionsNumber: Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -448,15 +448,15 @@ struct ConditionalView : Codable {
     }
 }
 
-struct Style : Codable {
-    var border : String?
-    var borderType : String?
-    var borderColor : String?
-    var backgroundColor : String?
-    var textColor : String?
-    var textAlign : String?
-    var font : String?
-    var fontSize : String?
+public struct Style : Codable {
+    public var border : String?
+    public var borderType : String?
+    public var borderColor : String?
+    public var backgroundColor : String?
+    public var textColor : String?
+    public var textAlign : String?
+    public var font : String?
+    public var fontSize : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -471,11 +471,11 @@ struct Style : Codable {
     }
 }
 
-struct Validations : Codable {
-    var name : ValidationName?
-    var value : String?
-    var message : String?
-    var isValid: Bool = false
+public struct Validations : Codable {
+    public var name : ValidationName?
+    public var value : String?
+    public var message : String?
+    public var isValid: Bool = false
 
     enum CodingKeys: String, CodingKey {
 
@@ -485,12 +485,12 @@ struct Validations : Codable {
     }
 }
 
-struct Modelcondition : Codable {
-    var parentFieldId : String?
-    var parentFieldIndex : Int?
-    var validationName : ValidationName?
-    var value : String?
-    var validityStatus : Bool?
+public struct Modelcondition : Codable {
+    public var parentFieldId : String?
+    public var parentFieldIndex : Int?
+    public var validationName : ValidationName?
+    public var value : String?
+    public var validityStatus : Bool?
 
     enum CodingKeys: String, CodingKey {
 
@@ -503,32 +503,32 @@ struct Modelcondition : Codable {
 }
 
 
-enum CalendarType: String, Codable{
+public enum CalendarType: String, Codable{
     case Gregorian
     case Hijri
     case Gregorian_Hijri = "Gregorian/Hijri"
 }
 
 
-struct LeavesViewValue : Codable, FormValue {
+public struct LeavesViewValue : Codable, FormValue {
     let actionType : String?
     let externalCode : String?
     let startDate : String?
-    let endDate : String?
-    let startTime : String?
-    let endTime : String?
-    let leaveType : ViewLeaves_NameKey?
-    let replacementUser : ReplacementUser?
-    let compassionateRelation : ViewLeaves_NameKey?
-    let accompanyingRelation : ViewLeaves_NameKey?
-    let businessPermissionPurpose : ViewLeaves_NameKey?
-    let attachmentId : String?
-    let AttachmentName : String?
-    let attachmentUrl : String?
-    let isFileManager : Bool?
-    let attachments: leaveAttttValue?
-    let requestingDays: Int?
-    let requestingHours: Int?
+    public let endDate : String?
+    public let startTime : String?
+    public let endTime : String?
+    public let leaveType : ViewLeaves_NameKey?
+    public let replacementUser : ReplacementUser?
+    public let compassionateRelation : ViewLeaves_NameKey?
+    public let accompanyingRelation : ViewLeaves_NameKey?
+    public let businessPermissionPurpose : ViewLeaves_NameKey?
+    public let attachmentId : String?
+    public let AttachmentName : String?
+    public let attachmentUrl : String?
+    public let isFileManager : Bool?
+    public let attachments: leaveAttttValue?
+    public let requestingDays: Int?
+    public let requestingHours: Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -552,7 +552,7 @@ struct LeavesViewValue : Codable, FormValue {
         case requestingHours
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         actionType = try values.decodeIfPresent(String.self, forKey: .actionType)
         externalCode = try values.decodeIfPresent(String.self, forKey: .externalCode)
@@ -577,15 +577,15 @@ struct LeavesViewValue : Codable, FormValue {
 
 }
 
-struct ImprovementPlanViewValue : Codable, FormValue {
-    let businessUnitName : String?
-    let departmentName : String?
-    let effectiveDateFrom : String?
-    let employeeId : String?
-    let employeeName : String?
-    let positionName : String?
-    let reasonsJustifications : String?
-    let requestType : ModelKeyText?
+public struct ImprovementPlanViewValue : Codable, FormValue {
+    public let businessUnitName : String?
+    public let departmentName : String?
+    public let effectiveDateFrom : String?
+    public let employeeId : String?
+    public let employeeName : String?
+    public let positionName : String?
+    public let reasonsJustifications : String?
+    public let requestType : ModelKeyText?
 
     enum CodingKeys: String, CodingKey {
 
@@ -599,7 +599,7 @@ struct ImprovementPlanViewValue : Codable, FormValue {
         case requestType = "requestType"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         businessUnitName = try values.decodeIfPresent(String.self, forKey: .businessUnitName)
         departmentName = try values.decodeIfPresent(String.self, forKey: .departmentName)
@@ -615,8 +615,8 @@ struct ImprovementPlanViewValue : Codable, FormValue {
 
 
 
-struct leaveAttttValue : Codable {
-    let value : [Attachments]?
+public struct leaveAttttValue : Codable {
+    public let value : [Attachments]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -624,10 +624,10 @@ struct leaveAttttValue : Codable {
     }
 }
 
-struct ViewLeaves_NameKey : Codable {
-    let key : String?
-    let nameAr : String?
-    let nameEn : String?
+public struct ViewLeaves_NameKey : Codable {
+    public let key : String?
+    public let nameAr : String?
+    public let nameEn : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -637,10 +637,10 @@ struct ViewLeaves_NameKey : Codable {
     }
 }
 
-struct ReplacementUser : Codable {
-    let nKey : String?
-    let name : String?
-    let email : String?
+public struct ReplacementUser : Codable {
+    public let nKey : String?
+    public let name : String?
+    public let email : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -649,7 +649,7 @@ struct ReplacementUser : Codable {
         case email = "Email"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         nKey = try values.decodeIfPresent(String.self, forKey: .nKey)
         name = try values.decodeIfPresent(String.self, forKey: .name)
@@ -660,11 +660,11 @@ struct ReplacementUser : Codable {
 
 
 
-struct RelationEquation : Codable {
-    let paramsIndexes : [Int]?
-    let resultIndexes : [Int]?
-    let equation : String?
-    let totalNumberOfAffectedControls : Int?
+public struct RelationEquation : Codable {
+    public let paramsIndexes : [Int]?
+    public let resultIndexes : [Int]?
+    public let equation : String?
+    public let totalNumberOfAffectedControls : Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -679,10 +679,10 @@ struct RelationEquation : Codable {
 
 
 
-struct VisitorInfo : Codable, Mappable, FormValue {
-    var name : String?
-    var mobileNumber : String?
-    var nationalPassport : String?
+public struct VisitorInfo : Codable, Mappable, FormValue {
+    public var name : String?
+    public var mobileNumber : String?
+    public var nationalPassport : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -691,20 +691,20 @@ struct VisitorInfo : Codable, Mappable, FormValue {
         case nationalPassport = "nationalPassport"
     }
     
-    func encode(to encoder: Encoder) throws {}
+    public func encode(to encoder: Encoder) throws {}
 
     
-    init(){}
-    init?(map: Map) {}
+    public init(){}
+    public init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         name <- map["name"]
         mobileNumber <- map["mobileNumber"]
         nationalPassport <- map["nationalPassport"]
 
     }
 
-    func validate()-> Bool{
+    public  func validate()-> Bool{
         if let _ = name, let _ = nationalPassport, let _ = mobileNumber{
             return true
         }
@@ -713,15 +713,15 @@ struct VisitorInfo : Codable, Mappable, FormValue {
 }
 
 
-struct newEmployeeStatusValue: Codable, FormValue {
-    let requestType : ModelKeyText?
-    let effectiveDateFrom : String?
-    let employeeId : String?
-    let employeeName : String?
-    let businessUnitName : String?
-    let departmentName : String?
-    let positionName : String?
-    let reasonsJustifications : String?
+public struct newEmployeeStatusValue: Codable, FormValue {
+    public let requestType : ModelKeyText?
+    public let effectiveDateFrom : String?
+    public let employeeId : String?
+    public let employeeName : String?
+    public let businessUnitName : String?
+    public let departmentName : String?
+    public let positionName : String?
+    public let reasonsJustifications : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -735,7 +735,7 @@ struct newEmployeeStatusValue: Codable, FormValue {
         case reasonsJustifications = "reasonsJustifications"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         requestType = try values.decodeIfPresent(ModelKeyText.self, forKey: .requestType)
         effectiveDateFrom = try values.decodeIfPresent(String.self, forKey: .effectiveDateFrom)
@@ -749,9 +749,9 @@ struct newEmployeeStatusValue: Codable, FormValue {
 
 }
 
-struct ModelKeyText : Codable {
-    let key : String?
-    let text : String?
+public struct ModelKeyText : Codable {
+    public let key : String?
+    public let text : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -763,22 +763,22 @@ struct ModelKeyText : Codable {
 }
 
 
-struct newtransferRequestValue: Codable, FormValue {
-    let requestType : ModelKeyText?
-    let effectiveDatefrom : String?
-    let lastUpdatedDate : String?
-    let employeeId : String?
-    let hireDate : [String]?
-    let employeeName : [String]?
-    let businessUnitName : [String]?
-    let departmentName : [String]?
-    let managerId : [String]?
-    let positionCode : [String]?
-    let newBusinessUnitName : ModelKeyText?
-    let newDepartmentName : ModelKeyText?
-    let newManagerId : String?
-    let newJobCode : String?
-    let notes : String?
+public struct newtransferRequestValue: Codable, FormValue {
+    public let requestType : ModelKeyText?
+    public let effectiveDatefrom : String?
+    public let lastUpdatedDate : String?
+    public let employeeId : String?
+    public let hireDate : [String]?
+    public let employeeName : [String]?
+    public let businessUnitName : [String]?
+    public let departmentName : [String]?
+    public let managerId : [String]?
+    public let positionCode : [String]?
+    public let newBusinessUnitName : ModelKeyText?
+    public let newDepartmentName : ModelKeyText?
+    public let newManagerId : String?
+    public let newJobCode : String?
+    public let notes : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -802,22 +802,22 @@ struct newtransferRequestValue: Codable, FormValue {
 }
 
 
-protocol SearchControlResult: FormValue {
+public protocol SearchControlResult: FormValue {
     var isSelected: Bool { set get}
     var presentedText: String { set get}
 }
 
 
-struct SearchControlResult_EmployeeModel : Codable, Mappable, SearchControlResult {
+public struct SearchControlResult_EmployeeModel : Codable, Mappable, SearchControlResult {
     
-    var name : String?
-    var arabicName : String?
-    var email : String?
-    var department : String?
-    var phone : String?
-    var employeePF : String?
-    var isSelected: Bool = false
-    var presentedText: String = ""
+    public var name : String?
+    public var arabicName : String?
+    public var email : String?
+    public var department : String?
+    public var phone : String?
+    public var employeePF : String?
+    public var isSelected: Bool = false
+    public var presentedText: String = ""
 
 
     enum CodingKeys: String, CodingKey {
@@ -830,11 +830,11 @@ struct SearchControlResult_EmployeeModel : Codable, Mappable, SearchControlResul
         case arabicName
     }
     
-    init?(map: Map) {
+    public init?(map: Map) {
         
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         name <- map["name"]
         arabicName <- map["arabicName"]
         email <- map["email"]
@@ -845,7 +845,7 @@ struct SearchControlResult_EmployeeModel : Codable, Mappable, SearchControlResul
     }
     
 
-    static func DTO(data: [[String: Any]]) -> [SearchControlResult_EmployeeModel]{
+    static public func DTO(data: [[String: Any]]) -> [SearchControlResult_EmployeeModel]{
         var arr = Mapper<SearchControlResult_EmployeeModel>().mapArray(JSONArray: data)
         if arr.count > 0{
             for i in 0 ... arr.count - 1{

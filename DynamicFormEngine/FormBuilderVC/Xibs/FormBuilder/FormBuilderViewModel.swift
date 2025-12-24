@@ -12,7 +12,7 @@ public import RxSwift
 import Expression
 import UIKit
 
-protocol NestedFormDelegate {
+public protocol NestedFormDelegate {
     func passDataToParentForm(parentControlIndex: Int?, controlData: [ModelControl]?, editNestedRowIndex: Int?)
 }
 
@@ -22,33 +22,33 @@ public class FormBuilderViewModel: BaseViewModel {
     private let disposeBag = DisposeBag()
 
     
-    var doReload: BehaviorRelay<[IndexPath]?> = BehaviorRelay(value: nil)
-    var arrayOfControls: [ModelControl] = []
-    var arrayOfTypes: [ControlType] = []
-    var arrayOfReloadControlStatus: [Bool] = []
+    public var doReload: BehaviorRelay<[IndexPath]?> = BehaviorRelay(value: nil)
+    public var arrayOfControls: [ModelControl] = []
+    public var arrayOfTypes: [ControlType] = []
+    public var arrayOfReloadControlStatus: [Bool] = []
     
-    var notValidList: BehaviorRelay<[Int]?> = BehaviorRelay(value: nil)
-    var inValidCon: BehaviorRelay<Validations?> = BehaviorRelay(value: nil)
-    var formData: BehaviorRelay<ModelForm?> = BehaviorRelay(value: nil)
-    var subservicesResponse: BehaviorRelay<ModelSubServiceData?> = BehaviorRelay(value: nil)
-    var serviceSubmittedResponse: BehaviorRelay<String?> = BehaviorRelay(value: nil)
+    public var notValidList: BehaviorRelay<[Int]?> = BehaviorRelay(value: nil)
+    public var inValidCon: BehaviorRelay<Validations?> = BehaviorRelay(value: nil)
+    public var formData: BehaviorRelay<ModelForm?> = BehaviorRelay(value: nil)
+    public var subservicesResponse: BehaviorRelay<ModelSubServiceData?> = BehaviorRelay(value: nil)
+    public var serviceSubmittedResponse: BehaviorRelay<String?> = BehaviorRelay(value: nil)
 
-    var selectedMediaUploaderIdx: Int?
-    var categoryTitle: String?
+    public var selectedMediaUploaderIdx: Int?
+    public var categoryTitle: String?
 
-    var selectedServiceId: String?{
+    public var selectedServiceId: String?{
         didSet{
         }
     }
-    var hasSubService: Bool?
-    var subParentName: String?
-    var arrayOfSubServices: [ModelServicesCerqel]?
+    public var hasSubService: Bool?
+    public var subParentName: String?
+    public var arrayOfSubServices: [ModelServicesCerqel]?
     
-    var isNestedForm: Bool = false
-    var nestedFormControlData: [ModelControl]? = nil
-    var nestedFormControlIndex: Int? = nil
-    var nestedDataDelegate: NestedFormDelegate? = nil
-    var editNestedRowIndex: Int? = nil
+    public var isNestedForm: Bool = false
+    public var nestedFormControlData: [ModelControl]? = nil
+    public var nestedFormControlIndex: Int? = nil
+    public var nestedDataDelegate: NestedFormDelegate? = nil
+    public var editNestedRowIndex: Int? = nil
 
  
     public init(_ service: cerqel_NetworkService) {

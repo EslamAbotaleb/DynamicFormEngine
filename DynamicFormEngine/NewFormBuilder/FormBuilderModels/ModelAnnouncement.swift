@@ -8,24 +8,24 @@
 
 import Foundation
 
-enum ModelImportancelLvl:  String, Codable {
+public enum ModelImportancelLvl:  String, Codable {
     case low = "3"
     case meduim = "2"
     case high = "1"
 }
 
-struct ModelAnnouncementData : Codable {
-    var id : String?
-    var message : String?
-    var createdByImage : String?
-    var importance : String?
-    var importanceLevel : ModelImportancelLvl?
-    var dateCreated : String?
-    var isBookMarked : Bool?
-    var shareUrl : String?
-    var countOfView : Int?
-    var attachments : [Attachments]?
-    var nextID, previousID: String?
+public struct ModelAnnouncementData : Codable {
+    public var id : String?
+    public var message : String?
+    public var createdByImage : String?
+    public var importance : String?
+    public var importanceLevel : ModelImportancelLvl?
+    public var dateCreated : String?
+    public var isBookMarked : Bool?
+    public var shareUrl : String?
+    public var countOfView : Int?
+    public var attachments : [Attachments]?
+    public var nextID, previousID: String?
     enum CodingKeys: String, CodingKey {
         case id = "id"
         case message = "message"
@@ -41,20 +41,20 @@ struct ModelAnnouncementData : Codable {
         case  previousID = "previousID"
     }
 
-    init() {
+    public init() {
         id = nil
     }
 
 }
 
-struct Attachments : Codable {
-    let attachmentID : String?
-    let attachmentType : String?
-    let attachmentURL : String?
-    let attachmentName : String?
-    let attachmentExtension : String?
-    let attachmentSize : Double?
-    let attachmentDisplaySize : String?
+public struct Attachments : Codable {
+    public let attachmentID : String?
+    public let attachmentType : String?
+    public let attachmentURL : String?
+    public let attachmentName : String?
+    public let attachmentExtension : String?
+    public let attachmentSize : Double?
+    public let attachmentDisplaySize : String?
 
     enum CodingKeys: String, CodingKey {
 

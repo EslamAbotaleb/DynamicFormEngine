@@ -7,4 +7,6 @@
 //
 
 import Foundation
-open class BaseItem {}
+open class BaseItem {
+    public init() {}
+}

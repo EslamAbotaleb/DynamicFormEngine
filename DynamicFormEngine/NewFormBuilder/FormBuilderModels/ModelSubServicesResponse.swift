@@ -8,9 +8,9 @@
 
 import Foundation
 
-struct ModelSubServiceData : Codable {
-    let parentService : ParentService?
-    let subServices : [ModelServicesCerqel]?
+public struct ModelSubServiceData : Codable {
+    public let parentService : ParentService?
+    public let subServices : [ModelServicesCerqel]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -19,10 +19,10 @@ struct ModelSubServiceData : Codable {
     }
 }
 
-struct ParentService : Codable {
-    let displayName : String?
-    let listName : String?
-    let hasSubServices : Bool?
+public struct ParentService : Codable {
+    public let displayName : String?
+    public let listName : String?
+    public let hasSubServices : Bool?
 
     enum CodingKeys: String, CodingKey {
 
@@ -31,7 +31,7 @@ struct ParentService : Codable {
         case hasSubServices = "hasSubServices"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         displayName = try values.decodeIfPresent(String.self, forKey: .displayName)
         listName = try values.decodeIfPresent(String.self, forKey: .listName)

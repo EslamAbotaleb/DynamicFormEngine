@@ -1,9 +1,9 @@
 //
-//  BaseWireFrame.swift
-//  GAZT
+//  CerqelBaseWireFrame.swift
+//  CERQEL
 //
-//  Created by iSlam on 10/11/20.
-//  Copyright © 2020 Youxel. All rights reserved.
+//  Created by mac on 6/21/23.
+//  Copyright © 2023 Youxel. All rights reserved.
 //
 
 import UIKit
@@ -14,34 +14,56 @@ import JGProgressHUD
 import Kingfisher
 import SideMenu
 import Reachability
-import PopupDialog
-import SwiftUI
+import Toast
 
-class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
+class CerqelBaseWireFrameDynamicForm<T: CerqelBaseViewModel>: BottomSheetVCCerqel {
     
     var disposeBag = DisposeBag()
-    var viewModel: T!
+    var viewModel: T! {
+        didSet {
+            viewModel.implementAlert { (alert) in
+                self.showToastCerqel(parentView: self, msg: alert)
+                
+            }
+        }
+    }
     let reachability = try! Reachability()
-
+    
     func configure(with viewModel: T) {
         fatalError("You did not override configure method.. ")
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = view
         checkReachabilty()
         self.setupBackButton()
       
-
+    
+//        if viewModel == nil, let _ = self as? LoginCerqelVC{
+//            viewModel = LoginViewModel(cerqel_BasicNetworkServiceImpl.shared) as? T
+//        }
+//      
+//        if viewModel == nil, let _ = self as? CerqelBaseSortVC{
+//            viewModel = CerqelBaseSortViewModel(cerqel_BasicNetworkServiceImpl.shared) as? T
+//        }
+//        
+//        if viewModel == nil, let _ = self as? NewServicesVC {
+//            viewModel = NewServicesViewModel(cerqel_BasicNetworkServiceImpl.shared) as? T
+//        }
+//
+//        if viewModel == nil, let _ = self as? EventDetailsVC {
+//            viewModel = MyCalendarViewModel(cerqel_BasicNetworkServiceImpl.shared) as? T
+//        }
+        
+        
         self.errorObsereve(errorsObservable: self.viewModel.errorsObservable)
         self.loadingViewObsereve(loadingObservable: self.viewModel.loadingSubject)
         configure(with: viewModel)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-      //  self.setNavigationBarStyle()
+        //  self.setNavigationBarStyle()
     }
     
     func checkReachabilty() {
@@ -75,8 +97,13 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
         
     }
     
+    
     func setNavigationBarStyle(){
         self.navigationController?.cerqel_setDefaultNavigationAppearance()
+    }
+    
+    func showHideV(view: UIView, hide: Bool) {
+        view.isHidden = hide
     }
     
     func getDate(dateString: String, format: String) -> Date {
@@ -94,7 +121,7 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
         let dateFormatted = dateFormatter.string(from: date)
         return dateFormatted
     }
-
+    
     func errorObsereve(errorsObservable: Observable<Error>){
         
         errorsObservable.subscribe(onNext:{ [unowned self](error) in
@@ -108,18 +135,18 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
         
         loadingObservable.subscribe(onNext:{ [unowned self] (loading) in
             switch loading {
-            
+                
             case .show:
                 self.cerqel_showLoading()
             case .hide:
                 self.cerqel_hideLoading()
             case .withText(_):
                 fatalError()
-            //            case .showSkeleton:
-            //                self.view.showAnimatedGradientSkeleton()
-            //            case .hideSkeleton:
-            //                self.view.hideSkeleton(reloadDataAfter: true)
-            
+                //            case .showSkeleton:
+                //                self.view.showAnimatedGradientSkeleton()
+                //            case .hideSkeleton:
+                //                self.view.hideSkeleton(reloadDataAfter: true)
+                
             }
         }).disposed(by: disposeBag)
         
@@ -127,27 +154,24 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
     
     
     func goToProfile(){
-//        self.navigationController?.pushViewController(CERQEL_Router.goTo(viewName: .myProfile()), animated: true)
-
+        //        self.navigationController?.pushViewController(CERQEL_Router.goTo(viewName: .myProfile()), animated: true)
+        
     }
     
     /// To be renamed (setupNavigationBarForMainTabs(title: String))
     /// To be removed from other view controllers (will be used in main tabs only)
     func addCircleProfileToNavigation(title: String = "", notificationCounter: Int) {
         self.title = title
-        guard let profilePhoto = AuthManager.shared.profile.value?.photo.value else {
+        guard let profilePhoto = AuthManager.shared.profile.value?.photo else {
             addDefaultProfileNavigation(notificationCounter: notificationCounter)
             return
         }
-        guard  let imageURL = profilePhoto.base64ImageToCustomMediaURL() else {
-            addDefaultProfileNavigation(notificationCounter: notificationCounter)
-            return
-        }
-        let width: CGFloat = 40
+        
+        let width: CGFloat = 30
         
         let processor = DownsamplingImageProcessor(size: CGSize(width: width, height: width)) |> RoundCornerImageProcessor(cornerRadius: width/2)
         
-        let _ = KingfisherManager.shared.retrieveImage(with: URL(string: imageURL)!, options: [.cacheMemoryOnly,.processor(processor)], progressBlock: nil, downloadTaskUpdated: nil) { [weak self] response in
+        let _ = KingfisherManager.shared.retrieveImage(with: URL(string: profilePhoto)!, options: [.cacheMemoryOnly,.processor(processor)], progressBlock: nil, downloadTaskUpdated: nil) { [weak self] response in
             guard let self = self else { return }
             switch response {
             case .success(let result):
@@ -160,7 +184,7 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
                 /// right search button
                 let searchButton = UIButton(type: .custom)
                 searchButton.addTarget(self, action: #selector(self.goToGlobalSearch), for: .touchUpInside)
-                searchButton.setImage(UIImage(named: "search_nav"), for: .normal)
+                searchButton.setImage(UIImage(named: "search"), for: .normal)
                 searchButton.tintColor = primaryMain
                 if isArabicCerqel() { searchButton.transform = .init(scaleX: -1, y: 1) }
                 let navSearchButton = UIBarButtonItem(customView: searchButton)
@@ -188,10 +212,10 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
                         }
                     }
                     
-                    label.textColor = .white
+                    label.textColor = .whiteCerqel
                     label.font = UIFont.caption3Regular()
                     label.textAlignment = .center
-                    label.backgroundColor = .error
+                    label.backgroundColor = .errorCerqel
                     label.layer.cornerRadius = label.frame.width / 2
                     label.layer.masksToBounds = true
                     if notificationCounter >= 100 {
@@ -218,20 +242,10 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
     }
     
     private func addDefaultProfileNavigation(notificationCounter: Int) {
-        let userImage = UIImageView()
-        handleImageWithKFCerqel(imgUrl: "", img: userImage, name: AuthManager.shared.profile.value?.name ?? "", color: primaryMain.withAlphaComponent(0.1), textColor: primaryMain)
-        
         /// left profile button
-        userImage.makeRounded(borderColor: primaryMain)
-        userImage.contentMode = .scaleAspectFit
         let profileButton = UIButton(type: .custom)
-        profileButton.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-
         profileButton.addTarget(self, action: #selector(self.goToProfileFromNavigation), for: .touchUpInside)
-        profileButton.setImage(userImage.image, for: .normal)
-        profileButton.borderColorV = primaryMain
-        profileButton.borderWidthV = 0.5
-        profileButton.cornerRadiusV = 20
+        profileButton.setImage(UIImage(named: "User"), for: .normal)
         let navProfileButton = UIBarButtonItem(customView: profileButton)
         
         /// right search button
@@ -265,10 +279,10 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
                 }
             }
             
-            label.textColor = .white
+            label.textColor = .whiteCerqel
             label.font = UIFont.caption3Regular()
             label.textAlignment = .center
-//            label.backgroundColor = Color.error
+            label.backgroundColor = .errorCerqel
             label.layer.cornerRadius = label.frame.width / 2
             label.layer.masksToBounds = true
             if notificationCounter >= 100 {
@@ -301,14 +315,14 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
     func addGlobalSearchItem(){
         if FF_GlobalSearch_isAvalable{
             if var items = self.navigationItem.rightBarButtonItems{
-                let search = UIBarButtonItem.init(image: UIImage(named: "search_nav"), style: .plain, target: self, action: #selector(self.goToGlobalSearch))
+                let search = UIBarButtonItem.init(image: UIImage(named: "search"), style: .plain, target: self, action: #selector(self.goToGlobalSearch))
                 items.append(search)
                 self.navigationItem.setRightBarButtonItems(items, animated: true)
             }
         }
     }
     
-    @objc  func goToGlobalSearch(){
+    @objc private func goToGlobalSearch(){
 //        let vc = SearchView(nibName: "SearchView", bundle: nil)
 //        vc.hidesBottomBarWhenPushed = true
 //        vc.viewModel = FilterViewModel()
@@ -318,7 +332,9 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
 //        self.present(navController, animated: true, completion: nil)
     }
     
-    @objc func gotoNotification(){
+    
+    
+    @objc private func gotoNotification(){
 //        self.navigationController?.pushViewController(CERQEL_Router.goTo(viewName: .notificationList), animated: true)
     }
     
@@ -336,54 +352,55 @@ class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
         search.tintColor = primaryMain
         alert.tintColor = primaryMain
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: primaryMain,NSAttributedString.Key.font: UIFont.heading4()]
-
-//        let titleItem = UIBarButtonItem(customView: titleLbl)
+        
+        //        let titleItem = UIBarButtonItem(customView: titleLbl)
         navigationItem.rightBarButtonItems = [alert,search]
     }
-     
-     func addCircleProfileToNavigationToMainScreens() {
-         guard let profilePhoto = AuthManager.shared.profile.value?.photo/*profilePicture*/ else {
-             let user = UIBarButtonItem.init(image: UIImage(named: "User"), style: .plain, target: self, action: #selector(self.goToProfileFromNavigation))
-             self.navigationItem.leftBarButtonItems = [user]
-             return
-         }
-         
-         let width: CGFloat = 30
-
-         let processor = DownsamplingImageProcessor(size: CGSize(width: width, height: width)) |> RoundCornerImageProcessor(cornerRadius: width/2)
-         
-         let _ = KingfisherManager.shared.retrieveImage(with: URL(string: profilePhoto)!, options: [.cacheMemoryOnly,.processor(processor)], progressBlock: nil, downloadTaskUpdated: nil) { [weak self] response in
-             guard let self = self else { return }
-             switch response {
-             case .success(let result):
-                 let button = UIButton(type: .custom)
-                 button.addTarget(self, action: #selector(self.goToProfileFromNavigation), for: .touchUpInside)
-                 button.setImage(result.image, for: .normal)
-                 self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
-                 let stackview = UIStackView.init(arrangedSubviews: [button])
-                  stackview.distribution = .equalSpacing
-                  stackview.axis = .horizontal
-                  stackview.alignment = .center
-                  stackview.spacing = 14
-                  let rightBarButton = UIBarButtonItem(customView: stackview)
-                  self.navigationItem.rightBarButtonItem = rightBarButton
-             case.failure(let kfError):
-                 print("❌❌❌ Profile Image error \(kfError.localizedDescription)❌❌❌")
-                 let user = UIBarButtonItem.init(image: UIImage(named: "User"), style: .plain, target: self, action: #selector(self.goToProfileFromNavigation))
-                 self.navigationItem.leftBarButtonItems = [user]
-             }
-         }
-     }
     
-}
-
-func flashHud(message:String,view:UIView,indicator:JGProgressHUDIndicatorView) -> JGProgressHUD {
-    let hud = JGProgressHUD(style: .dark)
-    hud.textLabel.text = message
-    hud.indicatorView = nil
-    hud.shadow = JGProgressHUDShadow(color: .black, offset: .zero, radius: 5.0, opacity: 0.2)
-    hud.vibrancyEnabled = true
-    hud.show(in: view)
-    hud.dismiss(afterDelay: 2.0)
-    return hud
+    func addCircleProfileToNavigationToMainScreens() {
+        guard let profilePhoto = AuthManager.shared.profile.value?.photo.value else {
+            let user = UIBarButtonItem.init(image: UIImage(named: "User"), style: .plain, target: self, action: #selector(self.goToProfileFromNavigation))
+            self.navigationItem.leftBarButtonItems = [user]
+            return
+        }
+        
+        let width: CGFloat = 30
+        
+        let processor = DownsamplingImageProcessor(size: CGSize(width: width, height: width)) |> RoundCornerImageProcessor(cornerRadius: width/2)
+        
+        let _ = KingfisherManager.shared.retrieveImage(with: URL(string: profilePhoto)!, options: [.cacheMemoryOnly,.processor(processor)], progressBlock: nil, downloadTaskUpdated: nil) { [weak self] response in
+            guard let self = self else { return }
+            switch response {
+            case .success(let result):
+                let button = UIButton(type: .custom)
+                button.addTarget(self, action: #selector(self.goToProfileFromNavigation), for: .touchUpInside)
+                button.setImage(result.image, for: .normal)
+                self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: button)
+                let stackview = UIStackView.init(arrangedSubviews: [button])
+                stackview.distribution = .equalSpacing
+                stackview.axis = .horizontal
+                stackview.alignment = .center
+                stackview.spacing = 14
+                let rightBarButton = UIBarButtonItem(customView: stackview)
+                self.navigationItem.rightBarButtonItem = rightBarButton
+            case.failure(let kfError):
+                print("❌❌❌ Profile Image error \(kfError.localizedDescription)❌❌❌")
+                let user = UIBarButtonItem.init(image: UIImage(named: "User"), style: .plain, target: self, action: #selector(self.goToProfileFromNavigation))
+                self.navigationItem.leftBarButtonItems = [user]
+            }
+        }
+    }
+    
+    func showToastCerqel(parentView: UIViewController, msg: String){
+        
+        var style = ToastStyle()
+        style.imageSize = CGSize(width: 20, height: 20)
+        style.messageFont = UIFont.bodyLMedium()
+        style.messageColor = .white
+        style.backgroundColor = .black
+        style.fadeDuration = 2
+        
+        parentView.view.makeToast(msg, duration: 2, point: CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.maxY - 140), title: nil, image: nil, style: style, completion: nil)
+    }
+    
 }

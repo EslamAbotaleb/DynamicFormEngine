@@ -38,7 +38,7 @@ public class CerqelReusableHeader: UIView, CerqelFilterV, CerqelSearchInNewContr
     @IBOutlet private weak var secondButton: UIButton!
     @IBOutlet private weak var thirdButton: UIButton!
     @IBOutlet weak var fourthButton: UIButton!
-    @IBOutlet weak var searchTF: UITextField!
+    @IBOutlet weak public var searchTF: UITextField!
     @IBOutlet private weak var redDotImageView: UIImageView!
     @IBOutlet private weak var filterButton: UIButton!
     @IBOutlet private weak var clearView: UIView!

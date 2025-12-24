@@ -30,9 +30,9 @@ public class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_Codab
 
     
 //    fileprivate let objectType = T.self
-    public var action: cerqel_APIAction = cerqel_BasicActionDynamicForm.none
+    public var action: cerqel_APIActionDynamicForm = cerqel_BasicActionDynamicForm.none
 
-    public init(action: cerqel_APIAction,keyResult:String = "result") {
+    public init(action: cerqel_APIActionDynamicForm,keyResult:String = "result") {
         self.action = action
         self.keyResult = keyResult
         

@@ -30,7 +30,7 @@ public enum UrlBaseEndpoints: String {
     case mocking = "https:/$()/m6djv.wiremockapi.cloud/"
 }
 
-public protocol cerqel_APIAction: URLRequestConvertible {
+public protocol cerqel_APIActionDynamicForm: URLRequestConvertible {
     var method: HTTPMethod { get }
     var path: String { get }
     var actionParameters: [String: Any] { get }
@@ -42,7 +42,7 @@ public protocol cerqel_APIAction: URLRequestConvertible {
     var basicAction: cerqel_BasicActionDynamicForm { get }
 }
 
-extension cerqel_APIAction {
+extension cerqel_APIActionDynamicForm {
     var actionParameters: [String : Any] {
         return [:]
     }
@@ -97,7 +97,7 @@ extension cerqel_APIAction {
     
 }
 
-extension cerqel_APIAction {
+extension cerqel_APIActionDynamicForm {
     
     public func asURLRequest() throws -> URLRequest {
         let urlString = baseURL.appending(path)

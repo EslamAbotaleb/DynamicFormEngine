@@ -10,12 +10,12 @@ import Foundation
 import UIKit
 import Toast
 
-class ToastManager {
+public class ToastManager {
     
     private static var toastContainerView: UIView?
     private static var v = UIView()
     
-    static func showToast(withText text: String, containerBg: UIColor, containerBorderColor: UIColor, image: UIImageView, closeBtnColor : UIColor , txtColor : UIColor , containerHeight: CGFloat? = 65 ) {
+    static public func showToast(withText text: String, containerBg: UIColor, containerBorderColor: UIColor, image: UIImageView, closeBtnColor : UIColor , txtColor : UIColor , containerHeight: CGFloat? = 65 ) {
         let toastContainerView = UIView()
         toastContainerView.isHidden = false
         toastContainerView.translatesAutoresizingMaskIntoConstraints = false
@@ -91,7 +91,7 @@ class ToastManager {
         dismissToastAfterSeconds(seconds: 3)
     }
 
-    static func dismissToastAfterSeconds(seconds: Double) {
+    static public func dismissToastAfterSeconds(seconds: Double) {
         Timer.scheduledTimer(withTimeInterval: seconds, repeats: false) { (_) in
            // TODO: - whatever you want
             self.toastContainerView?.isHidden = true

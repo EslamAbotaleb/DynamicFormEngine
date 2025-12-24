@@ -9,7 +9,7 @@
 import Foundation
 public import Alamofire
 
-public enum Dynamic_BasicAction: cerqel_APIAction {
+public enum Dynamic_BasicAction: cerqel_APIActionDynamicForm {
     public var basicAction: cerqel_BasicActionDynamicForm{return .none}
     
     case submitService(Id: String, payload: [String: Any])

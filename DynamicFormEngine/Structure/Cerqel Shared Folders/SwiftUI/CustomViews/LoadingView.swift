@@ -8,6 +8,7 @@
 import SwiftUI
 
 public struct LoadingView: View {
+    public init() {}
     public var body: some View {
         ZStack (alignment: .top ) {
             Image("background")

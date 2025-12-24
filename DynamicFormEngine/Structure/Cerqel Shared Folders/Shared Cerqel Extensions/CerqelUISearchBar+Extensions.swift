@@ -10,21 +10,21 @@ import Foundation
 import UIKit
 
 extension UISearchBar {
-    func cerqel_searchActive() -> Bool {
+    public func cerqel_searchActive() -> Bool {
         if self.isTranslucent && self.text != "" {
             return true
         }
         return false
     }
     
-    func cerqel_setPlaceholderTextColorTo(color: UIColor) {
+    public func cerqel_setPlaceholderTextColorTo(color: UIColor) {
           let textFieldInsideSearchBar = self.value(forKey: "searchField") as? UITextField
           textFieldInsideSearchBar?.textColor = color
           let textFieldInsideSearchBarLabel = textFieldInsideSearchBar!.value(forKey: "placeholderLabel") as? UILabel
           textFieldInsideSearchBarLabel?.textColor = color
       }
     
-    func cerqel_setClearButtonColorTo(color: UIColor) {
+    public func cerqel_setClearButtonColorTo(color: UIColor) {
           // Clear Button
           let textFieldInsideSearchBar = self.value(forKey: "searchField") as? UITextField
           let crossIconView = textFieldInsideSearchBar?.value(forKey: "clearButton") as? UIButton
@@ -32,14 +32,14 @@ extension UISearchBar {
           crossIconView?.tintColor = color
       }
 
-      func cerqel_setMagnifyingGlassColorTo(color: UIColor) {
+    public func cerqel_setMagnifyingGlassColorTo(color: UIColor) {
           let textFieldInsideSearchBar = self.value(forKey: "searchField") as? UITextField
           let glassIconView = textFieldInsideSearchBar?.leftView as? UIImageView
           glassIconView?.image = glassIconView?.image?.withRenderingMode(.alwaysTemplate)
           glassIconView?.tintColor = color
       }
     
-    func cerqel_changeSearchBarColor(color: UIColor, size: CGSize) {
+    public func cerqel_changeSearchBarColor(color: UIColor, size: CGSize) {
           UIGraphicsBeginImageContext(self.frame.size)
           color.setFill()
           UIBezierPath(rect: self.frame).fill()

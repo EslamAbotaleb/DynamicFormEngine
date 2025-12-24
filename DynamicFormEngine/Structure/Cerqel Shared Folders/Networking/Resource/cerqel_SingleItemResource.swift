@@ -11,7 +11,7 @@ internal import RxSwift
 
 struct cerqel_SingleItemResource<T: Codable> {
     let objectType = T.self
-    let action: cerqel_APIAction
+    let action: cerqel_APIActionDynamicForm
     
     func parse(_ data: Data) -> Observable<cerqel_CodableResponseObject<T>> {
         return Observable.create { observer in

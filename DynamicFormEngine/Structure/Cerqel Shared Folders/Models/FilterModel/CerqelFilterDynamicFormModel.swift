@@ -37,4 +37,5 @@ public struct CerqelCategoriesCerqelDynamicForm: Codable,Equatable {
 public struct CerqelDateRangeFilterCerqel {
     public var date1: Date?
     public var date2: Date?
+    public init() {}
 }

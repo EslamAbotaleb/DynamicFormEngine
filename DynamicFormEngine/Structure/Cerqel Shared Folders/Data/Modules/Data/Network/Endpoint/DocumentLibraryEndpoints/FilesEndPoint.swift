@@ -71,6 +71,14 @@ public struct Filter: Codable {
     public var updatedDateTo: String?
     public var categoryId: String?
     public var isActive: Bool?
+    
+    public init() {}
+    
+    init(searchKeyword: String?,from: String?,to: String?) {
+        self.searchKeyword = searchKeyword
+        self.from = from
+        self.to = to
+    }
 }
 
 
@@ -81,11 +89,16 @@ public struct SuggestionPayload: Codable {
 
 // MARK: - OrderByValue
 public struct OrderByValue: Codable {
-    let colID, sort: String?
+    public let colID, sort: String?
     
     enum CodingKeys: String, CodingKey {
         case colID = "colId"
         case sort
+    }
+    
+    public init() {
+        self.colID = nil
+        self.sort = nil
     }
 }
 

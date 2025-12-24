@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SuccessAddEditEventVC: BottomSheetVCCerqel  {
+open class SuccessAddEditEventVC: BottomSheetVCCerqel  {
     
     var isEdit: Bool?
     
@@ -19,7 +19,7 @@ class SuccessAddEditEventVC: BottomSheetVCCerqel  {
     
     var didTapClose: (()->())?
     
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         if isEdit ?? false {

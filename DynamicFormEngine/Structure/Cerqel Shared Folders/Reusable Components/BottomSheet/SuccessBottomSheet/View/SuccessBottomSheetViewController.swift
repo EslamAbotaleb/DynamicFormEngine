@@ -11,7 +11,7 @@ import PanModal
 
 typealias SuccessCallBack =  (()->())
 
-public class SuccessItem: BaseItem {
+open class SuccessItem: BaseItem {
     var successCallBack: SuccessCallBack
     var successMessage:String
     var successDescription:String?
@@ -24,7 +24,7 @@ public class SuccessItem: BaseItem {
 }
 
 
-public class SuccessBottomSheetViewController: BaseView<FileActionsViewModel, SuccessItem> {
+open class SuccessBottomSheetViewController: BaseView<FileActionsViewModel, SuccessItem> {
 
     @IBOutlet weak var successBodyLbl: UILabel!
     @IBOutlet weak var sheetView: UIView!
@@ -32,6 +32,14 @@ public class SuccessBottomSheetViewController: BaseView<FileActionsViewModel, Su
     @IBOutlet weak var closeIcon: UIButton!
     @IBOutlet weak var closeButton: LocalizedButton!
     @IBOutlet weak var describtionLbl: UILabel!
+    
+    public init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required public init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

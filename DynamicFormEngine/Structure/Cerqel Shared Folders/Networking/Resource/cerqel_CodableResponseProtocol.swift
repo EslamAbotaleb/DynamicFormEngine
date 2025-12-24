@@ -12,5 +12,5 @@ public import Alamofire
 
 public protocol cerqel_CodableResponseProtocol: Decodable {
     func parse<T: Decodable>(_ data: Data) -> Observable<T>
-    var action: cerqel_APIAction { get }
+    var action: cerqel_APIActionDynamicForm { get }
 }

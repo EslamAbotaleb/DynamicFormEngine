@@ -30,7 +30,7 @@ class cerqel_CodableResponseObjectPagination<T: Decodable>: cerqel_CodableRespon
         currentPage = try? values.decode(String.self, forKey: .currentPage)
     }
     
-    override init(action: cerqel_APIAction, keyResult: String = "result") {
+    override init(action: cerqel_APIActionDynamicForm, keyResult: String = "result") {
         super.init(action: action, keyResult: keyResult)
     }
     

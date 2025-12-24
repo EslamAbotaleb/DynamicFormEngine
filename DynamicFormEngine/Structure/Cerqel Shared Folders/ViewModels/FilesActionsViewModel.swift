@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import DynamicFormEngine
 
 enum ActionCategory {
     case normal
@@ -25,7 +24,7 @@ struct FileActions {
 }
 
 
-class FileActionsViewModel: BaseVM {
+open class FileActionsViewModel: BaseVM {
 
     // Dependencies
 
@@ -47,7 +46,7 @@ class FileActionsViewModel: BaseVM {
         self.delegate = delgate
     }
 
-    override func hydrate() {
+    override open func hydrate() {
         setupDepencies()
     }
 

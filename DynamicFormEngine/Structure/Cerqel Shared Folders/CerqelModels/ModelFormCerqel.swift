@@ -674,9 +674,9 @@ public struct RelationEquationCerqel : Codable {
 
 
 public struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
-    var name : String?
-    var mobileNumber : String?
-    var nationalPassport : String?
+    public var name : String?
+    public var mobileNumber : String?
+    public var nationalPassport : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -708,14 +708,14 @@ public struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
 
 
 public struct newEmployeeStatusValueCerqel: Codable, FormValueCerqel {
-    let requestType : ModelKeyTextCerqel?
-    let effectiveDateFrom : String?
-    let employeeId : String?
-    let employeeName : String?
-    let businessUnitName : String?
-    let departmentName : String?
-    let positionName : String?
-    let reasonsJustifications : String?
+    public let requestType : ModelKeyTextCerqel?
+    public let effectiveDateFrom : String?
+    public let employeeId : String?
+    public let employeeName : String?
+    public let businessUnitName : String?
+    public let departmentName : String?
+    public let positionName : String?
+    public let reasonsJustifications : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -744,8 +744,8 @@ public struct newEmployeeStatusValueCerqel: Codable, FormValueCerqel {
 }
 
 public struct ModelKeyTextCerqel : Codable {
-    let key : String?
-    let text : String?
+    public let key : String?
+    public let text : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -758,21 +758,21 @@ public struct ModelKeyTextCerqel : Codable {
 
 
 public struct newtransferRequestValueCerqel: Codable, FormValueCerqel {
-    let requestType : ModelKeyTextCerqel?
-    let effectiveDatefrom : String?
-    let lastUpdatedDate : String?
-    let employeeId : String?
-    let hireDate : [String]?
-    let employeeName : [String]?
-    let businessUnitName : [String]?
-    let departmentName : [String]?
-    let managerId : [String]?
-    let positionCode : [String]?
-    let newBusinessUnitName : ModelKeyTextCerqel?
-    let newDepartmentName : ModelKeyTextCerqel?
-    let newManagerId : String?
-    let newJobCode : String?
-    let notes : String?
+    public let requestType : ModelKeyTextCerqel?
+    public let effectiveDatefrom : String?
+    public let lastUpdatedDate : String?
+    public let employeeId : String?
+    public let hireDate : [String]?
+    public let employeeName : [String]?
+    public let businessUnitName : [String]?
+    public let departmentName : [String]?
+    public let managerId : [String]?
+    public let positionCode : [String]?
+    public let newBusinessUnitName : ModelKeyTextCerqel?
+    public let newDepartmentName : ModelKeyTextCerqel?
+    public let newManagerId : String?
+    public let newJobCode : String?
+    public let notes : String?
 
     enum CodingKeys: String, CodingKey {
 

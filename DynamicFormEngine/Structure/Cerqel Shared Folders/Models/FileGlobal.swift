@@ -31,13 +31,13 @@ public protocol ProfileSectionResponse: Codable { }
 
 // MARK: - Welcome
 public struct UploadFileRequest: Codable {
-    var categoryID: String? = nil
-    var subcategoryID: String? = nil
-    var description: String? = nil
-    var attachmentEn: Attachment? = nil
-    var attachmentAr: Attachment? = nil
-    var isPublic: Bool? = false
-    var serviceType: Int? = 1
+    public var categoryID: String? = nil
+    public var subcategoryID: String? = nil
+    public var description: String? = nil
+    public var attachmentEn: Attachment? = nil
+    public var attachmentAr: Attachment? = nil
+    public var isPublic: Bool? = false
+    public var serviceType: Int? = 1
 
     public init(categoryID: String? = nil, subcategoryID: String? = nil, description: String? = nil, attachmentEn: Attachment? = nil , attachmentAr: Attachment? = nil, isPublic: Bool? = nil, serviceType: Int? = nil) {
         self.categoryID = categoryID
@@ -59,13 +59,13 @@ public struct UploadFileRequest: Codable {
 
 // MARK: - Attachment
 public struct Attachment: Codable,Equatable {
-    var attachmentID, attachmentType, attachmentURL, fileID : String?
-    var storageFileId : String?
-    var attachmentName, attachmentExtension: String?
-    var attachmentSize: Double?
-    var attachmentDisplaySize : String?
-    var fileLange: String?
-    var state: AttachmentState? = .old
+    public var attachmentID, attachmentType, attachmentURL, fileID : String?
+    public var storageFileId : String?
+    public var attachmentName, attachmentExtension: String?
+    public var attachmentSize: Double?
+    public var attachmentDisplaySize : String?
+    public var fileLange: String?
+    public var state: AttachmentState? = .old
 
     public enum CodingKeys: String, CodingKey {
         case attachmentID, attachmentType, attachmentURL,storageFileId
@@ -77,34 +77,34 @@ public struct Attachment: Codable,Equatable {
 }
 
 public struct ProfileAttachment: Codable, Equatable {
-    let attachmentDisplaySize : String?
-    let downloadUrl : String?
-    let id : String?
-    let contentType : String?
-    let documentType : String?
-    let isPublic : Bool?
-    let fileSize : Double?
-    let name : String?
+    public let attachmentDisplaySize : String?
+    public let downloadUrl : String?
+    public let id : String?
+    public let contentType : String?
+    public let documentType : String?
+    public let isPublic : Bool?
+    public let fileSize : Double?
+    public let name : String?
     
-    var isDeleted: Bool? = false
-    var state: AttachmentState? = .old
+    public var isDeleted: Bool? = false
+    public var state: AttachmentState? = .old
 }
 
 public struct ProfilePicture : Codable, Equatable {
-    var mediaId : String? = ""
-    var fileName : String? = ""
-    var base64File : String? = ""
-    var contentType : String? = ""
-    var documentType : String? = ""
-    var downloadUrl : String? = ""
-    var fileSize : String? = ""
-    var previewUrl : String? = ""
-    var localUrl: URL?
-    var disableDeleteIcon : Bool? = false
-    var url: String? = ""
-    var isDeleted: Bool? = false
-    var fromRequest: Bool? = false
-    var state: AttachmentState? = .old
+    public var mediaId : String? = ""
+    public var fileName : String? = ""
+    public var base64File : String? = ""
+    public var contentType : String? = ""
+    public var documentType : String? = ""
+    public var downloadUrl : String? = ""
+    public var fileSize : String? = ""
+    public var previewUrl : String? = ""
+    public var localUrl: URL?
+    public var disableDeleteIcon : Bool? = false
+    public var url: String? = ""
+    public var isDeleted: Bool? = false
+    public var fromRequest: Bool? = false
+    public var state: AttachmentState? = .old
 
     public var currentUrl: String? {
         return (fromRequest ?? false) ? self.url ?? localUrl?.absoluteString : base64File

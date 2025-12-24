@@ -26,7 +26,7 @@ public class cerqel_CodableResponseObjectOther<T: Decodable, X: Decodable>: cerq
         other = try? values.decode(X.self, forKey: .other)
     }
     
-    override public init(action: cerqel_APIAction, keyResult: String = "result") {
+    override public init(action: cerqel_APIActionDynamicForm, keyResult: String = "result") {
         super.init(action: action, keyResult: keyResult)
     }
     

@@ -38,7 +38,7 @@ public class BaseListItem: BaseItem,Equatable {
 }
 
 
-class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
+public class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
     
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var closeIcon: UIButton!
@@ -57,7 +57,7 @@ class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
    // var comment :  ((String?)->())
     
     
-    override func viewDidLoad() {
+     override public func viewDidLoad() {
         super.viewDidLoad()
         initialConfiguration()
         configureUI()
@@ -66,7 +66,7 @@ class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
 
     }
 
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
@@ -95,7 +95,7 @@ class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
         }
     }
     
-    override var longFormHeight: PanModalHeight {
+    override public var longFormHeight: PanModalHeight {
         guard viewModel.list.value.count > 0 else {
             return .contentHeight(400)
         }
@@ -104,7 +104,7 @@ class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
         
     }
     
-    override var shortFormHeight: PanModalHeight {
+    override public var shortFormHeight: PanModalHeight {
         return .contentHeight(400)
         
     }
@@ -124,11 +124,11 @@ class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
 
 extension BaseList: UITableViewDataSource, UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.list.value.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = viewModel.list.value[indexPath.row]
         
         var cell: UITableViewCell!
@@ -155,7 +155,7 @@ extension BaseList: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if item.isSingleSelection {
             viewModel.selectItem(index: indexPath.row)
             dismiss(true)
@@ -165,17 +165,17 @@ extension BaseList: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if !item.isSingleSelection {
             viewModel.multiSelectItem(index: indexPath.row)
         }
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 51
     }
 }

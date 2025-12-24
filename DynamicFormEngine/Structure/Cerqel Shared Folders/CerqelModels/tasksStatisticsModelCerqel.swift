@@ -10,27 +10,27 @@ import Foundation
 
 // MARK: - Welcome
 public struct tasksStatisticsModelCerqel: Codable {
-    let message: String?
-    let success: Bool?
-    let result: tasksStatisticsResultCerqel?
+    public let message: String?
+    public let success: Bool?
+    public let result: tasksStatisticsResultCerqel?
 }
 
 // MARK: - Result
 public struct tasksStatisticsResultCerqel: Codable {
-    let data: tasksStatisticsDataClassCerqel?
+    public let data: tasksStatisticsDataClassCerqel?
 }
 
 // MARK: - DataClass
 public struct tasksStatisticsDataClassCerqel: Codable {
-    let totalCount: Int?
-    let statusDto: [StatusDtoCerqel]?
+    public let totalCount: Int?
+    public let statusDto: [StatusDtoCerqel]?
 }
 
 // MARK: - StatusDto
 public struct StatusDtoCerqel: Codable {
-    let statusName, statusCode, statusColor: String?
-    let persentage: Double?
-    let count: Int?
+    public let statusName, statusCode, statusColor: String?
+    public let persentage: Double?
+    public let count: Int?
 }
 
 public struct ModelUserProfileDataCerqel: Codable {
@@ -44,14 +44,14 @@ public struct ModelUserProfileDataCerqel: Codable {
     
     
     // new structure
-    let id : String?
-    let name : String?
-    let jobTitle : String?
-    let mail : String?
-    let departmentName : String?
-    let phone : String?
-    let photo : String?
-    let managerName: String?
+    public let id : String?
+    public let name : String?
+    public let jobTitle : String?
+    public let mail : String?
+    public let departmentName : String?
+    public let phone : String?
+    public let photo : String?
+    public let managerName: String?
 
     enum CodingKeys: String, CodingKey {
         

@@ -13,7 +13,7 @@ import SkeletonView
 import JGProgressHUD
 import Toast
 
-public class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, PanModalPresentable {
+open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, PanModalPresentable {
     public var panScrollable: UIScrollView? {
         return nil
     }
@@ -73,40 +73,40 @@ public class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, P
     //      //  self.showAlertMessage(title: "", message: message, theme: theme)
     //    }
     
-    override public func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         bindind()
     }
 
-    override public func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.backBarButtonItem?.title = ""
     }
     
     
     
-    public func showLoadingCerqel() {
+    open func showLoadingCerqel() {
         // self.view.showGradientSkeleton()
         self.cerqel_showLoading()
     }
-    public  func showHudLoading() {
+    open func showHudLoading() {
         self.cerqel_showLoading()
         //self.hud.show(in: self.view)
     }
     
-    public  func hideLoadingCerqel(){
+    open func hideLoadingCerqel(){
         self.view.hideSkeleton()
         self.cerqel_hideLoading()
         self.hud.dismiss()
     }
     
-    public func bindind() {}
+    open func bindind() {}
     
 }
 
 extension BaseView {
     
-    public   func showToastCerqel(parentView: UIViewController, msg: String){
+    open func showToastCerqel(parentView: UIViewController, msg: String){
         
         var style = ToastStyle()
         style.imageSize = CGSize(width: 20, height: 20)

@@ -15,6 +15,7 @@ public struct CerqelFilterCallBack {
     public var HighlightedFilters : HighlightedFilters?
     public var dateRangeFilter: CerqelDateRangeFilterCerqel?
     public var selectedSections: [CerqelFilterSection]? = []
+    public init() {}
 }
 
 public struct CerqelFilterSection: Equatable,Hashable {

@@ -402,7 +402,7 @@ public enum EndpointService {
 }
 
 extension Endpoint {
-    var multipart: [MultiPartModel] {
+    public var multipart: [MultiPartModel] {
         return []
     }
 
@@ -410,12 +410,12 @@ extension Endpoint {
 
 extension EndpointService {
 
-    var baseUrl: String{
+    public var baseUrl: String{
         return cerqel_Environment.Api_Base_URL + "gw/"
     }
 }
 
-func generateURLWithParams(params: [String: Any]?) -> String {
+public func generateURLWithParams(params: [String: Any]?) -> String {
     if (params != nil && !(params!.isEmpty)) {
         var api = "?"
 
@@ -435,7 +435,7 @@ func generateURLWithParams(params: [String: Any]?) -> String {
         return ""
     }
 }
-func convertModelToDictionary<T>(model: T) -> [String: Any] {
+public func convertModelToDictionary<T>(model: T) -> [String: Any] {
     let mirror = Mirror(reflecting: model)
     var dictionary = [String: Any]()
     

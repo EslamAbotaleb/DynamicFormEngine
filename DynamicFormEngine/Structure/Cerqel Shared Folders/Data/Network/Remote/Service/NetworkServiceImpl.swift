@@ -30,7 +30,6 @@ public protocol ReachabilityProtocol {
 
 public class NetworkServiceImpl: Network {
 
-
     public var endpointExecuter: EndpointExecuter = AlamofireService()
     public var reachability: ReachabilityProtocol = ReachabilityImpl()
 
@@ -244,8 +243,7 @@ public class NetworkServiceImpl: Network {
         }
     }
 
-
-
+    public init() {}
 }
 
 public struct NetworkServiceResponse {

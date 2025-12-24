@@ -8,18 +8,18 @@
 import Foundation
 
 public struct TenantListDTO : Codable {
-    var tenantId : String? = ""
-    var tenantName : String? = ""
-    var tenantLogo: String? = ""
-    var isPrimary : Bool? = false
-    var themeId : String? = ""
-    var themeNameEn: String? = ""
-    var themeNameAr: String? = ""
-    var isDefaultTheme: Bool? = false
-    var markLogoAttachment: TenantAttachment? = TenantAttachment()
-    var fullLogoAttachment: TenantAttachment? = TenantAttachment()
-    var colors: PlatformsColor? = nil
-    var isSelected: Bool? = false
+    public var tenantId : String? = ""
+    public var tenantName : String? = ""
+    public var tenantLogo: String? = ""
+    public var isPrimary : Bool? = false
+    public var themeId : String? = ""
+    public var themeNameEn: String? = ""
+    public var themeNameAr: String? = ""
+    public var isDefaultTheme: Bool? = false
+    public var markLogoAttachment: TenantAttachment? = TenantAttachment()
+    public var fullLogoAttachment: TenantAttachment? = TenantAttachment()
+    public var colors: PlatformsColor? = nil
+    public var isSelected: Bool? = false
 
     enum CodingKeys: String, CodingKey {
 
@@ -48,10 +48,10 @@ public struct TenantListDTO : Codable {
 
 // MARK: - Attachment
 public struct TenantAttachment: Codable {
-    var attachmentExtension, uploadID, name: String?
-    var size: Double?
-    var type: String?
-    var url: String?
+    public var attachmentExtension, uploadID, name: String?
+    public var size: Double?
+    public var type: String?
+    public var url: String?
 
     enum CodingKeys: String, CodingKey {
         case attachmentExtension = "extension"

@@ -100,6 +100,11 @@ public struct OrderByValue: Codable {
         self.colID = nil
         self.sort = nil
     }
+    
+    public init(colID: String?, sort: String?) {
+        self.colID = colID
+        self.sort = sort
+    }
 }
 
 // MARK: - OrderBy

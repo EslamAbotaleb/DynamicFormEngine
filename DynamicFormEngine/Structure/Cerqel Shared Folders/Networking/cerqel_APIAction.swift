@@ -43,10 +43,10 @@ public protocol cerqel_APIActionDynamicForm: URLRequestConvertible {
 }
 
 extension cerqel_APIActionDynamicForm {
-    var actionParameters: [String : Any] {
+    public var actionParameters: [String : Any] {
         return [:]
     }
-    var authHeader: [String : String] {
+    public var authHeader: [String : String] {
         return  [
 //            "Accept-Language": arOrEn(),
 //            "app-version":Global.share.version,
@@ -125,7 +125,7 @@ extension cerqel_APIActionDynamicForm {
 }
 
 extension Data {
-    var cerqel_prettyPrintedJSONString: NSString? { /// NSString gives us a nice sanitized debugDescription
+    public var cerqel_prettyPrintedJSONString: NSString? { /// NSString gives us a nice sanitized debugDescription
         guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
             let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
             let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else { return nil }

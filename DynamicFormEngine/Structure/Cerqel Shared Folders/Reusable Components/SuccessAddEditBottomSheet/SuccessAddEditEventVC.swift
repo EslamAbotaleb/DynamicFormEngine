@@ -10,14 +10,14 @@ import UIKit
 
 open class SuccessAddEditEventVC: BottomSheetVCCerqel  {
     
-    var isEdit: Bool?
+    open var isEdit: Bool?
     
     @IBOutlet weak var successLbl: UILabel!
     @IBOutlet weak var successMsg: UILabel!
     @IBOutlet weak var closeBtn: UIButton!
     @IBOutlet weak var xBtn: UIButton!
     
-    var didTapClose: (()->())?
+    open var didTapClose: (()->())?
     
     override open func viewDidLoad() {
         super.viewDidLoad()

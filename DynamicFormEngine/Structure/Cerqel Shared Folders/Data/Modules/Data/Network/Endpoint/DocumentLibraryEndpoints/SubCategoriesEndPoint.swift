@@ -18,6 +18,9 @@ struct SubCategoriesEndPoint: Endpoint {
     var auth: AuthorizationHandler = UserAuthoriationHandler()
     var parameters: [String: Any] = [:]
     var headers: [String: String] = [:]
+    var multipart: [DynamicFormEngine.MultiPartModel] {
+        []
+    }
     
     init(categoryId: String) {
         urlPrefix  = urlPrefix + "\(categoryId)"

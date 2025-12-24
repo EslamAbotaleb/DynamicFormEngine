@@ -17,4 +17,7 @@ struct FileTypesEndPoint: Endpoint {
     var auth: AuthorizationHandler = UserAuthoriationHandler()
     var parameters: [String: Any] = [:]
     var headers: [String: String] = [:]
+    var multipart: [DynamicFormEngine.MultiPartModel] {
+        []
+    }
 }

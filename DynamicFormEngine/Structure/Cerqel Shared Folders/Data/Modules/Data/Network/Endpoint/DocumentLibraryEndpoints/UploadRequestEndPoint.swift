@@ -19,7 +19,10 @@ import Foundation
     var auth: AuthorizationHandler = UserAuthoriationHandler()
     var parameters: [String: Any] = [:]
     var headers: [String: String] = [:]
-    
+     var multipart: [DynamicFormEngine.MultiPartModel] {
+         []
+     }
+     
     init(UploadRequest: UploadFileRequest ) {
         parameters = UploadRequest.asDictionary()
         
@@ -35,7 +38,10 @@ struct UploadUserProfileEndPoint: Endpoint {
    var auth: AuthorizationHandler = UserAuthoriationHandler()
    var parameters: [String: Any] = [:]
    var headers: [String: String] = [:]
-
+    var multipart: [DynamicFormEngine.MultiPartModel] {
+        []
+    }
+    
    init(UploadRequest: Attachment ) {
        parameters = UploadRequest.asDictionary()
 

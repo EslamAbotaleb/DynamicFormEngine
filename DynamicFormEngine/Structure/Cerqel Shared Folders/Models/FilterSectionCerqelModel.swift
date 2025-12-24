@@ -117,4 +117,20 @@ public struct CerqelCategoriesModel: Codable,Equatable {
         case id
         case name
     }
+    
+    public init() {}
+    
+    public init(id: String? = nil,
+                name: String? = nil,
+                representation: CerqelCheckBoxRepresentation = .CheckBox,
+                subCategories: [CerqelCategoriesModel]? = nil,
+                isSelected: Bool = false,
+                isHighlighted: Bool = false) {
+        self.id = id
+        self.name = name
+        self.representation = representation
+        self.subCategories = subCategories
+        self.isSelected = isSelected
+        self.isHighlighted = isHighlighted
+    }
 }

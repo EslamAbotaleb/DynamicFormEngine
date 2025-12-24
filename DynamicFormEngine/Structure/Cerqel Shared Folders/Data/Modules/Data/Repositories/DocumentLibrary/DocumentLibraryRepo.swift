@@ -29,11 +29,11 @@ public protocol DocumentLibraryRepo {
 }
 
 public struct UploadResponseModel: Codable {
-    let name, id, fileSize: String?
-    let previewURL, downloadURL: String?
-    let contentType, documentType: String?
-    var url: String? = ""
-    let isPublic: Bool?
+    public let name, id, fileSize: String?
+    public let previewURL, downloadURL: String?
+    public let contentType, documentType: String?
+    public var url: String? = ""
+    public let isPublic: Bool?
 
     enum CodingKeys: String, CodingKey {
         case name, id, fileSize

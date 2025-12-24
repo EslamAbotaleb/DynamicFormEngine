@@ -16,6 +16,9 @@ struct ExcuteActionEndPoint: Endpoint {
     var auth: AuthorizationHandler = UserAuthoriationHandler()
     var parameters: [String: Any] = [:]
     var headers: [String: String] = [:]
+    var multipart: [DynamicFormEngine.MultiPartModel] {
+        []
+    }
     
     init(payload: ExcuteActionPayload) {
         parameters = payload.asDictionary()

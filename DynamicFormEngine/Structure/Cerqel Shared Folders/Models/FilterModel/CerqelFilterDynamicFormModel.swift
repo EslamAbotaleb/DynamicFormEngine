@@ -38,4 +38,8 @@ public struct CerqelDateRangeFilterCerqel {
     public var date1: Date?
     public var date2: Date?
     public init() {}
+    public init(date1: Date?, date2: Date?) {
+        self.date1 = date1
+        self.date2 = date2
+    }
 }

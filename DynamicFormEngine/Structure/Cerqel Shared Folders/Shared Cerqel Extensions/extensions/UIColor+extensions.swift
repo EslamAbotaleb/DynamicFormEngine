@@ -11,96 +11,111 @@ import UIKit
 
 extension UIColor {
     
-    @nonobjc class var white: UIColor {
+    @nonobjc public class var white: UIColor {
         return UIColor(white: 1.0, alpha: 1.0)
     }
-    @nonobjc class var borderColor: UIColor {
+    @nonobjc public class var borderColor: UIColor {
         return UIColor(white: 189.0 / 255.0, alpha: 1.0)
     }
-    @nonobjc class var toastInfo: UIColor {
+    @nonobjc public class var toastInfo: UIColor {
         return UIColor(rCerqel: 46, gCerqel: 151, bCerqel: 239, aCerqel: 1)
     }
-    @nonobjc class var DarkBlack: UIColor {
+    @nonobjc public class var DarkBlack: UIColor {
         return UIColor.init(named: "DarkBlack")!
     }
-    @nonobjc class var PrimaryGreen: UIColor {
+    @nonobjc public class var PrimaryGreen: UIColor {
         return UIColor.init(named: "PrimaryGreen")!
     }
-    @nonobjc class var PrimaryGrey: UIColor {
+    @nonobjc public class var PrimaryGrey: UIColor {
         return UIColor.init(named: "PrimaryGrey")!
     }
-    @nonobjc class var PrimaryYellow: UIColor {
+    @nonobjc public class var PrimaryYellow: UIColor {
         return UIColor.init(named: "PrimaryYellow")!
     }
-    @nonobjc class var LightGrey: UIColor {
+    @nonobjc public class var LightGrey: UIColor {
         return UIColor.init(named: "LightGrey")!
     }
-    @nonobjc class var dark_grey: UIColor {
+    @nonobjc public class var dark_grey: UIColor {
         return UIColor.init(named: "dark_grey")!
     }
     
-    @nonobjc class var light_blue: UIColor {
+    @nonobjc public class var light_blue: UIColor {
         return UIColor.init(named: "light_blue")!
     }
-    @nonobjc class var secondaryBlueSky: UIColor {
+    @nonobjc public class var secondaryBlueSky: UIColor {
         return UIColor(named: "secondaryBlueSky")!
     }
-    @nonobjc class var light_periwinkle: UIColor {
+    @nonobjc public class var light_periwinkle: UIColor {
         return UIColor.init(named: "light_periwinkle")!
     }
-    @nonobjc class var dull_orange: UIColor {
+    @nonobjc public class var dull_orange: UIColor {
         return UIColor.init(named: "dull_orange")!
     }
-    @nonobjc class var slate_grey: UIColor {
+    @nonobjc public class var slate_grey: UIColor {
         return UIColor.init(named: "slate_grey")!
     }
-    @nonobjc class var blue_grey: UIColor {
+    @nonobjc public class var blue_grey: UIColor {
         return UIColor.init(named: "blue_grey")!
     }
-    @nonobjc class var ocean_green: UIColor {
+    @nonobjc public class var ocean_green: UIColor {
         return UIColor.init(named: "ocean_green")!
     }
-    @nonobjc class var brown_grey: UIColor {
+    @nonobjc public class var brown_grey: UIColor {
         return UIColor.init(named: "brown_grey")!
     }
-    @nonobjc class var ocean_green1: UIColor {
+    @nonobjc public class var ocean_green1: UIColor {
         return UIColor.init(named: "ocean_green1")!
     }
-    @nonobjc class var SoftBlue: UIColor {
+    @nonobjc public class var SoftBlue: UIColor {
         return UIColor.init(named: "SoftBlue")!
     }
-    @nonobjc class var greyIcon: UIColor {
+    @nonobjc public class var redSupport_Cerqel: UIColor {
+        return UIColor.init(named: "redSupportCerqel")!
+    }
+    @nonobjc public class var favDimmed_Cerqel: UIColor {
+        return UIColor.init(named: "favDimmedCerqel")!
+    }
+    @nonobjc public class var borderColor_Cerqel: UIColor {
+        return UIColor.init(named: "borderColorCerqel")!
+    }
+    @nonobjc public class var textPlaceholderGrayDark_Cerqel: UIColor {
+        return UIColor.init(named: "textPlaceholderGrayDarkCerqel")!
+    }
+    @nonobjc public class var error_Light: UIColor {
+        return UIColor.init(named: "errorLight")!
+    }
+    @nonobjc public class var greyIcon: UIColor {
         return UIColor(rCerqel: 150, gCerqel: 150, bCerqel: 150, aCerqel: 1)
     }
-    @nonobjc class var supportGreen: UIColor {
+    @nonobjc public class var supportGreen: UIColor {
         return UIColor(red: 101.0 / 255.0, green: 211.0 / 255.0, blue: 161.0 / 255.0, alpha: 1.0)
     }
-    @nonobjc class var supportYellow: UIColor {
+    @nonobjc public class var supportYellow: UIColor {
         return UIColor(red: 239.0 / 255.0, green: 172.0 / 255.0, blue: 43.0 / 255.0, alpha: 1.0)
     }
-    @nonobjc class var supportOrange: UIColor {
+    @nonobjc public class var supportOrange: UIColor {
         return UIColor(red: 227.0 / 255.0, green: 116.0 / 255.0, blue: 58.0 / 255.0, alpha: 1.0)
     }
-    @nonobjc class var fadedOrange0: UIColor {
+    @nonobjc public class var fadedOrange0: UIColor {
         return UIColor(red: 246.0 / 255.0, green: 139.0 / 255.0, blue: 93.0 / 255.0, alpha: 0.0)
     }
-    @nonobjc class var greenishTeal0: UIColor {
+    @nonobjc public class var greenishTeal0: UIColor {
         return UIColor(red: 44.0 / 255.0, green: 202.0 / 255.0, blue: 117.0 / 255.0, alpha: 0.0)
     }
-    @nonobjc class var lighterPurple0: UIColor {
+    @nonobjc public class var lighterPurple0: UIColor {
         return UIColor(red: 140.0 / 255.0, green: 74.0 / 255.0, blue: 242.0 / 255.0, alpha: 0.0)
     }
-    @nonobjc class var labelColorLightPrimary: UIColor {
+    @nonobjc public class var labelColorLightPrimary: UIColor {
         return UIColor(white: 0.0, alpha: 1.0)
     }
     @nonobjc class var secondaryColor: UIColor {
         return UIColor(red: 21.0 / 255.0, green: 130.0 / 255.0, blue: 188.0 / 255.0, alpha: 1.0)
     }
-    @nonobjc class var secondaryLightColor: UIColor {
+    @nonobjc public class var secondaryLightColor: UIColor {
         return UIColor(red: 239.0 / 255.0, green: 249.0 / 255.0, blue: 255.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var initialBGColor: UIColor {
+    @nonobjc public class var initialBGColor: UIColor {
         return UIColor(red: 93.0 / 255.0, green: 169.0 / 255.0, blue: 233.0 / 255.0, alpha: 0.1)
     }
     @nonobjc class var cloudyBlue20: UIColor {

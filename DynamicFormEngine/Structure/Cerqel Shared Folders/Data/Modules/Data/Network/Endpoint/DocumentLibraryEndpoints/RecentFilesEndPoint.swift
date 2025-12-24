@@ -17,7 +17,10 @@ struct recentFilesEndPoint: Endpoint {
    var auth: AuthorizationHandler = UserAuthoriationHandler()
    var parameters: [String: Any] = [:]
    var headers: [String: String] = [:]
-   
+    var multipart: [DynamicFormEngine.MultiPartModel] {
+        []
+    }
+    
     init(cerqelFilterPayload: CerqelFilterPayload ) {
        parameters = cerqelFilterPayload.asDictionary()
        

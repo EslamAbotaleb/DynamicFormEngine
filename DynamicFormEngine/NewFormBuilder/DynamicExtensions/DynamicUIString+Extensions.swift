@@ -433,7 +433,7 @@ extension String {
 
 extension String {
     
-    func getDateFromString(dateFormatter: DateFormatter) -> Date? {
+    public func getDateFromString(dateFormatter: DateFormatter) -> Date? {
         
 //        let dateFormatter = DateFormatter()
         
@@ -561,7 +561,7 @@ extension String {
         return nil
     }
     
-    func getTimeFromString() -> Date? {
+    public func getTimeFromString() -> Date? {
         var dateToReturn: Date?
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = timeZone_UTC
@@ -577,7 +577,7 @@ extension String {
         return dateToReturn
     }
     
-    func getDateUseringFormat(format: String)-> Date?{
+    public func getDateUseringFormat(format: String)-> Date?{
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = timeZone_UTC
         dateFormatter.locale = isArabicCerqel() ? dateFormatterLocale_ar : dateFormatterLocal_en_US
@@ -590,7 +590,7 @@ extension String {
 
     }
     
-    func slice(from: String, to: String) -> String? {
+    public func slice(from: String, to: String) -> String? {
         
         return (range(of: from)?.upperBound).flatMap { substringFrom in
             (range(of: to, range: substringFrom..<endIndex)?.lowerBound).map { substringTo in
@@ -599,7 +599,7 @@ extension String {
         }
     }
     
-    func sliceStr(from: String, to: String) -> String? {
+    public  func sliceStr(from: String, to: String) -> String? {
         return (from.isEmpty ? startIndex..<startIndex : range(of: from)).flatMap { fromRange in
             (to.isEmpty ? endIndex..<endIndex : range(of: to, range: fromRange.upperBound..<endIndex)).map({ toRange in
                 String(self[fromRange.upperBound..<toRange.lowerBound])
@@ -608,23 +608,23 @@ extension String {
     }
 
     
-    func widthOfString(usingFont font: UIFont) -> CGFloat {
+    public  func widthOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
         return size.width
     }
     
-    func isValidEmail() -> Bool {
+    public func isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: self)
     }
     
-    func getStringWithinTwoBrackets(_ fromBracket: String,_ toBracket: String) -> String? {
+    public func getStringWithinTwoBrackets(_ fromBracket: String,_ toBracket: String) -> String? {
         return self.sliceStr(from: fromBracket, to: toBracket)
     }
     
-    var isNumber: Bool {
+    public  var isNumber: Bool {
         return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
     

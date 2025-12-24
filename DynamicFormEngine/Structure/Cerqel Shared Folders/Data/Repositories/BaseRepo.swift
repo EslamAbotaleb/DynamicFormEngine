@@ -29,19 +29,19 @@ public protocol BaseRepo {
 }
 
 extension BaseRepo {
-    func degreeLvlList() -> Promise<BaseResponse<[ListModel]>> {
+    public func degreeLvlList() -> Promise<BaseResponse<[ListModel]>> {
         return Promise<BaseResponse<[ListModel]>>(on: .global()) { fulfill, reject in }
     }
 
-    func fileTypes() -> Promise<BaseResponse<[ListModel]>> {
+    public func fileTypes() -> Promise<BaseResponse<[ListModel]>> {
         return Promise<BaseResponse<[ListModel]>>(on: .global()) { fulfill, reject in }
     }
     
-    func relationList() -> Promise<BaseResponse<[ListModel]>> {
+    public func relationList() -> Promise<BaseResponse<[ListModel]>> {
         return Promise<BaseResponse<[ListModel]>>(on: .global()) { fulfill, reject in }
     }
     
-    func linksList() -> Promise<BaseResponse<[ListModel]>> {
+    public func linksList() -> Promise<BaseResponse<[ListModel]>> {
         return Promise<BaseResponse<[ListModel]>>(on: .global()) { fulfill, reject in }
     }
 }

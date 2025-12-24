@@ -82,48 +82,48 @@ public struct Settings: Mappable, Codable {
     }
 }
 
-struct FormLanguage: Mappable {
+public struct FormLanguage: Mappable {
     var name: String?
     var code: String?
     var rTL: Bool?
     
-    init?(map: Map) {
+    public init?(map: Map) {
         //empty
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         name <- map["name"]
         code <- map["code"]
         rTL <- map["RTL"]
     }
 }
 
-struct FormProperties: Mappable {
+public struct FormProperties: Mappable {
     var themeId: String?
     var campaign: Campaign?
     var navigationProperties: NavigationProperties?
     
-    init?(map: Map) {
+    public init?(map: Map) {
         //empty
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         themeId <- map["themeId"]
         campaign <- map["campaign"]
         navigationProperties <- map["navigationProperties"]
     }
 }
 
-struct Campaign: Mappable, Codable {
+public struct Campaign: Mappable, Codable {
     var header: CampaignObject?
     var footer: CampaignObject?
     var welcome: CampaignObject?
     
-    init?(map: Map) {
+    public init?(map: Map) {
         //empty
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         header <- map["header"]
         footer <- map["footer"]
         welcome <- map["welcome"]
@@ -136,7 +136,7 @@ struct Campaign: Mappable, Codable {
         case welcome = "welcome"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         header = try values.decodeIfPresent(CampaignObject.self, forKey: .header)
         footer = try values.decodeIfPresent(CampaignObject.self, forKey: .footer)
@@ -144,17 +144,17 @@ struct Campaign: Mappable, Codable {
     }
 }
 
-struct CampaignObject: Mappable, Codable {
+public struct CampaignObject: Mappable, Codable {
     var logo: String?
     var title: String?
     var description: String?
     var showQuestionCount: Bool?
     
-    init?(map: Map) {
+    public init?(map: Map) {
         //empty
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         logo <- map["logo"]
         title <- map["title"]
         description <- map["description"]
@@ -169,7 +169,7 @@ struct CampaignObject: Mappable, Codable {
         case showQuestionCount = "showQuestionCount"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         logo = try values.decodeIfPresent(String.self, forKey: .logo)
         title = try values.decodeIfPresent(String.self, forKey: .title)
@@ -202,7 +202,7 @@ public struct Field: Mappable {
         //empty
     }
     
-    init(id: String? = nil, type: FieldType? = nil, subType: TextBoxSubType? = nil, paragraphSubType: ParagraphSubType? = nil, paragraphStyle: FormStyle? = nil, icon: String? = nil, parentId: String? = nil, rowIndex: String? = nil, order: String? = nil, templateQuestionId: String? = nil, properties: BaseProperties? = nil, answer: Any? = nil, defualtSummaryAnswer: Any? = nil, defualtTabldItemsSummaryAnswer: Any? = nil, fieldRules: FieldRule? = nil, visibilityPermissions: [String]? = nil) {
+    public init(id: String? = nil, type: FieldType? = nil, subType: TextBoxSubType? = nil, paragraphSubType: ParagraphSubType? = nil, paragraphStyle: FormStyle? = nil, icon: String? = nil, parentId: String? = nil, rowIndex: String? = nil, order: String? = nil, templateQuestionId: String? = nil, properties: BaseProperties? = nil, answer: Any? = nil, defualtSummaryAnswer: Any? = nil, defualtTabldItemsSummaryAnswer: Any? = nil, fieldRules: FieldRule? = nil, visibilityPermissions: [String]? = nil) {
         self.id = id
         self.type = type
         self.subType = subType
@@ -342,7 +342,7 @@ public enum FieldType: String, Codable {
     case switchControl = "Switch"
 }
 
-struct Rule: Mappable {
+public struct Rule: Mappable {
     var id: String?
     var disabled: Bool?
     var operation: RuleOperation?
@@ -352,11 +352,11 @@ struct Rule: Mappable {
     var excludedViews: [ExcludedViews]?
     var isValid: Bool?
     
-    init?(map: Map) {
+    public init?(map: Map) {
         //empty
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id <- map["id"]
         disabled <- map["disabled"]
         operation <- map["operation"]
@@ -368,18 +368,18 @@ struct Rule: Mappable {
     }
 }
 
-struct IfCondition: Mappable {
+public struct IfCondition: Mappable {
     var fieldId: String?
     var fieldState: FieldState?
     var target: String?
     var value: String?
     var quota: Int?
     
-    init?(map: Map) {
+    public init?(map: Map) {
         //empty
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         fieldId <- map["fieldId"]
         fieldState <- map["fieldState"]
         target <- map["target"]
@@ -388,19 +388,19 @@ struct IfCondition: Mappable {
     }
 }
 
-struct SetPropertyPayload {
+public struct SetPropertyPayload {
     var IsExternal: Bool?
     var targetPropertyName: String?
     var id: String?
     var parameters: String?
 }
 
-struct Payload {
+public struct Payload {
     var id: String?
     var parameters: [String]?
 }
 
-struct DoAction: Mappable {
+public struct DoAction: Mappable {
     var type: ActionType?
     var sourceFieldsIds: [String]?
     var targetFieldsIds: [String]?
@@ -408,11 +408,11 @@ struct DoAction: Mappable {
     var actionImpact: String?
     var payload: AnyObject? //Payload?
     
-    init?(map: Map) {
+    public init?(map: Map) {
         //empty
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         type <- map["type"]
         sourceFieldsIds <- map["sourceFieldsIds"]
         targetFieldsIds <- map["targetFieldsIds"]
@@ -436,12 +436,12 @@ public struct FieldRule: Mappable {
     }
 }
 
-enum RuleOperation: String, Codable {
+public enum RuleOperation: String, Codable {
     case OR = "Any"
     case And = "All"
 }
 
-enum FieldState: String, Codable {
+public enum FieldState: String, Codable {
     case Filled = "Filled"
     case Empty = "Empty"
     case Equal = "Equal"
@@ -466,7 +466,7 @@ enum FieldState: String, Codable {
     case NotInclude = "NotInclude"
 }
 
-enum ActionType: String, Codable {
+public enum ActionType: String, Codable {
     case Show = "Show"
     case Enable = "Enable"
     case Hide = "Hide"

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ModelUsersList : Codable {
+public struct ModelUsersList : Codable {
     let sharedBCID : String?
     let bcid : String?
     let cn : String?
@@ -74,7 +74,7 @@ struct ModelUsersList : Codable {
         case manager = "manager"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         sharedBCID = try values.decodeIfPresent(String.self, forKey: .sharedBCID)
         bcid = try values.decodeIfPresent(String.self, forKey: .bcid)

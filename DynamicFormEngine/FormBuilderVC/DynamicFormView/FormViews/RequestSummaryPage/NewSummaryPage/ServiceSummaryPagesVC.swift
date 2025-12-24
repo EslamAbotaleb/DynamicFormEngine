@@ -29,7 +29,7 @@ struct SectionPagesControl {
 
 // MARK: - ServiceSummaryPagesVC
 /// A view controller that displays the summary of a service request.
-class ServiceSummaryPagesVC: BaseWireFrame<RequestDetailsViewModel> {
+class ServiceSummaryPagesVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     
     // MARK: - Outlets
     

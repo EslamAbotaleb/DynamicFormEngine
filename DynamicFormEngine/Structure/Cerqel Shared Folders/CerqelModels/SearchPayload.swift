@@ -29,7 +29,7 @@ public struct SearchPayload : Codable, Mappable {
     public init?(map: Map) {
 
     }
-    init() {
+    public init() {
         
     }
 
@@ -42,24 +42,24 @@ public struct SearchPayload : Codable, Mappable {
 
 }
 
-struct Pagination :Codable , Mappable {
+public struct Pagination :Codable , Mappable {
     var pageNumber : Int?
     var pageSize : Int?
 
     
-    init(pageNumber: Int?, pageSize:  Int?) {
+    public init(pageNumber: Int?, pageSize:  Int?) {
         self.pageNumber = pageNumber
         self.pageSize = pageSize
        
     }
-    init?(map: Map) {
+    public init?(map: Map) {
 
     }
-    init() {
+    public init() {
         
     }
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
 
         pageNumber <- map["pageNumber"]
         pageSize <- map["pageSize"]

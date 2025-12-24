@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class IntrinsicTableView: UITableView {
+public class IntrinsicTableView: UITableView {
 
 //    override var contentSize:CGSize {
 //          didSet {
@@ -22,18 +22,18 @@ class IntrinsicTableView: UITableView {
 //      }
 
 
-    override var intrinsicContentSize: CGSize {
+    override public var intrinsicContentSize: CGSize {
             self.layoutIfNeeded()
             return self.contentSize
         }
 
-        override var contentSize: CGSize {
+        override public var contentSize: CGSize {
             didSet{
                 self.invalidateIntrinsicContentSize()
             }
         }
 
-        override func reloadData() {
+        override public func reloadData() {
             super.reloadData()
             self.invalidateIntrinsicContentSize()
         }

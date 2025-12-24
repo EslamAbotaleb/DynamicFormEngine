@@ -25,7 +25,7 @@ struct BackwardDataSoruceTableModel {
 //    func handleActionPayload(actionId: String,payload: [[String:Any]])
 //}
 
-class BackwardRequestDetailsView: BaseWireFrame<RequestDetailsViewModel> {
+class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     // MARK: - IBOutlets
     @IBOutlet weak var bgTopView: UIView!
     @IBOutlet weak var bgBottomView: UIView!

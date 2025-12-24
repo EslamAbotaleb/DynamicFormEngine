@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ControlType: String, Codable {
+public enum ControlType: String, Codable {
     case TextBox
     case RadioButton
     case DropDown
@@ -31,7 +31,7 @@ enum ControlType: String, Codable {
 }
 
 
-enum ValidationName: String, Codable {
+public enum ValidationName: String, Codable {
     case valueRequired
     case required
     case pattern
@@ -50,13 +50,13 @@ enum ValidationName: String, Codable {
 }
 
 
-enum ContentType: String, Codable{
+public enum ContentType: String, Codable{
     case multiSelect
     case number
     case empty = ""
 }
 
-struct DateValidationObject : Codable {
+public struct DateValidationObject : Codable {
     var key : String?
     var value : Int?
     var isMonth: Bool?

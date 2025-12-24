@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PlatformsColor : Codable {
+public struct PlatformsColor : Codable {
     let primaryColorMain : String?
     let primaryColorLight : String?
     let secondaryColorMain : String?
@@ -51,7 +51,7 @@ struct PlatformsColor : Codable {
         case mobileBgTabNavigatorColor = "mobileBgTabNavigatorColor"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         primaryColorMain = try values.decodeIfPresent(String.self, forKey: .primaryColorMain)
         primaryColorLight = try values.decodeIfPresent(String.self, forKey: .primaryColorLight)

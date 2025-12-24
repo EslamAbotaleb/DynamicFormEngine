@@ -26,7 +26,7 @@ public class AlamofireService: EndpointExecuter {
      
     private var activeRequests: [FileVersionType: UploadRequest] = [:]
 
-    func execute(_ endpoint: Endpoint) -> Promise<NetworkServiceResponse> {
+    public func execute(_ endpoint: Endpoint) -> Promise<NetworkServiceResponse> {
         return Promise<NetworkServiceResponse>(on: .global()) { fulfill, reject in
             do {
                 let request = try self.request(by: endpoint)
@@ -85,7 +85,7 @@ public class AlamofireService: EndpointExecuter {
                                headers: HTTPHeaders(concatenateHeaders(for: endpoint)))
     }
 
-    func uploadMultipart(
+    public func uploadMultipart(
         _ endpoint: Endpoint,
         progressCallBack: @escaping (Double, FileVersionType) -> ()
     ) -> Promise<NetworkServiceResponse> {
@@ -205,7 +205,7 @@ public class AlamofireService: EndpointExecuter {
     }
 
     
-    func downloadFile(_ filesUrl: [String]) -> Promise<URL> {
+    public func downloadFile(_ filesUrl: [String]) -> Promise<URL> {
           return Promise<URL>(on: .global()) { fulfill, reject in
             //  for file in filesUrl {
                   self.download(filesUrl, completionHandler: { (url) in
@@ -216,7 +216,7 @@ public class AlamofireService: EndpointExecuter {
           }
     }
     
-    func cancelUpload(_ fileVersionType: FileVersionType) {
+    public func cancelUpload(_ fileVersionType: FileVersionType) {
             if let request = activeRequests[fileVersionType] {
                 request.cancel()
                 activeRequests[fileVersionType] = nil
@@ -245,7 +245,7 @@ public class AlamofireService: EndpointExecuter {
     }
     
     // MARK: - Payload Preparation
-    func prepareJsonPayload(from payload: [ProfileSections: Any]) -> [String: Any] {
+    public func prepareJsonPayload(from payload: [ProfileSections: Any]) -> [String: Any] {
         var jsonPayload: [String: Any] = Dictionary(
             uniqueKeysWithValues: payload.map { ($0.key.rawValue, $0.value) }
         )
@@ -261,7 +261,7 @@ public class AlamofireService: EndpointExecuter {
     }
 
     // MARK: - Parameters
-    func prepareParameters(with jsonPayload: [String: Any]) -> [[String: Any]] {
+    public func prepareParameters(with jsonPayload: [String: Any]) -> [[String: Any]] {
         let jsonData = try! JSONSerialization.data(withJSONObject: jsonPayload, options: [])
         let jsonString = String(data: jsonData, encoding: .utf8)!
         
@@ -278,7 +278,7 @@ public class AlamofireService: EndpointExecuter {
     }
 
     // MARK: - Multipart Body
-    func buildMultipartBody(parameters: [[String: Any]], boundary: String) throws -> Data {
+    public func buildMultipartBody(parameters: [[String: Any]], boundary: String) throws -> Data {
         var body = Data()
         for param in parameters {
             if param["disabled"] != nil { continue }
@@ -308,7 +308,7 @@ public class AlamofireService: EndpointExecuter {
     }
 
     // MARK: - Request Builder
-    func buildRequest(with body: Data, boundary: String) -> URLRequest {
+    public func buildRequest(with body: Data, boundary: String) -> URLRequest {
         var request = URLRequest(url: URL(string: EndpointService.saveProfile.url)!, timeoutInterval: 60)
         request.httpMethod = "PUT"
         request.httpBody = body
@@ -325,7 +325,7 @@ public class AlamofireService: EndpointExecuter {
     }
 
     // MARK: - Networking
-    func performRequest(_ request: URLRequest, completion: @escaping (BaseError?) -> Void) {
+    public func performRequest(_ request: URLRequest, completion: @escaping (BaseError?) -> Void) {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 completion(.other(title: error.localizedDescription))

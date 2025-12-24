@@ -34,7 +34,7 @@ protocol HandlePayloadMethods {
     func handleActionPayload(actionId: String,payload: [[String:Any]])
 }
 
-class RequestDetailsView: BaseWireFrame<RequestDetailsViewModel> {
+class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     // MARK: - IBOutlets
 //    @IBOutlet weak var showHideEmptyFieldsView: ShowHideEmptyFieldsView!
     @IBOutlet weak var bgTopView: UIView!

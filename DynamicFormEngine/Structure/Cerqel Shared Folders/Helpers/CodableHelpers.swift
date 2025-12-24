@@ -9,18 +9,18 @@
 import Foundation
 
 extension Encodable {
-    func asDictionary() -> [String: Any] {
+    public func asDictionary() -> [String: Any] {
         let serialized = (try? JSONSerialization.jsonObject(with: self.encode(), options: .allowFragments)) ?? nil
         return serialized as? [String: Any] ?? [String: Any]()
     }
     
-    func encode() -> Data {
+    public func encode() -> Data {
         return (try? JSONEncoder().encode(self)) ?? Data()
     }
 }
 
 extension Data {
-    func decode<T: Codable>(_ type: T.Type) -> T? {
+    public func decode<T: Codable>(_ type: T.Type) -> T? {
         return (try? JSONDecoder().decode(T.self, from: self))
     }
 }

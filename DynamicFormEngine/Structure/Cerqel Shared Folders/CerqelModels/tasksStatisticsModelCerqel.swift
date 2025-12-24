@@ -9,31 +9,31 @@
 import Foundation
 
 // MARK: - Welcome
-struct tasksStatisticsModelCerqel: Codable {
+public struct tasksStatisticsModelCerqel: Codable {
     let message: String?
     let success: Bool?
     let result: tasksStatisticsResultCerqel?
 }
 
 // MARK: - Result
-struct tasksStatisticsResultCerqel: Codable {
+public struct tasksStatisticsResultCerqel: Codable {
     let data: tasksStatisticsDataClassCerqel?
 }
 
 // MARK: - DataClass
-struct tasksStatisticsDataClassCerqel: Codable {
+public struct tasksStatisticsDataClassCerqel: Codable {
     let totalCount: Int?
     let statusDto: [StatusDtoCerqel]?
 }
 
 // MARK: - StatusDto
-struct StatusDtoCerqel: Codable {
+public struct StatusDtoCerqel: Codable {
     let statusName, statusCode, statusColor: String?
     let persentage: Double?
     let count: Int?
 }
 
-struct ModelUserProfileDataCerqel: Codable {
+public struct ModelUserProfileDataCerqel: Codable {
 //    var basicInfo : profileBasicInfo?
 //    var contactInfo : profileContactInfo?
 //    var jobDetails : profileJobDetails?

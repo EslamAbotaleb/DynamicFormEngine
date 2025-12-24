@@ -10,18 +10,16 @@
 import Foundation
 import Promises
 
-class NoneAuthorizationHandler: AuthorizationHandler {
-   
-
-    func setClientManually(clientType: String) {}
-    func setUidManually(uid: String) {}
-    func setAuthManually(authToken: String) {}
-    func setPhoneForFaceId(phone: String){}
-    var tokenHeader: [String: String] = [:]
-    var clientHeader: [String: String] = [:]
-    var uidHeader: [String: String] = [:]
-    var faceIdPhone: String = ""
-    func removeAuthManually(authToken: String){}
-    func removeClientManually(client: String){}
-    func removeUidManually(uid: String){}
+public class NoneAuthorizationHandler: AuthorizationHandler {
+    public func setClientManually(clientType: String) {}
+    public func setUidManually(uid: String) {}
+    public func setAuthManually(authToken: String) {}
+    public func setPhoneForFaceId(phone: String){}
+    public var tokenHeader: [String: String] = [:]
+    public var clientHeader: [String: String] = [:]
+    public var uidHeader: [String: String] = [:]
+    public var faceIdPhone: String = ""
+    public func removeAuthManually(authToken: String){}
+    public func removeClientManually(client: String){}
+    public func removeUidManually(uid: String){}
 }

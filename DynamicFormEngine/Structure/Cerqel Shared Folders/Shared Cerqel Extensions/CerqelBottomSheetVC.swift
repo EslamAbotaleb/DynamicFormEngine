@@ -9,7 +9,7 @@
 import UIKit
 public import FittedSheetsDF
 
-open class BottomSheetVCCerqel: UIViewController {
+public class BottomSheetVCCerqel: UIViewController {
 
     public var cerqel_sheetCtl: SheetViewController!
     public var cerqel_sheetHeight: CGFloat = 200

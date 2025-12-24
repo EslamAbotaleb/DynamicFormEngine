@@ -7,7 +7,8 @@
 //
 
 import Foundation
-struct SuccessMessageResponse{
+
+public struct SuccessMessageResponse{
     var title: String? = ""
     var message: String? = ""
     var description: String? = ""

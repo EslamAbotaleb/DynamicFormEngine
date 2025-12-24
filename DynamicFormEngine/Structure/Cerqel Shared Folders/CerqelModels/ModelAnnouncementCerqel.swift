@@ -8,33 +8,33 @@
 
 import Foundation
 
-enum ModelImportancelLvlCerqel:  String, Codable {
+public enum ModelImportancelLvlCerqel:  String, Codable {
     case low = "3"
     case meduim = "2"
     case high = "1"
 }
 
-protocol ModuleResponse: Codable {
+public protocol ModuleResponse: Codable {
     var isBookmarked: Bool? { set get }
 }
 
 
-struct ModelAnnouncementDataCerqel : Codable, ModuleResponse {
-    var isBookmarked: Bool? = false
+public struct ModelAnnouncementDataCerqel : Codable, ModuleResponse {
+    public var isBookmarked: Bool? = false
         
-    var id : String?
-    var message : String?
-    var createdByImage : String?
-    var importance : String?
-    var importanceLevel : ModelImportancelLvlCerqel?
-    var dateCreated : String?
-    var dateModified: String?
-    var shareUrl : String?
-    var countOfView : Int?
-    var attachments : [AttachmentsCerqel]?
-    var nextID, previousID: String?
-    var title: String?
-    var isNew: Bool?
+    public var id : String?
+    public var message : String?
+    public var createdByImage : String?
+    public var importance : String?
+    public var importanceLevel : ModelImportancelLvlCerqel?
+    public var dateCreated : String?
+    public var dateModified: String?
+    public var shareUrl : String?
+    public var countOfView : Int?
+    public var attachments : [AttachmentsCerqel]?
+    public var nextID, previousID: String?
+    public var title: String?
+    public var isNew: Bool?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -57,14 +57,14 @@ struct ModelAnnouncementDataCerqel : Codable, ModuleResponse {
 }
 
 
-struct AttachmentsCerqel : Codable {
-    let attachmentID : String?
-    let attachmentType : String?
-    let attachmentURL : String?
-    let attachmentName : String?
-    let attachmentExtension : String?
-    let attachmentSize : Double?
-    let attachmentDisplaySize : String?
+public struct AttachmentsCerqel : Codable {
+    public let attachmentID : String?
+    public let attachmentType : String?
+    public let attachmentURL : String?
+    public let attachmentName : String?
+    public let attachmentExtension : String?
+    public let attachmentSize : Double?
+    public let attachmentDisplaySize : String?
 
     enum CodingKeys: String, CodingKey {
         case attachmentID = "attachmentID"
@@ -75,5 +75,4 @@ struct AttachmentsCerqel : Codable {
         case attachmentSize = "attachmentSize"
         case attachmentDisplaySize = "attachmentDisplaySize"
     }
-
 }

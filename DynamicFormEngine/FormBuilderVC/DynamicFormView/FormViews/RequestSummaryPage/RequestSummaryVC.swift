@@ -13,7 +13,7 @@ internal import MOLH
 import Photos
 internal import FittedSheetsDF
 
-class RequestSummaryVC: BaseWireFrame<RequestDetailsViewModel> {
+class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     
     // MARK: - IBOutlets
     

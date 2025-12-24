@@ -12,8 +12,7 @@ import KeychainSwift
 import Promises
 
 
-
-class UserAuthoriationHandler: AuthorizationHandler {
+public class UserAuthoriationHandler: AuthorizationHandler {
     
     private let keychainKey = "CustomerAuthorizationHandler"
     private let clientKey = "clientAuthoriztionHeader"
@@ -21,55 +20,55 @@ class UserAuthoriationHandler: AuthorizationHandler {
     private let faceIdPhoneKey = "faceIdPhone"
     private let keychain = KeychainSwift()
     
-    init() {
+    public init() {
     }
   
     
-    var clientHeader: [String: String] {
+    public var clientHeader: [String: String] {
         return ["LanguageCode": isArabicCerqel() ? "Ar" : "En"]
     }
     
-    var uidHeader: [String: String] {
+    public var uidHeader: [String: String] {
         return ["uid":  (keychain.get(self.uidKey) ?? "")]
     }
     
-    var tokenHeader: [String: String] {
+    public var tokenHeader: [String: String] {
 
         return ["Authorization": "Bearer " + AuthManager.shared.token ]
     }
-    var faceIdPhone: String {
+    public  var faceIdPhone: String {
         keychain.get(self.faceIdPhoneKey) ?? ""
     }
     
-    func setAuthManually(authToken: String) {
+    public func setAuthManually(authToken: String) {
         self.keychain.set(authToken, forKey: self.keychainKey)
     }
     
-    func setPhoneForFaceId(phone: String){
+    public func setPhoneForFaceId(phone: String){
         self.keychain.set(phone, forKey: self.faceIdPhoneKey)
     }
     
-    func setClientManually(clientType: String) {
+    public func setClientManually(clientType: String) {
         self.keychain.set(clientType, forKey: self.clientKey)
     }
     
-    func setUidManually(uid: String) {
+    public  func setUidManually(uid: String) {
         self.keychain.set(uid, forKey: self.uidKey)
     }
-    func removeLang(lang: String) {
+    public func removeLang(lang: String) {
         self.keychain.set("", forKey: self.keychainKey)
     }
     
     
-    func removeAuthManually(authToken: String) {
+    public func removeAuthManually(authToken: String) {
         self.keychain.set("", forKey: self.keychainKey)
     }
     
-    func removeClientManually(client: String) {
+    public func removeClientManually(client: String) {
         self.keychain.set("", forKey: self.clientKey)
     }
     
-    func removeUidManually(uid: String) {
+    public func removeUidManually(uid: String) {
         self.keychain.set("", forKey: self.uidKey)
     }
     

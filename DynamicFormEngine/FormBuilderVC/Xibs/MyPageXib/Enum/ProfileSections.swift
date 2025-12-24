@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ProfileSections : String {
+public enum ProfileSections : String {
     case educations = "Educations"
     case relatives = "Relatives"
     case dependents = "Dependents"

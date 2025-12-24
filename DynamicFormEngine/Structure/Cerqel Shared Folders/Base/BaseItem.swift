@@ -7,4 +7,4 @@
 //
 
 import Foundation
-public class BaseItem {}
+open class BaseItem {}

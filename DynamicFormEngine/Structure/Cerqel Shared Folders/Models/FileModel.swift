@@ -8,34 +8,34 @@
 
 import Foundation
 
-enum FileViewLayout: String {
+public enum FileViewLayout: String {
     case defaultLayout
     case gridLayout
 }
 
-enum FileStatus: String {
+public enum FileStatus: String {
     case acknowledged
     case needAcknowledge
 }
 
-struct FileAcknowledgeStatus {
-    var title: String
-    var color: String
-    var isAcknowledge: Bool = false
-    var isAcknowledged: Bool = false
+public struct FileAcknowledgeStatus {
+    public var title: String
+    public var color: String
+    public var isAcknowledge: Bool = false
+    public var isAcknowledged: Bool = false
 }
 
 // MARK: - DataClass
-struct FileAcknowledgeResponse: Codable {
-    let fileID, acknowledgeColor, acknowledgeTitle: String
+public struct FileAcknowledgeResponse: Codable {
+    public let fileID, acknowledgeColor, acknowledgeTitle: String
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case fileID = "fileId"
         case acknowledgeColor, acknowledgeTitle
     }
 }
 
-enum FileType:  String {
+public enum FileType:  String {
     case doc
     case DOC
     case docx
@@ -61,25 +61,25 @@ enum FileType:  String {
 
 
 
-struct FileModel {
-    var id: String
-    var title: String
-    var versionType: String
-    var versionId: Int
-    var fileSize: String
-    var fileExtension: String
-    var fileCreatedDate: String
-    var isPinned: Bool
-    var localFileUrl: URL?
-    var fileURl: String
-    var fileType: FileType
-    var subCategory: SubCategoryModel
-    var fileAcknowledgeStatus: FileAcknowledgeStatus
-    var fileCheckbox: FileCheckBox
-    var fileUrlAr: String
-    var fileUrlEn: String
+public struct FileModel {
+    public var id: String
+    public var title: String
+    public var versionType: String
+    public var versionId: Int
+    public var fileSize: String
+    public var fileExtension: String
+    public var fileCreatedDate: String
+    public var isPinned: Bool
+    public var localFileUrl: URL?
+    public var fileURl: String
+    public var fileType: FileType
+    public var subCategory: SubCategoryModel
+    public var fileAcknowledgeStatus: FileAcknowledgeStatus
+    public var fileCheckbox: FileCheckBox
+    public var fileUrlAr: String
+    public var fileUrlEn: String
     
-    init(id: String, title: String, versionType: String, versionId: Int, fileSize: String, fileExtension: String, fileCreatedDate: String, isPinned: Bool, localFileUrl: URL? = nil, fileURl: String, fileType: FileType, subCategory: SubCategoryModel, fileAcknowledgeStatus: FileAcknowledgeStatus, fileCheckbox: FileCheckBox, fileUrlAr: String, fileUrlEn: String) {
+    public init(id: String, title: String, versionType: String, versionId: Int, fileSize: String, fileExtension: String, fileCreatedDate: String, isPinned: Bool, localFileUrl: URL? = nil, fileURl: String, fileType: FileType, subCategory: SubCategoryModel, fileAcknowledgeStatus: FileAcknowledgeStatus, fileCheckbox: FileCheckBox, fileUrlAr: String, fileUrlEn: String) {
         self.id = id
         self.title = title
         self.versionType = versionType
@@ -98,7 +98,7 @@ struct FileModel {
         self.fileUrlEn = fileUrlEn
     }
     
-    init (id: String = "",fileURl: String, name : String = "", fileExtension : String = "") {
+    public init (id: String = "",fileURl: String, name : String = "", fileExtension : String = "") {
         self.id = id
         self.title = name
         self.versionType = ""
@@ -119,24 +119,24 @@ struct FileModel {
     
 }
 
-struct FileCheckBox {
-    var isSelected: Bool = false
-    var isAppear: Bool = false
+public struct FileCheckBox {
+    public var isSelected: Bool = false
+    public var isAppear: Bool = false
 }
 
-struct File {
+public struct File {
     
-    var fileName: String?
-    var fileExtension: String?
-    var url: URL?
-    var fileInformation:FileInformation?
-    var data:Data?
-    var progress:Double?
-    var fileStatus: FileUploadStatus
-    var attachment: Attachment?
-    var profileAttachment: ProfilePicture?
+    public var fileName: String?
+    public var fileExtension: String?
+    public var url: URL?
+    public var fileInformation:FileInformation?
+    public var data:Data?
+    public var progress:Double?
+    public var fileStatus: FileUploadStatus
+    public var attachment: Attachment?
+    public var profileAttachment: ProfilePicture?
     
-    init(fileName: String = "",fileExtension: String = "" ,url: URL? = nil, fileInformation: FileInformation? = nil, data: Data? = nil, progress: Double? = nil, fileStatus: FileUploadStatus, attachment: Attachment? = nil, profileAttachment: ProfilePicture? = nil) {
+    public init(fileName: String = "",fileExtension: String = "" ,url: URL? = nil, fileInformation: FileInformation? = nil, data: Data? = nil, progress: Double? = nil, fileStatus: FileUploadStatus, attachment: Attachment? = nil, profileAttachment: ProfilePicture? = nil) {
         self.fileName = fileName
         self.fileExtension = fileExtension
         self.url = url
@@ -148,7 +148,7 @@ struct File {
         self.profileAttachment = profileAttachment
     }
 
-    init() {
+    public init() {
         self.fileName = ""
         self.fileExtension = ""
         self.url = URL(fileURLWithPath: "")
@@ -160,58 +160,58 @@ struct File {
         self.profileAttachment = nil
     }
 }
-struct FileInformation {
-    var fileName: String?
-    var fileExtension: FileType?
-    var fileVersionType: FileVersionType
+public struct FileInformation {
+    public var fileName: String?
+    public var fileExtension: FileType?
+    public var fileVersionType: FileVersionType
     
-    init(fileName: String? = nil, fileExtension: FileType? = nil, fileVersionType: FileVersionType) {
+    public init(fileName: String? = nil, fileExtension: FileType? = nil, fileVersionType: FileVersionType) {
         self.fileName = fileName
         self.fileExtension = fileExtension
         self.fileVersionType = fileVersionType
     }
     
-    init() {
+    public init() {
         self.fileName = ""
         self.fileExtension = .pdf
         self.fileVersionType = .english
     }
 }
 // MARK: - Datum
-struct FileDTO : Codable {
-    let files: [FileResponse]
-    let highlightedFilters: HighlightedFilters?
+public struct FileDTO : Codable {
+    public let files: [FileResponse]
+    public let highlightedFilters: HighlightedFilters?
 }
 
-struct HighlightedFilters: Codable {
-    let highlightedCategories, highlightedTypes: [Highlighted]?
+public struct HighlightedFilters: Codable {
+    public let highlightedCategories, highlightedTypes: [Highlighted]?
 }
 
-struct Highlighted: Codable {
-    let value: String
-    let highlightedSubcategories: [HighlightedValue]?
+public struct Highlighted: Codable {
+    public let value: String
+    public let highlightedSubcategories: [HighlightedValue]?
 }
 
-struct HighlightedValue: Codable {
-    let value: String
+public struct HighlightedValue: Codable {
+    public let value: String
 }
 
-struct FileResponse: Codable {
+public struct FileResponse: Codable {
     
-    let attachmentEn: Attachment
-    let dateCreated: String
+    public let attachmentEn: Attachment
+    public let dateCreated: String
     
-    var isPinned: Bool
-    var isAcknowledged: Bool
-    var isAcknowledgement: Bool
-    var acknowledgementColor: String
-    var acknowledgementTitle: String
-    let viewDate: String?
-    let dateModified, categoryName, categoryID: String
-    let version, subCategoryID, name: String
-    let subCategoryName, id: String
-    let versionId: Int
-    let attachmentAr: Attachment
+    public var isPinned: Bool
+    public var isAcknowledged: Bool
+    public var isAcknowledgement: Bool
+    public var acknowledgementColor: String
+    public var acknowledgementTitle: String
+    public let viewDate: String?
+    public let dateModified, categoryName, categoryID: String
+    public let version, subCategoryID, name: String
+    public let subCategoryName, id: String
+    public let versionId: Int
+    public let attachmentAr: Attachment
     
     enum CodingKeys: String, CodingKey {
         case isAcknowledgement,isAcknowledged, attachmentEn, dateCreated, isPinned, dateModified, categoryName,acknowledgementColor,acknowledgementTitle
@@ -228,11 +228,8 @@ struct FileResponse: Codable {
     private func getDate()-> String {
         return viewDate != nil ? viewDate ?? "" : dateModified
     }
-    
-    
-    
-    
-    func toFileModel() -> FileModel {
+  
+    public func toFileModel() -> FileModel {
         return  isArabicCerqel() ? FileModel(id: id, title: attachmentAr.attachmentName ?? "", versionType: fileVersion(), versionId: versionId,fileSize: attachmentAr.attachmentDisplaySize ?? "", fileExtension: attachmentAr.attachmentExtension ?? "", fileCreatedDate: getDate(), isPinned: isPinned, fileURl: attachmentAr.attachmentURL ?? "", fileType: FileType(rawValue:attachmentAr.attachmentExtension ?? "") ?? .pdf, subCategory: SubCategoryModel(id: subCategoryID, name: subCategoryName, category: CategoryModel(id: categoryID, name: categoryName)), fileAcknowledgeStatus: FileAcknowledgeStatus(title: acknowledgementTitle, color: acknowledgementColor, isAcknowledge: isAcknowledgement,isAcknowledged: isAcknowledged) , fileCheckbox: FileCheckBox(),fileUrlAr:attachmentAr.attachmentURL ?? "",fileUrlEn: attachmentEn.attachmentURL ?? "")
         :
         FileModel(id: id, title: attachmentEn.attachmentName ?? "", versionType: fileVersion(), versionId: versionId,fileSize: attachmentEn.attachmentDisplaySize ?? "", fileExtension: attachmentEn.attachmentExtension ?? "", fileCreatedDate: getDate(), isPinned: isPinned, fileURl: attachmentEn.attachmentURL ?? "", fileType: FileType(rawValue:attachmentEn.attachmentExtension ?? "") ?? .pdf, subCategory: SubCategoryModel(id: subCategoryID, name: subCategoryName, category: CategoryModel(id: categoryID, name: categoryName)), fileAcknowledgeStatus:  FileAcknowledgeStatus(title: acknowledgementTitle, color: acknowledgementColor, isAcknowledge: isAcknowledgement,isAcknowledged: isAcknowledged), fileCheckbox: FileCheckBox(),fileUrlAr:attachmentAr.attachmentURL ?? "",fileUrlEn: attachmentEn.attachmentURL ?? "")

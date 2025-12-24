@@ -12,7 +12,7 @@ import Foundation
 extension String {
     
     
-    var to24Hours: String {
+   public var to24Hours: String {
         if let date = Formatter.Hours12.date(from: self) {
             let outputTime = Formatter.Hours24.string(from: date)
             return  outputTime
@@ -20,13 +20,13 @@ extension String {
         return ""
     }
     
-    func convertToDate() -> Date? {
+    public func convertToDate() -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'"
         return dateFormatter.date(from: self)
     }
     
-    func formatToLocalizedDateString() -> String {
+    public  func formatToLocalizedDateString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'"
         
@@ -39,7 +39,7 @@ extension String {
         }
     }
     
-    func formatToLocalizedDateString(formate: String) -> String {
+    public func formatToLocalizedDateString(formate: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSS'Z'"
         
@@ -52,7 +52,7 @@ extension String {
         }
     }
     
-    func formatDateString(currentFormat: DateFormatter,desiredFormat: DateFormatter) -> String? {
+    public func formatDateString(currentFormat: DateFormatter,desiredFormat: DateFormatter) -> String? {
         if let date = currentFormat.date(from: self) {
             let formattedDate = desiredFormat.string(from: date)
             return formattedDate
@@ -60,7 +60,7 @@ extension String {
         return nil
     }
     
-    func formatDateString(desiredFormat: DateFormatter) -> String? {
+    public func formatDateString(desiredFormat: DateFormatter) -> String? {
         if let date = DateFormatter.parseIsoDate(self) {
             let formattedDate = desiredFormat.string(from: date)
             return formattedDate
@@ -72,14 +72,14 @@ extension String {
 
 extension Date {
     
-    func toString() -> String {
+    public func toString() -> String {
         return Formatter.IsoDate.string(from: self)
     }
-    func toString2() -> String {
+    public  func toString2() -> String {
         return Formatter.IsoDate2.string(from: self)
     }
     
-    static func convertTimeToDate(_ timeString: String) -> Date? {
+    static public func convertTimeToDate(_ timeString: String) -> Date? {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -96,7 +96,7 @@ extension Date {
         return nil
     }
     
-    static func currentDateToString(dateFormatter format: String) -> String {
+    static public func currentDateToString(dateFormatter format: String) -> String {
         let currentDate = Date()
         
         let calendar = Calendar.current
@@ -107,29 +107,29 @@ extension Date {
         return dateFormatter.string(from: previousDay)
     }
     
-    static func getCurrentIslamDate() -> String {
+    static public func getCurrentIslamDate() -> String {
         let currentDate = Date()
         return Formatter.islamicFormat.string(from: currentDate)
         
     }
-    static func getCurrentDateWithSpecificFormat() -> String {
+    static public func getCurrentDateWithSpecificFormat() -> String {
         let currentDate = Date()
         return Formatter.specificDate.string(from: currentDate)
     }
     
-    static func getCurrentTime() -> String {
+    static public func getCurrentTime() -> String {
         let currentTime = Date()
         return Formatter.Hours24.string(from: currentTime)
         
     }
-    static func getCurrentTimeWithDate() -> String {
+    static public func getCurrentTimeWithDate() -> String {
         let currentTime = Date()
         return Formatter.Hours24WithDate.string(from: currentTime)
         
     }
     
     
-    static func getTimeDifference(firstTime: String, secondtime: String) -> String {
+    static public func getTimeDifference(firstTime: String, secondtime: String) -> String {
         
         
         guard let date1 = Formatter.Hours24.date(from: firstTime),
@@ -149,7 +149,7 @@ extension Date {
         return String(format: "%02d:%02d:%02d", hourDifference, minuteDifference,secondsDifference)
     }
     
-    static func getHourAndMinutes(time: String) -> DateComponents {
+    static public func getHourAndMinutes(time: String) -> DateComponents {
         
         if  let date = Formatter.Hours12.date(from: time) {
             let calendar = Calendar.current
@@ -160,7 +160,7 @@ extension Date {
         return DateComponents()
     }
     
-    func cerqel_addIntervalToSpecificDate(years: Int? = nil, months: Int? = nil, weeks: Int? = nil, days: Int? = nil, hours: Int? = nil, minutes: Int? = nil, seconds: Int? = nil) -> Date? {
+    public func cerqel_addIntervalToSpecificDate(years: Int? = nil, months: Int? = nil, weeks: Int? = nil, days: Int? = nil, hours: Int? = nil, minutes: Int? = nil, seconds: Int? = nil) -> Date? {
         var dateComponent = DateComponents()
         dateComponent.year = years
         dateComponent.month = months
@@ -178,7 +178,7 @@ extension Date {
 }
 
 extension Formatter {
-    static let islamicFormat: DateFormatter = {
+    static public let islamicFormat: DateFormatter = {
         let calendar = Calendar(identifier: .islamicCivil)
         let formatter = DateFormatter()
         formatter.calendar = calendar
@@ -187,14 +187,14 @@ extension Formatter {
         return formatter
     }()
     
-    static let Hours24: DateFormatter = {
+    static public let Hours24: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "HH:mm"
         return formatter
     }()
     
-    static let IsoDate: DateFormatter = {
+    static public let IsoDate: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = isArabicCerqel() ? dateFormatterLocale_arCerqel : Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
@@ -202,7 +202,7 @@ extension Formatter {
         return formatter
     }()
     
-    static let IsoDate2: DateFormatter = {
+    static public let IsoDate2: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = isArabicCerqel() ? dateFormatterLocale_arCerqel : Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z" // Match the input date string format
@@ -210,7 +210,7 @@ extension Formatter {
         return formatter
     }()
     
-    static let shortIsoData: DateFormatter = {
+    static public let shortIsoData: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = isArabicCerqel() ? dateFormatterLocale_arCerqel : Locale(identifier: "en_US_POSIX")
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
@@ -218,7 +218,7 @@ extension Formatter {
         return formatter
     }()
     
-    static func parseIsoDate(_ dateString: String) -> Date? {
+    static public func parseIsoDate(_ dateString: String) -> Date? {
         let formatters = [IsoDate, IsoDate2,shortIsoData,shortFormat,FileDateFormat]
         for formatter in formatters {
             if let date = formatter.date(from: dateString) {
@@ -228,7 +228,7 @@ extension Formatter {
         return nil
     }
     
-    static let Hours24WithDate: DateFormatter = {
+    static public let Hours24WithDate: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ar")
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
@@ -236,7 +236,7 @@ extension Formatter {
         return formatter
     }()
     
-    static let specificDate: DateFormatter = {
+    static public let specificDate: DateFormatter = {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "ar")
         formatter.dateFormat = ("EEEE, d MMMM yyyy")
@@ -244,7 +244,7 @@ extension Formatter {
         return formatter
     }()
     
-    static let Hours12: DateFormatter = {
+    static public let Hours12: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "h:mm a"
         formatter.locale = Locale(identifier: "en_US_POSIX")
@@ -254,7 +254,7 @@ extension Formatter {
     
     
     
-    static let FileISoFormat: DateFormatter = {
+    static public let FileISoFormat: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         //  formatter.locale = isArabicCerqel() ? dateFormatterLocale_arCerqel : Locale(identifier: "en_US_POSIX")
@@ -263,7 +263,7 @@ extension Formatter {
         return formatter
     }()
     
-    static let FileISoFormat2: DateFormatter = {
+    static public let FileISoFormat2: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z" // Adjusted format
         formatter.locale =  Locale(identifier: "en_US_POSIX")
@@ -272,7 +272,7 @@ extension Formatter {
         return formatter
     }()
     
-    static let FileDateFormat: DateFormatter = {
+    static public let FileDateFormat: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMM, yyyy"
         formatter.locale = isArabicCerqel() ? dateFormatterLocale_arCerqel : Locale(identifier: "en_US_POSIX")
@@ -280,7 +280,7 @@ extension Formatter {
         return formatter
     }()
     
-    static let shortFormat: DateFormatter = {
+    static public let shortFormat: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         formatter.locale = isArabicCerqel() ? dateFormatterLocale_arCerqel : Locale(identifier: "en_US_POSIX")

@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
-class SettingManager {
-   static func openSettings() {
+
+public class SettingManager {
+   static public func openSettings() {
        guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else {
            return
        }

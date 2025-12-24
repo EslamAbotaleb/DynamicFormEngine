@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIApplication {
-    class func cerqel_topVC(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+    public class func cerqel_topVC(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
         if let navigationController = controller as? UINavigationController {
             return cerqel_topVC(controller: navigationController.visibleViewController)
         }

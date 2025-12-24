@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct LoadingView: View {
-    var body: some View {
+public struct LoadingView: View {
+    public var body: some View {
         ZStack (alignment: .top ) {
             Image("background")
                 .resizable()

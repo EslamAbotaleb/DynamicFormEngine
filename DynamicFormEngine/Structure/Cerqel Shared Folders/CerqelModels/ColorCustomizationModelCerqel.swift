@@ -20,7 +20,7 @@ import Foundation
 //
 //}
 
-struct ColorCustomizationModelCerqel: Codable {
+public struct ColorCustomizationModelCerqel: Codable {
     
     var red: Double?
     var green: Double?

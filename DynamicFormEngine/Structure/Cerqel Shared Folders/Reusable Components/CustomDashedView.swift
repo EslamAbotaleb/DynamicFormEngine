@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomDashedView: UIView {
+public class CustomDashedView: UIView {
     
     
     // MARK: - Variables
@@ -28,7 +28,7 @@ class CustomDashedView: UIView {
     
     // MARK: - LifeCycle
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         handleDashBorder()
     }
@@ -38,7 +38,7 @@ class CustomDashedView: UIView {
     
     /// drawing dashborder for the uploaded media
     /// - Parameter dashBorder: drawed border
-    func settingDashBorderUI(dashBorder: CAShapeLayer) {
+    public func settingDashBorderUI(dashBorder: CAShapeLayer) {
         dashBorder.lineWidth = dashWidth
         dashBorder.strokeColor = dashColor.cgColor
         dashBorder.lineDashPattern = [dashLength, betweenDashesSpace] as [NSNumber]
@@ -52,7 +52,7 @@ class CustomDashedView: UIView {
     }
     
     /// setting dashed border for the uploaded media
-    func handleDashBorder() {
+    public func handleDashBorder() {
         dashBorder?.removeFromSuperlayer()
         let dashBorder = CAShapeLayer()
         settingDashBorderUI(dashBorder: dashBorder)

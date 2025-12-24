@@ -14,12 +14,12 @@ import Photos
 
 extension String {
     
-    func cerqel_toURL () -> URL {
+    public func cerqel_toURL () -> URL {
         guard let fileURL = URL(string: self) else { return URL(fileURLWithPath: "") }
         return fileURL
     }
     
-    func convertMinutesToHoursAndMinutes(minutes: Int) -> String {
+    public func convertMinutesToHoursAndMinutes(minutes: Int) -> String {
         let hours = minutes / 60
         let remainingMinutes = minutes % 60
         
@@ -33,7 +33,7 @@ extension String {
         }
     }
     
-    func cerqel_getDateAsStringFromStringWithFormat(format: String) -> String {
+    public func cerqel_getDateAsStringFromStringWithFormat(format: String) -> String {
         var returnedDate: String = ""
         let formatter = DateFormatter()
         formatter.dateFormat = format
@@ -43,7 +43,8 @@ extension String {
         }
         return returnedDate
     }
-    func formattedDateStringToDayMonth(from dateString: String) -> String {
+    
+    public  func formattedDateStringToDayMonth(from dateString: String) -> String {
           let inputFormatter = DateFormatter()
           inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
           
@@ -56,7 +57,8 @@ extension String {
               return ""
           }
       }
-    func cerqel_getDateFromString(isGreenwich: Bool? = false, isCurrentTimeZone: Bool = false) -> Date? {
+    
+    public func cerqel_getDateFromString(isGreenwich: Bool? = false, isCurrentTimeZone: Bool = false) -> Date? {
         
         let dateFormatter = DateFormatter()
 //        if isGreenwich ?? false {
@@ -135,7 +137,7 @@ extension String {
         return nil
     }
     
-    func cerqel_getTimeFromString() -> Date? {
+    public  func cerqel_getTimeFromString() -> Date? {
         var dateToReturn: Date?
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = currentTimeZoneCerqel
@@ -151,7 +153,7 @@ extension String {
         return dateToReturn
     }
     
-    func cerqel_getDateFromStr() -> Date? {
+    public  func cerqel_getDateFromStr() -> Date? {
         let dateFormatter = DateFormatter()
         //dateFormatter.timeZone = .current //TimeZone.current//
         dateFormatter.timeZone = currentTimeZoneCerqel
@@ -163,7 +165,7 @@ extension String {
         return nil
     }
     
-    func cerqel_getDateUseringFormat(format: String)-> Date?{
+    public func cerqel_getDateUseringFormat(format: String)-> Date?{
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = currentTimeZoneCerqel
         dateFormatter.locale = dateFormatterLocal_en_USCerqel
@@ -177,7 +179,7 @@ extension String {
     
   
     
-    func cerqel_getDatePickerFormat(format: String)-> Date?{
+    public func cerqel_getDatePickerFormat(format: String)-> Date?{
         let dateFormatter = DateFormatter()
         dateFormatter.locale = isArabicCerqel() ? dateFormatterLocale_arCerqel : Locale(identifier: "en_US_POSIX")
         
@@ -191,7 +193,7 @@ extension String {
         }
     }
     
-    func handleISOFormat(format: String) -> Date? {
+    public func handleISOFormat(format: String) -> Date? {
         let isoFormatter = ISO8601DateFormatter()
         isoFormatter.formatOptions = [.withFullDate]
         guard let fullDate = isoFormatter.date(from: self) else { return nil }
@@ -205,7 +207,7 @@ extension String {
         return formatter.date(from: dateOnlyString)
     }
     
-    func convertStringDateFormatted() -> String? {
+    public func convertStringDateFormatted() -> String? {
          let dateFormatter = DateFormatter()
          dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
          if let date = dateFormatter.date(from: self) {
@@ -215,7 +217,7 @@ extension String {
          return nil
      }
 
-    func convertStringDateDMY() -> String? {
+    public func convertStringDateDMY() -> String? {
        let date = self.cerqel_getDateFromString()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMM, yyyy"
@@ -229,7 +231,7 @@ extension String {
         }
      }
         
-    func cerqel_slice(from: String, to: String) -> String? {
+    public func cerqel_slice(from: String, to: String) -> String? {
         
         return (range(of: from)?.upperBound).flatMap { substringFrom in
             (range(of: to, range: substringFrom..<endIndex)?.lowerBound).map { substringTo in
@@ -238,7 +240,7 @@ extension String {
         }
     }
     
-    func cerqel_sliceStr(from: String, to: String) -> String? {
+    public func cerqel_sliceStr(from: String, to: String) -> String? {
         return (from.isEmpty ? startIndex..<startIndex : range(of: from)).flatMap { fromRange in
             (to.isEmpty ? endIndex..<endIndex : range(of: to, range: fromRange.upperBound..<endIndex)).map({ toRange in
                 String(self[fromRange.upperBound..<toRange.lowerBound])
@@ -246,19 +248,19 @@ extension String {
         }
     }
         
-    func cerqel_widthOfString(usingFont font: UIFont) -> CGFloat {
+    public  func cerqel_widthOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
         return size.width
     }
 
-    func calculateWidthOfString(_ text: String, font: UIFont) -> CGFloat {
+    public func calculateWidthOfString(_ text: String, font: UIFont) -> CGFloat {
         let attributes: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font]
         let size = (text as NSString).size(withAttributes: attributes)
         return size.width
     }
     
-    func cerqel_isValidEmail() -> Bool {
+    public func cerqel_isValidEmail() -> Bool {
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: self)
@@ -267,7 +269,7 @@ extension String {
 
 
 extension String {
-    var cerqel_htmlToAttributedString: NSAttributedString? {
+    public var cerqel_htmlToAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else { return NSAttributedString()}
         
         do {
@@ -277,13 +279,13 @@ extension String {
             return NSAttributedString()
         }
     }
-    var cerqel_htmlToString: String {
+    public var cerqel_htmlToString: String {
         return cerqel_htmlToAttributedString?.string ?? ""
     }
 }
 
 extension String {
-     var cerqel_convertHtmlToNSAttributedString: NSAttributedString? {
+    public  var cerqel_convertHtmlToNSAttributedString: NSAttributedString? {
         guard let data = data(using: .utf8) else {
             return nil
         }
@@ -312,7 +314,7 @@ extension String {
         return str
     }
     
-    func cerqel_initialsFromString(string: String) -> String {
+    public func cerqel_initialsFromString(string: String) -> String {
         var nameComponents = string.uppercased().components(separatedBy: CharacterSet.letters.inverted)
         nameComponents.removeAll(where: {$0.isEmpty})
         
@@ -477,12 +479,12 @@ extension String {
         return ""
     }
     
-    func cerqel_replace(target: String, withString: String) -> String
+    public func cerqel_replace(target: String, withString: String) -> String
     {
         return self.replacingOccurrences(of: target, with: withString, options: NSString.CompareOptions.literal, range: nil)
     }
 
-    func cerqel_CreateMediaURL()-> String{
+    public func cerqel_CreateMediaURL()-> String{
         return self
         print("CreateMediaURL Old --> \(self)")
         let fManager = "/filemanager"
@@ -510,7 +512,7 @@ extension String {
 
 extension UISwitch {
 
-    func cerqel_set(width: CGFloat, height: CGFloat) {
+    public func cerqel_set(width: CGFloat, height: CGFloat) {
 
         let standardHeight: CGFloat = 31
         let standardWidth: CGFloat = 51
@@ -526,11 +528,11 @@ extension UISwitch {
 extension String {
     private static let cerqel_formatter = NumberFormatter()
 
-    func cerqel_clippingCharacters(in characterSet: CharacterSet) -> String {
+    public func cerqel_clippingCharacters(in characterSet: CharacterSet) -> String {
         components(separatedBy: characterSet).joined()
     }
 
-    func cerqel_convertedDigitsToLocale(_ locale: Locale = .current) -> String {
+    public func cerqel_convertedDigitsToLocale(_ locale: Locale = .current) -> String {
         let digits = Set(cerqel_clippingCharacters(in: CharacterSet.decimalDigits.inverted))
         guard !digits.isEmpty else { return self }
 
@@ -548,10 +550,10 @@ extension String {
         }
     }
     
-    var cerqel_isNumber: Bool {
+    public var cerqel_isNumber: Bool {
         return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
     
-    var cerqel_fullRange:Range<String.Index> { return startIndex..<endIndex }
+    public var cerqel_fullRange:Range<String.Index> { return startIndex..<endIndex }
 
 }

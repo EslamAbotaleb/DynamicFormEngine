@@ -9,12 +9,12 @@ import Foundation
 import UserNotifications
 import AVFoundation
 
-protocol localNotificationDelegate {
+public protocol localNotificationDelegate {
     func didAcceptNotification()
     func didReject(error: Error)
 }
 
-protocol LocalNotificationProtocol {
+public protocol LocalNotificationProtocol {
     func scheduleLocalNotification(file: FileModel)
     func checkNotificationPermission()
     var delegate:localNotificationDelegate? { get set }
@@ -22,12 +22,12 @@ protocol LocalNotificationProtocol {
 
 
 
-class LocalNotificationManager : LocalNotificationProtocol {
+public class LocalNotificationManager : LocalNotificationProtocol {
     
-    var scheduledNotificationIdentifiers: [String] = []
+    public var scheduledNotificationIdentifiers: [String] = []
     
-    static let shared = LocalNotificationManager()
-    var delegate: localNotificationDelegate?
+    static public let shared = LocalNotificationManager()
+    public var delegate: localNotificationDelegate?
     
     
     private init() {
@@ -35,7 +35,7 @@ class LocalNotificationManager : LocalNotificationProtocol {
         
     }
     
-    func requestNotificationAuthorization() {
+    public func requestNotificationAuthorization() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
             if granted {
                 self.delegate?.didAcceptNotification()
@@ -49,7 +49,7 @@ class LocalNotificationManager : LocalNotificationProtocol {
         }
     }
     
-    func checkNotificationPermission() {
+    public func checkNotificationPermission() {
          UNUserNotificationCenter.current().getNotificationSettings { settings in
              if settings.authorizationStatus == .denied {
                  DispatchQueue.main.async {
@@ -63,7 +63,7 @@ class LocalNotificationManager : LocalNotificationProtocol {
          }
      }
     
-    func scheduleLocalNotification(file: FileModel) {
+    public func scheduleLocalNotification(file: FileModel) {
 
         let content = UNMutableNotificationContent()
      
@@ -88,7 +88,7 @@ class LocalNotificationManager : LocalNotificationProtocol {
     }
     
     
-    func cancelNotification(with identifier: String) {
+    public func cancelNotification(with identifier: String) {
         // Remove the identifier from the array
         if let index = scheduledNotificationIdentifiers.firstIndex(of: identifier) {
             scheduledNotificationIdentifiers.remove(at: index)
@@ -96,11 +96,4 @@ class LocalNotificationManager : LocalNotificationProtocol {
         // Cancel the notification
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
     }
-    
-    
-
-   
-    
- 
-    
 }

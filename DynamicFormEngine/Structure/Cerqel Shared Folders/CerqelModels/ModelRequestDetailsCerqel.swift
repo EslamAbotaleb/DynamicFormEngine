@@ -59,11 +59,11 @@ struct ModelRequestDetailsDataCerqel : Codable {
         case isWithdrawal = "isWithdrawal"
     }
     
-    init() {
+    public init() {
     }
 }
 
-struct TakenActionCerqel : Codable {
+public struct TakenActionCerqel : Codable {
     let id : String?
     let name : String?
     let label : String?
@@ -90,7 +90,7 @@ struct TakenActionCerqel : Codable {
     }
 }
 
-struct PreviousActionsCerqel : Codable {
+public struct PreviousActionsCerqel : Codable {
     let id : String?
     let bpmTaskId : String?
     let taskOnUserName : String?
@@ -124,7 +124,7 @@ struct PreviousActionsCerqel : Codable {
 
 }
 
-struct PreviousActionsAttachmentsCerqel : Codable {
+public struct PreviousActionsAttachmentsCerqel : Codable {
     var fileId : String?
     var fileName : String?
     var url : String?
@@ -139,13 +139,13 @@ struct PreviousActionsAttachmentsCerqel : Codable {
         case attExtension = "extension"
         case size = "size"
     }
-    init() {
+    public init() {
         
     }
 
     
 }
-struct ViewFormCerqel : Codable {
+public struct ViewFormCerqel : Codable {
     let formCode : String?
     let name : String?
     let version : Int?
@@ -162,7 +162,7 @@ struct ViewFormCerqel : Codable {
 
 }
 
-struct ReqDetailsAttachmentValueCerqel : Codable, FormValueCerqel {
+public struct ReqDetailsAttachmentValueCerqel : Codable, FormValueCerqel {
     let url : String?
     let attachmentName : String?
     let attachmentExtension : String?
@@ -180,7 +180,7 @@ struct ReqDetailsAttachmentValueCerqel : Codable, FormValueCerqel {
 }
 
 
-struct ActionCerqel : Codable {
+public struct ActionCerqel : Codable {
     let id : String?
     let name : String?
     let label : String?

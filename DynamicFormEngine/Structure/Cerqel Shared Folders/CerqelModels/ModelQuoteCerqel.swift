@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ModelQuoteCerqel: Codable {
+public struct ModelQuoteCerqel: Codable {
     
     var text: String?
         

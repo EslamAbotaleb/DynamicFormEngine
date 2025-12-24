@@ -11,7 +11,7 @@ import UIKit
 
 extension UINavigationController{
     
-    func cerqel_popBack(_ nb: Int) {
+   public func cerqel_popBack(_ nb: Int) {
         let viewControllers: [UIViewController] = self.viewControllers
         guard viewControllers.count < nb else {
             self.popToViewController(viewControllers[viewControllers.count - nb], animated: true)
@@ -19,7 +19,7 @@ extension UINavigationController{
         }
     }
     
-    func popToSpecialViewController(ofClass: AnyClass, animated: Bool) {
+    public func popToSpecialViewController(ofClass: AnyClass, animated: Bool) {
         // Look for existing VC of requested class
         if let targetVC = self.viewControllers.first(where: { $0.isKind(of: ofClass) }) {
             self.popToViewController(targetVC, animated: animated)
@@ -41,7 +41,7 @@ extension UINavigationController{
     }
     
     /// pop back to specific viewcontroller
-    func cerqel_popBack<T: UIViewController>(toControllerType: T.Type) {
+    public func cerqel_popBack<T: UIViewController>(toControllerType: T.Type) {
         var viewControllers: [UIViewController] = self.viewControllers
         viewControllers = viewControllers.reversed()
         for currentViewController in viewControllers {
@@ -52,11 +52,11 @@ extension UINavigationController{
         }
     }
 
-    var cerqel_previousViewController: UIViewController? {
+    public var cerqel_previousViewController: UIViewController? {
         viewControllers.count > 1 ? viewControllers[viewControllers.count - 2] : nil
     }
 
-    func cerqel_setDefaultNavigationAppearance(){
+    public func cerqel_setDefaultNavigationAppearance(){
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.configureWithOpaqueBackground()

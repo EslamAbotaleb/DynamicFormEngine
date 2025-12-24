@@ -9,7 +9,7 @@
 import UIKit
 //import TransitionButton
 
-@objc protocol PickerVCDelegate {
+@objc public protocol PickerVCDelegate {
     @objc optional func didSelect(sender: Any?, index: Int, value: String)
     @objc optional func didSelectDate(sender: Any?, date: Date)
 }
@@ -21,27 +21,27 @@ public class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var titleLbl: UILabel!
 
     //    static var shared = PickerVC()
-    var currentVC: UIViewController!
-    var dataArray: [String] = []
-    var isDate = false
-    var currentDate : Date?
-    var selectedIndex = -1
-    var selectedValue = ""
-    var datePickerMode = UIDatePicker.Mode.dateAndTime
-    var dateCalendarType: Calendar.Identifier = .gregorian
-    var minimumDate: Date?
-    var maximumDate: Date?
-    var pickerTitle: String?
+    public var currentVC: UIViewController!
+    public var dataArray: [String] = []
+    public var isDate = false
+    public var currentDate : Date?
+    public var selectedIndex = -1
+    public var selectedValue = ""
+    public var datePickerMode = UIDatePicker.Mode.dateAndTime
+    public var dateCalendarType: Calendar.Identifier = .gregorian
+    public var minimumDate: Date?
+    public var maximumDate: Date?
+    public var pickerTitle: String?
     private var blackBgView = UIView()
     
     
-    var sender: Any?
-    var delegate: PickerVCDelegate?
+    public var sender: Any?
+    public var delegate: PickerVCDelegate?
     
     
     
-    var didPickDate: ((Date)->())?
-    var didPickValue: ((Int)->())?
+    public var didPickDate: ((Date)->())?
+    public var didPickValue: ((Int)->())?
 
     
     static public func instance() -> DatePickerPopup{
@@ -127,7 +127,7 @@ public class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPicke
         return title
     }
     
-    func show(vc: UIViewController, sender: Any?, array: [String], index: Int, value: String) {
+    public func show(vc: UIViewController, sender: Any?, array: [String], index: Int, value: String) {
         OperationQueue.main.addOperation {
             
             self.currentVC = vc
@@ -149,7 +149,7 @@ public class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPicke
         }
     }
     
-    func showDate(vc: UIViewController, sender: Any?, mode: UIDatePicker.Mode, minimum: Date?, maximum: Date? , currentDate: Date? = nil) {
+    public func showDate(vc: UIViewController, sender: Any?, mode: UIDatePicker.Mode, minimum: Date?, maximum: Date? , currentDate: Date? = nil) {
         OperationQueue.main.addOperation {
             self.currentVC = vc
             //            self.modalPresentationStyle = .overCurrentContext

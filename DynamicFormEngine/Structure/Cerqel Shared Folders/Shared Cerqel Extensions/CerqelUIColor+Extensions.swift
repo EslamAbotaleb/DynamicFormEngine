@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     
-    convenience init(hex: String) {
+    public  convenience init(hex: String) {
           let hex = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
           var rgb: UInt64 = 0
           Scanner(string: hex).scanHexInt64(&rgb)
@@ -62,7 +62,7 @@ extension UIColor {
         return nil
     }
     
-    convenience init(hexStringCerqel:String, alphaCerqel: CGFloat = 1) {
+    public convenience init(hexStringCerqel:String, alphaCerqel: CGFloat = 1) {
         let hexString:String = hexStringCerqel.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let scanner            = Scanner(string: hexString)
         
@@ -85,15 +85,15 @@ extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:alphaCerqel)
     }
     
-    convenience init(rCerqel: Int, gCerqel: Int, bCerqel: Int) {
+    public convenience init(rCerqel: Int, gCerqel: Int, bCerqel: Int) {
         self.init(rCerqel: rCerqel, gCerqel: gCerqel, bCerqel: bCerqel, aCerqel: 1.0)
     }
     
-    convenience init(rCerqel: Int, gCerqel: Int, bCerqel: Int, aCerqel: CGFloat) {
+    public convenience init(rCerqel: Int, gCerqel: Int, bCerqel: Int, aCerqel: CGFloat) {
         self.init(red: CGFloat(rCerqel) / 255.0, green: CGFloat(gCerqel) / 255.0, blue: CGFloat(bCerqel) / 255.0, alpha: aCerqel)
     }
     
-    func toHexStringCerqel() -> String {
+    public func toHexStringCerqel() -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0
         var b:CGFloat = 0
@@ -110,34 +110,34 @@ extension UIColor {
 
 extension UIColor {
     
-    @nonobjc class var whiteCerqel: UIColor {
+    @nonobjc class public var whiteCerqel: UIColor {
         return UIColor(white: 1.0, alpha: 1.0)
     }
 
-    @nonobjc class var errorbgCerqel: UIColor {
+    @nonobjc class public var errorbgCerqel: UIColor {
         return UIColor(rCerqel: 255, gCerqel: 240, bCerqel: 246, aCerqel: 1)
     }
     
-    @nonobjc class var warningCerqel: UIColor {
+    @nonobjc class public var warningCerqel: UIColor {
         return UIColor(rCerqel: 255, gCerqel: 160, bCerqel: 114, aCerqel: 1)
     }
-    @nonobjc class var warningbgCerqel: UIColor {
+    @nonobjc class public var warningbgCerqel: UIColor {
         return UIColor(rCerqel: 255, gCerqel: 240, bCerqel: 246, aCerqel: 1)
     }
   
-    @nonobjc class var grayLightColor: UIColor {
+    @nonobjc class public var grayLightColor: UIColor {
         return UIColor(rCerqel: 245, gCerqel: 245, bCerqel: 245, aCerqel: 1)
     }
     
-    @nonobjc class var SelectCardBGColor: UIColor {
+    @nonobjc class public var SelectCardBGColor: UIColor {
         return UIColor(rCerqel: 245, gCerqel: 250, bCerqel: 255, aCerqel: 1)
     }
     
-    @nonobjc class var alertErrorColor: UIColor {
+    @nonobjc class public var alertErrorColor: UIColor {
         return UIColor(rCerqel: 236, gCerqel: 74, bCerqel: 74, aCerqel: 1)
     }
     
-    @nonobjc class var emptyStateColor: UIColor {
+    @nonobjc class public var emptyStateColor: UIColor {
         return UIColor(rCerqel: 241, gCerqel: 243, bCerqel: 249, aCerqel: 1)
     }
 }

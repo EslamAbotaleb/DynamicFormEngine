@@ -1,5 +1,5 @@
 //
-//  BaseWireFrame.swift
+//  BaseWireFrameDynamicForm.swift
 //  GAZT
 //
 //  Created by iSlam on 10/11/20.
@@ -17,7 +17,7 @@ import Reachability
 import PopupDialog
 import SwiftUI
 
-open class BaseWireFrame<T: BaseViewModel>: BottomSheetVCCerqel {
+ class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
     
     var disposeBag = DisposeBag()
     var viewModel: T!

@@ -7,37 +7,8 @@
 
 import Foundation
 import Promises
-//
-//typealias SelectedCallBack =  ((ListModel)->())
-//typealias MultiSelectedCallBack =  (([ListModel])->())
-//typealias CerqelSelectedCallBack =  ((CerqelListModel)->())
-//
-//class BottomSheetItem: BaseItem,Equatable {
-//
-//    var repo: BaseRepo
-//    var endPoint: EndPointServiceCerqel
-//    var type: BottomSheetType
-//    var isSingleSelection: Bool?
-//    var selectedItem: SelectedCallBack
-//    var multiSelectedItems : MultiSelectedCallBack
-//    
-//    init(repo: BaseRepo,endPoint:EndPointServiceCerqel,type: BottomSheetType,isSingleSelection: Bool? = false, selectedItem: @escaping SelectedCallBack, multiSelectedItems : @escaping MultiSelectedCallBack) {
-//        self.type = type
-//        self.repo = repo
-//        self.endPoint = endPoint
-//        self.isSingleSelection = isSingleSelection
-//        self.selectedItem = selectedItem
-//        self.multiSelectedItems = multiSelectedItems
-//    }
-//
-//    static func == (lhs: BottomSheetItem, rhs: BottomSheetItem) -> Bool {
-//        return true
-//
-//    }
-//
-//}
 
-protocol DocumentLibraryRepo {
+public protocol DocumentLibraryRepo {
     func CategoriesWithChildrens() -> Promise<BaseResponse<[ListModel]>>
     func categories() -> Promise<BaseResponse<[ListModel]>>
     func subCategories(categoryId: String)  -> Promise<BaseResponse<[ListModel]>>
@@ -57,7 +28,7 @@ protocol DocumentLibraryRepo {
 
 }
 
-struct UploadResponseModel: Codable {
+public struct UploadResponseModel: Codable {
     let name, id, fileSize: String?
     let previewURL, downloadURL: String?
     let contentType, documentType: String?
@@ -73,7 +44,7 @@ struct UploadResponseModel: Codable {
     }
 }
 extension UploadResponseModel {
-    func toAttachment() -> Attachment {
+    public func toAttachment() -> Attachment {
         return Attachment(
             attachmentID: id ?? "",
             attachmentType: contentType ?? "",
@@ -88,7 +59,7 @@ extension UploadResponseModel {
         )
     }
     
-    func toProfilePicture() -> ProfilePicture {
+    public func toProfilePicture() -> ProfilePicture {
         let mediaId = id ?? ""
         let fileName = name ?? ""
         let contentType = contentType ?? ""

@@ -9,14 +9,14 @@
 import Foundation
 public import Alamofire
 
-class DownloadManager {
-    static let shared = DownloadManager()
+public class DownloadManager {
+    static public let shared = DownloadManager()
 
     private init() {}
 
     private var activeDownloads: [URL: DownloadRequest] = [:]
 
-    func downloadFiles(from files: [FileModel],  completion: @escaping (FileModel?, Error?) -> Void) {
+    public func downloadFiles(from files: [FileModel],  completion: @escaping (FileModel?, Error?) -> Void) {
         for file in files {
             downloadFile(from: file) { file, error in
                 completion(file, error)
@@ -24,7 +24,7 @@ class DownloadManager {
         }
     }
 
-    func downloadFile(from file: FileModel, completion: @escaping (FileModel?, Error?) -> Void) {
+    public func downloadFile(from file: FileModel, completion: @escaping (FileModel?, Error?) -> Void) {
         guard !activeDownloads.keys.contains(file.fileURl.cerqel_toURL()) else {
             // Already downloading this file
             return
@@ -67,7 +67,7 @@ class DownloadManager {
 
     }
 
-    func cancelDownload(from url: URL) {
+    public func cancelDownload(from url: URL) {
         if let downloadRequest = activeDownloads[url] {
             downloadRequest.cancel()
             activeDownloads.removeValue(forKey: url)

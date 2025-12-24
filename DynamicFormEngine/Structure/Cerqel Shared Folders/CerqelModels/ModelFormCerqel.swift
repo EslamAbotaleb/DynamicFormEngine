@@ -9,15 +9,15 @@
 import Foundation
 import ObjectMapper
 
-let Service_Name_LeavesCerqel = "Leaves"
-let service_Name_NewEmployeeImprovement_PlanCerqel = "newEmployeeImprovementPlan"
-let Service_Name_newEmployeeStatusCerqel = "newEmployeeStatus"
-let Service_Name_newtransferRequestCerqel = "newtransferRequest"
-let Service_Name_EmployeeInfoCerqel = "EmployeeInfo"
+public let Service_Name_LeavesCerqel = "Leaves"
+public let service_Name_NewEmployeeImprovement_PlanCerqel = "newEmployeeImprovementPlan"
+public let Service_Name_newEmployeeStatusCerqel = "newEmployeeStatus"
+public let Service_Name_newtransferRequestCerqel = "newtransferRequest"
+public let Service_Name_EmployeeInfoCerqel = "EmployeeInfo"
 
 
 
-struct ModelFormCerqel : Codable {
+public struct ModelFormCerqel : Codable {
     let requestForm : RequestFormCerqel?
     let serviceName : String?
 
@@ -28,7 +28,7 @@ struct ModelFormCerqel : Codable {
     }
 }
 
-struct ModelNestedFormValueCerqel : Codable, FormValueCerqel {
+public struct ModelNestedFormValueCerqel : Codable, FormValueCerqel {
     let val : [ModelControlCerqel]?
     enum CodingKeys: String, CodingKey {
 
@@ -38,104 +38,98 @@ struct ModelNestedFormValueCerqel : Codable, FormValueCerqel {
 }
 
 
-protocol FormValueCerqel: Codable {}
-
-extension String: FormValueCerqel {}
-extension Bool: FormValueCerqel {}
-
-
-struct ModelControlCerqel : Codable, FormValueCerqel {
-    var options : [OptionsCerqel]?
-    var id : String?
-    var type : ControlType?
-    var format : String?
-    var index : Int?
-    var formCode : String?
-    var value : [FormValueCerqel?]?
-    var readOnly : Bool?
-    var isVisibleInViewMode : Bool?
-    var isRequired : Bool?
-    var isValueDynamic : Bool?
-    var dataSourceType : String?
-    var dataSourceId : String?
-    var name : String?
-    var translations : String?
-    var label : String?
-    var description : String?
-    var placeHolder : String?
-    var dateFromPlaceholder : String?
-    var dateToPlaceholder : String?
-    var timeFromPlaceholder : String?
-    var timeToPlaceholder : String?
-    var isVisible : Bool?
-    var isMultiSelect : Bool?
-    var roles : [String]?
-    var icon : String?
-    var style : StyleCerqel?
-    var validations : [ValidationsCerqel]?
-    var dependencies : [String]?
-    var conditionalView : ConditionalViewCerqel?
-    var isExpanded: Bool = false
-    var isHidden: Bool = false
-    var isValid = false
-    var notValidType: ValidationName?
-    var contentType: ContentType?
-    var filesNumber : Int?
+public struct ModelControlCerqel : Codable, FormValueCerqel {
+    public var options : [OptionsCerqel]?
+    public var id : String?
+    public var type : ControlType?
+    public var format : String?
+    public var index : Int?
+    public var formCode : String?
+    public var value : [FormValueCerqel?]?
+    public var readOnly : Bool?
+    public var isVisibleInViewMode : Bool?
+    public var isRequired : Bool?
+    public var isValueDynamic : Bool?
+    public var dataSourceType : String?
+    public var dataSourceId : String?
+    public var name : String?
+    public var translations : String?
+    public var label : String?
+    public var description : String?
+    public var placeHolder : String?
+    public var dateFromPlaceholder : String?
+    public var dateToPlaceholder : String?
+    public var timeFromPlaceholder : String?
+    public var timeToPlaceholder : String?
+    public var isVisible : Bool?
+    public var isMultiSelect : Bool?
+    public var roles : [String]?
+    public var icon : String?
+    public var style : StyleCerqel?
+    public var validations : [ValidationsCerqel]?
+    public var dependencies : [String]?
+    public var conditionalView : ConditionalViewCerqel?
+    public var isExpanded: Bool = false
+    public var isHidden: Bool = false
+    public var isValid = false
+    public var notValidType: ValidationName?
+    public var contentType: ContentType?
+    public var filesNumber : Int?
     
-    let valuePathEn : String?
-    let valuePathAr : String?
-    let dataSourceUrl : String?
-    let isSubmitted : Bool?
-    let calendarType : CalendarTypeCerqel?
+    public let valuePathEn : String?
+    public let valuePathAr : String?
+    public let dataSourceUrl : String?
+    public let isSubmitted : Bool?
+    public let calendarType : CalendarTypeCerqel?
     /// in Days
-    let maxDate : Int?
+    public let maxDate : Int?
     /// in Days
-    let minDate : Int?
+    public let minDate : Int?
     /// in minutes
-    let maxTime : Int?
+    public let maxTime : Int?
     /// in minutes
-    let minTime : Int?
-    let startMin: DateValidationObject?
-    let startMax: DateValidationObject?
-    let endMin: DateValidationObject?
-    let endMax: DateValidationObject?
-    let isMaxMonth: Bool?
-    let isMinMonth: Bool?
-    let datePlaceholder : String?
-    let timePlaceholder : String?
-    var dateFormat : String?
-    let timeFormat : String?
-    let cascadingChildrenIndexes : [Int]?
-    let cascadingParentIndexes : [Int]?
-    let isLovDataSource : Bool?
-    var relationEquation: RelationEquationCerqel?
-    let multipleValue: Bool?
+    public let minTime : Int?
+    public let startMin: DateValidationObject?
+    public let startMax: DateValidationObject?
+    public let endMin: DateValidationObject?
+    public let endMax: DateValidationObject?
+    public let isMaxMonth: Bool?
+    public let isMinMonth: Bool?
+    public let datePlaceholder : String?
+    public let timePlaceholder : String?
+    public var dateFormat : String?
+    public let timeFormat : String?
+    public let cascadingChildrenIndexes : [Int]?
+    public let cascadingParentIndexes : [Int]?
+    public let isLovDataSource : Bool?
+    public var relationEquation: RelationEquationCerqel?
+    public let multipleValue: Bool?
 
     /// for NestedForm (control -> Table)
-    var controls : [ModelControlCerqel]?
-    var coltrolRow : [[ModelControlCerqel]]?
+    public var controls : [ModelControlCerqel]?
+    public var coltrolRow : [[ModelControlCerqel]]?
     
-    var additionalProperty01: AdditionalPropertyCerqel?
-    var additionalProperty02: AdditionalPropertyCerqel?
-    var additionalProperty03: AdditionalPropertyCerqel?
-    var additionalProperty04: AdditionalPropertyCerqel?
+    public var additionalProperty01: AdditionalPropertyCerqel?
+    public var additionalProperty02: AdditionalPropertyCerqel?
+    public var additionalProperty03: AdditionalPropertyCerqel?
+    public var additionalProperty04: AdditionalPropertyCerqel?
 
     /// to show thumbnail
-    var isImagePreview: Bool?
+    public var isImagePreview: Bool?
     
-    var searchChildrenIndexes: [Int]?
-    var searchMappingModel: String?
-    var dataSourceBaseUrl: String?
+    public var searchChildrenIndexes: [Int]?
+    public var searchMappingModel: String?
+    public var dataSourceBaseUrl: String?
     /// this is a local value not comming from API
-    var searchResultValue: [SearchControlResultCerqel]?
+    public var searchResultValue: [SearchControlResultCerqel]?
     /// this is a local value not comming from API
-    var searchedText: String?
+    public var searchedText: String?
     
-    var mappedValue: String?
+    public var mappedValue: String?
     
     
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
 
         case options = "options"
         case id = "id"
@@ -207,7 +201,7 @@ struct ModelControlCerqel : Codable, FormValueCerqel {
     }
     
     
-     init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         options = try values.decodeIfPresent([OptionsCerqel].self, forKey: .options)
         id = try values.decodeIfPresent(String.self, forKey: .id)
@@ -283,41 +277,60 @@ struct ModelControlCerqel : Codable, FormValueCerqel {
 
 
         switch type{
-//        case .RadioButton, .DropDown:
-//            value = try? values.decodeIfPresent([OptionsCerqel].self, forKey: .value)
-//        case .TextBox, .TextArea, .Link, .Label, .InfoIndicator, .DatePicker, .DateTimePicker, .DateRangePicker, .TimePicker, .DateTimeRangePicker:
-//            value = try? values.decodeIfPresent([String].self, forKey: .value)
-//        case .FileUpload:
-//            value = try? values.decodeIfPresent([ReqDetailsAttachmentValueCerqel].self, forKey: .value)
-//        case .Switch, .CheckBox:
-//            value = try? values.decodeIfPresent([Bool].self, forKey: .value)
-//        case .table:
-//            value = try? values.decodeIfPresent([ModelControlCerqel].self, forKey: .value)
-//
-//
-//        case .customComponent:
-//            if let name = name, name == Service_Name_LeavesCerqel{
-//                value = try? values.decodeIfPresent([LeavesViewValueCerqel].self, forKey: .value)
-//            }else if let name = name, name == Service_Name_newEmployeeStatusCerqel{
-//                value = try? values.decodeIfPresent([newEmployeeStatusValueCerqel].self, forKey: .value)
-//            }else if let name = name, name == Service_Name_newtransferRequestCerqel{
-//                value = try? values.decodeIfPresent([newtransferRequestValueCerqel].self, forKey: .value)
-//            }else if let name = name, name == Service_Name_EmployeeInfoCerqel{
-//                value = try? values.decodeIfPresent([VisitorInfoCerqel].self, forKey: .value)
-//            }else if let name = name, name == service_Name_NewEmployeeImprovement_PlanCerqel{
-//                value = try? values.decodeIfPresent([ImprovementPlanViewValueCerqel].self, forKey: .value)
-//            }
-//            
+            case .RadioButton, .DropDown:
+                if let val = try? values.decodeIfPresent([OptionsCerqel].self, forKey: .value){
+                    value = val
+                }
+            case .TextBox, .TextArea, .Link, .Label, .InfoIndicator, .DatePicker, .DateTimePicker, .DateRangePicker, .TimePicker, .DateTimeRangePicker:
+                if let val = try? values.decodeIfPresent([String].self, forKey: .value){
+                    value = val
+                }
+            case .FileUpload:
+                if let val = try? values.decodeIfPresent([ReqDetailsAttachmentValueCerqel].self, forKey: .value){
+                    value = val
+                }
+            case .Switch, .CheckBox:
+                if let val = try? values.decodeIfPresent([Bool].self, forKey: .value){
+                    value = val
+                }
+            case .table:
+                if let val = try? values.decodeIfPresent([ModelControlCerqel].self, forKey: .value){
+                    value = val
+                }
+
+
+        case .customComponent:
+            if let name = name, name == Service_Name_LeavesCerqel{
+                if let val = try? values.decodeIfPresent([LeavesViewValueCerqel].self, forKey: .value){
+                    value = val
+                }
+            }else if let name = name, name == Service_Name_newEmployeeStatusCerqel{
+                if let val = try? values.decodeIfPresent([newEmployeeStatusValueCerqel].self, forKey: .value){
+                    value = val
+                }
+            }else if let name = name, name == Service_Name_newtransferRequestCerqel{
+                if let val = try? values.decodeIfPresent([newtransferRequestValueCerqel].self, forKey: .value){
+                    value = val
+                }
+            }else if let name = name, name == Service_Name_EmployeeInfoCerqel{
+                if let val = try? values.decodeIfPresent([VisitorInfoCerqel].self, forKey: .value){
+                    value = val
+                }
+            }else if let name = name, name == service_Name_NewEmployeeImprovement_PlanCerqel{
+                if let val = try? values.decodeIfPresent([ImprovementPlanViewValueCerqel].self, forKey: .value){
+                    value = val
+                }
+            }
             
-//            if let val = try? values.decodeIfPresent([LeavesViewValueCerqel].self, forKey: .value){
-//                value = val
-//            }else if let val = try? values.decodeIfPresent([VisitorInfoCerqel].self, forKey: .value){
-//                value = val
-//            }else if let val = try? values.decodeIfPresent([newEmployeeStatusValueCerqel].self, forKey: .value){
-//                value = val
-//            }else if let val = try? values.decodeIfPresent([newtransferRequestValueCerqel].self, forKey: .value){
-//                value = val
-//            }
+            if let val = try? values.decodeIfPresent([LeavesViewValueCerqel].self, forKey: .value){
+                value = val
+            }else if let val = try? values.decodeIfPresent([VisitorInfoCerqel].self, forKey: .value){
+                value = val
+            }else if let val = try? values.decodeIfPresent([newEmployeeStatusValueCerqel].self, forKey: .value){
+                value = val
+            }else if let val = try? values.decodeIfPresent([newtransferRequestValueCerqel].self, forKey: .value){
+                value = val
+            }
             
                 
         default:
@@ -328,14 +341,14 @@ struct ModelControlCerqel : Codable, FormValueCerqel {
         }
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         
     }
 
 
 }
 
-struct AdditionalPropertyCerqel : Codable {
+public struct AdditionalPropertyCerqel : Codable {
     var contentType : String?
     var isRequired : Bool?
     var isVisible : Bool?
@@ -369,7 +382,7 @@ struct AdditionalPropertyCerqel : Codable {
 
 }
 
-struct RequestFormCerqel : Codable {
+public struct RequestFormCerqel : Codable {
     var id : String?
     var name : String?
     var controls : [ModelControlCerqel]?
@@ -387,13 +400,13 @@ struct RequestFormCerqel : Codable {
 }
 
 
-struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
-    var key : String?
-    var text : String?
-    var icon : String?
-    var selectedKey : String?
+public struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
+    public var key : String?
+    public var text : String?
+    public var icon : String?
+    public var selectedKey : String?
     
-    var isSelected: Bool = false
+    public var isSelected: Bool = false
 
     enum CodingKeys: String, CodingKey {
 
@@ -403,12 +416,12 @@ struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
         case selectedKey
     }
     
-    func encode(to encoder: Encoder) throws {}
+    public func encode(to encoder: Encoder) throws {}
 
-    init(){}
-    init?(map: Map) {}
+    public init(){}
+    public init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
 //        key <- map["key"]
 //        text <- map["text"]
 
@@ -417,7 +430,7 @@ struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
 
 }
 
-struct ConditionalViewCerqel : Codable {
+public struct ConditionalViewCerqel : Codable {
     var validConditions : Int?
     var conditions : [ModelconditionCerqel]?
     var minimumAcceptableConditionsNumber: Int?
@@ -430,7 +443,7 @@ struct ConditionalViewCerqel : Codable {
     }
 }
 
-struct StyleCerqel : Codable {
+public struct StyleCerqel : Codable {
     var border : String?
     var borderType : String?
     var borderColor : String?
@@ -453,7 +466,7 @@ struct StyleCerqel : Codable {
     }
 }
 
-struct ValidationsCerqel : Codable {
+public struct ValidationsCerqel : Codable {
     var name : ValidationName?
     var value : String?
     var message : String?
@@ -467,7 +480,7 @@ struct ValidationsCerqel : Codable {
     }
 }
 
-struct ModelconditionCerqel : Codable {
+public struct ModelconditionCerqel : Codable {
     var parentFieldId : String?
     var parentFieldIndex : Int?
     var validationName : ValidationName?
@@ -485,14 +498,14 @@ struct ModelconditionCerqel : Codable {
 }
 
 
-enum CalendarTypeCerqel: String, Codable{
+public enum CalendarTypeCerqel: String, Codable{
     case Gregorian
     case Hijri
     case Gregorian_Hijri = "Gregorian/Hijri"
 }
 
 
-struct LeavesViewValueCerqel : Codable, FormValueCerqel {
+public struct LeavesViewValueCerqel : Codable, FormValueCerqel {
     let actionType : String?
     let externalCode : String?
     let startDate : String?
@@ -534,7 +547,7 @@ struct LeavesViewValueCerqel : Codable, FormValueCerqel {
         case requestingHours
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         actionType = try values.decodeIfPresent(String.self, forKey: .actionType)
         externalCode = try values.decodeIfPresent(String.self, forKey: .externalCode)
@@ -559,7 +572,7 @@ struct LeavesViewValueCerqel : Codable, FormValueCerqel {
 
 }
 
-struct ImprovementPlanViewValueCerqel : Codable, FormValueCerqel {
+public struct ImprovementPlanViewValueCerqel : Codable, FormValueCerqel {
     let businessUnitName : String?
     let departmentName : String?
     let effectiveDateFrom : String?
@@ -581,7 +594,7 @@ struct ImprovementPlanViewValueCerqel : Codable, FormValueCerqel {
         case requestType = "requestType"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         businessUnitName = try values.decodeIfPresent(String.self, forKey: .businessUnitName)
         departmentName = try values.decodeIfPresent(String.self, forKey: .departmentName)
@@ -597,7 +610,7 @@ struct ImprovementPlanViewValueCerqel : Codable, FormValueCerqel {
 
 
 
-struct leaveAttttValueCerqel : Codable {
+public struct leaveAttttValueCerqel : Codable {
     let value : [AttachmentsCerqel]?
 
     enum CodingKeys: String, CodingKey {
@@ -606,7 +619,7 @@ struct leaveAttttValueCerqel : Codable {
     }
 }
 
-struct ViewLeaves_NameKeyCerqel : Codable {
+public struct ViewLeaves_NameKeyCerqel : Codable {
     let key : String?
     let nameAr : String?
     let nameEn : String?
@@ -619,7 +632,7 @@ struct ViewLeaves_NameKeyCerqel : Codable {
     }
 }
 
-struct ReplacementUserCerqel : Codable {
+public struct ReplacementUserCerqel : Codable {
     let nKey : String?
     let name : String?
     let email : String?
@@ -631,7 +644,7 @@ struct ReplacementUserCerqel : Codable {
         case email = "Email"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         nKey = try values.decodeIfPresent(String.self, forKey: .nKey)
         name = try values.decodeIfPresent(String.self, forKey: .name)
@@ -641,8 +654,7 @@ struct ReplacementUserCerqel : Codable {
 }
 
 
-
-struct RelationEquationCerqel : Codable {
+public struct RelationEquationCerqel : Codable {
     let paramsIndexes : [Int]?
     let resultIndexes : [Int]?
     let equation : String?
@@ -661,7 +673,7 @@ struct RelationEquationCerqel : Codable {
 
 
 
-struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
+public struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
     var name : String?
     var mobileNumber : String?
     var nationalPassport : String?
@@ -673,20 +685,20 @@ struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
         case nationalPassport = "nationalPassport"
     }
     
-    func encode(to encoder: Encoder) throws {}
+    public func encode(to encoder: Encoder) throws {}
 
     
-    init(){}
-    init?(map: Map) {}
+    public init(){}
+    public init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         name <- map["name"]
         mobileNumber <- map["mobileNumber"]
         nationalPassport <- map["nationalPassport"]
 
     }
 
-    func validate()-> Bool{
+    public func validate()-> Bool{
         if let _ = name, let _ = nationalPassport, let _ = mobileNumber{
             return true
         }
@@ -695,7 +707,7 @@ struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
 }
 
 
-struct newEmployeeStatusValueCerqel: Codable, FormValueCerqel {
+public struct newEmployeeStatusValueCerqel: Codable, FormValueCerqel {
     let requestType : ModelKeyTextCerqel?
     let effectiveDateFrom : String?
     let employeeId : String?
@@ -717,7 +729,7 @@ struct newEmployeeStatusValueCerqel: Codable, FormValueCerqel {
         case reasonsJustifications = "reasonsJustifications"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         requestType = try values.decodeIfPresent(ModelKeyTextCerqel.self, forKey: .requestType)
         effectiveDateFrom = try values.decodeIfPresent(String.self, forKey: .effectiveDateFrom)
@@ -731,7 +743,7 @@ struct newEmployeeStatusValueCerqel: Codable, FormValueCerqel {
 
 }
 
-struct ModelKeyTextCerqel : Codable {
+public struct ModelKeyTextCerqel : Codable {
     let key : String?
     let text : String?
 
@@ -745,7 +757,7 @@ struct ModelKeyTextCerqel : Codable {
 }
 
 
-struct newtransferRequestValueCerqel: Codable, FormValueCerqel {
+public struct newtransferRequestValueCerqel: Codable, FormValueCerqel {
     let requestType : ModelKeyTextCerqel?
     let effectiveDatefrom : String?
     let lastUpdatedDate : String?
@@ -784,22 +796,22 @@ struct newtransferRequestValueCerqel: Codable, FormValueCerqel {
 }
 
 
-protocol SearchControlResultCerqel: FormValueCerqel {
+public protocol SearchControlResultCerqel: FormValueCerqel {
     var isSelected: Bool { set get}
     var presentedText: String { set get}
 }
 
 
-struct SearchControlResult_EmployeeModelCerqel : Codable, Mappable, SearchControlResultCerqel {
+public struct SearchControlResult_EmployeeModelCerqel : Codable, Mappable, SearchControlResultCerqel {
     
-    var name : String?
-    var arabicName : String?
-    var email : String?
-    var department : String?
-    var phone : String?
-    var employeePF : String?
-    var isSelected: Bool = false
-    var presentedText: String = ""
+    public var name : String?
+    public var arabicName : String?
+    public var email : String?
+    public var department : String?
+    public var phone : String?
+    public var employeePF : String?
+    public var isSelected: Bool = false
+    public var presentedText: String = ""
 
 
     enum CodingKeys: String, CodingKey {
@@ -812,11 +824,11 @@ struct SearchControlResult_EmployeeModelCerqel : Codable, Mappable, SearchContro
         case arabicName
     }
     
-    init?(map: Map) {
+    public init?(map: Map) {
         
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         name <- map["name"]
         arabicName <- map["arabicName"]
         email <- map["email"]
@@ -827,7 +839,7 @@ struct SearchControlResult_EmployeeModelCerqel : Codable, Mappable, SearchContro
     }
     
 
-    static func DTO(data: [[String: Any]]) -> [SearchControlResult_EmployeeModelCerqel]{
+    static public func DTO(data: [[String: Any]]) -> [SearchControlResult_EmployeeModelCerqel]{
         var arr = Mapper<SearchControlResult_EmployeeModelCerqel>().mapArray(JSONArray: data)
         if arr.count > 0{
             for i in 0 ... arr.count - 1{
@@ -841,6 +853,6 @@ struct SearchControlResult_EmployeeModelCerqel : Codable, Mappable, SearchContro
 }
 
 
-enum SearchControlResultTypesCerqel: String{
+public enum SearchControlResultTypesCerqel: String{
     case EmployeeModel
 }

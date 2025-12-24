@@ -11,16 +11,16 @@ import YPImagePicker
 import Photos
 import PhotosUI
 
-class PickImageManager: PickImageProtocol {
+public class PickImageManager: PickImageProtocol {
     
     var viewController: UIViewController
     
-    init(_ currentViewController: UIViewController) {
+    public init(_ currentViewController: UIViewController) {
         self.viewController = currentViewController
         
     }
     
-    func selectSingleImage(imageSource:[YPPickerScreen] ,image: @escaping (UIImage) -> Void) {
+    public func selectSingleImage(imageSource:[YPPickerScreen] ,image: @escaping (UIImage) -> Void) {
         var config = YPImagePickerConfiguration()
         config.screens = imageSource
         config.hidesStatusBar = false
@@ -59,7 +59,7 @@ class PickImageManager: PickImageProtocol {
         viewController.present(picker, animated: false, completion: nil)
     }
     
-    func selectImage(maxNum: Int, completionBlock: @escaping (_ images :[YPMediaItem] )->Void) {
+    public func selectImage(maxNum: Int, completionBlock: @escaping (_ images :[YPMediaItem] )->Void) {
         var config = YPImagePickerConfiguration()
         config.screens = [.library,.photo]
         config.hidesStatusBar = false
@@ -75,7 +75,7 @@ class PickImageManager: PickImageProtocol {
         viewController.present(picker, animated: false, completion: nil)
     }
     
-    func selectMedia(screens:[YPPickerScreen],mediaType:YPlibraryMediaType,completionBlock: @escaping (_ video :[YPMediaItem] )->Void) {
+    public func selectMedia(screens:[YPPickerScreen],mediaType:YPlibraryMediaType,completionBlock: @escaping (_ video :[YPMediaItem] )->Void) {
         
         var config = YPImagePickerConfiguration()
         config.screens = screens
@@ -99,7 +99,7 @@ class PickImageManager: PickImageProtocol {
 
 extension PickImageManager {
     
-    func getAssetSizeInMB(asset: PHAsset, completion: @escaping (Double) -> Void) {
+    public func getAssetSizeInMB(asset: PHAsset, completion: @escaping (Double) -> Void) {
         let resources = PHAssetResource.assetResources(for: asset)
         if let resource = resources.first,
            let fileSize = resource.value(forKey: "fileSize") as? CLong {
@@ -110,7 +110,7 @@ extension PickImageManager {
     }
 
     
-    func isSizeAllowed(img: UIImage) -> Bool {
+    public func isSizeAllowed(img: UIImage) -> Bool {
         var imageSize = 0
         if let imgData = img.jpeg(.highest) {
             imageSize = imgData.count / 1024 / 1024
@@ -118,7 +118,7 @@ extension PickImageManager {
         return imageSize <= 4
     }
     
-    func showToast(message: String) {
+    public func showToast(message: String) {
         guard let window = UIApplication.shared.windows.first else { return }
 
         let toast = UILabel()

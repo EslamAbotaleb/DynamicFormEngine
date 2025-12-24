@@ -8,74 +8,79 @@
 
 import Foundation
 
-struct FilesEndPoint: Endpoint {
+public struct FilesEndPoint: Endpoint {
     
-    var urlPrefix: String = ""
-    var service: EndpointService = .allFiles
-    var method: EndpointMethod = .post
-    var encoding: EndpointEncoding = .json
-    var auth: AuthorizationHandler = UserAuthoriationHandler()
-    var parameters: [String: Any] = [:]
-    var headers: [String: String] = [:]
+    public var urlPrefix: String = ""
+    public var service: EndpointService = .allFiles
+    public var method: EndpointMethod = .post
+    public var encoding: EndpointEncoding = .json
+    public var auth: AuthorizationHandler = UserAuthoriationHandler()
+    public var parameters: [String: Any] = [:]
+    public var headers: [String: String] = [:]
     
-    init(cerqelFilterPayload: CerqelFilterPayload ) {
+    public var multipart: [MultiPartModel] {
+        []
+    }
+    
+    public init(cerqelFilterPayload: CerqelFilterPayload ) {
         parameters = cerqelFilterPayload.asDictionary()
         
     }
 }
 
 
-struct EndPointFilterRequest: Codable {
+public struct EndPointFilterRequest: Codable {
     var pageNumber: Int
     var pageSize: Int
     
 }
 
-struct CerqelFilterPayload: Codable {
-    var pageNumber: Int?
-    var pageSize: Int?
-    var filter: Filter?
-    var SearchKeyword: String?
-    var from : String?
-    var to: String?
-    var isAcknowledgement: Bool?
-    var isPinned: Bool?
-    var categoriesIds: [String]?
-    var subCategoriesIds: [String]?
-    var fileTypesIds: [String]?
-    var toggles: [[String:Bool]]?
-    var orderByValue: [OrderByValue]?
-    var orderBy: Int?
+public struct CerqelFilterPayload: Codable {
+    public var pageNumber: Int?
+    public var pageSize: Int?
+    public var filter: Filter?
+    public var SearchKeyword: String?
+    public var from : String?
+    public var to: String?
+    public var isAcknowledgement: Bool?
+    public var isPinned: Bool?
+    public var categoriesIds: [String]?
+    public var subCategoriesIds: [String]?
+    public var fileTypesIds: [String]?
+    public var toggles: [[String:Bool]]?
+    public var orderByValue: [OrderByValue]?
+    public var orderBy: Int?
+    public init() {}
 }
 
 // MARK: - Filter
 
-struct Filter: Codable {
-    var searchKeyword: String?
-    var categoryID: [String]?
-    var subCategoryID: [String]?
-    var fileType: [String]?
-    var isAcknowledgement: Bool?
-    var isRecent: Bool?
-    var isPinned: Bool?
-    var isGrouped : Bool?
-    var isFavorite : Bool?
-    var from: String?
-    var to: String?
-    var updatedDateFrom: String?
-    var updatedDateTo: String?
-    var categoryId: String?
-    var isActive: Bool?
+public struct Filter: Codable {
+    public var searchKeyword: String?
+    public var categoryID: [String]?
+    public var subCategoryID: [String]?
+    public var fileType: [String]?
+    public var isAcknowledgement: Bool?
+    public var isRecent: Bool?
+    public var isPinned: Bool?
+    public var isGrouped : Bool?
+    public var isFavorite : Bool?
+    public var from: String?
+    public var to: String?
+    public var updatedDateFrom: String?
+    public var updatedDateTo: String?
+    public var categoryId: String?
+    public var isActive: Bool?
 }
 
 
-struct SuggestionPayload: Codable {
+public struct SuggestionPayload: Codable {
     var searchKeyword: String
 }
 
 
 // MARK: - OrderByValue
-struct OrderByValue: Codable {
+public struct OrderByValue: Codable {
     let colID, sort: String?
     
     enum CodingKeys: String, CodingKey {
@@ -86,7 +91,7 @@ struct OrderByValue: Codable {
 
 // MARK: - OrderBy
 
-enum OrderBy: Int {
+public enum OrderBy: Int {
     case Newest = 1
     case Oldest = 2
     case A_Z = 3

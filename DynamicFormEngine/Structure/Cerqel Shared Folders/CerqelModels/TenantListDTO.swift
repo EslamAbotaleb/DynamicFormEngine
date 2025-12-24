@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TenantListDTO : Codable {
+public struct TenantListDTO : Codable {
     var tenantId : String? = ""
     var tenantName : String? = ""
     var tenantLogo: String? = ""
@@ -37,7 +37,7 @@ struct TenantListDTO : Codable {
         case colors = "colors"
         case isSelected
     }
-    init(tenantId: String = "", tenantName: String = "",tenantLogo: String = "", isSelected: Bool? ) {
+    public init(tenantId: String = "", tenantName: String = "",tenantLogo: String = "", isSelected: Bool? ) {
         self.tenantId = tenantId
         self.tenantName = tenantName
         self.tenantLogo = tenantLogo
@@ -47,7 +47,7 @@ struct TenantListDTO : Codable {
 }
 
 // MARK: - Attachment
-struct TenantAttachment: Codable {
+public struct TenantAttachment: Codable {
     var attachmentExtension, uploadID, name: String?
     var size: Double?
     var type: String?

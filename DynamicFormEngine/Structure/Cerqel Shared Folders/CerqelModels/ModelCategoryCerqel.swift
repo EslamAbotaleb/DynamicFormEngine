@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct ModelCategoryDataCerqel : Codable {
+public struct ModelCategoryDataCerqel : Codable {
     let id : String?
     let parentId : String?
     let name : String?

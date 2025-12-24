@@ -8,9 +8,7 @@
 
 import Foundation
 
-import Foundation
-
-protocol AuthorizationHandler {
+public protocol AuthorizationHandler {
     var tokenHeader: [String: String] { get }
     var clientHeader: [String: String] { get }
     var uidHeader: [String: String] { get }

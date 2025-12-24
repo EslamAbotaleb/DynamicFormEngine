@@ -11,7 +11,7 @@ import MobileCoreServices
 import DropDown
 
 
-class FormBuilderVC: BaseWireFrame<FormBuilderViewModel> {
+class FormBuilderVC: BaseWireFrameDynamicForm<FormBuilderViewModel> {
 
 //    @IBOutlet weak var bgTopView: UIView!
 //    @IBOutlet weak var bgBottomView: UIView!

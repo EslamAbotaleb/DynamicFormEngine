@@ -12,7 +12,7 @@ import Kingfisher
 
 extension UIImageView {
     
-    func loadWebImageWithUrl(imageUrl: String, placeHolder: UIImage = UIImage(named: "empty-dummy")!, completion: @escaping (()->())) {
+    public func loadWebImageWithUrl(imageUrl: String, placeHolder: UIImage = UIImage(named: "empty-dummy")!, completion: @escaping (()->())) {
         let image = ("" + imageUrl)
         let urlStr = image.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
         loadWebImage(imageUrl: urlStr!, placeHolder: placeHolder) {
@@ -52,7 +52,7 @@ extension UIImageView {
             }
     }
     
-    func cerqel_LoadImgWithUrl(imgUrl: String?, brokenImgName: String = "empty-dummy", completion: @escaping (()->())) {
+    public func cerqel_LoadImgWithUrl(imgUrl: String?, brokenImgName: String = "empty-dummy", completion: @escaping (()->())) {
         self.tintColor = primaryMain
         self.kf.indicatorType = .activity
         
@@ -91,7 +91,7 @@ extension UIImageView {
         })
     }
     
-    func cerqel_loadImage(from url: URL?, placeHolderImage: UIImage? = nil) {
+    public func cerqel_loadImage(from url: URL?, placeHolderImage: UIImage? = nil) {
         let modifier = AnyModifier { request in
             var r = request
             
@@ -104,7 +104,7 @@ extension UIImageView {
         //    })
     }
     
-    func cerqel_resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
+    public func cerqel_resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
         let size = image.size
         
         let widthRatio  = targetSize.width  / size.width
@@ -130,7 +130,7 @@ extension UIImageView {
         return newImage
     }
     
-    func cerqel_resizedImage(at url: URL, for size: CGSize) -> UIImage?
+    public func cerqel_resizedImage(at url: URL, for size: CGSize) -> UIImage?
     {
         guard let image = UIImage(contentsOfFile: url.path) else {
             return nil
@@ -142,13 +142,13 @@ extension UIImageView {
 
 extension UIImage {
     
-    func cerqel_resized(to size: CGSize) -> UIImage {
+    public func cerqel_resized(to size: CGSize) -> UIImage {
         return UIGraphicsImageRenderer(size: size).image { _ in
             draw(in: CGRect(origin: .zero, size: size))
         }
     }
     
-    func cerqel_resizeImageTo(size: CGSize) -> UIImage? {
+    public func cerqel_resizeImageTo(size: CGSize) -> UIImage? {
         
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         self.draw(in: CGRect(origin: CGPoint.zero, size: size))
@@ -157,7 +157,7 @@ extension UIImage {
         return resizedImage
     }
     
-    func cerqel_scalePreservingAspectRatio(targetSize: CGSize) -> UIImage {
+    public func cerqel_scalePreservingAspectRatio(targetSize: CGSize) -> UIImage {
         // Determine the scale factor that preserves aspect ratio
         let widthRatio = targetSize.width / size.width
         let heightRatio = targetSize.height / size.height
@@ -184,7 +184,7 @@ extension UIImage {
         return scaledImage
     }
     
-    enum ImageFormat: String {
+    public  enum ImageFormat: String {
         case jpeg = "jpg"
         case png = "png"
         case gif = "gif"
@@ -193,7 +193,7 @@ extension UIImage {
     }
     
     /// Detect actual format from Data
-    var imageFormat: ImageFormat {
+    public var imageFormat: ImageFormat {
         guard let data = self.pngData() ?? self.jpegData(compressionQuality: 1.0) else {
             return .unknown
         }

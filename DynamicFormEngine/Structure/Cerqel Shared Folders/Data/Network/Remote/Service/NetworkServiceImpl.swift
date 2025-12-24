@@ -12,9 +12,7 @@ import Reachability
 import SwiftyJSON
 import CommonCrypto
 
-
-
-protocol EndpointExecuter {
+public protocol EndpointExecuter {
     func execute(_ endpoint: Endpoint) -> Promise<NetworkServiceResponse>
     func cancelUpload(_ fileVersionType: FileVersionType) -> Void
     func uploadMultipart(_ endpoint: Endpoint,progressCallBack: @escaping UploadProgrssCallBack) -> Promise<NetworkServiceResponse>
@@ -26,17 +24,17 @@ protocol EndpointExecuter {
     func performRequest(_ request: URLRequest, completion: @escaping (BaseError?) -> Void)
 }
 
-protocol ReachabilityProtocol {
+public protocol ReachabilityProtocol {
     func connection() -> Reachability.Connection?
 }
 
-class NetworkServiceImpl: Network {
+public class NetworkServiceImpl: Network {
 
 
-    var endpointExecuter: EndpointExecuter = AlamofireService()
-    var reachability: ReachabilityProtocol = ReachabilityImpl()
+    public var endpointExecuter: EndpointExecuter = AlamofireService()
+    public var reachability: ReachabilityProtocol = ReachabilityImpl()
 
-    func callModel<Model: Codable>(_ model: Model.Type, endpoint: Endpoint) -> Promise<Model> {
+    public func callModel<Model: Codable>(_ model: Model.Type, endpoint: Endpoint) -> Promise<Model> {
         return Promise<Model>(on: .main) { fulfill, reject in
             self.call(endpoint: endpoint)
                 .then({ (data) in
@@ -73,7 +71,7 @@ class NetworkServiceImpl: Network {
 
 
 
-    func uploadModel<Model: Codable>(_ model: Model.Type, endpoint: Endpoint,progressCallBack: @escaping UploadProgrssCallBack) -> Promise<Model> {
+    public func uploadModel<Model: Codable>(_ model: Model.Type, endpoint: Endpoint,progressCallBack: @escaping UploadProgrssCallBack) -> Promise<Model> {
         return Promise<Model>(on: .main) { fulfill, reject in
             self.upload(endpoint: endpoint, progressCallBack: progressCallBack)
                 .then({ (data) in
@@ -102,7 +100,7 @@ class NetworkServiceImpl: Network {
         }
     }
 
-    func downloadModel( filesUrl: [String]) -> Promise<URL> {
+    public func downloadModel( filesUrl: [String]) -> Promise<URL> {
         return Promise<URL>(on: .main) { fulfill, reject in
             self.download(filesUrl)
                 .then({ (fileUrl) in
@@ -127,7 +125,7 @@ class NetworkServiceImpl: Network {
         }
     }
 
-    func call(endpoint: Endpoint) -> Promise<Data> {
+    public func call(endpoint: Endpoint) -> Promise<Data> {
         return Promise<Data>(on: .main) { fulfill, reject in
             self.endpointExecuter.execute(endpoint)
                 .then({ (response) in
@@ -182,11 +180,11 @@ class NetworkServiceImpl: Network {
         }
     }
 
-    func cancelUpload(_ fileVersionType: FileVersionType) {
+    public func cancelUpload(_ fileVersionType: FileVersionType) {
         self.endpointExecuter.cancelUpload(fileVersionType)
     }
     
-    func uploadProfileUpdate(
+    public func uploadProfileUpdate(
         payload: [ProfileSections: Any],
         completion: @escaping (Error?) -> Void
     ) {
@@ -250,23 +248,22 @@ class NetworkServiceImpl: Network {
 
 }
 
-struct NetworkServiceResponse {
-    var data: Data
-    var statusCode: Int?
-    var headers: [AnyHashable: Any]?
+public struct NetworkServiceResponse {
+    public var data: Data
+    public var statusCode: Int?
+    public var headers: [AnyHashable: Any]?
 }
 
-class ReachabilityImpl: ReachabilityProtocol {
-
-    func connection() -> Reachability.Connection? {
+public class ReachabilityImpl: ReachabilityProtocol {
+    public func connection() -> Reachability.Connection? {
         return Reachability()?.connection
     }
 }
 
-struct HeaderResponse: Codable {
-    var token: String?
-    var client: String?
-    var uid: String?
+public struct HeaderResponse: Codable {
+    public var token: String?
+    public var client: String?
+    public var uid: String?
 
     enum CodingKeys: String, CodingKey {
         case token = "access-token"

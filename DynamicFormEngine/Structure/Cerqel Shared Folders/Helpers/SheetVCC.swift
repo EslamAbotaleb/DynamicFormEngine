@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+public class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var stringsArray: [String] = []
     var titleText: String = ""
@@ -15,7 +15,7 @@ class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let tableView = UITableView()
     let titleLabel = UILabel()
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
@@ -53,11 +53,11 @@ class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     // UITableViewDataSource Methods
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stringsArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = stringsArray[indexPath.row]
@@ -65,7 +65,7 @@ class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     // UITableViewDelegate Methods
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

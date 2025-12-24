@@ -8,8 +8,7 @@
 
 import Foundation
 
-struct MultiPartModel {
-    var data: Data
-    var fileName, mimeType, keyName: String
-    
+public struct MultiPartModel {
+    public var data: Data
+    public var fileName, mimeType, keyName: String
 }

@@ -9,10 +9,10 @@
 import Foundation
 
 
-struct ModelServiceResponseCerqel : Codable {
-    var data : ModelServicesCerqel? = nil
-    var arrData : [ModelServicesCerqel]? = []
-    var totalCount: Int = 0
+public struct ModelServiceResponseCerqel : Codable {
+    public var data : ModelServicesCerqel? = nil
+    public var arrData : [ModelServicesCerqel]? = []
+    public var totalCount: Int = 0
     
     enum CodingKeys: String, CodingKey {
 
@@ -21,7 +21,7 @@ struct ModelServiceResponseCerqel : Codable {
     }
 
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
 //        data = try values.decodeIfPresent(ModelNewsDataCerqel.self, forKey: .data)
         
@@ -59,13 +59,13 @@ struct ModelServiceResponseCerqel : Codable {
 
 }
 
-struct ModelServiceSubCategoryDataCerqel : Codable {
-    var services : [ModelServicesCerqel]?
-    let id : String?
-    let parentId : String?
-    let parentCategoryName : String?
-    let name : String?
-    let imageUrl : String?
+public struct ModelServiceSubCategoryDataCerqel : Codable {
+    public var services : [ModelServicesCerqel]?
+    public let id : String?
+    public let parentId : String?
+    public let parentCategoryName : String?
+    public let name : String?
+    public let imageUrl : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -80,15 +80,15 @@ struct ModelServiceSubCategoryDataCerqel : Codable {
 
 }
 
-struct OwnerCerqel : Codable {
-    let ownerEmail : String?
-    let ownerJobTitleAr : String?
-    let ownerJobTitleEn : String?
-    let ownerNameAr : String?
-    let ownerNameEn : String?
-    let photo : String?
-    let ownerDepartmentNameAr : String?
-    let ownerDepartmentNameEN : String?
+public struct OwnerCerqel : Codable {
+    public let ownerEmail : String?
+    public let ownerJobTitleAr : String?
+    public let ownerJobTitleEn : String?
+    public let ownerNameAr : String?
+    public let ownerNameEn : String?
+    public let photo : String?
+    public let ownerDepartmentNameAr : String?
+    public let ownerDepartmentNameEN : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -104,23 +104,23 @@ struct OwnerCerqel : Codable {
 
 }
 
-struct ModelServicesCerqel : Codable {
-    let id : String?
-    let name : String?
-    let displayName : String?
-    let listName : String?
-    let businessServiceName : String?
-    let description : String?
-    let owner : OwnerCerqel?
-    let categoryName : String?
-    let termsAndConditionsAr : String?
-    let termsAndConditionsEn : String?
-    let imageUrl : String?
-    let isListed : Bool?
-    var isFavorite : Bool?
-    let hasSubService: Bool?
-    var isSelected: Bool = false
-    var subServicesList: [ModelServicesCerqel]?
+public struct ModelServicesCerqel : Codable {
+    public let id : String?
+    public let name : String?
+    public let displayName : String?
+    public let listName : String?
+    public let businessServiceName : String?
+    public let description : String?
+    public let owner : OwnerCerqel?
+    public let categoryName : String?
+    public let termsAndConditionsAr : String?
+    public let termsAndConditionsEn : String?
+    public let imageUrl : String?
+    public let isListed : Bool?
+    public var isFavorite : Bool?
+    public let hasSubService: Bool?
+    public var isSelected: Bool = false
+    public var subServicesList: [ModelServicesCerqel]?
 
     enum CodingKeys: String, CodingKey {
 

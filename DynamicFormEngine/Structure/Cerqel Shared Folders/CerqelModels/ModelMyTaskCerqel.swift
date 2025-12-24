@@ -8,9 +8,7 @@
 
 import Foundation
 
-
-
-struct ModelMyTaskDataCerqel : Codable {
+public struct ModelMyTaskDataCerqel : Codable {
     let id : String?
     let requestId : String?
     let employee : EmployeeCerqel?
@@ -45,7 +43,7 @@ struct ModelMyTaskDataCerqel : Codable {
 
 }
 
-struct StatusCerqel: Codable {
+public struct StatusCerqel: Codable {
     let id : String?
 
     enum CodingKeys: String, CodingKey {
@@ -54,7 +52,7 @@ struct StatusCerqel: Codable {
     }
 }
 
-struct EmployeeCerqel : Codable {
+public struct EmployeeCerqel : Codable {
     let id : String?
     let personId : String?
     let name : String?
@@ -75,7 +73,7 @@ struct EmployeeCerqel : Codable {
     }
 }
 
-struct RequestPendingOnCerqel : Codable {
+public struct RequestPendingOnCerqel : Codable {
     let id : String?
     let name : String?
     let pendingOnCode : String?

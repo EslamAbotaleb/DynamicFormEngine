@@ -8,24 +8,23 @@
 
 import Foundation
 
-
-struct CerqelFilterModelCerqel {
+public struct CerqelFilterModelCerqelDynamicForm {
     var orignalDateRangeFilter: CerqelDateRangeFilterCerqel?
     var dateRangeFilter: CerqelDateRangeFilterCerqel?
-    var categories: [CerqelFilterCategoryCerqel]? = []
+    var categories: [CerqelFilterCategoryCerqelDynamicForm]? = []
 //    var selectedSections: [FilterSection]? = []
 }
 
-struct CerqelFilterCategoryCerqel {
-    var selectedCategories: [CerqelCategoriesCerqel] = []
+public struct CerqelFilterCategoryCerqelDynamicForm {
+    var selectedCategories: [CerqelCategoriesCerqelDynamicForm] = []
     var representation: CerqelCheckBoxRepresentation
     var isAnotherLvl: Bool
 //    var filterCategoriesType: CerqelFilterCategoriesSectionEnum
 }
 
-struct CerqelCategoriesCerqel: Codable,Equatable {
+public struct CerqelCategoriesCerqelDynamicForm: Codable,Equatable {
     var id, name: String?
-    var subCategories:[CerqelCategoriesCerqel]?
+    var subCategories:[CerqelCategoriesCerqelDynamicForm]?
     var isSelected: Bool = false
     var representation: CerqelCheckBoxRepresentation = .CheckBox
     
@@ -35,8 +34,7 @@ struct CerqelCategoriesCerqel: Codable,Equatable {
     }
 }
 
-
-struct CerqelDateRangeFilterCerqel {
-    var date1: Date?
-    var date2: Date?
+public struct CerqelDateRangeFilterCerqel {
+    public var date1: Date?
+    public var date2: Date?
 }

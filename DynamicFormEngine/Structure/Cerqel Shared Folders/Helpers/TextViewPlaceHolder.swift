@@ -6,9 +6,6 @@
 //  Copyright © 2017 khalid. All rights reserved.
 //
 
-
-
-
 import UIKit
 @IBDesignable class TextViewPlaceHolder: UITextView {
 

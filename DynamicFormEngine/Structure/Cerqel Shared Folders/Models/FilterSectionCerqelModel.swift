@@ -9,26 +9,26 @@
 import Foundation
 import Promises
 
-struct CerqelFilterCallBack {
-    var searchText: String?
-    var categoryId: String?
-    var HighlightedFilters : HighlightedFilters?
-    var dateRangeFilter: CerqelDateRangeFilterCerqel?
-    var selectedSections: [CerqelFilterSection]? = []
+public struct CerqelFilterCallBack {
+    public var searchText: String?
+    public var categoryId: String?
+    public var HighlightedFilters : HighlightedFilters?
+    public var dateRangeFilter: CerqelDateRangeFilterCerqel?
+    public var selectedSections: [CerqelFilterSection]? = []
 }
 
-struct CerqelFilterSection: Equatable,Hashable {
-    var id: Int
-    var sectionTitle: String
-    var sectionType: CerqelFilterSectionsType
-    var filterCategoriesType: CerqelFilterCategoriesType?
-    var items: [CerqelCategoriesModel]?
-    var collapsed: Bool? = true
+public struct CerqelFilterSection: Equatable,Hashable {
+    public var id: Int
+    public var sectionTitle: String
+    public var sectionType: CerqelFilterSectionsType
+    public var filterCategoriesType: CerqelFilterCategoriesType?
+    public var items: [CerqelCategoriesModel]?
+    public var collapsed: Bool? = true
 //    var endPoint: Promise<BaseResponse<[ListModel]>>?
-    var endPoint: EndpointService?
+    public var endPoint: EndpointService?
     
     
-    init(id: Int, sectionTitle: String, sectionType: CerqelFilterSectionsType, filterCategoriesType: CerqelFilterCategoriesType? = nil, items: [CerqelCategoriesModel]? = nil, collapsed: Bool = true, endPoint: EndpointService = .pin) {
+    public init(id: Int, sectionTitle: String, sectionType: CerqelFilterSectionsType, filterCategoriesType: CerqelFilterCategoriesType? = nil, items: [CerqelCategoriesModel]? = nil, collapsed: Bool = true, endPoint: EndpointService = .pin) {
         self.id = id
         self.sectionTitle = sectionTitle
         self.sectionType = sectionType
@@ -39,7 +39,7 @@ struct CerqelFilterSection: Equatable,Hashable {
     }
     
     
-    init() {
+    public init() {
         self.id = 0
         self.sectionTitle = ""
         self.sectionType = .categories(.single)
@@ -50,32 +50,31 @@ struct CerqelFilterSection: Equatable,Hashable {
         self.collapsed = true
     }
     
-    func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
     
-    static func == (lhs: CerqelFilterSection, rhs: CerqelFilterSection) -> Bool {
+    static public func == (lhs: CerqelFilterSection, rhs: CerqelFilterSection) -> Bool {
         return lhs.id == rhs.id
     }
     
 }
 
-enum CategoryLevel {
+public enum CategoryLevel {
     case multi
     case single
 }
 
-enum ToggleValue {
+public enum ToggleValue {
     case on
     case off
     
-    init(_ value: Bool) {
+    public init(_ value: Bool) {
            self = value ? .on : .off
        }
 }
 
-enum CerqelFilterSectionsType: Equatable{
-    
+public enum CerqelFilterSectionsType: Equatable{
     case dateRangeFilter
     case categories(CategoryLevel)
     case toggle (ToggleValue)
@@ -83,7 +82,7 @@ enum CerqelFilterSectionsType: Equatable{
 }
 
 
-enum CerqelFilterCategoriesType: CaseIterable {
+public enum CerqelFilterCategoriesType: CaseIterable {
     case offersCategories
     case categories
     case subCategories
@@ -106,12 +105,12 @@ public enum CerqelCheckBoxRepresentation {
     case Radio
 }
 
-struct CerqelCategoriesModel: Codable,Equatable {
-    var id, name: String?
-    var subCategories:[CerqelCategoriesModel]?
-    var isSelected: Bool = false
-    var isHighlighted: Bool = false
-    var representation: CerqelCheckBoxRepresentation = .CheckBox
+public struct CerqelCategoriesModel: Codable,Equatable {
+    public var id, name: String?
+    public var subCategories:[CerqelCategoriesModel]?
+    public var isSelected: Bool = false
+    public var isHighlighted: Bool = false
+    public var representation: CerqelCheckBoxRepresentation = .CheckBox
     
     enum CodingKeys: String, CodingKey {
         case id

@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Endpoint {
+public protocol Endpoint {
     var service: EndpointService {get set}
     var urlPrefix: String {get set}
     // var endpointVersion: Versions {get set}
@@ -20,14 +20,14 @@ protocol Endpoint {
     var multipart: [MultiPartModel] {get }
 }
 
-enum EndpointEncoding {
+public enum EndpointEncoding {
     case json
     case query
 }
 
 
 
-enum EndpointMethod: String {
+public enum EndpointMethod: String {
     case get
     case post
     case put
@@ -35,7 +35,7 @@ enum EndpointMethod: String {
     case patch
 }
 
-enum EndpointService {
+public enum EndpointService {
 
     // document library
     case categories

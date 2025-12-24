@@ -27,39 +27,39 @@ import Foundation
 //}
 
 
-struct CategoryModel {
+public struct CategoryModel {
     var id: String
     var name: String
     
-    init(id: String, name: String) {
+    public init(id: String, name: String) {
         self.id = id
         self.name = name
     }
-    init(){
+    public init(){
         self.id = ""
         self.name = ""
     }
   
 }
 
-struct SubCategoryModel: Hashable {
+public struct SubCategoryModel: Hashable {
     var id: String
     var name: String
     var category: CategoryModel
     
-    init(id: String, name: String, category: CategoryModel) {
+    public init(id: String, name: String, category: CategoryModel) {
         self.id = id
         self.name = name
         self.category = category
     }
     
     // Implementing Hashable and Equatable conformance
-     func hash(into hasher: inout Hasher) {
+    public func hash(into hasher: inout Hasher) {
          hasher.combine(id)
          hasher.combine(name)
      }
      
-     static func == (lhs: SubCategoryModel, rhs: SubCategoryModel) -> Bool {
+     static public func == (lhs: SubCategoryModel, rhs: SubCategoryModel) -> Bool {
          return lhs.id == rhs.id && lhs.name == rhs.name
      }
 

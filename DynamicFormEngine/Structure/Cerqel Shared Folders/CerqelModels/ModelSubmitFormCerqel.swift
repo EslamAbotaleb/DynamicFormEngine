@@ -9,19 +9,19 @@
 import Foundation
 import ObjectMapper
 
-struct ModelSubmitFormCerqel : Mappable {
+public struct ModelSubmitFormCerqel : Mappable {
     var payload : [SubmitFormPayloadCerqel]?
     var formCode : String?
     var formVersion : Int?
     var onBehalf : Bool?
     var createdForUsername : String?
 
-    init(){}
-    init?(map: Map) {
+    public init(){}
+    public init?(map: Map) {
 
     }
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
 
         payload <- map["payload"]
         formCode <- map["formCode"]
@@ -33,15 +33,15 @@ struct ModelSubmitFormCerqel : Mappable {
 }
 
 
-struct SubmitFormPayloadCerqel : Mappable {
+public struct SubmitFormPayloadCerqel : Mappable {
     var id : String?
     var name : String?
     var value : [[String: Any]]?
     var type : String?
     var label : String?
 
-    init(){}
-    init(control: ModelControlCerqel){
+    public init(){}
+    public init(control: ModelControlCerqel){
         id = control.id
         name = control.name
         type = control.type?.rawValue
@@ -60,11 +60,11 @@ struct SubmitFormPayloadCerqel : Mappable {
             value = nil
         }
     }
-    init?(map: Map) {
+    public init?(map: Map) {
 
     }
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
 
         id <- map["id"]
         name <- map["name"]

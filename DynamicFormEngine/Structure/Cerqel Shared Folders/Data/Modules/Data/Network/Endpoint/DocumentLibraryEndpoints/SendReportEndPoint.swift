@@ -8,32 +8,34 @@
 
 import Foundation
 
-struct SendReportEndPoint: Endpoint {
+public struct SendReportEndPoint: Endpoint {
    
-   var urlPrefix: String = ""
-   var service: EndpointService = .sendReport
-   var method: EndpointMethod = .post
-   var encoding: EndpointEncoding = .json
-   var auth: AuthorizationHandler = UserAuthoriationHandler()
-   var parameters: [String: Any] = [:]
-   var headers: [String: String] = [:]
-   
-    init(reportRequest: ReportRequest ) {
-        urlPrefix  = urlPrefix + "/\(reportRequest.fileId)" 
+    public var urlPrefix: String = ""
+    public var service: EndpointService = .sendReport
+    public var method: EndpointMethod = .post
+    public var encoding: EndpointEncoding = .json
+    public var auth: AuthorizationHandler = UserAuthoriationHandler()
+    public var parameters: [String: Any] = [:]
+    public var headers: [String: String] = [:]
+    public var multipart: [MultiPartModel] {
+        []
+    }
+    
+    public init(reportRequest: ReportRequest ) {
+        urlPrefix  = urlPrefix + "/\(reportRequest.fileId)"
         parameters["reason"] = reportRequest.reason.asDictionary()
        
    }
 }
 
 
-struct ReportRequest: Codable {
-    var fileId: String
-    var reason: ReasonRequest
+public struct ReportRequest: Codable {
+    public var fileId: String
+    public var reason: ReasonRequest
  
 }
-struct ReasonRequest: Codable {
-    var id: String
-    var reasonMessage: String
- 
+public struct ReasonRequest: Codable {
+    public var id: String
+    public var reasonMessage: String
 }
 

@@ -10,20 +10,20 @@ import UIKit
 
 extension UITextField{
 
-    func setLeftPaddingPoints(_ amount:CGFloat){
+    public func setLeftPaddingPoints(_ amount:CGFloat){
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
         self.leftView = paddingView
         self.leftViewMode = .always
     }
 
-    func setRightPaddingPoints(_ amount:CGFloat) {
+    public func setRightPaddingPoints(_ amount:CGFloat) {
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
         self.rightView = paddingView
         self.rightViewMode = .always
     }
 
 
-    func cerqel_addIconView(img: UIImage, isRight: Bool = false){
+    public func cerqel_addIconView(img: UIImage, isRight: Bool = false){
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 20))
         let imgV = UIImageView(frame: CGRect(x: 13, y: 3, width: 14, height: 14))
         view.addSubview(imgV)
@@ -40,7 +40,7 @@ extension UITextField{
 
     }
 
-    func cerqel_addEmptyView(isLeft: Bool, width: Int){
+    public func cerqel_addEmptyView(isLeft: Bool, width: Int){
         let view = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 20))
         if isLeft{
             self.leftView = view
@@ -52,7 +52,7 @@ extension UITextField{
     }
 
 
-    func cerqel_addTitleView(isLeft: Bool, width: Int, text: String, txtColor: UIColor){
+    public func cerqel_addTitleView(isLeft: Bool, width: Int, text: String, txtColor: UIColor){
         let lbl = UILabel(frame: CGRect(x: 4, y: 0, width: width, height: 20))
         lbl.text = text
         lbl.textColor = txtColor
@@ -67,13 +67,13 @@ extension UITextField{
         }
     }
 
-    enum cerqel_PaddingSpace {
+    public enum cerqel_PaddingSpace {
         case left(CGFloat)
         case right(CGFloat)
         case equalSpacing(CGFloat)
     }
 
-    func cerqel_addPadding(padding: cerqel_PaddingSpace) {
+    public  func cerqel_addPadding(padding: cerqel_PaddingSpace) {
 
         self.leftViewMode = .always
         self.layer.masksToBounds = true

@@ -9,15 +9,15 @@
 import Foundation
 import UIKit
 
-class IntrinsicCollectionView: UICollectionView {
-    override func layoutSubviews() {
+public class IntrinsicCollectionView: UICollectionView {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         if !__CGSizeEqualToSize(bounds.size, self.intrinsicContentSize) {
             self.invalidateIntrinsicContentSize()
         }
     }
     
-    override var intrinsicContentSize: CGSize {
+    override public var intrinsicContentSize: CGSize {
         return contentSize
     }
 }

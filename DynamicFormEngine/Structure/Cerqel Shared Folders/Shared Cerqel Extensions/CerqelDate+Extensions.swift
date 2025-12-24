@@ -10,7 +10,7 @@ import Foundation
 
 extension Date{
     
-    func setTimeCerqel(hour: Int, min: Int, sec: Int, timeZoneAbbrev: String = "UTC") -> Date? {
+    public func setTimeCerqel(hour: Int, min: Int, sec: Int, timeZoneAbbrev: String = "UTC") -> Date? {
         let x: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
         let cal = Calendar.current
         var components = cal.dateComponents(x, from: self)
@@ -23,7 +23,7 @@ extension Date{
         return cal.date(from: components)
     }
 
-    func addingDaysCerqel(days: Int)-> Date?{
+    public func addingDaysCerqel(days: Int)-> Date?{
         let currentDate = Date()
         var dateComponent = DateComponents()
         dateComponent.day = days
@@ -32,7 +32,7 @@ extension Date{
 
     }
     
-    func addingMonthsCerqel(months: Int)-> Date?{
+    public func addingMonthsCerqel(months: Int)-> Date?{
         let currentDate = Date()
         var dateComponent = DateComponents()
         dateComponent.month = months
@@ -41,7 +41,7 @@ extension Date{
 
     }
     
-    func addingMinutesCerqel(minutes: Int)-> Date?{
+    public func addingMinutesCerqel(minutes: Int)-> Date?{
         let currentDate = Date()
         var dateComponent = DateComponents()
         dateComponent.minute = minutes
@@ -50,7 +50,7 @@ extension Date{
 
     }
     
-    func dayDifferenceFromTodayCerqel() -> Int {
+    public func dayDifferenceFromTodayCerqel() -> Int {
         let calendar = Calendar.current
         let startOfNow = calendar.startOfDay(for: Date())
         let startOfTimeStamp = calendar.startOfDay(for: self)
@@ -61,14 +61,14 @@ extension Date{
     }
     
     
-    func numberOfDaysBetweenCerqel(_ from: Date, and to: Date) -> Int? {
+    public func numberOfDaysBetweenCerqel(_ from: Date, and to: Date) -> Int? {
         let fromDate = Calendar.current.startOfDay(for: from)
         let toDate = Calendar.current.startOfDay(for: to)
         let numberOfDays = Calendar.current.dateComponents([.day], from: fromDate, to: toDate)
         return numberOfDays.day
     }
     
-    func startOfMonthCerqel() -> Date {
+    public func startOfMonthCerqel() -> Date {
         return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
     }
     
@@ -76,19 +76,19 @@ extension Date{
         return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonthCerqel())!
     }
     
-    func addMinTodateCerqel(minutes: Int) -> Date? {
+    public func addMinTodateCerqel(minutes: Int) -> Date? {
         return Calendar.current.date(byAdding: .minute, value: minutes, to: self)
     }
     
-    func isEqualToCerqel(_ date: Date) -> Bool {
+    public func isEqualToCerqel(_ date: Date) -> Bool {
         return self == date
     }
     
-    func isGreaterThanCerqel(_ date: Date) -> Bool {
+    public func isGreaterThanCerqel(_ date: Date) -> Bool {
         return self > date
     }
     
-    func isSmallerThanCerqel(_ date: Date) -> Bool {
+    public func isSmallerThanCerqel(_ date: Date) -> Bool {
         return self < date
     }
     
@@ -96,7 +96,7 @@ extension Date{
 
 extension Date {
     
-    var month_MMCerqel: String {
+    public var month_MMCerqel: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM"
         if isArabicCerqel() {
@@ -107,7 +107,7 @@ extension Date {
         return dateFormatter.string(from: self)
     }
 
-    var monthCerqel: String {
+    public var monthCerqel: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM"
         if isArabicCerqel() {
@@ -118,14 +118,14 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
-    var dayCerqel: String {
+    public var dayCerqel: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd"
         dateFormatter.locale = Locale(identifier: "en")
         return dateFormatter.string(from: self)
     }
     
-    var fullMonthCerqel: String {
+    public var fullMonthCerqel: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM"
         if isArabicCerqel()  {
@@ -136,7 +136,7 @@ extension Date {
         return dateFormatter.string(from: self)
     }
 
-    var yearCerqel: String {
+    public  var yearCerqel: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy"
         if isArabicCerqel() {
@@ -150,7 +150,7 @@ extension Date {
 
 class TimeCerqel: Comparable, Equatable {
     
-    init(_ dateCerqel: Date) {
+    public init(_ dateCerqel: Date) {
         //get the current calender
         let calendar = Calendar.current
         
@@ -166,7 +166,7 @@ class TimeCerqel: Comparable, Equatable {
         minuteCerqel = dateComponents.minute!
     }
     
-    init(_ hourCerqel: Int, _ minuteCerqel: Int) {
+    public init(_ hourCerqel: Int, _ minuteCerqel: Int) {
         //calculate the seconds since the beggining of the day for comparisions
         let dateSeconds = hourCerqel * 3600 + minuteCerqel * 60
         
@@ -220,7 +220,7 @@ class TimeCerqel: Comparable, Equatable {
 }
 
 extension Date {
-    var timeCerqel: TimeCerqel {
+     var timeCerqel: TimeCerqel {
         return TimeCerqel(self)
     }
 }

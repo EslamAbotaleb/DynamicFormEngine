@@ -349,18 +349,18 @@ public struct ModelControlCerqel : Codable, FormValueCerqel {
 }
 
 public struct AdditionalPropertyCerqel : Codable {
-    var contentType : String?
-    var isRequired : Bool?
-    var isVisible : Bool?
-    var id : String?
-    var label : String?
-    var name : String?
-    var placeHolder : String?
-    var readOnly : Bool?
-    var translations : String?
-    var type : String?
-    var value : String?
-    var validations : [ValidationsCerqel]?
+    public var contentType : String?
+    public var isRequired : Bool?
+    public var isVisible : Bool?
+    public var id : String?
+    public var label : String?
+    public var name : String?
+    public var placeHolder : String?
+    public var readOnly : Bool?
+    public var translations : String?
+    public var type : String?
+    public var value : String?
+    public var validations : [ValidationsCerqel]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -383,11 +383,11 @@ public struct AdditionalPropertyCerqel : Codable {
 }
 
 public struct RequestFormCerqel : Codable {
-    var id : String?
-    var name : String?
-    var controls : [ModelControlCerqel]?
-    var formCode : String?
-    var version : Int?
+    public var id : String?
+    public var name : String?
+    public var controls : [ModelControlCerqel]?
+    public var formCode : String?
+    public var version : Int?
 
     enum CodingKeys: String, CodingKey {
 

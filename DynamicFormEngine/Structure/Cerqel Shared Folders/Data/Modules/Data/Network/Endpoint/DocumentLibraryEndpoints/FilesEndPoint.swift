@@ -51,6 +51,17 @@ public struct CerqelFilterPayload: Codable {
     public var orderByValue: [OrderByValue]?
     public var orderBy: Int?
     public init() {}
+    
+    public init(
+        filter: Filter?,
+        SearchKeyword: String?,
+        from: String?,
+        to: String?) {
+        self.filter = filter
+        self.SearchKeyword = SearchKeyword
+        self.from = from
+        self.to = to
+    }
 }
 
 // MARK: - Filter
@@ -74,7 +85,7 @@ public struct Filter: Codable {
     
     public init() {}
     
-    init(searchKeyword: String?,from: String?,to: String?) {
+    public init(searchKeyword: String?,from: String?,to: String?) {
         self.searchKeyword = searchKeyword
         self.from = from
         self.to = to

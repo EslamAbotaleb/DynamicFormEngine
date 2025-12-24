@@ -9,11 +9,11 @@ import UIKit
 
 public class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var stringsArray: [String] = []
-    var titleText: String = ""
+    public var stringsArray: [String] = []
+    public var titleText: String = ""
     
-    let tableView = UITableView()
-    let titleLabel = UILabel()
+    public let tableView = UITableView()
+    public let titleLabel = UILabel()
     
     override public func viewDidLoad() {
         super.viewDidLoad()

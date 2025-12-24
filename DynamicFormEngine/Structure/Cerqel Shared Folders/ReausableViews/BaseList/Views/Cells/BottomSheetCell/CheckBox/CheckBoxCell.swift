@@ -8,16 +8,16 @@
 
 import UIKit
 
-class CheckBoxCell: UITableViewCell {
+public class CheckBoxCell: UITableViewCell {
     @IBOutlet weak var checkIcon: UIImageView!
     @IBOutlet weak var checkSortNameLbl: UILabel!
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override public func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
 //        self.checkIcon.image = isSelected ? UIImage(named: "Checkbox Checked") : UIImage(named: "Checkbox Unchecked")

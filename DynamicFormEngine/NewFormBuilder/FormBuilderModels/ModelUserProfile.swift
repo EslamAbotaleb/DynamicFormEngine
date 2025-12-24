@@ -9,10 +9,10 @@
 import Foundation
 public import ObjectMapper
 
-struct ModelPerviewUser : Codable {
-    var data : UserProfileInfoAD? = nil
-    var arrData : [UserProfileInfoAD]? = []
-    var totalCount: Int = 0
+public struct ModelPerviewUser : Codable {
+    public var data : UserProfileInfoAD? = nil
+    public var arrData : [UserProfileInfoAD]? = []
+    public var totalCount: Int = 0
     
     enum CodingKeys: String, CodingKey {
 
@@ -21,7 +21,7 @@ struct ModelPerviewUser : Codable {
     }
 
     
-    init(from decoder: Decoder) throws {
+    public  init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         
         do {
@@ -41,34 +41,34 @@ struct ModelPerviewUser : Codable {
 
 }
 
-struct ModelUserProfileData : Codable {
-    let id : String?
-    let employeeId : String?
-    let personId : String?
-    let name : String?
-    let givenName : String?
-    let jobTitle : String?
-    let mail : String?
-    let departmentName : String?
-    let phone : String?
-    let photo : String?
-    let imageURL : String?
-    let isActive : Bool?
-    let permissions : [String]?
-    var userProfileInfoERP : UserProfileInfoERP?
-    let userProfileInfoAD : UserProfileInfoAD?
-    let tiktokUser: String?
-    let instagramUser: String?
-    let linkedInUser: String?
-    let facebookUser: String?
-    let twitterUser: String?
-    let bcid: String?
-    let nameEn: String?
-    let hasAttendanceAccess: Bool?
-    let displayNameERP: String?
-    let mailNickname: String?
-    let checkUserDetails: CheckUserDetail?
-    let trimvoUserDetails: TrimvoUserDetails?
+public struct ModelUserProfileData : Codable {
+    public let id : String?
+    public let employeeId : String?
+    public let personId : String?
+    public let name : String?
+    public let givenName : String?
+    public let jobTitle : String?
+    public let mail : String?
+    public let departmentName : String?
+    public let phone : String?
+    public let photo : String?
+    public let imageURL : String?
+    public let isActive : Bool?
+    public let permissions : [String]?
+    public var userProfileInfoERP : UserProfileInfoERP?
+    public let userProfileInfoAD : UserProfileInfoAD?
+    public let tiktokUser: String?
+    public let instagramUser: String?
+    public let linkedInUser: String?
+    public let facebookUser: String?
+    public let twitterUser: String?
+    public let bcid: String?
+    public let nameEn: String?
+    public let hasAttendanceAccess: Bool?
+    public let displayNameERP: String?
+    public let mailNickname: String?
+    public let checkUserDetails: CheckUserDetail?
+    public let trimvoUserDetails: TrimvoUserDetails?
     
     
     enum CodingKeys: String, CodingKey {
@@ -95,11 +95,11 @@ struct ModelUserProfileData : Codable {
 }
 
 // MARK: - CheckUserDetail
-struct CheckUserDetail: Codable {
-    let roleID: Int?
-    let roleNameAr, roleNameEn: String?
-    let isEndUser, isUnitMember, enableLiveInspection: Bool?
-    let permissions: [CheckPermission]?
+public struct CheckUserDetail: Codable {
+    public let roleID: Int?
+    public let roleNameAr, roleNameEn: String?
+    public let isEndUser, isUnitMember, enableLiveInspection: Bool?
+    public let permissions: [CheckPermission]?
 
     enum CodingKeys: String, CodingKey {
         case roleID = "roleId"
@@ -108,11 +108,11 @@ struct CheckUserDetail: Codable {
 }
 
 // MARK: - Permission
-struct CheckPermission: Codable {
-    let moduleID: Int?
-    let accessType: String?
-    let viewPermission, createPermission, updatePermission: Bool?
-    let viewPriority: String?
+public struct CheckPermission: Codable {
+    public let moduleID: Int?
+    public let accessType: String?
+    public let viewPermission, createPermission, updatePermission: Bool?
+    public let viewPriority: String?
 
     enum CodingKeys: String, CodingKey {
         case moduleID = "moduleId"
@@ -121,17 +121,17 @@ struct CheckPermission: Codable {
 }
 
 // MARK: - TrimvoUserDetails
-struct TrimvoUserDetails: Codable {
-    let email, userID, userName, fullName: String?
-    let userSource, departmentID: Int?
-    let departmentName, departmentNameAr: String?
-    let positionID: Int?
-    let positionName, positionNameAr: String?
-    let status, userRole, recievedPoints, givenPoints: Int?
-    let profilePicture: String?
-    let facebook, mobileNumber, phoneNumber, twitter: String?
-    let topTags: [TopTag]?
-    let receivingState, sendingState: Int?
+public struct TrimvoUserDetails: Codable {
+    public let email, userID, userName, fullName: String?
+    public let userSource, departmentID: Int?
+    public let departmentName, departmentNameAr: String?
+    public let positionID: Int?
+    public let positionName, positionNameAr: String?
+    public let status, userRole, recievedPoints, givenPoints: Int?
+    public let profilePicture: String?
+    public let facebook, mobileNumber, phoneNumber, twitter: String?
+    public let topTags: [TopTag]?
+    public let receivingState, sendingState: Int?
 
     enum CodingKeys: String, CodingKey {
         case email
@@ -148,11 +148,11 @@ struct TrimvoUserDetails: Codable {
 }
 
 // MARK: - TopTag
-struct TopTag: Codable {
-    let tagID: Int?
-    let name, nameAr, color: String?
-    let count: Int?
-    let imageName: String?
+public struct TopTag: Codable {
+    public let tagID: Int?
+    public let name, nameAr, color: String?
+    public let count: Int?
+    public let imageName: String?
     enum CodingKeys: String, CodingKey {
         case tagID = "tagId"
         case imageName = "image"
@@ -160,9 +160,9 @@ struct TopTag: Codable {
     }
 }
 
-struct UserProfileInfoERP : Codable {
-    let header : Header?
-    let data : ProfileInfoData?
+public struct UserProfileInfoERP : Codable {
+    public let header : Header?
+    public let data : ProfileInfoData?
 
     enum CodingKeys: String, CodingKey {
 
@@ -172,19 +172,19 @@ struct UserProfileInfoERP : Codable {
 
 }
 
-struct PersonalInfo : Codable {
-    let userId : String?
-    let name : Name?
-    let nameArabic : NameArabic?
-    let username : String?
-    let nationalId : String?
-    let salutation : Salutation?
-    let maritalStatus : MaritalStatus?
-    let nationality : Nationality?
-    let gender : String?
-    let secondNationality : SecondNationality?
-    let nativePreferredLang : NativePreferredLang?
-    let effectiveDate: String?
+public struct PersonalInfo : Codable {
+    public let userId : String?
+    public let name : Name?
+    public let nameArabic : NameArabic?
+    public let username : String?
+    public let nationalId : String?
+    public let salutation : Salutation?
+    public let maritalStatus : MaritalStatus?
+    public let nationality : Nationality?
+    public let gender : String?
+    public let secondNationality : SecondNationality?
+    public let nativePreferredLang : NativePreferredLang?
+    public let effectiveDate: String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -204,10 +204,10 @@ struct PersonalInfo : Codable {
 
 }
 
-struct ContactInfo : Codable {
-    let email : String?
-    let mailType : String?
-    let mobile : String?
+public struct ContactInfo : Codable {
+    public let email : String?
+    public let mailType : String?
+    public let mobile : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -217,20 +217,20 @@ struct ContactInfo : Codable {
     }
 }
 
-struct JobInfo : Codable {
-    let employeeClass : String?
-    let contactInfo : ContactInfo?
-    let hireDate : String?
-    let locale : String?
-    let isFulltimeEmployee : Bool?
-    let employeeStatus : EmployeeStatus?
-    let location : Location?
-    let position : Position?
-    let payScaleLevel : String?
-    let department : Department?
-    let division : Division?
-    let businessUnit : BusinessUnit?
-    let section : Department?
+public struct JobInfo : Codable {
+    public let employeeClass : String?
+    public let contactInfo : ContactInfo?
+    public let hireDate : String?
+    public let locale : String?
+    public let isFulltimeEmployee : Bool?
+    public let employeeStatus : EmployeeStatus?
+    public let location : Location?
+    public let position : Position?
+    public let payScaleLevel : String?
+    public let department : Department?
+    public let division : Division?
+    public let businessUnit : BusinessUnit?
+    public let section : Department?
 
     enum CodingKeys: String, CodingKey {
 
@@ -250,17 +250,17 @@ struct JobInfo : Codable {
     }
 }
 
-struct Status: Codable, Mappable {
-    var id: Int?
-    var name: String?
-    var statusCode: String?
-    var statusColor: String?
+public struct Status: Codable, Mappable {
+    public var id: Int?
+    public var name: String?
+    public var statusCode: String?
+    public var statusColor: String?
     
     // ObjectMapper's Mappable init
-    init?(map: Map) {}
+    public init?(map: Map) {}
     
     // Mapping for ObjectMapper
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id           <- map["id"]
         name         <- map["name"]
         statusCode   <- map["statusCode"]
@@ -268,7 +268,7 @@ struct Status: Codable, Mappable {
     }
     
     // Codable initializer for decoding
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(Int.self, forKey: .id)
         name = try container.decodeIfPresent(String.self, forKey: .name)
@@ -277,7 +277,7 @@ struct Status: Codable, Mappable {
     }
     
     // Codable method for encoding
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(id, forKey: .id)
         try container.encodeIfPresent(name, forKey: .name)
@@ -294,9 +294,9 @@ struct Status: Codable, Mappable {
     }
 }
 
-struct Position : Codable {
-    let name : String?
-    let nameArabic : String?
+public struct Position : Codable {
+    public let name : String?
+    public let nameArabic : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -305,9 +305,9 @@ struct Position : Codable {
     }
 }
 
-struct NativePreferredLang : Codable {
-    let code : String?
-    let name : String?
+public struct NativePreferredLang : Codable {
+    public let code : String?
+    public let name : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -316,9 +316,9 @@ struct NativePreferredLang : Codable {
     }
 }
 
-struct ProfileInfoData : Codable {
-    let genericProfile : GenericProfile?
-    let personalInfoBriefDetailsDto : String?
+public struct ProfileInfoData : Codable {
+    public let genericProfile : GenericProfile?
+    public let personalInfoBriefDetailsDto : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -327,9 +327,9 @@ struct ProfileInfoData : Codable {
     }
 }
 
-struct EmployeeStatus : Codable {
-    let code : String?
-    let name : String?
+public struct EmployeeStatus : Codable {
+    public let code : String?
+    public let name : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -338,12 +338,12 @@ struct EmployeeStatus : Codable {
     }
 }
 
-struct NameArabic : Codable {
-    let middle : String?
-    let last : String?
-    let fullName : String?
-    let third : String?
-    let first : String?
+public struct NameArabic : Codable {
+    public let middle : String?
+    public let last : String?
+    public let fullName : String?
+    public let third : String?
+    public let first : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -355,9 +355,9 @@ struct NameArabic : Codable {
     }
 }
 
-struct Division : Codable {
-    let code : String?
-    let name : String?
+public struct Division : Codable {
+    public let code : String?
+    public let name : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -366,10 +366,10 @@ struct Division : Codable {
     }
 }
 
-struct ManagerInfo : Codable {
-    let userId : String?
-    let name : String?
-    let email : String?
+public struct ManagerInfo : Codable {
+    public let userId : String?
+    public let name : String?
+    public let email : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -379,9 +379,9 @@ struct ManagerInfo : Codable {
     }
 }
 
-struct BusinessUnit : Codable {
-    let code : String?
-    let name : String?
+public struct BusinessUnit : Codable {
+    public let code : String?
+    public let name : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -390,44 +390,43 @@ struct BusinessUnit : Codable {
     }
 }
 
-struct SecondNationality : Codable {
-    let country : String?
-    let code : String?
+public struct SecondNationality : Codable {
+    public let country : String?
+    public let code : String?
 
     enum CodingKeys: String, CodingKey {
-
         case country = "country"
         case code = "code"
     }
 }
 
-struct Manager : Codable {
-    let cn : String?
-    let company : String?
-    let mail : String?
-    let businessPhone : String?
-    let department : String?
-    let departmentAr : String?
-    let description : String?
-    let displayName : String?
-    let displayNameAr : String?
-    let employeeId : String?
-    let userType : String?
-    let givenName : String?
-    let lastLogon : String?
-    let mailNickname : String?
-    let phone : String?
-    let name : String?
-    let info : String?
-    let samAccountName : String?
-    let sn : String?
-    let jobTitle : String?
-    let jobTitleAr : String?
-    let userPrincipalName : String?
-    let id : String?
-    let photo : String?
-    let managerPath : String?
-    let manager : String?
+public struct Manager : Codable {
+    public let cn : String?
+    public let company : String?
+    public let mail : String?
+    public let businessPhone : String?
+    public let department : String?
+    public let departmentAr : String?
+    public let description : String?
+    public let displayName : String?
+    public let displayNameAr : String?
+    public let employeeId : String?
+    public let userType : String?
+    public let givenName : String?
+    public let lastLogon : String?
+    public let mailNickname : String?
+    public let phone : String?
+    public let name : String?
+    public let info : String?
+    public let samAccountName : String?
+    public let sn : String?
+    public let jobTitle : String?
+    public let jobTitleAr : String?
+    public let userPrincipalName : String?
+    public let id : String?
+    public let photo : String?
+    public let managerPath : String?
+    public let manager : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -463,9 +462,9 @@ struct Manager : Codable {
 }
 
 
-struct Header : Codable {
-    let requestID : String?
-    let status : Status?
+public struct Header : Codable {
+    public let requestID : String?
+    public let status : Status?
 
     enum CodingKeys: String, CodingKey {
 
@@ -474,9 +473,9 @@ struct Header : Codable {
     }
 }
 
-struct Location : Codable {
-    let code : String?
-    let name : String?
+public struct Location : Codable {
+    public let code : String?
+    public let name : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -485,10 +484,10 @@ struct Location : Codable {
     }
 }
 
-struct GenericProfile : Codable {
-    let personalInfo : PersonalInfo?
-    let jobInfo : JobInfo?
-    let managerInfo : ManagerInfo?
+public struct GenericProfile : Codable {
+    public let personalInfo : PersonalInfo?
+    public let jobInfo : JobInfo?
+    public let managerInfo : ManagerInfo?
 
     enum CodingKeys: String, CodingKey {
 
@@ -499,32 +498,32 @@ struct GenericProfile : Codable {
 }
 
 public struct UserProfileInfoAD : Codable {
-    let cn : String?
-    let company : String?
-    let mail : String?
-    let businessPhone : String?
-    let department : String?
-    let departmentAr : String?
-    let description : String?
-    let displayName : String?
-    let displayNameAr : String?
-    let employeeId : String?
-    let userType : String?
-    let givenName : String?
-    let lastLogon : String?
-    let mailNickname : String?
-    let phone : String?
-    let name : String?
-    let info : String?
-    let samAccountName : String?
-    let sn : String?
-    let jobTitle : String?
-    let jobTitleAr : String?
-    let userPrincipalName : String?
-    let id : String?
-    let photo : String?
-    let managerPath : String?
-    let manager : Manager?
+    public let cn : String?
+    public let company : String?
+    public let mail : String?
+    public let businessPhone : String?
+    public let department : String?
+    public let departmentAr : String?
+    public let description : String?
+    public let displayName : String?
+    public let displayNameAr : String?
+    public let employeeId : String?
+    public let userType : String?
+    public let givenName : String?
+    public let lastLogon : String?
+    public let mailNickname : String?
+    public let phone : String?
+    public let name : String?
+    public let info : String?
+    public let samAccountName : String?
+    public let sn : String?
+    public let jobTitle : String?
+    public let jobTitleAr : String?
+    public let userPrincipalName : String?
+    public let id : String?
+    public let photo : String?
+    public let managerPath : String?
+    public let manager : Manager?
 
     enum CodingKeys: String, CodingKey {
 
@@ -559,9 +558,9 @@ public struct UserProfileInfoAD : Codable {
 }
 
 
-struct MaritalStatus : Codable {
-    let name : String?
-    let nameArabic : String?
+public struct MaritalStatus : Codable {
+    public let name : String?
+    public let nameArabic : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -570,9 +569,9 @@ struct MaritalStatus : Codable {
     }
 }
 
-struct Department : Codable {
-    let code : String?
-    let name : String?
+public struct Department : Codable {
+    public let code : String?
+    public let name : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -581,12 +580,12 @@ struct Department : Codable {
     }
 }
 
-struct Name : Codable {
-    let first : String?
-    let middle : String?
-    let last : String?
-    let third : String?
-    let fullName : String?
+public struct Name : Codable {
+    public let first : String?
+    public let middle : String?
+    public let last : String?
+    public let third : String?
+    public let fullName : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -598,9 +597,9 @@ struct Name : Codable {
     }
 }
 
-struct Nationality : Codable {
-    let country : String?
-    let code : String?
+public struct Nationality : Codable {
+    public let country : String?
+    public let code : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -609,9 +608,9 @@ struct Nationality : Codable {
     }
 }
 
-struct Salutation : Codable {
-    let name : String?
-    let nameArabic : String?
+public struct Salutation : Codable {
+    public  let name : String?
+    public  let nameArabic : String?
 
     enum CodingKeys: String, CodingKey {
 

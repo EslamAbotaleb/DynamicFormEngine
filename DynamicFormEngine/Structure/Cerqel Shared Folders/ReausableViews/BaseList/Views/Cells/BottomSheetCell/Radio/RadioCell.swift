@@ -8,17 +8,17 @@
 
 import UIKit
 
-class RadioCell: UITableViewCell {
+public class RadioCell: UITableViewCell {
     @IBOutlet weak var sortNameLbl: UILabel!
     @IBOutlet weak var sortIcon: UIImageView!
     @IBOutlet weak var bottomView: UIView!
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override public func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
     }

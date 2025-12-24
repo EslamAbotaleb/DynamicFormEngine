@@ -38,7 +38,7 @@ open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, Pan
     }
     
     public let frame = UIScreen.main.bounds
-    public var item: Item!
+    open var item: Item!
     public let hud = JGProgressHUD(style: .dark)
     
     public var viewModel: ViewModel! {

@@ -15,7 +15,7 @@ import SwiftUI
 import DropDown
 import DynamicFormEngine
 
-enum RequestDetailsSections {
+public enum RequestDetailsSections {
     case oldActions_Dicussion
     case empInfo
     case reqInfo
@@ -24,61 +24,61 @@ enum RequestDetailsSections {
     case sectionDetails
 }
 
-class RequestDetailsViewModel: BaseVM {
+public class RequestDetailsViewModel: BaseVM {
     
     // MARK: - Variables
-    var router: CerqelRouterManager
+    public var router: CerqelRouterManager
     private let service: cerqel_NetworkService
     private let disposeBag = DisposeBag()
-    var details: BehaviorRelay<ModelRequestDetailsData?> = BehaviorRelay(value: nil)
-    var backwardDetails: BehaviorRelay<BackwardModelRequestDetailsData?> = BehaviorRelay(value: nil)
-    var formSummaryList: BehaviorRelay<[Field]?> = BehaviorRelay(value: nil)
-    var reqIdForApprover = ""
-    var messageSentSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
-    var actionTakenSuccessfully: BehaviorRelay<(Bool,String)> = BehaviorRelay(value: (false,"Submitted".localized))
-    var requestReopenedSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
-    var requestWithdrawedSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
-    var chatList: BehaviorRelay<[ModelDicussionMessageData]?> = BehaviorRelay(value: nil)
-    var view: UIViewController
-    var arrOfSections: [RequestDetailsSections] = [.empInfo, .reqInfo, .requestTabs]
-    var arrOfSectionsForTab1: [RequestDetailsSections] = [.empInfo, .reqInfo, .requestTabs]
-    var arrOfSectionsForSummary: [RequestDetailsSections] = []
-    let dropDown = DropDown()
+    public var details: BehaviorRelay<ModelRequestDetailsData?> = BehaviorRelay(value: nil)
+    public var backwardDetails: BehaviorRelay<BackwardModelRequestDetailsData?> = BehaviorRelay(value: nil)
+    public var formSummaryList: BehaviorRelay<[Field]?> = BehaviorRelay(value: nil)
+    public var reqIdForApprover = ""
+    public var messageSentSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
+    public var actionTakenSuccessfully: BehaviorRelay<(Bool,String)> = BehaviorRelay(value: (false,"Submitted".localized))
+    public var requestReopenedSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
+    public var requestWithdrawedSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
+    public var chatList: BehaviorRelay<[ModelDicussionMessageData]?> = BehaviorRelay(value: nil)
+    public var view: UIViewController
+    public var arrOfSections: [RequestDetailsSections] = [.empInfo, .reqInfo, .requestTabs]
+    public var arrOfSectionsForTab1: [RequestDetailsSections] = [.empInfo, .reqInfo, .requestTabs]
+    public var arrOfSectionsForSummary: [RequestDetailsSections] = []
+    public let dropDown = DropDown()
     
     /// 1 -> Details, 2-> Actions, 3-> Discussions
-    var selectedTabId: BehaviorRelay<Int> = BehaviorRelay(value: 1)
+    public var selectedTabId: BehaviorRelay<Int> = BehaviorRelay(value: 1)
     
-    var arrayOfChatAttachments: BehaviorRelay<[ModelUploadedMedia]> = BehaviorRelay(value: [])
-    var arrayOfAttachmentsinAction: BehaviorRelay<[ModelUploadedMedia]> = BehaviorRelay(value: [])
-    var requestId: String
-    var commentSubmeted: DynamicObjects<String> = DynamicObjects("")
-    var userMail: DynamicObjects<String> = DynamicObjects("")
-    var actionName: DynamicObjects<[ListModel]> = DynamicObjects([ListModel()])
-    var selecteActionName: DynamicObjects<ListModel> = DynamicObjects(ListModel())
-    var performCommentAction: ((Action, String) -> ())?
-    var selectedUser: DynamicObjects<UserEntity> = DynamicObjects(UserEntity())
+    public var arrayOfChatAttachments: BehaviorRelay<[ModelUploadedMedia]> = BehaviorRelay(value: [])
+    public var arrayOfAttachmentsinAction: BehaviorRelay<[ModelUploadedMedia]> = BehaviorRelay(value: [])
+    public var requestId: String
+    public var commentSubmeted: DynamicObjects<String> = DynamicObjects("")
+    public var userMail: DynamicObjects<String> = DynamicObjects("")
+    public var actionName: DynamicObjects<[ListModel]> = DynamicObjects([ListModel()])
+    public var selecteActionName: DynamicObjects<ListModel> = DynamicObjects(ListModel())
+    public var performCommentAction: ((Action, String) -> ())?
+    public var selectedUser: DynamicObjects<UserEntity> = DynamicObjects(UserEntity())
     
-    var isWithdrawal: DynamicObjects<Bool?> = DynamicObjects(nil)
-    var isEditable: BehaviorRelay<Bool?> = BehaviorRelay(value: false)
+    public var isWithdrawal: DynamicObjects<Bool?> = DynamicObjects(nil)
+    public var isEditable: BehaviorRelay<Bool?> = BehaviorRelay(value: false)
     //Bottom Action Buttons and Message Status (IsCanEdit,Alert Message,IsButtonsDimmed)
-    var isEditableDimmedActions: BehaviorRelay<(Bool?,String?,Bool?)> = BehaviorRelay(value: (false,"",false))
-    var editRequestTitle: DynamicObjects<[ListModel]> = DynamicObjects([ListModel()])
-    var selectedRequestAction: DynamicObjects<ListModel> = DynamicObjects(ListModel())
-    var requestWithDrawId: DynamicObjects<String?> = DynamicObjects("")
-    var id = ""
-    var isMyRequestFlag = false
+    public var isEditableDimmedActions: BehaviorRelay<(Bool?,String?,Bool?)> = BehaviorRelay(value: (false,"",false))
+    public var editRequestTitle: DynamicObjects<[ListModel]> = DynamicObjects([ListModel()])
+    public var selectedRequestAction: DynamicObjects<ListModel> = DynamicObjects(ListModel())
+    public var requestWithDrawId: DynamicObjects<String?> = DynamicObjects("")
+    public var id = ""
+    public var isMyRequestFlag = false
 
-    var formBuilder = FormBuilder.shared
+    public var formBuilder = FormBuilder.shared
     var rowIndices: [Int] = []
 
-    init(_ service: cerqel_NetworkService, requestId: String, view: UIViewController, router: CerqelRouterManager) {
+    public  init(_ service: cerqel_NetworkService, requestId: String, view: UIViewController, router: CerqelRouterManager) {
         self.service = service
         self.requestId = requestId
         self.view = view
         self.router = router
     }
     
-    func presentCommentBottomSheet(action: Action) {
+    public func presentCommentBottomSheet(action: Action) {
         guard let actionCode = action.actionCode?.lowercased() else { return }
         
         let commentBottomSheetActions = ["sendback", "approve", "reject"]
@@ -107,7 +107,7 @@ class RequestDetailsViewModel: BaseVM {
     }
     
     // MARK: - Functions
-    func showCommentBottomSheet(title: String, isCommentRequired: Bool, action: Action) {
+    public func showCommentBottomSheet(title: String, isCommentRequired: Bool, action: Action) {
         // Create the comment item
         let commentItem = AddCommentItem(
             mainTitle: title,
@@ -223,7 +223,7 @@ class RequestDetailsViewModel: BaseVM {
     
     private func handleEditRequestAction(item: ListModel){
         self.selectedRequestAction.value = item
-            router.push(vc: DynamicSharedRouter.goTo(viewName: .formViewController(serviceId: self.requestWithDrawId.value ?? "", actionId: nil, buttonId: nil, isEditable: true, requestId: "")))
+            router.push(vc: DynamicSharedRouterDynamicForm.goTo(viewName: .formViewController(serviceId: self.requestWithDrawId.value ?? "", actionId: nil, buttonId: nil, isEditable: true, requestId: "")))
     }
         
     func checkIfAllFieldsHidden (parentID: String) -> Bool {
@@ -232,7 +232,7 @@ class RequestDetailsViewModel: BaseVM {
     
     func handleApproverAdditionalData() {
         reqIdForApprover = self.details.value?.id ?? ""
-        router.push(vc: DynamicSharedRouter.goTo(viewName: .formViewController(serviceId:  self.details.value?.taskId ?? "", actionId: nil, buttonId: nil, isEditable: false, isApproverForm: true, requestId: self.reqIdForApprover)))
+        router.push(vc: DynamicSharedRouterDynamicForm.goTo(viewName: .formViewController(serviceId:  self.details.value?.taskId ?? "", actionId: nil, buttonId: nil, isEditable: false, isApproverForm: true, requestId: self.reqIdForApprover)))
     }
     
     func presentDelegateBottomSheet(action: Action) {

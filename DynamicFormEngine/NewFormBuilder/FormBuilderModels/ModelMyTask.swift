@@ -9,20 +9,20 @@
 import Foundation
 import ObjectMapper
 
-struct ModelMyTaskData : Codable {
-    let id : String?
-    let requestId : String?
-    let employee : Employee?
-    let serviceName : String?
-    let serviceImage : String?
-    let isCompleted : Bool?
-    let status : Status?
-    let daysRequested : Int?
-    let requestPendingOn : RequestPendingOn?
-    let requestDate : String?
-    let createdDate: String?
-    let modifiedDate: String?
-    let itRequestId: String?
+public struct ModelMyTaskData : Codable {
+    public let id : String?
+    public let requestId : String?
+    public let employee : Employee?
+    public let serviceName : String?
+    public let serviceImage : String?
+    public let isCompleted : Bool?
+    public let status : Status?
+    public let daysRequested : Int?
+    public let requestPendingOn : RequestPendingOn?
+    public let requestDate : String?
+    public let createdDate: String?
+    public let modifiedDate: String?
+    public let itRequestId: String?
     
     enum CodingKeys: String, CodingKey {
 
@@ -42,20 +42,20 @@ struct ModelMyTaskData : Codable {
     }
 }
 
-struct Employee: Codable, Mappable {
-    var id: String?
-    var personId: String?
-    var name: String?
-    var photo: String?
-    var email: String?
-    var department: String?
-    var position: String?
+public struct Employee: Codable, Mappable {
+    public var id: String?
+    public var personId: String?
+    public var name: String?
+    public var photo: String?
+    public var email: String?
+    public var department: String?
+    public var position: String?
     
     // ObjectMapper's Mappable init
-    init?(map: Map) {}
+    public init?(map: Map) {}
     
     // Mapping for ObjectMapper
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id          <- map["id"]
         personId    <- map["personId"]
         name        <- map["name"]
@@ -66,7 +66,7 @@ struct Employee: Codable, Mappable {
     }
     
     // Codable initializer for decoding
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decodeIfPresent(String.self, forKey: .id)
         personId = try container.decodeIfPresent(String.self, forKey: .personId)
@@ -78,7 +78,7 @@ struct Employee: Codable, Mappable {
     }
     
     // Codable method for encoding
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(id, forKey: .id)
         try container.encodeIfPresent(personId, forKey: .personId)
@@ -101,12 +101,12 @@ struct Employee: Codable, Mappable {
     }
 }
 
-struct RequestPendingOn: Codable, Mappable {
-    var id: String?
-    var name: String?
-    var pendingOnCode: String?
-    var isGroup: Bool?
-    var groupNames: [String]?
+public struct RequestPendingOn: Codable, Mappable {
+    public var id: String?
+    public var name: String?
+    public var pendingOnCode: String?
+    public var isGroup: Bool?
+    public var groupNames: [String]?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -117,7 +117,7 @@ struct RequestPendingOn: Codable, Mappable {
     }
     
     // Codable initializer
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(String.self, forKey: .id)
         name = try values.decodeIfPresent(String.self, forKey: .name)
@@ -127,7 +127,7 @@ struct RequestPendingOn: Codable, Mappable {
     }
     
     // Mappable initializer
-    init?(map: Map) {
+    public init?(map: Map) {
         id = nil
         name = nil
         pendingOnCode = nil
@@ -136,7 +136,7 @@ struct RequestPendingOn: Codable, Mappable {
     }
     
     // Mappable mapping function
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id <- map[CodingKeys.id.rawValue]
         name <- map[CodingKeys.name.rawValue]
         pendingOnCode <- map[CodingKeys.pendingOnCode.rawValue]

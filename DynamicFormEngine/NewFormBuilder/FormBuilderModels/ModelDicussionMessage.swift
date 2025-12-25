@@ -8,14 +8,14 @@
 
 import Foundation
 
-struct ModelDicussionMessageData : Codable {
-    let id : String?
-    let requestId : String?
-    let comment : String?
-    let daysRequested : Int?
-    let createdDate : String?
-    let employee : Employee?
-    let attachments : [dicussionAttachemnt]?
+public struct ModelDicussionMessageData : Codable {
+    public let id : String?
+    public let requestId : String?
+    public let comment : String?
+    public let daysRequested : Int?
+    public let createdDate : String?
+    public let employee : Employee?
+    public let attachments : [dicussionAttachemnt]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -32,13 +32,13 @@ struct ModelDicussionMessageData : Codable {
 }
 
 
-struct dicussionAttachemnt : Codable {
-    let id : String?
-    let fileId : String?
-    let fileName : String?
-    let url : String?
-    let attExtension : String?
-    let size : Double?
+public struct dicussionAttachemnt : Codable {
+    public let id : String?
+    public let fileId : String?
+    public let fileName : String?
+    public let url : String?
+    public let attExtension : String?
+    public let size : Double?
 
     enum CodingKeys: String, CodingKey {
 

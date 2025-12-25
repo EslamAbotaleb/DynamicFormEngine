@@ -1,8 +1,7 @@
 import SwiftUI
 
 extension View {
-
-  func navigationBarBackButtonTitleHidden() -> some View {
+ public func navigationBarBackButtonTitleHidden() -> some View {
     self.modifier(NavigationBarBackButtonTitleHiddenModifier())
   }
 }

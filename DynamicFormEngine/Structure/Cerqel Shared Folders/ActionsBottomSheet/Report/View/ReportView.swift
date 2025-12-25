@@ -47,7 +47,7 @@ class ReportView: BaseView<ReportViewModel, FileItem> {
    
     
     private func initialConfiguration(){
-        viewModel = ReportViewModel(router: CerqelRouterManagerImpl(self), fileId: item.fileId)
+        viewModel = ReportViewModel(router: CerqelRouterManagerDynamicFormImpl(self), fileId: item.fileId)
         viewModel.reportListEndPoint()
         
     }

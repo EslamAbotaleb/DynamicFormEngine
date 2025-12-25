@@ -14,10 +14,10 @@ import JGProgressHUD
 import Toast
 
 open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, PanModalPresentable {
-    public var panScrollable: UIScrollView? {
+    open var panScrollable: UIScrollView? {
         return nil
     }
-    public var longFormHeight: PanModalHeight {
+    open var longFormHeight: PanModalHeight {
         return .maxHeightWithTopInset(10)
         
     }
@@ -27,7 +27,7 @@ open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, Pan
         
     }
     
-    public  var allowsExtendedPanScrolling: Bool { return false }
+    public var allowsExtendedPanScrolling: Bool { return false }
     
     public var allowsTapToDismiss: Bool { return true }
     

@@ -9,8 +9,13 @@
 import Foundation
 
 public struct UserFilterModel: Codable {
-    public var searchString : String?
-    
+
+    public var searchString: String?
+
+    public init(searchString: String? = nil) {
+        self.searchString = searchString
+    }
+
     enum CodingKeys: String, CodingKey {
         case searchString = "SearchKeyword"
     }

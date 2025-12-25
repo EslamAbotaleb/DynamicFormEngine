@@ -73,7 +73,7 @@ public class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
     
     
     private func initialConfiguration(){
-        viewModel = BaseListBottomSheetViewModel(router: CerqelRouterManagerImpl(self),baseListItem:item)
+        viewModel = BaseListBottomSheetViewModel(router: CerqelRouterManagerDynamicFormImpl(self),baseListItem:item)
         titleLbl.text = item.title
         viewModel.setlist()
     }

@@ -18,8 +18,8 @@ public let Service_Name_EmployeeInfoCerqel = "EmployeeInfo"
 
 
 public struct ModelFormCerqel : Codable {
-    let requestForm : RequestFormCerqel?
-    let serviceName : String?
+    public let requestForm : RequestFormCerqel?
+    public let serviceName : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -29,7 +29,7 @@ public struct ModelFormCerqel : Codable {
 }
 
 public struct ModelNestedFormValueCerqel : Codable, FormValueCerqel {
-    let val : [ModelControlCerqel]?
+    public let val : [ModelControlCerqel]?
     enum CodingKeys: String, CodingKey {
 
         case val = "val"
@@ -431,9 +431,9 @@ public struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
 }
 
 public struct ConditionalViewCerqel : Codable {
-    var validConditions : Int?
-    var conditions : [ModelconditionCerqel]?
-    var minimumAcceptableConditionsNumber: Int?
+    public var validConditions : Int?
+    public var conditions : [ModelconditionCerqel]?
+    public var minimumAcceptableConditionsNumber: Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -444,14 +444,14 @@ public struct ConditionalViewCerqel : Codable {
 }
 
 public struct StyleCerqel : Codable {
-    var border : String?
-    var borderType : String?
-    var borderColor : String?
-    var backgroundColor : String?
-    var textColor : String?
-    var textAlign : String?
-    var font : String?
-    var fontSize : String?
+    public var border : String?
+    public var borderType : String?
+    public var borderColor : String?
+    public var backgroundColor : String?
+    public var textColor : String?
+    public var textAlign : String?
+    public var font : String?
+    public var fontSize : String?
 
     enum CodingKeys: String, CodingKey {
 

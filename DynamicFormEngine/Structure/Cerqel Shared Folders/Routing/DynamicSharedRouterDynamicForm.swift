@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum DynamicAppStoryboard : String {
+public enum DynamicAppStoryboard: String {
     
     case Main = "Main"
     case Auth = "AuthStoryboard"
@@ -51,25 +51,23 @@ enum DynamicAppStoryboard : String {
 
     
     func initialViewController() -> UIViewController? {
-        
         return instance.instantiateInitialViewController()
     }
 }
 
-public enum DynamicViewControllerName {
+public enum DynamicViewControllerNameDynamicForm {
     case backwardRequestDetails(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: BackwardModelRequestDetailsData? = nil, view: UIViewController?,commentID: String? = "")
     case requestDetails(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: ModelRequestDetailsData? = nil, view: UIViewController?,commentID: String? = "")
     case newFormBuilderDropDown
     case newFormBuilderSearch(code: String)
     case formViewController(serviceId: String,actionId: String?,buttonId: String?, isEditable: Bool? = false, isApproverForm: Bool? = false, requestId: String?)
     case serviceSummaryPagesVC(buttonId: String?, actionId: String?, isEditable: Bool?,isApproverForm: Bool?, requestIdForApprover: String?,view: UIViewController?)
-//    case baseSort(sortName:String,sortType:sortSections,sortData:[sortModel])
 
 }
 
-public class DynamicSharedRouter {
+public class DynamicSharedRouterDynamicForm {
 
-    static public func goTo(viewName: DynamicViewControllerName)-> BottomSheetVCCerqel{
+    static public func goTo(viewName: DynamicViewControllerNameDynamicForm)-> BottomSheetVCCerqel{
         switch viewName {
                 
         case .serviceSummaryPagesVC(let buttonId, let actionId,let isEditable, let isApproverForm, let requestIdForApprover, let view):
@@ -135,18 +133,6 @@ public class DynamicSharedRouter {
             controller.isApproverForm = isApproveForm ?? false
             controller.hidesBottomBarWhenPushed = true
             return controller
-                
-//        case .baseSort(let sortName,let sortType,let sortData):
-//            let viewModel = BaseSortViewModel(cerqel_BasicNetworkServiceImpl.shared)
-//            let storyboard: AppStoryboard = .xibView
-//            let controller = storyboard.viewController(viewControllerClass: BaseSortVC.self)
-//            controller.viewModel = viewModel
-//            controller.sortBaseName = sortName
-//            controller.sortType = sortType
-//            controller.sortData = sortData
-//            controller.hidesBottomBarWhenPushed = true
-//            return controller
-                
         }
     }
     

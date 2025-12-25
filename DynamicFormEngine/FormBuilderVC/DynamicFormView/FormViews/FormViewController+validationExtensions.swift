@@ -172,7 +172,7 @@ extension FormViewController {
     /// navigate to summary page
     func getSummaryPage() {
         formBuilder.goToSummary = true
-        navigationController?.pushViewController(DynamicSharedRouter.goTo(viewName: .serviceSummaryPagesVC(buttonId: self.buttonId ?? nil, actionId: self.buttonId ?? nil, isEditable: FormManager.shared.isEditable, isApproverForm: isApproverForm, requestIdForApprover: self.requestIdForApprover, view: self)), animated: true)
+        navigationController?.pushViewController(DynamicSharedRouterDynamicForm.goTo(viewName: .serviceSummaryPagesVC(buttonId: self.buttonId ?? nil, actionId: self.buttonId ?? nil, isEditable: FormManager.shared.isEditable, isApproverForm: isApproverForm, requestIdForApprover: self.requestIdForApprover, view: self)), animated: true)
     }
     
     /// loading next & previous buttons titles

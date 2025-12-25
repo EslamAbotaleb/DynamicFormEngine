@@ -51,7 +51,7 @@ class SendBackVC: BaseView<SendBackViewModel,SendBackItem>{
     }
     
     private func initialConfiguration() {
-        viewModel =  SendBackViewModel(router: CerqelRouterManagerImpl(self),sendBackRecipientsUseCase:SendBackRecipientsUseCaseImpl(),excuteActionUseCase: ExcuteActionUseCaseImpl(),successCallBack: item.successCallBack)
+        viewModel =  SendBackViewModel(router: CerqelRouterManagerDynamicFormImpl(self),sendBackRecipientsUseCase:SendBackRecipientsUseCaseImpl(),excuteActionUseCase: ExcuteActionUseCaseImpl(),successCallBack: item.successCallBack)
         setPayloadData()
     }
     

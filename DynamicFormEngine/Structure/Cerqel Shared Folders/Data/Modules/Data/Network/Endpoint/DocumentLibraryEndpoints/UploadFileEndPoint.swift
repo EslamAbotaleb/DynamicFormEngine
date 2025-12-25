@@ -43,6 +43,12 @@ public struct FileRequest {
     public var date: Data
     public var fileName: String
     public var extenstion : FileType
+    
+    public init(date: Data, fileName: String, extenstion: FileType) {
+        self.date = date
+        self.fileName = fileName
+        self.extenstion = extenstion
+    }
 }
 
 public struct FileEntity {
@@ -51,4 +57,12 @@ public struct FileEntity {
     public var FileType: FileVersionType
     public var isPublic: Bool
     public var serviceType: Int?
+ 
+    public init(uploadExtension: FileType, file: FileRequest, FileType: FileVersionType, isPublic: Bool, serviceType: Int? = nil) {
+        self.uploadExtension = uploadExtension
+        self.file = file
+        self.FileType = FileType
+        self.isPublic = isPublic
+        self.serviceType = serviceType
+    }
 }

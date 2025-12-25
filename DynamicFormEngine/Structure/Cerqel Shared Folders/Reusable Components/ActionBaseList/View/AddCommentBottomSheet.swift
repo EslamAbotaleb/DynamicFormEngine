@@ -46,7 +46,7 @@ class AddCommentBottomSheet: BaseView<AddCommentViewModel, AddCommentItem> {
     }
     
     private func initialConfiguration(){
-        viewModel = AddCommentViewModel(router: CerqelRouterManagerImpl(self), item: item)
+        viewModel = AddCommentViewModel(router: CerqelRouterManagerDynamicFormImpl(self), item: item)
     }
     
     private func configureUI(){

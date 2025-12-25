@@ -48,7 +48,7 @@ class DelegatorVC: BaseView<DelegateActionViewModel,DelegateItem>{
     }
     
     private func initialConfiguration() {
-        viewModel =  DelegateActionViewModel(view: self, router: CerqelRouterManagerImpl(self),excuteActionUseCase: ExcuteActionUseCaseImpl(),successCallBack: item.successCallBack)
+        viewModel =  DelegateActionViewModel(view: self, router: CerqelRouterManagerDynamicFormImpl(self),excuteActionUseCase: ExcuteActionUseCaseImpl(),successCallBack: item.successCallBack)
         setPayloadValue()
     }
     

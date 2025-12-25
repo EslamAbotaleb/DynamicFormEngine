@@ -2165,7 +2165,7 @@ class FormManager {
     func selectOption(vc: FormBaseViewController, sectionObjects: [SectionObject], submitButton: UIButton, options: [MCQOption], title: String?, selectedValues: [MCQOption], multiSelect: Bool, selectAllEnabled: Bool, section: Int, row: Int) {
         
         managerSectionObjects.accept((sectionObjects,vc))
-        let dropDownVC = Router.goTo(viewName: .newFormBuilderDropDown) as! NewDropDownViewController
+        let dropDownVC = RouterDynamicForm.goTo(viewName: .newFormBuilderDropDown) as! NewDropDownViewController
         var height = 0
         if selectAllEnabled {
             height = ((options.count + 1) * 50) + 70 + 80 + 30
@@ -2228,7 +2228,7 @@ class FormManager {
     func selectOptionFromSearch(vc: FormBaseViewController, sectionObjects: [SectionObject], submitButton: UIButton, code: String,options: [MCQOption], title: String?,placeHolder: String?, selectedValues: [MCQOption], multiSelect: Bool, selectAllEnabled: Bool, section: Int, row: Int) {
         managerSectionObjects.accept((sectionObjects,vc))
         
-        let dropDownVC = Router.goTo(viewName: .newFormBuilderSearch(code: code)) as! NewSearchVC
+        let dropDownVC = RouterDynamicForm.goTo(viewName: .newFormBuilderSearch(code: code)) as! NewSearchVC
         
         let height = Int(vc.view.frame.size.height * 0.75)
         let popupVC = PopupViewController(contentController: dropDownVC, position: .bottom(0), popupWidth: vc.view.frame.width, popupHeight: CGFloat(height))

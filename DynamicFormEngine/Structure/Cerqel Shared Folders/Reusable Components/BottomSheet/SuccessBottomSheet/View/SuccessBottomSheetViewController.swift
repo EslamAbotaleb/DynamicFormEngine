@@ -9,14 +9,14 @@
 import UIKit
 import PanModal
 
-typealias SuccessCallBack =  (()->())
+public typealias SuccessCallBack =  (()->())
 
 open class SuccessItem: BaseItem {
     var successCallBack: SuccessCallBack
     var successMessage:String
     var successDescription:String?
 
-    init(_ successCallBack: @escaping SuccessCallBack,_ successMessage: String,_ successDescription: String? = "") {
+    public init(_ successCallBack: @escaping SuccessCallBack,_ successMessage: String,_ successDescription: String? = "") {
         self.successCallBack = successCallBack
         self.successMessage = successMessage
         self.successDescription = successDescription

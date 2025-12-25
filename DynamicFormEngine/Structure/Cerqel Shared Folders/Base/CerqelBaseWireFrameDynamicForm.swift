@@ -41,19 +41,19 @@ class CerqelBaseWireFrameDynamicForm<T: CerqelBaseViewModel>: BottomSheetVCCerqe
       
     
 //        if viewModel == nil, let _ = self as? LoginCerqelVC{
-//            viewModel = LoginViewModel(cerqel_BasicNetworkServiceImpl.shared) as? T
+//            viewModel = LoginViewModel(cerqel_BasicNetworkServiceDynamicFormImpl.shared) as? T
 //        }
 //      
 //        if viewModel == nil, let _ = self as? CerqelBaseSortVC{
-//            viewModel = CerqelBaseSortViewModel(cerqel_BasicNetworkServiceImpl.shared) as? T
+//            viewModel = CerqelBaseSortViewModel(cerqel_BasicNetworkServiceDynamicFormImpl.shared) as? T
 //        }
 //        
 //        if viewModel == nil, let _ = self as? NewServicesVC {
-//            viewModel = NewServicesViewModel(cerqel_BasicNetworkServiceImpl.shared) as? T
+//            viewModel = NewServicesViewModel(cerqel_BasicNetworkServiceDynamicFormImpl.shared) as? T
 //        }
 //
 //        if viewModel == nil, let _ = self as? EventDetailsVC {
-//            viewModel = MyCalendarViewModel(cerqel_BasicNetworkServiceImpl.shared) as? T
+//            viewModel = MyCalendarViewModel(cerqel_BasicNetworkServiceDynamicFormImpl.shared) as? T
 //        }
         
         

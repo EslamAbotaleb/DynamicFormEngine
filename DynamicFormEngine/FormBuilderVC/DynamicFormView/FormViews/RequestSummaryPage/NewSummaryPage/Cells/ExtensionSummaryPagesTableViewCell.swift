@@ -176,7 +176,7 @@ extension SummaryPagesTableViewCell {
 //            params = parameters
 //        }
 //        
-//        cerqel_BasicNetworkServiceImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: Dynamic_BasicAction.fetchDataSourceOptions(code: code, parameters: params, targetComponents: targetComps))).subscribe(onNext: {[weak self] (response) in
+//        cerqel_BasicNetworkServiceDynamicFormImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: Dynamic_BasicAction.fetchDataSourceOptions(code: code, parameters: params, targetComponents: targetComps))).subscribe(onNext: {[weak self] (response) in
 //            guard let `self` = self else {return}
 //            var sectionIndex = 0
 //            var isFromTable = false

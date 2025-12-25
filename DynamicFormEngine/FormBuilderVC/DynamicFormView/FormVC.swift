@@ -447,7 +447,7 @@ class FormVC: BottomSheetVC {
         DispatchQueue.main.asyncAfter(deadline: .now() + timeout) { [weak self] in
             self?.cerqel_HUD.stopHUD()
         }
-        cerqel_BasicNetworkServiceImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: cerqel_BasicActionDynamicForm.fetchSearchOptions(code: code,
+        cerqel_BasicNetworkServiceDynamicFormImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: cerqel_BasicActionDynamicForm.fetchSearchOptions(code: code,
                                                                                                                                                    keyword: keyword,
                                                                                                                                                    parameters: params, targetComponents: targetComps))).subscribe(onNext: {
             [weak self] (response) in
@@ -509,7 +509,7 @@ class FormVC: BottomSheetVC {
     func fetchCascadingOptionsListWithMultiParents(code:String, parameters:[[String:String]], row: Int) {
         cerqel_HUD.showHUD()
         let targetComps =  getTargetComponents(for: code, row: row)
-        cerqel_BasicNetworkServiceImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: cerqel_BasicActionDynamicForm.fetchCascadingOptionsWithMultiParents(code: code, parameters: parameters, targetComponents: targetComps))).subscribe(onNext: {[weak self] (response) in
+        cerqel_BasicNetworkServiceDynamicFormImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: cerqel_BasicActionDynamicForm.fetchCascadingOptionsWithMultiParents(code: code, parameters: parameters, targetComponents: targetComps))).subscribe(onNext: {[weak self] (response) in
             guard let `self` = self else {return}
             self.cerqel_HUD.stopHUD()
             var sectionIndex = 0
@@ -1085,7 +1085,7 @@ class FormVC: BottomSheetVC {
     func fetchCascadingOptionsList(code: String,parentValue: [String:String]?, section: Int, row: Int) {
         cerqel_HUD.showHUD()
         let targetComps =  getTargetComponents(for: code, row: row)
-        cerqel_BasicNetworkServiceImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: cerqel_BasicActionDynamicForm.fetchCascadingOptions(code: code, parentValue: parentValue ?? [:], targetComponents: targetComps))).subscribe(onNext: {[weak self] (response) in
+        cerqel_BasicNetworkServiceDynamicFormImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: cerqel_BasicActionDynamicForm.fetchCascadingOptions(code: code, parentValue: parentValue ?? [:], targetComponents: targetComps))).subscribe(onNext: {[weak self] (response) in
             guard let `self` = self else {return}
             self.cerqel_HUD.stopHUD()
             if let data = response.item?.data {
@@ -1164,7 +1164,7 @@ class FormVC: BottomSheetVC {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + timeout, execute: timeoutWorkItem)
             
-            disposable = cerqel_BasicNetworkServiceImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: cerqel_BasicActionDynamicForm.fetchDDLOptions(code: code, targetComponents: self.formBuilder.targetComponents.value)))
+            disposable = cerqel_BasicNetworkServiceDynamicFormImpl.shared.load(cerqel_CodableResponseObject<SearchDynamicModel>(action: cerqel_BasicActionDynamicForm.fetchDDLOptions(code: code, targetComponents: self.formBuilder.targetComponents.value)))
                 .subscribe(onNext: { [weak self] (response) in
                     guard let self = self else { return }
                     

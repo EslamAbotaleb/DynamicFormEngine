@@ -45,6 +45,10 @@ public struct Result<T: Codable>: Codable {
     public var data:T
     public var pagesCount: Int?
     
+    public init(data: T) {
+        self.data = data
+    }
+    
     public init(totalCount: Int?, data: T, pagesCount: Int?) {
         self.totalCount = totalCount
         self.data = data

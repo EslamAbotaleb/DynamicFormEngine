@@ -12,7 +12,7 @@ internal import RxSwift
 
 class DynamicAuthManager {
     
-    private let service: cerqel_NetworkService = cerqel_BasicNetworkServiceImpl.shared
+    private let service: cerqel_NetworkServiceDynamicForm = cerqel_BasicNetworkServiceDynamicFormImpl.shared
     private let disposeBag = DisposeBag()
     var documentTypesOfExtensions: [String] = []
     var isTasks = true

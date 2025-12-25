@@ -18,7 +18,7 @@ public protocol NestedFormDelegate {
 
 public class FormBuilderViewModel: BaseViewModel {
     
-    private let service: cerqel_NetworkService
+    private let service: cerqel_NetworkServiceDynamicForm
     private let disposeBag = DisposeBag()
 
     
@@ -51,7 +51,7 @@ public class FormBuilderViewModel: BaseViewModel {
     public var editNestedRowIndex: Int? = nil
 
  
-    public init(_ service: cerqel_NetworkService) {
+    public init(_ service: cerqel_NetworkServiceDynamicForm) {
         self.service = service
         super.init()
     }

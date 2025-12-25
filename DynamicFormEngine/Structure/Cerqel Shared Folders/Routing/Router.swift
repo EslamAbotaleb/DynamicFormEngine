@@ -80,7 +80,7 @@ public class RouterDynamicForm {
             
                         
         case .dynamicForm(let ServiceId, let catTtl, let hasSubService, let subParentName):
-            let viewModel = FormBuilderViewModel(cerqel_BasicNetworkServiceImpl.shared)
+            let viewModel = FormBuilderViewModel(cerqel_BasicNetworkServiceDynamicFormImpl.shared)
             let storyboard: AppStoryboardDynamicForm = .Main
             viewModel.selectedServiceId = ServiceId
             viewModel.hasSubService = hasSubService
@@ -99,7 +99,7 @@ public class RouterDynamicForm {
         case .requestDetails(Id: let Id, isMyRequestFlag: let isMyRequestFlag, let requestId, let isFromNotifications, let det, let view):
             let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: RequestDetailsView.self)
-            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerDynamicFormImpl(controller))
+            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceDynamicFormImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerDynamicFormImpl(controller))
             
             controller.viewModel = viewModel
             controller.id = Id
@@ -116,7 +116,7 @@ public class RouterDynamicForm {
         case .delegatorView(Id: let Id, isMyRequestFlag: let isMyRequestFlag, let requestId, let isFromNotifications, let det, let view):
             let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: RequestDetailsView.self)
-            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerDynamicFormImpl(controller))
+            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceDynamicFormImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerDynamicFormImpl(controller))
             
             controller.viewModel = viewModel
             controller.id = Id

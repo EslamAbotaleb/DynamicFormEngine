@@ -12,7 +12,7 @@ import Lottie
 
 class FormViewModel: BaseViewModel {
     
-    private let service: cerqel_NetworkService
+    private let service: cerqel_NetworkServiceDynamicForm
     private let disposeBag = DisposeBag()
     var serviceSubmittedResponse: BehaviorRelay<String?> = BehaviorRelay(value: nil)
     public var items = [FormViewModelItem]() {
@@ -27,7 +27,7 @@ class FormViewModel: BaseViewModel {
     /// Dependency Injection
     /// - Parameter form: DynamicForm
     init(form: FormModel?) {
-        service = cerqel_BasicNetworkServiceImpl.shared
+        service = cerqel_BasicNetworkServiceDynamicFormImpl.shared
         for field in form?.fields ?? [] {
             switch field.type {
             case .Page:

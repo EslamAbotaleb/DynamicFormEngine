@@ -28,7 +28,7 @@ public class RequestDetailsViewModel: BaseVM {
     
     // MARK: - Variables
     public var router: CerqelRouterManager
-    private let service: cerqel_NetworkService
+    private let service: cerqel_NetworkServiceDynamicForm
     private let disposeBag = DisposeBag()
     public var details: BehaviorRelay<ModelRequestDetailsData?> = BehaviorRelay(value: nil)
     public var backwardDetails: BehaviorRelay<BackwardModelRequestDetailsData?> = BehaviorRelay(value: nil)
@@ -71,7 +71,7 @@ public class RequestDetailsViewModel: BaseVM {
     public var formBuilder = FormBuilder.shared
     public  var rowIndices: [Int] = []
 
-    public init(_ service: cerqel_NetworkService, requestId: String, view: UIViewController, router: CerqelRouterManager) {
+    public init(_ service: cerqel_NetworkServiceDynamicForm, requestId: String, view: UIViewController, router: CerqelRouterManager) {
         self.service = service
         self.requestId = requestId
         self.view = view

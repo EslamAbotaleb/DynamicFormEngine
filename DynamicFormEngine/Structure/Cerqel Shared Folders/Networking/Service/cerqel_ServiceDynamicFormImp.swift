@@ -1,5 +1,5 @@
 //
-//  ServiceImp.swift
+//  ServiceImpDynamicForm.swift
 //  GAZT
 //
 //  Created by iSlam on 10/11/20.
@@ -15,10 +15,10 @@ import CommonCrypto
 import JGProgressHUD
 
 
-public struct cerqel_BasicNetworkServiceImpl: cerqel_NetworkService {
+public struct cerqel_BasicNetworkServiceDynamicFormImpl: cerqel_NetworkServiceDynamicForm {
 
 
-    static public let shared = cerqel_BasicNetworkServiceImpl()
+    static public let shared = cerqel_BasicNetworkServiceDynamicFormImpl()
 
 //    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 

@@ -22,7 +22,7 @@ open class DocumentPicker: NSObject {
     private var fromProfile: Bool?
     private var pdfOnly: Bool?
 
-    init(presentationController: UIViewController, delegate: DocumentDelegate, fromProfile: Bool, pdfOnly: Bool) {
+    public init(presentationController: UIViewController, delegate: DocumentDelegate, fromProfile: Bool, pdfOnly: Bool) {
         super.init()
 
         self.presentationController = presentationController

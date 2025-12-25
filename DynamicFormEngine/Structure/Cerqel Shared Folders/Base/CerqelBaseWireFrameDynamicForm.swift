@@ -215,7 +215,7 @@ class CerqelBaseWireFrameDynamicForm<T: CerqelBaseViewModel>: BottomSheetVCCerqe
                     label.textColor = .whiteCerqel
                     label.font = UIFont.caption3Regular()
                     label.textAlignment = .center
-                    label.backgroundColor = UIColor.errorCerqel
+                    label.backgroundColor = UIColor.error_Cerqel
                     label.layer.cornerRadius = label.frame.width / 2
                     label.layer.masksToBounds = true
                     if notificationCounter >= 100 {
@@ -282,7 +282,7 @@ class CerqelBaseWireFrameDynamicForm<T: CerqelBaseViewModel>: BottomSheetVCCerqe
             label.textColor = .whiteCerqel
             label.font = UIFont.caption3Regular()
             label.textAlignment = .center
-            label.backgroundColor = UIColor.errorCerqel
+            label.backgroundColor =UIColor.error_Cerqel
             label.layer.cornerRadius = label.frame.width / 2
             label.layer.masksToBounds = true
             if notificationCounter >= 100 {

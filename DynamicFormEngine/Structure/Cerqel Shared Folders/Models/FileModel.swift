@@ -199,6 +199,11 @@ public struct FileInformation {
 public struct FileDTO : Codable {
     public let files: [FileResponse]
     public let highlightedFilters: HighlightedFilters?
+    
+    public init(files: [FileResponse], highlightedFilters: HighlightedFilters?) {
+        self.files = files
+        self.highlightedFilters = highlightedFilters
+    }
 }
 
 public struct HighlightedFilters: Codable {

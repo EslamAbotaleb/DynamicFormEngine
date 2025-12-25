@@ -48,7 +48,7 @@
 		AA51BDFB2EF4203B00488B90 /* CerqelCAGradientLayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF12EF4203B00488B90 /* CerqelCAGradientLayerExtensions.swift */; };
 		AA51BE082EF4203B00488B90 /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BD0B2EF4203B00488B90 /* BaseError.swift */; };
 		AA51BE0D2EF4203B00488B90 /* EmptyTVcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCFF2EF4203B00488B90 /* EmptyTVcell.swift */; };
-		AA51BE152EF4203B00488B90 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BD0D2EF4203B00488B90 /* Router.swift */; };
+		AA51BE152EF4203B00488B90 /* RouterDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BD0D2EF4203B00488B90 /* RouterDynamicForm.swift */; };
 		AA51BE2B2EF4203B00488B90 /* OAuth2Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCEA2EF4203B00488B90 /* OAuth2Configuration.swift */; };
 		AA51BE312EF4203B00488B90 /* CerqelUILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCEF2EF4203B00488B90 /* CerqelUILabel+Extensions.swift */; };
 		AA51BE362EF4203B00488B90 /* LottieHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BD0F2EF4203B00488B90 /* LottieHUD.swift */; };
@@ -744,7 +744,7 @@
 		AA51BD032EF4203B00488B90 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AA51BD0B2EF4203B00488B90 /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 		AA51BD0C2EF4203B00488B90 /* BaseLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoading.swift; sourceTree = "<group>"; };
-		AA51BD0D2EF4203B00488B90 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AA51BD0D2EF4203B00488B90 /* RouterDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterDynamicForm.swift; sourceTree = "<group>"; };
 		AA51BD0F2EF4203B00488B90 /* LottieHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieHUD.swift; sourceTree = "<group>"; };
 		AA51BD102EF4203B00488B90 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		AA51BD122EF4203B00488B90 /* ManageMediaAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageMediaAuthorization.swift; sourceTree = "<group>"; };
@@ -3932,7 +3932,7 @@
 			children = (
 				AAA6A2182EF2E84000520357 /* DynamicAPiAction.swift */,
 				AAA6A2192EF2E84000520357 /* DynamicSharedRouterDynamicForm.swift */,
-				AA51BD0D2EF4203B00488B90 /* Router.swift */,
+				AA51BD0D2EF4203B00488B90 /* RouterDynamicForm.swift */,
 				AAC0ED9D2EF61E0B00DDE9FF /* CerqelRouterManagerDynamicFormImpl.swift */,
 				AAC0ED9E2EF61E0B00DDE9FF /* CerqelRouterManager.swift */,
 				AAC0ED042EF61E0B00DDE9FF /* CERQELShared_Router.swift */,
@@ -4480,7 +4480,7 @@
 				AA51BDFB2EF4203B00488B90 /* CerqelCAGradientLayerExtensions.swift in Sources */,
 				AA51BE082EF4203B00488B90 /* BaseError.swift in Sources */,
 				AA51BE0D2EF4203B00488B90 /* EmptyTVcell.swift in Sources */,
-				AA51BE152EF4203B00488B90 /* Router.swift in Sources */,
+				AA51BE152EF4203B00488B90 /* RouterDynamicForm.swift in Sources */,
 				AA51BE2B2EF4203B00488B90 /* OAuth2Configuration.swift in Sources */,
 				AA51BE312EF4203B00488B90 /* CerqelUILabel+Extensions.swift in Sources */,
 				AA51BE362EF4203B00488B90 /* LottieHUD.swift in Sources */,

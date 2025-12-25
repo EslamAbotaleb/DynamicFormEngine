@@ -14,12 +14,12 @@ public typealias CerqelSelectedCallBack = ((CerqelListModel) -> ())
 
 public class BottomSheetItem: BaseItem,Equatable {
 
-    var repo: BaseRepo
-    var endPoint: EndPointServiceCerqel
-    var type: BottomSheetType
-    var isSingleSelection: Bool?
-    var selectedItem: SelectedCallBack
-    var multiSelectedItems : MultiSelectedCallBack
+    public var repo: BaseRepo
+    public var endPoint: EndPointServiceCerqel
+    public var type: BottomSheetType
+    public var isSingleSelection: Bool?
+    public var selectedItem: SelectedCallBack
+    public var multiSelectedItems : MultiSelectedCallBack
     
     public init(repo: BaseRepo,endPoint:EndPointServiceCerqel,type: BottomSheetType,isSingleSelection: Bool? = false, selectedItem: @escaping SelectedCallBack, multiSelectedItems : @escaping MultiSelectedCallBack) {
         self.type = type

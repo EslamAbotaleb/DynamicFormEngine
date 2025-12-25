@@ -71,13 +71,13 @@ public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel>
 
     // MARK: - Functions
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 //        loadAllFormData()
         self.cerqel_hideLoading()
     }
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationController?.removeBackButtonTitle()
@@ -99,12 +99,12 @@ public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel>
         }).disposed(by: self.disposeBag)
     }
     
-    override func viewWillLayoutSubviews() {
+    override public func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         updateUI()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override public func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         for items in formBuilder.sectionObjects.map({$0.items}) {

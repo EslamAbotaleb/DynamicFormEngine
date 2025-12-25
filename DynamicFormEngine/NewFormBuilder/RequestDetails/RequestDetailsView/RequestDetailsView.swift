@@ -12,29 +12,29 @@ import DropDown
 internal import MOLH
 internal import FittedSheetsDF
 
-struct dataSoruceTableModel {
-    var parentid: String?
-    var rowIndex: String?
-    var relatedItems: [Field]? = []
-    var title: String?
-    var expanded: Bool? = false
-    var insideSection: Bool? = false
+public struct dataSoruceTableModel {
+    public var parentid: String?
+    public var rowIndex: String?
+    public var relatedItems: [Field]? = []
+    public var title: String?
+    public var expanded: Bool? = false
+    public var insideSection: Bool? = false
 }
-struct sectionDataSourceModel {
-    var id: String?
-    var order: String?
-    var relatedItems: [Field]? = []
-    var title: String?
-    var expanded: Bool? = false
-    var hidden: Bool? = false
-    var insideSection: Bool? = false
+public struct sectionDataSourceModel {
+    public var id: String?
+    public var order: String?
+    public var relatedItems: [Field]? = []
+    public var title: String?
+    public var expanded: Bool? = false
+    public var hidden: Bool? = false
+    public var insideSection: Bool? = false
 }
 
-protocol HandlePayloadMethods {
+public protocol HandlePayloadMethods {
     func handleActionPayload(actionId: String,payload: [[String:Any]])
 }
 
-class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
+public class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     // MARK: - IBOutlets
 //    @IBOutlet weak var showHideEmptyFieldsView: ShowHideEmptyFieldsView!
     @IBOutlet weak var bgTopView: UIView!
@@ -136,7 +136,7 @@ class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override public func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         formBuilder.detailsPageDataSourceArray.removeAll()
     }
@@ -401,7 +401,7 @@ class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
         
     }
     
-    override func viewWillLayoutSubviews() {
+    override public func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         //        updateUI()
     }
@@ -509,7 +509,7 @@ extension RequestDetailsView: HandlePayloadMethods {
     /// - Parameters:
     ///   - actionId: dynamic action id
     ///   - payload: collected payload
-    func handleActionPayload(actionId: String,payload: [[String : Any]]) {
+    public func handleActionPayload(actionId: String,payload: [[String : Any]]) {
         var newArr: [ModelUploadedMediaFormPayload] = []
         if self.viewModel.arrayOfAttachmentsinAction.value.count > 0{
             for item in self.viewModel.arrayOfAttachmentsinAction.value {
@@ -532,7 +532,7 @@ extension RequestDetailsView: UITableViewDelegate, UITableViewDataSource{
     /// Determines the number of sections in the table view.
     /// - Parameter tableView: The table view requesting the information.
     /// - Returns: The number of sections based on the selected tab ID.
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         if viewModel.selectedTabId.value == 1 {
             var detailsPageDataSourceArrayCount = formBuilder.detailsPageDataSourceArray.count
             return detailsPageDataSourceArrayCount + 3
@@ -541,7 +541,7 @@ extension RequestDetailsView: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 || section == 1 || section == 2 {
             return 1
         }
@@ -559,7 +559,7 @@ extension RequestDetailsView: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 { //empInfo
             let cell = tableView.dequeueReusableCell(withIdentifier: EmpInfoTVC.cerqel_identifier, for: indexPath) as! EmpInfoTVC
@@ -880,7 +880,7 @@ extension RequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDelegate {
     /// - Parameters:
     ///   - documentMenu: The `UIDocumentMenuViewController` instance.
     ///   - documentPicker: The `UIDocumentPickerViewController` instance to present.
-    func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
+    public func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
         // Present the document picker to the user.
         self.present(documentPicker, animated: true, completion: nil)
     }
@@ -1026,7 +1026,7 @@ extension RequestDetailsView: UICollectionViewDataSource, UICollectionViewDelega
     ///   - collectionView: The collection view requesting this information.
     ///   - section: The index of the section in the collection view.
     /// - Returns: The number of items in the `arrayOfAttachment`.
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayOfAttachment.count
     }
 
@@ -1036,7 +1036,7 @@ extension RequestDetailsView: UICollectionViewDataSource, UICollectionViewDelega
     ///   - collectionView: The collection view requesting this information.
     ///   - indexPath: The index path specifying the location of the cell.
     /// - Returns: A configured `UICollectionViewCell` for the given index path.
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // Dequeue a reusable cell of type `ChatFooterAttachmentCVcell`.
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: ChatFooterAttachmentCVcell.cerqel_identifier,

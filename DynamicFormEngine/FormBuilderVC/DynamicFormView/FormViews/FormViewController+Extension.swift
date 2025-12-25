@@ -9,7 +9,6 @@
 import UIKit
 import Kingfisher
 
-
 extension FormViewController: UITableViewDataSource, UITableViewDelegate {
     
     /// display inline error
@@ -42,12 +41,12 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
     /// getting number of sections in table
     /// - Parameter tableView: current table view
     /// - Returns: number of sections
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return formBuilder.sectionObjects.count
     }
     
     // This function returns the number of rows in a given section of the table view
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Get the current section object from the formBuilder's sectionObjects array
         let currentSection = formBuilder.sectionObjects[section].item
         
@@ -66,7 +65,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     // This function returns a view to be used as the header for a given section of the table view
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    public  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // Get the current section object from the formBuilder's sectionObjects array
         let currentSection = formBuilder.sectionObjects[section].item
         // Check if the current section type is .Section
@@ -90,14 +89,14 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     /// drawing header height
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let currentSection = formBuilder.sectionObjects[section].item
         
         return (currentSection?.type == .Section && !(currentSection?.hidden ?? false) && !HelperFunctions.isHiddenSectionInForm(items: formBuilder.sectionObjects[section].items)) ? 72.0 : 0.0 // Adjust as needed
     }
     
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
         
         let sectionType =  formBuilder.sectionObjects[section].item

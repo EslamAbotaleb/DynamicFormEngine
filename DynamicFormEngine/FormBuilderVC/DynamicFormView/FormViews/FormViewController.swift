@@ -15,7 +15,7 @@ internal import RxSwift
 import SwiftUI
 import JGProgressHUD
 
-protocol PopViewControllerDelegate: AnyObject {
+public protocol PopViewControllerDelegate: AnyObject {
     func handlePopViewController()
 }
 
@@ -99,13 +99,13 @@ class FormViewController: FormBaseViewController {
     
     
     // MARK: - Variables
-    var router: CerqelRouterManager = CerqelRouterManagerDynamicFormImpl()
-    var delegate: HandlePayloadMethods?
-    var reloadDropDown:(() ->())?
-    var formId = ""
-    var selectedMediaUploaderIdx: Int?
-    var ValidationSectionArray: [SectionObject] = []
-    var currentPage = 0 {
+    public var router: CerqelRouterManager = CerqelRouterManagerDynamicFormImpl()
+    public var delegate: HandlePayloadMethods?
+    public var reloadDropDown:(() ->())?
+    public var formId = ""
+    public var selectedMediaUploaderIdx: Int?
+    public var ValidationSectionArray: [SectionObject] = []
+    public var currentPage = 0 {
         didSet {
             formBuilder.handlePageData(currentPage)
             activeTableView.reloadData()
@@ -113,24 +113,24 @@ class FormViewController: FormBaseViewController {
         }
     }
     
-    var shouldReset = true
-    var didPressDismissGesture: (()->())?
-    var actionId: String?
-    var detailsSchema: JSON2?
-    var buttonId: String?
-    var serviceId = ""
-    var singleRowItems: [FormViewModelItem] = []
-    var isApproverForm = false
-    var isParagrapghDataSet = false
-    var requestIdForApprover = ""
-    var serviceIdFromDetails = ""
-    var disAppearShouIdCalled = false
-    var stepProgressViewModel: StepProgressViewModel!
+    public var shouldReset = true
+    public var didPressDismissGesture: (()->())?
+    public var actionId: String?
+    public var detailsSchema: JSON2?
+    public var buttonId: String?
+    public var serviceId = ""
+    public var singleRowItems: [FormViewModelItem] = []
+    public var isApproverForm = false
+    public var isParagrapghDataSet = false
+    public var requestIdForApprover = ""
+    public var serviceIdFromDetails = ""
+    public var disAppearShouIdCalled = false
+    public var stepProgressViewModel: StepProgressViewModel!
     
     
     // MARK: - LifeCycle
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 15.0, *) {
             formTableView.isPrefetchingEnabled = false
@@ -159,7 +159,7 @@ class FormViewController: FormBaseViewController {
         // Create the SwiftUI view
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = false
         editAt = (edit: false, at: 0,delete: false)
@@ -174,7 +174,7 @@ class FormViewController: FormBaseViewController {
         }
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override public func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         dismissToolTip()
         guard disAppearShouIdCalled else {
@@ -263,13 +263,13 @@ class FormViewController: FormBaseViewController {
         setupTableView()
     }
     
-    override func goBack() {
+    override public func goBack() {
         disAppearShouIdCalled = true
         navigationController?.popViewController(animated: true)
     }
     
     /// Config listeners
-    func config() {
+    public func config() {
         
         formBuilder.targetComponents.subscribe(onNext: { _ in
             
@@ -321,7 +321,7 @@ class FormViewController: FormBaseViewController {
     }
     
     /// Setting up table's cells
-    func setupTableView() {
+    public func setupTableView() {
         for tableView in tableViewsCollection {
             tableView.tableFooterView = UIView()
             tableView.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
@@ -356,25 +356,25 @@ class FormViewController: FormBaseViewController {
     }
     
     /// navigate to survey screen
-    func routerToSurvey() {
+    public func routerToSurvey() {
 //        router.presentbottomSheet(fromProfile: false, controller: FeedbackBottomSheetView.self, viewModel: FeedbackViewModel.self, item: SurveyItem(dismissPage,serviceId: "", requestOrder: ""))
     }
     
     /// dismiss page
-    func dismissPage(){
+    public func dismissPage(){
         self.router.dismiss()
         popToAllServices()
     }
     
     /// pop to all services view
-    func popToAllServices() {
+    public func popToAllServices() {
 //        router.popToViewController(ofClass: AllServicesViewController.self, animated: true)
     }
     
     
     /// Getting DynamicActions Form
     /// - Parameter id: current action id to be rendered
-    func getActionsFormData(id: String) {
+    public func getActionsFormData(id: String) {
         self.cerqel_showLoading()
         Services.shared.getActionForm(actionId: id)  {[weak self] serviceName , responseJSON , errorMsg in
             guard let `self` = self else {return}
@@ -431,7 +431,7 @@ class FormViewController: FormBaseViewController {
     }
     
     /// getting details form from schema
-    func getForm(schema: JSON2) {
+    public func getForm(schema: JSON2) {
         
         self.formBuilder.handleFormJSON(schema) {[weak self] success in
             guard let `self` = self else {return}
@@ -481,7 +481,7 @@ class FormViewController: FormBaseViewController {
     
     /// Getting DynamicForm Fields
     /// - Parameter id: current service id to be rendered
-    func getFormData(id: String, isEdit: Bool?, isApproverForm: Bool?) {
+    public  func getFormData(id: String, isEdit: Bool?, isApproverForm: Bool?) {
         self.cerqel_showLoading()
         Services.shared.getForm(serviceId: id, isEdit: isEdit ?? false, isApproverForm: isApproverForm ?? false)  {[weak self] serviceName , formViersionId, responseJSON , errorMsg in
             guard let `self` = self else {return}
@@ -589,7 +589,7 @@ class FormViewController: FormBaseViewController {
     /// get section header title
     /// - Parameter item: section
     /// - Returns: section title
-    func getSectionTitle(item: FormViewModelItem?) -> String {
+    public func getSectionTitle(item: FormViewModelItem?) -> String {
         var lbl = ""
         lbl = item?.label ?? ""
         if !isArabicCerqel() {
@@ -610,7 +610,7 @@ class FormViewController: FormBaseViewController {
     
     /// toggle section expansion
     /// - Parameter section: section number
-    func toggleSection(_ section: Int) {
+    public  func toggleSection(_ section: Int) {
         formBuilder.sectionObjects[section].item?.isCollapsedSection?.toggle()
         formTableView.reloadData()
     }
@@ -810,7 +810,7 @@ extension FormViewController: NestedFormViewDelegate {
 }
 
 extension FormViewController: PopViewControllerDelegate {
-    func handlePopViewController() {
+   public func handlePopViewController() {
         self.navigationController?.popViewController(animated: true)
     }
 }

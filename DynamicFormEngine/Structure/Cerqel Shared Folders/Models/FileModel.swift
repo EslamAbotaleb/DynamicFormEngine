@@ -23,6 +23,17 @@ public struct FileAcknowledgeStatus {
     public var color: String
     public var isAcknowledge: Bool = false
     public var isAcknowledged: Bool = false
+    public init(title: String, color: String, isAcknowledge: Bool, isAcknowledged: Bool) {
+        self.title = title
+        self.color = color
+        self.isAcknowledge = isAcknowledge
+        self.isAcknowledged = isAcknowledged
+    }
+    
+    public init(title: String, color: String) {
+        self.title = title
+        self.color = color
+    }
 }
 
 // MARK: - DataClass

@@ -17,18 +17,18 @@ import Reachability
 import PopupDialog
 import SwiftUI
 
- class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
+public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
     
     var disposeBag = DisposeBag()
-    var viewModel: T!
-    let reachability = try! Reachability()
+    public var viewModel: T!
+    public let reachability = try! Reachability()
 
-    func configure(with viewModel: T) {
+    public func configure(with viewModel: T) {
         fatalError("You did not override configure method.. ")
     }
     
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         self.view = view
         checkReachabilty()
@@ -40,11 +40,11 @@ import SwiftUI
         configure(with: viewModel)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
       //  self.setNavigationBarStyle()
     }
     
-    func checkReachabilty() {
+    public func checkReachabilty() {
         //declare this property where it won't go out of scope relative to your listener
         
         reachability?.whenReachable = { reachability in
@@ -75,11 +75,11 @@ import SwiftUI
         
     }
     
-    func setNavigationBarStyle(){
+    public func setNavigationBarStyle(){
         self.navigationController?.cerqel_setDefaultNavigationAppearance()
     }
     
-    func getDate(dateString: String, format: String) -> Date {
+    public func getDate(dateString: String, format: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -87,7 +87,7 @@ import SwiftUI
         return date!
     }
     
-    func getDateString(date: Date, format: String) -> String {
+    public func getDateString(date: Date, format: String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -95,7 +95,7 @@ import SwiftUI
         return dateFormatted
     }
 
-    func errorObsereve(errorsObservable: Observable<Error>){
+    public func errorObsereve(errorsObservable: Observable<Error>){
         
         errorsObservable.subscribe(onNext:{ [unowned self](error) in
             self.viewModel.loadingSubject.onNext(BaseLoading.hide)
@@ -104,7 +104,7 @@ import SwiftUI
         
     }
     
-    func loadingViewObsereve(loadingObservable: Observable<BaseLoading>){
+    public func loadingViewObsereve(loadingObservable: Observable<BaseLoading>){
         
         loadingObservable.subscribe(onNext:{ [unowned self] (loading) in
             switch loading {
@@ -126,14 +126,14 @@ import SwiftUI
     }
     
     
-    func goToProfile(){
+    public func goToProfile(){
 //        self.navigationController?.pushViewController(CERQEL_Router.goTo(viewName: .myProfile()), animated: true)
 
     }
     
     /// To be renamed (setupNavigationBarForMainTabs(title: String))
     /// To be removed from other view controllers (will be used in main tabs only)
-    func addCircleProfileToNavigation(title: String = "", notificationCounter: Int) {
+    public func addCircleProfileToNavigation(title: String = "", notificationCounter: Int) {
         self.title = title
         guard let profilePhoto = AuthManager.shared.profile.value?.photo.value else {
             addDefaultProfileNavigation(notificationCounter: notificationCounter)
@@ -298,7 +298,7 @@ import SwiftUI
 //        self.navigationController?.pushViewController(CERQEL_Router.goTo(viewName: .notificationList), animated: true)
     }
     
-    func addGlobalSearchItem(){
+    public func addGlobalSearchItem(){
         if FF_GlobalSearch_isAvalable{
             if var items = self.navigationItem.rightBarButtonItems{
                 let search = UIBarButtonItem.init(image: UIImage(named: "search_nav"), style: .plain, target: self, action: #selector(self.goToGlobalSearch))
@@ -323,7 +323,7 @@ import SwiftUI
     }
     
     /// To be removed
-    func setupPageTitle(title: String) {
+    public func setupPageTitle(title: String) {
         let titleLbl = UILabel()
         titleLbl.text = title
         titleLbl.textAlignment = .center
@@ -341,7 +341,7 @@ import SwiftUI
         navigationItem.rightBarButtonItems = [alert,search]
     }
      
-     func addCircleProfileToNavigationToMainScreens() {
+    public  func addCircleProfileToNavigationToMainScreens() {
          guard let profilePhoto = AuthManager.shared.profile.value?.photo/*profilePicture*/ else {
              let user = UIBarButtonItem.init(image: UIImage(named: "User"), style: .plain, target: self, action: #selector(self.goToProfileFromNavigation))
              self.navigationItem.leftBarButtonItems = [user]
@@ -377,7 +377,7 @@ import SwiftUI
     
 }
 
-func flashHud(message:String,view:UIView,indicator:JGProgressHUDIndicatorView) -> JGProgressHUD {
+public func flashHud(message:String,view:UIView,indicator:JGProgressHUDIndicatorView) -> JGProgressHUD {
     let hud = JGProgressHUD(style: .dark)
     hud.textLabel.text = message
     hud.indicatorView = nil

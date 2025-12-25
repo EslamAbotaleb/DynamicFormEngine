@@ -69,9 +69,9 @@ public class RequestDetailsViewModel: BaseVM {
     public var isMyRequestFlag = false
 
     public var formBuilder = FormBuilder.shared
-    var rowIndices: [Int] = []
+    public  var rowIndices: [Int] = []
 
-    public  init(_ service: cerqel_NetworkService, requestId: String, view: UIViewController, router: CerqelRouterManager) {
+    public init(_ service: cerqel_NetworkService, requestId: String, view: UIViewController, router: CerqelRouterManager) {
         self.service = service
         self.requestId = requestId
         self.view = view
@@ -408,7 +408,7 @@ public class RequestDetailsViewModel: BaseVM {
     
     func getBackwardRequestDetails(id: String) {
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<BackwardModelRequestDetailsData>(action: cerqel_BasicActionDynamicForm.requestDetails(id: id))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<BackwardModelRequestDetailsData>(action: cerqel_BasicActionDynamicForm.requestDetails(id: id))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             
@@ -451,7 +451,7 @@ public class RequestDetailsViewModel: BaseVM {
     /// - Parameter id: current task id
     func getBackwardTaskDetails(id: String) {
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<BackwardModelRequestDetailsData>(action: cerqel_BasicActionDynamicForm.taskDetails(id: id))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<BackwardModelRequestDetailsData>(action: cerqel_BasicActionDynamicForm.taskDetails(id: id))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             if let details = response.item?.data {
@@ -470,7 +470,7 @@ public class RequestDetailsViewModel: BaseVM {
     /// Getting chat
     func getChat() {
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<ModelDicussionMessageData>(action: cerqel_BasicActionDynamicForm.fetchRequestChat(id: details.value?.id ?? ""))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<ModelDicussionMessageData>(action: cerqel_BasicActionDynamicForm.fetchRequestChat(id: details.value?.id ?? ""))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             if let details = response.item?.arrData{
@@ -495,7 +495,7 @@ public class RequestDetailsViewModel: BaseVM {
         if let att = attachment{
             pay["attachments"] = att
         }
-        self.service.load(cerqel_CodableResponseObject<Bool>(action: cerqel_BasicActionDynamicForm.addChatComment(payload: pay))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<Bool>(action: cerqel_BasicActionDynamicForm.addChatComment(payload: pay))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             
@@ -515,7 +515,7 @@ public class RequestDetailsViewModel: BaseVM {
     func uploadMedia(mediaImg: UIImage?, fileUrl: URL?){
         self.loadingSubject.onNext(.show)
         
-        cerqel_NormalAPIcall().uploadFile(action: .uploadFile(isPublic: false, serviceType: 0), photo: mediaImg, fileUrl: fileUrl, onCompletion: { (result) in
+        cerqel_NormalAPIcallDynamicForm().uploadFile(action: .uploadFile(isPublic: false, serviceType: 0), photo: mediaImg, fileUrl: fileUrl, onCompletion: { (result) in
             if let res = result?["result"] as? [[String: Any]], let fir = res.first, let media = ModelUploadedMedia(JSON: fir), let id = media.id{
                 if self.selectedTabId.value == 1{
                     var arr = self.arrayOfAttachmentsinAction.value
@@ -557,7 +557,7 @@ public class RequestDetailsViewModel: BaseVM {
         //
         //        }
         
-        self.service.load(cerqel_CodableResponseObject<TakeActionResponse>(action: cerqel_BasicActionDynamicForm.executeAction(payload: pay))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<TakeActionResponse>(action: cerqel_BasicActionDynamicForm.executeAction(payload: pay))).subscribe(onNext: {
             [weak self] (response) in
             guard let `self` = self else {return}
             self.loadingSubject.onNext(.hide)
@@ -599,7 +599,7 @@ public class RequestDetailsViewModel: BaseVM {
         
         
         
-        self.service.load(cerqel_CodableResponseObject<Bool>(action: Dynamic_BasicAction.updateRequest(payload: pay))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<Bool>(action: Dynamic_BasicAction.updateRequest(payload: pay))).subscribe(onNext: {
             [weak self] (response) in
             guard let `self` = self else {return}
             self.loadingSubject.onNext(.hide)
@@ -619,7 +619,7 @@ public class RequestDetailsViewModel: BaseVM {
         pay["requestId"] = requestId
         pay["comment"] = comment
         
-        self.service.load(cerqel_CodableResponseObject<Bool>(action: cerqel_BasicActionDynamicForm.reopenRequest(payload: pay))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<Bool>(action: cerqel_BasicActionDynamicForm.reopenRequest(payload: pay))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             self?.requestReopenedSuccessfully.accept(true)
@@ -635,7 +635,7 @@ public class RequestDetailsViewModel: BaseVM {
     
     func doWithdrawAction(requestId: String) {
         self.loadingSubject.onNext(.show)
-        self.service.load(cerqel_CodableResponseObject<Bool>(action: cerqel_BasicActionDynamicForm.withdrawRequest(requestId: requestId))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<Bool>(action: cerqel_BasicActionDynamicForm.withdrawRequest(requestId: requestId))).subscribe(onNext: {
             [weak self] (response) in
             self?.loadingSubject.onNext(.hide)
             self?.router.dismiss()

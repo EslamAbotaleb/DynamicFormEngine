@@ -1,5 +1,5 @@
 //
-//  CodableResponseObject.swift
+//  CodableResponseObjectDynamicForm.swift
 //  GAZT
 //
 //  Created by iSlam on 10/11/20.
@@ -11,7 +11,7 @@ public import RxSwift
 public import Alamofire
 public import MOLH
 
-public class cerqel_CodableResponseObject<T: Decodable>: Decodable, cerqel_CodableResponseProtocol {
+public class cerqel_CodableResponseObjectDynamicForm<T: Decodable>: Decodable, cerqel_CodableResponseProtocol {
     fileprivate(set) public var success: Bool?
     fileprivate(set) public var item: cerqel_CodableResponseObjectData<T>?
 

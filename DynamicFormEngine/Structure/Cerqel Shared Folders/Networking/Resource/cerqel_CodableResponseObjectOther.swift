@@ -10,7 +10,7 @@ import Foundation
 public import RxSwift
 public import Alamofire
 
-public class cerqel_CodableResponseObjectOther<T: Decodable, X: Decodable>: cerqel_CodableResponseObject<T> {
+public class cerqel_CodableResponseObjectOther<T: Decodable, X: Decodable>: cerqel_CodableResponseObjectDynamicForm<T> {
     // x = Other
     fileprivate(set) public var other:X?
 

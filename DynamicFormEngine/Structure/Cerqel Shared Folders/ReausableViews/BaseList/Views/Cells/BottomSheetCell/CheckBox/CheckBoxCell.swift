@@ -24,7 +24,7 @@ public class CheckBoxCell: UITableViewCell {
     }
     
    
-    func configure(item: ListModel) {
+    public func configure(item: ListModel) {
         checkSortNameLbl.text = item.name
         self.checkIcon.image = item.isSelected ?? false ? UIImage(named: "Checkbox Checked") : UIImage(named: "Checkbox Unchecked")
         checkSortNameLbl.textColor = typographyTitle

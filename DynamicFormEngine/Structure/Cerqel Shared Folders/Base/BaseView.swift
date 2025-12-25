@@ -22,23 +22,23 @@ open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, Pan
         
     }
     
-    public var shortFormHeight: PanModalHeight {
+    open var shortFormHeight: PanModalHeight {
         return .contentHeight(500)
         
     }
     
-    public var allowsExtendedPanScrolling: Bool { return false }
+    open var allowsExtendedPanScrolling: Bool { return false }
     
-    public var allowsTapToDismiss: Bool { return true }
+    open var allowsTapToDismiss: Bool { return true }
     
-    public var allowsDragToDismiss: Bool { return true  }
+    open var allowsDragToDismiss: Bool { return true  }
     
     public var cornerRadius: CGFloat {
         return 12
     }
     
     public let frame = UIScreen.main.bounds
-    open var item: Item!
+    public var item: Item!
     public let hud = JGProgressHUD(style: .dark)
     
     public var viewModel: ViewModel! {

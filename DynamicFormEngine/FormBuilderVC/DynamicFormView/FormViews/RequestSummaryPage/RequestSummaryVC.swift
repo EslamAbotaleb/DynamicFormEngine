@@ -87,7 +87,7 @@ public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel>
     }
     /// Configure listeners
     /// - Parameter viewModel: request details' viewModel
-    override func configure(with viewModel: RequestDetailsViewModel) {
+    override public func configure(with viewModel: RequestDetailsViewModel) {
         
         formBuilder.serviceSubmittedResponse.subscribe(onNext: { [unowned self]  (item) in
             if let item = item{
@@ -126,7 +126,7 @@ public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel>
         submitButton.setSubmitButtonTheme()
     }
 
-    func loadSectionObjectsDataSource(sectionObject: SectionObject) {
+    public func loadSectionObjectsDataSource(sectionObject: SectionObject) {
         if sectionObject.item != nil {
             var sectionFormData = [Field]()
             let relatedItems = sectionObject.items
@@ -188,7 +188,7 @@ public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel>
             }
         }
     }
-    func getSectionTitle(item: FormViewModelItem?) -> String {
+    public func getSectionTitle(item: FormViewModelItem?) -> String {
         var lbl = ""
         lbl = item?.label ?? ""
         if !isArabicCerqel() {

@@ -23,7 +23,7 @@ public class RadioCell: UITableViewCell {
         
     }
     
-    func configure(indexPath: IndexPath, totalRows: Int, item: ListModel) {
+    public  func configure(indexPath: IndexPath, totalRows: Int, item: ListModel) {
         if indexPath.row == totalRows - 1 {
             bottomView.isHidden = true
         } else {

@@ -8,16 +8,18 @@
 
 import Foundation
 
-struct CategoriesEndPoint: Endpoint {
+public struct CategoriesEndPoint: Endpoint {
     
-    var urlPrefix: String = ""
-    var service: EndpointService = .categories
-    var method: EndpointMethod = .get
-    var encoding: EndpointEncoding = .query
-    var auth: AuthorizationHandler = UserAuthoriationHandler()
-    var parameters: [String: Any] = [:]
-    var headers: [String: String] = [:]
-    var multipart: [MultiPartModel] {
+    public var urlPrefix: String = ""
+    public var service: EndpointService = .categories
+    public var method: EndpointMethod = .get
+    public var encoding: EndpointEncoding = .query
+    public var auth: AuthorizationHandler = UserAuthoriationHandler()
+    public var parameters: [String: Any] = [:]
+    public var headers: [String: String] = [:]
+    public var multipart: [MultiPartModel] {
         []
     }
+    
+    public init() {}
 }

@@ -31,6 +31,14 @@ public struct StatusDtoCerqel: Codable {
     public let statusName, statusCode, statusColor: String?
     public let persentage: Double?
     public let count: Int?
+    
+    public init(statusName: String?, statusCode: String?, statusColor: String?, persentage: Double?, count: Int?) {
+        self.statusName = statusName
+        self.statusCode = statusCode
+        self.statusColor = statusColor
+        self.persentage = persentage
+        self.count = count
+    }
 }
 
 public struct ModelUserProfileDataCerqel: Codable {

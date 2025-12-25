@@ -13,7 +13,6 @@ public enum SourceType: Int {
     case folder
 }
 
-protocol DocumentDelegate: AnyObject {
+public protocol DocumentDelegate: AnyObject {
     func didPickDocuments(URLs: [URL]?, fromProfile: Bool)
 }
-

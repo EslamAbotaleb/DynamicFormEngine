@@ -478,6 +478,9 @@ public struct ValidationsCerqel : Codable {
         case value = "value"
         case message = "message"
     }
+    
+    public init() {}
+    
 }
 
 public struct ModelconditionCerqel : Codable {

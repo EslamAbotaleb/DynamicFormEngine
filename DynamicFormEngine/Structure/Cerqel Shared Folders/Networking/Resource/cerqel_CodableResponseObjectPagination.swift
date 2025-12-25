@@ -7,21 +7,21 @@
 //
 
 import Foundation
-internal import RxSwift
-internal import Alamofire
+public import RxSwift
+public import Alamofire
 
-class cerqel_CodableResponseObjectPagination<T: Decodable>: cerqel_CodableResponseObject<T> {
-    fileprivate(set) var next:String?
-    fileprivate(set) var previous:String?
-    fileprivate(set) var count:Int?
-    fileprivate(set) var currentPage:String?
+public class cerqel_CodableResponseObjectPagination<T: Decodable>: cerqel_CodableResponseObjectDynamicForm<T> {
+    fileprivate(set) public var next:String?
+    fileprivate(set) public var previous:String?
+    fileprivate(set) public var count:Int?
+    fileprivate(set) public var currentPage:String?
 
     private enum CodingKeys: String, CodingKey {
         case next, previous, count
         case currentPage = "current_page"
     }
     
-    required init(from decoder:Decoder) throws {
+    required public init(from decoder:Decoder) throws {
         try super.init(from: decoder)
         let values = try decoder.container(keyedBy: CodingKeys.self)
         next = try? values.decode(String.self, forKey: .next)
@@ -30,9 +30,7 @@ class cerqel_CodableResponseObjectPagination<T: Decodable>: cerqel_CodableRespon
         currentPage = try? values.decode(String.self, forKey: .currentPage)
     }
     
-    override init(action: cerqel_APIActionDynamicForm, keyResult: String = "result") {
+    override public init(action: cerqel_APIActionDynamicForm, keyResult: String = "result") {
         super.init(action: action, keyResult: keyResult)
     }
-    
-    
 }

@@ -526,7 +526,7 @@
 		AAC0EBCF2EF61E0100DDE9FF /* DelegatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAB82EF61E0100DDE9FF /* DelegatorItem.swift */; };
 		AAC0EBD22EF61E0100DDE9FF /* StepsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EA242EF61E0100DDE9FF /* StepsUIView.swift */; };
 		AAC0EBD72EF61E0100DDE9FF /* DelegatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAB92EF61E0100DDE9FF /* DelegatorModel.swift */; };
-		AAC0EBDD2EF61E0100DDE9FF /* CerqelColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAA12EF61E0100DDE9FF /* CerqelColors.swift */; };
+		AAC0EBDD2EF61E0100DDE9FF /* CerqelColorsDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAA12EF61E0100DDE9FF /* CerqelColorsDynamicForm.swift */; };
 		AAC0EBE12EF61E0100DDE9FF /* UsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAA52EF61E0100DDE9FF /* UsersUseCase.swift */; };
 		AAC0EBE22EF61E0100DDE9FF /* DelegatorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAB52EF61E0100DDE9FF /* DelegatorsViewModel.swift */; };
 		AAC0EBE72EF61E0100DDE9FF /* UserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAA92EF61E0100DDE9FF /* UserEntity.swift */; };
@@ -543,7 +543,7 @@
 		AAC0EC2F2EF61E0100DDE9FF /* UsersDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAB12EF61E0100DDE9FF /* UsersDTO.swift */; };
 		AAC0EC302EF61E0100DDE9FF /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EA8F2EF61E0100DDE9FF /* CustomNavBar.swift */; };
 		AAC0EC3A2EF61E0100DDE9FF /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EA9D2EF61E0100DDE9FF /* LoadingView.swift */; };
-		AAC0EC412EF61E0100DDE9FF /* CerqelFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EA6E2EF61E0100DDE9FF /* CerqelFont.swift */; };
+		AAC0EC412EF61E0100DDE9FF /* CerqelFontDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EA6E2EF61E0100DDE9FF /* CerqelFontDynamicForm.swift */; };
 		AAC0EC422EF61E0100DDE9FF /* AddCommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EA722EF61E0100DDE9FF /* AddCommentViewModel.swift */; };
 		AAC0EC432EF61E0100DDE9FF /* UsersRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAA72EF61E0100DDE9FF /* UsersRepo.swift */; };
 		AAC0EC452EF61E0100DDE9FF /* GetUsersEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAAE2EF61E0100DDE9FF /* GetUsersEndPoint.swift */; };
@@ -609,7 +609,7 @@
 		AAC0EEAF2EF61E0B00DDE9FF /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECB02EF61E0B00DDE9FF /* String+Extension.swift */; };
 		AAC0EEB02EF61E0B00DDE9FF /* SettingsCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EE242EF61E0B00DDE9FF /* SettingsCerqel.swift */; };
 		AAC0EEB12EF61E0B00DDE9FF /* ColorCustomizationModelCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED6B2EF61E0B00DDE9FF /* ColorCustomizationModelCerqel.swift */; };
-		AAC0EEB42EF61E0B00DDE9FF /* cerqel_CodableResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED8C2EF61E0B00DDE9FF /* cerqel_CodableResponseObject.swift */; };
+		AAC0EEB42EF61E0B00DDE9FF /* cerqel_CodableResponseObjectDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED8C2EF61E0B00DDE9FF /* cerqel_CodableResponseObjectDynamicForm.swift */; };
 		AAC0EEB52EF61E0B00DDE9FF /* cerqel_CodableResponseObjectOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED892EF61E0B00DDE9FF /* cerqel_CodableResponseObjectOther.swift */; };
 		AAC0EEB62EF61E0B00DDE9FF /* cerqel_CodableResponseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED8B2EF61E0B00DDE9FF /* cerqel_CodableResponseProtocol.swift */; };
 		AAC0EEB82EF61E0B00DDE9FF /* ModelCategoryCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED422EF61E0B00DDE9FF /* ModelCategoryCerqel.swift */; };
@@ -644,7 +644,7 @@
 		AAC0EEFC2EF61E0B00DDE9FF /* ModelSubmitFormCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED462EF61E0B00DDE9FF /* ModelSubmitFormCerqel.swift */; };
 		AAC0EEFD2EF61E0B00DDE9FF /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECC12EF61E0B00DDE9FF /* SectionModel.swift */; };
 		AAC0EEFE2EF61E0B00DDE9FF /* BaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED992EF61E0B00DDE9FF /* BaseItem.swift */; };
-		AAC0EEFF2EF61E0B00DDE9FF /* cerqel_NormalAPIcall.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED8F2EF61E0B00DDE9FF /* cerqel_NormalAPIcall.swift */; };
+		AAC0EEFF2EF61E0B00DDE9FF /* cerqel_NormalAPIcallDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED8F2EF61E0B00DDE9FF /* cerqel_NormalAPIcallDynamicForm.swift */; };
 		AAC0EF012EF61E0B00DDE9FF /* ModelQuoteCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED802EF61E0B00DDE9FF /* ModelQuoteCerqel.swift */; };
 		AAC0EF022EF61E0B00DDE9FF /* CustomDashedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EC912EF61E0B00DDE9FF /* CustomDashedView.swift */; };
 		AAC0EF052EF61E0B00DDE9FF /* ModelUsersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED342EF61E0B00DDE9FF /* ModelUsersList.swift */; };
@@ -1167,7 +1167,7 @@
 		AAC0EA232EF61E0100DDE9FF /* StepProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepProgressView.swift; sourceTree = "<group>"; };
 		AAC0EA242EF61E0100DDE9FF /* StepsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsUIView.swift; sourceTree = "<group>"; };
 		AAC0EA262EF61E0100DDE9FF /* StepProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepProgressViewModel.swift; sourceTree = "<group>"; };
-		AAC0EA6E2EF61E0100DDE9FF /* CerqelFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelFont.swift; sourceTree = "<group>"; };
+		AAC0EA6E2EF61E0100DDE9FF /* CerqelFontDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelFontDynamicForm.swift; sourceTree = "<group>"; };
 		AAC0EA6F2EF61E0100DDE9FF /* AddCommentBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentBottomSheet.swift; sourceTree = "<group>"; };
 		AAC0EA702EF61E0100DDE9FF /* AddCommentBottomSheet.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCommentBottomSheet.xib; sourceTree = "<group>"; };
 		AAC0EA722EF61E0100DDE9FF /* AddCommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCommentViewModel.swift; sourceTree = "<group>"; };
@@ -1186,7 +1186,7 @@
 		AAC0EA9B2EF61E0100DDE9FF /* BackButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonView.swift; sourceTree = "<group>"; };
 		AAC0EA9D2EF61E0100DDE9FF /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		AAC0EA9F2EF61E0100DDE9FF /* CustomNavBarWithSubmit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarWithSubmit.swift; sourceTree = "<group>"; };
-		AAC0EAA12EF61E0100DDE9FF /* CerqelColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelColors.swift; sourceTree = "<group>"; };
+		AAC0EAA12EF61E0100DDE9FF /* CerqelColorsDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelColorsDynamicForm.swift; sourceTree = "<group>"; };
 		AAC0EAA32EF61E0100DDE9FF /* UsersMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMapper.swift; sourceTree = "<group>"; };
 		AAC0EAA52EF61E0100DDE9FF /* UsersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersUseCase.swift; sourceTree = "<group>"; };
 		AAC0EAA72EF61E0100DDE9FF /* UsersRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersRepo.swift; sourceTree = "<group>"; };
@@ -1285,10 +1285,10 @@
 		AAC0ED892EF61E0B00DDE9FF /* cerqel_CodableResponseObjectOther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_CodableResponseObjectOther.swift; sourceTree = "<group>"; };
 		AAC0ED8A2EF61E0B00DDE9FF /* cerqel_CodableResponseObjectPagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_CodableResponseObjectPagination.swift; sourceTree = "<group>"; };
 		AAC0ED8B2EF61E0B00DDE9FF /* cerqel_CodableResponseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_CodableResponseProtocol.swift; sourceTree = "<group>"; };
-		AAC0ED8C2EF61E0B00DDE9FF /* cerqel_CodableResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_CodableResponseObject.swift; sourceTree = "<group>"; };
+		AAC0ED8C2EF61E0B00DDE9FF /* cerqel_CodableResponseObjectDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_CodableResponseObjectDynamicForm.swift; sourceTree = "<group>"; };
 		AAC0ED8D2EF61E0B00DDE9FF /* cerqel_CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_CustomError.swift; sourceTree = "<group>"; };
 		AAC0ED8E2EF61E0B00DDE9FF /* cerqel_ArrayResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_ArrayResource.swift; sourceTree = "<group>"; };
-		AAC0ED8F2EF61E0B00DDE9FF /* cerqel_NormalAPIcall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_NormalAPIcall.swift; sourceTree = "<group>"; };
+		AAC0ED8F2EF61E0B00DDE9FF /* cerqel_NormalAPIcallDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_NormalAPIcallDynamicForm.swift; sourceTree = "<group>"; };
 		AAC0ED912EF61E0B00DDE9FF /* cerqel_NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_NetworkService.swift; sourceTree = "<group>"; };
 		AAC0ED922EF61E0B00DDE9FF /* cerqel_ServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_ServiceImp.swift; sourceTree = "<group>"; };
 		AAC0ED952EF61E0B00DDE9FF /* ExpandableLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableLabel.swift; sourceTree = "<group>"; };
@@ -3875,10 +3875,10 @@
 				AAC0ED892EF61E0B00DDE9FF /* cerqel_CodableResponseObjectOther.swift */,
 				AAC0ED8A2EF61E0B00DDE9FF /* cerqel_CodableResponseObjectPagination.swift */,
 				AAC0ED8B2EF61E0B00DDE9FF /* cerqel_CodableResponseProtocol.swift */,
-				AAC0ED8C2EF61E0B00DDE9FF /* cerqel_CodableResponseObject.swift */,
+				AAC0ED8C2EF61E0B00DDE9FF /* cerqel_CodableResponseObjectDynamicForm.swift */,
 				AAC0ED8D2EF61E0B00DDE9FF /* cerqel_CustomError.swift */,
 				AAC0ED8E2EF61E0B00DDE9FF /* cerqel_ArrayResource.swift */,
-				AAC0ED8F2EF61E0B00DDE9FF /* cerqel_NormalAPIcall.swift */,
+				AAC0ED8F2EF61E0B00DDE9FF /* cerqel_NormalAPIcallDynamicForm.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -3976,8 +3976,8 @@
 				AAA8098D2EF941E9001E845F /* MaskedImageView.swift */,
 				AA51BD0F2EF4203B00488B90 /* LottieHUD.swift */,
 				AA51BD132EF4203B00488B90 /* FeatureFlag.swift */,
-				AAC0EA6E2EF61E0100DDE9FF /* CerqelFont.swift */,
-				AAC0EAA12EF61E0100DDE9FF /* CerqelColors.swift */,
+				AAC0EA6E2EF61E0100DDE9FF /* CerqelFontDynamicForm.swift */,
+				AAC0EAA12EF61E0100DDE9FF /* CerqelColorsDynamicForm.swift */,
 				AAC0EE232EF61E0B00DDE9FF /* cerqel_Environment.swift */,
 				AAC0EE242EF61E0B00DDE9FF /* SettingsCerqel.swift */,
 				AA51BD122EF4203B00488B90 /* ManageMediaAuthorization.swift */,
@@ -4530,7 +4530,7 @@
 				AAADA1852EF6D3430036FD04 /* DRPLoadingSpinnerTimingFunction.m in Sources */,
 				AAADA1862EF6D3430036FD04 /* DRPLoadingSpinner.m in Sources */,
 				AAADA1872EF6D3430036FD04 /* DRPRefreshControl.m in Sources */,
-				AAC0EBDD2EF61E0100DDE9FF /* CerqelColors.swift in Sources */,
+				AAC0EBDD2EF61E0100DDE9FF /* CerqelColorsDynamicForm.swift in Sources */,
 				AAC0EBE12EF61E0100DDE9FF /* UsersUseCase.swift in Sources */,
 				AAC0EBE22EF61E0100DDE9FF /* DelegatorsViewModel.swift in Sources */,
 				AAC0EBE72EF61E0100DDE9FF /* UserEntity.swift in Sources */,
@@ -4549,7 +4549,7 @@
 				AAC0EC2F2EF61E0100DDE9FF /* UsersDTO.swift in Sources */,
 				AAC0EC302EF61E0100DDE9FF /* CustomNavBar.swift in Sources */,
 				AAC0EC3A2EF61E0100DDE9FF /* LoadingView.swift in Sources */,
-				AAC0EC412EF61E0100DDE9FF /* CerqelFont.swift in Sources */,
+				AAC0EC412EF61E0100DDE9FF /* CerqelFontDynamicForm.swift in Sources */,
 				AAC0EC422EF61E0100DDE9FF /* AddCommentViewModel.swift in Sources */,
 				AAC0EC432EF61E0100DDE9FF /* UsersRepo.swift in Sources */,
 				AAC0EC452EF61E0100DDE9FF /* GetUsersEndPoint.swift in Sources */,
@@ -4818,7 +4818,7 @@
 				AAC0EEAF2EF61E0B00DDE9FF /* String+Extension.swift in Sources */,
 				AAC0EEB02EF61E0B00DDE9FF /* SettingsCerqel.swift in Sources */,
 				AAC0EEB12EF61E0B00DDE9FF /* ColorCustomizationModelCerqel.swift in Sources */,
-				AAC0EEB42EF61E0B00DDE9FF /* cerqel_CodableResponseObject.swift in Sources */,
+				AAC0EEB42EF61E0B00DDE9FF /* cerqel_CodableResponseObjectDynamicForm.swift in Sources */,
 				AAADBB192EF85CAD00F696F3 /* AcknowledgeViewModel.swift in Sources */,
 				AAC0EEB52EF61E0B00DDE9FF /* cerqel_CodableResponseObjectOther.swift in Sources */,
 				AAC0EEB62EF61E0B00DDE9FF /* cerqel_CodableResponseProtocol.swift in Sources */,
@@ -4856,7 +4856,7 @@
 				AAC0EEFC2EF61E0B00DDE9FF /* ModelSubmitFormCerqel.swift in Sources */,
 				AAC0EEFD2EF61E0B00DDE9FF /* SectionModel.swift in Sources */,
 				AAC0EEFE2EF61E0B00DDE9FF /* BaseItem.swift in Sources */,
-				AAC0EEFF2EF61E0B00DDE9FF /* cerqel_NormalAPIcall.swift in Sources */,
+				AAC0EEFF2EF61E0B00DDE9FF /* cerqel_NormalAPIcallDynamicForm.swift in Sources */,
 				AAC0EF012EF61E0B00DDE9FF /* ModelQuoteCerqel.swift in Sources */,
 				AAC0EF022EF61E0B00DDE9FF /* CustomDashedView.swift in Sources */,
 				AAC0EF052EF61E0B00DDE9FF /* ModelUsersList.swift in Sources */,

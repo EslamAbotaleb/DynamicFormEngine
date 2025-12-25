@@ -8,41 +8,39 @@
 
 import Foundation
 
-
-
- struct UploadEndPoint: Endpoint {
+public struct UploadEndPoint: Endpoint {
     
-    var urlPrefix: String = ""
-    var service: EndpointService = .upload
-    var method: EndpointMethod = .post
-    var encoding: EndpointEncoding = .json
-    var auth: AuthorizationHandler = UserAuthoriationHandler()
-    var parameters: [String: Any] = [:]
-    var headers: [String: String] = [:]
-     var multipart: [DynamicFormEngine.MultiPartModel] {
+    public var urlPrefix: String = ""
+    public var service: EndpointService = .upload
+    public var method: EndpointMethod = .post
+    public var encoding: EndpointEncoding = .json
+    public var auth: AuthorizationHandler = UserAuthoriationHandler()
+    public var parameters: [String: Any] = [:]
+    public var headers: [String: String] = [:]
+    public var multipart: [DynamicFormEngine.MultiPartModel] {
          []
      }
      
-    init(UploadRequest: UploadFileRequest ) {
+    public init(UploadRequest: UploadFileRequest ) {
         parameters = UploadRequest.asDictionary()
         
     }
 }
 
-struct UploadUserProfileEndPoint: Endpoint {
+public struct UploadUserProfileEndPoint: Endpoint {
 
-   var urlPrefix: String = ""
-   var service: EndpointService = .uploadUserProfile
-   var method: EndpointMethod = .post
-   var encoding: EndpointEncoding = .json
-   var auth: AuthorizationHandler = UserAuthoriationHandler()
-   var parameters: [String: Any] = [:]
-   var headers: [String: String] = [:]
-    var multipart: [DynamicFormEngine.MultiPartModel] {
+    public var urlPrefix: String = ""
+    public var service: EndpointService = .uploadUserProfile
+    public var method: EndpointMethod = .post
+    public var encoding: EndpointEncoding = .json
+    public var auth: AuthorizationHandler = UserAuthoriationHandler()
+    public var parameters: [String: Any] = [:]
+    public var headers: [String: String] = [:]
+    public var multipart: [DynamicFormEngine.MultiPartModel] {
         []
     }
     
-   init(UploadRequest: Attachment ) {
+    public init(UploadRequest: Attachment ) {
        parameters = UploadRequest.asDictionary()
 
    }

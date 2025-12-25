@@ -8,20 +8,20 @@
 
 import Foundation
 
-struct recentFilesEndPoint: Endpoint {
+public struct recentFilesEndPoint: Endpoint {
    
-   var urlPrefix: String = ""
-   var service: EndpointService = .recentFiles
-   var method: EndpointMethod = .post
-   var encoding: EndpointEncoding = .json
-   var auth: AuthorizationHandler = UserAuthoriationHandler()
-   var parameters: [String: Any] = [:]
-   var headers: [String: String] = [:]
-    var multipart: [DynamicFormEngine.MultiPartModel] {
+    public var urlPrefix: String = ""
+    public var service: EndpointService = .recentFiles
+    public var method: EndpointMethod = .post
+    public var encoding: EndpointEncoding = .json
+    public var auth: AuthorizationHandler = UserAuthoriationHandler()
+    public var parameters: [String: Any] = [:]
+    public var headers: [String: String] = [:]
+    public  var multipart: [DynamicFormEngine.MultiPartModel] {
         []
     }
     
-    init(cerqelFilterPayload: CerqelFilterPayload ) {
+    public init(cerqelFilterPayload: CerqelFilterPayload ) {
        parameters = cerqelFilterPayload.asDictionary()
        
    }

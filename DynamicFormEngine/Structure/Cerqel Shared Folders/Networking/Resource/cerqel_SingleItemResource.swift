@@ -13,9 +13,9 @@ struct cerqel_SingleItemResource<T: Codable> {
     let objectType = T.self
     let action: cerqel_APIActionDynamicForm
     
-    func parse(_ data: Data) -> Observable<cerqel_CodableResponseObject<T>> {
+    func parse(_ data: Data) -> Observable<cerqel_CodableResponseObjectDynamicForm<T>> {
         return Observable.create { observer in
-            guard let result = try? JSONDecoder().decode(cerqel_CodableResponseObject<T>.self, from: data) else {
+            guard let result = try? JSONDecoder().decode(cerqel_CodableResponseObjectDynamicForm<T>.self, from: data) else {
                 observer.onError(cerqel_CustomError(value: "Can't map response."))
                 return Disposables.create()
             }

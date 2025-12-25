@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     
-    convenience init(hexString:String, alpha: CGFloat = 1) {
+    convenience public init(hexString:String, alpha: CGFloat = 1) {
         let hexString:String = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let scanner = Scanner(string: hexString)
         
@@ -33,15 +33,15 @@ extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
     
-    convenience init(r: Int, g: Int, b: Int) {
+    convenience public init(r: Int, g: Int, b: Int) {
         self.init(r: r, g: g, b: b, a: 1.0)
     }
     
-    convenience init(r: Int, g: Int, b: Int, a: CGFloat) {
+    convenience public init(r: Int, g: Int, b: Int, a: CGFloat) {
         self.init(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: a)
     }
     
-    func toHexString() -> String {
+    public func toHexString() -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0
         var b:CGFloat = 0

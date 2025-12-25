@@ -12,7 +12,7 @@ internal import Alamofire
 internal import MOLH
 import UIKit
 
-public class cerqel_NormalAPIcall{
+public class cerqel_NormalAPIcallDynamicForm{
     
     public struct NetworkingManager {
         

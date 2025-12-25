@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DynamicFormEngine
 
 public enum FileVersionType: String {
     case arabic
@@ -94,6 +95,12 @@ public struct EntityDifference {
     public var key: String
     public var oldValue: Any
     public var newValue: Any
+    
+    public init(key: String, oldValue: Any, newValue: Any) {
+        self.key = key
+        self.oldValue = oldValue
+        self.newValue = newValue
+    }
 }
 
 
@@ -107,6 +114,28 @@ public struct Section<T> : ProfileMapper{
     public var entry: T
     public var data: [Entry]
 
+    public init(id: String? = nil,
+                 title: String,
+                 entry: T,
+                 data: [Entry]) {
+         self.id = id
+         self.title = title
+         self.entry = entry
+         self.data = data
+     }
+    
+    public init(id: String? = nil,
+                 title: String,
+                 isExpanded: Bool = false,
+                 entry: T,
+                 data: [Entry]) {
+         self.id = id
+         self.title = title
+         self.isExpanded = isExpanded
+         self.entry = entry
+         self.data = data
+     }
+    
     public func toList() -> [T] {
         return [entry]
     }
@@ -182,6 +211,25 @@ public struct Entry {
     public var value: Any
     public var valueForSummary: Any? = nil
     public var state: SummaryState = .old
+    
+    public init(headerTitle: String? = nil, title: String, value: Any, valueForSummary: Any? = nil, state: SummaryState) {
+        self.headerTitle = headerTitle
+        self.title = title
+        self.value = value
+        self.valueForSummary = valueForSummary
+        self.state = state
+    }
+    
+    public init(title: String, value: Any, valueForSummary: Any? = nil) {
+        self.title = title
+        self.value = value
+        self.valueForSummary = valueForSummary
+    }
+    
+    public init(title: String, value: Any) {
+        self.title = title
+        self.value = value
+    }
 }
 
 public struct UploadedCVEntity: ProfileMapper, Codable, Equatable {

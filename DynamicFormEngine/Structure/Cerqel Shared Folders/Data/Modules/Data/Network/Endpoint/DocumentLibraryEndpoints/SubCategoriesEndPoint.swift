@@ -7,22 +7,21 @@
 //
 
 import Foundation
-import DynamicFormEngine
 
-struct SubCategoriesEndPoint: Endpoint {
+public struct SubCategoriesEndPoint: Endpoint {
     
-    var urlPrefix: String = ""
-    var service: EndpointService = .subCategories(categoryId: "")
-    var method: EndpointMethod = .get
-    var encoding: EndpointEncoding = .query
-    var auth: AuthorizationHandler = UserAuthoriationHandler()
-    var parameters: [String: Any] = [:]
-    var headers: [String: String] = [:]
-    var multipart: [DynamicFormEngine.MultiPartModel] {
+    public var urlPrefix: String = ""
+    public var service: EndpointService = .subCategories(categoryId: "")
+    public var method: EndpointMethod = .get
+    public var encoding: EndpointEncoding = .query
+    public var auth: AuthorizationHandler = UserAuthoriationHandler()
+    public var parameters: [String: Any] = [:]
+    public var headers: [String: String] = [:]
+    public var multipart: [DynamicFormEngine.MultiPartModel] {
         []
     }
     
-    init(categoryId: String) {
+    public init(categoryId: String) {
         urlPrefix  = urlPrefix + "\(categoryId)"
 
     }

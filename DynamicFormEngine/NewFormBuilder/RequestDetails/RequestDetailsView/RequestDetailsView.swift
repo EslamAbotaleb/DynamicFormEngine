@@ -82,7 +82,7 @@ public class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewMode
     var DetailsTabsTVcellReloaded = false
     
     // MARK: - Functions
-    override func viewDidLoad() {
+     override public func viewDidLoad() {
         super.viewDidLoad()
         
         viewModel.getDetailsFormJson(id: id, isRequest: isMyRequestFlag)
@@ -288,7 +288,7 @@ public class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewMode
     }
     /// Configure listeners
     /// - Parameter viewModel: request details' viewModel
-    override func configure(with viewModel: RequestDetailsViewModel) {
+    override public func configure(with viewModel: RequestDetailsViewModel) {
         viewModel.arrayOfAttachmentsinAction.subscribe(onNext: { [unowned self]  (arr) in
             if !arr.isEmpty {
                 self.itemsTV.reloadData()

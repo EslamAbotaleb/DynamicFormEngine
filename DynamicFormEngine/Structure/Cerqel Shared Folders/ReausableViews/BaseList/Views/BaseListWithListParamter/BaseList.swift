@@ -9,21 +9,20 @@
 import UIKit
 import PanModal
 
-
 public class BaseListItem: BaseItem,Equatable {
     static public func == (lhs: BaseListItem, rhs: BaseListItem) -> Bool {
         return true
     }
     
-    var list: [ListModel]
-    var title: String
-    var type: BottomSheetType
-    var currentSelectedItem: ListModel?
-    var currentMultiSelectedItems: [ListModel]?
-    var isSingleSelection: Bool
-    var selectedItem: SelectedCallBack
-    var multiSelectedItems: MultiSelectedCallBack
-    var action: [Action]?
+    public var list: [ListModel]
+    public var title: String
+    public var type: BottomSheetType
+    public var currentSelectedItem: ListModel?
+    public var currentMultiSelectedItems: [ListModel]?
+    public var isSingleSelection: Bool
+    public var selectedItem: SelectedCallBack
+    public var multiSelectedItems: MultiSelectedCallBack
+    public var action: [Action]?
     public init(list: [ListModel],title: String,type: BottomSheetType,currentSelectedItem: ListModel = ListModel(),currentMultiSelectedItems: [ListModel]? = [],isSingleSelection: Bool, selectedItem: @escaping SelectedCallBack,multiSelectedItems: @escaping MultiSelectedCallBack, action: [Action]? = [] ) {
         self.list = list
         self.title = title

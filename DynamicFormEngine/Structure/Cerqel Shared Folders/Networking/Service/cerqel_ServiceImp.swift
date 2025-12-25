@@ -52,9 +52,9 @@ public struct cerqel_BasicNetworkServiceImpl: cerqel_NetworkService {
             .flatMap(resource.parse)
     }
     //
-    public func uploadImage<T>(_ resource: cerqel_CodableResponseObject<T>,
+    public func uploadImage<T>(_ resource: cerqel_CodableResponseObjectDynamicForm<T>,
                         image: UIImage?,
-                        imageParam: String) -> Observable<cerqel_CodableResponseObject<T>> where T: Decodable {
+                        imageParam: String) -> Observable<cerqel_CodableResponseObjectDynamicForm<T>> where T: Decodable {
         
         return Observable.create { observer in
             
@@ -95,7 +95,7 @@ public struct cerqel_BasicNetworkServiceImpl: cerqel_NetworkService {
                 switch response.result {
                 case .success(let data):
                     do {
-                        let decoded = try JSONDecoder().decode(cerqel_CodableResponseObject<T>.self, from: data)
+                        let decoded = try JSONDecoder().decode(cerqel_CodableResponseObjectDynamicForm<T>.self, from: data)
                         observer.onNext(decoded)
                         observer.onCompleted()
                     } catch {

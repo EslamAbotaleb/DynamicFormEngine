@@ -25,7 +25,7 @@ public struct BackwardDataSoruceTableModel {
 //    func handleActionPayload(actionId: String,payload: [[String:Any]])
 //}
 
-class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
+public class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     // MARK: - IBOutlets
     @IBOutlet weak var bgTopView: UIView!
     @IBOutlet weak var bgBottomView: UIView!
@@ -37,15 +37,15 @@ class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewMod
     
     // MARK: - Variables
     
-    let dropDown = DropDown()
-    var commentID: String = ""
-    var id = ""
-    var isMyRequestFlag = false
-    var isFromNotifications = false
-    var actionCommentText = ""
-    var dataSourceTableArray: [BackwardDataSoruceTableModel] = []
-    var newFormWithTable: [BackwardViewForm]?
-    var arrayOfAttachment: [ModelUploadedMedia] = [] {
+    public let dropDown = DropDown()
+    public var commentID: String = ""
+    public var id = ""
+    public var isMyRequestFlag = false
+    public var isFromNotifications = false
+    public var actionCommentText = ""
+    public var dataSourceTableArray: [BackwardDataSoruceTableModel] = []
+    public var newFormWithTable: [BackwardViewForm]?
+    public var arrayOfAttachment: [ModelUploadedMedia] = [] {
         didSet{
             self.attachmentCV.reloadData()
         }
@@ -78,7 +78,7 @@ class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewMod
         }
         
     }
-    func scrollToIndexPath() {
+    public func scrollToIndexPath() {
         if let index = viewModel.chatList.value?.firstIndex(where: {$0.id == commentID}) {
             if index == ( (viewModel.chatList.value?.count ?? 0) - 1 ){
                 print("commentIndexLast == \(index)")
@@ -91,7 +91,7 @@ class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewMod
             }
         }
     }
-    func filterDuplicates(_ array: [BackwardViewForm]) -> [BackwardViewForm] {
+    public func filterDuplicates(_ array: [BackwardViewForm]) -> [BackwardViewForm] {
         var uniqueForms: [BackwardViewForm] = []
         var seenParentIds: Set<String> = []
         
@@ -116,14 +116,14 @@ class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewMod
         return uniqueForms
     }
     
-    func create() {
+    public func create() {
         containerView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         chatTxtV.text = "Add discussion comment....".localized
         chatTxtV.textColor = .slate_grey
         shadowView.addNormalShadow()
     }
     
-    func loadTableRows() {
+    public func loadTableRows() {
         if let viewForm = viewModel.backwardDetails.value?.viewForm {
             for form in viewForm {
                 if let rowIndex = form.rowIndex, let parentId = form.parentId {
@@ -146,7 +146,7 @@ class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewMod
     }
     /// Configure listeners
     /// - Parameter viewModel: request details' viewModel
-    override func configure(with viewModel: RequestDetailsViewModel) {
+    override public func configure(with viewModel: RequestDetailsViewModel) {
         viewModel.arrayOfAttachmentsinAction.subscribe(onNext: { [unowned self]  (arr) in
             if !arr.isEmpty {
                 self.itemsTV.reloadData()
@@ -292,7 +292,7 @@ extension BackwardRequestDetailsView: HandlePayloadMethods {
     /// - Parameters:
     ///   - actionId: dynamic action id
     ///   - payload: collected payload
-    func handleActionPayload(actionId: String,payload: [[String : Any]]) {
+   public func handleActionPayload(actionId: String,payload: [[String : Any]]) {
         var newArr: [ModelUploadedMediaFormPayload] = []
         if self.viewModel.arrayOfAttachmentsinAction.value.count > 0{
             for item in self.viewModel.arrayOfAttachmentsinAction.value {
@@ -305,7 +305,7 @@ extension BackwardRequestDetailsView: HandlePayloadMethods {
 }
 
 extension BackwardRequestDetailsView: Popup {
-    func popup() {
+    public func popup() {
         navigationController?.popViewController(animated: true)
     }
 }
@@ -638,7 +638,7 @@ extension BackwardRequestDetailsView: UITableViewDelegate, UITableViewDataSource
     
     
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch viewModel.arrOfSections[section] {
         case .oldActions_Dicussion:
             return 60
@@ -650,7 +650,7 @@ extension BackwardRequestDetailsView: UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    public  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch viewModel.arrOfSections[section] {
             
         case .oldActions_Dicussion:
@@ -737,7 +737,7 @@ extension BackwardRequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDe
         
     }
     
-    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
         var fileSize : Double = 0
         do {
             let attr = try FileManager.default.attributesOfItem(atPath: url.path)
@@ -756,11 +756,11 @@ extension BackwardRequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDe
     }
     
     //    Method to handle cancel action.
-    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+    public  func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         
     }
     
-    func showWithdrawAller() {
+    public  func showWithdrawAller() {
         let alertVC = UIAlertController(title: "Withdraw Request".localized, message: ("Are you sure you want to withdraw the request?".localized), preferredStyle: .alert)
         let ok = UIAlertAction(title: " Withdraw Request ".localized, style: .destructive, handler: { (alertAction) in
             self.viewModel.doWithdrawAction(requestId: self.viewModel.backwardDetails.value?.requestOrder ?? "")
@@ -775,7 +775,7 @@ extension BackwardRequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDe
 }
 
 extension BackwardRequestDetailsView: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    public  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         self.dismiss(animated: true) {
             if let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
                 print("WE HAVE IMAGE !!!! 🚀")
@@ -796,7 +796,7 @@ extension BackwardRequestDetailsView: UIImagePickerControllerDelegate, UINavigat
 }
 
 extension BackwardRequestDetailsView: UITextViewDelegate {
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+    public func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         if textView.text == "Add discussion comment....".localized{
             textView.text.removeAll()
             textView.textColor = .DarkBlack
@@ -804,7 +804,7 @@ extension BackwardRequestDetailsView: UITextViewDelegate {
         return true
     }
     
-    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+    public func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         if textView.text.count == 0{
             textView.text = "Add discussion comment....".localized
             textView.textColor = .slate_grey
@@ -812,7 +812,7 @@ extension BackwardRequestDetailsView: UITextViewDelegate {
         return true
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         guard range.location == 0 else {
             return true
         }
@@ -838,7 +838,7 @@ extension BackwardRequestDetailsView: UICollectionViewDataSource, UICollectionVi
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width / 2.7
         return CGSize(width: width, height: 36)
     }

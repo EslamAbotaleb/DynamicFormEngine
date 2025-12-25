@@ -125,7 +125,7 @@ class FormViewModel: BaseViewModel {
             payloadJSON["createdForUsername"] = payload["createdForUsername"]
         }
         
-          service.load(cerqel_CodableResponseObject<ServiceSuccessDataClass>(action: Dynamic_BasicAction.submitService(Id: id, payload: payloadJSON))).subscribe(onNext: {
+          service.load(cerqel_CodableResponseObjectDynamicForm<ServiceSuccessDataClass>(action: Dynamic_BasicAction.submitService(Id: id, payload: payloadJSON))).subscribe(onNext: {
               (response) in
               if let item = response.item?.data{
                   completion(true,item.requestOrder,item.id, item.isEligableForSurvey ?? false)
@@ -144,7 +144,7 @@ class FormViewModel: BaseViewModel {
     ///   - id: service id
     ///   - completion: returns response
     func submitEditRequest(payload: [String : Any], id: String,completion: @escaping((Bool?,String?,String?,Bool)->())) {
-          service.load(cerqel_CodableResponseObject<ServiceSuccessDataClass>(action: Dynamic_BasicAction.submitEditRequestService(Id: id, payload: payload))).subscribe(onNext: {
+          service.load(cerqel_CodableResponseObjectDynamicForm<ServiceSuccessDataClass>(action: Dynamic_BasicAction.submitEditRequestService(Id: id, payload: payload))).subscribe(onNext: {
               (response) in
               if (response.success ?? false) {
                   completion(true,"","", false)

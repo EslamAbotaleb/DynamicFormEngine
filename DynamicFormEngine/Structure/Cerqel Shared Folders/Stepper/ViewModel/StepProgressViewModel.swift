@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StepProgressViewModel: ObservableObject {
+public class StepProgressViewModel: ObservableObject {
     @Published var totalPages: [FormViewModelItem] = []
     @Published var currentPage: Int = 0
     @Published var enablePageValidation:  Bool = true
@@ -16,7 +16,7 @@ class StepProgressViewModel: ObservableObject {
 
 
 
-    init(pages: [FormViewModelItem], currentPage: Int,enablePageValidation: Bool) {
+    public init(pages: [FormViewModelItem], currentPage: Int,enablePageValidation: Bool) {
 
         self.totalPages = pages
         self.currentPage = currentPage
@@ -25,7 +25,7 @@ class StepProgressViewModel: ObservableObject {
 
     }
 
-    func setCurrentPage(_ index: Int) {
+    public func setCurrentPage(_ index: Int) {
         guard index >= 0, index < totalPages.count else { return }
         currentPage = index
         unActiveSteps()
@@ -38,14 +38,14 @@ class StepProgressViewModel: ObservableObject {
 
 
     // Activates all steps up to the given index
-    func unActiveSteps() {
+    public func unActiveSteps() {
         self.totalPages = self.totalPages.map{var step = $0; step.isActive = false; return step}
 
 
     }
 
     // Activates all steps up to the given index
-    func activateSteps(upTo index: Int) {
+    public func activateSteps(upTo index: Int) {
         for i in 0...index {
             totalPages[i].isActive = true
         }
@@ -54,7 +54,7 @@ class StepProgressViewModel: ObservableObject {
     }
 
     // Deactivates steps from the current index down to the given index
-    func deactivateSteps(downTo index: Int) {
+    public func deactivateSteps(downTo index: Int) {
         guard let backVisibility = (totalPages[currentPage] as? FormViewModelPageItem)?.backVisibility, backVisibility else { return }
 
         for i in stride(from: currentPage, to: index, by: -1) {
@@ -71,7 +71,7 @@ class StepProgressViewModel: ObservableObject {
     }
 
     // Determines if the line between steps should be active
-    func isLineActive(currentIndex: Int, nextIndex: Int) -> Bool {
+    public func isLineActive(currentIndex: Int, nextIndex: Int) -> Bool {
         let currentStep = totalPages[currentIndex]
         return currentIndex < totalPages.count - 1
         ? currentStep.isActive && totalPages[nextIndex].isActive

@@ -75,8 +75,14 @@ extension UIColor {
     @nonobjc public class var error_Cerqel: UIColor {
         return UIColor.init(named: "errorCerqel")!
     }
+    @nonobjc public class var gray_Default: UIColor {
+        return UIColor.init(named: "grayDefault")!
+    }
     @nonobjc public class var favDimmed_Cerqel: UIColor {
         return UIColor.init(named: "favDimmedCerqel")!
+    }
+    @nonobjc public class var cerqel_ColorW: UIColor {
+        return UIColor.init(named: "cerqelColorW")!
     }
     @nonobjc public class var borderColor_Cerqel: UIColor {
         return UIColor.init(named: "borderColorCerqel")!

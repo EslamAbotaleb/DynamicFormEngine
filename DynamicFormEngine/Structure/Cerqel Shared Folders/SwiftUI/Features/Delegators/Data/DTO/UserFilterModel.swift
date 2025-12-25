@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct UserFilterModel: Codable {
-    var searchString : String?
+public struct UserFilterModel: Codable {
+    public var searchString : String?
     
     enum CodingKeys: String, CodingKey {
         case searchString = "SearchKeyword"

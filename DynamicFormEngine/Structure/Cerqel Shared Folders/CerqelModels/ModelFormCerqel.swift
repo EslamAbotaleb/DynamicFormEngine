@@ -467,10 +467,10 @@ public struct StyleCerqel : Codable {
 }
 
 public struct ValidationsCerqel : Codable {
-    var name : ValidationName?
-    var value : String?
-    var message : String?
-    var isValid: Bool = false
+    public var name : ValidationName?
+    public var value : String?
+    public var message : String?
+    public var isValid: Bool = false
 
     enum CodingKeys: String, CodingKey {
 
@@ -481,11 +481,11 @@ public struct ValidationsCerqel : Codable {
 }
 
 public struct ModelconditionCerqel : Codable {
-    var parentFieldId : String?
-    var parentFieldIndex : Int?
-    var validationName : ValidationName?
-    var value : String?
-    var validityStatus : Bool?
+    public var parentFieldId : String?
+    public var parentFieldIndex : Int?
+    public var validationName : ValidationName?
+    public var value : String?
+    public var validityStatus : Bool?
 
     enum CodingKeys: String, CodingKey {
 
@@ -506,24 +506,24 @@ public enum CalendarTypeCerqel: String, Codable{
 
 
 public struct LeavesViewValueCerqel : Codable, FormValueCerqel {
-    let actionType : String?
-    let externalCode : String?
-    let startDate : String?
-    let endDate : String?
-    let startTime : String?
-    let endTime : String?
-    let leaveType : ViewLeaves_NameKeyCerqel?
-    let replacementUser : ReplacementUserCerqel?
-    let compassionateRelation : ViewLeaves_NameKeyCerqel?
-    let accompanyingRelation : ViewLeaves_NameKeyCerqel?
-    let businessPermissionPurpose : ViewLeaves_NameKeyCerqel?
-    let attachmentId : String?
-    let AttachmentName : String?
-    let attachmentUrl : String?
-    let isFileManager : Bool?
-    let attachments: leaveAttttValueCerqel?
-    let requestingDays: Int?
-    let requestingHours: Int?
+    public let actionType : String?
+    public let externalCode : String?
+    public let startDate : String?
+    public let endDate : String?
+    public let startTime : String?
+    public let endTime : String?
+    public let leaveType : ViewLeaves_NameKeyCerqel?
+    public let replacementUser : ReplacementUserCerqel?
+    public let compassionateRelation : ViewLeaves_NameKeyCerqel?
+    public let accompanyingRelation : ViewLeaves_NameKeyCerqel?
+    public let businessPermissionPurpose : ViewLeaves_NameKeyCerqel?
+    public let attachmentId : String?
+    public let AttachmentName : String?
+    public let attachmentUrl : String?
+    public let isFileManager : Bool?
+    public let attachments: leaveAttttValueCerqel?
+    public let requestingDays: Int?
+    public let requestingHours: Int?
 
     enum CodingKeys: String, CodingKey {
 
@@ -573,14 +573,14 @@ public struct LeavesViewValueCerqel : Codable, FormValueCerqel {
 }
 
 public struct ImprovementPlanViewValueCerqel : Codable, FormValueCerqel {
-    let businessUnitName : String?
-    let departmentName : String?
-    let effectiveDateFrom : String?
-    let employeeId : String?
-    let employeeName : String?
-    let positionName : String?
-    let reasonsJustifications : String?
-    let requestType : ModelKeyTextCerqel?
+    public let businessUnitName : String?
+    public let departmentName : String?
+    public let effectiveDateFrom : String?
+    public let employeeId : String?
+    public let employeeName : String?
+    public let positionName : String?
+    public let reasonsJustifications : String?
+    public let requestType : ModelKeyTextCerqel?
 
     enum CodingKeys: String, CodingKey {
 
@@ -611,7 +611,7 @@ public struct ImprovementPlanViewValueCerqel : Codable, FormValueCerqel {
 
 
 public struct leaveAttttValueCerqel : Codable {
-    let value : [AttachmentsCerqel]?
+    public  let value : [AttachmentsCerqel]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -620,9 +620,9 @@ public struct leaveAttttValueCerqel : Codable {
 }
 
 public struct ViewLeaves_NameKeyCerqel : Codable {
-    let key : String?
-    let nameAr : String?
-    let nameEn : String?
+    public let key : String?
+    public let nameAr : String?
+    public let nameEn : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -633,9 +633,9 @@ public struct ViewLeaves_NameKeyCerqel : Codable {
 }
 
 public struct ReplacementUserCerqel : Codable {
-    let nKey : String?
-    let name : String?
-    let email : String?
+    public let nKey : String?
+    public let name : String?
+    public let email : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -655,10 +655,10 @@ public struct ReplacementUserCerqel : Codable {
 
 
 public struct RelationEquationCerqel : Codable {
-    let paramsIndexes : [Int]?
-    let resultIndexes : [Int]?
-    let equation : String?
-    let totalNumberOfAffectedControls : Int?
+    public let paramsIndexes : [Int]?
+    public let resultIndexes : [Int]?
+    public let equation : String?
+    public let totalNumberOfAffectedControls : Int?
 
     enum CodingKeys: String, CodingKey {
 

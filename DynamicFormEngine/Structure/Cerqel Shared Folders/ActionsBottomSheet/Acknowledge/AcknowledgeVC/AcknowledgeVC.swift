@@ -35,7 +35,7 @@ class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
     }
     
     private func initialConfiguration(){
-        viewModel = AcknowledgeViewModel(router: CerqelRouterManagerImpl(self), fileId: item.fileId)
+        viewModel = AcknowledgeViewModel(router: CerqelRouterManagerDynamicFormImpl(self), fileId: item.fileId)
 
         
     }

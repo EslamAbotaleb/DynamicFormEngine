@@ -42,7 +42,7 @@
 		AA51BDAD2EF4203B00488B90 /* CerqelArray+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCEE2EF4203B00488B90 /* CerqelArray+Extensions.swift */; };
 		AA51BDB02EF4203B00488B90 /* UIFont+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF52EF4203B00488B90 /* UIFont+extensions.swift */; };
 		AA51BDBF2EF4203B00488B90 /* NSAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCFA2EF4203B00488B90 /* NSAttributedString+Extensions.swift */; };
-		AA51BDC52EF4203B00488B90 /* OAuth2Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCE82EF4203B00488B90 /* OAuth2Client.swift */; };
+		AA51BDC52EF4203B00488B90 /* OAuth2ClientDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCE82EF4203B00488B90 /* OAuth2ClientDynamicForm.swift */; };
 		AA51BDCE2EF4203B00488B90 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF92EF4203B00488B90 /* UIViewController.swift */; };
 		AA51BDF22EF4203B00488B90 /* BaseLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BD0C2EF4203B00488B90 /* BaseLoading.swift */; };
 		AA51BDFB2EF4203B00488B90 /* CerqelCAGradientLayerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF12EF4203B00488B90 /* CerqelCAGradientLayerExtensions.swift */; };
@@ -652,7 +652,7 @@
 		AAC0EF102EF61E0B00DDE9FF /* ModelServiceSubCategoryCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED432EF61E0B00DDE9FF /* ModelServiceSubCategoryCerqel.swift */; };
 		AAC0EF132EF61E0B00DDE9FF /* CerqelColorCustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDB02EF61E0B00DDE9FF /* CerqelColorCustomization.swift */; };
 		AAC0EF142EF61E0B00DDE9FF /* ButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECB52EF61E0B00DDE9FF /* ButtonExtensions.swift */; };
-		AAC0EF152EF61E0B00DDE9FF /* CerqelRouterManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED9D2EF61E0B00DDE9FF /* CerqelRouterManagerImpl.swift */; };
+		AAC0EF152EF61E0B00DDE9FF /* CerqelRouterManagerDynamicFormImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED9D2EF61E0B00DDE9FF /* CerqelRouterManagerDynamicFormImpl.swift */; };
 		AAC0EF1B2EF61E0B00DDE9FF /* TextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECB92EF61E0B00DDE9FF /* TextFieldExtension.swift */; };
 		AAC0EF1C2EF61E0B00DDE9FF /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECB62EF61E0B00DDE9FF /* TableViewExtensions.swift */; };
 		AAC0EF1F2EF61E0B00DDE9FF /* CerqelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED792EF61E0B00DDE9FF /* CerqelListModel.swift */; };
@@ -720,7 +720,7 @@
 		AA3C31152EF954A900C2778C /* AcknowledgeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = AcknowledgeVC.xib; path = Base.lproj/AcknowledgeVC.xib; sourceTree = "<group>"; };
 		AA3C31162EF954A900C2778C /* AcknowledgeVC.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = AcknowledgeVC.strings; path = ar.lproj/AcknowledgeVC.strings; sourceTree = "<group>"; };
 		AA51BCE72EF4203B00488B90 /* OAuth2Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Error.swift; sourceTree = "<group>"; };
-		AA51BCE82EF4203B00488B90 /* OAuth2Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Client.swift; sourceTree = "<group>"; };
+		AA51BCE82EF4203B00488B90 /* OAuth2ClientDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2ClientDynamicForm.swift; sourceTree = "<group>"; };
 		AA51BCE92EF4203B00488B90 /* OAuth2Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Token.swift; sourceTree = "<group>"; };
 		AA51BCEA2EF4203B00488B90 /* OAuth2Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Configuration.swift; sourceTree = "<group>"; };
 		AA51BCED2EF4203B00488B90 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
@@ -1295,7 +1295,7 @@
 		AAC0ED992EF61E0B00DDE9FF /* BaseItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseItem.swift; sourceTree = "<group>"; };
 		AAC0ED9A2EF61E0B00DDE9FF /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 		AAC0ED9B2EF61E0B00DDE9FF /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		AAC0ED9D2EF61E0B00DDE9FF /* CerqelRouterManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelRouterManagerImpl.swift; sourceTree = "<group>"; };
+		AAC0ED9D2EF61E0B00DDE9FF /* CerqelRouterManagerDynamicFormImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelRouterManagerDynamicFormImpl.swift; sourceTree = "<group>"; };
 		AAC0ED9E2EF61E0B00DDE9FF /* CerqelRouterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelRouterManager.swift; sourceTree = "<group>"; };
 		AAC0EDA02EF61E0B00DDE9FF /* CerqelString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CerqelString+Extensions.swift"; sourceTree = "<group>"; };
 		AAC0EDA12EF61E0B00DDE9FF /* CerqelUITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CerqelUITableViewCell+Extension.swift"; sourceTree = "<group>"; };
@@ -1501,7 +1501,7 @@
 			isa = PBXGroup;
 			children = (
 				AA51BCE72EF4203B00488B90 /* OAuth2Error.swift */,
-				AA51BCE82EF4203B00488B90 /* OAuth2Client.swift */,
+				AA51BCE82EF4203B00488B90 /* OAuth2ClientDynamicForm.swift */,
 				AA51BCE92EF4203B00488B90 /* OAuth2Token.swift */,
 				AA51BCEA2EF4203B00488B90 /* OAuth2Configuration.swift */,
 			);
@@ -3930,7 +3930,7 @@
 				AAA6A2182EF2E84000520357 /* DynamicAPiAction.swift */,
 				AAA6A2192EF2E84000520357 /* DynamicSharedRouter.swift */,
 				AA51BD0D2EF4203B00488B90 /* Router.swift */,
-				AAC0ED9D2EF61E0B00DDE9FF /* CerqelRouterManagerImpl.swift */,
+				AAC0ED9D2EF61E0B00DDE9FF /* CerqelRouterManagerDynamicFormImpl.swift */,
 				AAC0ED9E2EF61E0B00DDE9FF /* CerqelRouterManager.swift */,
 				AAC0ED042EF61E0B00DDE9FF /* CERQELShared_Router.swift */,
 			);
@@ -4448,7 +4448,7 @@
 				AA51BDAD2EF4203B00488B90 /* CerqelArray+Extensions.swift in Sources */,
 				AA51BDB02EF4203B00488B90 /* UIFont+extensions.swift in Sources */,
 				AA51BDBF2EF4203B00488B90 /* NSAttributedString+Extensions.swift in Sources */,
-				AA51BDC52EF4203B00488B90 /* OAuth2Client.swift in Sources */,
+				AA51BDC52EF4203B00488B90 /* OAuth2ClientDynamicForm.swift in Sources */,
 				AA71968F2EF44E6E00D31A70 /* WCLLoadingView.swift in Sources */,
 				AA7196902EF44E6E00D31A70 /* UIColorExtension.swift in Sources */,
 				AA7196912EF44E6E00D31A70 /* RamotionBounceLayer.swift in Sources */,
@@ -4861,7 +4861,7 @@
 				AAC0EF102EF61E0B00DDE9FF /* ModelServiceSubCategoryCerqel.swift in Sources */,
 				AAC0EF132EF61E0B00DDE9FF /* CerqelColorCustomization.swift in Sources */,
 				AAC0EF142EF61E0B00DDE9FF /* ButtonExtensions.swift in Sources */,
-				AAC0EF152EF61E0B00DDE9FF /* CerqelRouterManagerImpl.swift in Sources */,
+				AAC0EF152EF61E0B00DDE9FF /* CerqelRouterManagerDynamicFormImpl.swift in Sources */,
 				AAC0EF1B2EF61E0B00DDE9FF /* TextFieldExtension.swift in Sources */,
 				AAC0EF1C2EF61E0B00DDE9FF /* TableViewExtensions.swift in Sources */,
 				AAC0EF1F2EF61E0B00DDE9FF /* CerqelListModel.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum AppStoryboard : String {
+public enum AppStoryboardDynamicForm: String {
     
     case Main = "Main"
     case Auth = "AuthStoryboard"
@@ -16,11 +16,11 @@ enum AppStoryboard : String {
     case form = "FormSB"
     case xibView
 
-    var instance : UIStoryboard {
+    public var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }
     
-    func viewController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file) -> T {
+    public func viewController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file) -> T {
         
         if case .xibView = self{
             let scene = T()
@@ -36,7 +36,7 @@ enum AppStoryboard : String {
         return scene
     }
     
-    func navigationController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file, configurationHandler: ((T) -> Void)) -> UINavigationController {
+    public func navigationController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file, configurationHandler: ((T) -> Void)) -> UINavigationController {
         
         let storyboardID = (viewControllerClass as UIViewController.Type).cerqel_storyboardID
         guard let scene = instance.instantiateViewController(withIdentifier: storyboardID) as? T else {
@@ -49,12 +49,12 @@ enum AppStoryboard : String {
     }
 
     
-    func initialViewController() -> UIViewController? {
+    public func initialViewController() -> UIViewController? {
         return instance.instantiateInitialViewController()
     }
 }
 
-enum ViewControllerName {
+public enum ViewControllerNameDynamicForm {
     case dynamicForm(ServiceId: String, categoryTitle: String?, hasSubService: Bool?, subParentName: String?)
     case requestDetails(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: ModelRequestDetailsData? = nil, view: UIViewController?)
     case delegatorView(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: ModelRequestDetailsData? = nil, view: UIViewController?)
@@ -62,26 +62,26 @@ enum ViewControllerName {
     case newFormBuilderSearch(code: String)
 }
 
-class Router {
-    static func goTo(viewName: ViewControllerName)-> BottomSheetVCCerqel{
+public class RouterDynamicForm {
+    static public func goTo(viewName: ViewControllerNameDynamicForm)-> BottomSheetVCCerqel{
         switch viewName {
             
         case .newFormBuilderSearch(let code):
-            let storyboard: AppStoryboard = .xibView
+            let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: NewSearchVC.self)
             controller.searchCode = code
             return controller
             
             
         case .newFormBuilderDropDown:
-            let storyboard: AppStoryboard = .xibView
+            let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: NewDropDownViewController.self)
             return controller
             
                         
         case .dynamicForm(let ServiceId, let catTtl, let hasSubService, let subParentName):
             let viewModel = FormBuilderViewModel(cerqel_BasicNetworkServiceImpl.shared)
-            let storyboard: AppStoryboard = .Main
+            let storyboard: AppStoryboardDynamicForm = .Main
             viewModel.selectedServiceId = ServiceId
             viewModel.hasSubService = hasSubService
             viewModel.categoryTitle = catTtl
@@ -97,9 +97,9 @@ class Router {
             return controller
 
         case .requestDetails(Id: let Id, isMyRequestFlag: let isMyRequestFlag, let requestId, let isFromNotifications, let det, let view):
-            let storyboard: AppStoryboard = .xibView
+            let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: RequestDetailsView.self)
-            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerImpl(controller))
+            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerDynamicFormImpl(controller))
             
             controller.viewModel = viewModel
             controller.id = Id
@@ -114,9 +114,9 @@ class Router {
             
             
         case .delegatorView(Id: let Id, isMyRequestFlag: let isMyRequestFlag, let requestId, let isFromNotifications, let det, let view):
-            let storyboard: AppStoryboard = .xibView
+            let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: RequestDetailsView.self)
-            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerImpl(controller))
+            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerDynamicFormImpl(controller))
             
             controller.viewModel = viewModel
             controller.id = Id

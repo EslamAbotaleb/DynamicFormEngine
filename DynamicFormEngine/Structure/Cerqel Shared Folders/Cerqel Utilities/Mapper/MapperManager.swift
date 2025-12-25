@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol EntityMapper {
+public protocol EntityMapper {
     associatedtype DTO
     associatedtype Entity
     func map (from dto: DTO) -> Entity

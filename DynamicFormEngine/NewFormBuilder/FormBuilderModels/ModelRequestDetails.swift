@@ -285,28 +285,28 @@ struct FileUploadDefaultAnswerValue: Codable, FormValue {
 //}
 
 
-struct Rules : Codable, Mappable {
-    var effectIn : [String]?
-    var dependOn : [String]?
+public struct Rules : Codable, Mappable {
+    public var effectIn : [String]?
+    public var dependOn : [String]?
 
     enum CodingKeys: String, CodingKey {
         case effectIn = "effectIn"
         case dependOn = "dependOn"
     }
 
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         effectIn <- map["effectIn"]
         dependOn <- map["dependOn"]
     }
 
-    init(effectIn: [String]? = nil, dependOn: [String]? = nil) {
+    public init(effectIn: [String]? = nil, dependOn: [String]? = nil) {
         self.effectIn = effectIn
         self.dependOn = dependOn
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         effectIn = try values.decodeIfPresent([String].self, forKey: .effectIn)
         dependOn = try values.decodeIfPresent([String].self, forKey: .dependOn)
@@ -314,13 +314,13 @@ struct Rules : Codable, Mappable {
 
 }
 
-struct Weight : Codable, Mappable {
-    var value : Int?
+public struct Weight : Codable, Mappable {
+    public var value : Int?
 //    var criteria : String?
 
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         value <- map["value"]
 //        criteria <- map["criteria"]
     }
@@ -331,56 +331,56 @@ struct Weight : Codable, Mappable {
 //        case criteria = "criteria"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         value = try values.decodeIfPresent(Int.self, forKey: .value)
 //        criteria = try values.decodeIfPresent(String.self, forKey: .criteria)
     }
     
-    init(value: Int?) {
+    public init(value: Int?) {
         self.value = value
     }
 
 }
 
 
-struct Properties: Codable, Mappable {
+public struct Properties: Codable, Mappable {
     
-    var disabledMonths: String?
-    var placeholder: String?
-    var style: Style?
-    var sublabel: String?
-    var icon: String?
-    var defaultDateType: String?
-    var isVisibleInViewMode: Bool?
-    var dateFormat: String?
-    var dateSelectionMode: String?
-    var maximumTime: String?
-    var timeFormat: String?
-    var disabledDays: [Int]?
-    var minimumTime: String?
-    var required: Bool?
-    var maximumDate: String?
-    var defaultTimeType: String?
-    var dateTimeType: String?
-    var minimumDate: String?
-    var unique: String?
-    var localization: Localization?
-    var label: String?
-    var allowedDaysRange: Int?
-    var sendToBPM: Bool?
-    var validationType: String?
-    var disabledDates: [String]?
-    var tooltip: String?
-    var calendarType: String?
-    var defaultAnswer: DefaultAnswer?
-    var firstDayOfWeek: Int?
-    var options : [OptionsInProp]?
-    var isCollapsed: Bool?
+    public var disabledMonths: String?
+    public var placeholder: String?
+    public var style: Style?
+    public var sublabel: String?
+    public var icon: String?
+    public var defaultDateType: String?
+    public var isVisibleInViewMode: Bool?
+    public var dateFormat: String?
+    public var dateSelectionMode: String?
+    public var maximumTime: String?
+    public var timeFormat: String?
+    public var disabledDays: [Int]?
+    public var minimumTime: String?
+    public var required: Bool?
+    public var maximumDate: String?
+    public var defaultTimeType: String?
+    public var dateTimeType: String?
+    public var minimumDate: String?
+    public var unique: String?
+    public var localization: Localization?
+    public var label: String?
+    public var allowedDaysRange: Int?
+    public var sendToBPM: Bool?
+    public var validationType: String?
+    public var disabledDates: [String]?
+    public var tooltip: String?
+    public var calendarType: String?
+    public var defaultAnswer: DefaultAnswer?
+    public var firstDayOfWeek: Int?
+    public var options : [OptionsInProp]?
+    public var isCollapsed: Bool?
     
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         disabledMonths <- map["disabledMonths"]
         placeholder <- map["placeholder"]
         style <- map["style"]
@@ -449,7 +449,7 @@ struct Properties: Codable, Mappable {
         case options = "options"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         disabledMonths = try values.decodeIfPresent(String.self, forKey: .disabledMonths)
         placeholder = try values.decodeIfPresent(String.self, forKey: .placeholder)
@@ -553,13 +553,13 @@ struct Properties: Codable, Mappable {
 }
 
 
-struct Localization : Codable, Mappable {
-    var en : En?
-    var ar : Ar?
+public struct Localization : Codable, Mappable {
+    public var en : En?
+    public var ar : Ar?
 
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         en <- map["en"]
         ar <- map["ar"]
     }
@@ -570,7 +570,7 @@ struct Localization : Codable, Mappable {
         case ar = "ar"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         en = try values.decodeIfPresent(En.self, forKey: .en)
         ar = try values.decodeIfPresent(Ar.self, forKey: .ar)
@@ -579,16 +579,16 @@ struct Localization : Codable, Mappable {
 }
 
 
-struct En : Codable, Mappable {
-    var label : String?
-    var placeholder : String?
-    var sublabel : String?
-    var tooltip : String?
-    var fieldWarning : FieldWarning?
+public struct En : Codable, Mappable {
+    public var label : String?
+    public var placeholder : String?
+    public var sublabel : String?
+    public var tooltip : String?
+    public var fieldWarning : FieldWarning?
     
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         label <- map["label"]
         placeholder <- map["placeholder"]
         sublabel <- map["sublabel"]
@@ -606,7 +606,7 @@ struct En : Codable, Mappable {
         case fieldWarning = "fieldWarning"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         label = try values.decodeIfPresent(String.self, forKey: .label)
         placeholder = try values.decodeIfPresent(String.self, forKey: .placeholder)
@@ -617,16 +617,16 @@ struct En : Codable, Mappable {
 
 }
 
-struct Ar: Codable, Mappable {
-    var label : String?
-    var placeholder : String?
-    var sublabel : String?
-    var tooltip : String?
-    var fieldWarning : FieldWarning?
+public struct Ar: Codable, Mappable {
+    public var label : String?
+    public var placeholder : String?
+    public var sublabel : String?
+    public var tooltip : String?
+    public var fieldWarning : FieldWarning?
 
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         label <- map["label"]
         placeholder <- map["placeholder"]
         sublabel <- map["sublabel"]
@@ -643,7 +643,7 @@ struct Ar: Codable, Mappable {
         case fieldWarning = "fieldWarning"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         label = try values.decodeIfPresent(String.self, forKey: .label)
         placeholder = try values.decodeIfPresent(String.self, forKey: .placeholder)
@@ -655,18 +655,18 @@ struct Ar: Codable, Mappable {
 }
 
 
-struct FieldWarning: Codable, Mappable {
+public struct FieldWarning: Codable, Mappable {
     
-    var maximumDate : String?
-    var minimumDate : String?
-    var maximumTime : String?
-    var required : String?
-    var minimumTime : String?
-    var allowedDaysRange : String?
+    public var maximumDate : String?
+    public var minimumDate : String?
+    public var maximumTime : String?
+    public var required : String?
+    public var minimumTime : String?
+    public var allowedDaysRange : String?
     
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         maximumDate <- map["maximumDate"]
         minimumDate <- map["minimumDate"]
         maximumTime <- map["maximumTime"]
@@ -685,7 +685,7 @@ struct FieldWarning: Codable, Mappable {
         case allowedDaysRange = "allowedDaysRange"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         maximumDate = try values.decodeIfPresent(String.self, forKey: .maximumDate)
         minimumDate = try values.decodeIfPresent(String.self, forKey: .minimumDate)
@@ -698,19 +698,19 @@ struct FieldWarning: Codable, Mappable {
 }
 
 
-struct TaskSubmittedRowDataModel: Codable, Mappable {
-    var id: String?
-    var name: String?
-    var rowIndex: String?
-    var value: ValueType?
-    var subValues: ValueType?
-    var type: String?
-    var label: String?
-    var multipleValue: Bool?
+public struct TaskSubmittedRowDataModel: Codable, Mappable {
+    public var id: String?
+    public var name: String?
+    public var rowIndex: String?
+    public var value: ValueType?
+    public var subValues: ValueType?
+    public var type: String?
+    public var label: String?
+    public var multipleValue: Bool?
     
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         rowIndex <- map["rowIndex"]
@@ -726,18 +726,18 @@ struct TaskSubmittedRowDataModel: Codable, Mappable {
     }
 }
 
-struct DefaultAnswer: Codable, Mappable {
+public struct DefaultAnswer: Codable, Mappable {
     
-    var id: String?
-    var name: String?
-    var rowIndex: String?
-    var defaultValue: ValueType?
-    var type : String?
+    public var id: String?
+    public var name: String?
+    public var rowIndex: String?
+    public var defaultValue: ValueType?
+    public var type : String?
     
-    init?(map: Map) {
+    public init?(map: Map) {
     }
     
-    init(id: String?, name: String?, rowIndex: String?, defaultValue: ValueType?, type: String?) {
+    public init(id: String?, name: String?, rowIndex: String?, defaultValue: ValueType?, type: String?) {
         self.id = id
         self.name = name
         self.rowIndex = rowIndex
@@ -745,7 +745,7 @@ struct DefaultAnswer: Codable, Mappable {
         self.type = type
     }
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         rowIndex <- map["rowIndex"]
@@ -782,26 +782,26 @@ struct DefaultAnswer: Codable, Mappable {
 }
 
 public struct AttachmentForDefault: Mappable, Codable {
-    var fileId: String?
-    var attachmentDisplaySize: String?
-    var fileName: String?
-    var size: String?
-    var isPublic: Bool?
-    var fileExtension: String?
-    var isSuccess: Bool?
-    var previewUrl: String?{
+    public var fileId: String?
+    public var attachmentDisplaySize: String?
+    public var fileName: String?
+    public var size: String?
+    public var isPublic: Bool?
+    public var fileExtension: String?
+    public var isSuccess: Bool?
+    public var previewUrl: String?{
         return  fileId != nil ? "\(cerqel_Environment.Api_Base_URL)Storage/api/FileManager/Preview/\(fileId!)" : nil
     }
-    var downloadUrl: String?{
+    public var downloadUrl: String?{
         return  fileId != nil ? "\(cerqel_Environment.Api_Base_URL)Storage/api/FileManager/Download/\(fileId!)" : nil
     }
-    var fileUrl: String?{
+    public var fileUrl: String?{
         return  fileId != nil ? "\(cerqel_Environment.Api_Base_URL)Storage/api/FileManager/Preview/\(fileId!)" : nil
     }
     
     public init?(map: Map) {}
     
-    init?(id: String, name: String, fileExtension: String) {
+    public  init?(id: String, name: String, fileExtension: String) {
         self.fileId = id
         self.fileName = name
         self.fileExtension = fileExtension
@@ -831,9 +831,9 @@ public struct AttachmentForDefault: Mappable, Codable {
 }
 
 public class AttachmentForNewDefault: Mappable, Codable {
-    var attachmentName : String?
-    var attachmentId : String?
-    var attachmentExtension : String?
+    public var attachmentName : String?
+    public var attachmentId : String?
+    public var attachmentExtension : String?
   
     required public init?(map: Map) {}
 
@@ -853,10 +853,10 @@ public class AttachmentForNewDefault: Mappable, Codable {
 }
 
 public struct DDL: Codable, Mappable {
-    var Name: String?
-    var Value: [MCQOption]?
-    var RowIndex: String?
-    var Id: String?
+    public var Name: String?
+    public var Value: [MCQOption]?
+    public var RowIndex: String?
+    public var Id: String?
     
     public init?(map: Map) {}
     
@@ -876,10 +876,10 @@ public struct DDL: Codable, Mappable {
 }
 
 public struct BCDDL: Codable, Mappable {
-    var Name: String?
-    var Value: [BCMCQOption]?
-    var RowIndex: String?
-    var Id: String?
+    public var Name: String?
+    public var Value: [BCMCQOption]?
+    public var RowIndex: String?
+    public var Id: String?
     
     public init?(map: Map) {}
     
@@ -929,16 +929,16 @@ public struct BCMCQOption: Codable, Mappable, Hashable {
 
 public struct Filee: Codable, Mappable {
     
-    var fileId: String?
-    var previewUrl: String?
-    var downloadUrl: String?
-    var isSuccess: Bool?
-    var fileName: String?
-    var attachmentDisplaySize: String?
-    var fileUrl: String?
-    var fileExtension: String?
-    var isPublic: Bool?
-    var url: String?
+    public var fileId: String?
+    public var previewUrl: String?
+    public var downloadUrl: String?
+    public var isSuccess: Bool?
+    public var fileName: String?
+    public var attachmentDisplaySize: String?
+    public var fileUrl: String?
+    public var fileExtension: String?
+    public var isPublic: Bool?
+    public var url: String?
     
     public init?(map: Map) {}
 
@@ -1938,24 +1938,24 @@ struct ViewForm : /*Codable,*/ Mappable {
 
 }
 
-struct Fields : Codable, Mappable {
-    var weight : Weight?
-    var rules : Rules?
-    var id : String?
-    var templateQuestionId : String?
-    var type : String?
-    var parentId : String?
-    var order : String?
-    var properties : Properties?
-    var rowIndex: String?
-    var visibilityPermissions: [String]?
-    var isHidden: Bool {
+public struct Fields : Codable, Mappable {
+    public var weight : Weight?
+    public var rules : Rules?
+    public var id : String?
+    public var templateQuestionId : String?
+    public var type : String?
+    public var parentId : String?
+    public var order : String?
+    public var properties : Properties?
+    public var rowIndex: String?
+    public var visibilityPermissions: [String]?
+    public var isHidden: Bool {
         return !(visibilityPermissions?.contains("View") ?? true)
     }
-    var isInsideSection: Bool? = false
-    init?(map: Map) {}
+    public var isInsideSection: Bool? = false
+    public  init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         weight <- map["weight"]
         rules <- map["rules"]
         id <- map["id"]
@@ -1983,7 +1983,7 @@ struct Fields : Codable, Mappable {
         case visibilityPermissions = "visibilityPermissions"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         weight = try values.decodeIfPresent(Weight.self, forKey: .weight)
         rules = try values.decodeIfPresent(Rules.self, forKey: .rules)
@@ -1997,7 +1997,7 @@ struct Fields : Codable, Mappable {
         visibilityPermissions = try values.decodeIfPresent([String].self, forKey: .visibilityPermissions)
     }
     
-    init(weight: Weight?, rules: Rules?, id: String?, templateQuestionId: String?, type: String?, parentId: String?, order: String?, properties: Properties?, rowIndex: String?) {
+    public init(weight: Weight?, rules: Rules?, id: String?, templateQuestionId: String?, type: String?, parentId: String?, order: String?, properties: Properties?, rowIndex: String?) {
         self.weight = weight
         self.rules = rules
         self.id = id

@@ -73,9 +73,9 @@ public class DynamicSharedRouter {
         switch viewName {
                 
         case .serviceSummaryPagesVC(let buttonId, let actionId,let isEditable, let isApproverForm, let requestIdForApprover, let view):
-            let storyboard: AppStoryboard = .xibView
+            let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: ServiceSummaryPagesVC.self)
-            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: "", view: view ?? controller, router: CerqelRouterManagerImpl(controller))
+            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: "", view: view ?? controller, router: CerqelRouterManagerDynamicFormImpl(controller))
             controller.isEditable = isEditable
             controller.isApproverForm = isApproverForm
             controller.viewModel = viewModel
@@ -91,14 +91,14 @@ public class DynamicSharedRouter {
             return controller
             
         case .newFormBuilderDropDown:
-            let storyboard: AppStoryboard = .xibView
+            let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: NewDropDownViewController.self)
             return controller
             
         case .backwardRequestDetails(Id: let Id, isMyRequestFlag: let isMyRequestFlag, let requestId, let isFromNotifications, let det, let view, let commentID):
-            let storyboard: AppStoryboard = .xibView
+            let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: BackwardRequestDetailsView.self)
-            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerImpl(controller))
+            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerDynamicFormImpl(controller))
             
             controller.viewModel = viewModel
             controller.id = Id
@@ -109,9 +109,9 @@ public class DynamicSharedRouter {
             return controller
             
         case .requestDetails(Id: let Id, isMyRequestFlag: let isMyRequestFlag, let requestId, let isFromNotifications, let det, let view, let commentID):
-            let storyboard: AppStoryboard = .xibView
+            let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: RequestDetailsView.self)
-            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerImpl(controller))
+            let viewModel = RequestDetailsViewModel(cerqel_BasicNetworkServiceImpl.shared, requestId: requestId, view: view ?? controller, router: CerqelRouterManagerDynamicFormImpl(controller))
             
             controller.viewModel = viewModel
             controller.id = Id

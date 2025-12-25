@@ -99,7 +99,7 @@ class FormViewController: FormBaseViewController {
     
     
     // MARK: - Variables
-    var router: CerqelRouterManager = CerqelRouterManagerImpl()
+    var router: CerqelRouterManager = CerqelRouterManagerDynamicFormImpl()
     var delegate: HandlePayloadMethods?
     var reloadDropDown:(() ->())?
     var formId = ""

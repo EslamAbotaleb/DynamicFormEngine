@@ -197,20 +197,20 @@ struct BackwardFileUploadDefaultAnswerValue: Codable, FormValue {
         }
 }
 
-struct BackwardViewForm: Codable, Mappable {
-    var weight: BackwardWeight?
-    var rules: BackwardRules?
-    var id: String?
-    var templateQuestionId: String?
-    var type: String?
-    var parentId: String?
-    var order: String?
-    var properties: BackwardProperties?
-    var rowIndex: String?
-    var visibilityPermissions: [String]?
+public struct BackwardViewForm: Codable, Mappable {
+    public var weight: BackwardWeight?
+    public var rules: BackwardRules?
+    public var id: String?
+    public var templateQuestionId: String?
+    public var type: String?
+    public var parentId: String?
+    public var order: String?
+    public var properties: BackwardProperties?
+    public var rowIndex: String?
+    public var visibilityPermissions: [String]?
     
     // Computed property for visibility
-    var isHidden: Bool {
+    public var isHidden: Bool {
         return !(visibilityPermissions?.contains("View") ?? true)
     }
     
@@ -229,7 +229,7 @@ struct BackwardViewForm: Codable, Mappable {
         case visibilityPermissions = "VisibilityPermissions"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         weight = try values.decodeIfPresent(BackwardWeight.self, forKey: .weight)
         rules = try values.decodeIfPresent(BackwardRules.self, forKey: .rules)
@@ -244,7 +244,7 @@ struct BackwardViewForm: Codable, Mappable {
     }
     
     // Custom init method
-    init(weight: BackwardWeight?, rules: BackwardRules?, id: String?, templateQuestionId: String?, type: String?, parentId: String?, order: String?, properties: BackwardProperties?, rowIndex: String?) {
+    public init(weight: BackwardWeight?, rules: BackwardRules?, id: String?, templateQuestionId: String?, type: String?, parentId: String?, order: String?, properties: BackwardProperties?, rowIndex: String?) {
         self.weight = weight
         self.rules = rules
         self.id = id
@@ -258,9 +258,9 @@ struct BackwardViewForm: Codable, Mappable {
     
     // MARK: - Mappable Implementation
     
-    init?(map: Map) {}
+    public init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         weight               <- map["Weight"]
         rules                <- map["Rules"]
         id                   <- map["Id"]
@@ -275,7 +275,7 @@ struct BackwardViewForm: Codable, Mappable {
 }
 
 extension BackwardViewForm {
-    func toFields() -> Fields {
+    public func toFields() -> Fields {
         return Fields(
             weight: self.weight?.toWeight(),  // Convert BackwardWeight to Weight
             rules: self.rules?.toRules(),     // Convert BackwardRules to Rules
@@ -321,9 +321,9 @@ extension Array where Element == BackwardViewForm {
 //    }
 }
 
-struct BackwardRules: Codable, Mappable {
-    var effectIn: [String]?
-    var dependOn: [String]?
+public struct BackwardRules: Codable, Mappable {
+    public var effectIn: [String]?
+    public var dependOn: [String]?
     
     // MARK: - Codable Implementation
     
@@ -332,12 +332,12 @@ struct BackwardRules: Codable, Mappable {
         case dependOn = "DependOn"
     }
     
-    init(effectIn: [String]? = nil, dependOn: [String]? = nil) {
+    public init(effectIn: [String]? = nil, dependOn: [String]? = nil) {
         self.effectIn = effectIn
         self.dependOn = dependOn
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         effectIn = try values.decodeIfPresent([String].self, forKey: .effectIn)
         dependOn = try values.decodeIfPresent([String].self, forKey: .dependOn)
@@ -345,16 +345,16 @@ struct BackwardRules: Codable, Mappable {
     
     // MARK: - Mappable Implementation
     
-    init?(map: Map) {}
+    public init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         effectIn  <- map["EffectIn"]
         dependOn  <- map["DependOn"]
     }
 }
 
 extension BackwardRules {
-    func toRules() -> Rules {
+    public func toRules() -> Rules {
         return Rules(
             effectIn: self.effectIn,
             dependOn: self.dependOn
@@ -364,9 +364,9 @@ extension BackwardRules {
 
 import ObjectMapper
 
-struct BackwardWeight: Codable, Mappable {
-    var value: Int?
-    var criteria: String?
+public struct BackwardWeight: Codable, Mappable {
+    public var value: Int?
+    public var criteria: String?
     
     // MARK: - Codable Implementation
     
@@ -375,7 +375,7 @@ struct BackwardWeight: Codable, Mappable {
         case criteria = "Criteria"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         value = try values.decodeIfPresent(Int.self, forKey: .value)
         criteria = try values.decodeIfPresent(String.self, forKey: .criteria)
@@ -383,57 +383,57 @@ struct BackwardWeight: Codable, Mappable {
     
     // MARK: - Mappable Implementation
     
-    init?(map: Map) {}
+    public init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         value      <- map["Value"]
         criteria   <- map["Criteria"]
     }
     
     // Custom initializer for convenience
-    init(value: Int?, criteria: String?) {
+    public init(value: Int?, criteria: String?) {
         self.value = value
         self.criteria = criteria
     }
 }
 
 extension BackwardWeight {
-    func toWeight() -> Weight {
+    public func toWeight() -> Weight {
         return Weight(value: self.value)
     }
 }
 
-struct BackwardProperties: Codable, Mappable {
-    var disabledMonths: String?
-    var placeholder: String?
-    var style: Style?
-    var sublabel: String?
-    var icon: String?
-    var defaultDateType: String?
-    var isVisibleInViewMode: Bool?
-    var dateFormat: String?
-    var dateSelectionMode: String?
-    var maximumTime: String?
-    var timeFormat: String?
-    var disabledDays: [Int]?
-    var minimumTime: String?
-    var required: Bool?
-    var maximumDate: String?
-    var defaultTimeType: String?
-    var dateTimeType: String?
-    var minimumDate: String?
-    var unique: String?
-    var localization: Localization?
-    var label: String?
-    var allowedDaysRange: Int?
-    var sendToBPM: Bool?
-    var validationType: String?
-    var disabledDates: [String]?
-    var tooltip: String?
-    var calendarType: String?
-    var defaultAnswer: BackwardDefaultAnswer?
-    var firstDayOfWeek: Int?
-    var isCollapsed: Bool? = true
+public struct BackwardProperties: Codable, Mappable {
+    public var disabledMonths: String?
+    public var placeholder: String?
+    public var style: Style?
+    public var sublabel: String?
+    public var icon: String?
+    public var defaultDateType: String?
+    public var isVisibleInViewMode: Bool?
+    public var dateFormat: String?
+    public var dateSelectionMode: String?
+    public var maximumTime: String?
+    public var timeFormat: String?
+    public var disabledDays: [Int]?
+    public var minimumTime: String?
+    public var required: Bool?
+    public var maximumDate: String?
+    public var defaultTimeType: String?
+    public var dateTimeType: String?
+    public var minimumDate: String?
+    public var unique: String?
+    public var localization: Localization?
+    public var label: String?
+    public var allowedDaysRange: Int?
+    public var sendToBPM: Bool?
+    public var validationType: String?
+    public var disabledDates: [String]?
+    public var tooltip: String?
+    public var calendarType: String?
+    public var defaultAnswer: BackwardDefaultAnswer?
+    public var firstDayOfWeek: Int?
+    public var isCollapsed: Bool? = true
     
     // MARK: - Codable Implementation
     enum CodingKeys: String, CodingKey {
@@ -468,7 +468,7 @@ struct BackwardProperties: Codable, Mappable {
         case firstDayOfWeek = "FirstDayOfWeek"
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         disabledMonths = try values.decodeIfPresent(String.self, forKey: .disabledMonths)
         placeholder = try values.decodeIfPresent(String.self, forKey: .placeholder)
@@ -502,9 +502,9 @@ struct BackwardProperties: Codable, Mappable {
     }
     
     // MARK: - Mappable Implementation
-    init?(map: Map) {}
+    public init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         disabledMonths      <- map["DisabledMonths"]
         placeholder         <- map["Placeholder"]
         style               <- map["Style"]
@@ -539,7 +539,7 @@ struct BackwardProperties: Codable, Mappable {
 
 
 extension BackwardProperties {
-    func toProperties() -> Properties {
+    public func toProperties() -> Properties {
         return Properties(
             label: self.label,
             disabledMonths: self.disabledMonths,
@@ -682,27 +682,27 @@ extension BackwardProperties {
 //}
 
 
-struct BackwardTaskSubmittedRowDataModel: Codable {
-    let id: String?
-    let name: String?
-    let rowIndex: String?
-    let value: ValueType?
-    let subValues: ValueType?
-    let type: String?
-    let label: String?
-    let multipleValue: Bool?
+public struct BackwardTaskSubmittedRowDataModel: Codable {
+    public let id: String?
+    public let name: String?
+    public let rowIndex: String?
+    public let value: ValueType?
+    public let subValues: ValueType?
+    public let type: String?
+    public let label: String?
+    public let multipleValue: Bool?
     
     enum CodingKeys: String, CodingKey {
         case id, name, rowIndex, value, subValues, type, label, multipleValue
     }
 }
 
-struct BackwardDefaultAnswer: Codable, Mappable {
+public struct BackwardDefaultAnswer: Codable, Mappable {
     
-    var id: String?
-    var name: String?
-    var rowIndex: String?
-    var defaultValue: ValueType?
+    public var id: String?
+    public var name: String?
+    public var rowIndex: String?
+    public var defaultValue: ValueType?
     
     enum CodingKeys: String, CodingKey {
         case id = "Id"
@@ -712,7 +712,7 @@ struct BackwardDefaultAnswer: Codable, Mappable {
     }
     
     // Codable initializer
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         id = try values.decodeIfPresent(String.self, forKey: .id)
         name = try values.decodeIfPresent(String.self, forKey: .name)
@@ -721,7 +721,7 @@ struct BackwardDefaultAnswer: Codable, Mappable {
     }
     
     // Mappable initializer
-    init?(map: Map) {
+    public init?(map: Map) {
         id = nil
         name = nil
         rowIndex = nil
@@ -729,7 +729,7 @@ struct BackwardDefaultAnswer: Codable, Mappable {
     }
     
     // Mappable mapping function
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         id <- map["Id"]
         name <- map["Name"]
         rowIndex <- map["RowIndex"]
@@ -739,7 +739,7 @@ struct BackwardDefaultAnswer: Codable, Mappable {
 
 
 extension BackwardDefaultAnswer {
-    func toDefaultAnswer() -> DefaultAnswer {
+    public func toDefaultAnswer() -> DefaultAnswer {
         return DefaultAnswer(
             id: self.id,
             name: self.name,
@@ -752,17 +752,17 @@ extension BackwardDefaultAnswer {
 
 
 public class BackwardAttachmentForDefault: Mappable {
-    var fileId: String?
-    var url: String?
-    var downloadUrl: String?
-    var attachmentDisplaySize: String?
-    var fileName: String?
-    var previewUrl: String?
-    var size: String?
-    var isPublic: Bool?
-    var fileUrl: String?
-    var fileExtension: String?
-    var isSuccess: Bool?
+    public var fileId: String?
+    public var url: String?
+    public var downloadUrl: String?
+    public var attachmentDisplaySize: String?
+    public var fileName: String?
+    public var previewUrl: String?
+    public var size: String?
+    public var isPublic: Bool?
+    public var fileUrl: String?
+    public var fileExtension: String?
+    public var isSuccess: Bool?
 
     required public init?(map: Map) {}
 
@@ -881,12 +881,12 @@ public class BackwardAttachmentForDefault: Mappable {
 //    }
 //}
 
-struct BackwardMyValue: Codable {
-    let arrRes: [String]
-    let objRes: [[String:String]]
+public struct BackwardMyValue: Codable {
+    public let arrRes: [String]
+    public let objRes: [[String:String]]
 
         // Where we determine what type the value is
-        init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
             let container =  try decoder.singleValueContainer()
 
             // Check for a boolean
@@ -901,7 +901,7 @@ struct BackwardMyValue: Codable {
         }
 
         // We need to go back to a dynamic type, so based on the data we have stored, encode to the proper type
-        func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
 //            var container = encoder.singleValueContainer()
 //            try arrRes ? container.encode(objRes) : container.encode([""])
         }
@@ -990,13 +990,13 @@ struct BackwardMyValue: Codable {
 //
 //}
 
-struct BackwardReqDetailsAttachmentValue : Codable, FormValue {
-    let url : String?
-    let attachmentName : String?
-    let attachmentExtension : String?
-    let attachmentDisplaySize : String?
-    let fileId : String?
-    let size : String?
+public struct BackwardReqDetailsAttachmentValue : Codable, FormValue {
+    public let url : String?
+    public let attachmentName : String?
+    public let attachmentExtension : String?
+    public let attachmentDisplaySize : String?
+    public let fileId : String?
+    public let size : String?
 
     enum CodingKeys: String, CodingKey {
 

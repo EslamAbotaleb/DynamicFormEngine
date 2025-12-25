@@ -7,39 +7,40 @@
 //
 
 import Foundation
-struct UserDTO : Codable {
-    let sharedBCID : String?
-    let bcid : String?
-    let cn : String?
-    let company : String?
-    let mail : String?
-    let businessPhone : String?
-    let department : String?
-    let departmentAr : String?
-    let description : String?
-    let displayName : String?
-    let displayNameAr : String?
-    let employeeId : String?
-    let userType : String?
-    let givenName : String?
-    let lastLogon : String?
-    let mailNickname : String?
-    let phone : String?
-    let mobile : String?
-    let name : String?
-    let nameAr : String?
-    let info : String?
-    let samAccountName : String?
-    let sn : String?
-    let jobTitle : String?
-    let jobTitleAr : String?
-    let userPrincipalName : String?
-    let id : String?
-    let photo : String?
-    let managerPath : String?
-    let employeePF : String?
-    let manager : String?
-    let nationalNumber: String?
+
+public struct UserDTO : Codable {
+    public let sharedBCID : String?
+    public let bcid : String?
+    public let cn : String?
+    public let company : String?
+    public let mail : String?
+    public let businessPhone : String?
+    public let department : String?
+    public let departmentAr : String?
+    public let description : String?
+    public let displayName : String?
+    public let displayNameAr : String?
+    public let employeeId : String?
+    public let userType : String?
+    public let givenName : String?
+    public let lastLogon : String?
+    public let mailNickname : String?
+    public let phone : String?
+    public let mobile : String?
+    public let name : String?
+    public let nameAr : String?
+    public let info : String?
+    public let samAccountName : String?
+    public let sn : String?
+    public let jobTitle : String?
+    public let jobTitleAr : String?
+    public let userPrincipalName : String?
+    public let id : String?
+    public let photo : String?
+    public let managerPath : String?
+    public let employeePF : String?
+    public let manager : String?
+    public let nationalNumber: String?
 
 
     enum CodingKeys: String, CodingKey {

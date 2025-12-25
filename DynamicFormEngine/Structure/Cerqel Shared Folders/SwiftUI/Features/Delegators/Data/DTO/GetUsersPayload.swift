@@ -7,17 +7,17 @@
 //
 
 import Foundation
-    struct GetUsersPayload : Codable {
-        var filter : UserFilterModel?
-        let searchOptions : String?
-        var pageSize : Int?
-        var pageNumber: Int?
+public struct GetUsersPayload : Codable {
+    public var filter : UserFilterModel?
+    public let searchOptions : String?
+    public var pageSize : Int?
+    public var pageNumber: Int?
 
-        enum CodingKeys: String, CodingKey {
-            case filter = "filter"
-            case searchOptions = "searchOptions"
-            case pageSize = "pageSize"
-            case pageNumber = "pageNumber"
-        }
-
+    enum CodingKeys: String, CodingKey {
+        case filter = "filter"
+        case searchOptions = "searchOptions"
+        case pageSize = "pageSize"
+        case pageNumber = "pageNumber"
     }
+
+}

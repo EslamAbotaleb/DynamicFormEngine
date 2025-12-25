@@ -31,7 +31,7 @@ import SwiftyJSON
 internal import MOLH
 
 
-open class OAuth2Client {
+open class OAuth2ClientDynamicForm {
 
     /// The OAuth2 client configuration.
     private(set) public var configuration:OAuth2Configuration

@@ -12,12 +12,12 @@ import DropDown
 internal import MOLH
 internal import FittedSheetsDF
 
-struct BackwardDataSoruceTableModel {
-    var parentid: String?
-    var rowIndex: String?
-    var relatedItems: [BackwardViewForm]?
-    var title: String?
-    var expanded: Bool? = false
+public struct BackwardDataSoruceTableModel {
+    public var parentid: String?
+    public var rowIndex: String?
+    public var relatedItems: [BackwardViewForm]?
+    public var title: String?
+    public var expanded: Bool? = false
 }
 
 
@@ -25,7 +25,7 @@ struct BackwardDataSoruceTableModel {
 //    func handleActionPayload(actionId: String,payload: [[String:Any]])
 //}
 
-class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
+public class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     // MARK: - IBOutlets
     @IBOutlet weak var bgTopView: UIView!
     @IBOutlet weak var bgBottomView: UIView!
@@ -53,7 +53,7 @@ class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewMod
     
     // MARK: - Functions
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         create()
         navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
@@ -224,7 +224,7 @@ class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewMod
         }).disposed(by: self.disposeBag)
     }
     
-    override func viewWillLayoutSubviews() {
+    override public func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         updateUI()
     }
@@ -311,11 +311,11 @@ extension BackwardRequestDetailsView: Popup {
 }
 extension BackwardRequestDetailsView: UITableViewDelegate, UITableViewDataSource{
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.arrOfSections.count
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch viewModel.arrOfSections[section] {
         case .oldActions_Dicussion:
@@ -351,7 +351,7 @@ extension BackwardRequestDetailsView: UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch viewModel.arrOfSections[indexPath.section] {
         case .empInfo:
             let cell = tableView.dequeueReusableCell(withIdentifier: EmpInfoTVC.cerqel_identifier, for: indexPath) as! EmpInfoTVC
@@ -732,7 +732,7 @@ extension BackwardRequestDetailsView {
 }
 
 extension BackwardRequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDelegate{
-    func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
+    public func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
         self.present(documentPicker, animated: true, completion: nil)
         
     }
@@ -825,11 +825,11 @@ extension BackwardRequestDetailsView: UITextViewDelegate {
 
 
 extension BackwardRequestDetailsView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayOfAttachment.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatFooterAttachmentCVcell.cerqel_identifier, for: indexPath) as! ChatFooterAttachmentCVcell
         cell.configure(arrayOfAttachment[indexPath.row])
         cell.removeBtnTapped = {

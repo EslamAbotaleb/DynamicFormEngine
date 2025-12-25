@@ -9,8 +9,8 @@
 import UIKit
 internal import MOLH
 
-class LocallizedCollectionViewCerqel: UICollectionViewFlowLayout {
-    override var flipsHorizontallyInOppositeLayoutDirection: Bool {
+public class LocallizedCollectionViewCerqel: UICollectionViewFlowLayout {
+    override public var flipsHorizontallyInOppositeLayoutDirection: Bool {
         return MOLHLanguage.isArabic()
     }
     
@@ -19,7 +19,7 @@ class LocallizedCollectionViewCerqel: UICollectionViewFlowLayout {
 extension UICollectionView {
     
     // This is in the UICollectionView subclass
-    func cerqel_addGradientMask() {
+    public func cerqel_addGradientMask() {
         let coverView = cerqel_GradientView(frame: self.bounds)
         let coverLayer = coverView.layer as! CAGradientLayer
         coverLayer.colors = [UIColor.white.withAlphaComponent(0).cgColor, UIColor.white.cgColor, UIColor.white.withAlphaComponent(0).cgColor]
@@ -30,8 +30,8 @@ extension UICollectionView {
     }
 
     // Declare this anywhere outside the sublcass
-    class cerqel_GradientView: UIView {
-        class func layerClass() -> AnyClass {
+    public  class cerqel_GradientView: UIView {
+        public  class func layerClass() -> AnyClass {
             return CAGradientLayer.self
         }
     }

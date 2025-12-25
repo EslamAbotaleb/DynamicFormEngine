@@ -75,4 +75,14 @@ public struct AttachmentsCerqel : Codable {
         case attachmentSize = "attachmentSize"
         case attachmentDisplaySize = "attachmentDisplaySize"
     }
+    
+    public init(attachmentID: String?, attachmentType: String?, attachmentURL: String?, attachmentName: String?, attachmentExtension: String?, attachmentSize: Double?, attachmentDisplaySize: String?) {
+        self.attachmentID = attachmentID
+        self.attachmentType = attachmentType
+        self.attachmentURL = attachmentURL
+        self.attachmentName = attachmentName
+        self.attachmentExtension = attachmentExtension
+        self.attachmentSize = attachmentSize
+        self.attachmentDisplaySize = attachmentDisplaySize
+    }
 }

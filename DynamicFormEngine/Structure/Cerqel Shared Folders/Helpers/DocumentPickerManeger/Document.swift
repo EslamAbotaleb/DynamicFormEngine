@@ -9,17 +9,17 @@
 
 import UIKit
 
-class DocumentCerqel: UIDocument {
+public class DocumentCerqel: UIDocument {
 
     var data: Data?
 
-    override func contents(forType typeName: String) throws -> Any {
+    override public func contents(forType typeName: String) throws -> Any {
         guard let data = data else { return Data() }
 
         return try NSKeyedArchiver.archivedData(withRootObject: data, requiringSecureCoding: true)
     }
 
-    override func load(fromContents contents: Any, ofType typeName: String?) throws {
+    override public func load(fromContents contents: Any, ofType typeName: String?) throws {
 
         guard let data = contents as? Data else { return }
 
@@ -29,10 +29,10 @@ class DocumentCerqel: UIDocument {
 }
 
 extension URL {
-    var isDirectory: Bool! {
+    public var isDirectory: Bool! {
         return (try? resourceValues(forKeys: [.isDirectoryKey]))?.isDirectory
     }
-    var fileSize: Double? {
+    public var fileSize: Double? {
         let value = try? resourceValues(forKeys: [.fileSizeKey])
         return (Double (value?.fileSize ?? 0) / 1000000)
     }

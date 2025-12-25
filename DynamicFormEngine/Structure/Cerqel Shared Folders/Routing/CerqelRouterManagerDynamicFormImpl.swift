@@ -27,29 +27,29 @@ public enum CerqelView {
 }
 
 
-class CerqelRouterManagerImpl: CerqelRouterManager {
+public class CerqelRouterManagerDynamicFormImpl: CerqelRouterManager {
 
     var currentViewController: UIViewController
 
-    init(_ currentViewController: UIViewController = UIViewController()) {
+    public init(_ currentViewController: UIViewController = UIViewController()) {
         self.currentViewController = currentViewController
     }
-    func push(vc: UIViewController) {
+    public func push(vc: UIViewController) {
         currentViewController.navigationController?.pushViewController(vc, animated: true)
     }
-    func present(vc: UIViewController) {
+    public func present(vc: UIViewController) {
         currentViewController.present(vc, animated: true)
 
     }
 
-    func pushTo<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
+    public  func pushTo<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
         let controller =  ViewController(nibName: controller.identifier , bundle: nil) as! BaseView<viewModel, Item>
         controller.item = item
         controller.hidesBottomBarWhenPushed = true
         currentViewController.navigationController?.pushViewController(controller, animated: true)
     }
 
-    func pushToScreenWithSameViewModel<ViewController: UIViewController, Item: BaseItem, ViewModel: BaseVM>(
+    public  func pushToScreenWithSameViewModel<ViewController: UIViewController, Item: BaseItem, ViewModel: BaseVM>(
         controller: ViewController.Type,
         viewModel: ViewModel,
         item: Item
@@ -63,7 +63,7 @@ class CerqelRouterManagerImpl: CerqelRouterManager {
 
 
 
-    func presentbottomSheet<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(fromProfile: Bool = false, controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
+    public func presentbottomSheet<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(fromProfile: Bool = false, controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
         let controller =  ViewController(nibName: controller.identifier , bundle: nil) as! BaseView<viewModel, Item>
         controller.item = item
         if fromProfile {
@@ -76,7 +76,7 @@ class CerqelRouterManagerImpl: CerqelRouterManager {
 
 
 
-    func presentFullScreenWithSameViewModel<ViewController: UIViewController, Item: BaseItem, ViewModel: BaseVM>(
+    public  func presentFullScreenWithSameViewModel<ViewController: UIViewController, Item: BaseItem, ViewModel: BaseVM>(
         controller: ViewController.Type,
         viewModel: ViewModel,
         item: Item
@@ -90,14 +90,14 @@ class CerqelRouterManagerImpl: CerqelRouterManager {
         currentViewController.present(navController, animated: true, completion: nil)
     }
 
-    func present<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
+    public func present<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
         let controller =  ViewController(nibName: controller.identifier , bundle: nil) as! BaseView<viewModel, Item>
         controller.item = item
         controller.modalPresentationStyle = .automatic
         currentViewController.present(controller, animated: true)
     }
 
-    func presentFullScreen<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
+    public func presentFullScreen<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
         let controller =  ViewController(nibName: controller.identifier , bundle: nil) as! BaseView<viewModel, Item>
         controller.item = item
 
@@ -109,24 +109,24 @@ class CerqelRouterManagerImpl: CerqelRouterManager {
     }
 
 
-    func popBack( ) {
+    public func popBack( ) {
         currentViewController.navigationController?.popViewController(animated: true)
     }
 
-    func dismiss( ) {
+    public func dismiss( ) {
         currentViewController.dismiss(animated: true)
     }
 
 
 
-    func dismissCurrentController(completion: (() -> Void)?) {
+    public func dismissCurrentController(completion: (() -> Void)?) {
         currentViewController.dismiss(animated: true, completion: {
             completion?()
         })
     }
 
 
-    func popToViewController(ofClass: AnyClass, animated: Bool ) {
+    public func popToViewController(ofClass: AnyClass, animated: Bool ) {
         if let vc = currentViewController.navigationController?.viewControllers.last(where: { $0.isKind(of: ofClass) }) {
             currentViewController.navigationController?.popToViewController(vc, animated: animated)
         }
@@ -134,13 +134,13 @@ class CerqelRouterManagerImpl: CerqelRouterManager {
 
     }
 
-    func popToSpecialViewController(ofClass: AnyClass, animated: Bool) {
+    public func popToSpecialViewController(ofClass: AnyClass, animated: Bool) {
         if let vc = currentViewController.navigationController?.viewControllers.last(where: { $0.isKind(of: ofClass) }) {
             currentViewController.navigationController?.popToViewController(vc, animated: animated)
         }
     }
     
-    func popToAnyViewController(ofClass: AnyClass, animated: Bool) {
+    public  func popToAnyViewController(ofClass: AnyClass, animated: Bool) {
         if let navController = currentViewController.navigationController {
             // Look for existing VC of requested class
             if let targetVC = navController.viewControllers.first(where: { $0.isKind(of: ofClass) }) {
@@ -173,13 +173,13 @@ class CerqelRouterManagerImpl: CerqelRouterManager {
 
 extension UINavigationController {
 
-    func popToViewController(ofClass: AnyClass, animated: Bool = false) {
+    public func popToViewController(ofClass: AnyClass, animated: Bool = false) {
         if let vc = viewControllers.filter({$0.isKind(of: ofClass)}).last {
             popToViewController(vc, animated: animated)
         }
     }
 
-    func popViewControllers(viewsToPop: Int, animated: Bool = false) {
+    public  func popViewControllers(viewsToPop: Int, animated: Bool = false) {
         if viewControllers.count > viewsToPop {
             let vc = viewControllers[viewControllers.count - viewsToPop - 1]
             popToViewController(vc, animated: animated)

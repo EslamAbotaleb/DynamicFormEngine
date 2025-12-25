@@ -9,22 +9,22 @@
 import Foundation
 import Promises
 
-protocol UserUseCase {
+public protocol UserUseCase {
     func getUsersList(payload: GetUsersPayload) -> Promise<BaseResponse<[UserEntity]>>
 }
 
 
-class UserUseCaseImpl: UserUseCase {
+public class UserUseCaseImpl: UserUseCase {
     
     private let repository: UsersRepo
     private let mapper: any EntityMapper
 
-    init(repository: UsersRepo = UsersRepoImp(), mapper: any EntityMapper = UsersListMapper()) {
+    public init(repository: UsersRepo = UsersRepoImp(), mapper: any EntityMapper = UsersListMapper()) {
         self.repository = repository
         self.mapper = mapper
     }
 
-    func getUsersList(payload: GetUsersPayload) -> Promise<BaseResponse<[UserEntity]>>{
+    public func getUsersList(payload: GetUsersPayload) -> Promise<BaseResponse<[UserEntity]>>{
         return Promise<BaseResponse<[UserEntity]>> { fulfill, reject in
             self.repository.getUsersList(payload: payload).then { response in
                 let data = response.result.data
@@ -38,7 +38,7 @@ class UserUseCaseImpl: UserUseCase {
         }
     }
     
-    func map(list: [UserDTO]) -> [UserEntity] {
+    public func map(list: [UserDTO]) -> [UserEntity] {
         return list.compactMap { item in
             if let entityMapper = mapper as? UsersListMapper {
                   return entityMapper.map(from: item)

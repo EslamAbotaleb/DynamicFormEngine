@@ -178,6 +178,25 @@ public struct Filter: Codable {
           subCategoryID: [String]?,
           fileType: [String]?,
           isAcknowledgement: Bool?,
+          isPinned: Bool?,
+          updatedDateFrom: String?,
+          updatedDateTo: String?
+      ) {
+          self.searchKeyword = searchKeyword
+          self.categoryID = categoryID
+          self.subCategoryID = subCategoryID
+          self.fileType = fileType
+          self.isAcknowledgement = isAcknowledgement
+          self.isPinned = isPinned
+          self.updatedDateFrom = updatedDateFrom
+          self.updatedDateTo = updatedDateTo
+      }
+    public init(
+          searchKeyword: String?,
+          categoryID: [String]?,
+          subCategoryID: [String]?,
+          fileType: [String]?,
+          isAcknowledgement: Bool?,
           isFavorite: Bool?,
           updatedDateFrom: String?,
           updatedDateTo: String?
@@ -188,6 +207,24 @@ public struct Filter: Codable {
           self.fileType = fileType
           self.isAcknowledgement = isAcknowledgement
           self.isFavorite = isFavorite
+          self.updatedDateFrom = updatedDateFrom
+          self.updatedDateTo = updatedDateTo
+      }
+    
+    public init(
+          searchKeyword: String?,
+          categoryID: [String]?,
+          subCategoryID: [String]?,
+          fileType: [String]?,
+          isAcknowledgement: Bool?,
+          updatedDateFrom: String?,
+          updatedDateTo: String?
+      ) {
+          self.searchKeyword = searchKeyword
+          self.categoryID = categoryID
+          self.subCategoryID = subCategoryID
+          self.fileType = fileType
+          self.isAcknowledgement = isAcknowledgement
           self.updatedDateFrom = updatedDateFrom
           self.updatedDateTo = updatedDateTo
       }

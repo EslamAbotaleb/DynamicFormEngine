@@ -7,13 +7,13 @@
 //
 
 import Foundation
-internal import RxSwift
+public import RxSwift
 
 public struct cerqel_ArrayResource<T: Codable> {
-    let objectType = T.self
-    let action: cerqel_APIActionDynamicForm
+    public let objectType = T.self
+    public let action: cerqel_APIActionDynamicForm
     
-    func parse(_ data: Data) -> Observable<[T]> {
+    public func parse(_ data: Data) -> Observable<[T]> {
         return Observable.create { observer in
             guard let result = try? JSONDecoder().decode([T].self, from: data) else {
                 observer.onError(cerqel_CustomError(value: "Can't map response."))

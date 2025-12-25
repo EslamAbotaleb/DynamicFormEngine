@@ -8,23 +8,23 @@
 
 import UIKit
 
-class ProfilePhoneTypesCell: UITableViewCell {
+public class ProfilePhoneTypesCell: UITableViewCell {
 
     @IBOutlet weak var checkIcon: UIImageView!
     @IBOutlet weak var checkSortNameLbl: UILabel!
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override public func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     
     }
     
    
-    func configure(item: ListModel) {
+    public func configure(item: ListModel) {
         checkSortNameLbl.text = item.name
         checkSortNameLbl.font = UIFont.bodyLRegular()
         

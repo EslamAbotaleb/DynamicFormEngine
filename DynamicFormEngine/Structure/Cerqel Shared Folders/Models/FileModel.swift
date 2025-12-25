@@ -122,6 +122,13 @@ public struct FileModel {
 public struct FileCheckBox {
     public var isSelected: Bool = false
     public var isAppear: Bool = false
+    
+    public init() {}
+    
+    public init(isSelected: Bool, isAppear: Bool) {
+        self.isSelected = isSelected
+        self.isAppear = isAppear
+    }
 }
 
 public struct File {

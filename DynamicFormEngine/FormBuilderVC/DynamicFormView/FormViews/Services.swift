@@ -350,11 +350,11 @@ public class Services {
 }
 
 public struct Utilities {
-    static func deviceIsIpad() -> Bool {
+    static public func deviceIsIpad() -> Bool {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
     }
     
-    static func handleNavBarAppearance(vc: UIViewController, tintColor: UIColor, shadowColor: UIColor? = .clear) {
+    static public func handleNavBarAppearance(vc: UIViewController, tintColor: UIColor, shadowColor: UIColor? = .clear) {
         
         vc.navigationController?.navigationBar.isHidden = false
         let attributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
@@ -380,19 +380,19 @@ public struct Utilities {
     }
     
     
-    static func storyboard(withName name: String, bundle: Bundle? = nil) -> UIStoryboard {
+    static public func storyboard(withName name: String, bundle: Bundle? = nil) -> UIStoryboard {
         return UIStoryboard(name: name, bundle: bundle)
     }
     
-    static func mainStoryBoard() -> UIStoryboard {
+    static public func mainStoryBoard() -> UIStoryboard {
         return Utilities.storyboard(withName: "CheckMain")
     }
     
-    static func mainiPadStoryBoard() -> UIStoryboard {
+    static public func mainiPadStoryBoard() -> UIStoryboard {
         return Utilities.storyboard(withName: "MainiPad")
     }
     
-    static func instantiateVCWithId(_ id: String) -> UIViewController {
+    static public func instantiateVCWithId(_ id: String) -> UIViewController {
         if Utilities.deviceIsIpad() {
             return Utilities.mainiPadStoryBoard().instantiateViewController(withIdentifier: id)
         } else {
@@ -406,16 +406,16 @@ public struct Utilities {
     //        return UIStoryboard(name: name, bundle: bundle)
     //    }
     
-    static func screedHeight() -> CGFloat {
+    static public func screedHeight() -> CGFloat {
         return UIScreen.main.bounds.size.height
     }
     
-    static func screedWidth() -> CGFloat {
+    static public func screedWidth() -> CGFloat {
         return UIScreen.main.bounds.size.width
     }
     
     
-    static func randomString(length: Int) -> String {
+    static public func randomString(length: Int) -> String {
         
         let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let len = UInt32(letters.length)
@@ -437,7 +437,7 @@ public struct Utilities {
     //        // JSON from string must be initialized using .parse()
     //    }
     
-    static func saveString(_ str: String, toFile: String){
+    static public func saveString(_ str: String, toFile: String){
         
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             
@@ -451,7 +451,7 @@ public struct Utilities {
         }
     }
     
-    static func readString(fromFile: String) -> String? {
+    static public func readString(fromFile: String) -> String? {
         
         if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
             
@@ -468,7 +468,7 @@ public struct Utilities {
         return nil
     }
     
-    static func saveJSON(_ json: Any, toFile: String){
+    static public func saveJSON(_ json: Any, toFile: String){
         if FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first != nil {
             var str: String?
             
@@ -514,7 +514,7 @@ public struct Utilities {
     }
     
     
-    static func readJSONArray(fromFile: String) -> JSONArray? {
+    static public func readJSONArray(fromFile: String) -> JSONArray? {
         
         let str = Utilities.readString(fromFile: fromFile)
         if str == nil {
@@ -532,11 +532,11 @@ public struct Utilities {
         return nil
     }
     
-    static func getAppVersion() -> String {
+    static public func getAppVersion() -> String {
         return Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
     }
     
-    static func getDeviceModel() -> String {
+    static public func getDeviceModel() -> String {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
@@ -548,7 +548,7 @@ public struct Utilities {
         return identifier
     }
     
-    static func deviceIs_iPhone5() -> Bool{
+    static public func deviceIs_iPhone5() -> Bool{
         switch UIScreen.main.nativeBounds.height {
         case 1136:
             return true
@@ -558,11 +558,11 @@ public struct Utilities {
         }
     }
     
-    static func getOsVersion() -> String {
+    static public func getOsVersion() -> String {
         return UIDevice.current.systemVersion
     }
     
-    static func instantiateType(fromString string: String) -> AnyClass? {
+    static public func instantiateType(fromString string: String) -> AnyClass? {
         guard let namespace = Bundle.main.infoDictionary!["CFBundleExecutable"] as? String else {
             return nil
         }
@@ -570,7 +570,7 @@ public struct Utilities {
         return NSClassFromString("\(namespace).\(string)")
     }
     
-    static func openAppStoreWith(appId: String){
+    static public func openAppStoreWith(appId: String){
         
         let url = URL(string: "https://itunes.apple.com/us/app/apple-store/id" + Constants.appStoreId + "?mt=8")
         if #available(iOS 10.0, *) {
@@ -581,7 +581,7 @@ public struct Utilities {
         }
     }
     
-    static func suffixNumber(number: NSNumber) -> String {
+    static public func suffixNumber(number: NSNumber) -> String {
         
         var num:Double = number.doubleValue
         let sign = ((num < 0) ? "-" : "" )

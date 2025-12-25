@@ -8,25 +8,25 @@
 import Foundation
 
 public struct PlatformsColor : Codable {
-    let primaryColorMain : String?
-    let primaryColorLight : String?
-    let secondaryColorMain : String?
-    let secondaryColorLight : String?
-    let typographyColorHeading : String?
-    let typographyColorSubtitle : String?
-    let typographyColorBody : String?
-    let mainHeaderColorBg : String?
-    let mainHeaderColorTextAndIcons : String?
-    let subHeaderColorBg : String?
-    let subHeaderColorTextAndIcons : String?
-    let subHeaderColorBgColorButton : String?
-    let subHeaderColorTextAndIconsButton : String?
-    let sideMenuColorBg : String?
-    let sideMenuColorTextAndIcons : String?
-    let sideMenuColorHighlight : String?
-    let backgroundColor : String?
-    let mobileBgHeaderColor : String?
-    let mobileBgTabNavigatorColor : String?
+    public let primaryColorMain : String?
+    public let primaryColorLight : String?
+    public let secondaryColorMain : String?
+    public let secondaryColorLight : String?
+    public let typographyColorHeading : String?
+    public let typographyColorSubtitle : String?
+    public let typographyColorBody : String?
+    public let mainHeaderColorBg : String?
+    public let mainHeaderColorTextAndIcons : String?
+    public let subHeaderColorBg : String?
+    public let subHeaderColorTextAndIcons : String?
+    public let subHeaderColorBgColorButton : String?
+    public let subHeaderColorTextAndIconsButton : String?
+    public let sideMenuColorBg : String?
+    public let sideMenuColorTextAndIcons : String?
+    public let sideMenuColorHighlight : String?
+    public let backgroundColor : String?
+    public let mobileBgHeaderColor : String?
+    public let mobileBgTabNavigatorColor : String?
     
     enum CodingKeys: String, CodingKey {
         

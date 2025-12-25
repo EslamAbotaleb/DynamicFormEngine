@@ -25,7 +25,7 @@ public struct CerqelListModel: Codable {
         case nameEn, nameAr
     }
     
-    var collapseImage : String {
+    public var collapseImage : String {
         return collapsed ?? true  ? "arrow_down" : "arrow_up"
     }
     

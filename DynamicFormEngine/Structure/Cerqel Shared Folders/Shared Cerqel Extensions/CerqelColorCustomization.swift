@@ -41,6 +41,8 @@ public class MyColor {
     public var blue: CGFloat = 0.0
     public var alpha: CGFloat = 1.0
 
+    public init() {}
+    
     public func setFromAPIResponse(_ response: [String: Any]) {
         if let red = response["red"] as? Double {
             self.red = CGFloat(red)

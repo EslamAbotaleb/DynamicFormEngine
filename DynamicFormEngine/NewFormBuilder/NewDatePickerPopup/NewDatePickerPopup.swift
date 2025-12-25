@@ -29,31 +29,27 @@ public class NewDatePickerPopup: BottomSheetVCCerqel {
     
     // MARK: - Variables
     
-    var currentVC: UIViewController!
-    var presentedFormat: String?
-    var regularFormat: String?
-    var dataArray: [String] = []
-    var isDate = false
-    var currentDate : Date?
-    var selectedIndex = -1
-    var selectedValue = ""
-    var datePickerMode = UIDatePicker.Mode.dateAndTime
-    var dateCalendarType: Calendar.Identifier = .gregorian
-    var minimumDate: Date?
-    var maximumDate: Date?
-    var disabledDates: [String]?
-    var disabledDays: [Int]?
-    var pickerTitle: String?
-    var from: Bool?
-    var isFromCustomCalender = false
-    private var blackBgView = UIView()
-    
-    var sender: Any?
-    
-    var didPickDate: ((Date)->())?
-    var didPickValue: ((Int)->())?
-    
-    
+   public var currentVC: UIViewController!
+   public var presentedFormat: String?
+   public var regularFormat: String?
+   public var dataArray: [String] = []
+   public var isDate = false
+   public var currentDate : Date?
+   public var selectedIndex = -1
+   public var selectedValue = ""
+   public var datePickerMode = UIDatePicker.Mode.dateAndTime
+   public var dateCalendarType: Calendar.Identifier = .gregorian
+   public var minimumDate: Date?
+   public var maximumDate: Date?
+   public var disabledDates: [String]?
+   public var disabledDays: [Int]?
+   public var pickerTitle: String?
+   public var from: Bool?
+   public var isFromCustomCalender = false
+   private var blackBgView = UIView()
+   public var sender: Any?
+   public var didPickDate: ((Date)->())?
+   public var didPickValue: ((Int)->())?
     
     // MARK: - LifeCycle
     

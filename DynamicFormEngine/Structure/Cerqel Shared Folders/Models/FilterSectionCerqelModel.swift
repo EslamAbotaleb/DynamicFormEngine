@@ -61,6 +61,17 @@ public struct CerqelFilterSection: Equatable,Hashable {
     
 }
 
+public enum CerqelFilterSectionsEnum: Equatable{
+    
+    case dateRangeFilter
+    case categories(CategoryLevel)
+    
+    public init() {
+        self = .categories(.single)
+        
+    }
+}
+
 public enum CategoryLevel {
     case multi
     case single
@@ -82,6 +93,18 @@ public enum CerqelFilterSectionsType: Equatable{
     
 }
 
+public enum CerqelFilterSectionEnum: CaseIterable {
+    
+    case dateRangeFilter
+    case categories
+}
+
+public enum CerqelFilterCategoriesSectionEnum: CaseIterable {
+    case offersCategories
+    case documentLibraryCategories
+    case type
+}
+
 
 public enum CerqelFilterCategoriesType: CaseIterable {
     case offersCategories
@@ -92,9 +115,9 @@ public enum CerqelFilterCategoriesType: CaseIterable {
     case fileTypes
 }
 
-//enum CerqelFilterPathEnum: String {
-//    case offersCategories = "Lookups/Categories/offers"
-//}
+public enum CerqelFilterPathEnum: String {
+    case offersCategories = "Lookups/Categories/offers"
+}
 
 public enum CerqelRepresentationType {
     case CheckBox

@@ -13,7 +13,7 @@ internal import MOLH
 import Photos
 internal import FittedSheetsDF
 
-class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
+public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     
     // MARK: - IBOutlets
     
@@ -31,38 +31,38 @@ class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     
     let dropDown = DropDown()
     
-    var currentRow = 1
-    var id = ""
-    var isMyRequestFlag = false
-    var isFromNotifications = false
-    var actionCommentText = ""
-    var dataSourceTableArray: [dataSoruceTableModel] = []
-    var sectionDataSourceArray: [sectionDataSourceModel] = []
-    var newFormWithTable: [Field]?
-    var allFormData: [Field] = []
-    var formBuilder = FormBuilder.shared
-    var buttonId: String?
-    var delegate: HandlePayloadMethods?
-    var actionId: String?
-    var isEditable: Bool? = false
-    var isApproverForm: Bool? = false
-    var formTableItemsSections: [[Field]] = []
-    var hiddenItemsIDs = [String]()
-    var sectionDetailsIndices: [Int] {
+    public var currentRow = 1
+    public var id = ""
+    public var isMyRequestFlag = false
+    public var isFromNotifications = false
+    public var actionCommentText = ""
+    public var dataSourceTableArray: [dataSoruceTableModel] = []
+    public var sectionDataSourceArray: [sectionDataSourceModel] = []
+    public var newFormWithTable: [Field]?
+    public var allFormData: [Field] = []
+    public var formBuilder = FormBuilder.shared
+    public var buttonId: String?
+    public var delegate: HandlePayloadMethods?
+    public var actionId: String?
+    public var isEditable: Bool? = false
+    public var isApproverForm: Bool? = false
+    public var formTableItemsSections: [[Field]] = []
+    public var hiddenItemsIDs = [String]()
+    public var sectionDetailsIndices: [Int] {
         return viewModel.arrOfSectionsForSummary.enumerated().compactMap { index, type in
             type == .sectionDetails ? index : nil
         }
     }
-    var DetailsWithOutSectionIndices: [Int] {
+    public var DetailsWithOutSectionIndices: [Int] {
         return viewModel.arrOfSectionsForSummary.enumerated().compactMap { index, type in
             type == .oldActions_Dicussion ? index : nil
         }
     }
     
-    var uniqueIdentifiers = [String]()
+    public var uniqueIdentifiers = [String]()
     
-    var rowIndices: [Int] = []
-    var currentPage = 0 {
+    public var rowIndices: [Int] = []
+    public var currentPage = 0 {
         didSet {
             formBuilder.handlePageData(currentPage)
             itemsTV.reloadData()
@@ -318,25 +318,25 @@ class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
 }
 
 extension RequestSummaryVC: Popup {
-    func popup() {
+    public func popup() {
         navigationController?.popToRootViewController(animated: true)
     }
 }
 extension RequestSummaryVC: UITableViewDelegate, UITableViewDataSource{
     
-    func createSections(from formItems: [Field]) {
+    public func createSections(from formItems: [Field]) {
         formTableItemsSections = formItems.map { [$0] }
     }
     
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 10 // Add space between sections by setting a footer height
     }
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return formBuilder.sectionObjects.count
     }
     
     // This function returns the number of rows in a given section of the table view
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Get the current section object from the formBuilder's sectionObjects array
         let currentSection = formBuilder.sectionObjects[section].item
         
@@ -351,7 +351,7 @@ extension RequestSummaryVC: UITableViewDelegate, UITableViewDataSource{
         }
     }
     // This function returns a view to be used as the header for a given section of the table view
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // Get the current section object from the formBuilder's sectionObjects array
         let currentSection = formBuilder.sectionObjects[section].item
         // Check if the current section type is .Section
@@ -373,7 +373,7 @@ extension RequestSummaryVC: UITableViewDelegate, UITableViewDataSource{
             return nil
         }
     }
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
            let currentSection = formBuilder.sectionObjects[section].item
            
         return (currentSection?.type == .Section && !(currentSection?.hidden ?? false) && !HelperFunctions.isHiddenSection(items: viewModel.formBuilder.sectionObjects[section].items)) ? 56.0 : 0.0 // Adjust as needed
@@ -384,7 +384,7 @@ extension RequestSummaryVC: UITableViewDelegate, UITableViewDataSource{
            itemsTV.reloadSections(IndexSet(integer: section), with: .automatic)
        }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
         let sectionType =  formBuilder.sectionObjects[section].item
         let row = indexPath.row
@@ -742,7 +742,7 @@ extension RequestSummaryVC: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item = getCurrentItem(indexPath: indexPath)
         if item.hidden {
             return 0
@@ -750,7 +750,7 @@ extension RequestSummaryVC: UITableViewDelegate, UITableViewDataSource{
         return UITableView.automaticDimension
     }
     
-    func getCurrentItem(indexPath: IndexPath) -> FormViewModelItem {
+    public func getCurrentItem(indexPath: IndexPath) -> FormViewModelItem {
         var item: FormViewModelItem!
         if formBuilder.sectionObjects.count > indexPath.section {
             item = formBuilder.sectionObjects[indexPath.section].items[indexPath.row]
@@ -771,12 +771,12 @@ extension RequestSummaryVC: UITableViewDelegate, UITableViewDataSource{
     }
 }
 extension RequestSummaryVC: PopViewControllerDelegate {
-    func handlePopViewController() {
+    public func handlePopViewController() {
         self.navigationController?.popViewController(animated: true)
     }
     
     
-    func fieldValidationChangedAt(_ section: Int, row: Int, isValid: Bool) {
+    public func fieldValidationChangedAt(_ section: Int, row: Int, isValid: Bool) {
         guard section < formBuilder.sectionObjects.count else {
             // Section index is out of range
             return
@@ -901,7 +901,7 @@ extension RequestSummaryVC: PopViewControllerDelegate {
         }
     }
 
-    func fieldValueChangedAt(_ section: Int, row: Int, value: Any?, isError: Bool = false, reload: Bool = true) {
+    public func fieldValueChangedAt(_ section: Int, row: Int, value: Any?, isError: Bool = false, reload: Bool = true) {
         if formBuilder.isCardMode {
             if formBuilder.formModelItems.indices.contains(currentPage) {
                 formBuilder.formModelItems[currentPage].isError = isError
@@ -925,7 +925,7 @@ extension RequestSummaryVC: PopViewControllerDelegate {
         fieldValidationChangedAt(section, row: row, isValid: !isError)
     }
 
-    func saveChanges(reload: Bool = true, section: Int, row: Int) {
+    public  func saveChanges(reload: Bool = true, section: Int, row: Int) {
         guard section >= 0 && row >= 0 && section < itemsTV.numberOfSections && row < itemsTV.numberOfRows(inSection: section) else {
             // section or row value is invalid, so exit the function
             return
@@ -939,7 +939,7 @@ extension RequestSummaryVC: PopViewControllerDelegate {
 
 extension RequestSummaryVC: NestedFormViewDelegate {
     
-    func getSectionNumber(for tableItem: FormViewModelTableItem) -> Int? {
+    public func getSectionNumber(for tableItem: FormViewModelTableItem) -> Int? {
         return self.viewModel.formBuilder.sectionObjects.firstIndex(where: { section in
             return section.items.contains(where: { item in
                 if let itemTable = item as? FormViewModelTableItem {
@@ -950,7 +950,7 @@ extension RequestSummaryVC: NestedFormViewDelegate {
         })
     }
     
-    func didTapAdd(tableID: String, itemIndex: Int, children: [FormViewModelItem], cascadingComponent: [Int:[String:[String:String]]]?,isEdit: Bool) {
+    public func didTapAdd(tableID: String, itemIndex: Int, children: [FormViewModelItem], cascadingComponent: [Int:[String:[String:String]]]?,isEdit: Bool) {
         let tables: [FormViewModelItem] = viewModel.formBuilder.formModelItems.filter({$0.type == .Table})
         var sectionIdx = 0
         for table in tables { // if case you have more than one table in the form
@@ -976,11 +976,11 @@ extension RequestSummaryVC: NestedFormViewDelegate {
     
     
     /// User dismissed table's bottom sheet
-    func didDismiss() {
+    public func didDismiss() {
         
     }
     
-    func updateControlValue(section: Int, ans: Any?) {
+    public func updateControlValue(section: Int, ans: Any?) {
         guard section < viewModel.formBuilder.sectionObjects.count else {return}
         guard !viewModel.formBuilder.sectionObjects[section].items.isEmpty else {return}
         viewModel.formBuilder.sectionObjects[section].items[0].answer = ans

@@ -81,7 +81,7 @@ public struct ListModel: Codable {
 }
 
 extension ListModel {
-    func toCerqelCategoriesModel () -> CerqelCategoriesModel {
+   public func toCerqelCategoriesModel () -> CerqelCategoriesModel {
         return CerqelCategoriesModel(id: id, name: name, representation: .CheckBox, isSelected: isSelected ?? false)
     }
 }

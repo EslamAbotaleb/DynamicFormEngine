@@ -22,7 +22,8 @@ public struct cerqel_BasicNetworkServiceImpl: cerqel_NetworkService {
 
 //    let appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
-
+    public init() {}
+    
     public func load<T>(_ resource: T) -> Observable<T> where T : cerqel_CodableResponseProtocol {
         return
         RxAlamofire

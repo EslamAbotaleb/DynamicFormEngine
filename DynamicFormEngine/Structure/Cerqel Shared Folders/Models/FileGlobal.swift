@@ -297,7 +297,7 @@ public struct ProfilePicture : Codable, Equatable {
         case disableDeleteIcon = "disableDeleteIcon"
     }
     
-    func map(from data: ProfilePicture) -> UploadedCVEntity {
+    public func map(from data: ProfilePicture) -> UploadedCVEntity {
         return UploadedCVEntity(id: data.mediaId,
                                 name: data.fileName ?? "",
                                 isPublic: true,

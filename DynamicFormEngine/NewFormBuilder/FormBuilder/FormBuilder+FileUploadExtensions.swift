@@ -48,7 +48,7 @@ extension FormBuilder {
         guard let fileUploadFormItem = getFileUploadControl(fieldID: fieldID).1 else { return }
         guard let index = getFileUploadControl(fieldID: fieldID).0 else { return }
         
-        let action = Dynamic_BasicAction.uploadFile(isPublic: false, serviceType: 0)
+        let action = Dynamic_BasicActionDynamicForm.uploadFile(isPublic: false, serviceType: 0)
         let URL1 = action.baseURL + action.path
         let modelID = UUID().uuidString
         
@@ -158,7 +158,7 @@ extension FormBuilder {
         
         let boundary = "Boundary-\(UUID().uuidString)"
         
-        let action = Dynamic_BasicAction.uploadFile(isPublic: false, serviceType: 0)
+        let action = Dynamic_BasicActionDynamicForm.uploadFile(isPublic: false, serviceType: 0)
         let urlString = action.baseURL + action.path
         guard let url = URL(string: urlString) else { return }
         

@@ -599,7 +599,7 @@ public class RequestDetailsViewModel: BaseVM {
         
         
         
-        self.service.load(cerqel_CodableResponseObjectDynamicForm<Bool>(action: Dynamic_BasicAction.updateRequest(payload: pay))).subscribe(onNext: {
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<Bool>(action: Dynamic_BasicActionDynamicForm.updateRequest(payload: pay))).subscribe(onNext: {
             [weak self] (response) in
             guard let `self` = self else {return}
             self.loadingSubject.onNext(.hide)

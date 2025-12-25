@@ -1,5 +1,5 @@
 //
-//  DynamicAPiAction.swift
+//  Dynamic_BasicActionDynamicForm.swift
 //  CERQEL
 //
 //  Created by hassan elshaer on 18/09/2023.
@@ -9,7 +9,7 @@
 import Foundation
 public import Alamofire
 
-public enum Dynamic_BasicAction: cerqel_APIActionDynamicForm {
+public enum Dynamic_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
     public var basicAction: cerqel_BasicActionDynamicForm{return .none}
     
     case submitService(Id: String, payload: [String: Any])

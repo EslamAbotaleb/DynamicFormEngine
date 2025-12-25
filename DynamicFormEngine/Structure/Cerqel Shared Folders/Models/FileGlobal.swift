@@ -90,6 +90,129 @@ public struct ProfileAttachment: Codable, Equatable {
     public var state: AttachmentState? = .old
 }
 
+public struct EntityDifference {
+    public var key: String
+    public var oldValue: Any
+    public var newValue: Any
+}
+
+
+
+public struct Section<T> : ProfileMapper{
+    public typealias DTO = Section
+
+    public var id: String?
+    public var title: String
+    public var isExpanded : Bool = false
+    public var entry: T
+    public var data: [Entry]
+
+    public func toList() -> [T] {
+        return [entry]
+    }
+
+    public func isOfType<U>(_ type: U.Type) -> Bool {
+        return entry is U
+    }
+
+}
+
+extension Section {
+    public func toAnySection() -> Section<Any> {
+        return Section<Any>(
+            id: self.id,
+            title: self.title,
+            isExpanded: self.isExpanded,
+            entry: self.entry as Any,
+            data: self.data.map { $0 as Any as! Entry }
+        )
+    }
+}
+
+public protocol ProfileMapper {
+    associatedtype DTO: ProfileMapper
+    var objectState: Int? { get set }
+    var attachments: [ProfileAttachment]? { get set }
+    func toDictionary() -> Section<DTO>
+    func modifiedFields(comparedTo other: DTO) -> [String: (oldValue: Any, newValue: Any)]
+    func modifiedFields(comparedTo other: DTO) -> [EntityDifference]
+}
+
+
+// Default implementations
+extension ProfileMapper {
+
+    public func toDictionary() -> Section<DTO> {
+        fatalError("toDictionary() has not been implemented")
+    }
+
+
+    public func modifiedFields(comparedTo other: DTO) -> [String: (oldValue: Any, newValue: Any)] {
+        fatalError("modifiedFields(comparedTo:) has not been implemented")
+    }
+
+    public func modifiedFields(comparedTo other: DTO) -> [EntityDifference] {
+        fatalError("modifiedFields(comparedTo:) has not been implemented")
+    }
+
+    public var objectState: Int?{
+        get {return nil}
+        set{}
+    }
+
+    public  var attachments: [ProfileAttachment]? {
+
+        get {return nil}
+        set{}
+    }
+
+}
+
+public enum SummaryState: Int, Codable {
+    case old = 0
+    case updated = 2
+    case added = 1
+    case deleted = 3
+    case subHeader = 4
+}
+
+public struct Entry {
+    public var headerTitle: String? = nil
+    public var title: String
+    public var value: Any
+    public var valueForSummary: Any? = nil
+    public var state: SummaryState = .old
+}
+
+public struct UploadedCVEntity: ProfileMapper, Codable, Equatable {
+    public var id: String?
+    public var name: String = ""
+    public var isPublic: Bool = true
+    public var documentType: String = ""
+    public var contentType: String = ""
+    public var downloadUrl: String = ""
+    public var previewUrl: String = ""
+    public var fileSize: String = ""
+    public var objectState: Int? = 0
+    
+    public func toDictionary() -> Section<UploadedCVEntity> {
+        return Section(id: nil, title: name, entry: UploadedCVEntity(id: id, name: name, isPublic: isPublic, documentType: documentType, contentType: contentType, downloadUrl: downloadUrl, previewUrl: previewUrl, fileSize: fileSize, objectState: objectState), data: [
+            Entry(title: "Uploaded CV".localized, value: self)
+        ])
+    }
+    
+    
+    public func modifiedFields(comparedTo other: UploadedCVEntity) -> [String: (oldValue: Any, newValue: Any)] {
+        var changes = [String: (oldValue: Any, newValue: Any)]()
+        
+        
+        if self.id != other.id {
+            changes["Uploaded CV".localized] = (self.id , other.id )
+        }
+        return changes
+    }
+}
+
 public struct ProfilePicture : Codable, Equatable {
     public var mediaId : String? = ""
     public var fileName : String? = ""
@@ -126,17 +249,17 @@ public struct ProfilePicture : Codable, Equatable {
         case disableDeleteIcon = "disableDeleteIcon"
     }
     
-//    func map(from data: ProfilePicture) -> UploadedCVEntity {
-//        return UploadedCVEntity(id: data.mediaId,
-//                                name: data.fileName ?? "",
-//                                isPublic: true,
-//                                documentType: data.documentType ?? "",
-//                                contentType: data.contentType ?? "",
-//                                downloadUrl: data.downloadUrl ?? "",
-//                                previewUrl: data.previewUrl ?? "",
-//                                fileSize: data.fileSize ?? "",
-//                                objectState: 1)
-//    }
+    func map(from data: ProfilePicture) -> UploadedCVEntity {
+        return UploadedCVEntity(id: data.mediaId,
+                                name: data.fileName ?? "",
+                                isPublic: true,
+                                documentType: data.documentType ?? "",
+                                contentType: data.contentType ?? "",
+                                downloadUrl: data.downloadUrl ?? "",
+                                previewUrl: data.previewUrl ?? "",
+                                fileSize: data.fileSize ?? "",
+                                objectState: 1)
+    }
     
     public func convertToAttachmentsForm(data: [ProfilePicture]) -> [ProfileAttachment] {
         return data.map { self.mapToAttachment(from: $0) }
@@ -155,7 +278,6 @@ public struct ProfilePicture : Codable, Equatable {
                                  state: data.state)
     }
 }
-
 
 public enum BottomSheetType : String {
     case radio

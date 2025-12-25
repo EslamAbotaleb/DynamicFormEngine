@@ -11,7 +11,7 @@ internal import RxSwift
 import RxCocoa
 
 
-class NewSearchVC: BottomSheetVCCerqel {
+public class NewSearchVC: BottomSheetVCCerqel {
     
     
     // MARK: - IBOutlets
@@ -41,8 +41,8 @@ class NewSearchVC: BottomSheetVCCerqel {
     // MARK: - Variables
     
     let disposeBag = DisposeBag()
-    var searchCode = ""
-    var localSearch = true // passed true if it has options
+    public var searchCode = ""
+    public var localSearch = true // passed true if it has options
     weak var delegate: NewDropDownDelegate?
     var questionTitle: String = "" {
         didSet {
@@ -82,27 +82,27 @@ class NewSearchVC: BottomSheetVCCerqel {
     
     // MARK: - Functions
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         configure()
         addGesture()
         setupUI()
     }
     
-    func addGesture() {
+    public func addGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectAllTapped))
         selectAllView.isUserInteractionEnabled = true
         selectAllView.addGestureRecognizer(tapGesture)
     }
     
-    func handleSelectAll() {
+    public func handleSelectAll() {
         selectAllView.isHidden = !selectAllEnabled
         if selectedValues.count == options.count {
             selectAllButton.setImage(UIImage(named: "selectAllIcon"), for: .normal)
         }
     }
     
-    func setupUI() {
+    public func setupUI() {
         tableView.register(NewOptionTVCell.cerqel_nib, forCellReuseIdentifier: NewOptionTVCell.cerqel_identifier)
         searchBar.delegate = self
         tableView.tableFooterView = UIView()
@@ -112,7 +112,7 @@ class NewSearchVC: BottomSheetVCCerqel {
         selectButton.setSubmitButtonTheme()
     }
     
-    func configure() {
+    public func configure() {
         allOptions.subscribe(onNext: { [weak self] opts in
             guard let `self` = self else {return}
             self.options = opts
@@ -121,7 +121,7 @@ class NewSearchVC: BottomSheetVCCerqel {
         }).disposed(by: disposeBag)
     }
     
-    func selectAllBehaviour() {
+    public func selectAllBehaviour() {
         if selectedValues.count == options.count {
             selectedValues = []
             selectAllButton.setImage(UIImage(named: "Rectangle 5961"), for: .normal)
@@ -215,11 +215,11 @@ class NewSearchVC: BottomSheetVCCerqel {
 }
 
 extension NewSearchVC: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewOptionTVCell.cerqel_identifier, for: indexPath) as! NewOptionTVCell
         if isArabicCerqel() {
             cell.value = options[indexPath.row].name_ar
@@ -231,14 +231,14 @@ extension NewSearchVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         view.endEditing(true)
         selectCellAt(indexPath.row)
     }
 }
 
 extension NewSearchVC: UISearchBarDelegate {
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
+    public func filterContentForSearchText(searchText: String, scope: String = "All") {
         if localSearch {
             let filteredArr = allOptions.value.filter({$0.name!.lowercased().contains(searchText.lowercased())})
             options = filteredArr
@@ -247,7 +247,7 @@ extension NewSearchVC: UISearchBarDelegate {
         }
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if !localSearch {
             guard !searchText.isEmpty else {
                 allOptions.accept([])
@@ -273,12 +273,12 @@ extension NewSearchVC: UISearchBarDelegate {
         tableView.reloadData()
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
         searchBar.resignFirstResponder()
     }
     
-    func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    public func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         guard range.location == 0 else {
                 return true
             }

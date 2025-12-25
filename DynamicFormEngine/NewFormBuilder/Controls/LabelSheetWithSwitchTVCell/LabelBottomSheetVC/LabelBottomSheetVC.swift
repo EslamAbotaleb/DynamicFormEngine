@@ -22,8 +22,8 @@ public class LabelBottomSheetVC: BottomSheetVCCerqel {
     
     // MARK: - Variables
     
-    var item: FormViewModelItem?
-    var currentVC: UIViewController!
+    public var item: FormViewModelItem?
+    public var currentVC: UIViewController!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +53,7 @@ public class LabelBottomSheetVC: BottomSheetVCCerqel {
     
     // MARK: - Functions
     
-    func setData() {
+    public func setData() {
         guard let item = item else {return}
         guard let localization = item.localization as? ParagraphLocalization else { return }
         if let paragraphItem = item as? FormViewModelParagraphItem {

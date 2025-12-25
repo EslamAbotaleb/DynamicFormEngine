@@ -484,6 +484,7 @@
 		AAADBB1F2EF85D4500F696F3 /* ReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADBB1C2EF85D4500F696F3 /* ReportView.swift */; };
 		AAADBB2D2EF85E3600F696F3 /* ReportView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAADBB2C2EF85E3600F696F3 /* ReportView.xib */; };
 		AAADBB2F2EF8607000F696F3 /* ListDTOModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADBB2E2EF8607000F696F3 /* ListDTOModel.swift */; };
+		AAB515CF2EFD62D6009041A0 /* CustomNavBarWithBackText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB515CE2EFD62D6009041A0 /* CustomNavBarWithBackText.swift */; };
 		AAB7B9F82EF32FC1000E4A20 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7B9F72EF32FC1000E4A20 /* DropDown */; };
 		AAB7B9FB2EF33021000E4A20 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7B9FA2EF33021000E4A20 /* FSCalendar */; };
 		AAB7B9FE2EF33085000E4A20 /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7B9FD2EF33085000E4A20 /* Expression */; };
@@ -1161,6 +1162,7 @@
 		AAADBB2A2EF85E3600F696F3 /* ReportView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ReportView.xib; path = Base.lproj/ReportView.xib; sourceTree = "<group>"; };
 		AAADBB2B2EF85E3600F696F3 /* ReportView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ReportView.strings; path = ar.lproj/ReportView.strings; sourceTree = "<group>"; };
 		AAADBB2E2EF8607000F696F3 /* ListDTOModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDTOModel.swift; sourceTree = "<group>"; };
+		AAB515CE2EFD62D6009041A0 /* CustomNavBarWithBackText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBarWithBackText.swift; sourceTree = "<group>"; };
 		AAC0E67F2EF60DA700DDE9FF /* CerqelUIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelUIManager.swift; sourceTree = "<group>"; };
 		AAC0EA232EF61E0100DDE9FF /* StepProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepProgressView.swift; sourceTree = "<group>"; };
 		AAC0EA242EF61E0100DDE9FF /* StepsUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsUIView.swift; sourceTree = "<group>"; };
@@ -1467,6 +1469,7 @@
 				AAC0EA9B2EF61E0100DDE9FF /* BackButtonView.swift */,
 				AAC0EA9D2EF61E0100DDE9FF /* LoadingView.swift */,
 				AAC0EA9F2EF61E0100DDE9FF /* CustomNavBarWithSubmit.swift */,
+				AAB515CE2EFD62D6009041A0 /* CustomNavBarWithBackText.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -4501,6 +4504,7 @@
 				AAA6A3AC2EF2E84000520357 /* UIDate+Extensions.swift in Sources */,
 				AAA6A3AD2EF2E84000520357 /* SubmitTableViewCell.swift in Sources */,
 				AAA6A3AE2EF2E84000520357 /* ReqInfoTVC.swift in Sources */,
+				AAB515CF2EFD62D6009041A0 /* CustomNavBarWithBackText.swift in Sources */,
 				AAA6A3AF2EF2E84000520357 /* NewTextBoxTVCell.swift in Sources */,
 				AAA6A3B02EF2E84000520357 /* NewChatTVCell.swift in Sources */,
 				AAA6A3B12EF2E84000520357 /* NewTextAreaTVcell.swift in Sources */,

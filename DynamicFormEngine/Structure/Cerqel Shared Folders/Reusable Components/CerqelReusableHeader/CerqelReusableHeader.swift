@@ -49,24 +49,24 @@ public class CerqelReusableHeader: UIView, CerqelFilterV, CerqelSearchInNewContr
     @IBOutlet weak public var closeImgV: UIImageView!
     @IBOutlet weak public var searchBtn: UIButton!
     
-    @IBInspectable var firstButtonTitle: String = "First" {
+    @IBInspectable public var firstButtonTitle: String = "First" {
         didSet {
             firstButton.setTitle(firstButtonTitle.localized, for: .normal)
         }
     }
     
-    @IBInspectable var secondButtonTitle: String = "Second" {
+    @IBInspectable public var secondButtonTitle: String = "Second" {
         didSet {
             secondButton.setTitle(secondButtonTitle.localized, for: .normal)
         }
     }
     
-    @IBInspectable var thirdButtonTitle: String = "Third" {
+    @IBInspectable public var thirdButtonTitle: String = "Third" {
         didSet {
             thirdButton.setTitle(thirdButtonTitle.localized, for: .normal)
         }
     }
-    @IBInspectable var fourthButtonTitle: String = "Fourth" {
+    @IBInspectable public var fourthButtonTitle: String = "Fourth" {
         didSet {
             fourthButton.setTitle(fourthButtonTitle.localized, for: .normal)
         }

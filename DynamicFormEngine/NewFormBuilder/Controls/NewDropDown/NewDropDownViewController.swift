@@ -12,7 +12,7 @@ protocol NewDropDownDelegate: AnyObject {
     func userSelected(_ ids: [MCQOption])
 }
 
-class NewDropDownViewController: BottomSheetVCCerqel {
+public class NewDropDownViewController: BottomSheetVCCerqel {
 
     // MARK: - IBOutlets
     
@@ -38,12 +38,12 @@ class NewDropDownViewController: BottomSheetVCCerqel {
     // MARK: - Variables
     
     weak var delegate: NewDropDownDelegate?
-    var questionTitle: String = "" {
+    public var questionTitle: String = "" {
         didSet {
             titleLabel.text = questionTitle
         }
     }
-    var allOptions = [MCQOption]() {
+    public var allOptions = [MCQOption]() {
         didSet {
             if allOptions.count > 0 {
                 tableView.isHidden = false
@@ -54,23 +54,23 @@ class NewDropDownViewController: BottomSheetVCCerqel {
             }
         }
     }
-    var filteredOptions = [MCQOption]()
-    var options: [MCQOption] {
+    public var filteredOptions = [MCQOption]()
+    public var options: [MCQOption] {
         return allOptions
     }
-    var selectedValues = [MCQOption]()
-    var otherValue = ""
-    var representation: CheckBoxRepresentation?
-    var multiSelect = false
-    var selectAllEnabled = false
-    var dismiss: (()->())?
-    var selectOption: ((_ selectedOptions: [MCQOption],_ otherOption: String)->())?
-    var isEditable:Bool? = false
+    public var selectedValues = [MCQOption]()
+    public var otherValue = ""
+    public var representation: CheckBoxRepresentation?
+    public var multiSelect = false
+    public var selectAllEnabled = false
+    public var dismiss: (()->())?
+    public var selectOption: ((_ selectedOptions: [MCQOption],_ otherOption: String)->())?
+    public var isEditable:Bool? = false
     
     
     // MARK: - LifeCycle
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         addGesture()
         setupUI()
@@ -79,7 +79,7 @@ class NewDropDownViewController: BottomSheetVCCerqel {
     
     // MARK: - Functions
     
-    func setupUI() {
+    public func setupUI() {
         tableView.register(NewOptionTVCell.cerqel_nib, forCellReuseIdentifier: NewOptionTVCell.cerqel_identifier)
         tableView.tableFooterView = UIView()
         tableView.delegate = self
@@ -89,14 +89,14 @@ class NewDropDownViewController: BottomSheetVCCerqel {
         emptyLbl.text = "No Results Found".localized
     }
     
-    func handleSelectAll() {
+    public func handleSelectAll() {
         selectAllView.isHidden = !selectAllEnabled
         if selectedValues.count == options.count {
             selectAllButton.setImage(UIImage(named: "selectAllIcon"), for: .normal)
         }
     }
     
-    func selectCellAt(_ index: Int) {
+    public func selectCellAt(_ index: Int) {
         if let representation = representation {
             if representation == .CheckBox {
                 handleMultiSelect(index)
@@ -113,13 +113,13 @@ class NewDropDownViewController: BottomSheetVCCerqel {
         tableView.reloadData()
     }
     
-    func addGesture() {
+    public func addGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(selectAllTapped))
         selectAllView.isUserInteractionEnabled = true
         selectAllView.addGestureRecognizer(tapGesture)
     }
     
-    func handleMultiSelect(_ index: Int) {
+    public func handleMultiSelect(_ index: Int) {
         guard let option: MCQOption? = options[index] else {
             return
         }
@@ -130,7 +130,7 @@ class NewDropDownViewController: BottomSheetVCCerqel {
         }
     }
     
-    func handleSingleSelect(_ index: Int) {
+    public func handleSingleSelect(_ index: Int) {
         guard let option: MCQOption? = options[index] else {
             return
         }
@@ -141,7 +141,7 @@ class NewDropDownViewController: BottomSheetVCCerqel {
         }
     }
     
-    func selectAllBehaviour() {
+    public func selectAllBehaviour() {
         if selectedValues.count == options.count {
             selectedValues = []
             selectAllButton.setImage(UIImage(named: "Rectangle 5961"), for: .normal)
@@ -175,11 +175,11 @@ class NewDropDownViewController: BottomSheetVCCerqel {
 }
 
 extension NewDropDownViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewOptionTVCell.cerqel_identifier, for: indexPath) as! NewOptionTVCell
         if isArabicCerqel() {
             cell.value = options[indexPath.row].name_ar
@@ -192,24 +192,24 @@ extension NewDropDownViewController: UITableViewDataSource, UITableViewDelegate 
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectCellAt(indexPath.row)
     }
 }
 
 extension NewDropDownViewController: UISearchBarDelegate {
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
+    public func filterContentForSearchText(searchText: String, scope: String = "All") {
         filteredOptions = allOptions.filter({ (value) -> Bool in
             value.name?.lowercased().contains(searchText.lowercased()) ?? false
         })
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterContentForSearchText(searchText: searchText)
         tableView.reloadData()
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
 }

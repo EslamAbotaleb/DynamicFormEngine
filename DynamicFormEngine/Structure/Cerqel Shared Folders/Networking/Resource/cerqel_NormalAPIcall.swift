@@ -12,9 +12,9 @@ internal import Alamofire
 internal import MOLH
 import UIKit
 
-class cerqel_NormalAPIcall{
+public class cerqel_NormalAPIcall{
     
-    struct NetworkingManager {
+    public struct NetworkingManager {
         
         static let shared: Alamofire.Session = {
               let configuration = URLSessionConfiguration.default
@@ -27,7 +27,7 @@ class cerqel_NormalAPIcall{
     }
 
     
-    class func sendRequest(action: cerqel_BasicActionDynamicForm, closure: @escaping ([String: Any]?) -> Void){
+    public class func sendRequest(action: cerqel_BasicActionDynamicForm, closure: @escaping ([String: Any]?) -> Void){
         
         let URL1 = action.baseURL + action.path
                 

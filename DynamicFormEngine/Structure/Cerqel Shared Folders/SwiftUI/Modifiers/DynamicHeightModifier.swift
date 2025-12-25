@@ -11,7 +11,11 @@ import SwiftUI
 
 public struct CalculateHeight: ViewModifier {
     @Binding var height: CGFloat
-
+    
+    public init(height: Binding<CGFloat>) {
+        self._height = height
+    }
+    
     public func body(content: Content) -> some View {
         content
             .background(

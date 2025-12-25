@@ -28,8 +28,8 @@ import Foundation
 
 
 public struct CategoryModel {
-    var id: String
-    var name: String
+    public var id: String
+    public var name: String
     
     public init(id: String, name: String) {
         self.id = id
@@ -43,9 +43,9 @@ public struct CategoryModel {
 }
 
 public struct SubCategoryModel: Hashable {
-    var id: String
-    var name: String
-    var category: CategoryModel
+    public var id: String
+    public var name: String
+    public var category: CategoryModel
     
     public init(id: String, name: String, category: CategoryModel) {
         self.id = id
@@ -62,6 +62,4 @@ public struct SubCategoryModel: Hashable {
      static public func == (lhs: SubCategoryModel, rhs: SubCategoryModel) -> Bool {
          return lhs.id == rhs.id && lhs.name == rhs.name
      }
-
-  
 }

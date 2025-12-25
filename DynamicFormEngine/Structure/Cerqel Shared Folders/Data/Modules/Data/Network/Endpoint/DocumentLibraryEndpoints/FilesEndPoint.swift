@@ -52,7 +52,6 @@ public struct CerqelFilterPayload: Codable {
     public var orderBy: Int?
     
     public init() {}
-
     public init(
         pageNumber: Int? = nil,
         pageSize: Int? = nil,
@@ -76,6 +75,36 @@ public struct CerqelFilterPayload: Codable {
         self.to = to
         self.isAcknowledgement = isAcknowledgement
         self.isPinned = isPinned
+        self.categoriesIds = categoriesIds
+        self.subCategoriesIds = subCategoriesIds
+        self.fileTypesIds = fileTypesIds
+        self.toggles = toggles
+        self.orderByValue = orderByValue
+        self.orderBy = orderBy
+    }
+    public init(
+        pageNumber: Int? = nil,
+        pageSize: Int? = nil,
+        filter: Filter? = nil,
+        SearchKeyword: String? = nil,
+        from: String? = nil,
+        to: String? = nil,
+        isAcknowledgement: Bool? = nil,
+//        isPinned: Bool? = nil,
+        categoriesIds: [String]? = nil,
+        subCategoriesIds: [String]? = nil,
+        fileTypesIds: [String]? = nil,
+        toggles: [[String: Bool]]? = nil,
+        orderByValue: [OrderByValue]? = nil,
+        orderBy: Int? = nil) {
+        self.pageNumber = pageNumber
+        self.pageSize = pageSize
+        self.filter = filter
+        self.SearchKeyword = SearchKeyword
+        self.from = from
+        self.to = to
+        self.isAcknowledgement = isAcknowledgement
+//        self.isPinned = isPinned
         self.categoriesIds = categoriesIds
         self.subCategoriesIds = subCategoriesIds
         self.fileTypesIds = fileTypesIds

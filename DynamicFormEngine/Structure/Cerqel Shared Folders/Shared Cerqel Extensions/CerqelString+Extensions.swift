@@ -458,7 +458,7 @@ extension String {
         }
     }
     
-    func cerqel_aesEncrypt(_ key: String) throws -> String? {
+    public func cerqel_aesEncrypt(_ key: String) throws -> String? {
 //        do {
 //            let keyByteArr = Array(hex: key.lowercased())
 //            let ivByteArr = Array(hex: cerqel_Environment.loginIV)
@@ -503,7 +503,7 @@ extension String {
         return myUrl
     }
 
-    func cerqel_separate(every stride: Int = 1, with separator: Character = " ") -> String {
+    public func cerqel_separate(every stride: Int = 1, with separator: Character = " ") -> String {
         return String(enumerated().map { $0 > 0 && $0 % stride == 0 ? [separator, $1] : [$1]}.joined())
     }
     

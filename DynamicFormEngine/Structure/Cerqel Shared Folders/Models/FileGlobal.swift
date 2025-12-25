@@ -220,6 +220,12 @@ public struct Entry {
         self.state = state
     }
     
+    public init(headerTitle: String? = nil, title: String, value: Any) {
+        self.headerTitle = headerTitle
+        self.title = title
+        self.value = value
+    }
+    
     public init(title: String, value: Any, valueForSummary: Any? = nil) {
         self.title = title
         self.value = value

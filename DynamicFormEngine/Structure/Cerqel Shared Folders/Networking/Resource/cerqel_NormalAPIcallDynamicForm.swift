@@ -93,7 +93,7 @@ public class cerqel_NormalAPIcallDynamicForm{
         
     }
     
-    func uploadFile(action: cerqel_BasicActionDynamicForm, photo: UIImage?, fileUrl: URL?, onCompletion: (([String: Any]?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil) {
+    public func uploadFile(action: cerqel_BasicActionDynamicForm, photo: UIImage?, fileUrl: URL?, onCompletion: (([String: Any]?) -> Void)? = nil, onError: ((Error?) -> Void)? = nil) {
         let URL1 = action.baseURL + action.path
         
         AF.upload(multipartFormData: { multipartFormData in

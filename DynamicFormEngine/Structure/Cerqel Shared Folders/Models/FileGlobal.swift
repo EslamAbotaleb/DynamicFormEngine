@@ -255,6 +255,17 @@ public struct UploadedCVEntity: ProfileMapper, Codable, Equatable {
         ])
     }
     
+    init(id: String? = nil, name: String, isPublic: Bool, documentType: String, contentType: String, downloadUrl: String, previewUrl: String, fileSize: String, objectState: Int? = nil) {
+        self.id = id
+        self.name = name
+        self.isPublic = isPublic
+        self.documentType = documentType
+        self.contentType = contentType
+        self.downloadUrl = downloadUrl
+        self.previewUrl = previewUrl
+        self.fileSize = fileSize
+        self.objectState = objectState
+    }
     
     public func modifiedFields(comparedTo other: UploadedCVEntity) -> [String: (oldValue: Any, newValue: Any)] {
         var changes = [String: (oldValue: Any, newValue: Any)]()

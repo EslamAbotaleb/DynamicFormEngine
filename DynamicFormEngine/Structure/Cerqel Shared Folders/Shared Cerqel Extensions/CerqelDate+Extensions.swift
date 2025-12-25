@@ -148,7 +148,7 @@ extension Date {
     }
 }
 
-class TimeCerqel: Comparable, Equatable {
+public class TimeCerqel: Comparable, Equatable {
     
     public init(_ dateCerqel: Date) {
         //get the current calender
@@ -176,10 +176,10 @@ class TimeCerqel: Comparable, Equatable {
         self.minuteCerqel = minuteCerqel
     }
     
-    var hourCerqel : Int
-    var minuteCerqel: Int
+    public var hourCerqel : Int
+    public var minuteCerqel: Int
     
-    var dateCerqel: Date {
+    public var dateCerqel: Date {
         //get the current calender
         let calendar = Calendar.current
         
@@ -196,31 +196,31 @@ class TimeCerqel: Comparable, Equatable {
     private let secondsSinceBeginningOfDayCerqel: Int
     
     //comparisions so you can compare times
-    static func == (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
+    static public func == (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
         return lhs.secondsSinceBeginningOfDayCerqel == rhs.secondsSinceBeginningOfDayCerqel
     }
     
-    static func < (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
+    static public func < (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
         return lhs.secondsSinceBeginningOfDayCerqel < rhs.secondsSinceBeginningOfDayCerqel
     }
     
-    static func <= (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
+    static public func <= (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
         return lhs.secondsSinceBeginningOfDayCerqel <= rhs.secondsSinceBeginningOfDayCerqel
     }
     
     
-    static func >= (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
+    static public func >= (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
         return lhs.secondsSinceBeginningOfDayCerqel >= rhs.secondsSinceBeginningOfDayCerqel
     }
     
     
-    static func > (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
+    static public func > (lhs: TimeCerqel, rhs: TimeCerqel) -> Bool {
         return lhs.secondsSinceBeginningOfDayCerqel > rhs.secondsSinceBeginningOfDayCerqel
     }
 }
 
 extension Date {
-     var timeCerqel: TimeCerqel {
+    public var timeCerqel: TimeCerqel {
         return TimeCerqel(self)
     }
 }

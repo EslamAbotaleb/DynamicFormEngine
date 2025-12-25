@@ -24,7 +24,7 @@ public struct cerqel_BasicNetworkServiceDynamicFormImpl: cerqel_NetworkServiceDy
 
     public init() {}
     
-    public func load<T>(_ resource: T) -> Observable<T> where T : cerqel_CodableResponseProtocol {
+    public func load<T>(_ resource: T) -> Observable<T> where T : cerqel_CodableResponseDynamicFormProtocol {
         return
         RxAlamofire
             .request(resource.action)

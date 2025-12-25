@@ -14,6 +14,8 @@ import UIKit
 
 public class cerqel_NormalAPIcallDynamicForm{
     
+    public init() {}
+    
     public struct NetworkingManager {
         
         static let shared: Alamofire.Session = {

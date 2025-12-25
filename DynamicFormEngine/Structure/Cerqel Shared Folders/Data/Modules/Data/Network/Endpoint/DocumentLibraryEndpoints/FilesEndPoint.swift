@@ -141,6 +141,9 @@ public struct Filter: Codable {
         self.to = to
     }
   
+    public init(isFavorite: Bool?) {
+        self.isFavorite = isFavorite
+    }
     
     public init(isPinned: Bool?) {
         self.isPinned = isPinned

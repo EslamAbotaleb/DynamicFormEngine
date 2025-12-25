@@ -11,7 +11,7 @@ public import RxSwift
 public import Alamofire
 public import MOLH
 
-public class cerqel_CodableResponseObjectDynamicForm<T: Decodable>: Decodable, cerqel_CodableResponseProtocol {
+public class cerqel_CodableResponseObjectDynamicForm<T: Decodable>: Decodable, cerqel_CodableResponseDynamicFormProtocol {
     fileprivate(set) public var success: Bool?
     fileprivate(set) public var item: cerqel_CodableResponseObjectData<T>?
 

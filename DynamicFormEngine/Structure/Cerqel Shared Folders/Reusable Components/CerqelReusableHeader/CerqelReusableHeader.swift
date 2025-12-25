@@ -305,7 +305,7 @@ extension CerqelReusableHeader: UITextFieldDelegate {
 
 extension CerqelReusableHeader {
     private func configureUI() {
-        redDotImageView.tintColor = .errorCerqel
+        redDotImageView.tintColor = UIColor.errorCerqel
         closeImgV.tintColor = primaryMain
         filterButton.tintColor = primaryMain
         firstButton.titleLabel?.font = UIFont.bodyLMedium()

@@ -255,7 +255,7 @@ public struct UploadedCVEntity: ProfileMapper, Codable, Equatable {
         ])
     }
     
-    init(id: String? = nil, name: String, isPublic: Bool, documentType: String, contentType: String, downloadUrl: String, previewUrl: String, fileSize: String, objectState: Int? = nil) {
+    public init(id: String? = nil, name: String, isPublic: Bool, documentType: String, contentType: String, downloadUrl: String, previewUrl: String, fileSize: String, objectState: Int? = nil) {
         self.id = id
         self.name = name
         self.isPublic = isPublic

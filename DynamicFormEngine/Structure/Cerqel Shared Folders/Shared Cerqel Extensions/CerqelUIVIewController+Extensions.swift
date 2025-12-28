@@ -7,7 +7,6 @@
 //
 import UIKit
 import JGProgressHUD
-//public import FittedSheetsDF
 import MobileCoreServices
 import UniformTypeIdentifiers
 

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RxCocoa
+public import RxCocoa
 import RxRelay
 internal import RxSwift
 import JGProgressHUD

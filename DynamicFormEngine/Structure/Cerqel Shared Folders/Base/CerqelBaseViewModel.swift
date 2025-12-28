@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RxCocoa
+public import RxCocoa
 internal import RxSwift
 
 class CerqelBaseViewModel {

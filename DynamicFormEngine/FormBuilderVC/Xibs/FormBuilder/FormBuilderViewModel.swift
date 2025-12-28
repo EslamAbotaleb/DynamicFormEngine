@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RxCocoa
+public import RxCocoa
 public import RxSwift
 import Expression
 import UIKit

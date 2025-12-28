@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import RxCocoa
 internal import RxSwift
+internal import RxCocoa
 import Photos
 import UIKit
 

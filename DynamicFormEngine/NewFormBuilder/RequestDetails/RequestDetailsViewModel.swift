@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import RxCocoa
+public import RxCocoa
 public import RxSwift
 import Photos
 import SwiftUI

@@ -27,6 +27,18 @@
 		AA0707E72EF58E3700B55C22 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707CC2EF58E3700B55C22 /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA0707E82EF58E3700B55C22 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707C92EF58E3700B55C22 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA0707E92EF58E3700B55C22 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707CB2EF58E3700B55C22 /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		AA242A222F01414C00A6E428 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A1C2F01414C00A6E428 /* Poppins-SemiBold.ttf */; };
+		AA242A232F01414C00A6E428 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A1D2F01414C00A6E428 /* Poppins-Thin.ttf */; };
+		AA242A242F01414C00A6E428 /* SST Arabic Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A1F2F01414C00A6E428 /* SST Arabic Light.ttf */; };
+		AA242A252F01414C00A6E428 /* SST Arabic Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A202F01414C00A6E428 /* SST Arabic Medium.ttf */; };
+		AA242A262F01414C00A6E428 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A192F01414C00A6E428 /* Poppins-Light.ttf */; };
+		AA242A272F01414C00A6E428 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A1B2F01414C00A6E428 /* Poppins-Regular.ttf */; };
+		AA242A282F01414C00A6E428 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A162F01414C00A6E428 /* Poppins-MediumItalic.ttf */; };
+		AA242A292F01414C00A6E428 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A1A2F01414C00A6E428 /* Poppins-Medium.ttf */; };
+		AA242A2A2F01414C00A6E428 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A172F01414C00A6E428 /* Poppins-Italic.ttf */; };
+		AA242A2B2F01414C00A6E428 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A182F01414C00A6E428 /* Poppins-Bold.ttf */; };
+		AA242A2C2F01414C00A6E428 /* SST Arabic Roman.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A212F01414C00A6E428 /* SST Arabic Roman.ttf */; };
+		AA242A2D2F01414C00A6E428 /* SST Arabic Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA242A1E2F01414C00A6E428 /* SST Arabic Bold.ttf */; };
 		AA3C31122EF953B600C2778C /* FileActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C310F2EF953B600C2778C /* FileActionCell.swift */; };
 		AA3C31132EF953B600C2778C /* FileActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3C31102EF953B600C2778C /* FileActionCell.xib */; };
 		AA3C31192EF954A900C2778C /* AcknowledgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C31142EF954A900C2778C /* AcknowledgeVC.swift */; };
@@ -100,6 +112,10 @@
 		AA90499E2F01239A00857338 /* SheetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499D2F01239A00857338 /* SheetSize.swift */; };
 		AA9049A02F0123A900857338 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499F2F0123A900857338 /* UIViewControllerExtension.swift */; };
 		AA9049A22F0123B800857338 /* Yalta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9049A12F0123B800857338 /* Yalta.swift */; };
+		AA9049AE2F012F0E00857338 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = AA9049AD2F012F0E00857338 /* FirebaseCore */; };
+		AA9049B02F012F0E00857338 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AA9049AF2F012F0E00857338 /* FirebaseCrashlytics */; };
+		AA9049B22F012F0E00857338 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AA9049B12F012F0E00857338 /* FirebaseFirestore */; };
+		AA9049B42F012F0E00857338 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AA9049B32F012F0E00857338 /* FirebaseMessaging */; };
 		AA9DB5EF2EFA9024005A0D5E /* cerqel_APIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB5ED2EFA9024005A0D5E /* cerqel_APIAction.swift */; };
 		AA9DB5F02EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB5EE2EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift */; };
 		AAA4CE502EF872490027ABEC /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4CE4F2EF872480027ABEC /* DownloadManager.swift */; };
@@ -368,15 +384,12 @@
 		AAA6A4432EF2E84000520357 /* mediaItemCVcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A2F12EF2E84000520357 /* mediaItemCVcell.swift */; };
 		AAA6A4442EF2E84000520357 /* FileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A26C2EF2E84000520357 /* FileView.swift */; };
 		AAA6A4452EF2E84000520357 /* FaceRateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A2642EF2E84000520357 /* FaceRateTableViewCell.swift */; };
-		AAA6A48B2EF3032F00520357 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A48A2EF3032F00520357 /* RxCocoa */; };
-		AAA6A48D2EF3032F00520357 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A48C2EF3032F00520357 /* RxSwift */; };
 		AAA6A4932EF3037200520357 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4922EF3037200520357 /* JGProgressHUD */; };
 		AAA6A4962EF303B300520357 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4952EF303B300520357 /* IQKeyboardManagerSwift */; };
 		AAA6A4992EF303F000520357 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4982EF303F000520357 /* Kingfisher */; };
 		AAA6A49C2EF3041E00520357 /* MOLH in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A49B2EF3041E00520357 /* MOLH */; };
 		AAA6A4A52EF30C7000520357 /* ObjectMapper in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4A42EF30C7000520357 /* ObjectMapper */; };
 		AAA6A4A82EF30CB600520357 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4A72EF30CB600520357 /* CryptoSwift */; };
-		AAA6A4AB2EF30D3400520357 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4AA2EF30D3400520357 /* netfox */; };
 		AAA8098E2EF941E9001E845F /* MaskedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA8098D2EF941E9001E845F /* MaskedImageView.swift */; };
 		AAADA0FA2EF6C2210036FD04 /* SingleVisitorInfoTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAADA0C22EF6C2210036FD04 /* SingleVisitorInfoTVcell.xib */; };
 		AAADA0FB2EF6C2210036FD04 /* UploadMediaTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAADA0EF2EF6C2210036FD04 /* UploadMediaTVcell.xib */; };
@@ -676,6 +689,9 @@
 		AAC0EF452EF61E0B00DDE9FF /* SuccessAddEditEventVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED062EF61E0B00DDE9FF /* SuccessAddEditEventVC.xib */; };
 		AAC0EF482EF61E0B00DDE9FF /* DeleteBottomSheet.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED102EF61E0B00DDE9FF /* DeleteBottomSheet.strings */; };
 		AAC0EF4A2EF61E0B00DDE9FF /* DeleteBottomSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED122EF61E0B00DDE9FF /* DeleteBottomSheet.xib */; };
+		AADDBDDF2F015987009145A7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AADDBDDE2F015987009145A7 /* RxCocoa */; };
+		AADDBDE32F015987009145A7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = AADDBDE22F015987009145A7 /* RxRelay */; };
+		AADDBDE72F015987009145A7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AADDBDE62F015987009145A7 /* RxSwift */; };
 		AAEC9B132F009EC200B449E2 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AAEC9B122F009EC200B449E2 /* RxAlamofire */; };
 		E44836082CB5C05B00871C3D /* FormBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44836072CB5C05B00871C3D /* FormBuilderManager.swift */; };
 		E471757B2B8FE3D3007CEE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E471757A2B8FE3D3007CEE59 /* Assets.xcassets */; };
@@ -698,6 +714,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AADDBDEB2F015993009145A7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AA0707C12EF58E3700B55C22 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
 		AA0707C22EF58E3700B55C22 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
@@ -719,6 +748,18 @@
 		AA0707D22EF58E3700B55C22 /* DistancePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
 		AA0707D32EF58E3700B55C22 /* SWActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
 		AA0707D52EF58E3700B55C22 /* SWActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		AA242A162F01414C00A6E428 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		AA242A172F01414C00A6E428 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		AA242A182F01414C00A6E428 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		AA242A192F01414C00A6E428 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		AA242A1A2F01414C00A6E428 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		AA242A1B2F01414C00A6E428 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		AA242A1C2F01414C00A6E428 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		AA242A1D2F01414C00A6E428 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		AA242A1E2F01414C00A6E428 /* SST Arabic Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SST Arabic Bold.ttf"; sourceTree = "<group>"; };
+		AA242A1F2F01414C00A6E428 /* SST Arabic Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SST Arabic Light.ttf"; sourceTree = "<group>"; };
+		AA242A202F01414C00A6E428 /* SST Arabic Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SST Arabic Medium.ttf"; sourceTree = "<group>"; };
+		AA242A212F01414C00A6E428 /* SST Arabic Roman.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SST Arabic Roman.ttf"; sourceTree = "<group>"; };
 		AA3C310F2EF953B600C2778C /* FileActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileActionCell.swift; sourceTree = "<group>"; };
 		AA3C31102EF953B600C2778C /* FileActionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileActionCell.xib; sourceTree = "<group>"; };
 		AA3C31142EF954A900C2778C /* AcknowledgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgeVC.swift; sourceTree = "<group>"; };
@@ -1351,18 +1392,21 @@
 			files = (
 				AAB7BA372EF33958000E4A20 /* PanModal in Frameworks */,
 				AAB7BA0D2EF332C8000E4A20 /* AlignedCollectionViewFlowLayout in Frameworks */,
+				AADDBDE72F015987009145A7 /* RxSwift in Frameworks */,
+				AADDBDDF2F015987009145A7 /* RxCocoa in Frameworks */,
+				AA9049AE2F012F0E00857338 /* FirebaseCore in Frameworks */,
 				AAB7BA512EF373D4000E4A20 /* SDWebImageSVGCoder in Frameworks */,
 				AAC0E63F2EF6068100DDE9FF /* KeychainAccess in Frameworks */,
 				AAB7BA1F2EF334C3000E4A20 /* NicoProgress in Frameworks */,
 				AAA6A4992EF303F000520357 /* Kingfisher in Frameworks */,
 				AA820A1C2EF6308D0022BCA4 /* DGCharts in Frameworks */,
 				AAB7BA012EF330C0000E4A20 /* SideMenu in Frameworks */,
-				AAA6A4AB2EF30D3400520357 /* netfox in Frameworks */,
 				AAB7BA312EF33816000E4A20 /* KeychainSwift in Frameworks */,
 				AA8FB7DB2EF3F9EC0073665D /* PopupDialog in Frameworks */,
 				AAA6A4962EF303B300520357 /* IQKeyboardManagerSwift in Frameworks */,
 				AAB7BA4B2EF35732000E4A20 /* Mantis in Frameworks */,
 				AAB7BA2B2EF3373C000E4A20 /* Promises in Frameworks */,
+				AA9049B22F012F0E00857338 /* FirebaseFirestore in Frameworks */,
 				AAB7B9FB2EF33021000E4A20 /* FSCalendar in Frameworks */,
 				AAA6A4932EF3037200520357 /* JGProgressHUD in Frameworks */,
 				AAB7BA162EF33361000E4A20 /* MultiSlider in Frameworks */,
@@ -1371,15 +1415,15 @@
 				AAB7BAC32EF38743000E4A20 /* TOCropViewController in Frameworks */,
 				AAB7BA1C2EF33491000E4A20 /* EasyTipView in Frameworks */,
 				AAB7BA432EF347AB000E4A20 /* SwiftMessages in Frameworks */,
+				AA9049B42F012F0E00857338 /* FirebaseMessaging in Frameworks */,
 				AAB7BA042EF3318E000E4A20 /* FSPagerView in Frameworks */,
 				AAA6A4A52EF30C7000520357 /* ObjectMapper in Frameworks */,
 				AAA6A4A82EF30CB600520357 /* CryptoSwift in Frameworks */,
 				AAB7BA072EF331CD000E4A20 /* Toast in Frameworks */,
+				AADDBDE32F015987009145A7 /* RxRelay in Frameworks */,
 				AAB7B9FE2EF33085000E4A20 /* Expression in Frameworks */,
 				AAB7BA2E2EF337CE000E4A20 /* Reachability in Frameworks */,
-				AAA6A48D2EF3032F00520357 /* RxSwift in Frameworks */,
 				AAA6A49C2EF3041E00520357 /* MOLH in Frameworks */,
-				AAA6A48B2EF3032F00520357 /* RxCocoa in Frameworks */,
 				AAB7BA0A2EF331F1000E4A20 /* EzPopup in Frameworks */,
 				AAB7BA542EF3799B000E4A20 /* YPImagePicker in Frameworks */,
 				AAB7BA3A2EF33A27000E4A20 /* SkeletonView in Frameworks */,
@@ -1390,6 +1434,7 @@
 				AAB7B9F82EF32FC1000E4A20 /* DropDown in Frameworks */,
 				AAB7BA4E2EF37272000E4A20 /* EFQRCode in Frameworks */,
 				AAB7BA222EF334FB000E4A20 /* TagListView in Frameworks */,
+				AA9049B02F012F0E00857338 /* FirebaseCrashlytics in Frameworks */,
 				AAB7BA342EF3390F000E4A20 /* XLPagerTabStrip in Frameworks */,
 				AAB7BAC12EF38743000E4A20 /* CropViewController in Frameworks */,
 			);
@@ -1440,6 +1485,25 @@
 				AA0707D32EF58E3700B55C22 /* SWActionSheet.h */,
 			);
 			path = include;
+			sourceTree = "<group>";
+		};
+		AA242A152F01411000A6E428 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AA242A162F01414C00A6E428 /* Poppins-MediumItalic.ttf */,
+				AA242A172F01414C00A6E428 /* Poppins-Italic.ttf */,
+				AA242A182F01414C00A6E428 /* Poppins-Bold.ttf */,
+				AA242A192F01414C00A6E428 /* Poppins-Light.ttf */,
+				AA242A1A2F01414C00A6E428 /* Poppins-Medium.ttf */,
+				AA242A1B2F01414C00A6E428 /* Poppins-Regular.ttf */,
+				AA242A1C2F01414C00A6E428 /* Poppins-SemiBold.ttf */,
+				AA242A1D2F01414C00A6E428 /* Poppins-Thin.ttf */,
+				AA242A1E2F01414C00A6E428 /* SST Arabic Bold.ttf */,
+				AA242A1F2F01414C00A6E428 /* SST Arabic Light.ttf */,
+				AA242A202F01414C00A6E428 /* SST Arabic Medium.ttf */,
+				AA242A212F01414C00A6E428 /* SST Arabic Roman.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AA3C310A2EF9469200C2778C /* SwiftUI */ = {
@@ -3315,6 +3379,7 @@
 		AAC0EA1F2EF61DE100DDE9FF /* Cerqel Shared Folders */ = {
 			isa = PBXGroup;
 			children = (
+				AA242A152F01411000A6E428 /* Fonts */,
 				AAC0EA282EF61E0100DDE9FF /* Stepper */,
 				AAADBA742EF853B400F696F3 /* ActionsBottomSheet */,
 				AA3C310E2EF9529B00C2778C /* ViewModels */,
@@ -4127,6 +4192,7 @@
 				E47B1BDE2B8F5D9D00E22A45 /* Sources */,
 				E47B1BDF2B8F5D9D00E22A45 /* Frameworks */,
 				E47B1BE02B8F5D9D00E22A45 /* Resources */,
+				AADDBDEB2F015993009145A7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -4134,15 +4200,12 @@
 			);
 			name = DynamicFormEngine;
 			packageProductDependencies = (
-				AAA6A48A2EF3032F00520357 /* RxCocoa */,
-				AAA6A48C2EF3032F00520357 /* RxSwift */,
 				AAA6A4922EF3037200520357 /* JGProgressHUD */,
 				AAA6A4952EF303B300520357 /* IQKeyboardManagerSwift */,
 				AAA6A4982EF303F000520357 /* Kingfisher */,
 				AAA6A49B2EF3041E00520357 /* MOLH */,
 				AAA6A4A42EF30C7000520357 /* ObjectMapper */,
 				AAA6A4A72EF30CB600520357 /* CryptoSwift */,
-				AAA6A4AA2EF30D3400520357 /* netfox */,
 				AAB7B9F72EF32FC1000E4A20 /* DropDown */,
 				AAB7B9FA2EF33021000E4A20 /* FSCalendar */,
 				AAB7B9FD2EF33085000E4A20 /* Expression */,
@@ -4177,6 +4240,13 @@
 				AAC0E63E2EF6068100DDE9FF /* KeychainAccess */,
 				AA820A1B2EF6308D0022BCA4 /* DGCharts */,
 				AAEC9B122F009EC200B449E2 /* RxAlamofire */,
+				AA9049AD2F012F0E00857338 /* FirebaseCore */,
+				AA9049AF2F012F0E00857338 /* FirebaseCrashlytics */,
+				AA9049B12F012F0E00857338 /* FirebaseFirestore */,
+				AA9049B32F012F0E00857338 /* FirebaseMessaging */,
+				AADDBDDE2F015987009145A7 /* RxCocoa */,
+				AADDBDE22F015987009145A7 /* RxRelay */,
+				AADDBDE62F015987009145A7 /* RxSwift */,
 			);
 			productName = DynamicFormEngine;
 			productReference = E47B1BE22B8F5D9D00E22A45 /* DynamicFormEngine.framework */;
@@ -4229,14 +4299,12 @@
 			);
 			mainGroup = E47B1BD82B8F5D9D00E22A45;
 			packageReferences = (
-				AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				AAA6A4912EF3037200520357 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 				AAA6A4942EF303B300520357 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				AAA6A4972EF303F000520357 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				AAA6A49A2EF3041E00520357 /* XCRemoteSwiftPackageReference "MOLH" */,
 				AAA6A4A32EF30C7000520357 /* XCRemoteSwiftPackageReference "ObjectMapper" */,
 				AAA6A4A62EF30CB600520357 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
-				AAA6A4A92EF30D3400520357 /* XCRemoteSwiftPackageReference "netfox" */,
 				AAB7B9F62EF32FC1000E4A20 /* XCRemoteSwiftPackageReference "DropDown" */,
 				AAB7B9F92EF33021000E4A20 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				AAB7B9FC2EF33085000E4A20 /* XCRemoteSwiftPackageReference "Expression" */,
@@ -4270,6 +4338,8 @@
 				AAC0E63D2EF6068100DDE9FF /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				AA820A1A2EF6308D0022BCA4 /* XCRemoteSwiftPackageReference "Charts" */,
 				AAEC9B112F009EC200B449E2 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+				AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AADDBDDD2F015987009145A7 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = E47B1BE32B8F5D9D00E22A45 /* Products */;
 			projectDirPath = "";
@@ -4368,6 +4438,18 @@
 				AAA6A3862EF2E84000520357 /* NewUploadMediaTVcell.xib in Resources */,
 				AAA6A3872EF2E84000520357 /* NewCheckboxView.xib in Resources */,
 				AAA6A3882EF2E84000520357 /* NewTextBoxTVCell.xib in Resources */,
+				AA242A222F01414C00A6E428 /* Poppins-SemiBold.ttf in Resources */,
+				AA242A232F01414C00A6E428 /* Poppins-Thin.ttf in Resources */,
+				AA242A242F01414C00A6E428 /* SST Arabic Light.ttf in Resources */,
+				AA242A252F01414C00A6E428 /* SST Arabic Medium.ttf in Resources */,
+				AA242A262F01414C00A6E428 /* Poppins-Light.ttf in Resources */,
+				AA242A272F01414C00A6E428 /* Poppins-Regular.ttf in Resources */,
+				AA242A282F01414C00A6E428 /* Poppins-MediumItalic.ttf in Resources */,
+				AA242A292F01414C00A6E428 /* Poppins-Medium.ttf in Resources */,
+				AA242A2A2F01414C00A6E428 /* Poppins-Italic.ttf in Resources */,
+				AA242A2B2F01414C00A6E428 /* Poppins-Bold.ttf in Resources */,
+				AA242A2C2F01414C00A6E428 /* SST Arabic Roman.ttf in Resources */,
+				AA242A2D2F01414C00A6E428 /* SST Arabic Bold.ttf in Resources */,
 				AAA6A3892EF2E84000520357 /* DateTableViewCell.xib in Resources */,
 				AAA6A38A2EF2E84000520357 /* SliderTableViewCell.xib in Resources */,
 				AAA6A38B2EF2E84000520357 /* ServiceSummaryPagesVC.xib in Resources */,
@@ -5039,6 +5121,142 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		AA5C68822F0165A1000A8ADA /* Develop_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				EXCLUDED_ARCHS = "";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Develop_Debug;
+		};
+		AA5C68832F0165A1000A8ADA /* Develop_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DynamicFormEngine/Packages/ActionSheetPicker/Framework-objc",
+					"$(BUILD_DIR)/$(CONFIGURATION)-$(PLATFORM_NAME)/PackageFrameworks/**",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.com.FormBuilderEngineV2.DynamicFormEngine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = auto;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Develop_Debug;
+		};
+		AA5C68842F0165A1000A8ADA /* Develop_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = sa.com.FormBuilderEngineV2.DynamicFormEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Develop_Debug;
+		};
 		E47B1BF42B8F5D9D00E22A45 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -5184,6 +5402,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DynamicFormEngine/Packages/ActionSheetPicker/Framework-objc",
+					"$(BUILD_DIR)/$(CONFIGURATION)-$(PLATFORM_NAME)/PackageFrameworks/**",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -5230,6 +5449,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DynamicFormEngine/Packages/ActionSheetPicker/Framework-objc",
+					"$(BUILD_DIR)/$(CONFIGURATION)-$(PLATFORM_NAME)/PackageFrameworks/**",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -5307,6 +5527,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E47B1BF42B8F5D9D00E22A45 /* Debug */,
+				AA5C68822F0165A1000A8ADA /* Develop_Debug */,
 				E47B1BF52B8F5D9D00E22A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -5316,6 +5537,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E47B1BF72B8F5D9D00E22A45 /* Debug */,
+				AA5C68832F0165A1000A8ADA /* Develop_Debug */,
 				E47B1BF82B8F5D9D00E22A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -5325,6 +5547,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E47B1BFA2B8F5D9D00E22A45 /* Debug */,
+				AA5C68842F0165A1000A8ADA /* Develop_Debug */,
 				E47B1BFB2B8F5D9D00E22A45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -5357,12 +5580,12 @@
 				kind = branch;
 			};
 		};
-		AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.9.1;
+				minimumVersion = 12.7.0;
 			};
 		};
 		AAA6A4912EF3037200520357 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
@@ -5414,15 +5637,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.9.0;
-			};
-		};
-		AAA6A4A92EF30D3400520357 /* XCRemoteSwiftPackageReference "netfox" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kasketis/netfox.git";
-			requirement = {
-				kind = versionRange;
-				maximumVersion = 2.0.0;
-				minimumVersion = 1.19.0;
 			};
 		};
 		AAB7B9F62EF32FC1000E4A20 /* XCRemoteSwiftPackageReference "DropDown" */ = {
@@ -5671,6 +5885,14 @@
 				kind = branch;
 			};
 		};
+		AADDBDDD2F015987009145A7 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.9.1;
+			};
+		};
 		AAEC9B112F009EC200B449E2 /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
@@ -5697,15 +5919,25 @@
 			package = AA8FB7D92EF3F9EC0073665D /* XCRemoteSwiftPackageReference "PopupDialog" */;
 			productName = PopupDialog;
 		};
-		AAA6A48A2EF3032F00520357 /* RxCocoa */ = {
+		AA9049AD2F012F0E00857338 /* FirebaseCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
+			package = AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
 		};
-		AAA6A48C2EF3032F00520357 /* RxSwift */ = {
+		AA9049AF2F012F0E00857338 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxSwift;
+			package = AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		AA9049B12F012F0E00857338 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		AA9049B32F012F0E00857338 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 		AAA6A4922EF3037200520357 /* JGProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -5736,11 +5968,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAA6A4A62EF30CB600520357 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
 			productName = CryptoSwift;
-		};
-		AAA6A4AA2EF30D3400520357 /* netfox */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AAA6A4A92EF30D3400520357 /* XCRemoteSwiftPackageReference "netfox" */;
-			productName = netfox;
 		};
 		AAB7B9F72EF32FC1000E4A20 /* DropDown */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -5896,6 +6123,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAC0E63D2EF6068100DDE9FF /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		AADDBDDE2F015987009145A7 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AADDBDDD2F015987009145A7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		AADDBDE22F015987009145A7 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AADDBDDD2F015987009145A7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		AADDBDE62F015987009145A7 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AADDBDDD2F015987009145A7 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
 		};
 		AAEC9B122F009EC200B449E2 /* RxAlamofire */ = {
 			isa = XCSwiftPackageProductDependency;

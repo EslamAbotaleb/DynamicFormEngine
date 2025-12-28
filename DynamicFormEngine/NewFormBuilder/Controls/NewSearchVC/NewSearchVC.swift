@@ -8,7 +8,7 @@
 
 import UIKit
 internal import RxSwift
-import RxCocoa
+public import RxCocoa
 
 
 public class NewSearchVC: BottomSheetVCCerqel {

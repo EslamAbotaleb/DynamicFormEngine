@@ -9,7 +9,7 @@ import UIKit
 import EzPopup
 import Expression
 import SwiftMessages
-import RxCocoa
+public import RxCocoa
 internal import RxSwift
 import SwiftUI
 import JGProgressHUD

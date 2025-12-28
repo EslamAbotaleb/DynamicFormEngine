@@ -22,7 +22,7 @@ public extension UIViewController {
 
 import UIKit
 import EzPopup
-import RxCocoa
+public import RxCocoa
 internal import RxSwift
 import Toast
 

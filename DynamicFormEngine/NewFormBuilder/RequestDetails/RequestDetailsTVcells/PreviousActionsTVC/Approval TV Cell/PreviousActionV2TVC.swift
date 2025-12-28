@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RxCocoa
+public import RxCocoa
 internal import RxSwift
 
 class PreviousActionV2TVC: UITableViewCell {

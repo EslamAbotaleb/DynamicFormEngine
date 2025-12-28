@@ -9,7 +9,7 @@ internal import Alamofire
 import Expression
 import Foundation
 import ObjectMapper
-import RxCocoa
+public import RxCocoa
 internal import RxSwift
 import UIKit
 

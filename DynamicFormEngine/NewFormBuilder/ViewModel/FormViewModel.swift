@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RxCocoa
+public import RxCocoa
 internal import RxSwift
 import Lottie
 

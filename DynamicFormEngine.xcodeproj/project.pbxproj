@@ -642,7 +642,6 @@
 		AAC0EED22EF61E0B00DDE9FF /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED962EF61E0B00DDE9FF /* Dynamic.swift */; };
 		AAC0EED32EF61E0B00DDE9FF /* cerqel_CodableResponseObjectPagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED8A2EF61E0B00DDE9FF /* cerqel_CodableResponseObjectPagination.swift */; };
 		AAC0EED52EF61E0B00DDE9FF /* CerqelDispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDA82EF61E0B00DDE9FF /* CerqelDispatchQueue+Extensions.swift */; };
-		AAC0EED72EF61E0B00DDE9FF /* CerqelReusableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED092EF61E0B00DDE9FF /* CerqelReusableHeader.swift */; };
 		AAC0EEDF2EF61E0B00DDE9FF /* ToastManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EC922EF61E0B00DDE9FF /* ToastManger.swift */; };
 		AAC0EEE02EF61E0B00DDE9FF /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECC22EF61E0B00DDE9FF /* BaseResponse.swift */; };
 		AAC0EEE42EF61E0B00DDE9FF /* NoDataTableViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECB32EF61E0B00DDE9FF /* NoDataTableViewExtention.swift */; };
@@ -682,7 +681,6 @@
 		AAC0EF332EF61E0B00DDE9FF /* SuccessBottomSheetWithNavigationLinkVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED202EF61E0B00DDE9FF /* SuccessBottomSheetWithNavigationLinkVC.xib */; };
 		AAC0EF342EF61E0B00DDE9FF /* ConfirmationBottomSheetVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED0C2EF61E0B00DDE9FF /* ConfirmationBottomSheetVC.xib */; };
 		AAC0EF372EF61E0B00DDE9FF /* CerqelDeleteSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED272EF61E0B00DDE9FF /* CerqelDeleteSheet.xib */; };
-		AAC0EF392EF61E0B00DDE9FF /* CerqelReusableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED082EF61E0B00DDE9FF /* CerqelReusableHeader.xib */; };
 		AAC0EF3A2EF61E0B00DDE9FF /* WithDrawBottomSheet.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED252EF61E0B00DDE9FF /* WithDrawBottomSheet.xcstrings */; };
 		AAC0EF3E2EF61E0B00DDE9FF /* SalaryItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED2A2EF61E0B00DDE9FF /* SalaryItem.xib */; };
 		AAC0EF3F2EF61E0B00DDE9FF /* SuccessBottomSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED192EF61E0B00DDE9FF /* SuccessBottomSheetViewController.xib */; };
@@ -1294,8 +1292,6 @@
 		AAC0ED042EF61E0B00DDE9FF /* CERQELShared_Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CERQELShared_Router.swift; sourceTree = "<group>"; };
 		AAC0ED052EF61E0B00DDE9FF /* SuccessAddEditEventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAddEditEventVC.swift; sourceTree = "<group>"; };
 		AAC0ED062EF61E0B00DDE9FF /* SuccessAddEditEventVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuccessAddEditEventVC.xib; sourceTree = "<group>"; };
-		AAC0ED082EF61E0B00DDE9FF /* CerqelReusableHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CerqelReusableHeader.xib; sourceTree = "<group>"; };
-		AAC0ED092EF61E0B00DDE9FF /* CerqelReusableHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelReusableHeader.swift; sourceTree = "<group>"; };
 		AAC0ED0B2EF61E0B00DDE9FF /* ConfirmationBottomSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationBottomSheetVC.swift; sourceTree = "<group>"; };
 		AAC0ED0C2EF61E0B00DDE9FF /* ConfirmationBottomSheetVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmationBottomSheetVC.xib; sourceTree = "<group>"; };
 		AAC0ED0E2EF61E0B00DDE9FF /* DeleteBottomSheet.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = DeleteBottomSheet.strings; path = ar.lproj/DeleteBottomSheet.strings; sourceTree = "<group>"; };
@@ -3809,15 +3805,6 @@
 			path = SuccessAddEditBottomSheet;
 			sourceTree = "<group>";
 		};
-		AAC0ED0A2EF61E0B00DDE9FF /* CerqelReusableHeader */ = {
-			isa = PBXGroup;
-			children = (
-				AAC0ED082EF61E0B00DDE9FF /* CerqelReusableHeader.xib */,
-				AAC0ED092EF61E0B00DDE9FF /* CerqelReusableHeader.swift */,
-			);
-			path = CerqelReusableHeader;
-			sourceTree = "<group>";
-		};
 		AAC0ED0D2EF61E0B00DDE9FF /* ConfirmationBottomSheet */ = {
 			isa = PBXGroup;
 			children = (
@@ -3918,7 +3905,6 @@
 			children = (
 				AAC0EC912EF61E0B00DDE9FF /* CustomDashedView.swift */,
 				AAC0ED072EF61E0B00DDE9FF /* SuccessAddEditBottomSheet */,
-				AAC0ED0A2EF61E0B00DDE9FF /* CerqelReusableHeader */,
 				AAC0ED0D2EF61E0B00DDE9FF /* ConfirmationBottomSheet */,
 				AAC0ED142EF61E0B00DDE9FF /* DeleteBottomSheet */,
 				AAC0ED292EF61E0B00DDE9FF /* BottomSheet */,
@@ -4460,7 +4446,6 @@
 				AAC0EF332EF61E0B00DDE9FF /* SuccessBottomSheetWithNavigationLinkVC.xib in Resources */,
 				AAC0EF342EF61E0B00DDE9FF /* ConfirmationBottomSheetVC.xib in Resources */,
 				AAC0EF372EF61E0B00DDE9FF /* CerqelDeleteSheet.xib in Resources */,
-				AAC0EF392EF61E0B00DDE9FF /* CerqelReusableHeader.xib in Resources */,
 				AAC0EF3A2EF61E0B00DDE9FF /* WithDrawBottomSheet.xcstrings in Resources */,
 				AAC0EF3E2EF61E0B00DDE9FF /* SalaryItem.xib in Resources */,
 				AAC0EF3F2EF61E0B00DDE9FF /* SuccessBottomSheetViewController.xib in Resources */,
@@ -4944,7 +4929,6 @@
 				AAC0EED22EF61E0B00DDE9FF /* Dynamic.swift in Sources */,
 				AAC0EED32EF61E0B00DDE9FF /* cerqel_CodableResponseObjectPagination.swift in Sources */,
 				AAC0EED52EF61E0B00DDE9FF /* CerqelDispatchQueue+Extensions.swift in Sources */,
-				AAC0EED72EF61E0B00DDE9FF /* CerqelReusableHeader.swift in Sources */,
 				AAC0EEDF2EF61E0B00DDE9FF /* ToastManger.swift in Sources */,
 				AAC0EEE02EF61E0B00DDE9FF /* BaseResponse.swift in Sources */,
 				AAC0EEE42EF61E0B00DDE9FF /* NoDataTableViewExtention.swift in Sources */,

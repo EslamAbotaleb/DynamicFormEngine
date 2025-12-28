@@ -17,10 +17,15 @@ public enum DynamicAppStoryboard: String {
     case xibView
     case NewFormBuilder
 
+    var instance: UIStoryboard {
+        let bundle = Bundle(for: DynamicSharedRouterDynamicForm.self)
+        return UIStoryboard(name: self.rawValue, bundle: bundle)
+    }
+    /*
     var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }
-    
+    */
     func viewController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file) -> T {
         
         if case .xibView = self{

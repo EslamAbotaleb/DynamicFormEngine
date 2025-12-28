@@ -21,7 +21,7 @@ public extension UIViewController {
 
 
 import UIKit
-internal import FittedSheetsDF
+//internal import FittedSheetsDF
 import EzPopup
 import RxCocoa
 internal import RxSwift

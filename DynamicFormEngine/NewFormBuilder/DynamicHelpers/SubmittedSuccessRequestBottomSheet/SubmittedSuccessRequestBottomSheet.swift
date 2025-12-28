@@ -7,7 +7,7 @@
 //
 
 import UIKit
-internal import FittedSheetsDF
+//internal import FittedSheetsDF
 import RxCocoa
 internal import RxSwift
 
@@ -77,16 +77,11 @@ class SubmittedSuccessRequestBottomSheet: BottomSheetVCCerqel {
         let submittedSheet = SubmittedSuccessRequestBottomSheet()
         let mySize: SheetSize = .fixed(490)
         let sheet = SheetViewController(controller: submittedSheet, sizes: [mySize])
-        /*
+        
         sheet.handleColor = UIColor.clear
         sheet.adjustForBottomSafeArea = true
         sheet.blurBottomSafeArea = false
         sheet.extendBackgroundBehindHandle = false
-        */
-        sheet.gripColor = .clear
-        sheet.treatPullBarAsClear = true
-        sheet.allowPullingPastMaxHeight = false
-        sheet.dismissOnOverlayTap = false
 
         vc.present(sheet, animated: false, completion: nil)
         submittedSheet.passData(data: data, fromDetails: fromDetails)

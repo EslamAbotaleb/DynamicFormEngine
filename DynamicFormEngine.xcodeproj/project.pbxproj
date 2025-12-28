@@ -95,7 +95,11 @@
 		AA7196A32EF44E6E00D31A70 /* FastCircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7196742EF44E6E00D31A70 /* FastCircleLayer.swift */; };
 		AA820A1C2EF6308D0022BCA4 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = AA820A1B2EF6308D0022BCA4 /* DGCharts */; };
 		AA8FB7DB2EF3F9EC0073665D /* PopupDialog in Frameworks */ = {isa = PBXBuildFile; productRef = AA8FB7DA2EF3F9EC0073665D /* PopupDialog */; };
-		AA9933B72EF9927A00893A3A /* FittedSheetsDF in Frameworks */ = {isa = PBXBuildFile; productRef = AA9933B62EF9927A00893A3A /* FittedSheetsDF */; };
+		AA90499A2F01229A00857338 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9049992F01229A00857338 /* SheetViewController.swift */; };
+		AA90499C2F01232800857338 /* InitialTouchPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499B2F01232800857338 /* InitialTouchPanGestureRecognizer.swift */; };
+		AA90499E2F01239A00857338 /* SheetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499D2F01239A00857338 /* SheetSize.swift */; };
+		AA9049A02F0123A900857338 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499F2F0123A900857338 /* UIViewControllerExtension.swift */; };
+		AA9049A22F0123B800857338 /* Yalta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9049A12F0123B800857338 /* Yalta.swift */; };
 		AA9DB5EF2EFA9024005A0D5E /* cerqel_APIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB5ED2EFA9024005A0D5E /* cerqel_APIAction.swift */; };
 		AA9DB5F02EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB5EE2EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift */; };
 		AAA4CE502EF872490027ABEC /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4CE4F2EF872480027ABEC /* DownloadManager.swift */; };
@@ -366,7 +370,6 @@
 		AAA6A4452EF2E84000520357 /* FaceRateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA6A2642EF2E84000520357 /* FaceRateTableViewCell.swift */; };
 		AAA6A48B2EF3032F00520357 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A48A2EF3032F00520357 /* RxCocoa */; };
 		AAA6A48D2EF3032F00520357 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A48C2EF3032F00520357 /* RxSwift */; };
-		AAA6A4902EF3035E00520357 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A48F2EF3035E00520357 /* RxAlamofire */; };
 		AAA6A4932EF3037200520357 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4922EF3037200520357 /* JGProgressHUD */; };
 		AAA6A4962EF303B300520357 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4952EF303B300520357 /* IQKeyboardManagerSwift */; };
 		AAA6A4992EF303F000520357 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = AAA6A4982EF303F000520357 /* Kingfisher */; };
@@ -673,6 +676,7 @@
 		AAC0EF452EF61E0B00DDE9FF /* SuccessAddEditEventVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED062EF61E0B00DDE9FF /* SuccessAddEditEventVC.xib */; };
 		AAC0EF482EF61E0B00DDE9FF /* DeleteBottomSheet.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED102EF61E0B00DDE9FF /* DeleteBottomSheet.strings */; };
 		AAC0EF4A2EF61E0B00DDE9FF /* DeleteBottomSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAC0ED122EF61E0B00DDE9FF /* DeleteBottomSheet.xib */; };
+		AAEC9B132F009EC200B449E2 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AAEC9B122F009EC200B449E2 /* RxAlamofire */; };
 		E44836082CB5C05B00871C3D /* FormBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44836072CB5C05B00871C3D /* FormBuilderManager.swift */; };
 		E471757B2B8FE3D3007CEE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E471757A2B8FE3D3007CEE59 /* Assets.xcassets */; };
 		E47B1BE72B8F5D9D00E22A45 /* DynamicFormEngine.docc in Sources */ = {isa = PBXBuildFile; fileRef = E47B1BE62B8F5D9D00E22A45 /* DynamicFormEngine.docc */; };
@@ -782,6 +786,11 @@
 		AA71968A2EF44E6E00D31A70 /* CRRefreshHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRefreshHeaderView.swift; sourceTree = "<group>"; };
 		AA71968B2EF44E6E00D31A70 /* CRRefreshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRefreshProtocol.swift; sourceTree = "<group>"; };
 		AA71968C2EF44E6E00D31A70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		AA9049992F01229A00857338 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		AA90499B2F01232800857338 /* InitialTouchPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTouchPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		AA90499D2F01239A00857338 /* SheetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetSize.swift; sourceTree = "<group>"; };
+		AA90499F2F0123A900857338 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		AA9049A12F0123B800857338 /* Yalta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yalta.swift; sourceTree = "<group>"; };
 		AA9DB5ED2EFA9024005A0D5E /* cerqel_APIAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_APIAction.swift; sourceTree = "<group>"; };
 		AA9DB5EE2EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerqel_BasicActionDynamicForm.swift; sourceTree = "<group>"; };
 		AAA4CE4F2EF872480027ABEC /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
@@ -1361,7 +1370,6 @@
 				AAB7BA132EF33345000E4A20 /* Cosmos in Frameworks */,
 				AAB7BAC32EF38743000E4A20 /* TOCropViewController in Frameworks */,
 				AAB7BA1C2EF33491000E4A20 /* EasyTipView in Frameworks */,
-				AAA6A4902EF3035E00520357 /* RxAlamofire in Frameworks */,
 				AAB7BA432EF347AB000E4A20 /* SwiftMessages in Frameworks */,
 				AAB7BA042EF3318E000E4A20 /* FSPagerView in Frameworks */,
 				AAA6A4A52EF30C7000520357 /* ObjectMapper in Frameworks */,
@@ -1378,7 +1386,7 @@
 				AAB7BA282EF336B0000E4A20 /* SwiftyJSON in Frameworks */,
 				AA71963D2EF44A1900D31A70 /* Lottie in Frameworks */,
 				AAB7BA192EF333F1000E4A20 /* RichEditorView in Frameworks */,
-				AA9933B72EF9927A00893A3A /* FittedSheetsDF in Frameworks */,
+				AAEC9B132F009EC200B449E2 /* RxAlamofire in Frameworks */,
 				AAB7B9F82EF32FC1000E4A20 /* DropDown in Frameworks */,
 				AAB7BA4E2EF37272000E4A20 /* EFQRCode in Frameworks */,
 				AAB7BA222EF334FB000E4A20 /* TagListView in Frameworks */,
@@ -1640,6 +1648,18 @@
 				AA7196832EF44E6E00D31A70 /* SlackLoadingAnimator */,
 			);
 			path = Animators;
+			sourceTree = "<group>";
+		};
+		AA9049962F01227E00857338 /* FittedSheets */ = {
+			isa = PBXGroup;
+			children = (
+				AA9049992F01229A00857338 /* SheetViewController.swift */,
+				AA90499B2F01232800857338 /* InitialTouchPanGestureRecognizer.swift */,
+				AA90499D2F01239A00857338 /* SheetSize.swift */,
+				AA90499F2F0123A900857338 /* UIViewControllerExtension.swift */,
+				AA9049A12F0123B800857338 /* Yalta.swift */,
+			);
+			path = FittedSheets;
 			sourceTree = "<group>";
 		};
 		AA964ECF2EF4C3BA007651C2 /* Xibs */ = {
@@ -3250,6 +3270,7 @@
 		AAB7BA632EF380FE000E4A20 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				AA9049962F01227E00857338 /* FittedSheets */,
 				AAADA1882EF6EA910036FD04 /* DRPLoadingSpinner */,
 				AAADA16C2EF6CA300036FD04 /* TransitionButton */,
 				AA0707C02EF58E2C00B55C22 /* CoreActionSheetPicker */,
@@ -4115,7 +4136,6 @@
 			packageProductDependencies = (
 				AAA6A48A2EF3032F00520357 /* RxCocoa */,
 				AAA6A48C2EF3032F00520357 /* RxSwift */,
-				AAA6A48F2EF3035E00520357 /* RxAlamofire */,
 				AAA6A4922EF3037200520357 /* JGProgressHUD */,
 				AAA6A4952EF303B300520357 /* IQKeyboardManagerSwift */,
 				AAA6A4982EF303F000520357 /* Kingfisher */,
@@ -4156,7 +4176,7 @@
 				AA71963C2EF44A1900D31A70 /* Lottie */,
 				AAC0E63E2EF6068100DDE9FF /* KeychainAccess */,
 				AA820A1B2EF6308D0022BCA4 /* DGCharts */,
-				AA9933B62EF9927A00893A3A /* FittedSheetsDF */,
+				AAEC9B122F009EC200B449E2 /* RxAlamofire */,
 			);
 			productName = DynamicFormEngine;
 			productReference = E47B1BE22B8F5D9D00E22A45 /* DynamicFormEngine.framework */;
@@ -4210,7 +4230,6 @@
 			mainGroup = E47B1BD82B8F5D9D00E22A45;
 			packageReferences = (
 				AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				AAA6A48E2EF3035E00520357 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
 				AAA6A4912EF3037200520357 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
 				AAA6A4942EF303B300520357 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				AAA6A4972EF303F000520357 /* XCRemoteSwiftPackageReference "Kingfisher" */,
@@ -4250,7 +4269,7 @@
 				AA71963B2EF44A1900D31A70 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				AAC0E63D2EF6068100DDE9FF /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				AA820A1A2EF6308D0022BCA4 /* XCRemoteSwiftPackageReference "Charts" */,
-				AA9933B52EF9927A00893A3A /* XCRemoteSwiftPackageReference "FittedSheets" */,
+				AAEC9B112F009EC200B449E2 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
 			);
 			productRefGroup = E47B1BE32B8F5D9D00E22A45 /* Products */;
 			projectDirPath = "";
@@ -4458,6 +4477,7 @@
 				AA7196922EF44E6E00D31A70 /* FastCheckLayer.swift in Sources */,
 				AAADBB0A2EF85BF000F696F3 /* LocalNotificationManager.swift in Sources */,
 				AA7196932EF44E6E00D31A70 /* NormalHeaderAnimator.swift in Sources */,
+				AA90499E2F01239A00857338 /* SheetSize.swift in Sources */,
 				AA7196942EF44E6E00D31A70 /* RamotionAnimator.swift in Sources */,
 				AA7196952EF44E6E00D31A70 /* RamotionWaveLayer.swift in Sources */,
 				AA7196962EF44E6E00D31A70 /* CRRefreshAnimator.swift in Sources */,
@@ -4589,6 +4609,7 @@
 				AAC0EC622EF61E0100DDE9FF /* ProfilePhoneTypesCell.swift in Sources */,
 				AAA6A3B32EF2E84000520357 /* SendBackRecipientsEndPoint.swift in Sources */,
 				AAA6A3B42EF2E84000520357 /* RichTextView.swift in Sources */,
+				AA9049A22F0123B800857338 /* Yalta.swift in Sources */,
 				AAA6A3B52EF2E84000520357 /* NewDropDownViewController.swift in Sources */,
 				AAA6A3B62EF2E84000520357 /* NestedValueDetailsVC.swift in Sources */,
 				AAA6A3B72EF2E84000520357 /* ExtensionSummaryPagesTableViewCell.swift in Sources */,
@@ -4631,6 +4652,7 @@
 				AAA6A3C92EF2E84000520357 /* FillFreeSpaceTVcell.swift in Sources */,
 				AAA6A3CA2EF2E84000520357 /* LabelSheetWithSwitchTVCell.swift in Sources */,
 				AAA6A3CB2EF2E84000520357 /* DynamicFonts+Extensions.swift in Sources */,
+				AA9049A02F0123A900857338 /* UIViewControllerExtension.swift in Sources */,
 				AAA6A3CC2EF2E84000520357 /* ModelUploadedMedia.swift in Sources */,
 				AAA6A3CD2EF2E84000520357 /* ExecutionEngine.swift in Sources */,
 				AAA6A3CE2EF2E84000520357 /* Constants.swift in Sources */,
@@ -4638,6 +4660,7 @@
 				AAA6A3D02EF2E84000520357 /* MapTableViewCell.swift in Sources */,
 				AAA6A3D12EF2E84000520357 /* FormModel.swift in Sources */,
 				AAA6A3D22EF2E84000520357 /* ContentSizedTableView.swift in Sources */,
+				AA90499C2F01232800857338 /* InitialTouchPanGestureRecognizer.swift in Sources */,
 				AAA6A3D32EF2E84000520357 /* TableDetailsRowTVCell.swift in Sources */,
 				AAA6A3D42EF2E84000520357 /* UISearchBar+Extensions.swift in Sources */,
 				AAA6A3D52EF2E84000520357 /* NewLinkControlTVcell.swift in Sources */,
@@ -4701,6 +4724,7 @@
 				AA9DB5EF2EFA9024005A0D5E /* cerqel_APIAction.swift in Sources */,
 				AA9DB5F02EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift in Sources */,
 				AAADBA522EF84BAB00F696F3 /* DocumentLibraryRepo.swift in Sources */,
+				AA90499A2F01229A00857338 /* SheetViewController.swift in Sources */,
 				AAADBA532EF84BAB00F696F3 /* CategoriesEndPoint.swift in Sources */,
 				AAADBA542EF84BAB00F696F3 /* AcknowledgEndPoint.swift in Sources */,
 				AAADBA552EF84BAB00F696F3 /* UploadRequestEndPoint.swift in Sources */,
@@ -5333,29 +5357,12 @@
 				kind = branch;
 			};
 		};
-		AA9933B52EF9927A00893A3A /* XCRemoteSwiftPackageReference "FittedSheets" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/EslamAbotaleb/FittedSheets";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 6.9.1;
-			};
-		};
-		AAA6A48E2EF3035E00520357 /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
-			requirement = {
-				kind = versionRange;
-				maximumVersion = 7.0.0;
-				minimumVersion = 5.2.0;
 			};
 		};
 		AAA6A4912EF3037200520357 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
@@ -5664,6 +5671,14 @@
 				kind = branch;
 			};
 		};
+		AAEC9B112F009EC200B449E2 /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -5682,11 +5697,6 @@
 			package = AA8FB7D92EF3F9EC0073665D /* XCRemoteSwiftPackageReference "PopupDialog" */;
 			productName = PopupDialog;
 		};
-		AA9933B62EF9927A00893A3A /* FittedSheetsDF */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA9933B52EF9927A00893A3A /* XCRemoteSwiftPackageReference "FittedSheets" */;
-			productName = FittedSheetsDF;
-		};
 		AAA6A48A2EF3032F00520357 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -5696,11 +5706,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAA6A4892EF3032F00520357 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		AAA6A48F2EF3035E00520357 /* RxAlamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AAA6A48E2EF3035E00520357 /* XCRemoteSwiftPackageReference "RxAlamofire" */;
-			productName = RxAlamofire;
 		};
 		AAA6A4922EF3037200520357 /* JGProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -5891,6 +5896,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAC0E63D2EF6068100DDE9FF /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		AAEC9B122F009EC200B449E2 /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AAEC9B112F009EC200B449E2 /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

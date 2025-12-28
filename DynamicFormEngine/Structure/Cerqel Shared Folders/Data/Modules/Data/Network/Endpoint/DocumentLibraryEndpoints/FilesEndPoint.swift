@@ -236,6 +236,10 @@ public struct Filter: Codable {
 
 public struct SuggestionPayload: Codable {
     var searchKeyword: String
+    
+    public init(searchKeyword: String) {
+        self.searchKeyword = searchKeyword
+    }
 }
 
 
@@ -260,7 +264,6 @@ public struct OrderByValue: Codable {
 }
 
 // MARK: - OrderBy
-
 public enum OrderBy: Int {
     case Newest = 1
     case Oldest = 2

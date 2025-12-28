@@ -1225,12 +1225,12 @@ struct PreviousActions : Codable, Mappable {
     }
 }
 
-struct PreviousActionsAttachments : Codable, Mappable {
-    var fileId : String?
-    var fileName : String?
-    var url : String?
-    var attExtension : String?
-    var size : Double?
+public struct PreviousActionsAttachments : Codable, Mappable {
+    public var fileId : String?
+    public var fileName : String?
+    public var url : String?
+    public var attExtension : String?
+    public var size : Double?
 
     public init?(map: Map) {}
 
@@ -1253,17 +1253,17 @@ struct PreviousActionsAttachments : Codable, Mappable {
 
 }
 
-struct ReqDetailsAttachmentValue : Codable, FormValue, Mappable {
-    var url : String?
-    var attachmentName : String?
-    var attachmentExtension : String?
-    var attachmentDisplaySize : String?
-    var fileId : String?
-    var size : String?
+public struct ReqDetailsAttachmentValue : Codable, FormValue, Mappable {
+    public var url : String?
+    public var attachmentName : String?
+    public var attachmentExtension : String?
+    public var attachmentDisplaySize : String?
+    public var fileId : String?
+    public var size : String?
 
     public init?(map: Map) {}
     
-    init(url: String?, attachmentName: String?, attachmentExtension: String?, attachmentDisplaySize: String?, fileId: String?, size: String) {
+    public init(url: String?, attachmentName: String?, attachmentExtension: String?, attachmentDisplaySize: String?, fileId: String?, size: String) {
         self.url = url
         self.attachmentName = attachmentName
         self.attachmentExtension = attachmentExtension
@@ -1272,7 +1272,7 @@ struct ReqDetailsAttachmentValue : Codable, FormValue, Mappable {
         self.size = size
     }
 
-    public mutating func mapping(map: Map) {
+     mutating public func mapping(map: Map) {
         url <- map["url"]
         attachmentName <- map["fileName"]
         attachmentExtension <- map["extension"]
@@ -1293,23 +1293,23 @@ struct ReqDetailsAttachmentValue : Codable, FormValue, Mappable {
 }
 
 public struct Action : Codable, Mappable {
-   var id : String?
-   var name : String?
-   var label : String?
-   var actionTakenLabel : String?
-   var styleCode : String?
-   var buttonStyleCode : String?
-   var actionCode : String?
-   var isCommentRequired : Bool?
-   var isFormValidateBeforeExecuteActionRequired : Bool?
-   var isAttachmentRequired : Bool?
-   var actionFormId: String?
-   var actionOrder: Int?
-   var buttonStyle : ButtonStyle?
+    public var id : String?
+    public var name : String?
+    public var label : String?
+    public var actionTakenLabel : String?
+    public var styleCode : String?
+    public var buttonStyleCode : String?
+    public var actionCode : String?
+    public var isCommentRequired : Bool?
+    public var isFormValidateBeforeExecuteActionRequired : Bool?
+    public var isAttachmentRequired : Bool?
+    public var actionFormId: String?
+    public var actionOrder: Int?
+    public var buttonStyle : ButtonStyle?
     
     public init?(map: Map) {}
 
-    init(id: String?, name: String?, label: String?, actionTakenLabel: String?, styleCode: String?, buttonStyleCode: String?, actionCode: String?, isCommentRequired: Bool?, isFormValidateBeforeExecuteActionRequired: Bool?, isAttachmentRequired: Bool?, actionFormId: String?, actionOrder: Int?, buttonStyle : ButtonStyle?) {
+    public init(id: String?, name: String?, label: String?, actionTakenLabel: String?, styleCode: String?, buttonStyleCode: String?, actionCode: String?, isCommentRequired: Bool?, isFormValidateBeforeExecuteActionRequired: Bool?, isAttachmentRequired: Bool?, actionFormId: String?, actionOrder: Int?, buttonStyle : ButtonStyle?) {
         self.id = id
         self.name = name
         self.label = label
@@ -1372,13 +1372,13 @@ public struct Action : Codable, Mappable {
     }
 }
 
-struct ButtonStyle: Codable, Mappable {
-    var backgroundColor: String?
-    var borderColor: String?
-    var textColor: String?
-    var opacity: Float?
+public struct ButtonStyle: Codable, Mappable {
+    public var backgroundColor: String?
+    public var borderColor: String?
+    public var textColor: String?
+    public var opacity: Float?
     
-    init() {
+    public init() {
         self.backgroundColor = ""
         self.borderColor = ""
         self.textColor = ""
@@ -1396,13 +1396,13 @@ struct ButtonStyle: Codable, Mappable {
     }
 }
 
-struct FormWarningg: Codable, Mappable {
+public struct FormWarningg: Codable, Mappable {
     var fieldValidation: FieldValidationn?
     var formValidation: FormValidationn?
 
-    init?(map: Map) {}
+    public init?(map: Map) {}
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         fieldValidation <- map["fieldValidation"]
         formValidation <- map["formValidation"]
     }

@@ -19,11 +19,11 @@ public class AlamofireService: EndpointExecuter {
         return Session(configuration: configuration)
     }()
     
-     private let backgroundmanager: Session = {
-         let configuration = URLSessionConfiguration.background(withIdentifier: Bundle.main.bundleIdentifier! + ".background")
-         return Session(configuration: configuration)
-     }()
-     
+//     private let backgroundmanager: Session = {
+//         let configuration = URLSessionConfiguration.background(withIdentifier: Bundle.main.bundleIdentifier! + ".background")
+//         return Session(configuration: configuration)
+//     }()
+//     
     private var activeRequests: [FileVersionType: UploadRequest] = [:]
 
     public func execute(_ endpoint: Endpoint) -> Promise<NetworkServiceResponse> {

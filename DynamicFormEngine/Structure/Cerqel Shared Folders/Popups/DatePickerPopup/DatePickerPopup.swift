@@ -104,8 +104,7 @@ public class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPicke
     }
     
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-//        self.cerqel_sheetCtl.closeSheet()
+        self.cerqel_sheetCtl.closeSheet()
     }
     
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -178,24 +177,22 @@ public class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPicke
     @IBAction func confirmBtnTapped(_ sender: Any?) {
         self.doneBtn.startAnimation()
         delayCerqel(seconds: 0.5) {
-//            self.cerqel_sheetCtl.closeSheet {
-//                if self.isDate {
-//                    
-//                    self.didPickDate?(self.datePicker.date)
-//    //                if self.delegate != nil && self.delegate!.didSelectDate != nil {
-//    //                    self.delegate!.didSelectDate!(sender: self.sender, date: self.datePicker.date)
-//    //                }
-//                } else {
-////                    if self.delegate != nil && self.delegate!.didSelect != nil && self.selectedIndex >= 0 {
-////                        self.selectedValue = self.dataArray[self.selectedIndex]
-////                        self.delegate!.didSelect!(sender: self.sender, index: self.selectedIndex, value: self.selectedValue)
-//                        self.didPickValue?(self.selectedIndex)
-////                    }
-//                }
-//            }
+            self.cerqel_sheetCtl.closeSheet {
+                if self.isDate {
+                    
+                    self.didPickDate?(self.datePicker.date)
+    //                if self.delegate != nil && self.delegate!.didSelectDate != nil {
+    //                    self.delegate!.didSelectDate!(sender: self.sender, date: self.datePicker.date)
+    //                }
+                } else {
+//                    if self.delegate != nil && self.delegate!.didSelect != nil && self.selectedIndex >= 0 {
+//                        self.selectedValue = self.dataArray[self.selectedIndex]
+//                        self.delegate!.didSelect!(sender: self.sender, index: self.selectedIndex, value: self.selectedValue)
+                        self.didPickValue?(self.selectedIndex)
+//                    }
+                }
+            }
         }
-        
-        
     }
     
     override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {

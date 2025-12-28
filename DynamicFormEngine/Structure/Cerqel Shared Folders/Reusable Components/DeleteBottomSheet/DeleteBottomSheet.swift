@@ -43,14 +43,12 @@ public class DeleteBottomSheet: BottomSheetVCCerqel {
     }
     
     @IBAction func closePressed(_ sender: Any) {
-//        sheetViewController?.closeSheet()
-        sheetViewController?.dismiss(animated: true)
+        sheetViewController?.closeSheet()
 
     }
     
     @IBAction func cancelPressed(_ sender: Any) {
-//        sheetViewController?.closeSheet()
-        sheetViewController?.dismiss(animated: true)
+        sheetViewController?.closeSheet()
     }
     
     @IBAction func deletePressed(_ sender: Any) {

@@ -10,7 +10,7 @@ import Foundation
 import RxCocoa
 public import RxSwift
 import Photos
-public import FittedSheetsDF
+//public import FittedSheetsDF
 import SwiftUI
 import DropDown
 import DynamicFormEngine
@@ -126,43 +126,12 @@ public class RequestDetailsViewModel: BaseVM {
             item: commentItem
         )
         
-        // Configure sheet options
-        let options = SheetOptions(
-            pullBarHeight: 24,
-            presentingViewCornerRadius: 12,
-            shouldExtendBackground: true,
-            useFullScreenMode: false,
-            shrinkPresentingViewController: true,
-            useInlineMode: false,
-            horizontalPadding: 0,
-            maxWidth: nil
-        )
-        
-        // Initialize the sheet view controller with sizes and options
-        let sheetViewController = SheetViewController(
-            controller: commentViewController,
-            sizes: [.fixed(370)],
-            options: options
-        )
-        
-        // Pull bar customization
-        sheetViewController.gripSize = CGSize(width: 50, height: 6)
-        sheetViewController.gripColor = .clear          // no visible handle
-        sheetViewController.cornerRadius = 12
-        sheetViewController.cornerCurve = .continuous
-        sheetViewController.minimumSpaceAbovePullBar = 0
-        sheetViewController.pullBarBackgroundColor = .clear
-        sheetViewController.treatPullBarAsClear = true
-        
-        // Dismiss behavior
-        sheetViewController.dismissOnOverlayTap = true
-        sheetViewController.dismissOnPull = false
-        
-        // Sheet appearance
-        sheetViewController.allowPullingPastMaxHeight = false
-        sheetViewController.autoAdjustToKeyboard = true
-        sheetViewController.contentBackgroundColor = .white
+        // Configure the sheet view controller
+        let sheetViewController = SheetViewController(controller: commentViewController, sizes: [.fixed(370)])
+        sheetViewController.handleColor = .clear
+        sheetViewController.topCornersRadius = 12
         sheetViewController.overlayColor = UIColor(rCerqel: 34, gCerqel: 16, bCerqel: 59, aCerqel: 0.5)
+        sheetViewController.dismissOnBackgroundTap = true
         
         // Present the sheet
         router.present(vc: sheetViewController)

@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct BackButton: View {
+public struct BackButton: View {
     @Environment(\.dismiss) var dismiss
     let onBack: (()->())?
 
-    var body: some View {
+    public var body: some View {
         
         HStack {
             Image("swiftUIBackIcon")
@@ -30,9 +30,9 @@ struct BackButton: View {
     }
 }
 
-class NavigationBarHiddenUIHostingController<Content: View>: UIHostingController<Content> {
+public class NavigationBarHiddenUIHostingController<Content: View>: UIHostingController<Content> {
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         if navigationController?.isNavigationBarHidden == false {
           navigationController?.isNavigationBarHidden = true

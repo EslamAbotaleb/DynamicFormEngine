@@ -9,29 +9,29 @@
 import Foundation
 import ObjectMapper
 
-struct ModelRequestDetailsDataCerqel : Codable {
-    var requestId : String?
-    var requestOrder : String?
-    var bpmTaskId : String?
-    var formCode : String?
-    var formVersion : Int?
-    var viewForm : ViewFormCerqel?
-    var isCompleted : Bool?
-    var hasAttachment : Bool?
-    var hasComments : Bool?
-    var viewFromMobile : Bool?
-    var itRequestId : String?
-    var createdDate : String?
-    var employee : EmployeeCerqel?
-    var serviceName : String?
-    var requestSubmissionMobileVisibilityAndroid : Bool?
-    var requestSubmissionMobileVisibilityIos : Bool?
-    var actionsMobileVisibility : Bool?
-    var actions : [ActionCerqel]?
-    var attachments : [String]?
-    var previousActions : [PreviousActionsCerqel]?
-    var isReopenAllowed: Bool?
-    var isWithdrawal: Bool?
+public struct ModelRequestDetailsDataCerqel : Codable {
+    public var requestId : String?
+    public var requestOrder : String?
+    public var bpmTaskId : String?
+    public var formCode : String?
+    public var formVersion : Int?
+    public var viewForm : ViewFormCerqel?
+    public var isCompleted : Bool?
+    public var hasAttachment : Bool?
+    public var hasComments : Bool?
+    public var viewFromMobile : Bool?
+    public var itRequestId : String?
+    public var createdDate : String?
+    public var employee : EmployeeCerqel?
+    public var serviceName : String?
+    public var requestSubmissionMobileVisibilityAndroid : Bool?
+    public var requestSubmissionMobileVisibilityIos : Bool?
+    public var actionsMobileVisibility : Bool?
+    public var actions : [ActionCerqel]?
+    public var attachments : [String]?
+    public var previousActions : [PreviousActionsCerqel]?
+    public var isReopenAllowed: Bool?
+    public var isWithdrawal: Bool?
     
     enum CodingKeys: String, CodingKey {
 
@@ -64,16 +64,16 @@ struct ModelRequestDetailsDataCerqel : Codable {
 }
 
 public struct TakenActionCerqel : Codable {
-    let id : String?
-    let name : String?
-    let label : String?
-    let actionTakenLabel : String?
-    let styleCode : String?
-    let buttonStyleCode : String?
-    let actionCode : String?
-    let isCommentRequired : Bool?
-    let isAttachmentRequired : Bool?
-    let isFormValidateBeforeExecuteActionRequired : Bool?
+    public let id : String?
+    public let name : String?
+    public let label : String?
+    public let actionTakenLabel : String?
+    public let styleCode : String?
+    public let buttonStyleCode : String?
+    public let actionCode : String?
+    public let isCommentRequired : Bool?
+    public let isAttachmentRequired : Bool?
+    public let isFormValidateBeforeExecuteActionRequired : Bool?
 
     enum CodingKeys: String, CodingKey {
 
@@ -91,20 +91,20 @@ public struct TakenActionCerqel : Codable {
 }
 
 public struct PreviousActionsCerqel : Codable {
-    let id : String?
-    let bpmTaskId : String?
-    let taskOnUserName : String?
-    let taskOnUserJobTitle : String?
-    let taskOnUserDepartmentName : String?
-    let taskOnUserPhoto : String?
-    let taskOnUserEmail : String?
-    let createdDate : String?
-    let completionDate : String?
-    let comment : String?
-    let isCompleted : Bool?
-    let takenAction : TakenActionCerqel?
-    let attachments : [PreviousActionsAttachments]?
-    var isExpanded = false
+    public let id : String?
+    public let bpmTaskId : String?
+    public let taskOnUserName : String?
+    public let taskOnUserJobTitle : String?
+    public let taskOnUserDepartmentName : String?
+    public let taskOnUserPhoto : String?
+    public let taskOnUserEmail : String?
+    public let createdDate : String?
+    public let completionDate : String?
+    public let comment : String?
+    public let isCompleted : Bool?
+    public let takenAction : TakenActionCerqel?
+    public let attachments : [PreviousActionsAttachments]?
+    public var isExpanded = false
     enum CodingKeys: String, CodingKey {
 
         case id = "id"
@@ -125,11 +125,11 @@ public struct PreviousActionsCerqel : Codable {
 }
 
 public struct PreviousActionsAttachmentsCerqel : Codable {
-    var fileId : String?
-    var fileName : String?
-    var url : String?
-    var attExtension : String?
-    var size : Double?
+    public var fileId : String?
+    public var fileName : String?
+    public var url : String?
+    public var attExtension : String?
+    public var size : Double?
 
     enum CodingKeys: String, CodingKey {
 
@@ -146,10 +146,10 @@ public struct PreviousActionsAttachmentsCerqel : Codable {
     
 }
 public struct ViewFormCerqel : Codable {
-    let formCode : String?
-    let name : String?
-    let version : Int?
-    let controls : [ModelControlCerqel]?
+    public let formCode : String?
+    public let name : String?
+    public let version : Int?
+    public let controls : [ModelControlCerqel]?
 
     enum CodingKeys: String, CodingKey {
 
@@ -163,10 +163,10 @@ public struct ViewFormCerqel : Codable {
 }
 
 public struct ReqDetailsAttachmentValueCerqel : Codable, FormValueCerqel {
-    let url : String?
-    let attachmentName : String?
-    let attachmentExtension : String?
-    let attachmentDisplaySize : String?
+    public let url : String?
+    public let attachmentName : String?
+    public let attachmentExtension : String?
+    public let attachmentDisplaySize : String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -181,16 +181,16 @@ public struct ReqDetailsAttachmentValueCerqel : Codable, FormValueCerqel {
 
 
 public struct ActionCerqel : Codable {
-    let id : String?
-    let name : String?
-    let label : String?
-    let actionTakenLabel : String?
-    let styleCode : String?
-    let buttonStyleCode : String?
-    let actionCode : String?
-    let isCommentRequired : Bool?
-    let isFormValidateBeforeExecuteActionRequired : Bool?
-    let isAttachmentRequired : Bool?
+    public let id : String?
+    public let name : String?
+    public let label : String?
+    public let actionTakenLabel : String?
+    public let styleCode : String?
+    public let buttonStyleCode : String?
+    public let actionCode : String?
+    public let isCommentRequired : Bool?
+    public let isFormValidateBeforeExecuteActionRequired : Bool?
+    public let isAttachmentRequired : Bool?
     
     enum CodingKeys: String, CodingKey {
 

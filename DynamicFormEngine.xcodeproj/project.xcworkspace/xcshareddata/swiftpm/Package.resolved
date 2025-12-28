@@ -1,5 +1,5 @@
 {
-  "originHash" : "be7832400539e81e991074f0b424975f14543a3e83cac55d2e3e75ef88203adb",
+  "originHash" : "9bc01ca6282b97cdf77e0d9f7b6e6435fe6144390dab8c5e542fb9f6d23a5602",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -101,15 +101,6 @@
       }
     },
     {
-      "identity" : "fittedsheets",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/EslamAbotaleb/FittedSheets",
-      "state" : {
-        "branch" : "main",
-        "revision" : "9ec7283459112c5052423650b9903be4846131d4"
-      }
-    },
-    {
       "identity" : "fscalendar",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/WenchaoD/FSCalendar.git",
@@ -159,8 +150,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
       "state" : {
-        "revision" : "555472fdb20a96127643d48d101ef981a40993b6",
-        "version" : "8.0.1"
+        "revision" : "5e15518eaa4966527140aeeae96dc306f96cf7b8",
+        "version" : "8.0.2"
       }
     },
     {
@@ -384,8 +375,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/RxSwiftCommunity/RxAlamofire.git",
       "state" : {
-        "revision" : "9535b58695b91fb67f56d58d6fd0c76462d7743a",
-        "version" : "6.1.2"
+        "revision" : "ecfa0dd15339f5ea8143233cb7fc664a02ea9d44",
+        "version" : "6.1.0"
       }
     },
     {

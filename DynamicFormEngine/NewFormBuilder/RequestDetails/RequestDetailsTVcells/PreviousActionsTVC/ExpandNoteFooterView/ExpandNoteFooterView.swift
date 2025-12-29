@@ -31,7 +31,11 @@ class ExpandNoteFooterView: UIView {
     }
     
     func create(){
-        Bundle.main.loadNibNamed("ExpandNoteFooterView", owner: self, options: nil)
+        let bundle = Bundle(for: Self.self)
+        guard bundle.loadNibNamed("ExpandNoteFooterView", owner: self, options: nil) != nil else {
+            fatalError("Could not load ExpandNoteFooterView from DynamicFormEngine framework")
+        }
+        
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

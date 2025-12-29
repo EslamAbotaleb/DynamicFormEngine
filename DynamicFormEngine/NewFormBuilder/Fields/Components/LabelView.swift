@@ -44,7 +44,12 @@ class LabelView: UIView {
     }
     
     func commonInit() {
-        Bundle.main.loadNibNamed(contentXibName, owner: self, options: nil)
+//        Bundle.main.loadNibNamed(contentXibName, owner: self, options: nil)
+        let bundle = Bundle(for: Self.self)
+        
+        guard bundle.loadNibNamed(contentXibName, owner: self, options: nil) != nil else {
+            fatalError("Could not load \(contentXibName) from DynamicFormEngine framework")
+        }
         contentView.fixInView(self)
         
         setLabelFont(true)

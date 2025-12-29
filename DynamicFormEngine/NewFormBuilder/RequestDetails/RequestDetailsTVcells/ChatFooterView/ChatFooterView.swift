@@ -43,7 +43,11 @@ class ChatFooterView: UIView {
     }
     
     func create(){
-        Bundle.main.loadNibNamed("ChatFooterView", owner: self, options: nil)
+        let bundle = Bundle(for: Self.self)
+        guard bundle.loadNibNamed("ChatFooterView", owner: self, options: nil) != nil else {
+            fatalError("Could not load ChatFooterView from DynamicFormEngine framework")
+        }
+        
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

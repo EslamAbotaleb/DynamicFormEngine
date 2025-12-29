@@ -69,14 +69,27 @@ class FormMediaItemView: UIView {
     // MARK: - Functions
     
     /// initiating FormMediaItemView
+//    private func commonInit() {
+//        Bundle.main.loadNibNamed("FormMediaItemView", owner: self, options: nil)
+//        addSubview(contentView)
+//        contentView.frame = self.bounds
+//        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+//        layoutIfNeeded()
+//    }
+
     private func commonInit() {
-        Bundle.main.loadNibNamed("FormMediaItemView", owner: self, options: nil)
+        let bundle = Bundle(for: Self.self)
+        
+        guard bundle.loadNibNamed("FormMediaItemView", owner: self, options: nil) != nil else {
+            fatalError("Could not load FormMediaItemView from DynamicFormEngine framework")
+        }
+
         addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.frame = bounds
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         layoutIfNeeded()
     }
-    
+
     
     /// handling ui based on isRequest flag
     /// - Parameters:

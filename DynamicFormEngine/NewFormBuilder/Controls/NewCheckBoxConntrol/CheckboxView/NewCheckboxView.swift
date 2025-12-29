@@ -43,7 +43,12 @@ class NewCheckboxView: UIView {
     // MARK: - Functions
     
     private func commonInit() {
-        Bundle.main.loadNibNamed("NewCheckboxView", owner: self, options: nil)
+//        Bundle.main.loadNibNamed("NewCheckboxView", owner: self, options: nil)
+        let bundle = Bundle(for: Self.self)
+        
+        guard bundle.loadNibNamed("NewCheckboxView", owner: self, options: nil) != nil else {
+            fatalError("Could not load NewCheckboxView from DynamicFormEngine framework")
+        }
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

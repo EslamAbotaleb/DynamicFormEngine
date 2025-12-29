@@ -30,11 +30,12 @@ class SalaryItem : UIView{
       }
 
     private func commonInit() {
-
-        Bundle.main.loadNibNamed(nibName, owner: self)
-
-                self.addSubview(contentView)
-
+        let bundle = Bundle(for: Self.self)
+        guard bundle.loadNibNamed(nibName, owner: self, options: nil) != nil else {
+            fatalError("Could not load \(nibName) from DynamicFormEngine framework")
+        }
+        
+        self.addSubview(contentView)
         contentView.frame = self.bounds
 
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]

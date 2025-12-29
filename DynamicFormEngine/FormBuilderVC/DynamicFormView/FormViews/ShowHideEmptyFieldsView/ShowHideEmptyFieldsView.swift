@@ -36,16 +36,21 @@ class ShowHideEmptyFieldsView: UIView {
         config()
         
     }
-    
+
     func commonInit() {
-        Bundle.main.loadNibNamed("ShowHideEmptyFieldsView", owner: self)
+        let bundle = Bundle(for: Self.self)
+        
+        guard bundle.loadNibNamed("ShowHideEmptyFieldsView", owner: self, options: nil) != nil else {
+            fatalError("Could not load ShowHideEmptyFieldsView from DynamicFormEngine framework")
+        }
+
         self.addSubview(contentView)
         contentView.frame = self.bounds
-        
+        contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+
         configUI()
         handleInitUI()
     }
-    
     
     // handle observation
     func config() {

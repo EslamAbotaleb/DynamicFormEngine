@@ -34,7 +34,7 @@ public class UserAuthoriationHandler: AuthorizationHandler {
     
     public var tokenHeader: [String: String] {
 
-        return ["Authorization": "Bearer " + AuthManager.shared.token ]
+        return ["Authorization": "Bearer " + AuthManagerDynamicForm.shared.token ]
     }
     public  var faceIdPhone: String {
         keychain.get(self.faceIdPhoneKey) ?? ""

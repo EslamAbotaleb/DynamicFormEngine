@@ -33,7 +33,7 @@ public struct cerqel_BasicNetworkServiceDynamicFormImpl: cerqel_NetworkServiceDy
             .do(onError: { err in
                 if let val = err as? AFError, val.responseCode == 401
                 {
-                    guard !(AuthManager.shared.unauthorizedFlag.value ?? false) else { return }
+                    guard !(AuthManagerDynamicForm.shared.unauthorizedFlag.value ?? false) else { return }
                     TokenManager.shared.refreshToken {
                         // Retry the request after token refresh
 

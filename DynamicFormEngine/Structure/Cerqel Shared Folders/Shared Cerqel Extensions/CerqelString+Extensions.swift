@@ -8,7 +8,7 @@
 
 import UIKit
 import CryptoSwift
-import Kingfisher
+internal import Kingfisher
 import Photos
 
 

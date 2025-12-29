@@ -232,7 +232,7 @@ public class AlamofireService: EndpointExecuter {
         for (key, value) in endpoint.auth.clientHeader {
             headers.updateValue(value, forKey: key)
             headers.updateValue("iOS", forKey: "Platform")
-            headers.updateValue(AuthManager.shared.tenant?.tenantId ?? "", forKey: "TenantId")
+            headers.updateValue(AuthManagerDynamicForm.shared.tenant?.tenantId ?? "", forKey: "TenantId")
         }
         return headers
     }
@@ -250,7 +250,7 @@ public class AlamofireService: EndpointExecuter {
             uniqueKeysWithValues: payload.map { ($0.key.rawValue, $0.value) }
         )
         
-        jsonPayload["userId"] = AuthManager.shared.profile.value?.id ?? ""
+        jsonPayload["userId"] = AuthManagerDynamicForm.shared.profile.value?.id ?? ""
         
         // Convert profilePicture array -> single object
         if let arr = jsonPayload["profilePicture"] as? [[String: Any]],
@@ -265,7 +265,7 @@ public class AlamofireService: EndpointExecuter {
         let jsonData = try! JSONSerialization.data(withJSONObject: jsonPayload, options: [])
         let jsonString = String(data: jsonData, encoding: .utf8)!
         
-        if AuthManager.shared.profilePicture.value?.0 != nil {
+        if AuthManagerDynamicForm.shared.profilePicture.value?.0 != nil {
             return [
                 ["key": "data", "value": jsonString, "type": "text"],
                 ["key": "profilePicture", "type": "file"]
@@ -295,7 +295,7 @@ public class AlamofireService: EndpointExecuter {
             if paramType == "text", let paramValue = param["value"] as? String {
                 body += Data("\r\n\r\n\(paramValue)\r\n".utf8)
             } else if paramType == "file",
-                      let image = AuthManager.shared.profilePicture.value?.0,
+                      let image = AuthManagerDynamicForm.shared.profilePicture.value?.0,
                       let fileContent = image.jpegData(compressionQuality: 1.0) {
                 body += Data("; filename=ProfilePicture.jpeg\r\n".utf8)
                 body += Data("Content-Type: image/jpeg\r\n\r\n".utf8)
@@ -314,10 +314,10 @@ public class AlamofireService: EndpointExecuter {
         request.httpBody = body
         
         request.addValue("application/json, text/plain, */*", forHTTPHeaderField: "accept")
-        request.addValue("Bearer \(AuthManager.shared.token)", forHTTPHeaderField: "authorization")
+        request.addValue("Bearer \(AuthManagerDynamicForm.shared.token)", forHTTPHeaderField: "authorization")
         request.addValue("no-cache", forHTTPHeaderField: "cache-control")
         request.addValue(isArabic() ? "ar" : "en", forHTTPHeaderField: "languagecode")
-        request.addValue(AuthManager.shared.tenant?.tenantId ?? "", forHTTPHeaderField: "tenantid")
+        request.addValue(AuthManagerDynamicForm.shared.tenant?.tenantId ?? "", forHTTPHeaderField: "tenantid")
         request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         request.addValue("iOS", forHTTPHeaderField: "Platform")
         

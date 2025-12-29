@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PanModal
+public import PanModal
 
 protocol PushFromPrsentedScreen {
     func push(fileId: String, actionId : Int)
@@ -47,8 +47,10 @@ class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
     
     @IBOutlet weak var tableView: UITableView!{
         didSet {
-            self.tableView.registerCell(idintifier: fileActionCellIdintifier)
-            
+//            self.tableView.registerCell(idintifier: fileActionCellIdintifier)
+            self.tableView.register(UINib(nibName: fileActionCellIdintifier, bundle: Bundle(for: type(of: self))),
+                                    forCellReuseIdentifier: fileActionCellIdintifier)
+
             tableView.estimatedRowHeight = 50.0
             tableView.rowHeight = UITableView.automaticDimension
             

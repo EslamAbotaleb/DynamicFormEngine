@@ -249,8 +249,8 @@ public enum Dynamic_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
         switch self {
         default:
             let head = [
-                "Authorization": "Bearer " + AuthManager.shared.token,
-                "TenantId": AuthManager.shared.tenant?.tenantId ?? "",
+                "Authorization": "Bearer " + AuthManagerDynamicForm.shared.token,
+                "TenantId": AuthManagerDynamicForm.shared.tenant?.tenantId ?? "",
                 "LanguageCode": isArabicCerqel() ? "Ar" : "En",
                 "Platform":"IOS",
                 "Content-Type":"application/json",

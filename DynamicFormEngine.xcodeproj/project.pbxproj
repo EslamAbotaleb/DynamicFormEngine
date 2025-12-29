@@ -43,12 +43,13 @@
 		AA3C31132EF953B600C2778C /* FileActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3C31102EF953B600C2778C /* FileActionCell.xib */; };
 		AA3C31192EF954A900C2778C /* AcknowledgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C31142EF954A900C2778C /* AcknowledgeVC.swift */; };
 		AA3C311A2EF954A900C2778C /* AcknowledgeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3C31172EF954A900C2778C /* AcknowledgeVC.xib */; };
+		AA44701B2F01AC1200ED7813 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = AA44701A2F01AC1200ED7813 /* netfox */; };
 		AA51BD202EF4203B00488B90 /* EmptyTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA51BD002EF4203B00488B90 /* EmptyTVcell.xib */; };
 		AA51BD402EF4203B00488B90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA51BD042EF4203B00488B90 /* Localizable.strings */; };
 		AA51BD7B2EF4203B00488B90 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF42EF4203B00488B90 /* UIView+extensions.swift */; };
 		AA51BD842EF4203B00488B90 /* CerqelUIGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF32EF4203B00488B90 /* CerqelUIGradientView.swift */; };
 		AA51BD992EF4203B00488B90 /* CerqelGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF22EF4203B00488B90 /* CerqelGradient.swift */; };
-		AA51BD9B2EF4203B00488B90 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BD102EF4203B00488B90 /* AuthManager.swift */; };
+		AA51BD9B2EF4203B00488B90 /* AuthManagerDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BD102EF4203B00488B90 /* AuthManagerDynamicForm.swift */; };
 		AA51BD9E2EF4203B00488B90 /* Date+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF62EF4203B00488B90 /* Date+extensions.swift */; };
 		AA51BDAB2EF4203B00488B90 /* String+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF82EF4203B00488B90 /* String+extensions.swift */; };
 		AA51BDAD2EF4203B00488B90 /* CerqelArray+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCEE2EF4203B00488B90 /* CerqelArray+Extensions.swift */; };
@@ -789,7 +790,7 @@
 		AA51BD0C2EF4203B00488B90 /* BaseLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLoading.swift; sourceTree = "<group>"; };
 		AA51BD0D2EF4203B00488B90 /* RouterDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterDynamicForm.swift; sourceTree = "<group>"; };
 		AA51BD0F2EF4203B00488B90 /* LottieHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieHUD.swift; sourceTree = "<group>"; };
-		AA51BD102EF4203B00488B90 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		AA51BD102EF4203B00488B90 /* AuthManagerDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManagerDynamicForm.swift; sourceTree = "<group>"; };
 		AA51BD122EF4203B00488B90 /* ManageMediaAuthorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageMediaAuthorization.swift; sourceTree = "<group>"; };
 		AA51BD132EF4203B00488B90 /* FeatureFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureFlag.swift; sourceTree = "<group>"; };
 		AA7193A52EF4331A00D31A70 /* BaseWireFrameDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireFrameDynamicForm.swift; sourceTree = "<group>"; };
@@ -1412,6 +1413,7 @@
 				AAB7BA1C2EF33491000E4A20 /* EasyTipView in Frameworks */,
 				AAB7BA432EF347AB000E4A20 /* SwiftMessages in Frameworks */,
 				AA9049B42F012F0E00857338 /* FirebaseMessaging in Frameworks */,
+				AA44701B2F01AC1200ED7813 /* netfox in Frameworks */,
 				AAB7BA042EF3318E000E4A20 /* FSPagerView in Frameworks */,
 				AAA6A4A52EF30C7000520357 /* ObjectMapper in Frameworks */,
 				AAA6A4A82EF30CB600520357 /* CryptoSwift in Frameworks */,
@@ -2847,7 +2849,7 @@
 		AAA8098C2EF93EC1001E845F /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				AA51BD102EF4203B00488B90 /* AuthManager.swift */,
+				AA51BD102EF4203B00488B90 /* AuthManagerDynamicForm.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -4233,6 +4235,7 @@
 				AADDBDDE2F015987009145A7 /* RxCocoa */,
 				AADDBDE22F015987009145A7 /* RxRelay */,
 				AADDBDE62F015987009145A7 /* RxSwift */,
+				AA44701A2F01AC1200ED7813 /* netfox */,
 			);
 			productName = DynamicFormEngine;
 			productReference = E47B1BE22B8F5D9D00E22A45 /* DynamicFormEngine.framework */;
@@ -4326,6 +4329,7 @@
 				AAEC9B112F009EC200B449E2 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
 				AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				AADDBDDD2F015987009145A7 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				AA4470192F01AC1200ED7813 /* XCRemoteSwiftPackageReference "netfox" */,
 			);
 			productRefGroup = E47B1BE32B8F5D9D00E22A45 /* Products */;
 			projectDirPath = "";
@@ -4531,7 +4535,7 @@
 				AAADB95C2EF82C3400F696F3 /* AlamofireService.swift in Sources */,
 				AA51BD842EF4203B00488B90 /* CerqelUIGradientView.swift in Sources */,
 				AA51BD992EF4203B00488B90 /* CerqelGradient.swift in Sources */,
-				AA51BD9B2EF4203B00488B90 /* AuthManager.swift in Sources */,
+				AA51BD9B2EF4203B00488B90 /* AuthManagerDynamicForm.swift in Sources */,
 				AA51BD9E2EF4203B00488B90 /* Date+extensions.swift in Sources */,
 				AA51BDAB2EF4203B00488B90 /* String+extensions.swift in Sources */,
 				AA51BDAD2EF4203B00488B90 /* CerqelArray+Extensions.swift in Sources */,
@@ -5168,7 +5172,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -5215,7 +5219,7 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -5304,7 +5308,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -5365,7 +5369,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -5412,7 +5416,7 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -5458,7 +5462,7 @@
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -5540,6 +5544,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA4470192F01AC1200ED7813 /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.21.0;
+			};
+		};
 		AA71963B2EF44A1900D31A70 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -5888,6 +5900,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AA44701A2F01AC1200ED7813 /* netfox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA4470192F01AC1200ED7813 /* XCRemoteSwiftPackageReference "netfox" */;
+			productName = netfox;
+		};
 		AA71963C2EF44A1900D31A70 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA71963B2EF44A1900D31A70 /* XCRemoteSwiftPackageReference "lottie-ios" */;

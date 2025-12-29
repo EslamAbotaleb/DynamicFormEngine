@@ -19,7 +19,7 @@ public class FormBuilderManager: NSObject {
             // Handle the case where navigationController is nil
             return
         }
-//        DFAuthManager.shared.token = token
+//        DFAuthManagerDynamicForm.shared.token = token
 //        navigationController.pushViewController(
 //            DynamicSharedRouter.goTo(viewName: .requestDetails(
 //                Id: Id,
@@ -54,7 +54,7 @@ public class FormBuilderManager: NSObject {
             return
         }
 //        let vc = FormVC(nibName: "FormVC", bundle: Bundle(for: FormVC.self))
-//        DFAuthManager.shared.token = token
+//        DFAuthManagerDynamicForm.shared.token = token
 //        vc.serviceId = serviceId
 //        vc.actionId = actionId
 //        vc.buttonId = buttonId

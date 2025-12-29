@@ -36,7 +36,7 @@ public class Services {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        let token = AuthManager.shared.token
+        let token = AuthManagerDynamicForm.shared.token
         let languageCode = isArabic() ? "Ar" : "En"
         
         request.allHTTPHeaderFields = [
@@ -45,7 +45,7 @@ public class Services {
             "Platform": "IOS",
             "Content-Type": "application/json",
             "charset": "utf-8",
-            "TenantId": AuthManager.shared.tenant?.tenantId ?? ""
+            "TenantId": AuthManagerDynamicForm.shared.tenant?.tenantId ?? ""
         ]
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -176,7 +176,7 @@ public class Services {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
-        let token = AuthManager.shared.token
+        let token = AuthManagerDynamicForm.shared.token
         let languageCode = isArabic() ? "Ar" : "En"
         
         request.allHTTPHeaderFields = [
@@ -185,7 +185,7 @@ public class Services {
             "Platform": "IOS",
             "Content-Type": "application/json",
             "charset": "utf-8",
-            "TenantId": AuthManager.shared.tenant?.tenantId ?? ""
+            "TenantId": AuthManagerDynamicForm.shared.tenant?.tenantId ?? ""
         ]
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -289,7 +289,7 @@ public class Services {
         request.httpMethod = "POST"
         request.httpBody = jsonData
         
-        let token = AuthManager.shared.token
+        let token = AuthManagerDynamicForm.shared.token
         let languageCode = isArabic() ? "Ar" : "En"
         
         request.allHTTPHeaderFields = [
@@ -298,7 +298,7 @@ public class Services {
             "Platform":"IOS",
             "Content-Type":"application/json",
             "charset": "utf-8",
-            "TenantId": AuthManager.shared.tenant?.tenantId ?? ""
+            "TenantId": AuthManagerDynamicForm.shared.tenant?.tenantId ?? ""
         ]
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in

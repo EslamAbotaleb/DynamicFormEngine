@@ -571,7 +571,7 @@ public class RequestDetailsViewModel: BaseVM {
             [weak self] (response) in
             guard let `self` = self else {return}
             self.loadingSubject.onNext(.hide)
-            AuthManager.shared.isInboxRefreshRequired = true
+            AuthManagerDynamicForm.shared.isInboxRefreshRequired = true
             self.actionTakenSuccessfully.accept((true, statusMessage))
         }, onError: {[weak self] (error) in
             guard let `self` = self else {return}
@@ -636,7 +636,7 @@ public class RequestDetailsViewModel: BaseVM {
         
         var request = URLRequest(url: url)
         
-        request.setValue("Bearer " + AuthManager.shared.token,
+        request.setValue("Bearer " + AuthManagerDynamicForm.shared.token,
                          forHTTPHeaderField: "Authorization")
         request.setValue(isArabic() ? "Ar" : "En",
                          forHTTPHeaderField: "LanguageCode")
@@ -673,7 +673,7 @@ public class RequestDetailsViewModel: BaseVM {
         guard let url = URL(string: url) else {return}
         var request = URLRequest(url: url)
         
-        request.setValue("Bearer " + AuthManager.shared.token,
+        request.setValue("Bearer " + AuthManagerDynamicForm.shared.token,
                          forHTTPHeaderField: "Authorization")
         request.setValue(isArabic() ? "Ar" : "En",
                          forHTTPHeaderField: "LanguageCode")
@@ -736,7 +736,7 @@ public class RequestDetailsViewModel: BaseVM {
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig)
         var request = URLRequest(url:fileURL)
-        request.setValue("Bearer " + AuthManager.shared.token,
+        request.setValue("Bearer " + AuthManagerDynamicForm.shared.token,
                          forHTTPHeaderField: "Authorization")
         request.setValue(isArabic() ? "Ar" : "En",
                          forHTTPHeaderField: "LanguageCode")
@@ -1119,7 +1119,7 @@ extension RequestDetailsViewModel {
                     }
                     
                     if item is FormViewModelNumericItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             
                             
                             if item.type == .TextBox {
@@ -1152,7 +1152,7 @@ extension RequestDetailsViewModel {
                     }
                     
                     if item is FormViewModelTextBoxItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defaultAnswer = (item.field?.properties as? TextBoxProperties)?.newDefaultAnswer, defaultAnswer.value != nil {
                                 let answer = TextboxAnswer(val: defaultAnswer.value ?? "", lPrefix: defaultAnswer.prefix, lSuffix: defaultAnswer.suffix, lNote: nil, lAttachments: nil)
                                 formBuilder.sectionObjects[i].items[row].answer = answer
@@ -1171,7 +1171,7 @@ extension RequestDetailsViewModel {
                     }
                     
                     if item is FormViewModelTextAreaItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defualtAnswer = (item.field?.properties as? TextAreaProperties)?.newDefaultAnswer {
                                 let answer = TextAreaAnswer(val: defualtAnswer.value ?? "", htmlVal: defualtAnswer.value ?? "")
                                 formBuilder.sectionObjects[i].items[row].answer = answer
@@ -1328,7 +1328,7 @@ extension RequestDetailsViewModel {
                     }
                     
                     if item is FormViewModelNumericItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defualtAnswer = (item.field?.properties as? NumberProperties)?.newDefaultAnswer {
                                 if defualtAnswer.value != nil {
                                     let answer = BaseAnswerText(val: "\(defualtAnswer.value ?? 0.0)", lNote: nil)
@@ -1352,7 +1352,7 @@ extension RequestDetailsViewModel {
                     }
                     
                     if item is FormViewModelTextBoxItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defaultAnswer = (item.field?.properties as? TextBoxProperties)?.newDefaultAnswer, defaultAnswer.value != nil {
                                 let answer = TextboxAnswer(val: defaultAnswer.value ?? "", lPrefix: defaultAnswer.prefix, lSuffix: defaultAnswer.suffix, lNote: nil, lAttachments: nil)
                                 formBuilder.tableSectionObjects[i].items[0].answer = answer
@@ -1370,7 +1370,7 @@ extension RequestDetailsViewModel {
                     }
                     
                     if item is FormViewModelTextAreaItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defualtAnswer = (item.field?.properties as? TextAreaProperties)?.newDefaultAnswer {
                                 let answer = TextAreaAnswer(val: defualtAnswer.value ?? "", htmlVal: defualtAnswer.htmlValue ?? "", lNote: nil, lAttachments: nil)
                                 formBuilder.tableSectionObjects[i].items[0].answer = answer

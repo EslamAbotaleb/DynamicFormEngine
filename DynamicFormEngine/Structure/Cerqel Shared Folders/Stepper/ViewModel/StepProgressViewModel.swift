@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Combine
 
 public class StepProgressViewModel: ObservableObject {
     @Published var totalPages: [FormViewModelItem] = []
@@ -39,7 +40,11 @@ public class StepProgressViewModel: ObservableObject {
 
     // Activates all steps up to the given index
     public func unActiveSteps() {
-        self.totalPages = self.totalPages.map{var step = $0; step.isActive = false; return step}
+        self.totalPages = self.totalPages.map{
+            let step = $0;
+            step.isActive = false;
+            return step
+        }
 
 
     }

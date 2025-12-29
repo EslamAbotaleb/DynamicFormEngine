@@ -273,7 +273,7 @@ class NewTextBoxTVCell: ParentFieldTableViewCell {
         handleSubType(item.field?.properties?.subType)
         emptyValues()
 
-        if AuthManager.shared.newSubmissionRetreiveEnabled {
+        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
             if let defaultAnswer = (item.field?.properties as? TextBoxProperties)?.newDefaultAnswer{
                 textFieldValue = defaultAnswer.value ?? ""
                 prefixValue = defaultAnswer.prefix ?? ""

@@ -61,7 +61,7 @@ extension NewChatTVCell: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatTVcell.cerqel_identifier, for: indexPath) as! ChatTVcell
-        cell.configure(chatList[indexPath.row], empMail: AuthManager.shared.profile.value?.mail ?? "" ?? "")
+        cell.configure(chatList[indexPath.row], empMail: AuthManagerDynamicForm.shared.profile.value?.mail ?? "" ?? "")
         cell.attachmentTapped = {[weak self] id in
             guard let `self` = self else {return}
             if let action = self.attachmentTapped {
@@ -73,7 +73,7 @@ extension NewChatTVCell: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatTVcell.cerqel_identifier) as! ChatTVcell
-        cell.configure(chatList[indexPath.row], empMail: AuthManager.shared.profile.value?.mail ?? "")
+        cell.configure(chatList[indexPath.row], empMail: AuthManagerDynamicForm.shared.profile.value?.mail ?? "")
         cell.layoutIfNeeded() // Ensure the cell has been laid out
         let height = cell.contentView.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
         return height

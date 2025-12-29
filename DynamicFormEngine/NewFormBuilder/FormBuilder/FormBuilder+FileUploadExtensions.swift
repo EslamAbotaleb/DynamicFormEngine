@@ -166,7 +166,7 @@ extension FormBuilder {
         
         request.httpMethod = "POST"
         request.addValue("application/json, text/plain, */*", forHTTPHeaderField: "accept")
-        request.addValue("Bearer \(AuthManager.shared.token)", forHTTPHeaderField: "authorization")
+        request.addValue("Bearer \(AuthManagerDynamicForm.shared.token)", forHTTPHeaderField: "authorization")
         request.addValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         // Add other headers as needed…
         

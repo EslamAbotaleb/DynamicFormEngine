@@ -11,7 +11,7 @@ public import RxCocoa
 import RxRelay
 internal import RxSwift
 import JGProgressHUD
-import Kingfisher
+internal import Kingfisher
 import SideMenu
 import Reachability
 import Toast
@@ -162,7 +162,7 @@ class CerqelBaseWireFrameDynamicForm<T: CerqelBaseViewModel>: BottomSheetVCCerqe
     /// To be removed from other view controllers (will be used in main tabs only)
     func addCircleProfileToNavigation(title: String = "", notificationCounter: Int) {
         self.title = title
-        guard let profilePhoto = AuthManager.shared.profile.value?.photo else {
+        guard let profilePhoto = AuthManagerDynamicForm.shared.profile.value?.photo else {
             addDefaultProfileNavigation(notificationCounter: notificationCounter)
             return
         }
@@ -358,7 +358,7 @@ class CerqelBaseWireFrameDynamicForm<T: CerqelBaseViewModel>: BottomSheetVCCerqe
     }
     
     func addCircleProfileToNavigationToMainScreens() {
-        guard let profilePhoto = AuthManager.shared.profile.value?.photo.value else {
+        guard let profilePhoto = AuthManagerDynamicForm.shared.profile.value?.photo.value else {
             let user = UIBarButtonItem.init(image: UIImage(named: "User"), style: .plain, target: self, action: #selector(self.goToProfileFromNavigation))
             self.navigationItem.leftBarButtonItems = [user]
             return

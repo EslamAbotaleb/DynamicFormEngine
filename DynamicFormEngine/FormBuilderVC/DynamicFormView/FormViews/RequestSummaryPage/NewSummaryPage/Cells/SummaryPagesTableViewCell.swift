@@ -79,7 +79,9 @@ class SummaryPagesTableViewCell: UITableViewCell {
     /// Registers all necessary table view cells.
     private func registerCells() {
         tableView.tableFooterView = UIView()
-        tableView.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
+        tableView.registerHaederFooterCell(viewType: ExpandedSectionHeader.self)
+
+//        tableView.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
         tableView.register(LabelSheetWithSwitchTVCell.cerqel_nib, forCellReuseIdentifier: LabelSheetWithSwitchTVCell.cerqel_identifier)
         tableView.register(NewTextBoxTVCell.cerqel_nib, forCellReuseIdentifier: NewTextBoxTVCell.cerqel_identifier)
         tableView.register(NewTextAreaTVcell.cerqel_nib, forCellReuseIdentifier: NewTextAreaTVcell.cerqel_identifier)

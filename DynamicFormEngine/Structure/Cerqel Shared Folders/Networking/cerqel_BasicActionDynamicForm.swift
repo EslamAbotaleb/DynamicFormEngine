@@ -25,6 +25,7 @@ public enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
     case fetchSubServices(serviceId: String)
     case fetchAwaitingRequests
     case performSearchFromSearchControlInFormBuilder(url: String)
+    case fetchProfile
     case searchList(payload:SearchPayload)
     case none
 
@@ -91,7 +92,8 @@ public enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
             return isMock ? "" : "Request/GetById/\(id)"
         case .taskDetails(id: let id):
             return isMock ? "" : "Tasks/GetById/\(id)"
-            
+        case .fetchProfile:
+            return "UserProfile/User/me"
         case .fetchAllService:
             return "SelfServices/GetAll"
         case .fetchRequestChat(let id):
@@ -133,8 +135,8 @@ public enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
         switch self {
         default:
             var head = [
-                "Authorization": "Bearer " + AuthManager.shared.token ,
-                "TenantId": AuthManager.shared.tenant?.tenantId ?? "",
+                "Authorization": "Bearer " + AuthManagerDynamicForm.shared.token ,
+                "TenantId": AuthManagerDynamicForm.shared.tenant?.tenantId ?? "",
                 "LanguageCode": isArabicCerqel() ? "Ar" : "En",
                 "Platform":"IOS",
                 "Content-Type":"application/json",
@@ -181,7 +183,7 @@ public enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
        
         case .performSearchFromSearchControlInFormBuilder:
             return .none
-        case .searchList:
+            case .fetchProfile, .searchList:
             return .userManager
     
         default:

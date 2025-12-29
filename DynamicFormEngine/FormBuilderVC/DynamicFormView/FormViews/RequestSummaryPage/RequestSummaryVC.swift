@@ -221,11 +221,11 @@ public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel>
                 self.navigationController?.popViewController(animated: true)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     if isRequest {
-                        AuthManager.shared.isTasks = false
+                        AuthManagerDynamicForm.shared.isTasks = false
                     } else {
-                        AuthManager.shared.isTasks = true
+                        AuthManagerDynamicForm.shared.isTasks = true
                     }
-                    AuthManager.shared.isPopUpFromFormBuilder?(requestId)
+                    AuthManagerDynamicForm.shared.isPopUpFromFormBuilder?(requestId)
                 }
             }
             self.viewModel.successBottomSheetServices(title: successData.title)
@@ -236,7 +236,8 @@ public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel>
     /// Registering tableView's cells
     private func registerCells(){
         itemsTV.tableFooterView = UIView()
-        itemsTV.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
+//        itemsTV.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
+        itemsTV.registerHaederFooterCell(viewType: ExpandedSectionHeader.self)
 
         itemsTV.register(LabelSheetWithSwitchTVCell.cerqel_nib, forCellReuseIdentifier: LabelSheetWithSwitchTVCell.cerqel_identifier)
         itemsTV.register(NewTextBoxTVCell.cerqel_nib, forCellReuseIdentifier: NewTextBoxTVCell.cerqel_identifier)
@@ -271,7 +272,7 @@ public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel>
     
     @IBAction func submitBtnTapped(_ sender: Any) {
         cerqel_HUD.showHUD()
-        if AuthManager.shared.newSubmissionRetreiveEnabled {
+        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
             formBuilder.createPayloadForSummaryPage(actionId: actionId, fromSummary: true,isEditable: isEditable, isApproverForm: isApproverForm, reqIdApprover: viewModel.reqIdForApprover ,sections: formBuilder.sectionObjects) {[weak self] payload in
                 guard let `self` = self else {return}
                 if let pload = payload {

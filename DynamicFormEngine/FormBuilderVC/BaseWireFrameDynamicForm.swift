@@ -11,7 +11,7 @@ public import RxCocoa
 import RxRelay
 public import RxSwift
 import JGProgressHUD
-import Kingfisher
+internal import Kingfisher
 import SideMenu
 import Reachability
 import PopupDialog
@@ -135,7 +135,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
     /// To be removed from other view controllers (will be used in main tabs only)
     public func addCircleProfileToNavigation(title: String = "", notificationCounter: Int) {
         self.title = title
-        guard let profilePhoto = AuthManager.shared.profile.value?.photo.value else {
+        guard let profilePhoto = AuthManagerDynamicForm.shared.profile.value?.photo.value else {
             addDefaultProfileNavigation(notificationCounter: notificationCounter)
             return
         }
@@ -219,7 +219,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
     
     private func addDefaultProfileNavigation(notificationCounter: Int) {
         let userImage = UIImageView()
-        handleImageWithKFCerqel(imgUrl: "", img: userImage, name: AuthManager.shared.profile.value?.name ?? "", color: primaryMain.withAlphaComponent(0.1), textColor: primaryMain)
+        handleImageWithKFCerqel(imgUrl: "", img: userImage, name: AuthManagerDynamicForm.shared.profile.value?.name ?? "", color: primaryMain.withAlphaComponent(0.1), textColor: primaryMain)
         
         /// left profile button
         userImage.makeRounded(borderColor: primaryMain)
@@ -342,7 +342,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
     }
      
     public  func addCircleProfileToNavigationToMainScreens() {
-         guard let profilePhoto = AuthManager.shared.profile.value?.photo/*profilePicture*/ else {
+         guard let profilePhoto = AuthManagerDynamicForm.shared.profile.value?.photo/*profilePicture*/ else {
              let user = UIBarButtonItem.init(image: UIImage(named: "User"), style: .plain, target: self, action: #selector(self.goToProfileFromNavigation))
              self.navigationItem.leftBarButtonItems = [user]
              return

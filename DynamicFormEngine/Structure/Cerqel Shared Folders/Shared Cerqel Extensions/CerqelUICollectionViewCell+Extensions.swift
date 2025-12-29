@@ -14,18 +14,7 @@ extension UICollectionViewCell{
     }
     
     static public var cerqel_nib : UINib{
-        return UINib(nibName: cerqel_identifier, bundle: nil)
+        return UINib(nibName: cerqel_identifier, bundle: Bundle(for: Self.self))
     }
     
 }
-extension UITableViewHeaderFooterView{
-    static public var cerqel_identifier: String {
-        return String(describing: self)
-    }
-    
-    static public var cerqel_nib : UINib{
-        return UINib(nibName: cerqel_identifier, bundle: nil)
-    }
-    
-}
-

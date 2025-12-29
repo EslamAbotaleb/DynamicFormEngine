@@ -534,7 +534,7 @@ extension BackwardRequestDetailsView: UITableViewDelegate, UITableViewDataSource
                 if viewModel.chatList.value?.count ?? 0 > 0 {
                     guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatTVcell.cerqel_identifier, for: indexPath) as? ChatTVcell else {return UITableViewCell()}
                     let dto = viewModel.chatList.value?[indexPath.row]
-                    cell.configure(dto, empMail: AuthManager.shared.profile.value?.mail ?? "")
+                    cell.configure(dto, empMail: AuthManagerDynamicForm.shared.profile.value?.mail ?? "")
                     cell.attachmentTapped = {[weak self] id in
                         guard let `self` = self else {return}
                         let url = "\(cerqel_Environment.Api_Base_URL)Storage/api/FileManager/Download/\(id)"

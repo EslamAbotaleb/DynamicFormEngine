@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Toast
+public import Toast
 
 public class ToastManager {
     

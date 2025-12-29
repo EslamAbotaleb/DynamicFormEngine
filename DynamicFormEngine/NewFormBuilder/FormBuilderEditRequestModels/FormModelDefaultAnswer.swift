@@ -265,7 +265,7 @@ public class DefaultDateTimeAnswer: DefaultBaseAnswer {
         name <- map["name"]
         rowIndex <- map["rowIndex"]
         id <- map["id"]
-        if AuthManager.shared.newSubmissionRetreiveEnabled {
+        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
             value <- (map["value"], DateStringToRangeTransform())
         } else {
             value <- map["value"]

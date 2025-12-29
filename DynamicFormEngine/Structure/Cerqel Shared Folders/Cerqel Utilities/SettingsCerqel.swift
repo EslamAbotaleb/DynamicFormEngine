@@ -12,7 +12,7 @@ import PopupDialog
 import Network
 import Toast
 import JGProgressHUD
-import Kingfisher
+public import Kingfisher
 import Photos
 import UIKit
 
@@ -30,8 +30,8 @@ public var appsDicCerqel: [String : String] = [
 ]
 
 public let globalHeaders = [
-    "Authorization": "Bearer " + AuthManager.shared.token,
-//    "TenantId": AuthManager.shared.tenant?.tenantId ?? "",
+    "Authorization": "Bearer " + AuthManagerDynamicForm.shared.token,
+    "TenantId": AuthManagerDynamicForm.shared.tenant?.tenantId ?? "",
     "LanguageCode": isArabicCerqel() ? "Ar" : "En",
     "Platform":"IOS",
     "Content-Type":"application/json",
@@ -42,7 +42,7 @@ public let globalHeaders = [
 public let modifier = AnyModifier { request in
     var r = request
 
-    let token = AuthManager.shared.token
+    let token = AuthManagerDynamicForm.shared.token
     r.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
     return r

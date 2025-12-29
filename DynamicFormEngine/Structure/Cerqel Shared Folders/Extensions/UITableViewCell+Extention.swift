@@ -20,7 +20,7 @@ import UIKit
 //}
 extension UITableView {
     func registerCell(nibName: String, cellId: String) {
-        self.register(UINib(nibName: nibName, bundle: nil), forCellReuseIdentifier: cellId)
+        self.register(UINib(nibName: nibName, bundle: Bundle(for: Self.self)), forCellReuseIdentifier: cellId)
     }
     
     func scrollToBottom(){
@@ -41,6 +41,18 @@ extension UITableViewCell{
     }
     
     static var nib : UINib{
-        return UINib(nibName: identifier, bundle: nil)
+        return UINib(nibName: identifier, bundle: Bundle(for: Self.self))
     }
 }
+
+extension UITableViewHeaderFooterView{
+    static public var cerqel_identifier: String {
+        return String(describing: self)
+    }
+    
+    static public var cerqel_nib : UINib{
+        return UINib(nibName: cerqel_identifier, bundle: Bundle(for: Self.self))
+    }
+    
+}
+

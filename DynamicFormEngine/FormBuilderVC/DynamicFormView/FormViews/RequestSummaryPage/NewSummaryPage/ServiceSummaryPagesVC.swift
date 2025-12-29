@@ -114,7 +114,9 @@ class ServiceSummaryPagesVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     /// Configures the table view's appearance and registers cells.
     private func configureTableView() {
         tableView.tableFooterView = UIView()
-        tableView.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
+        tableView.registerHaederFooterCell(viewType: ExpandedSectionHeader.self)
+
+//        tableView.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
         tableView.register(SummaryPagesTableViewCell.cerqel_nib, forCellReuseIdentifier: SummaryPagesTableViewCell.cerqel_identifier)
     }
     
@@ -198,7 +200,7 @@ class ServiceSummaryPagesVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
             self?.handlePayloadCreation(payload)
         }
         
-        if AuthManager.shared.newSubmissionRetreiveEnabled {
+        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
             formBuilder.createPayloadForSummaryPage(
                 actionId: actionId,
                 fromSummary: true,
@@ -299,8 +301,8 @@ class ServiceSummaryPagesVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     private func handleNavigationToRequests(isRequest: Bool, requestId: String) {
         navigationController?.popViewController(animated: true)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            AuthManager.shared.isTasks = !isRequest
-            AuthManager.shared.isPopUpFromFormBuilder?(requestId)
+            AuthManagerDynamicForm.shared.isTasks = !isRequest
+            AuthManagerDynamicForm.shared.isPopUpFromFormBuilder?(requestId)
         }
     }
     

@@ -1,5 +1,5 @@
 import UIKit
-import EzPopup
+public import EzPopup
 import Expression
 import SwiftMessages
 public import RxCocoa

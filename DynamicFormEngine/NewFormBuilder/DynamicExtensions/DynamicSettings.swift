@@ -9,7 +9,7 @@
 import UIKit
 internal import MOLH
 import Network
-import Toast
+public import Toast
 import JGProgressHUD
 
 public func openAttachment(withURLString: String) {

@@ -1,5 +1,5 @@
 //
-//  AuthManager.swift
+//  AuthManagerDynamicForm.swift
 //  GAZT
 //
 //  Created by iSlam AbdelAziz on 12/20/20.
@@ -10,34 +10,34 @@ import Foundation
 public import RxCocoa
 public import RxSwift
 public import MOLH
-import SideMenu
+public import SideMenu
 import UIKit
 
-class AuthManager {
+public class AuthManagerDynamicForm {
 
     private let service: cerqel_NetworkServiceDynamicForm = cerqel_BasicNetworkServiceDynamicFormImpl.shared
     private let disposeBag = DisposeBag()
-    var isTasks = true
-    var isAuthorized = false
-    var userProfile = ""
-    var isPopUpFromFormBuilder:((String) -> ())?
-    var items: [[FormViewModelItem]] = []
-    static var shared = AuthManager()
+    public var isTasks = true
+    public var isAuthorized = false
+    public var userProfile = ""
+    public var isPopUpFromFormBuilder:((String) -> ())?
+    public var items: [[FormViewModelItem]] = []
+    static public var shared = AuthManagerDynamicForm()
     var isRequestSubmitted = false
-    var token: String = ""{
+    public var token: String = ""{
         didSet{
             UserDefaults.standard.set(token, forKey: "Token")
         }
     }
     
     var modules: [String:Any]? = [String:Any]()
-    var refreshToken: String = ""{
+    public var refreshToken: String = ""{
         didSet{
             UserDefaults.standard.set(refreshToken, forKey: "RefreshToken")
         }
     }
 
-    var is_single_tenant: Bool {
+   public var is_single_tenant: Bool {
         get {
             UserDefaults.standard.bool(forKey: "is_single_tenant")
         }
@@ -47,7 +47,7 @@ class AuthManager {
 
     }
 
-    var tenant: TenantListDTO? {
+    public var tenant: TenantListDTO? {
         get {
             guard let data = UserDefaults.standard.data(forKey: "tenant") else { return nil }
             let tenant = try? JSONDecoder().decode(TenantListDTO.self, from: data)
@@ -62,12 +62,14 @@ class AuthManager {
     var unauthorizedFlag: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
     var isInboxRefreshRequired = false
     var optionsRetreived = [MCQOption]()
-    public var profile: BehaviorRelay<ModelUserProfileDataCerqel?> = BehaviorRelay(value: nil)
+//    public var profile: BehaviorRelay<ModelUserProfileDataCerqel?> = BehaviorRelay(value: nil)
+    public  var profile: DynamicObjects<ModelUserProfileDataCerqel?> = DynamicObjects( nil)
+
     var profilePicture: DynamicObjects<(UIImage?,Data?)?> = DynamicObjects(nil)
 
     var newSubmissionRetreiveEnabled = true
     
-    init() {
+    public init() {
         self.token = UserDefaults.standard.string(forKey: "Token") ?? ""
         self.refreshToken = UserDefaults.standard.string(forKey: "RefreshToken") ?? ""
     }
@@ -75,7 +77,7 @@ class AuthManager {
     func UpdateLangAndRestartApp(selectedLang: Int, cancelCompletion: @escaping(()->()) = {}){
         let alert = UIAlertController(title: "Change Language".localized, message: "App Needs to Restart".localized, preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok".localized, style: .default) { (_) in
-//            AuthManager.shared.tenant?.isSelected = false
+            AuthManagerDynamicForm.shared.tenant?.isSelected = false
             if selectedLang == 1, !isArabicCerqel() { // Do Arabic
                 MOLH.setLanguageTo("ar")
             }else if selectedLang == 2, isArabicCerqel() { // Do English
@@ -103,6 +105,18 @@ class AuthManager {
         SideMenuController.preferences.basic.enablePanGesture = true
         SideMenuController.preferences.basic.supportedOrientations = .portrait
         SideMenuController.preferences.basic.shouldRespectLanguageDirection = true
+    }
+    
+    func fetchProfile(){
+        self.service.load(cerqel_CodableResponseObjectDynamicForm<ModelUserProfileDataCerqel>(action: cerqel_BasicActionDynamicForm.fetchProfile)).subscribe(onNext: {
+            [weak self] (response) in
+            if let obj = response.item?.data{
+                self?.profile.value = obj
+            }
+        }, onError: { (error) in
+            print(error)
+
+        }).disposed(by: self.disposeBag)
     }
     
     func decode(jwtToken jwt: String) -> [String: Any]? {

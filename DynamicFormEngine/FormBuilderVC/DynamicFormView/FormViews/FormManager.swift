@@ -2681,7 +2681,7 @@ class FormManager {
         
         var request = URLRequest(url: url)
         
-        request.setValue("Bearer " + AuthManager.shared.token,
+        request.setValue("Bearer " + AuthManagerDynamicForm.shared.token,
                          forHTTPHeaderField: "Authorization")
         request.setValue(isArabic() ? "Ar" : "En",
                          forHTTPHeaderField: "LanguageCode")
@@ -2719,7 +2719,7 @@ class FormManager {
         guard let url = URL(string: url) else {return}
         var request = URLRequest(url: url)
         
-        request.setValue("Bearer " + AuthManager.shared.token,
+        request.setValue("Bearer " + AuthManagerDynamicForm.shared.token,
                          forHTTPHeaderField: "Authorization")
         request.setValue(isArabic() ? "Ar" : "En",
                          forHTTPHeaderField: "LanguageCode")
@@ -2783,7 +2783,7 @@ class FormManager {
         let sessionConfig = URLSessionConfiguration.default
         let session = URLSession(configuration: sessionConfig)
         var request = URLRequest(url:fileURL)
-        request.setValue("Bearer " + AuthManager.shared.token,
+        request.setValue("Bearer " + AuthManagerDynamicForm.shared.token,
                          forHTTPHeaderField: "Authorization")
         request.setValue(isArabic() ? "Ar" : "En",
                          forHTTPHeaderField: "LanguageCode")
@@ -3423,7 +3423,7 @@ extension FormManager {
                     }
                     
                     if item is FormViewModelNumericItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defualtAnswer = (item.field?.properties as? NumberProperties)?.newDefaultAnswer {
                                 if defualtAnswer.value != nil {
                                     let answer = BaseAnswerText(val: "\(defualtAnswer.value ?? 0.0)", lNote: nil)
@@ -3453,7 +3453,7 @@ extension FormManager {
                     }
                     
                     if item is FormViewModelTextBoxItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defaultAnswer = (item.field?.properties as? TextBoxProperties)?.newDefaultAnswer, defaultAnswer.value != nil {
                                 let answer = TextboxAnswer(val: defaultAnswer.value ?? "", lPrefix: defaultAnswer.prefix, lSuffix: defaultAnswer.suffix, lNote: nil, lAttachments: nil)
                                 self.fieldValueChangedAtTableFields(vc: vc, i, row: 0, value: answer, isError: false, reload: false)
@@ -3477,7 +3477,7 @@ extension FormManager {
                     }
                     
                     if item is FormViewModelTextAreaItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defualtAnswer = (item.field?.properties as? TextAreaProperties)?.newDefaultAnswer {
                                 let answer = TextAreaAnswer(val: defualtAnswer.value ?? "", htmlVal: defualtAnswer.htmlValue ?? "", lNote: nil, lAttachments: nil)
                                 self.fieldValueChangedAtTableFields(vc: vc, i, row: 0, value: answer, isError: false, reload: false)
@@ -3737,7 +3737,7 @@ extension FormManager {
                     }
                     
                     if item is FormViewModelNumericItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             
                             
                             if item.type == .TextBox {
@@ -3779,7 +3779,7 @@ extension FormManager {
                     }
                     
                     if item is FormViewModelTextBoxItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defaultAnswer = (item.field?.properties as? TextBoxProperties)?.newDefaultAnswer, defaultAnswer.value != nil {
                                 let answer = TextboxAnswer(val: defaultAnswer.value ?? "", lPrefix: defaultAnswer.prefix, lSuffix: defaultAnswer.suffix, lNote: nil, lAttachments: nil)
                                 fieldValueChangedAt(vc: vc, sectionObjects: sectionObjects, submitButton: submitButton, i, row: row, value: answer, isError: false, reload: false, userInteracted: false)
@@ -3805,7 +3805,7 @@ extension FormManager {
                     }
                     
                     if item is FormViewModelTextAreaItem {
-                        if AuthManager.shared.newSubmissionRetreiveEnabled {
+                        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defualtAnswer = (item.field?.properties as? TextAreaProperties)?.newDefaultAnswer {
                                 let answer = TextAreaAnswer(val: defualtAnswer.value ?? "", htmlVal: defualtAnswer.value ?? "")
                                 fieldValueChangedAt(vc: vc, sectionObjects: sectionObjects, submitButton: submitButton, i, row: row, value: answer, isError: false, reload: false, userInteracted: false)

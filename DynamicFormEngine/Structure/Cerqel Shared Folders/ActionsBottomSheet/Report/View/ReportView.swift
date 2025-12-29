@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PanModal
+public import PanModal
 
 class FileItem : BaseItem {
     var fileId: String
@@ -23,8 +23,10 @@ class ReportView: BaseView<ReportViewModel, FileItem> {
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var tableView: UITableView!{
         didSet{
-            self.tableView.registerCell(idintifier: RadioButtonTVCell.cerqel_identifier)
-            self.tableView.registerHaederFooterCell(idintifier: "ReportFooterTVCell")
+//            self.tableView.registerCell(idintifier: RadioButtonTVCell.cerqel_identifier)
+//            self.tableView.registerHaederFooterCell(idintifier: "ReportFooterTVCell")
+            self.tableView.registerCell(cellType: RadioButtonTVCell.self)
+            self.tableView.registerHaederFooterCell(viewType: ReportFooterTVCell.self)
         }
     }
     private let refreshControl = UIRefreshControl()

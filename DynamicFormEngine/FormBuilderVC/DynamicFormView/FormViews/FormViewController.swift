@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import EzPopup
+public import EzPopup
 import Expression
 import SwiftMessages
 public import RxCocoa
@@ -323,8 +323,9 @@ class FormViewController: FormBaseViewController {
     public func setupTableView() {
         for tableView in tableViewsCollection {
             tableView.tableFooterView = UIView()
-            tableView.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
-            
+//            tableView.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
+            tableView.registerHaederFooterCell(viewType: ExpandedSectionHeader.self)
+
             tableView.register(LabelSheetWithSwitchTVCell.cerqel_nib, forCellReuseIdentifier: LabelSheetWithSwitchTVCell.cerqel_identifier)
             tableView.register(NewTextBoxTVCell.cerqel_nib, forCellReuseIdentifier: NewTextBoxTVCell.cerqel_identifier)
             tableView.register(NewTextAreaTVcell.cerqel_nib, forCellReuseIdentifier: NewTextAreaTVcell.cerqel_identifier)

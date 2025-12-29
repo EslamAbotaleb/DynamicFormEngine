@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import PanModal
+public import PanModal
 import AVFoundation
 import AVKit
 

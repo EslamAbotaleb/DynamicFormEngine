@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Kingfisher
+internal import Kingfisher
 import SDWebImage
 import SDWebImageSVGCoder
 
@@ -24,7 +24,7 @@ extension UIImageView {
         
         // Add Authorization via custom downloader request modifier
         let downloader = SDWebImageDownloader.shared
-        let token = AuthManager.shared.token
+        let token = AuthManagerDynamicForm.shared.token
         downloader.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         
         // Define rendering context for SVG with resizing
@@ -69,7 +69,7 @@ extension UIImageView {
         let modifier = AnyModifier { request in
             var r = request
 
-            let token = AuthManager.shared.token
+            let token = AuthManagerDynamicForm.shared.token
             r.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
 
             return r

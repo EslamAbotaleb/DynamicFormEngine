@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+internal import Kingfisher
 
 extension FormViewController: UITableViewDataSource, UITableViewDelegate {
     

@@ -14,6 +14,6 @@ extension UITableViewCell{
     }
     
     static public var cerqel_nib : UINib{
-        return UINib(nibName: cerqel_identifier, bundle: nil)
+        return UINib(nibName: cerqel_identifier, bundle: Bundle(for: Self.self))
     }
 }

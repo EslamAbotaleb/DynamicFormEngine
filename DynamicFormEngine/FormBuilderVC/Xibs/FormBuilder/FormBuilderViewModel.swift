@@ -367,7 +367,7 @@ public class FormBuilderViewModel: BaseViewModel {
             payload.formCode = self.formData.value?.requestForm?.formCode
             payload.formVersion = self.formData.value?.formVersion
 //            payload.onBehalf = true
-            payload.createdForUsername = AuthManager.shared.profile.value?.name
+            payload.createdForUsername = AuthManagerDynamicForm.shared.profile.value?.name
             var payloadArr: [[String: Any]] = []
             for ctl in arrayOfControls{
                 if ctl.isHidden{

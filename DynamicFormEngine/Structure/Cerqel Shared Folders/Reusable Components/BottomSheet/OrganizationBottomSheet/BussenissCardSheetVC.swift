@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PanModal
+public import PanModal
 /*
 class EmpolyeeItem: BaseItem {
     var empolyee: OrgModel

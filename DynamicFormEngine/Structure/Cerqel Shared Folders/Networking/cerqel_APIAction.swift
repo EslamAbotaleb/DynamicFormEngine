@@ -60,10 +60,10 @@ extension cerqel_APIActionDynamicForm {
         if isMock{
             switch basicAction {
             case .requestDetails(_):
-                return AuthManager.shared.newSubmissionRetreiveEnabled ?  "https://demo2590693.mockable.io/requestDetails" /* new structure */ : "https://demo2590693.mockable.io/requestDetails" /* old structure */
+                return AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled ?  "https://demo2590693.mockable.io/requestDetails" /* new structure */ : "https://demo2590693.mockable.io/requestDetails" /* old structure */
     
             case .taskDetails(_):
-                return AuthManager.shared.newSubmissionRetreiveEnabled ? "https://demo2590693.mockable.io/requestDetails" /* new structure */ : "https://demo2590693.mockable.io/requestDetails" /* old structure */
+                return AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled ? "https://demo2590693.mockable.io/requestDetails" /* new structure */ : "https://demo2590693.mockable.io/requestDetails" /* old structure */
             default:
                 return ""
             }

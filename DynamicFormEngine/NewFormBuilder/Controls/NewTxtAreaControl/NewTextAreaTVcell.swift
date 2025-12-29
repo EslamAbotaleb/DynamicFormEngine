@@ -92,7 +92,7 @@ class NewTextAreaTVcell: ParentFieldTableViewCell {
 //            textView.text = defaultValue.first
 //            checkTextValueAndNotify(textView.text)
 //        }
-        if AuthManager.shared.newSubmissionRetreiveEnabled {
+        if AuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
             if let defaultValue = (item.field?.properties as? TextAreaProperties)?.newDefaultAnswer?.value {
                 item.answer = TextAreaAnswer(val: defaultValue, htmlVal: defaultValue)
                 textView.text = defaultValue

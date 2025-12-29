@@ -32,7 +32,7 @@ extension FormBuilder {
 
         payload.formVersion = self.formVersionId
         payload.createdForUsername =
-            AuthManager.shared.profile.value?.name ?? ""
+        AuthManagerDynamicForm.shared.profile.value?.name ?? ""
         var payloadArr: [[String: Any]] = []
 
         for section in sections {
@@ -521,7 +521,7 @@ extension FormBuilder {
 
         payload.formVersion = self.formVersionId
         payload.createdForUsername =
-            AuthManager.shared.profile.value?.name ?? ""
+            AuthManagerDynamicForm.shared.profile.value?.name ?? ""
         var payloadArr: [[String: Any]] = []
 
         for section in sections {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PanModal
+public import PanModal
 
 public class BaseListItem: BaseItem,Equatable {
     static public func == (lhs: BaseListItem, rhs: BaseListItem) -> Bool {
@@ -43,10 +43,22 @@ public class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
     @IBOutlet weak var closeIcon: UIButton!
     @IBOutlet weak var tableView: UITableView!{
         didSet {
-            self.tableView.registerCell(idintifier: RadioCell.cerqel_identifier)
-            self.tableView.registerCell(idintifier: ActionBaseListTableViewCell.cerqel_identifier)
-            self.tableView.registerCell(idintifier: CheckBoxCell.cerqel_identifier)
-            self.tableView.registerCell(idintifier: ProfilePhoneTypesCell.cerqel_identifier)
+//            self.tableView.registerCell(idintifier: RadioCell.cerqel_identifier)
+//            self.tableView.registerCell(idintifier: ActionBaseListTableViewCell.cerqel_identifier)
+//            self.tableView.registerCell(idintifier: CheckBoxCell.cerqel_identifier)
+//            self.tableView.registerCell(idintifier: ProfilePhoneTypesCell.cerqel_identifier)
+            self.tableView.register(UINib(nibName: RadioCell.cerqel_identifier, bundle: Bundle(for: type(of: self))),
+                                    forCellReuseIdentifier: RadioCell.cerqel_identifier)
+
+            self.tableView.register(UINib(nibName: ActionBaseListTableViewCell.cerqel_identifier, bundle: Bundle(for: type(of: self))),
+                                    forCellReuseIdentifier: ActionBaseListTableViewCell.cerqel_identifier)
+
+            self.tableView.register(UINib(nibName: CheckBoxCell.cerqel_identifier, bundle: Bundle(for: type(of: self))),
+                                    forCellReuseIdentifier: CheckBoxCell.cerqel_identifier)
+
+            self.tableView.register(UINib(nibName: ProfilePhoneTypesCell.cerqel_identifier, bundle: Bundle(for: type(of: self))),
+                                    forCellReuseIdentifier: ProfilePhoneTypesCell.cerqel_identifier)
+
             tableView.estimatedRowHeight = 50.0
             tableView.rowHeight = UITableView.automaticDimension
             

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Toast
+public import Toast
 import UIKit
 
 public class CerqelUIManager {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PanModal
+public import PanModal
 
 public typealias SuccessCallBack =  (()->())
 

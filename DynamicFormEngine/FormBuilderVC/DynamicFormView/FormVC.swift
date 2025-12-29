@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import EzPopup
+public import EzPopup
 import Expression
 import SwiftMessages
 public import RxCocoa
@@ -124,7 +124,7 @@ class FormVC: BottomSheetVC {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if !(DFAuthManager.shared.isCameraOpened) && !formBuilder.goToSummary {
+        if !(DFAuthManagerDynamicForm.shared.isCameraOpened) && !formBuilder.goToSummary {
             formBuilder.serviceSubmittedResponse.accept(nil)
             formBuilder.resetFormBuilder()
             // Check if formBuilder is not nil and its properties are not empty before performing operations
@@ -256,11 +256,11 @@ class FormVC: BottomSheetVC {
 //            self.navigationController?.popViewController(animated: true)
 //            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
 //                if isRequest {
-//                    DFAuthManager.shared.isTasks = false
+//                    DFAuthManagerDynamicForm.shared.isTasks = false
 //                } else {
-//                    DFAuthManager.shared.isTasks = true
+//                    DFAuthManagerDynamicForm.shared.isTasks = true
 //                }
-//                DFAuthManager.shared.isPopUpFromFormBuilder?(requestId)
+//                DFAuthManagerDynamicForm.shared.isPopUpFromFormBuilder?(requestId)
 //            }
 //        }
 //        SubmittedSuccessRequestBottomSheet.open(presenter: self,data: successData, fromDetails: false)
@@ -2601,7 +2601,7 @@ extension FormVC {
                     }
                     
                     if item is FormViewModelNumericItem {
-                        if DFAuthManager.shared.newSubmissionRetreiveEnabled {
+                        if DFAuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defualtAnswer = (item.field?.properties as? NumberProperties)?.newDefaultAnswer {
                                 if defualtAnswer.value != nil {
                                     let answer = BaseAnswerText(val: "\(defualtAnswer.value ?? 0.0)", lNote: nil)
@@ -2631,7 +2631,7 @@ extension FormVC {
                     }
                     
                     if item is FormViewModelTextBoxItem {
-                        if DFAuthManager.shared.newSubmissionRetreiveEnabled {
+                        if DFAuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defaultAnswer = (item.field?.properties as? TextBoxProperties)?.newDefaultAnswer, defaultAnswer.value != nil {
                                 let answer = TextboxAnswer(val: defaultAnswer.value ?? "", lPrefix: defaultAnswer.prefix, lSuffix: defaultAnswer.suffix, lNote: nil, lAttachments: nil)
                                 self.fieldValueChangedAtTableFields(i, row: 0, value: answer, isError: false, reload: false)
@@ -2655,7 +2655,7 @@ extension FormVC {
                     }
                     
                     if item is FormViewModelTextAreaItem {
-                        if DFAuthManager.shared.newSubmissionRetreiveEnabled {
+                        if DFAuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defualtAnswer = (item.field?.properties as? TextAreaProperties)?.newDefaultAnswer {
                                 let answer = TextAreaAnswer(val: defualtAnswer.value ?? "", htmlVal: defualtAnswer.htmlValue ?? "", lNote: nil, lAttachments: nil)
                                 self.fieldValueChangedAtTableFields(i, row: 0, value: answer, isError: false, reload: false)
@@ -2684,10 +2684,10 @@ extension FormVC {
                         var defaultAttchs = [ModelUploadedMedia]()
                         if let defaultAnswer = (item.field?.properties as? FileUploadProperties)?.defaultAnswer {
                             for attach in defaultAnswer.value ?? [] {
-                                if let uploadedMedia = DFAuthManager.shared.convertToUploadMediaUIModel(from: attach).uploadedMedia {
+                                if let uploadedMedia = DFAuthManagerDynamicForm.shared.convertToUploadMediaUIModel(from: attach).uploadedMedia {
                                     defaultAttchs.append(uploadedMedia)
                                 }
-                                mediaItem?.attachmentsList.append(DFAuthManager.shared.convertToUploadMediaUIModel(from: attach))
+                                mediaItem?.attachmentsList.append(DFAuthManagerDynamicForm.shared.convertToUploadMediaUIModel(from: attach))
                             }
                             //                            formBuilder.sectionObjects[i].items[0] = mediaItem!
                             let answer = FileUploadAnswer(val: defaultAttchs, lNote: nil, lAttachments: nil)
@@ -2923,7 +2923,7 @@ extension FormVC {
                     }
                     
                     if item is FormViewModelNumericItem {
-                        if DFAuthManager.shared.newSubmissionRetreiveEnabled {
+                        if DFAuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             
                             
                             if item.type == .TextBox {
@@ -2968,7 +2968,7 @@ extension FormVC {
                     }
                     
                     if item is FormViewModelTextBoxItem {
-                        if DFAuthManager.shared.newSubmissionRetreiveEnabled {
+                        if DFAuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defaultAnswer = (item.field?.properties as? TextBoxProperties)?.newDefaultAnswer, defaultAnswer.value != nil {
                                 let answer = TextboxAnswer(val: defaultAnswer.value ?? "", lPrefix: defaultAnswer.prefix, lSuffix: defaultAnswer.suffix, lNote: nil, lAttachments: nil)
                                 self.fieldValueChangedAt(i, row: row, value: answer, isError: false, reload: false)
@@ -2996,7 +2996,7 @@ extension FormVC {
                     }
                     
                     if item is FormViewModelTextAreaItem {
-                        if DFAuthManager.shared.newSubmissionRetreiveEnabled {
+                        if DFAuthManagerDynamicForm.shared.newSubmissionRetreiveEnabled {
                             if let defualtAnswer = (item.field?.properties as? TextAreaProperties)?.newDefaultAnswer {
                                 let answer = TextAreaAnswer(val: defualtAnswer.value ?? "", htmlVal: defualtAnswer.value ?? "")
                                 self.fieldValueChangedAt(i, row: row, value: answer, isError: false, reload: false)
@@ -3029,10 +3029,10 @@ extension FormVC {
                         var defaultAttchs = [ModelUploadedMedia]()
                         if let defaultAnswer = (item.field?.properties as? FileUploadProperties)?.defaultAnswer {
                             for attach in defaultAnswer.value ?? [] {
-                                if let uploadedMedia = DFAuthManager.shared.convertToUploadMediaUIModel(from: attach).uploadedMedia {
+                                if let uploadedMedia = DFAuthManagerDynamicForm.shared.convertToUploadMediaUIModel(from: attach).uploadedMedia {
                                     defaultAttchs.append(uploadedMedia)
                                 }
-                                mediaItem?.attachmentsList.append(DFAuthManager.shared.convertToUploadMediaUIModel(from: attach))
+                                mediaItem?.attachmentsList.append(DFAuthManagerDynamicForm.shared.convertToUploadMediaUIModel(from: attach))
                             }
                             if !(defaultAttchs.isEmpty) {
                                 let answer = FileUploadAnswer(val: defaultAttchs, lNote: nil, lAttachments: nil)
@@ -3246,7 +3246,7 @@ extension FormVC {
         if formBuilder.sectionObjects.indices.contains(section) && formBuilder.sectionObjects[section].items.indices.contains(row) {
             formBuilder.handleItemRules(&formBuilder.sectionObjects[section].items[row])
         }
-        DFAuthManager.shared.isCameraOpened = false
+        DFAuthManagerDynamicForm.shared.isCameraOpened = false
         fieldValidationChangedAt(section, row: row, isValid: !isError)
     }
     
@@ -3264,7 +3264,7 @@ extension FormVC {
             }
         }
         saveChanges(reload: reload, section: section, row: row)
-        DFAuthManager.shared.isCameraOpened = false
+        DFAuthManagerDynamicForm.shared.isCameraOpened = false
     }
     
     

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import Kingfisher
+internal import Kingfisher
 
 extension UIImageView {
     
@@ -29,7 +29,7 @@ extension UIImageView {
         let modifier = AnyModifier { request in
             var r = request
             
-            let token = AuthManager.shared.token
+            let token = AuthManagerDynamicForm.shared.token
             r.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             
             return r
@@ -59,7 +59,7 @@ extension UIImageView {
         let modifier = AnyModifier { request in
             var r = request
             
-            let token = AuthManager.shared.token
+            let token = AuthManagerDynamicForm.shared.token
             r.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             
             return r
@@ -95,7 +95,7 @@ extension UIImageView {
         let modifier = AnyModifier { request in
             var r = request
             
-            let token = AuthManager.shared.token
+            let token = AuthManagerDynamicForm.shared.token
             r.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             
             return r

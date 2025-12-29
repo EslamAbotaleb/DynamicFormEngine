@@ -8,7 +8,7 @@
 
 import Foundation
 import Promises
-import Reachability
+public import Reachability
 import SwiftyJSON
 import CommonCrypto
 
@@ -49,8 +49,8 @@ public class NetworkServiceImpl: Network {
                 })
                 .catch({ (error) in
                     if let error  = error as? ServerError, error.status == 401 {
-                        guard !(AuthManager.shared.unauthorizedFlag.value ?? false) else { return }
-                        guard !AuthManager.shared.token.isEmpty else {
+                        guard !(AuthManagerDynamicForm.shared.unauthorizedFlag.value ?? false) else { return }
+                        guard !AuthManagerDynamicForm.shared.token.isEmpty else {
                             reject(error)
                             return
                         }
@@ -82,7 +82,7 @@ public class NetworkServiceImpl: Network {
                     fulfill(response)})
                 .catch({ (error) in
                     if let error  = error as? ServerError, error.status == 401 {
-                        guard !(AuthManager.shared.unauthorizedFlag.value ?? false) else { return }
+                        guard !(AuthManagerDynamicForm.shared.unauthorizedFlag.value ?? false) else { return }
                             TokenManager.shared.refreshToken {
                                 // Retry the request after token refresh
                                 self.uploadModel(model, endpoint: endpoint, progressCallBack: progressCallBack)
@@ -106,7 +106,7 @@ public class NetworkServiceImpl: Network {
                     fulfill(fileUrl)})
                 .catch({ (error) in
                     if let error  = error as? ServerError, error.status == 401 {
-                        guard !(AuthManager.shared.unauthorizedFlag.value ?? false) else { return }
+                        guard !(AuthManagerDynamicForm.shared.unauthorizedFlag.value ?? false) else { return }
                             TokenManager.shared.refreshToken {
                                 // Retry the request after token refresh
                                 self.downloadModel(filesUrl: filesUrl)
@@ -215,7 +215,7 @@ public class NetworkServiceImpl: Network {
                 }
                 reject(error)
                 if  statusCode == 401 {
-                    AuthManager.shared.unauthorizedFlag.accept(true)
+                    AuthManagerDynamicForm.shared.unauthorizedFlag.accept(true)
                 }
 
             }

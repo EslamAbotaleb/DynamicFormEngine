@@ -17,16 +17,27 @@ public enum AppStoryboardDynamicForm: String {
     case xibView
 
     public var instance : UIStoryboard {
+        /*
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
+         */
+        return UIStoryboard(
+            name: self.rawValue,
+            bundle: Bundle(for: RouterDynamicForm.self)
+        )
     }
     
     public func viewController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file) -> T {
-        
-        if case .xibView = self{
-            let scene = T()
+//        if case .xibView = self{
+//            let scene = T()
+//            return scene
+//
+//        }
+        if case .xibView = self {
+            let bundle = Bundle(for: T.self)
+            let scene = T(nibName: String(describing: T.self), bundle: bundle)
             return scene
-
         }
+
         let storyboardID = (viewControllerClass as UIViewController.Type).cerqel_storyboardID
         
         guard let scene = instance.instantiateViewController(withIdentifier: storyboardID) as? T else {

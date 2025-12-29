@@ -8,12 +8,12 @@
 
 import UIKit
 
-class AddEditInvitedCV: UICollectionViewCell {
+public class AddEditInvitedCV: UICollectionViewCell {
 
-    @IBOutlet weak var vw: UIView!
-    @IBOutlet weak var invitedPeopleNameLbl: UILabel!
+    @IBOutlet weak public var vw: UIView!
+    @IBOutlet weak public var invitedPeopleNameLbl: UILabel!
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }

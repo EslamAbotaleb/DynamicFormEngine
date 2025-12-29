@@ -43,6 +43,15 @@ class CustomCalender: UIViewController,  FSCalendarDelegate, FSCalendarDataSourc
     
     @IBOutlet weak var closeIcon: UIButton!
     
+    public init() {
+           // Load the XIB from the framework bundle
+           let bundle = Bundle(for: Self.self)
+           super.init(nibName: "CustomCalender", bundle: bundle)
+       }
+    
+    required init?(coder: NSCoder) {
+            super.init(coder: coder)
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()

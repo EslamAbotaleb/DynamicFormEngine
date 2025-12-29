@@ -9,21 +9,6 @@
 import Foundation
 import UIKit
 
-/*
- extension UITableView {
-     
-     func registerCell(idintifier: String){
-         self.register(UINib(nibName: idintifier, bundle: nil),
-                                 forCellReuseIdentifier: idintifier)
-     }
-     
-     func registerHaederFooterCell(idintifier: String){
-         self.register(UINib(nibName: idintifier, bundle: nil),
-                                 forHeaderFooterViewReuseIdentifier: idintifier)
-     }
-
- }
- */
 extension UITableView {
     func registerCell<T: UITableViewCell>(cellType: T.Type) {
         let bundle = Bundle(for: T.self)

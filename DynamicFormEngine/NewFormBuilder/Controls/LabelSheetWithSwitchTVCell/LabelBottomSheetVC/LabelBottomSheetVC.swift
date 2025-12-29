@@ -31,7 +31,7 @@ public class LabelBottomSheetVC: BottomSheetVCCerqel {
     }
     
     static public func instance(item: FormViewModelItem?) -> LabelBottomSheetVC{
-        let vc = LabelBottomSheetVC(nibName: "LabelBottomSheetVC", bundle: nil)
+        let vc = LabelBottomSheetVC(nibName: "LabelBottomSheetVC", bundle: Bundle(for: Self.self))
         vc.cerqel_sheetHeight = 400
         vc.item = item
         return vc

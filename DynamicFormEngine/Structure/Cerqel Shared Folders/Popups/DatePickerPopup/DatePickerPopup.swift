@@ -45,7 +45,8 @@ public class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPicke
 
     
     static public func instance() -> DatePickerPopup{
-        let vc = DatePickerPopup(nibName: "DatePickerPopup", bundle: nil)
+        let bundle = Bundle(for: Self.self)
+        let vc = DatePickerPopup(nibName: "DatePickerPopup", bundle: bundle)
         vc.cerqel_sheetHeight = 450
         return vc
     }

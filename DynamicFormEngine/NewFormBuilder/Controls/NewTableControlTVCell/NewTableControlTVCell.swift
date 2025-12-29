@@ -272,7 +272,7 @@ class NewTableControlTVCell: ParentFieldTableViewCell {
             }
         }
         let children = item.items[index]
-        if let nestedVC = UIStoryboard(name: "NestedFormViewController", bundle: nil).instantiateInitialViewController() as? NestedFormViewController {
+        if let nestedVC = UIStoryboard(name: "NestedFormViewController", bundle: Bundle(for: Self.self)).instantiateInitialViewController() as? NestedFormViewController {
             nestedVC.tableControlFieldID = item.fieldId
             nestedVC.tableItem = item
             nestedVC.isEditable = isEditable
@@ -336,7 +336,7 @@ class NewTableControlTVCell: ParentFieldTableViewCell {
             }
         }
         var children = item.items[index]
-        if let nestedVC = UIStoryboard(name: "NestedFormViewController", bundle: nil).instantiateInitialViewController() as? NestedFormViewController {
+        if let nestedVC = UIStoryboard(name: "NestedFormViewController", bundle: Bundle(for: Self.self)).instantiateInitialViewController() as? NestedFormViewController {
             nestedVC.tableControlFieldID = item.fieldId
             nestedVC.isEditable = isEditable
             let filteredItems = nestedVC.formBuilder.allRowsChildControls.filter { item in
@@ -398,7 +398,7 @@ class NewTableControlTVCell: ParentFieldTableViewCell {
             }
         }
         var children = item.items[index]
-        if let nestedVC = UIStoryboard(name: "NestedFormViewController", bundle: nil).instantiateInitialViewController() as? NestedFormViewController {
+        if let nestedVC = UIStoryboard(name: "NestedFormViewController", bundle: Bundle(for: Self.self)).instantiateInitialViewController() as? NestedFormViewController {
             nestedVC.tableControlFieldID = item.fieldId
             nestedVC.isEditable = isEditable
             let filteredItems = nestedVC.formBuilder.allRowsChildControls.filter { item in
@@ -622,7 +622,7 @@ class NewTableControlTVCell: ParentFieldTableViewCell {
                     }
                 }
             }
-            if let nestedVC = UIStoryboard(name: "NestedFormViewController", bundle: nil).instantiateInitialViewController() as? NestedFormViewController {
+            if let nestedVC = UIStoryboard(name: "NestedFormViewController", bundle: Bundle(for: Self.self)).instantiateInitialViewController() as? NestedFormViewController {
 
                 nestedVC.tableControlFieldID = tableItem.fieldId
                 nestedVC.tableItem = tableItem

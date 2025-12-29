@@ -98,12 +98,24 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
     
     public  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
-        
-        let sectionType =  formBuilder.sectionObjects[section].item
-        let row = indexPath.row
+            let row = indexPath.row
+
+            // Check that the section exists
+            guard section < formBuilder.sectionObjects.count else {
+                fatalError("Invalid section index \(section), only \(formBuilder.sectionObjects.count) sections available")
+            }
+            
+            let sectionObject = formBuilder.sectionObjects[section]
+
+            // Optionally check that row exists
+            guard row < sectionObject.items.count else {
+                fatalError("Invalid row index \(row), only \(sectionObject.items.count) rows available")
+            }
+
+        let sectionType = sectionObject.items[row]
         
         let item = FormManager.shared.getCurrentItem(sectionObjects: formBuilder.sectionObjects, indexPath: indexPath)
-        item.isSectionControl = sectionType?.type == .Section
+        item.isSectionControl = sectionType.type == .Section
         if item.hidden {
             let cell = tableView.dequeueReusableCell(withIdentifier: EmptyTVcell.cerqel_identifier, for: indexPath) as! EmptyTVcell
             return cell
@@ -113,7 +125,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: NewTextBoxTVCell.cerqel_identifier, for: indexPath) as! NewTextBoxTVCell
             cell.tag = section
             cell.formViewController = self
-            cell.isSectionItem = sectionType?.type == .Section
+            cell.isSectionItem = sectionType.type == .Section
             cell.dataSourceFetchingInTextNumberControl = { [weak self] dataSource, textBoxItem in
                 guard let `self` = self else { return }
                 DispatchQueue.global(qos: .background).async { [weak self] in
@@ -168,7 +180,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                 return UITableViewCell()
             }
             let cell = tableView.dequeueReusableCell(withIdentifier: NewTextAreaTVcell.cerqel_identifier, for: indexPath) as! NewTextAreaTVcell
-            cell.isSectionItem = sectionType?.type == .Section
+            cell.isSectionItem = sectionType.type == .Section
             cell.dataSourceFetching = { [weak self] dataSource, textAreaItem in
                 guard let `self` = self else { return }
                 DispatchQueue.global(qos: .background).async { [weak self] in
@@ -226,7 +238,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                             FormManager.shared.fieldValueChangedAt(vc: self, sectionObjects: formBuilder.sectionObjects, submitButton: submitButton, section, row: row, value: value, reload: false)
                         }
                     }
-                    cell.isSectionItem = sectionType?.type == .Section
+                    cell.isSectionItem = sectionType.type == .Section
                     cell.dataSourceFetching = { [weak self] dataSource, labelItem in
                         guard let `self` = self else { return }
                         DispatchQueue.global(qos: .background).async { [weak self] in
@@ -264,7 +276,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                 if subType == .Link {
                     let cell = tableView.dequeueReusableCell(withIdentifier: NewLinkControlTVcell.cerqel_identifier, for: indexPath) as! NewLinkControlTVcell
                     cell.formViewController = self
-                    cell.isSectionItem = sectionType?.type == .Section
+                    cell.isSectionItem = sectionType.type == .Section
                     cell.item = item
                     cell.tag = section
                     cell.isUserInteractionEnabled = !item.disabled
@@ -273,7 +285,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                 }
                 if subType == .InfoIndcator {
                     let cell = tableView.dequeueReusableCell(withIdentifier: NewInfoIndicatorTVcell.cerqel_identifier, for: indexPath) as! NewInfoIndicatorTVcell
-                    cell.isSectionItem = sectionType?.type == .Section
+                    cell.isSectionItem = sectionType.type == .Section
                     cell.item = item
                     cell.tag = section
                     cell.isUserInteractionEnabled = !item.disabled
@@ -285,7 +297,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                     cell.isLabelSheetWithCheckBox = false
                     cell.isLabelSheet = false
                     cell.formViewController = self
-                    cell.isSectionItem = sectionType?.type == .Section
+                    cell.isSectionItem = sectionType.type == .Section
                     
                     cell.reloadTableView = {[weak self] in
                         guard let `self` = self else { return }
@@ -343,7 +355,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                     cell.isLabelSheetWithCheckBox = true
                     cell.isLabelSheet = false
                     cell.formViewController = self
-                    cell.isSectionItem = sectionType?.type == .Section
+                    cell.isSectionItem = sectionType.type == .Section
                     
                     cell.dataSourceFetching = { [weak self] dataSource, labelItem in
                         guard let `self` = self else { return }
@@ -397,7 +409,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                     let cell = tableView.dequeueReusableCell(withIdentifier: LabelSheetWithSwitchTVCell.cerqel_identifier, for: indexPath) as! LabelSheetWithSwitchTVCell
                     cell.isLabelSheet = true
                     cell.formViewController = self
-                    cell.isSectionItem = sectionType?.type == .Section
+                    cell.isSectionItem = sectionType.type == .Section
                     cell.dataSourceFetching = { [weak self] dataSource, labelItem in
                         guard let `self` = self else { return }
                         DispatchQueue.global(qos: .background).async { [weak self] in
@@ -485,7 +497,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                 }
             }
             
-            cell.isSectionItem = sectionType?.type == .Section
+            cell.isSectionItem = sectionType.type == .Section
             cell.item = item
             cell.isUserInteractionEnabled = !item.disabled
             
@@ -493,7 +505,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
             
         case .switchControl:
             let cell = tableView.dequeueReusableCell(withIdentifier: NewSwitchCell.cerqel_identifier, for: indexPath) as! NewSwitchCell
-            cell.isSectionItem = sectionType?.type == .Section
+            cell.isSectionItem = sectionType.type == .Section
             
             cell.dataSourceFetching = { [weak self] dataSource, switchItem in
                 guard let `self` = self else { return }
@@ -581,7 +593,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                     FormManager.shared.fieldValueChangedAt(vc: self, sectionObjects: formBuilder.sectionObjects, submitButton: submitButton, section, row: row, value: value,isError: isError, reload: false)
                 }
             }
-            cell.isSectionItem = sectionType?.type == .Section
+            cell.isSectionItem = sectionType.type == .Section
             cell.item = item
             cell.isUserInteractionEnabled = !item.disabled
             
@@ -601,7 +613,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
                     FormManager.shared.fieldValueChangedAt(vc: self, sectionObjects: formBuilder.sectionObjects, submitButton: submitButton, section, row: row, value: value,isError: isError, reload: false)
                 }
             }
-            cell.isSectionItem = sectionType?.type == .Section
+            cell.isSectionItem = sectionType.type == .Section
             
             cell.dataSourceFetching = { [weak self] dataSource, radioItem in
                 guard let `self` = self else { return }
@@ -643,7 +655,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: NewDropDownTVCell.cerqel_identifier, for: indexPath) as! NewDropDownTVCell
             cell.formViewController = self
             cell.tag = section
-            cell.isSectionItem = sectionType?.type == .Section
+            cell.isSectionItem = sectionType.type == .Section
             
             cell.dataSourceFetchingInDDL = {[weak self] dataSource, ddlItem in
                 guard let `self` = self else {return}
@@ -772,7 +784,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: NewUploadMediaTVcell.cerqel_identifier, for: indexPath) as! NewUploadMediaTVcell
             cell.tag = section
             cell.formViewController = self
-            cell.isSectionItem = sectionType?.type == .Section
+            cell.isSectionItem = sectionType.type == .Section
             cell.item = item
             self.maxAttachmentsSize = cell.maxAttachmentsSize
             cell.didTapAddAttachment = {[weak self] in
@@ -835,7 +847,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: NewTableControlTVCell.cerqel_identifier, for: indexPath) as! NewTableControlTVCell
             cell.formViewController = self
-            cell.isSectionItem = sectionType?.type == .Section
+            cell.isSectionItem = sectionType.type == .Section
             cell.dataSourceFetching = { [weak self] dataSource, tableItem in
                 guard let `self` = self else { return }
                 DispatchQueue.global(qos: .background).async { [weak self] in

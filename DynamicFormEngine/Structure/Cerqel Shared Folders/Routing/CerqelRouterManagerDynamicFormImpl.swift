@@ -43,7 +43,7 @@ public class CerqelRouterManagerDynamicFormImpl: CerqelRouterManager {
     }
 
     public  func pushTo<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
-        let controller =  ViewController(nibName: controller.identifier , bundle: nil) as! BaseView<viewModel, Item>
+        let controller =  ViewController(nibName: controller.identifier , bundle: Bundle(for: Self.self)) as! BaseView<viewModel, Item>
         controller.item = item
         controller.hidesBottomBarWhenPushed = true
         currentViewController.navigationController?.pushViewController(controller, animated: true)
@@ -54,7 +54,7 @@ public class CerqelRouterManagerDynamicFormImpl: CerqelRouterManager {
         viewModel: ViewModel,
         item: Item
     ) {
-        let controller = ViewController(nibName: controller.identifier, bundle: nil) as! BaseView<ViewModel, Item>
+        let controller = ViewController(nibName: controller.identifier, bundle: Bundle(for: Self.self)) as! BaseView<ViewModel, Item>
         controller.item = item
         controller.viewModel = viewModel
 
@@ -64,7 +64,7 @@ public class CerqelRouterManagerDynamicFormImpl: CerqelRouterManager {
 
 
     public func presentbottomSheet<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(fromProfile: Bool = false, controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
-        let controller =  ViewController(nibName: controller.identifier , bundle: nil) as! BaseView<viewModel, Item>
+        let controller =  ViewController(nibName: controller.identifier , bundle: Bundle(for: Self.self)) as! BaseView<viewModel, Item>
         controller.item = item
         if fromProfile {
             currentViewController.modalPresentationStyle = .formSheet
@@ -81,7 +81,7 @@ public class CerqelRouterManagerDynamicFormImpl: CerqelRouterManager {
         viewModel: ViewModel,
         item: Item
     ) {
-        let controller = ViewController(nibName: controller.identifier, bundle: nil) as! BaseView<ViewModel, Item>
+        let controller = ViewController(nibName: controller.identifier, bundle: Bundle(for: Self.self)) as! BaseView<ViewModel, Item>
         controller.item = item
         controller.viewModel = viewModel
 
@@ -91,14 +91,14 @@ public class CerqelRouterManagerDynamicFormImpl: CerqelRouterManager {
     }
 
     public func present<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
-        let controller =  ViewController(nibName: controller.identifier , bundle: nil) as! BaseView<viewModel, Item>
+        let controller =  ViewController(nibName: controller.identifier , bundle: Bundle(for: Self.self)) as! BaseView<viewModel, Item>
         controller.item = item
         controller.modalPresentationStyle = .automatic
         currentViewController.present(controller, animated: true)
     }
 
     public func presentFullScreen<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item ) {
-        let controller =  ViewController(nibName: controller.identifier , bundle: nil) as! BaseView<viewModel, Item>
+        let controller =  ViewController(nibName: controller.identifier , bundle: Bundle(for: Self.self)) as! BaseView<viewModel, Item>
         controller.item = item
 
 

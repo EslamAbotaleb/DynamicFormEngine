@@ -11,7 +11,7 @@ import UIKit
 extension UICollectionView {
     
     func registerCell(idintifier: String){
-        self.register(UINib(nibName: idintifier, bundle: nil), forCellWithReuseIdentifier: idintifier)
+        self.register(UINib(nibName: idintifier, bundle: Bundle(for: Self.self)), forCellWithReuseIdentifier: idintifier)
     }
     
     func scrollToFirstItem(limit: Int){
@@ -27,5 +27,3 @@ class RTLCollectionViewFlowLayout: UICollectionViewFlowLayout {
         return true
     }
 }
-
-

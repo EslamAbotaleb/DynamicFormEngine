@@ -236,7 +236,6 @@ public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel>
     /// Registering tableView's cells
     private func registerCells(){
         itemsTV.tableFooterView = UIView()
-//        itemsTV.registerHaederFooterCell(idintifier: ExpandedSectionHeader.cerqel_identifier)
         itemsTV.registerHaederFooterCell(viewType: ExpandedSectionHeader.self)
 
         itemsTV.register(LabelSheetWithSwitchTVCell.cerqel_nib, forCellReuseIdentifier: LabelSheetWithSwitchTVCell.cerqel_identifier)

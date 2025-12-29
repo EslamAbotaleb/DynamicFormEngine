@@ -126,6 +126,12 @@
 		AAA4CEBC2EF87E9A0027ABEC /* AddEditInvitedCV.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAA4CEBA2EF87E9A0027ABEC /* AddEditInvitedCV.xib */; };
 		AAA4CEBD2EF87E9A0027ABEC /* AddEditInvitedCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4CEB92EF87E9A0027ABEC /* AddEditInvitedCV.swift */; };
 		AAA5BFE52EFBF6B200FFE102 /* FormValueCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA5BFE42EFBF6B200FFE102 /* FormValueCerqel.swift */; };
+		AAA62FDF2F02BB3200DE891C /* FeedbackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62FD82F02BB3200DE891C /* FeedbackViewModel.swift */; };
+		AAA62FE02F02BB3200DE891C /* SurveyUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62FD32F02BB3200DE891C /* SurveyUseCase.swift */; };
+		AAA62FE12F02BB3200DE891C /* SurveyEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62FD02F02BB3200DE891C /* SurveyEndPoint.swift */; };
+		AAA62FE22F02BB3200DE891C /* FeedbackBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62FDA2F02BB3200DE891C /* FeedbackBottomSheetView.swift */; };
+		AAA62FE32F02BB3200DE891C /* SurveyRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA62FD52F02BB3200DE891C /* SurveyRepo.swift */; };
+		AAA62FE42F02BB3200DE891C /* FeedbackBottomSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAA62FDB2F02BB3200DE891C /* FeedbackBottomSheetView.xib */; };
 		AAA6A3432EF2E84000520357 /* LocationNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAA6A2752EF2E84000520357 /* LocationNameView.xib */; };
 		AAA6A3442EF2E84000520357 /* AttachCommentCVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAA6A2DB2EF2E84000520357 /* AttachCommentCVcell.xib */; };
 		AAA6A3452EF2E84000520357 /* ActionCommentTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAA6A29E2EF2E84000520357 /* ActionCommentTVcell.xib */; };
@@ -691,6 +697,29 @@
 		AADDBDDF2F015987009145A7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AADDBDDE2F015987009145A7 /* RxCocoa */; };
 		AADDBDE32F015987009145A7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = AADDBDE22F015987009145A7 /* RxRelay */; };
 		AADDBDE72F015987009145A7 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AADDBDE62F015987009145A7 /* RxSwift */; };
+		AAE379FE2F02BE78004EBA29 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE379FB2F02BE78004EBA29 /* LocalDataManager.swift */; };
+		AAE379FF2F02BE78004EBA29 /* LocalData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE379FC2F02BE78004EBA29 /* LocalData.swift */; };
+		AAE37A072F02BF13004EBA29 /* AddToFavouriteEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A032F02BF13004EBA29 /* AddToFavouriteEndPoint.swift */; };
+		AAE37A082F02BF13004EBA29 /* AllServicesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A042F02BF13004EBA29 /* AllServicesEndPoint.swift */; };
+		AAE37A092F02BF13004EBA29 /* AddToFavouritePayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A012F02BF13004EBA29 /* AddToFavouritePayload.swift */; };
+		AAE37A0A2F02BF13004EBA29 /* AllServicesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A002F02BF13004EBA29 /* AllServicesDTO.swift */; };
+		AAE37A0D2F02BF91004EBA29 /* SurveyRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A0B2F02BF91004EBA29 /* SurveyRepoImpl.swift */; };
+		AAE37A182F02C075004EBA29 /* AllServicesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A0F2F02C075004EBA29 /* AllServicesEntity.swift */; };
+		AAE37A192F02C075004EBA29 /* ServicesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A132F02C075004EBA29 /* ServicesMapper.swift */; };
+		AAE37A1A2F02C075004EBA29 /* AllServicesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A152F02C075004EBA29 /* AllServicesUseCase.swift */; };
+		AAE37A1B2F02C075004EBA29 /* AllServicesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A122F02C075004EBA29 /* AllServicesMapper.swift */; };
+		AAE37A1C2F02C075004EBA29 /* ServicesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A102F02C075004EBA29 /* ServicesEntity.swift */; };
+		AAE37A262F02C0D3004EBA29 /* GetAllCategoriesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A212F02C0D3004EBA29 /* GetAllCategoriesUseCase.swift */; };
+		AAE37A272F02C0D3004EBA29 /* ServicesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A232F02C0D3004EBA29 /* ServicesRepo.swift */; };
+		AAE37A282F02C0D3004EBA29 /* GetAllCategoriesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A1D2F02C0D3004EBA29 /* GetAllCategoriesEntity.swift */; };
+		AAE37A292F02C0D3004EBA29 /* GetAllCategoriesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A1F2F02C0D3004EBA29 /* GetAllCategoriesMapper.swift */; };
+		AAE37A312F02C14A004EBA29 /* ServicesRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A2C2F02C14A004EBA29 /* ServicesRepoImpl.swift */; };
+		AAE37A322F02C14A004EBA29 /* GetAllCategoriesEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A2E2F02C14A004EBA29 /* GetAllCategoriesEndPoint.swift */; };
+		AAE37A332F02C14A004EBA29 /* GetAllCategoriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A2A2F02C14A004EBA29 /* GetAllCategoriesDTO.swift */; };
+		AAE37A3B2F02C1D9004EBA29 /* ServicesSubCategoriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A352F02C1D9004EBA29 /* ServicesSubCategoriesDTO.swift */; };
+		AAE37A3C2F02C1D9004EBA29 /* GetSubCategoryByParentIdEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A372F02C1D9004EBA29 /* GetSubCategoryByParentIdEndPoint.swift */; };
+		AAE37A3D2F02C1D9004EBA29 /* GetAllParentCategoriesEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A382F02C1D9004EBA29 /* GetAllParentCategoriesEndpoint.swift */; };
+		AAE37A3E2F02C1D9004EBA29 /* ServicesCategoriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE37A342F02C1D9004EBA29 /* ServicesCategoriesDTO.swift */; };
 		AAEC9B132F009EC200B449E2 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AAEC9B122F009EC200B449E2 /* RxAlamofire */; };
 		E44836082CB5C05B00871C3D /* FormBuilderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44836072CB5C05B00871C3D /* FormBuilderManager.swift */; };
 		E471757B2B8FE3D3007CEE59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E471757A2B8FE3D3007CEE59 /* Assets.xcassets */; };
@@ -840,6 +869,12 @@
 		AAA4CEB92EF87E9A0027ABEC /* AddEditInvitedCV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditInvitedCV.swift; sourceTree = "<group>"; };
 		AAA4CEBA2EF87E9A0027ABEC /* AddEditInvitedCV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEditInvitedCV.xib; sourceTree = "<group>"; };
 		AAA5BFE42EFBF6B200FFE102 /* FormValueCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValueCerqel.swift; sourceTree = "<group>"; };
+		AAA62FD02F02BB3200DE891C /* SurveyEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyEndPoint.swift; sourceTree = "<group>"; };
+		AAA62FD32F02BB3200DE891C /* SurveyUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyUseCase.swift; sourceTree = "<group>"; };
+		AAA62FD52F02BB3200DE891C /* SurveyRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepo.swift; sourceTree = "<group>"; };
+		AAA62FD82F02BB3200DE891C /* FeedbackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackViewModel.swift; sourceTree = "<group>"; };
+		AAA62FDA2F02BB3200DE891C /* FeedbackBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackBottomSheetView.swift; sourceTree = "<group>"; };
+		AAA62FDB2F02BB3200DE891C /* FeedbackBottomSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackBottomSheetView.xib; sourceTree = "<group>"; };
 		AAA6A1D52EF2E84000520357 /* ExecutionEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionEngine.swift; sourceTree = "<group>"; };
 		AAA6A1D62EF2E84000520357 /* ValueNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueNode.swift; sourceTree = "<group>"; };
 		AAA6A1D72EF2E84000520357 /* ArithmeticFunctionLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArithmeticFunctionLibrary.swift; sourceTree = "<group>"; };
@@ -1369,6 +1404,29 @@
 		AAC0EE242EF61E0B00DDE9FF /* SettingsCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCerqel.swift; sourceTree = "<group>"; };
 		AAC0EE262EF61E0B00DDE9FF /* CerqelBaseWireFrameDynamicForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelBaseWireFrameDynamicForm.swift; sourceTree = "<group>"; };
 		AAC0EE272EF61E0B00DDE9FF /* CerqelBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelBaseViewModel.swift; sourceTree = "<group>"; };
+		AAE379FB2F02BE78004EBA29 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		AAE379FC2F02BE78004EBA29 /* LocalData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalData.swift; sourceTree = "<group>"; };
+		AAE37A002F02BF13004EBA29 /* AllServicesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllServicesDTO.swift; sourceTree = "<group>"; };
+		AAE37A012F02BF13004EBA29 /* AddToFavouritePayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavouritePayload.swift; sourceTree = "<group>"; };
+		AAE37A032F02BF13004EBA29 /* AddToFavouriteEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToFavouriteEndPoint.swift; sourceTree = "<group>"; };
+		AAE37A042F02BF13004EBA29 /* AllServicesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllServicesEndPoint.swift; sourceTree = "<group>"; };
+		AAE37A0B2F02BF91004EBA29 /* SurveyRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyRepoImpl.swift; sourceTree = "<group>"; };
+		AAE37A0F2F02C075004EBA29 /* AllServicesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllServicesEntity.swift; sourceTree = "<group>"; };
+		AAE37A102F02C075004EBA29 /* ServicesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesEntity.swift; sourceTree = "<group>"; };
+		AAE37A122F02C075004EBA29 /* AllServicesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllServicesMapper.swift; sourceTree = "<group>"; };
+		AAE37A132F02C075004EBA29 /* ServicesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesMapper.swift; sourceTree = "<group>"; };
+		AAE37A152F02C075004EBA29 /* AllServicesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllServicesUseCase.swift; sourceTree = "<group>"; };
+		AAE37A1D2F02C0D3004EBA29 /* GetAllCategoriesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCategoriesEntity.swift; sourceTree = "<group>"; };
+		AAE37A1F2F02C0D3004EBA29 /* GetAllCategoriesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCategoriesMapper.swift; sourceTree = "<group>"; };
+		AAE37A212F02C0D3004EBA29 /* GetAllCategoriesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCategoriesUseCase.swift; sourceTree = "<group>"; };
+		AAE37A232F02C0D3004EBA29 /* ServicesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesRepo.swift; sourceTree = "<group>"; };
+		AAE37A2A2F02C14A004EBA29 /* GetAllCategoriesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCategoriesDTO.swift; sourceTree = "<group>"; };
+		AAE37A2C2F02C14A004EBA29 /* ServicesRepoImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesRepoImpl.swift; sourceTree = "<group>"; };
+		AAE37A2E2F02C14A004EBA29 /* GetAllCategoriesEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllCategoriesEndPoint.swift; sourceTree = "<group>"; };
+		AAE37A342F02C1D9004EBA29 /* ServicesCategoriesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCategoriesDTO.swift; sourceTree = "<group>"; };
+		AAE37A352F02C1D9004EBA29 /* ServicesSubCategoriesDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesSubCategoriesDTO.swift; sourceTree = "<group>"; };
+		AAE37A372F02C1D9004EBA29 /* GetSubCategoryByParentIdEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSubCategoryByParentIdEndPoint.swift; sourceTree = "<group>"; };
+		AAE37A382F02C1D9004EBA29 /* GetAllParentCategoriesEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllParentCategoriesEndpoint.swift; sourceTree = "<group>"; };
 		E44836072CB5C05B00871C3D /* FormBuilderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormBuilderManager.swift; sourceTree = "<group>"; };
 		E471757A2B8FE3D3007CEE59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E47175862B923474007CEE59 /* ContentSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizedTableView.swift; sourceTree = "<group>"; };
@@ -1757,6 +1815,91 @@
 				AAA4CEBA2EF87E9A0027ABEC /* AddEditInvitedCV.xib */,
 			);
 			path = AddEditEventCell;
+			sourceTree = "<group>";
+		};
+		AAA62FCF2F02BB2700DE891C /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FDE2F02BB3200DE891C /* Feedback */,
+			);
+			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		AAA62FD12F02BB3200DE891C /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FD02F02BB3200DE891C /* SurveyEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		AAA62FD22F02BB3200DE891C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FD12F02BB3200DE891C /* EndPoint */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AAA62FD42F02BB3200DE891C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FD32F02BB3200DE891C /* SurveyUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		AAA62FD62F02BB3200DE891C /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FD52F02BB3200DE891C /* SurveyRepo.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		AAA62FD72F02BB3200DE891C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FD42F02BB3200DE891C /* UseCase */,
+				AAA62FD62F02BB3200DE891C /* Repo */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AAA62FD92F02BB3200DE891C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FD82F02BB3200DE891C /* FeedbackViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AAA62FDC2F02BB3200DE891C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FDA2F02BB3200DE891C /* FeedbackBottomSheetView.swift */,
+				AAA62FDB2F02BB3200DE891C /* FeedbackBottomSheetView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AAA62FDD2F02BB3200DE891C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FD92F02BB3200DE891C /* ViewModel */,
+				AAA62FDC2F02BB3200DE891C /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		AAA62FDE2F02BB3200DE891C /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				AAA62FD22F02BB3200DE891C /* Data */,
+				AAA62FD72F02BB3200DE891C /* Domain */,
+				AAA62FDD2F02BB3200DE891C /* Presentation */,
+			);
+			path = Feedback;
 			sourceTree = "<group>";
 		};
 		AAA6A1DB2EF2E84000520357 /* FunctionLibraries */ = {
@@ -3369,6 +3512,7 @@
 		AAC0E6912EF6101A00DDE9FF /* Structure */ = {
 			isa = PBXGroup;
 			children = (
+				AAA62FCF2F02BB2700DE891C /* SharedViews */,
 				AAC0EA1F2EF61DE100DDE9FF /* Cerqel Shared Folders */,
 			);
 			path = Structure;
@@ -3377,6 +3521,7 @@
 		AAC0EA1F2EF61DE100DDE9FF /* Cerqel Shared Folders */ = {
 			isa = PBXGroup;
 			children = (
+				AAE37A0E2F02C06D004EBA29 /* Domain */,
 				AA242A152F01411000A6E428 /* Fonts */,
 				AAC0EA282EF61E0100DDE9FF /* Stepper */,
 				AAADBA742EF853B400F696F3 /* ActionsBottomSheet */,
@@ -3791,9 +3936,14 @@
 		AAC0ED002EF61E0B00DDE9FF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AAE37A0C2F02BF91004EBA29 /* RepoImp */,
+				AAE37A062F02BF13004EBA29 /* AllServices */,
+				AAE379FD2F02BE78004EBA29 /* LocalStorage */,
 				AAADB9462EF82C0600F696F3 /* Network */,
 				AAC0ECEC2EF61E0B00DDE9FF /* Modules */,
 				AAC0ECFF2EF61E0B00DDE9FF /* Repositories */,
+				AAE37A302F02C14A004EBA29 /* ServiceList */,
+				AAE37A3A2F02C1D9004EBA29 /* Filter */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -4058,6 +4208,199 @@
 				AAADB9402EF8146700F696F3 /* Mapper */,
 			);
 			path = "Cerqel Utilities";
+			sourceTree = "<group>";
+		};
+		AAE379FD2F02BE78004EBA29 /* LocalStorage */ = {
+			isa = PBXGroup;
+			children = (
+				AAE379FB2F02BE78004EBA29 /* LocalDataManager.swift */,
+				AAE379FC2F02BE78004EBA29 /* LocalData.swift */,
+			);
+			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		AAE37A022F02BF13004EBA29 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A002F02BF13004EBA29 /* AllServicesDTO.swift */,
+				AAE37A012F02BF13004EBA29 /* AddToFavouritePayload.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		AAE37A052F02BF13004EBA29 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A032F02BF13004EBA29 /* AddToFavouriteEndPoint.swift */,
+				AAE37A042F02BF13004EBA29 /* AllServicesEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		AAE37A062F02BF13004EBA29 /* AllServices */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A022F02BF13004EBA29 /* DTO */,
+				AAE37A052F02BF13004EBA29 /* EndPoint */,
+			);
+			path = AllServices;
+			sourceTree = "<group>";
+		};
+		AAE37A0C2F02BF91004EBA29 /* RepoImp */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A0B2F02BF91004EBA29 /* SurveyRepoImpl.swift */,
+			);
+			path = RepoImp;
+			sourceTree = "<group>";
+		};
+		AAE37A0E2F02C06D004EBA29 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A252F02C0D3004EBA29 /* ServiceList */,
+				AAE37A172F02C075004EBA29 /* AllServices */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AAE37A112F02C075004EBA29 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A0F2F02C075004EBA29 /* AllServicesEntity.swift */,
+				AAE37A102F02C075004EBA29 /* ServicesEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		AAE37A142F02C075004EBA29 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A122F02C075004EBA29 /* AllServicesMapper.swift */,
+				AAE37A132F02C075004EBA29 /* ServicesMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		AAE37A162F02C075004EBA29 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A152F02C075004EBA29 /* AllServicesUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		AAE37A172F02C075004EBA29 /* AllServices */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A112F02C075004EBA29 /* Entity */,
+				AAE37A142F02C075004EBA29 /* Mapper */,
+				AAE37A162F02C075004EBA29 /* UseCase */,
+			);
+			path = AllServices;
+			sourceTree = "<group>";
+		};
+		AAE37A1E2F02C0D3004EBA29 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A1D2F02C0D3004EBA29 /* GetAllCategoriesEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		AAE37A202F02C0D3004EBA29 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A1F2F02C0D3004EBA29 /* GetAllCategoriesMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
+		AAE37A222F02C0D3004EBA29 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A212F02C0D3004EBA29 /* GetAllCategoriesUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		AAE37A242F02C0D3004EBA29 /* Repo */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A232F02C0D3004EBA29 /* ServicesRepo.swift */,
+			);
+			path = Repo;
+			sourceTree = "<group>";
+		};
+		AAE37A252F02C0D3004EBA29 /* ServiceList */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A1E2F02C0D3004EBA29 /* Entity */,
+				AAE37A202F02C0D3004EBA29 /* Mapper */,
+				AAE37A222F02C0D3004EBA29 /* UseCase */,
+				AAE37A242F02C0D3004EBA29 /* Repo */,
+			);
+			path = ServiceList;
+			sourceTree = "<group>";
+		};
+		AAE37A2B2F02C14A004EBA29 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A2A2F02C14A004EBA29 /* GetAllCategoriesDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		AAE37A2D2F02C14A004EBA29 /* RepoImpl */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A2C2F02C14A004EBA29 /* ServicesRepoImpl.swift */,
+			);
+			path = RepoImpl;
+			sourceTree = "<group>";
+		};
+		AAE37A2F2F02C14A004EBA29 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A2E2F02C14A004EBA29 /* GetAllCategoriesEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		AAE37A302F02C14A004EBA29 /* ServiceList */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A2B2F02C14A004EBA29 /* DTO */,
+				AAE37A2D2F02C14A004EBA29 /* RepoImpl */,
+				AAE37A2F2F02C14A004EBA29 /* EndPoint */,
+			);
+			path = ServiceList;
+			sourceTree = "<group>";
+		};
+		AAE37A362F02C1D9004EBA29 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A342F02C1D9004EBA29 /* ServicesCategoriesDTO.swift */,
+				AAE37A352F02C1D9004EBA29 /* ServicesSubCategoriesDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		AAE37A392F02C1D9004EBA29 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A372F02C1D9004EBA29 /* GetSubCategoryByParentIdEndPoint.swift */,
+				AAE37A382F02C1D9004EBA29 /* GetAllParentCategoriesEndpoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		AAE37A3A2F02C1D9004EBA29 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				AAE37A362F02C1D9004EBA29 /* DTO */,
+				AAE37A392F02C1D9004EBA29 /* EndPoint */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		E47B1BD82B8F5D9D00E22A45 = {
@@ -4468,6 +4811,7 @@
 				AAADA1052EF6C2210036FD04 /* DropDownTVcell.xib in Resources */,
 				AAADA1062EF6C2210036FD04 /* Radio2ItemsOnlyTVcell.xib in Resources */,
 				AAADA1072EF6C2210036FD04 /* DateTimeRangePickerTVcell.xib in Resources */,
+				AAA62FE42F02BB3200DE891C /* FeedbackBottomSheetView.xib in Resources */,
 				AAADA1082EF6C2210036FD04 /* LinkTVcellTableViewCell.xib in Resources */,
 				AAADA1092EF6C2210036FD04 /* TextBoxTVcell.xib in Resources */,
 				AAADA10A2EF6C2210036FD04 /* InfoIndicatorTVcell.xib in Resources */,
@@ -4597,8 +4941,15 @@
 				AAA6A3AE2EF2E84000520357 /* ReqInfoTVC.swift in Sources */,
 				AAB515CF2EFD62D6009041A0 /* CustomNavBarWithBackText.swift in Sources */,
 				AAA6A3AF2EF2E84000520357 /* NewTextBoxTVCell.swift in Sources */,
+				AAE37A312F02C14A004EBA29 /* ServicesRepoImpl.swift in Sources */,
+				AAE37A322F02C14A004EBA29 /* GetAllCategoriesEndPoint.swift in Sources */,
+				AAE37A332F02C14A004EBA29 /* GetAllCategoriesDTO.swift in Sources */,
 				AAA6A3B02EF2E84000520357 /* NewChatTVCell.swift in Sources */,
 				AAA6A3B12EF2E84000520357 /* NewTextAreaTVcell.swift in Sources */,
+				AAE37A3B2F02C1D9004EBA29 /* ServicesSubCategoriesDTO.swift in Sources */,
+				AAE37A3C2F02C1D9004EBA29 /* GetSubCategoryByParentIdEndPoint.swift in Sources */,
+				AAE37A3D2F02C1D9004EBA29 /* GetAllParentCategoriesEndpoint.swift in Sources */,
+				AAE37A3E2F02C1D9004EBA29 /* ServicesCategoriesDTO.swift in Sources */,
 				AAA6A3B22EF2E84000520357 /* AttachmentNoteView.swift in Sources */,
 				AAC0EBB32EF61E0100DDE9FF /* CustomNavBarWithSubmit.swift in Sources */,
 				AAADA1742EF6CA3D0036FD04 /* SpinerLayer.swift in Sources */,
@@ -4716,6 +5067,8 @@
 				AA0707D82EF58E3700B55C22 /* ActionSheetDistancePicker.m in Sources */,
 				AA0707D92EF58E3700B55C22 /* ActionSheetDatePicker.m in Sources */,
 				AA0707DA2EF58E3700B55C22 /* ActionSheetCustomPicker.m in Sources */,
+				AAE379FE2F02BE78004EBA29 /* LocalDataManager.swift in Sources */,
+				AAE379FF2F02BE78004EBA29 /* LocalData.swift in Sources */,
 				AA0707DB2EF58E3700B55C22 /* SWActionSheet.m in Sources */,
 				AA0707DC2EF58E3700B55C22 /* DistancePickerView.m in Sources */,
 				AA0707DD2EF58E3700B55C22 /* ActionSheetLocalePicker.m in Sources */,
@@ -4736,6 +5089,7 @@
 				AAA6A3D42EF2E84000520357 /* UISearchBar+Extensions.swift in Sources */,
 				AAA6A3D52EF2E84000520357 /* NewLinkControlTVcell.swift in Sources */,
 				AAA6A3D62EF2E84000520357 /* ActionCommentTVcell.swift in Sources */,
+				AAE37A0D2F02BF91004EBA29 /* SurveyRepoImpl.swift in Sources */,
 				AAA6A3D72EF2E84000520357 /* ChatTVcell.swift in Sources */,
 				AAA6A3D82EF2E84000520357 /* BackwardRequestDetailsView.swift in Sources */,
 				AAA6A3D92EF2E84000520357 /* FunctionNode.swift in Sources */,
@@ -4819,6 +5173,10 @@
 				AAA6A4142EF2E84000520357 /* reqTaskCommentTVcell.swift in Sources */,
 				AAA6A4152EF2E84000520357 /* DropDownItemTableViewCell.swift in Sources */,
 				AAADB9602EF82E2400F696F3 /* ModelAnnouncementCerqel.swift in Sources */,
+				AAE37A262F02C0D3004EBA29 /* GetAllCategoriesUseCase.swift in Sources */,
+				AAE37A272F02C0D3004EBA29 /* ServicesRepo.swift in Sources */,
+				AAE37A282F02C0D3004EBA29 /* GetAllCategoriesEntity.swift in Sources */,
+				AAE37A292F02C0D3004EBA29 /* GetAllCategoriesMapper.swift in Sources */,
 				AAA6A4162EF2E84000520357 /* RequestDetailsViewModel.swift in Sources */,
 				AAADB9642EF82FEF00F696F3 /* BottomSheetItem.swift in Sources */,
 				AAA6A4172EF2E84000520357 /* NPSTableViewCell.swift in Sources */,
@@ -4835,6 +5193,11 @@
 				AAA6A4222EF2E84000520357 /* TextAreaTableViewCell.swift in Sources */,
 				AAA6A4232EF2E84000520357 /* ModelMyTask.swift in Sources */,
 				AAA6A4242EF2E84000520357 /* NewDatePickerPopup+Extensions.swift in Sources */,
+				AAA62FDF2F02BB3200DE891C /* FeedbackViewModel.swift in Sources */,
+				AAA62FE02F02BB3200DE891C /* SurveyUseCase.swift in Sources */,
+				AAA62FE12F02BB3200DE891C /* SurveyEndPoint.swift in Sources */,
+				AAA62FE22F02BB3200DE891C /* FeedbackBottomSheetView.swift in Sources */,
+				AAA62FE32F02BB3200DE891C /* SurveyRepo.swift in Sources */,
 				AAA6A4252EF2E84000520357 /* ArithmeticFunctionLibrary.swift in Sources */,
 				AAADB9662EF8347400F696F3 /* TenantListDTO.swift in Sources */,
 				AAA6A4262EF2E84000520357 /* SendBackRecipientsMapper.swift in Sources */,
@@ -4851,6 +5214,10 @@
 				AAA6A4302EF2E84000520357 /* ShowHideEmptyFieldsView.swift in Sources */,
 				AAA6A4312EF2E84000520357 /* ParagraphTableViewCell.swift in Sources */,
 				AAA6A4322EF2E84000520357 /* NewInfoIndicatorTVcell.swift in Sources */,
+				AAE37A072F02BF13004EBA29 /* AddToFavouriteEndPoint.swift in Sources */,
+				AAE37A082F02BF13004EBA29 /* AllServicesEndPoint.swift in Sources */,
+				AAE37A092F02BF13004EBA29 /* AddToFavouritePayload.swift in Sources */,
+				AAE37A0A2F02BF13004EBA29 /* AllServicesDTO.swift in Sources */,
 				AAADBA2F2EF83AE000F696F3 /* FileModel.swift in Sources */,
 				AAA6A4332EF2E84000520357 /* RequestSummaryVC.swift in Sources */,
 				AAA6A4342EF2E84000520357 /* EmpInfoTVC.swift in Sources */,
@@ -4986,6 +5353,11 @@
 				AAA6A4422EF2E84000520357 /* DownloadAttTvcell.swift in Sources */,
 				AAA6A4432EF2E84000520357 /* mediaItemCVcell.swift in Sources */,
 				AAA6A4442EF2E84000520357 /* FileView.swift in Sources */,
+				AAE37A182F02C075004EBA29 /* AllServicesEntity.swift in Sources */,
+				AAE37A192F02C075004EBA29 /* ServicesMapper.swift in Sources */,
+				AAE37A1A2F02C075004EBA29 /* AllServicesUseCase.swift in Sources */,
+				AAE37A1B2F02C075004EBA29 /* AllServicesMapper.swift in Sources */,
+				AAE37A1C2F02C075004EBA29 /* ServicesEntity.swift in Sources */,
 				AAA6A4452EF2E84000520357 /* FaceRateTableViewCell.swift in Sources */,
 				E44836082CB5C05B00871C3D /* FormBuilderManager.swift in Sources */,
 				E47B1BE72B8F5D9D00E22A45 /* DynamicFormEngine.docc in Sources */,

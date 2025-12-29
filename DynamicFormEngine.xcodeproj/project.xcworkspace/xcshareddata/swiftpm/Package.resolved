@@ -1,5 +1,5 @@
 {
-  "originHash" : "6b04165497d1806c18abeee530a78a966dee13661f90f75499cebf7ef1ad665a",
+  "originHash" : "4dcc679a53de1c1d2cf51254151b2404933cc5db8577a98a9a5e3b6e97a747be",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -386,6 +386,15 @@
       "state" : {
         "revision" : "b7e1104502eca3a213b46303391ca4d3bc8ddec1",
         "version" : "2.30910.0"
+      }
+    },
+    {
+      "identity" : "netfox",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kasketis/netfox.git",
+      "state" : {
+        "revision" : "557576032736fd3140422baefb68b8f76c55088f",
+        "version" : "1.21.0"
       }
     },
     {

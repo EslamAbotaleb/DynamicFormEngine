@@ -1,0 +1,15 @@
+//
+//  FeedbackViewModel.swift
+//  CERQEL
+//
+//  Created by Muhammed Sabri on 25/12/2023.
+//  Copyright © 2023 Youxel. All rights reserved.
+//
+
+import Foundation
+
+class FeedbackViewModel: BaseVM {
+
+    var isFullScreen: DynamicObjects<Bool> = DynamicObjects(false)
+
+}

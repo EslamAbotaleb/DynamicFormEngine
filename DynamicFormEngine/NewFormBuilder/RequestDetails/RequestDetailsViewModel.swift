@@ -622,7 +622,7 @@ public class RequestDetailsViewModel: BaseVM {
     
     func successBottomSheet () {
         let message: SuccessMessageResponse = successSheetMessage()
-//        router.presentbottomSheet(fromProfile: false, controller: SuccessBottomSheetViewController.self, viewModel: FileActionsViewModel.self, item: SuccessItem(successCallBack, message.message ?? "", message.description ?? ""))
+        router.presentbottomSheet(fromProfile: false, controller: SuccessBottomSheetViewController.self, viewModel: FileActionsViewModel.self, item: SuccessItem(successCallBack, message.message ?? "", message.description ?? ""))
     }
     
     /// Download attached image

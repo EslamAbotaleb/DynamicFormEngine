@@ -179,13 +179,13 @@ public class RequestDetailsViewModel: BaseVM {
     }
     
     func showDeleteBottomSheet(for item: ListModel) {
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
-//            self?.router.presentbottomSheet(fromProfile: false, controller: CerqelDeleteSheet.self, viewModel: FileActionsViewModel.self, item: DeleteItem({
-//                self?.router.dismissCurrentController(completion: {
-//                    self?.doWithdrawAction(requestId: self?.details.value?.id ?? "")
-//                })
-//            }, "Withdraw Request".localized, "Are you sure, you want to withdraw your request?".localized,  "withDrawAction", "YES".localized, "NO".localized, redButton))
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.router.presentbottomSheet(fromProfile: false, controller: CerqelDeleteSheet.self, viewModel: FileActionsViewModel.self, item: DeleteItem({
+                self?.router.dismissCurrentController(completion: {
+                    self?.doWithdrawAction(requestId: self?.details.value?.id ?? "")
+                })
+            }, "Withdraw Request".localized, "Are you sure, you want to withdraw your request?".localized,  "withDrawAction", "YES".localized, "NO".localized, redButton))
+        }
     }
     
     private func handleEditRequestAction(item: ListModel){

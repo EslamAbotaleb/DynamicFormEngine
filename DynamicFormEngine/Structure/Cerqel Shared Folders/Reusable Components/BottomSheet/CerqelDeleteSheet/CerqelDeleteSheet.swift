@@ -9,18 +9,18 @@
 import UIKit
 import PanModal
 
-typealias DeleteCallBack =  (()->())
-    /*
-class DeleteItem: BaseItem {
-    var deleteCallBack: DeleteCallBack
-    var deleteTitle:String
-    var deleteMessage:String?
-    var deleteicon:String?
-    var deleteButtonTitle:String?
-    var cancelButtonTitle:String?
-    var deleteBtnColor:UIColor?
+public typealias DeleteCallBack =  (()->())
 
-    init(_ deleteCallBack: @escaping DeleteCallBack,_ deleteTitle: String,_ deleteMessage: String,_ deleteicon: String,_ deleteButtonTitle: String,_ cancelButtonTitle: String,_ deleteBtnColor: UIColor) {
+public class DeleteItem: BaseItem {
+    public var deleteCallBack: DeleteCallBack
+    public var deleteTitle:String
+    public var deleteMessage:String?
+    public var deleteicon:String?
+    public var deleteButtonTitle:String?
+    public var cancelButtonTitle:String?
+    public var deleteBtnColor:UIColor?
+
+    public init(_ deleteCallBack: @escaping DeleteCallBack,_ deleteTitle: String,_ deleteMessage: String,_ deleteicon: String,_ deleteButtonTitle: String,_ cancelButtonTitle: String,_ deleteBtnColor: UIColor) {
         self.deleteCallBack = deleteCallBack
         self.deleteTitle = deleteTitle
         self.deleteMessage = deleteMessage
@@ -31,7 +31,7 @@ class DeleteItem: BaseItem {
     }
 }
 
-class CerqelDeleteSheet: BaseView<FileActionsViewModel, DeleteItem> {
+public class CerqelDeleteSheet: BaseView<FileActionsViewModel, DeleteItem> {
     @IBOutlet weak var sheetView: UIStackView!
     
     @IBOutlet weak var deleteIcon: UIImageView!
@@ -42,7 +42,7 @@ class CerqelDeleteSheet: BaseView<FileActionsViewModel, DeleteItem> {
     @IBOutlet weak var deleteBtn: UIButton!
     
        
-       override func viewDidLoad() {
+       override public func viewDidLoad() {
            super.viewDidLoad()
            configureUI()
            self.deleteIcon.image = UIImage(named: item.deleteicon ?? "")
@@ -68,11 +68,11 @@ class CerqelDeleteSheet: BaseView<FileActionsViewModel, DeleteItem> {
      
            item.deleteCallBack()
        }
-    override var panScrollable: UIScrollView? {
+    override public var panScrollable: UIScrollView? {
         return nil
     }
 
-    override var longFormHeight: PanModalHeight {
+    override public var longFormHeight: PanModalHeight {
         return .contentHeight(sheetView.bounds.height)
 
     }
@@ -90,4 +90,4 @@ extension CerqelDeleteSheet {
 
     }
 }
-*/
+

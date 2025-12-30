@@ -3517,7 +3517,6 @@
 		AAC0EA1F2EF61DE100DDE9FF /* Cerqel Shared Folders */ = {
 			isa = PBXGroup;
 			children = (
-				AAE37A0E2F02C06D004EBA29 /* Domain */,
 				AA242A152F01411000A6E428 /* Fonts */,
 				AAC0EA282EF61E0100DDE9FF /* Stepper */,
 				AAADBA742EF853B400F696F3 /* ActionsBottomSheet */,
@@ -4218,13 +4217,6 @@
 				AAE37A0B2F02BF91004EBA29 /* SurveyRepoImpl.swift */,
 			);
 			path = RepoImp;
-			sourceTree = "<group>";
-		};
-		AAE37A0E2F02C06D004EBA29 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		E47B1BD82B8F5D9D00E22A45 = {

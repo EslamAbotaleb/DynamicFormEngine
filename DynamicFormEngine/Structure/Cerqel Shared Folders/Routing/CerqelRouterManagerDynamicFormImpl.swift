@@ -29,7 +29,7 @@ public enum CerqelView {
 
 public class CerqelRouterManagerDynamicFormImpl: CerqelRouterManager {
 
-    var currentViewController: UIViewController
+    public var currentViewController: UIViewController
 
     public init(_ currentViewController: UIViewController = UIViewController()) {
         self.currentViewController = currentViewController
@@ -179,7 +179,7 @@ extension UINavigationController {
         }
     }
 
-    public  func popViewControllers(viewsToPop: Int, animated: Bool = false) {
+    public func popViewControllers(viewsToPop: Int, animated: Bool = false) {
         if viewControllers.count > viewsToPop {
             let vc = viewControllers[viewControllers.count - viewsToPop - 1]
             popToViewController(vc, animated: animated)
@@ -189,7 +189,7 @@ extension UINavigationController {
 }
 
 extension UIViewController {
-    static var identifier: String {
+    static public var identifier: String {
         return String(describing: self)
     }
 }

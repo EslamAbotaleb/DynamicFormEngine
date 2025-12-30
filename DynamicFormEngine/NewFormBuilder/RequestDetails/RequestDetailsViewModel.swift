@@ -258,7 +258,7 @@ public class RequestDetailsViewModel: BaseVM {
     }
     
     func showActionsListBottomSheet(){
-//        router.presentbottomSheet(fromProfile: false, controller: BaseList.self, viewModel: BaseListBottomSheetViewModel.self, item: BaseListItem(list: self.actionName.value, title: "Actions".localized, type: .action, isSingleSelection: true, selectedItem: selectedAction, multiSelectedItems: multiSelectedItems))
+        router.presentbottomSheet(fromProfile: false, controller: BaseList.self, viewModel: BaseListBottomSheetViewModel.self, item: BaseListItem(list: self.actionName.value, title: "Actions".localized, type: .action, isSingleSelection: true, selectedItem: selectedAction, multiSelectedItems: multiSelectedItems))
     }
     
     func multiSelectedItems(item: [ListModel]){}
@@ -848,6 +848,7 @@ public class RequestDetailsViewModel: BaseVM {
     }
     
     func popToAllServices() {
+        router.popToSpecialViewController(ofClass: RequestSummaryVC.self, animated: true)
 //        router.popToSpecialViewController(ofClass: AllServicesViewController.self, animated: true)
     }
     

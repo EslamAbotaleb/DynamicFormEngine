@@ -9,7 +9,7 @@
 
 import Foundation
 
-class AcknowledgeViewModel: BaseVM {
+public class AcknowledgeViewModel: BaseVM {
     
     
     private var router:CerqelRouterManager
@@ -17,19 +17,19 @@ class AcknowledgeViewModel: BaseVM {
     
     
 
-    var fileId: DynamicObjects<String> = DynamicObjects("")
+    public var fileId: DynamicObjects<String> = DynamicObjects("")
 
 
     
     
-    init( router: CerqelRouterManager, fileId: String) {
+    public  init( router: CerqelRouterManager, fileId: String) {
         self.router = router
         self.fileId.value = fileId
 
     }
     
     
-    override func hydrate() {
+    override public func hydrate() {
         setupDepencies()
         
     }
@@ -40,26 +40,26 @@ class AcknowledgeViewModel: BaseVM {
     
     // Action
     
-    func selectItem (index: Int) {
+    public func selectItem (index: Int) {
 
     }
     
     
     //router
     
-    func popBack () {
+    public func popBack () {
         router.popBack()
     }
     
-    func  successBottomSheet () {
+    public  func  successBottomSheet () {
         router.presentbottomSheet(fromProfile: false, controller: SuccessBottomSheetViewController.self, viewModel: FileActionsViewModel.self, item: SuccessItem(successCallBack, "The file has been acknowledged successfully".localized))
     }
     
-    func successCallBack() {
+    public func successCallBack() {
         self.popBack()
     }
     
-    func  fireObserve (acknowledge: FileAcknowledgeResponse) {
+    public func  fireObserve (acknowledge: FileAcknowledgeResponse) {
         let fileValue: [String: Any] = [ "fileActionType": FileActionType.acknowledge, "fileId": self.fileId.value, "acknowledge": acknowledge ]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "fileAction"), object: nil, userInfo: fileValue)
     }
@@ -67,7 +67,7 @@ class AcknowledgeViewModel: BaseVM {
     
     //endPoint
     
-    func acknowledgementEndPoint( ) {
+    public func acknowledgementEndPoint( ) {
         self.showHudLoading()
         documentRepo.acknowledge(fileId: fileId.value).then { (response) in
             self.successBottomSheet()

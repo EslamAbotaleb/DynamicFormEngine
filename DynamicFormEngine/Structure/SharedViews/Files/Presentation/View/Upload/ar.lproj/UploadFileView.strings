@@ -1,0 +1,98 @@
+
+/* Class = "UILabel"; text = "Report name 88990.pdf"; ObjectID = "00N-iJ-ula"; */
+"00N-iJ-ula.text" = "Report name 88990.pdf";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2Ux-Ay-loP"; */
+"2Ux-Ay-loP.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5Gs-oY-CIU"; */
+"5Gs-oY-CIU.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6T5-ho-ifg"; */
+"6T5-ho-ifg.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "89I-za-81L"; */
+"89I-za-81L.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Asf-hZ-CnF"; */
+"Asf-hZ-CnF.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "You must upload at least one version of the file - Arabic or English or Both - and ensure that the file does not contain any sensitive or confidential information. Once approved, the file will be visible to anyone who has access to Document Library"; ObjectID = "CKO-MR-dzN"; */
+"CKO-MR-dzN.text" = "يجب عليك تحميل نسخة واحدة على الأقل من الملف - باللغة العربية أو الإنجليزية أو كليهما - والتأكد من أن الملف لا يحتوي على أي معلومات حساسة أو سرية. بمجرد الموافقة، سيكون الملف مرئيًا لأي شخص لديه حق الوصول إلى مكتبة المستندات";
+
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ESC-aT-pdK"; */
+"ESC-aT-pdK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Report name 88990.pdf"; ObjectID = "JoZ-FF-3qM"; */
+"JoZ-FF-3qM.text" = "Report name 88990.pdf";
+
+/* Class = "UILabel"; text = "Category"; ObjectID = "KKn-cZ-VYi"; */
+"KKn-cZ-VYi.text" = "فئة";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Lg8-Vu-hEa"; */
+"Lg8-Vu-hEa.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OGb-Bz-NFl"; */
+"OGb-Bz-NFl.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Description "; ObjectID = "S2p-ej-4H6"; */
+"S2p-ej-4H6.text" = "الوصف ";
+
+/* Class = "UILabel"; text = "Upload file (En)"; ObjectID = "U34-o3-YRs"; */
+"U34-o3-YRs.text" = "رفع ملف (إنجليزي)";
+
+/* Class = "UILabel"; text = "Upload file (En)"; ObjectID = "U34-o3-YRs"; */
+"lvs-Bn-kOv.text" = "ارفع الملف هنا...";
+
+/* Class = "UILabel"; text = "Upload file (En)"; ObjectID = "U34-o3-YRs"; */
+"aAY-XU-kH1.text" = "ارفع الملف هنا...";
+
+/* Class = "UIButton"; configuration.title = "publish"; ObjectID = "UsJ-Hc-f19"; */
+"UsJ-Hc-f19.configuration.title" = "تطبيق";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "UsJ-Hc-f19"; */
+"UsJ-Hc-f19.normalTitle" = "الغاء";
+
+/* Class = "UITextField"; placeholder = "Select Category"; ObjectID = "WXV-6A-ewF"; */
+"WXV-6A-ewF.placeholder" = "اختر فئة";
+
+/* Class = "UIButton"; configuration.title = "cancel"; ObjectID = "dbV-8z-Au8"; */
+"t8E-US-RVY.normalTitle" = "الغاء";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dbV-8z-Au8"; */
+"UsJ-Hc-f19.normalTitle" = "تطبيق";
+
+/* Class = "UILabel"; text = "Report name 88990.pdf"; ObjectID = "fZ7-XZ-rMR"; */
+"fZ7-XZ-rMR.text" = "Report name 88990.pdf";
+
+/* Class = "UILabel"; text = "Sub-Category"; ObjectID = "ffD-80-nLL"; */
+"ffD-80-nLL.text" = "فئة فرعية";
+
+
+/* Class = "UILabel"; text = "Upload file (Ar)"; ObjectID = "fw2-z2-vU5"; */
+"fw2-z2-vU5.text" = "رفع ملف (عربي)";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ibC-r3-WNb"; */
+"ibC-r3-WNb.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Report name 88990.pdf"; ObjectID = "ohl-5p-lJT"; */
+"ohl-5p-lJT.text" = "Report name 88990.pdf";
+
+/* Class = "UILabel"; text = "Uploading failed, Please try again"; ObjectID = "pZe-KZ-b0g"; */
+"pZe-KZ-b0g.text" = "فشل التحميل، يرجى المحاولة مرة أخرى";
+
+/* Class = "UITextField"; placeholder = "Select Sub-Category"; ObjectID = "qh7-vm-sA9"; */
+"qh7-vm-sA9.placeholder" = "اختر فئة فرعية";
+
+/* Class = "UILabel"; text = "Uploading failed, Please try again"; ObjectID = "sK5-Ow-j5S"; */
+"sK5-Ow-j5S.text" = "فشل في رفع الملف يرجى المحاولة مرة أخري";
+
+/* Class = "UILabel"; text = "Report name 88990.pdf"; ObjectID = "tPb-dh-kJD"; */
+"tPb-dh-kJD.text" = "Report name 88990.pdf";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uuO-PE-vYH"; */
+"uuO-PE-vYH.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Report name 88990.pdf"; ObjectID = "wA8-D8-2QJ"; */
+"wA8-D8-2QJ.text" = "Report name 88990.pdf";

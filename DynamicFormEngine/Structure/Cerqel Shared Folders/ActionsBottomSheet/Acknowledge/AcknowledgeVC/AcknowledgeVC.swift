@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
+public class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
     
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var textLabel: UILabel!
@@ -17,11 +17,9 @@ class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
     @IBOutlet weak var cancelButton: LocalizedButton!
     @IBOutlet weak var submitButton: LocalizedButton!
     
-    var isAgreedAcknowledge : Bool = false
-    
+    public  var isAgreedAcknowledge : Bool = false
 
-    
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         initialConfiguration()
         setNavigationTitle( "Acknowledgement".localized)
@@ -30,7 +28,7 @@ class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
     }
     
 
-    override func viewWillDisappear(_ animated: Bool) {
+    override public func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
     
@@ -40,7 +38,7 @@ class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
         
     }
 
-    func setupUI(){
+    public func setupUI(){
         textLabel.font = .bodyMRegular()
         checkBoxTitlelabel.font = .bodyMRegular()
         
@@ -53,7 +51,7 @@ class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
         generateRichText()
     }
     
-    func  setSubmitButtonUI(){
+    public func  setSubmitButtonUI(){
         if(isAgreedAcknowledge){
             submitButton.backgroundColor = primaryMain
             submitButton.isUserInteractionEnabled = true
@@ -64,7 +62,7 @@ class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
         }
     }
     
-    func setCheckBoxUI(){
+    public func setCheckBoxUI(){
         if(isAgreedAcknowledge){
             checkBoxImage.image = UIImage(named: "Checkbox Checked")
         }
@@ -73,7 +71,7 @@ class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
         }
     }
     
-    func generateRichText(){
+    public func generateRichText(){
 
         textLabel.textAlignment = isArabic() ? .right : .left
         textLabel.attributedText =
@@ -101,11 +99,11 @@ class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
 
 }
 extension NSMutableAttributedString {
-    var fontSize:CGFloat { return 14 }
-    var boldFont:UIFont { return UIFont.bodyMRegular() }
-    var normalFont:UIFont { return UIFont.bodyMRegular()}
+    public var fontSize:CGFloat { return 14 }
+    public var boldFont:UIFont { return UIFont.bodyMRegular() }
+    public var normalFont:UIFont { return UIFont.bodyMRegular()}
 
-    func bold(_ value:String) -> NSMutableAttributedString {
+    public func bold(_ value:String) -> NSMutableAttributedString {
 
         let attributes:[NSAttributedString.Key : Any] = [
             .font : boldFont,
@@ -116,7 +114,7 @@ extension NSMutableAttributedString {
         return self
     }
 
-    func normal(_ value:String) -> NSMutableAttributedString {
+    public func normal(_ value:String) -> NSMutableAttributedString {
 
         let attributes:[NSAttributedString.Key : Any] = [
             .font : normalFont,
@@ -126,7 +124,7 @@ extension NSMutableAttributedString {
         return self
     }
     /* Other styling methods */
-    func orangeHighlight(_ value:String) -> NSMutableAttributedString {
+    public func orangeHighlight(_ value:String) -> NSMutableAttributedString {
 
         let attributes:[NSAttributedString.Key : Any] = [
             .font :  normalFont,
@@ -138,7 +136,7 @@ extension NSMutableAttributedString {
         return self
     }
 
-    func blackHighlight(_ value:String) -> NSMutableAttributedString {
+    public func blackHighlight(_ value:String) -> NSMutableAttributedString {
 
         let attributes:[NSAttributedString.Key : Any] = [
             .font :  normalFont,
@@ -151,7 +149,7 @@ extension NSMutableAttributedString {
         return self
     }
 
-    func underlined(_ value:String) -> NSMutableAttributedString {
+    public func underlined(_ value:String) -> NSMutableAttributedString {
 
         let attributes:[NSAttributedString.Key : Any] = [
             .font :  normalFont,

@@ -9,29 +9,27 @@
 import UIKit
 public import PanModal
 
-class FileItem : BaseItem {
-    var fileId: String
+public class FileItem : BaseItem {
+    public var fileId: String
     
-    init (fileId: String) {
+    public init (fileId: String) {
         self.fileId = fileId
     }
 }
 
-class ReportView: BaseView<ReportViewModel, FileItem> {
+public class ReportView: BaseView<ReportViewModel, FileItem> {
     
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var tableView: UITableView!{
         didSet{
-//            self.tableView.registerCell(idintifier: RadioButtonTVCell.cerqel_identifier)
-//            self.tableView.registerHaederFooterCell(idintifier: "ReportFooterTVCell")
             self.tableView.registerCell(cellType: RadioButtonTVCell.self)
             self.tableView.registerHaederFooterCell(viewType: ReportFooterTVCell.self)
         }
     }
     private let refreshControl = UIRefreshControl()
 
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         initialConfiguration()
         configUI()
@@ -41,13 +39,11 @@ class ReportView: BaseView<ReportViewModel, FileItem> {
         setupBackButton()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override public func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-
     }
    
-    
     private func initialConfiguration(){
         viewModel = ReportViewModel(router: CerqelRouterManagerDynamicFormImpl(self), fileId: item.fileId)
         viewModel.reportListEndPoint()

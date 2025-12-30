@@ -11,17 +11,17 @@ import UIKit
 
 extension ReportView : UITableViewDelegate, UITableViewDataSource{
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.reportList.value.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RadioButtonTVCell.cerqel_identifier, for: indexPath) as! RadioButtonTVCell
         cell.configure(item: viewModel.reportList.value[indexPath.row])
         return cell 
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.selectItem(index: indexPath.row)
         guard  viewModel.selectedItemId.value != viewModel.reportList.value.last?.id  else {
             return
@@ -30,11 +30,11 @@ extension ReportView : UITableViewDelegate, UITableViewDataSource{
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 52
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
         let footerCell = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ReportFooterTVCell") as! ReportFooterTVCell
         footerCell.reasonSpecified = {
@@ -45,7 +45,7 @@ extension ReportView : UITableViewDelegate, UITableViewDataSource{
     
     
     //    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         
         let height = viewModel.selectedItemId.value == viewModel.reportList.value.last?.id  ? 162 : 0
         

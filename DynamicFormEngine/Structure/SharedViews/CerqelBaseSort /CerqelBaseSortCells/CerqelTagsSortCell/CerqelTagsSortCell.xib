@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SimplonNorm-Bold.otf">
+            <string>SimplonNorm-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CerqelTagsSortCell" customModule="CERQEL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="151" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="151" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1bz-zV-22q">
+                        <rect key="frame" x="0.0" y="0.0" width="151" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="# General" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biu-yV-gue">
+                                <rect key="frame" x="45.333333333333343" y="17" width="60.666666666666657" height="16"/>
+                                <fontDescription key="fontDescription" name="SimplonNorm-Bold" family="Simplon Norm" pointSize="14"/>
+                                <color key="textColor" name="cerqelColorPurple1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="cerqelColorPurple4"/>
+                        <constraints>
+                            <constraint firstItem="biu-yV-gue" firstAttribute="centerY" secondItem="1bz-zV-22q" secondAttribute="centerY" id="VPM-Wg-EOd"/>
+                            <constraint firstItem="biu-yV-gue" firstAttribute="centerX" secondItem="1bz-zV-22q" secondAttribute="centerX" id="pSy-qM-UK6"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="1bz-zV-22q" secondAttribute="bottom" id="FJg-a0-LhN"/>
+                <constraint firstItem="1bz-zV-22q" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LX4-bn-0YB"/>
+                <constraint firstAttribute="trailing" secondItem="1bz-zV-22q" secondAttribute="trailing" id="PFi-qu-0DQ"/>
+                <constraint firstItem="1bz-zV-22q" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="SIu-1M-p84"/>
+            </constraints>
+            <size key="customSize" width="151" height="50"/>
+            <connections>
+                <outlet property="tagNameLbl" destination="biu-yV-gue" id="fZd-wb-iZS"/>
+            </connections>
+            <point key="canvasLocation" x="157.69230769230768" y="-1.4218009478672986"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="cerqelColorPurple1">
+            <color red="0.43529411764705883" green="0.37647058823529411" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cerqelColorPurple4">
+            <color red="0.90588235294117647" green="0.89411764705882357" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

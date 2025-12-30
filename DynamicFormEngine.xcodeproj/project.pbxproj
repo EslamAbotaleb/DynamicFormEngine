@@ -107,6 +107,10 @@
 		AA7196A22EF44E6E00D31A70 /* CRRefreshBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7196862EF44E6E00D31A70 /* CRRefreshBundle.swift */; };
 		AA7196A32EF44E6E00D31A70 /* FastCircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7196742EF44E6E00D31A70 /* FastCircleLayer.swift */; };
 		AA820A1C2EF6308D0022BCA4 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = AA820A1B2EF6308D0022BCA4 /* DGCharts */; };
+		AA856BDD2F03D1D90084FA53 /* FileViewerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA856BDC2F03D1D90084FA53 /* FileViewerManager.swift */; };
+		AA856BE42F03D2700084FA53 /* FileWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA856BE12F03D2700084FA53 /* FileWebViewController.xib */; };
+		AA856BE52F03D2700084FA53 /* FileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA856BDE2F03D2700084FA53 /* FileViewModel.swift */; };
+		AA856BE62F03D2700084FA53 /* FileWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA856BE02F03D2700084FA53 /* FileWebViewController.swift */; };
 		AA8FB7DB2EF3F9EC0073665D /* PopupDialog in Frameworks */ = {isa = PBXBuildFile; productRef = AA8FB7DA2EF3F9EC0073665D /* PopupDialog */; };
 		AA90499A2F01229A00857338 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9049992F01229A00857338 /* SheetViewController.swift */; };
 		AA90499C2F01232800857338 /* InitialTouchPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499B2F01232800857338 /* InitialTouchPanGestureRecognizer.swift */; };
@@ -855,6 +859,10 @@
 		AA71968A2EF44E6E00D31A70 /* CRRefreshHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRefreshHeaderView.swift; sourceTree = "<group>"; };
 		AA71968B2EF44E6E00D31A70 /* CRRefreshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRefreshProtocol.swift; sourceTree = "<group>"; };
 		AA71968C2EF44E6E00D31A70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		AA856BDC2F03D1D90084FA53 /* FileViewerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewerManager.swift; sourceTree = "<group>"; };
+		AA856BDE2F03D2700084FA53 /* FileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewModel.swift; sourceTree = "<group>"; };
+		AA856BE02F03D2700084FA53 /* FileWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWebViewController.swift; sourceTree = "<group>"; };
+		AA856BE12F03D2700084FA53 /* FileWebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FileWebViewController.xib; sourceTree = "<group>"; };
 		AA9049992F01229A00857338 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
 		AA90499B2F01232800857338 /* InitialTouchPanGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTouchPanGestureRecognizer.swift; sourceTree = "<group>"; };
 		AA90499D2F01239A00857338 /* SheetSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetSize.swift; sourceTree = "<group>"; };
@@ -1770,6 +1778,32 @@
 			path = Animators;
 			sourceTree = "<group>";
 		};
+		AA856BDF2F03D2700084FA53 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA856BDE2F03D2700084FA53 /* FileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA856BE22F03D2700084FA53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA856BE02F03D2700084FA53 /* FileWebViewController.swift */,
+				AA856BE12F03D2700084FA53 /* FileWebViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA856BE32F03D2700084FA53 /* FileView */ = {
+			isa = PBXGroup;
+			children = (
+				AA856BDF2F03D2700084FA53 /* ViewModel */,
+				AA856BE22F03D2700084FA53 /* View */,
+			);
+			path = FileView;
+			sourceTree = "<group>";
+		};
 		AA9049962F01227E00857338 /* FittedSheets */ = {
 			isa = PBXGroup;
 			children = (
@@ -1820,6 +1854,7 @@
 		AAA62FCF2F02BB2700DE891C /* SharedViews */ = {
 			isa = PBXGroup;
 			children = (
+				AA856BE32F03D2700084FA53 /* FileView */,
 				AAA62FDE2F02BB3200DE891C /* Feedback */,
 			);
 			path = SharedViews;
@@ -3505,6 +3540,7 @@
 				AAADB9692EF836B800F696F3 /* TokenManager.swift */,
 				AAADB9632EF82FEF00F696F3 /* BottomSheetItem.swift */,
 				AAC0E67F2EF60DA700DDE9FF /* CerqelUIManager.swift */,
+				AA856BDC2F03D1D90084FA53 /* FileViewerManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -4720,6 +4756,7 @@
 				AAA6A3572EF2E84000520357 /* DownloadAttTvcell.xib in Resources */,
 				AAA6A3582EF2E84000520357 /* LabelBottomSheetVC.xib in Resources */,
 				AAA6A3592EF2E84000520357 /* FormMediaItemView.xib in Resources */,
+				AA856BE42F03D2700084FA53 /* FileWebViewController.xib in Resources */,
 				AAA6A35A2EF2E84000520357 /* TextBoxTableViewCell.xib in Resources */,
 				AAA6A35B2EF2E84000520357 /* NewCheckBoxTVCell.xib in Resources */,
 				AAA6A35C2EF2E84000520357 /* ReqInfoTVC.xib in Resources */,
@@ -5012,6 +5049,7 @@
 				AAADA1162EF6C2210036FD04 /* Radio2ItemsOnlyTVcell.swift in Sources */,
 				AAADA1172EF6C2210036FD04 /* TimePickerTVcell.swift in Sources */,
 				AAADA1182EF6C2210036FD04 /* ControlType.swift in Sources */,
+				AA856BDD2F03D1D90084FA53 /* FileViewerManager.swift in Sources */,
 				AAADA1192EF6C2210036FD04 /* InfoIndicatorTVcell.swift in Sources */,
 				AAADA11A2EF6C2210036FD04 /* FormBuilderVC.swift in Sources */,
 				AAADA11B2EF6C2210036FD04 /* DatePickerTVcell.swift in Sources */,
@@ -5168,6 +5206,8 @@
 				AAA6A40F2EF2E84000520357 /* TakeActionModel.swift in Sources */,
 				AAA6A4102EF2E84000520357 /* DynamicSettings.swift in Sources */,
 				AAA6A4112EF2E84000520357 /* DateTableViewCell.swift in Sources */,
+				AA856BE52F03D2700084FA53 /* FileViewModel.swift in Sources */,
+				AA856BE62F03D2700084FA53 /* FileWebViewController.swift in Sources */,
 				AAA6A4122EF2E84000520357 /* FormBuilder+FieldStateFuncExtensions.swift in Sources */,
 				AAA6A4132EF2E84000520357 /* FormManager.swift in Sources */,
 				AAA6A4142EF2E84000520357 /* reqTaskCommentTVcell.swift in Sources */,

@@ -9,45 +9,41 @@
 import UIKit
 public import PanModal
 
-protocol PushFromPrsentedScreen {
+public protocol PushFromPrsentedScreen {
     func push(fileId: String, actionId : Int)
     func push( actionId : Int)
 }
 extension PushFromPrsentedScreen {
-    func push(fileId: String, actionId : Int) {
+    public func push(fileId: String, actionId : Int) {
         
     }
-    func push( actionId : Int){
+    public func push( actionId : Int){
         
     }
 }
 
-protocol ActionsProtocol {
+public protocol ActionsProtocol {
     func handleFileAction(fileId: String, actionId : Int)
 }
 
-
-
-
-class FileActionItem: BaseItem {
-    var file: FileModel
-    var router:CerqelRouterManager
-    var delegate:ActionsProtocol?
+public class FileActionItem: BaseItem {
+    public var file: FileModel
+    public var router:CerqelRouterManager
+    public var delegate:ActionsProtocol?
     
-    init(file: FileModel,router:CerqelRouterManager,delegate: ActionsProtocol ) {
+    public init(file: FileModel,router:CerqelRouterManager,delegate: ActionsProtocol ) {
         self.file = file
         self.router = router
         self.delegate = delegate
     }
 }
 
-class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
+public class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
     
-    let fileActionCellIdintifier = String(describing: FileActionCell.self)
+    public let fileActionCellIdintifier = String(describing: FileActionCell.self)
     
     @IBOutlet weak var tableView: UITableView!{
         didSet {
-//            self.tableView.registerCell(idintifier: fileActionCellIdintifier)
             self.tableView.register(UINib(nibName: fileActionCellIdintifier, bundle: Bundle(for: type(of: self))),
                                     forCellReuseIdentifier: fileActionCellIdintifier)
 
@@ -61,11 +57,11 @@ class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
     @IBOutlet weak var fileImage: UIImageView!
     @IBOutlet weak var closeBtn: UIButton!
     
-    var pushDelegate:PushFromPrsentedScreen?
-    var previousViewController:UIViewController?
+    public var pushDelegate:PushFromPrsentedScreen?
+    public var previousViewController:UIViewController?
     
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         initConfiguration()
         handleObservation()
@@ -74,17 +70,17 @@ class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
       
     }
     
     private func initConfiguration() {
 //
-//        viewModel = FileActionsViewModel(router: item.router,currentRouter: CerqelRouterManagerImpl(self) ,file: item.file,delgate: item.delegate!,fileViewer: FileViewerManager( item.router))
-//        viewModel.allFileActions()
-//        viewModel.setDesiredFileActions()
-//        closeBtn.tintColor = primaryMain
+        viewModel = FileActionsViewModel(router: item.router,currentRouter: CerqelRouterManagerDynamicFormImpl(self) ,file: item.file,delegate: item.delegate!,fileViewer: FileViewerManager(item.router))
+        viewModel.allFileActions()
+        viewModel.setDesiredFileActions()
+        closeBtn.tintColor = primaryMain
         
     }
     
@@ -118,11 +114,11 @@ class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
         self.dismiss(animated: true)
     }
     
-    override var longFormHeight: PanModalHeight {
+    override public var longFormHeight: PanModalHeight {
         return .contentHeight(tableView.contentSize.height + 80)
     }
     
-    override var panScrollable: UIScrollView? {
+    override public var panScrollable: UIScrollView? {
         return tableView
     }
     
@@ -130,11 +126,11 @@ class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
 extension FileActionsView: UITableViewDataSource, UITableViewDelegate {
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.actions.value.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let action = viewModel.actions.value[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: fileActionCellIdintifier) as! FileActionCell
         cell.configure(action,isVisible: nil,canDeleteImage: nil)
@@ -144,17 +140,17 @@ extension FileActionsView: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let action : FileActions = viewModel.actions.value[indexPath.row]
         viewModel.push(fileId: item.file.id, actionId: action.id)
 
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
     }
 
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+    public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         let action : FileActions = viewModel.actions.value[indexPath.row]
         if action.id == 6 {
             return  viewModel.file.fileAcknowledgeStatus.isAcknowledge && !viewModel.file.fileAcknowledgeStatus.isAcknowledged ? true : false
@@ -166,7 +162,7 @@ extension FileActionsView: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 51
     }
     

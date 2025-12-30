@@ -8,34 +8,33 @@
 
 import Foundation
 
-enum FileActionType {
+public enum FileActionType {
     case acknowledge
     case report
     case pin
 }
 
-class ReportViewModel: BaseVM {
-    
+public class ReportViewModel: BaseVM {
     
     private var router:CerqelRouterManager
     private var documentRepo: DocumentLibraryRepo!
     
     
-    var pullToRefresh: DynamicObjects<Bool> = DynamicObjects(false)
-    var fileId: DynamicObjects<String> = DynamicObjects("")
-    var selectedItemId: DynamicObjects<String> = DynamicObjects("")
-    var otherReason: DynamicObjects<String> = DynamicObjects("")
-    var reportList: DynamicObjects<[ListModel]> = DynamicObjects( [])
+    public var pullToRefresh: DynamicObjects<Bool> = DynamicObjects(false)
+    public var fileId: DynamicObjects<String> = DynamicObjects("")
+    public var selectedItemId: DynamicObjects<String> = DynamicObjects("")
+    public var otherReason: DynamicObjects<String> = DynamicObjects("")
+    public var reportList: DynamicObjects<[ListModel]> = DynamicObjects( [])
     
     
-    init( router: CerqelRouterManager, fileId: String) {
+    public init( router: CerqelRouterManager, fileId: String) {
         self.router = router
         self.fileId.value = fileId
 
     }
     
     
-    override func hydrate() {
+    override public func hydrate() {
         setupDepencies()
         
     }
@@ -46,14 +45,14 @@ class ReportViewModel: BaseVM {
     
     // Action
     
-    func selectItem (index: Int) {
+    public func selectItem (index: Int) {
         unSelectAll()
         self.selectedItemId.value = self.reportList.value[index].id!
         self.reportList.value[index].isSelected = true
     }
     
     
-    func unSelectAll () {
+    public func unSelectAll () {
         self.reportList.value =  self.reportList.value.map{var file = $0; file.isSelected = false; return file;}
     }
     
@@ -61,11 +60,11 @@ class ReportViewModel: BaseVM {
   
     //router
     
-    func popBack () {
+    public func popBack () {
         router.popBack()
     }
     
-    func successBottomSheet () {
+    public func successBottomSheet () {
         router.presentbottomSheet(fromProfile: false, controller: SuccessBottomSheetViewController.self, viewModel: FileActionsViewModel.self, item: SuccessItem(successCallBack, "The file has been reported successfully".localized))
     }
     
@@ -73,13 +72,13 @@ class ReportViewModel: BaseVM {
         self.popBack()
     }
     
-    func  fireObserve () {
+    public func  fireObserve () {
         let fileValue: [String: Any] = [ "fileActionType": FileActionType.report, "fileId": self.fileId.value]
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "fileAction"), object: nil, userInfo: fileValue)
     }
     
     //endPoint
-    func reportListEndPoint() {
+    public func reportListEndPoint() {
         pullToRefresh.value ? self.hideLoadingCerqel() : self.showLoadingCerqel()
         
         documentRepo.reportList().then { (response) in
@@ -94,7 +93,7 @@ class ReportViewModel: BaseVM {
         }
     }
     
-    func sendReportEndPoint() {
+    public func sendReportEndPoint() {
         self.showHudLoading()
         let reportRequest = ReportRequest(fileId: fileId.value, reason: ReasonRequest(id: selectedItemId.value, reasonMessage: otherReason.value))
         documentRepo.sendReportList(reportRequest: reportRequest ).then { (response) in

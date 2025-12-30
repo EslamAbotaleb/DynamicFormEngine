@@ -30,8 +30,6 @@ class SuccessBottomSheetWithNavigationLinkVC: BaseView<BottomSheetBaseViewModel,
         self.titleLbl.textColor = typographyTitle
         self.closeIcon.tintColor = primaryMain
     }
-    
-
 
     @IBAction func closIconPressed(_ sender: Any) {
         dismiss(animated: true)

@@ -368,6 +368,7 @@ class FormViewController: FormBaseViewController {
     
     /// pop to all services view
     public func popToAllServices() {
+        NotificationCenter.default.post(name: .didPopAllServices, object: nil)
 //        router.popToViewController(ofClass: AllServicesViewController.self, animated: true)
     }
     
@@ -494,6 +495,7 @@ class FormViewController: FormBaseViewController {
                         title: "No Form Fields available".localized,
                         buttonTitle: "View All Services".localized,
                         buttonAction: {
+                            NotificationCenter.default.post(name: .didPopAllServices, object: nil)
 //                            self.navigationController?.popToSpecialViewController(ofClass: AllServicesViewController.self, animated: true)
                         },
                         messageImage: UIImage(named: "empty_services") ?? UIImage(),

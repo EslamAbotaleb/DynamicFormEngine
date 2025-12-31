@@ -22,6 +22,10 @@ public enum RequestDetailsSections {
     case sectionDetails
 }
 
+extension Notification.Name {
+    static public let didPopAllServices = Notification.Name("didPopAllServices")
+}
+
 public class RequestDetailsViewModel: BaseVM {
     
     // MARK: - Variables
@@ -848,8 +852,7 @@ public class RequestDetailsViewModel: BaseVM {
     }
     
     func popToAllServices() {
-        router.popToSpecialViewController(ofClass: RequestSummaryVC.self, animated: true)
-//        router.popToSpecialViewController(ofClass: AllServicesViewController.self, animated: true)
+        NotificationCenter.default.post(name: .didPopAllServices, object: nil)
     }
     
     // Get Data From Json

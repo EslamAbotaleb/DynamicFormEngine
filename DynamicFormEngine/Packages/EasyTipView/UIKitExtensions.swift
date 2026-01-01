@@ -44,7 +44,7 @@ extension UIView {
 // MARK:- CGRect extension -
 
 extension CGRect {
-    var xRect: CGFloat {
+    var x: CGFloat {
         get {
             return self.origin.x
         }
@@ -53,7 +53,7 @@ extension CGRect {
         }
     }
     
-    var yRect: CGFloat {
+    var y: CGFloat {
         get {
             return self.origin.y
         }
@@ -63,7 +63,7 @@ extension CGRect {
         }
     }
     
-    var centerRect: CGPoint {
+    var center: CGPoint {
         return CGPoint(x: self.x + self.width / 2, y: self.y + self.height / 2)
     }
 }

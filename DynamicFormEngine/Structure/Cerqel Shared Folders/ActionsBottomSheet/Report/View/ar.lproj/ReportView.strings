@@ -1,9 +1,0 @@
-
-/* Class = "UIButton"; configuration.title = "Send"; ObjectID = "cUP-np-gTy"; */
-"cUP-np-gTy.configuration.title" = "ارسال";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cUP-np-gTy"; */
-"cUP-np-gTy.normalTitle" = "ارسال";
-
-/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "mxa-Xl-79Q"; */
-"mxa-Xl-79Q.normalTitle" = "رجوع";

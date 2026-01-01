@@ -8,7 +8,7 @@
 
 
 import SwiftUI
-import EasyTipView
+//import EasyTipView
 
 struct CustomNavBarWithSubmitText: View {
     @Environment(\.dismiss) var dismiss

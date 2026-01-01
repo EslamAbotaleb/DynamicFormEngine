@@ -6,7 +6,8 @@
 //  Copyright © 2021 MahmoudOrganization. All rights reserved.
 //
 
-import Promises
+
+public import Promises
 
 
 public class DocumentLibraryRepoImpl: DocumentLibraryRepo,BaseRepo {

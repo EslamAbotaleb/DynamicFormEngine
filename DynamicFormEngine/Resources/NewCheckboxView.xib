@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Scandia.otf">
+            <string>ScandiaWeb-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewCheckboxView" customModule="CERQEL" customModuleProvider="target">
+            <connections>
+                <outlet property="checkBoxBtn" destination="zMO-Qt-7kc" id="e90-5Q-bOj"/>
+                <outlet property="checkboxImageView" destination="QeW-Q0-aD6" id="Q4d-Ts-sp8"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="KXc-Gc-HfN"/>
+                <outlet property="titleLabel" destination="Y1e-UL-TSQ" id="vll-CS-WFN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="275" height="34"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uncheckedBtnIcon" highlightedImage="checkedBtnIcon" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QeW-Q0-aD6">
+                    <rect key="frame" x="0.0" y="9" width="16" height="16"/>
+                    <color key="tintColor" name="darkGreenBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="Tem-ZY-Lqo"/>
+                        <constraint firstAttribute="height" constant="16" id="gJ4-He-q4N"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1e-UL-TSQ">
+                    <rect key="frame" x="25" y="10" width="242" height="14"/>
+                    <fontDescription key="fontDescription" name="ScandiaWeb-Regular" family="Scandia Web Regular" pointSize="12"/>
+                    <color key="textColor" red="0.13725490200000001" green="0.1647058824" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMO-Qt-7kc">
+                    <rect key="frame" x="0.0" y="0.0" width="275" height="0.0"/>
+                    <connections>
+                        <action selector="checkboxTapped:" destination="-1" eventType="touchUpInside" id="hJr-rZ-40r"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="QeW-Q0-aD6" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4Ut-9z-chh"/>
+                <constraint firstItem="Y1e-UL-TSQ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="4yy-th-tvI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Y1e-UL-TSQ" secondAttribute="trailing" constant="8" id="5bh-ak-WyP"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="zMO-Qt-7kc" secondAttribute="bottom" id="9NB-PO-x21"/>
+                <constraint firstItem="zMO-Qt-7kc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AWv-rG-5ao"/>
+                <constraint firstItem="zMO-Qt-7kc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Lwf-ui-1sE"/>
+                <constraint firstItem="QeW-Q0-aD6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gdI-Vv-W09"/>
+                <constraint firstAttribute="trailing" secondItem="zMO-Qt-7kc" secondAttribute="trailing" id="rrY-zo-Jcm"/>
+                <constraint firstItem="Y1e-UL-TSQ" firstAttribute="leading" secondItem="QeW-Q0-aD6" secondAttribute="trailing" constant="9" id="wc9-rg-Ojd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-52.671755725190835" y="285.21126760563379"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkedBtnIcon" width="18" height="18"/>
+        <image name="uncheckedBtnIcon" width="18" height="18"/>
+        <namedColor name="darkGreenBlue">
+            <color red="0.24705882352941178" green="0.11764705882352941" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

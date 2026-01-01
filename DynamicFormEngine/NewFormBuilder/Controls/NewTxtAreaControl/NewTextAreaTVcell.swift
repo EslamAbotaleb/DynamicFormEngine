@@ -333,7 +333,7 @@ extension NewTextAreaTVcell: UITextViewDelegate {
         if let autoExpand = (item as? FormViewModelTextAreaItem)?.autoExpand, autoExpand {
             let startHeight = textView.frame.size.height
             let calcHeight = textView.sizeThatFits(textView.frame.size).height
-            if startHeight != calcHeight, let formVC = self.iq.parentContainerViewController() as? FormViewController {
+            if startHeight != calcHeight, let formVC = self.parentContainerViewController() as? FormViewController {
                 UIView.setAnimationsEnabled(false) // Disable animations
                 formVC.activeTableView.beginUpdates()
                 formVC.activeTableView.endUpdates()

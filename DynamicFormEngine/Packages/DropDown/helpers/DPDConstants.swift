@@ -10,21 +10,21 @@
 
 import UIKit
 
-internal struct DPDConstant {
+public struct DPDConstant {
 
-	internal struct KeyPath {
+    public struct KeyPath {
 
 		static let Frame = "frame"
 
 	}
 
-	internal struct ReusableIdentifier {
+    public struct ReusableIdentifier {
 
 		static let DropDownCell = "DropDownCell"
 
 	}
 
-	internal struct UI {
+    public struct UI {
 
 		static let TextColor = UIColor.black
         static let SelectedTextColor = UIColor.black
@@ -47,7 +47,7 @@ internal struct DPDConstant {
 
 	}
 
-	internal struct Animation {
+    public struct Animation {
 
 		static let Duration = 0.15
 		static let EntranceOptions: UIView.AnimationOptions = [.allowUserInteraction, .curveEaseOut]

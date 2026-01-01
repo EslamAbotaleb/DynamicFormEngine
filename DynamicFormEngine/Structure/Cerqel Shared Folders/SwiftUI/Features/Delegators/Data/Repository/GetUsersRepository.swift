@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Promises
+public import Promises
 
 public class UsersRepoImp: UsersRepo {
     private var network: Network

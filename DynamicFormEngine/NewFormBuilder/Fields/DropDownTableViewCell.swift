@@ -113,7 +113,7 @@ class DropDownTableViewCell: ParentFieldTableViewCell {
         dropDownVC.selectedValues = selectedValues
         dropDownVC.multiSelect = (item as? FormViewModelDropdownItem)?.multiSelect ?? false
         dropDownVC.selectAllEnabled = (item as? FormViewModelDropdownItem)?.selectAllBox ?? false
-        self.iq.parentContainerViewController()?.present(dropDownVC, animated: true)
+        self.parentContainerViewController()?.present(dropDownVC, animated: true)
     }
     
     func handleOptions() {

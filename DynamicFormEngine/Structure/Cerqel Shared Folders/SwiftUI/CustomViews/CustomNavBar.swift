@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-import EasyTipView
+//import EasyTipView
 
 public struct CustomNavBar<Trailing: View>: View {
 

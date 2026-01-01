@@ -7,8 +7,8 @@
 //
 
 import UIKit
-public import MOLH
-import PopupDialog
+//public import MOLH
+//import PopupDialog
 import Network
 import Toast
 import JGProgressHUD

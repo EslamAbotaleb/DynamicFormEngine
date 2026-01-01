@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EasyTipView
+//import EasyTipView
 
 class NewTextBoxTVCell: ParentFieldTableViewCell {
     

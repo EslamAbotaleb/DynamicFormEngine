@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Promises
+public import Promises
+
 
 class ExcuteActionRepoImp: ExcuteActionRepo {
   

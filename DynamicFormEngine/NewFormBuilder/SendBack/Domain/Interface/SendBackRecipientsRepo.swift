@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Promises
+public import Promises
+
 
 protocol SendBackRecipientsRepo {
     func excute(requestId: String) -> Promise<BaseResponse<[SendBackRecipientsDTO]>>

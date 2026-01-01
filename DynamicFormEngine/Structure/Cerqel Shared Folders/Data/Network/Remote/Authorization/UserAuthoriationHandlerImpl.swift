@@ -8,8 +8,8 @@
 
 
 import Foundation
-import KeychainSwift
-import Promises
+//import KeychainSwift
+public import Promises
 
 
 public class UserAuthoriationHandler: AuthorizationHandler {

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Promises
+public import Promises
 import DynamicFormEngine
 
 public protocol SurveyRepo {

@@ -7,8 +7,9 @@
 //
 
 import Foundation
-import Promises
-public import Reachability
+public import Promises
+
+//public import Reachability
 import SwiftyJSON
 import CommonCrypto
 
@@ -231,7 +232,7 @@ public class NetworkServiceImpl: Network {
     }
 
     private var isConnectedToInternet: Bool {
-        return reachability.connection() != Reachability.Connection.none
+        return reachability.connection() != Reachability.Connection.unavailable
     }
 
     private func mapJsonToModel<Model: Codable>(_ model: Model.Type, from data: Data) -> Promise<Model>{
@@ -254,7 +255,7 @@ public struct NetworkServiceResponse {
 
 public class ReachabilityImpl: ReachabilityProtocol {
     public func connection() -> Reachability.Connection? {
-        return Reachability()?.connection
+        return try? Reachability().connection
     }
 }
 

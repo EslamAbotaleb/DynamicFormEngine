@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Promises
+//
+public import Promises
 
 public typealias UploadProgrssCallBack = ((Double,FileVersionType)->())
 public typealias ProgressCallback = (Double) -> Void

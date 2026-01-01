@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Promises
+public import Promises
+
 
 public struct CerqelFilterCallBack {
     public var searchText: String?

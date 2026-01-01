@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import RichEditorView
+//import RichEditorView
 
 protocol RichTextViewDelegate: AnyObject {
     func editorLostFocusWith(_ html: String)

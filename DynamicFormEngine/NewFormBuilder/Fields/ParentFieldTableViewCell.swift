@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import EasyTipView
+//import EasyTipView
 import IQKeyboardManagerSwift
 
 protocol ParentFieldTableViewCellDelegate: AnyObject {
@@ -23,21 +23,21 @@ class ParentFieldTableViewCell: UITableViewCell {
     
     var formVC: FormViewController?
     {
-    if let formVC = self.iq.parentContainerViewController() as? FormViewController {
+    if let formVC = self.parentContainerViewController() as? FormViewController {
             return formVC
         }
         return UIApplication.topViewController() as? FormViewController
     }
     
     var requestDetailsView: RequestDetailsView? {
-        if let requestDetailsView = self.iq.parentContainerViewController() as? RequestDetailsView {
+        if let requestDetailsView = self.parentContainerViewController() as? RequestDetailsView {
             return requestDetailsView
         }
         return UIApplication.topViewController() as? RequestDetailsView
     }
     
     var requestSummaryVC: ServiceSummaryPagesVC? {
-        if let requestSummaryVC = self.iq.parentContainerViewController() as? ServiceSummaryPagesVC {
+        if let requestSummaryVC = self.parentContainerViewController() as? ServiceSummaryPagesVC {
             return requestSummaryVC
         }
         return UIApplication.topViewController() as? ServiceSummaryPagesVC
@@ -45,7 +45,7 @@ class ParentFieldTableViewCell: UITableViewCell {
     
     var nestedFormVC: NestedFormViewController?
     {
-    if let nestedFormVC = self.iq.parentContainerViewController() as? NestedFormViewController {
+    if let nestedFormVC = self.parentContainerViewController() as? NestedFormViewController {
             return nestedFormVC
         }
         return UIApplication.topViewController() as? NestedFormViewController

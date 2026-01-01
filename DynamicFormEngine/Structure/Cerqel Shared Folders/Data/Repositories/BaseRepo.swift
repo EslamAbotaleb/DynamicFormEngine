@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Promises
+public import Promises
 
 public enum EndPointServiceCerqel {
     case categories

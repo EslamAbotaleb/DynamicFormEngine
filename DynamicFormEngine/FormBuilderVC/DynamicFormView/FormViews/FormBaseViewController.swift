@@ -9,7 +9,7 @@
 import UIKit
 public import RxCocoa
 internal import RxSwift
-import EasyTipView
+//import EasyTipView
 
 protocol UploadMedia: AnyObject {
     func uploadFile(fileSize: Double, url: URL, isVideo: Bool)

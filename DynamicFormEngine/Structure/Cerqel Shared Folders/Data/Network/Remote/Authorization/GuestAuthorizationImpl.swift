@@ -8,7 +8,8 @@
 
 
 import Foundation
-import Promises
+public import Promises
+
 
 public class NoneAuthorizationHandler: AuthorizationHandler {
     public func setClientManually(clientType: String) {}

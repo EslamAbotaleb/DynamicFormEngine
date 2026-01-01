@@ -13,8 +13,8 @@ public import RxSwift
 import JGProgressHUD
 internal import Kingfisher
 import SideMenu
-import Reachability
-import PopupDialog
+//import Reachability
+//import PopupDialog
 import SwiftUI
 
 public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
@@ -47,7 +47,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
     public func checkReachabilty() {
         //declare this property where it won't go out of scope relative to your listener
         
-        reachability?.whenReachable = { reachability in
+        reachability.whenReachable = { reachability in
             
             DispatchQueue.main.async {
                 UIApplication.shared.keyWindow?.isUserInteractionEnabled = true
@@ -59,7 +59,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
                 print("Reachable via Cellular")
             }
         }
-        reachability?.whenUnreachable = { _ in
+        reachability.whenUnreachable = { _ in
             print("Not reachable")
             DispatchQueue.main.async {
                 showNoConnectionPopupCerqel(parentView: self)
@@ -68,7 +68,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
         }
         
         do {
-            try reachability?.startNotifier()
+            try reachability.startNotifier()
         } catch {
             print("Unable to start notifier")
         }

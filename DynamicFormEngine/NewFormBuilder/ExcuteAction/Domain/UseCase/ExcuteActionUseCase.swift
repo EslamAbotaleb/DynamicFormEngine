@@ -7,7 +7,8 @@
 //
 
 import Foundation
-import Promises
+public import Promises
+
 
 protocol ExcuteActionUseCase {
     func excute(payload: ExcuteActionPayload)  -> Promise<BaseSuccessResponse>

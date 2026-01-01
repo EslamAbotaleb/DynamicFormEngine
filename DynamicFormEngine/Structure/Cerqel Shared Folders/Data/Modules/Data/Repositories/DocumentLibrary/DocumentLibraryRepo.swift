@@ -6,7 +6,8 @@
 //
 
 import Foundation
-import Promises
+public import Promises
+
 
 public protocol DocumentLibraryRepo {
     func CategoriesWithChildrens() -> Promise<BaseResponse<[ListModel]>>

@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import RichEditorView
-
 
 class TextAreaTableViewCell: ParentFieldTableViewCell {
 

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Promises
+public import Promises
 
 protocol SurveyUseCase {
     func execute(surveyPayload: SurveyPayload) -> Promise<BaseSuccessResponse>

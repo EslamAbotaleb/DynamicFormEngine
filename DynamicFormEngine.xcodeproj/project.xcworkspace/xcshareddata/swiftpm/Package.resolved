@@ -1,5 +1,5 @@
 {
-  "originHash" : "3c2101dae389c8c3679e100734829912b77338d5bd48f359bec8cece73b247cd",
+  "originHash" : "36c04d876daca4fdd5e2816f9a2f515ad381deddf03271170649513defa932a5",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -179,6 +179,15 @@
       "state" : {
         "revision" : "ac1b60a22c7e6a6514de7a66d2f3d5b537c956d5",
         "version" : "4.0.2"
+      }
+    },
+    {
+      "identity" : "richeditorview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/T-Pro/RichEditorView.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "0f90dfcfd2e6b8f63b8d6cdddeb70cc103dd2afd"
       }
     },
     {

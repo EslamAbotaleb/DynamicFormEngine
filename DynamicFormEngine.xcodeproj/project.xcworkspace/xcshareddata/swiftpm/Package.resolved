@@ -1,5 +1,5 @@
 {
-  "originHash" : "e9c6e81d4a7ab2543a10dfed33289aaf01ee12bf83c3d621dd10ef8d1548b7da",
+  "originHash" : "3c2101dae389c8c3679e100734829912b77338d5bd48f359bec8cece73b247cd",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -35,6 +35,15 @@
       "state" : {
         "revision" : "e45a26384239e028ec87fbcc788f513b67e10d8f",
         "version" : "1.9.0"
+      }
+    },
+    {
+      "identity" : "dropdown",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AssistoLab/DropDown.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "2ab6f6ce19f0117d1a76ea043ef8f57722c65d16"
       }
     },
     {

@@ -287,6 +287,7 @@
 		AA856BDD2F03D1D90084FA53 /* FileViewerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA856BDC2F03D1D90084FA53 /* FileViewerManager.swift */; };
 		AA856BE52F03D2700084FA53 /* FileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA856BDE2F03D2700084FA53 /* FileViewModel.swift */; };
 		AA856BE62F03D2700084FA53 /* FileWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA856BE02F03D2700084FA53 /* FileWebViewController.swift */; };
+		AA8612FD2F06A8BF000D3274 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = AA8612FC2F06A8BF000D3274 /* DropDown */; };
 		AA90499A2F01229A00857338 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9049992F01229A00857338 /* SheetViewController.swift */; };
 		AA90499C2F01232800857338 /* InitialTouchPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499B2F01232800857338 /* InitialTouchPanGestureRecognizer.swift */; };
 		AA90499E2F01239A00857338 /* SheetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499D2F01239A00857338 /* SheetSize.swift */; };
@@ -489,12 +490,6 @@
 		AAA921FF2F068E3C007C7AB6 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AAA921F92F068E3C007C7AB6 /* DropDownCell.xib */; };
 		AAA922062F068E3C007C7AB6 /* DropDown.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA921F42F068E3C007C7AB6 /* DropDown.h */; };
 		AAA9220C2F069297007C7AB6 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = AAA9220B2F069297007C7AB6 /* Cosmos */; };
-		AAA9221C2F06975B007C7AB6 /* DropDown+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA922192F06975B007C7AB6 /* DropDown+Appearance.swift */; };
-		AAA9221D2F06975B007C7AB6 /* DPDUIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA922142F06975B007C7AB6 /* DPDUIView+Extension.swift */; };
-		AAA9221E2F06975B007C7AB6 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA9221A2F06975B007C7AB6 /* DropDownCell.swift */; };
-		AAA9221F2F06975B007C7AB6 /* DPDKeyboardListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA922132F06975B007C7AB6 /* DPDKeyboardListener.swift */; };
-		AAA922202F06975B007C7AB6 /* DPDConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA922122F06975B007C7AB6 /* DPDConstants.swift */; };
-		AAA922212F06975B007C7AB6 /* DropDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA922182F06975B007C7AB6 /* DropDown.swift */; };
 		AAA922AD2F06A429007C7AB6 /* FBLPromises in Frameworks */ = {isa = PBXBuildFile; productRef = AAA922AC2F06A429007C7AB6 /* FBLPromises */; };
 		AAA922AF2F06A429007C7AB6 /* Promises in Frameworks */ = {isa = PBXBuildFile; productRef = AAA922AE2F06A429007C7AB6 /* Promises */; };
 		AAADA10E2EF6C2210036FD04 /* TextAreaTVcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAADA0D92EF6C2210036FD04 /* TextAreaTVcell.swift */; };
@@ -1249,12 +1244,6 @@
 		AAA921EF2F068D2C007C7AB6 /* Expression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expression.swift; sourceTree = "<group>"; };
 		AAA921F42F068E3C007C7AB6 /* DropDown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropDown.h; sourceTree = "<group>"; };
 		AAA921F92F068E3C007C7AB6 /* DropDownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownCell.xib; sourceTree = "<group>"; };
-		AAA922122F06975B007C7AB6 /* DPDConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPDConstants.swift; sourceTree = "<group>"; };
-		AAA922132F06975B007C7AB6 /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DPDKeyboardListener.swift; sourceTree = "<group>"; };
-		AAA922142F06975B007C7AB6 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DPDUIView+Extension.swift"; sourceTree = "<group>"; };
-		AAA922182F06975B007C7AB6 /* DropDown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDown.swift; sourceTree = "<group>"; };
-		AAA922192F06975B007C7AB6 /* DropDown+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DropDown+Appearance.swift"; sourceTree = "<group>"; };
-		AAA9221A2F06975B007C7AB6 /* DropDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		AAADA0B62EF6C2210036FD04 /* ControlTVcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlTVcell.swift; sourceTree = "<group>"; };
 		AAADA0B82EF6C2210036FD04 /* SearchControlTVcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControlTVcell.swift; sourceTree = "<group>"; };
 		AAADA0BB2EF6C2210036FD04 /* tableControlTVcell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableControlTVcell.swift; sourceTree = "<group>"; };
@@ -1521,6 +1510,7 @@
 				AAB7BA282EF336B0000E4A20 /* SwiftyJSON in Frameworks */,
 				AAA922AF2F06A429007C7AB6 /* Promises in Frameworks */,
 				AA71963D2EF44A1900D31A70 /* Lottie in Frameworks */,
+				AA8612FD2F06A8BF000D3274 /* DropDown in Frameworks */,
 				AAEC9B132F009EC200B449E2 /* RxAlamofire in Frameworks */,
 				AAB7BA4E2EF37272000E4A20 /* EFQRCode in Frameworks */,
 			);
@@ -3256,35 +3246,6 @@
 			path = Expression;
 			sourceTree = "<group>";
 		};
-		AAA922102F069749007C7AB6 /* DropDown */ = {
-			isa = PBXGroup;
-			children = (
-				AAA922152F06975B007C7AB6 /* helpers */,
-				AAA9221B2F06975B007C7AB6 /* src */,
-			);
-			path = DropDown;
-			sourceTree = "<group>";
-		};
-		AAA922152F06975B007C7AB6 /* helpers */ = {
-			isa = PBXGroup;
-			children = (
-				AAA922122F06975B007C7AB6 /* DPDConstants.swift */,
-				AAA922132F06975B007C7AB6 /* DPDKeyboardListener.swift */,
-				AAA922142F06975B007C7AB6 /* DPDUIView+Extension.swift */,
-			);
-			path = helpers;
-			sourceTree = "<group>";
-		};
-		AAA9221B2F06975B007C7AB6 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				AAA922182F06975B007C7AB6 /* DropDown.swift */,
-				AAA922192F06975B007C7AB6 /* DropDown+Appearance.swift */,
-				AAA9221A2F06975B007C7AB6 /* DropDownCell.swift */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
 		AAADA0B72EF6C2210036FD04 /* ControlTVcell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3737,7 +3698,6 @@
 		AAB7BA632EF380FE000E4A20 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				AAA922102F069749007C7AB6 /* DropDown */,
 				AAA921EC2F068D05007C7AB6 /* Expression */,
 				AAA921E52F068B14007C7AB6 /* EasyTipView */,
 				AA1CCA3D2F0689FB002F88AC /* RichEditorView */,
@@ -4632,6 +4592,7 @@
 				AAA9220B2F069297007C7AB6 /* Cosmos */,
 				AAA922AC2F06A429007C7AB6 /* FBLPromises */,
 				AAA922AE2F06A429007C7AB6 /* Promises */,
+				AA8612FC2F06A8BF000D3274 /* DropDown */,
 			);
 			productName = DynamicFormEngine;
 			productReference = E47B1BE22B8F5D9D00E22A45 /* DynamicFormEngine.framework */;
@@ -4708,6 +4669,7 @@
 				AA1CCA3A2F06882C002F88AC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				AAA9220A2F069297007C7AB6 /* XCRemoteSwiftPackageReference "Cosmos" */,
 				AAA922AB2F06A429007C7AB6 /* XCRemoteSwiftPackageReference "promises" */,
+				AA8612FB2F06A8BF000D3274 /* XCRemoteSwiftPackageReference "DropDown" */,
 			);
 			productRefGroup = E47B1BE32B8F5D9D00E22A45 /* Products */;
 			projectDirPath = "";
@@ -4942,12 +4904,6 @@
 				AA51BD9B2EF4203B00488B90 /* AuthManagerDynamicForm.swift in Sources */,
 				AA51BD9E2EF4203B00488B90 /* Date+extensions.swift in Sources */,
 				AA51BDAB2EF4203B00488B90 /* String+extensions.swift in Sources */,
-				AAA9221C2F06975B007C7AB6 /* DropDown+Appearance.swift in Sources */,
-				AAA9221D2F06975B007C7AB6 /* DPDUIView+Extension.swift in Sources */,
-				AAA9221E2F06975B007C7AB6 /* DropDownCell.swift in Sources */,
-				AAA9221F2F06975B007C7AB6 /* DPDKeyboardListener.swift in Sources */,
-				AAA922202F06975B007C7AB6 /* DPDConstants.swift in Sources */,
-				AAA922212F06975B007C7AB6 /* DropDown.swift in Sources */,
 				AA51BDAD2EF4203B00488B90 /* CerqelArray+Extensions.swift in Sources */,
 				AA51BDB02EF4203B00488B90 /* UIFont+extensions.swift in Sources */,
 				AA51BDBF2EF4203B00488B90 /* NSAttributedString+Extensions.swift in Sources */,
@@ -6046,6 +6002,14 @@
 				minimumVersion = 5.1.0;
 			};
 		};
+		AA8612FB2F06A8BF000D3274 /* XCRemoteSwiftPackageReference "DropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AssistoLab/DropDown.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		AAA6A4912EF3037200520357 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
@@ -6243,6 +6207,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA820A1A2EF6308D0022BCA4 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGCharts;
+		};
+		AA8612FC2F06A8BF000D3274 /* DropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA8612FB2F06A8BF000D3274 /* XCRemoteSwiftPackageReference "DropDown" */;
+			productName = DropDown;
 		};
 		AAA6A4922EF3037200520357 /* JGProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;

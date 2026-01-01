@@ -234,6 +234,7 @@
 		AA8613092F06B2DD000D3274 /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = AA8613082F06B2DD000D3274 /* Expression */; };
 		AA86130C2F06B337000D3274 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AA86130B2F06B337000D3274 /* KeychainSwift */; };
 		AA86130F2F06B377000D3274 /* EasyTipView in Frameworks */ = {isa = PBXBuildFile; productRef = AA86130E2F06B377000D3274 /* EasyTipView */; };
+		AA86132B2F06B754000D3274 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AA86132A2F06B754000D3274 /* Alamofire */; };
 		AA90499A2F01229A00857338 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9049992F01229A00857338 /* SheetViewController.swift */; };
 		AA90499C2F01232800857338 /* InitialTouchPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499B2F01232800857338 /* InitialTouchPanGestureRecognizer.swift */; };
 		AA90499E2F01239A00857338 /* SheetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499D2F01239A00857338 /* SheetSize.swift */; };
@@ -1372,6 +1373,7 @@
 				AAB7BA012EF330C0000E4A20 /* SideMenu in Frameworks */,
 				AA86130F2F06B377000D3274 /* EasyTipView in Frameworks */,
 				AAA9220C2F069297007C7AB6 /* Cosmos in Frameworks */,
+				AA86132B2F06B754000D3274 /* Alamofire in Frameworks */,
 				AAB7B9FB2EF33021000E4A20 /* FSCalendar in Frameworks */,
 				AAA6A4932EF3037200520357 /* JGProgressHUD in Frameworks */,
 				AAB7BA162EF33361000E4A20 /* MultiSlider in Frameworks */,
@@ -4332,6 +4334,7 @@
 				AA8613082F06B2DD000D3274 /* Expression */,
 				AA86130B2F06B337000D3274 /* KeychainSwift */,
 				AA86130E2F06B377000D3274 /* EasyTipView */,
+				AA86132A2F06B754000D3274 /* Alamofire */,
 			);
 			productName = DynamicFormEngine;
 			productReference = E47B1BE22B8F5D9D00E22A45 /* DynamicFormEngine.framework */;
@@ -4415,6 +4418,7 @@
 				AA8613072F06B2DD000D3274 /* XCRemoteSwiftPackageReference "Expression" */,
 				AA86130A2F06B337000D3274 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				AA86130D2F06B377000D3274 /* XCRemoteSwiftPackageReference "EasyTipView" */,
+				AA8613292F06B754000D3274 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = E47B1BE32B8F5D9D00E22A45 /* Products */;
 			projectDirPath = "";
@@ -5742,6 +5746,14 @@
 				minimumVersion = 2.1.0;
 			};
 		};
+		AA8613292F06B754000D3274 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.11.0;
+			};
+		};
 		AAA6A4912EF3037200520357 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
@@ -5974,6 +5986,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA86130D2F06B377000D3274 /* XCRemoteSwiftPackageReference "EasyTipView" */;
 			productName = EasyTipView;
+		};
+		AA86132A2F06B754000D3274 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA8613292F06B754000D3274 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		AAA6A4922EF3037200520357 /* JGProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;

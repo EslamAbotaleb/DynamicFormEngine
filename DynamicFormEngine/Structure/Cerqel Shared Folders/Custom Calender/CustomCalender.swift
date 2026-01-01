@@ -35,7 +35,7 @@ class CustomCalender: UIViewController,  FSCalendarDelegate, FSCalendarDataSourc
     
     @IBOutlet weak var calendar: FSCalendar! {
         didSet {
-            calendar.tintColor = .primary
+            calendar.tintColor = .primaryColorDF
         }
     }
     @IBOutlet weak var customHeader: UILabel!

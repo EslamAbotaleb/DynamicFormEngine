@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SalaryItem" customModule="CERQEL" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="TY7-5n-tsc"/>
+                <outlet property="firstLabel" destination="3Sg-Gy-tGw" id="Jf6-Nu-mXL"/>
+                <outlet property="secondeLabel" destination="D2d-m3-oCv" id="RHc-eE-K0R"/>
+                <outlet property="v" destination="cgI-IJ-Kzv" id="BR0-Wd-M51"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SalaryItem" customModule="CERQEL" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="804" height="104"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgI-IJ-Kzv">
+                    <rect key="frame" x="16" y="16" width="772" height="68.333333333333329"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-Gy-tGw">
+                            <rect key="frame" x="16" y="10.000000000000002" width="740" height="22.666666666666671"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2d-m3-oCv">
+                            <rect key="frame" x="16" y="38.666666666666664" width="740" height="19.666666666666664"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="3Sg-Gy-tGw" firstAttribute="leading" secondItem="cgI-IJ-Kzv" secondAttribute="leading" constant="16" id="5YU-tT-tlD"/>
+                        <constraint firstItem="D2d-m3-oCv" firstAttribute="top" secondItem="3Sg-Gy-tGw" secondAttribute="bottom" constant="6" id="9oE-Yh-FzI"/>
+                        <constraint firstAttribute="trailing" secondItem="D2d-m3-oCv" secondAttribute="trailing" constant="16" id="LNW-RW-tAF"/>
+                        <constraint firstItem="3Sg-Gy-tGw" firstAttribute="top" secondItem="cgI-IJ-Kzv" secondAttribute="top" constant="10" id="ZFN-Fd-q5v"/>
+                        <constraint firstAttribute="trailing" secondItem="3Sg-Gy-tGw" secondAttribute="trailing" constant="16" id="ckm-CG-JGp"/>
+                        <constraint firstAttribute="bottom" secondItem="D2d-m3-oCv" secondAttribute="bottom" constant="10" id="gWp-Z4-Yfb"/>
+                        <constraint firstItem="D2d-m3-oCv" firstAttribute="leading" secondItem="cgI-IJ-Kzv" secondAttribute="leading" constant="16" id="oFO-n2-GoJ"/>
+                        <constraint firstAttribute="height" constant="71" id="z5P-Jx-qAX"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cgI-IJ-Kzv" secondAttribute="trailing" constant="16" id="2jY-7G-L7q"/>
+                <constraint firstAttribute="bottom" secondItem="cgI-IJ-Kzv" secondAttribute="bottom" constant="16" id="cNF-yr-SZj"/>
+                <constraint firstItem="cgI-IJ-Kzv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="pVV-cs-Jdw"/>
+                <constraint firstItem="cgI-IJ-Kzv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="sPW-ot-gZd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="firstLabel" destination="3Sg-Gy-tGw" id="g4b-9R-moU"/>
+                <outlet property="secondeLabel" destination="D2d-m3-oCv" id="zhm-tT-BJg"/>
+                <outlet property="v" destination="cgI-IJ-Kzv" id="Zn3-jx-EGa"/>
+            </connections>
+            <point key="canvasLocation" x="337.40458015267177" y="-243.66197183098592"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

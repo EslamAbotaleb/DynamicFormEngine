@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; configuration.title = "Submit"; ObjectID = "I6f-Yn-Je6"; */
+"I6f-Yn-Je6.configuration.title" = "ارسال";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "I6f-Yn-Je6"; */
+"I6f-Yn-Je6.normalTitle" = "ارسال";
+
+/* Class = "UILabel"; text = "Please confirm that you have reviewed the uploaded file by checking the box below and clicking “Submit ” .\nBy doing so, you agree to the information contained within the document. Contact the administrator if you have any questions."; ObjectID = "ROZ-HZ-NUS"; */
+
+"ROZ-HZ-NUS.text" = "يرجى التأكد من قيامك بمراجعة الملف الذي تم تحميله عن طريق تحديد المربع أدناه والنقر على “ارسال”.
+ومن خلال القيام بذلك، فإنك توافق على المعلومات الواردة في الوثيقة. اتصل بالمسؤول إذا كان لديك أي أسئلة.
+";
+
+/* Class = "UILabel"; text = "I Confirm that I have reviewed the uploaded file"; ObjectID = "SAi-Zb-ruQ"; */
+"SAi-Zb-ruQ.text" = "انا اوافق على كل ما قرأت في هذا الملف";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "XMV-Si-wVe"; */
+"XMV-Si-wVe.normalTitle" = "الغاء";

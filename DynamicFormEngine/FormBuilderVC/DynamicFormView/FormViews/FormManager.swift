@@ -3132,7 +3132,7 @@ extension FormManager {
             return
         }
         submitButton.isUserInteractionEnabled = enabled
-        submitButton.backgroundColor = !enabled ? UIColor.init(hexCerqel: "#BDBDBD") : .primary
+        submitButton.backgroundColor = !enabled ? UIColor.init(hexCerqel: "#BDBDBD") : .primaryColorDF
     }
     
     /// Handle FileUpload validation

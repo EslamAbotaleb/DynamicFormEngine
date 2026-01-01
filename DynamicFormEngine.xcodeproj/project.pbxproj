@@ -117,10 +117,6 @@
 		AA90499E2F01239A00857338 /* SheetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499D2F01239A00857338 /* SheetSize.swift */; };
 		AA9049A02F0123A900857338 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA90499F2F0123A900857338 /* UIViewControllerExtension.swift */; };
 		AA9049A22F0123B800857338 /* Yalta.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9049A12F0123B800857338 /* Yalta.swift */; };
-		AA9049AE2F012F0E00857338 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = AA9049AD2F012F0E00857338 /* FirebaseCore */; };
-		AA9049B02F012F0E00857338 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = AA9049AF2F012F0E00857338 /* FirebaseCrashlytics */; };
-		AA9049B22F012F0E00857338 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = AA9049B12F012F0E00857338 /* FirebaseFirestore */; };
-		AA9049B42F012F0E00857338 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AA9049B32F012F0E00857338 /* FirebaseMessaging */; };
 		AA9DB5EF2EFA9024005A0D5E /* cerqel_APIAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB5ED2EFA9024005A0D5E /* cerqel_APIAction.swift */; };
 		AA9DB5F02EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9DB5EE2EFA9024005A0D5E /* cerqel_BasicActionDynamicForm.swift */; };
 		AAA4CE502EF872490027ABEC /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA4CE4F2EF872480027ABEC /* DownloadManager.swift */; };
@@ -1417,7 +1413,6 @@
 				AAB7BA0D2EF332C8000E4A20 /* AlignedCollectionViewFlowLayout in Frameworks */,
 				AADDBDE72F015987009145A7 /* RxSwift in Frameworks */,
 				AADDBDDF2F015987009145A7 /* RxCocoa in Frameworks */,
-				AA9049AE2F012F0E00857338 /* FirebaseCore in Frameworks */,
 				AAB7BA512EF373D4000E4A20 /* SDWebImageSVGCoder in Frameworks */,
 				AAC0E63F2EF6068100DDE9FF /* KeychainAccess in Frameworks */,
 				AAB7BA1F2EF334C3000E4A20 /* NicoProgress in Frameworks */,
@@ -1429,7 +1424,6 @@
 				AAA6A4962EF303B300520357 /* IQKeyboardManagerSwift in Frameworks */,
 				AAB7BA4B2EF35732000E4A20 /* Mantis in Frameworks */,
 				AAB7BA2B2EF3373C000E4A20 /* Promises in Frameworks */,
-				AA9049B22F012F0E00857338 /* FirebaseFirestore in Frameworks */,
 				AAB7B9FB2EF33021000E4A20 /* FSCalendar in Frameworks */,
 				AAA6A4932EF3037200520357 /* JGProgressHUD in Frameworks */,
 				AAB7BA162EF33361000E4A20 /* MultiSlider in Frameworks */,
@@ -1438,7 +1432,6 @@
 				AAB7BAC32EF38743000E4A20 /* TOCropViewController in Frameworks */,
 				AAB7BA1C2EF33491000E4A20 /* EasyTipView in Frameworks */,
 				AAB7BA432EF347AB000E4A20 /* SwiftMessages in Frameworks */,
-				AA9049B42F012F0E00857338 /* FirebaseMessaging in Frameworks */,
 				AA44701B2F01AC1200ED7813 /* netfox in Frameworks */,
 				AAB7BA042EF3318E000E4A20 /* FSPagerView in Frameworks */,
 				AAA6A4A52EF30C7000520357 /* ObjectMapper in Frameworks */,
@@ -1458,7 +1451,6 @@
 				AAB7B9F82EF32FC1000E4A20 /* DropDown in Frameworks */,
 				AAB7BA4E2EF37272000E4A20 /* EFQRCode in Frameworks */,
 				AAB7BA222EF334FB000E4A20 /* TagListView in Frameworks */,
-				AA9049B02F012F0E00857338 /* FirebaseCrashlytics in Frameworks */,
 				AAB7BA342EF3390F000E4A20 /* XLPagerTabStrip in Frameworks */,
 				AAB7BAC12EF38743000E4A20 /* CropViewController in Frameworks */,
 			);
@@ -4387,10 +4379,6 @@
 				AAC0E63E2EF6068100DDE9FF /* KeychainAccess */,
 				AA820A1B2EF6308D0022BCA4 /* DGCharts */,
 				AAEC9B122F009EC200B449E2 /* RxAlamofire */,
-				AA9049AD2F012F0E00857338 /* FirebaseCore */,
-				AA9049AF2F012F0E00857338 /* FirebaseCrashlytics */,
-				AA9049B12F012F0E00857338 /* FirebaseFirestore */,
-				AA9049B32F012F0E00857338 /* FirebaseMessaging */,
 				AADDBDDE2F015987009145A7 /* RxCocoa */,
 				AADDBDE22F015987009145A7 /* RxRelay */,
 				AADDBDE62F015987009145A7 /* RxSwift */,
@@ -4486,7 +4474,6 @@
 				AAC0E63D2EF6068100DDE9FF /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				AA820A1A2EF6308D0022BCA4 /* XCRemoteSwiftPackageReference "Charts" */,
 				AAEC9B112F009EC200B449E2 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
-				AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				AADDBDDD2F015987009145A7 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				AA4470192F01AC1200ED7813 /* XCRemoteSwiftPackageReference "netfox" */,
 			);
@@ -5748,14 +5735,6 @@
 				kind = branch;
 			};
 		};
-		AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 12.7.0;
-			};
-		};
 		AAA6A4912EF3037200520357 /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
@@ -6091,26 +6070,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA8FB7D92EF3F9EC0073665D /* XCRemoteSwiftPackageReference "PopupDialog" */;
 			productName = PopupDialog;
-		};
-		AA9049AD2F012F0E00857338 /* FirebaseCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCore;
-		};
-		AA9049AF2F012F0E00857338 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		AA9049B12F012F0E00857338 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		AA9049B32F012F0E00857338 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA9049AC2F012F0E00857338 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
 		};
 		AAA6A4922EF3037200520357 /* JGProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;

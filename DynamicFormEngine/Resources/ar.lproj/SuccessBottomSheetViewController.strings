@@ -1,0 +1,14 @@
+
+/* Class = "UILabel"; text = "Success"; ObjectID = "Sew-fG-GyG"; */
+"Sew-fG-GyG.text" = "نجاح";
+
+/* Class = "UIButton"; configuration.title = "Close"; ObjectID = "TLv-TJ-lWT"; */
+"TLv-TJ-lWT.configuration.title" = "اغلاق";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TLv-TJ-lWT"; */
+"TLv-TJ-lWT.normalTitle" = "اغلاق";
+
+/* Class = "UILabel"; text = "Your Request has been submitted Successfully"; ObjectID = "W4q-2r-8f6"; */
+"W4q-2r-8f6.text" = "لقد تم تقديم الطلب الخاص بك بنجاح";
+
+

@@ -43,7 +43,6 @@
 		AA3C31132EF953B600C2778C /* FileActionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3C31102EF953B600C2778C /* FileActionCell.xib */; };
 		AA3C31192EF954A900C2778C /* AcknowledgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C31142EF954A900C2778C /* AcknowledgeVC.swift */; };
 		AA3C311A2EF954A900C2778C /* AcknowledgeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3C31172EF954A900C2778C /* AcknowledgeVC.xib */; };
-		AA44701B2F01AC1200ED7813 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = AA44701A2F01AC1200ED7813 /* netfox */; };
 		AA51BD202EF4203B00488B90 /* EmptyTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA51BD002EF4203B00488B90 /* EmptyTVcell.xib */; };
 		AA51BD402EF4203B00488B90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA51BD042EF4203B00488B90 /* Localizable.strings */; };
 		AA51BD7B2EF4203B00488B90 /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA51BCF42EF4203B00488B90 /* UIView+extensions.swift */; };
@@ -512,10 +511,8 @@
 		AAB7B9FB2EF33021000E4A20 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7B9FA2EF33021000E4A20 /* FSCalendar */; };
 		AAB7B9FE2EF33085000E4A20 /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7B9FD2EF33085000E4A20 /* Expression */; };
 		AAB7BA012EF330C0000E4A20 /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA002EF330C0000E4A20 /* SideMenu */; };
-		AAB7BA042EF3318E000E4A20 /* FSPagerView in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA032EF3318E000E4A20 /* FSPagerView */; };
 		AAB7BA072EF331CD000E4A20 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA062EF331CD000E4A20 /* Toast */; };
 		AAB7BA0A2EF331F1000E4A20 /* EzPopup in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA092EF331F1000E4A20 /* EzPopup */; };
-		AAB7BA0D2EF332C8000E4A20 /* AlignedCollectionViewFlowLayout in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA0C2EF332C8000E4A20 /* AlignedCollectionViewFlowLayout */; };
 		AAB7BA132EF33345000E4A20 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA122EF33345000E4A20 /* Cosmos */; };
 		AAB7BA162EF33361000E4A20 /* MultiSlider in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA152EF33361000E4A20 /* MultiSlider */; };
 		AAB7BA192EF333F1000E4A20 /* RichEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = AAB7BA182EF333F1000E4A20 /* RichEditorView */; };
@@ -1410,7 +1407,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAB7BA372EF33958000E4A20 /* PanModal in Frameworks */,
-				AAB7BA0D2EF332C8000E4A20 /* AlignedCollectionViewFlowLayout in Frameworks */,
 				AADDBDE72F015987009145A7 /* RxSwift in Frameworks */,
 				AADDBDDF2F015987009145A7 /* RxCocoa in Frameworks */,
 				AAB7BA512EF373D4000E4A20 /* SDWebImageSVGCoder in Frameworks */,
@@ -1432,8 +1428,6 @@
 				AAB7BAC32EF38743000E4A20 /* TOCropViewController in Frameworks */,
 				AAB7BA1C2EF33491000E4A20 /* EasyTipView in Frameworks */,
 				AAB7BA432EF347AB000E4A20 /* SwiftMessages in Frameworks */,
-				AA44701B2F01AC1200ED7813 /* netfox in Frameworks */,
-				AAB7BA042EF3318E000E4A20 /* FSPagerView in Frameworks */,
 				AAA6A4A52EF30C7000520357 /* ObjectMapper in Frameworks */,
 				AAA6A4A82EF30CB600520357 /* CryptoSwift in Frameworks */,
 				AAB7BA072EF331CD000E4A20 /* Toast in Frameworks */,
@@ -4349,10 +4343,8 @@
 				AAB7B9FA2EF33021000E4A20 /* FSCalendar */,
 				AAB7B9FD2EF33085000E4A20 /* Expression */,
 				AAB7BA002EF330C0000E4A20 /* SideMenu */,
-				AAB7BA032EF3318E000E4A20 /* FSPagerView */,
 				AAB7BA062EF331CD000E4A20 /* Toast */,
 				AAB7BA092EF331F1000E4A20 /* EzPopup */,
-				AAB7BA0C2EF332C8000E4A20 /* AlignedCollectionViewFlowLayout */,
 				AAB7BA122EF33345000E4A20 /* Cosmos */,
 				AAB7BA152EF33361000E4A20 /* MultiSlider */,
 				AAB7BA182EF333F1000E4A20 /* RichEditorView */,
@@ -4382,7 +4374,6 @@
 				AADDBDDE2F015987009145A7 /* RxCocoa */,
 				AADDBDE22F015987009145A7 /* RxRelay */,
 				AADDBDE62F015987009145A7 /* RxSwift */,
-				AA44701A2F01AC1200ED7813 /* netfox */,
 			);
 			productName = DynamicFormEngine;
 			productReference = E47B1BE22B8F5D9D00E22A45 /* DynamicFormEngine.framework */;
@@ -4445,10 +4436,8 @@
 				AAB7B9F92EF33021000E4A20 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 				AAB7B9FC2EF33085000E4A20 /* XCRemoteSwiftPackageReference "Expression" */,
 				AAB7B9FF2EF330C0000E4A20 /* XCRemoteSwiftPackageReference "SideMenu" */,
-				AAB7BA022EF3318E000E4A20 /* XCRemoteSwiftPackageReference "FSPagerView" */,
 				AAB7BA052EF331CD000E4A20 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				AAB7BA082EF331F0000E4A20 /* XCRemoteSwiftPackageReference "EzPopup" */,
-				AAB7BA0B2EF332C8000E4A20 /* XCRemoteSwiftPackageReference "AlignedCollectionViewFlowLayout" */,
 				AAB7BA112EF33345000E4A20 /* XCRemoteSwiftPackageReference "Cosmos" */,
 				AAB7BA142EF33361000E4A20 /* XCRemoteSwiftPackageReference "MultiSlider" */,
 				AAB7BA172EF333F1000E4A20 /* XCRemoteSwiftPackageReference "RichEditorView" */,
@@ -4475,7 +4464,6 @@
 				AA820A1A2EF6308D0022BCA4 /* XCRemoteSwiftPackageReference "Charts" */,
 				AAEC9B112F009EC200B449E2 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
 				AADDBDDD2F015987009145A7 /* XCRemoteSwiftPackageReference "RxSwift" */,
-				AA4470192F01AC1200ED7813 /* XCRemoteSwiftPackageReference "netfox" */,
 			);
 			productRefGroup = E47B1BE32B8F5D9D00E22A45 /* Products */;
 			projectDirPath = "";
@@ -5703,14 +5691,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AA4470192F01AC1200ED7813 /* XCRemoteSwiftPackageReference "netfox" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kasketis/netfox.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.21.0;
-			};
-		};
 		AA71963B2EF44A1900D31A70 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -5818,14 +5798,6 @@
 				minimumVersion = 2.1.1;
 			};
 		};
-		AAB7BA022EF3318E000E4A20 /* XCRemoteSwiftPackageReference "FSPagerView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/WenchaoD/FSPagerView.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
 		AAB7BA052EF331CD000E4A20 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
@@ -5841,14 +5813,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.2.4;
-			};
-		};
-		AAB7BA0B2EF332C8000E4A20 /* XCRemoteSwiftPackageReference "AlignedCollectionViewFlowLayout" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mischa-hildebrand/AlignedCollectionViewFlowLayout.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.3;
 			};
 		};
 		AAB7BA112EF33345000E4A20 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
@@ -6051,11 +6015,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AA44701A2F01AC1200ED7813 /* netfox */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA4470192F01AC1200ED7813 /* XCRemoteSwiftPackageReference "netfox" */;
-			productName = netfox;
-		};
 		AA71963C2EF44A1900D31A70 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA71963B2EF44A1900D31A70 /* XCRemoteSwiftPackageReference "lottie-ios" */;
@@ -6121,11 +6080,6 @@
 			package = AAB7B9FF2EF330C0000E4A20 /* XCRemoteSwiftPackageReference "SideMenu" */;
 			productName = SideMenu;
 		};
-		AAB7BA032EF3318E000E4A20 /* FSPagerView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AAB7BA022EF3318E000E4A20 /* XCRemoteSwiftPackageReference "FSPagerView" */;
-			productName = FSPagerView;
-		};
 		AAB7BA062EF331CD000E4A20 /* Toast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AAB7BA052EF331CD000E4A20 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
@@ -6135,11 +6089,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AAB7BA082EF331F0000E4A20 /* XCRemoteSwiftPackageReference "EzPopup" */;
 			productName = EzPopup;
-		};
-		AAB7BA0C2EF332C8000E4A20 /* AlignedCollectionViewFlowLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AAB7BA0B2EF332C8000E4A20 /* XCRemoteSwiftPackageReference "AlignedCollectionViewFlowLayout" */;
-			productName = AlignedCollectionViewFlowLayout;
 		};
 		AAB7BA122EF33345000E4A20 /* Cosmos */ = {
 			isa = XCSwiftPackageProductDependency;

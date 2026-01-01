@@ -1,5 +1,5 @@
 {
-  "originHash" : "9bc01ca6282b97cdf77e0d9f7b6e6435fe6144390dab8c5e542fb9f6d23a5602",
+  "originHash" : "2222930148c7b60167f7a754bd45e7b693ff335b0eb7e6d34d0ddc9c3a6b4964",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "7be73f6c2b5cd90e40798b06ebd5da8f9f79cf88",
         "version" : "5.11.0"
-      }
-    },
-    {
-      "identity" : "alignedcollectionviewflowlayout",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/mischa-hildebrand/AlignedCollectionViewFlowLayout.git",
-      "state" : {
-        "revision" : "236094ac389234d528cc782c140bcb20724b86bf",
-        "version" : "1.1.3"
       }
     },
     {
@@ -107,15 +98,6 @@
       "state" : {
         "revision" : "0fbdec5172fccb90f707472eeaea4ffe095278f6",
         "version" : "2.8.4"
-      }
-    },
-    {
-      "identity" : "fspagerview",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/WenchaoD/FSPagerView.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "f90ab7d2ee6847823708a0a4e11e87c3ee4e6e48"
       }
     },
     {
@@ -278,15 +260,6 @@
       "state" : {
         "revision" : "a5dbf58e5b05a55a771607f77547eb2067c601e9",
         "version" : "2.2.1"
-      }
-    },
-    {
-      "identity" : "netfox",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/kasketis/netfox.git",
-      "state" : {
-        "revision" : "557576032736fd3140422baefb68b8f76c55088f",
-        "version" : "1.21.0"
       }
     },
     {

@@ -13,7 +13,7 @@ internal import RxSwift
 import JGProgressHUD
 internal import Kingfisher
 import SideMenu
-//import Reachability
+import Reachability
 import Toast
 
 class CerqelBaseWireFrameDynamicForm<T: CerqelBaseViewModel>: BottomSheetVCCerqel {

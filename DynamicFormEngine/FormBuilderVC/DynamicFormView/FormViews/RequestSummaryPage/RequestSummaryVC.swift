@@ -9,7 +9,7 @@
 import UIKit
 import MobileCoreServices
 import DropDown
-//internal import MOLH
+internal import MOLH
 import Photos
 
 public class RequestSummaryVC: BaseWireFrameDynamicForm<RequestDetailsViewModel> {

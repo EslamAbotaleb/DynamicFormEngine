@@ -6,7 +6,7 @@
 //
 
 internal import Alamofire
-//import Expression
+import Expression
 import Foundation
 import ObjectMapper
 public import RxCocoa

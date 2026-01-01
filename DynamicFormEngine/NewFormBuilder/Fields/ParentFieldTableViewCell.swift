@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import EasyTipView
+import EasyTipView
 import IQKeyboardManagerSwift
 
 protocol ParentFieldTableViewCellDelegate: AnyObject {

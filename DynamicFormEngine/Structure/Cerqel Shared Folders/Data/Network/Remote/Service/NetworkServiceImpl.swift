@@ -9,7 +9,7 @@
 import Foundation
 public import Promises
 
-//public import Reachability
+public import Reachability
 import SwiftyJSON
 import CommonCrypto
 

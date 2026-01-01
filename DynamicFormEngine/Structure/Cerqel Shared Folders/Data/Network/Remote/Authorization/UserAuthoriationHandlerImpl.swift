@@ -8,7 +8,7 @@
 
 
 import Foundation
-//import KeychainSwift
+import KeychainSwift
 public import Promises
 
 

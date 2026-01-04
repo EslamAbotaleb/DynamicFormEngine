@@ -9,15 +9,14 @@
 import Foundation
 import UIKit
 
-
-protocol NoDataProtocol {
+public protocol NoDataProtocol {
     func setNoDataPlaceholder(title: String, message: String, messageImage: UIImage,showImage: Bool, whiteBG: Bool)
     func removeNoDataPlaceholder()
 }
 
 extension UICollectionView: NoDataProtocol {
     
-    func setNoDataPlaceholder(title: String = "No Files Yet!", message: String = "", messageImage: UIImage = UIImage(named: "emptyState")!,showImage: Bool = true, whiteBG: Bool = false) {
+    public func setNoDataPlaceholder(title: String = "No Files Yet!", message: String = "", messageImage: UIImage = UIImage(named: "emptyState")!,showImage: Bool = true, whiteBG: Bool = false) {
         
         let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
         
@@ -81,7 +80,7 @@ extension UICollectionView: NoDataProtocol {
         self.backgroundView = emptyView
     }
     
-    func removeNoDataPlaceholder() {
+    public func removeNoDataPlaceholder() {
         
         self.isScrollEnabled = true
         self.backgroundView = nil

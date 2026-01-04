@@ -25,8 +25,6 @@ public enum EndpointEncoding {
     case query
 }
 
-
-
 public enum EndpointMethod: String {
     case get
     case post

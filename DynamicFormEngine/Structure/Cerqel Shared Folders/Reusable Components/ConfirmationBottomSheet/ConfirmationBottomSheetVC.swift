@@ -7,18 +7,18 @@
 //
 
 import UIKit
-internal import PanModal
+public import PanModal
 
-typealias ConfirmationCallBack =  (()->())
+public typealias ConfirmationCallBack =  (()->())
 
-class ConfirmationItem: BaseItem {
+public class ConfirmationItem: BaseItem {
     var confirmationCallBack: ConfirmationCallBack
     var confirmationTitle: String?
     var confirmationMessage: String?
     var confirmationBtnTitle: String?
     var confirmationImageName: String?
 
-    init(confirmationCallBack: @escaping ConfirmationCallBack,confirmationTitle: String?, confirmationMessage: String?, confirmationBtnTitle: String?, confirmationImageName: String?) {
+    public init(confirmationCallBack: @escaping ConfirmationCallBack,confirmationTitle: String?, confirmationMessage: String?, confirmationBtnTitle: String?, confirmationImageName: String?) {
         self.confirmationCallBack = confirmationCallBack
         self.confirmationTitle = confirmationTitle
         self.confirmationMessage = confirmationMessage
@@ -27,7 +27,7 @@ class ConfirmationItem: BaseItem {
     }
 }
 
-class ConfirmationBottomSheetVC: BaseView<BottomSheetBaseViewModel, ConfirmationItem> {
+public class ConfirmationBottomSheetVC: BaseView<BottomSheetBaseViewModel, ConfirmationItem> {
     
     @IBOutlet weak var titleLbl: LocalizedLabel!
     @IBOutlet weak var closeIcon: UIButton!
@@ -37,7 +37,7 @@ class ConfirmationBottomSheetVC: BaseView<BottomSheetBaseViewModel, Confirmation
     @IBOutlet weak var confirmationImage: UIImageView!
     
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
@@ -49,7 +49,7 @@ class ConfirmationBottomSheetVC: BaseView<BottomSheetBaseViewModel, Confirmation
         if (item.confirmationImageName != nil)  {confirmationImage.image = UIImage(named: item.confirmationImageName!)}
     }
     
-    override var longFormHeight: PanModalHeight {
+    override public var longFormHeight: PanModalHeight {
         return .contentHeight(450)
     }
     

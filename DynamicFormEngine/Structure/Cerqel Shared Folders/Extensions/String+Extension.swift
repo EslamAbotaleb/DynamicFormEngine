@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
 
-    func toDate(timeZone: Bool = true, calendar: Calendar = .current) -> Date? {
+    public func toDate(timeZone: Bool = true, calendar: Calendar = .current) -> Date? {
         let cleanedString = self.replacingOccurrences(of: #" \(.+\)"#, with: "", options: .regularExpression)
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "en_US_POSIX")
@@ -59,7 +59,7 @@ extension String {
         return nil
     }
 
-    func parseTime() -> Date? {
+    public func parseTime() -> Date? {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
         formatter.locale = Locale(identifier: "en_US_POSIX")

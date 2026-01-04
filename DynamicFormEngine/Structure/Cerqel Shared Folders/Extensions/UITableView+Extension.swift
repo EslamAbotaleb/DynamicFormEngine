@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 extension UITableView {
-    func scrollToRowSafely(at indexPath: IndexPath, animated: Bool) {
+   public func scrollToRowSafely(at indexPath: IndexPath, animated: Bool) {
         // Step 1: Check Data Availability
         guard indexPath.section < numberOfSections,
               indexPath.row < numberOfRows(inSection: indexPath.section) else {

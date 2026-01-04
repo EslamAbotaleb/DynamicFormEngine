@@ -322,15 +322,15 @@ public struct ModelControlCerqel : Codable, FormValueCerqel {
                 }
             }
             
-            if let val = try? values.decodeIfPresent([LeavesViewValueCerqel].self, forKey: .value){
-                value = val
-            }else if let val = try? values.decodeIfPresent([VisitorInfoCerqel].self, forKey: .value){
-                value = val
-            }else if let val = try? values.decodeIfPresent([newEmployeeStatusValueCerqel].self, forKey: .value){
-                value = val
-            }else if let val = try? values.decodeIfPresent([newtransferRequestValueCerqel].self, forKey: .value){
-                value = val
-            }
+//            if let val = try? values.decodeIfPresent([LeavesViewValueCerqel].self, forKey: .value){
+//                value = val
+//            }else if let val = try? values.decodeIfPresent([VisitorInfoCerqel].self, forKey: .value){
+//                value = val
+//            }else if let val = try? values.decodeIfPresent([newEmployeeStatusValueCerqel].self, forKey: .value){
+//                value = val
+//            }else if let val = try? values.decodeIfPresent([newtransferRequestValueCerqel].self, forKey: .value){
+//                value = val
+//            }
             
                 
         default:

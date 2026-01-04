@@ -10,11 +10,11 @@ import UIKit
 
 extension UIViewController {
     
-    func setNavigationTitle( _ title: String) {
+    public func setNavigationTitle( _ title: String) {
         self.navigationItem.title = title
     }
     
-    func setNavigationTheme() {
+    public func setNavigationTheme() {
         let appearance = UINavigationBarAppearance()
         if #available(iOS 15, *) {
             appearance.configureWithOpaqueBackground()
@@ -39,14 +39,14 @@ extension UIViewController {
 
     }
     
-    func setNavigationBarTitle( _ title: String) {
+    public func setNavigationBarTitle( _ title: String) {
         self.navigationItem.title = title
     }
-    func largeTitle() {
+    public func largeTitle() {
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
     }
     
-    func setNavgationWithSearch(_ title: String) {
+    public func setNavgationWithSearch(_ title: String) {
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationItem.title = title
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -60,7 +60,7 @@ extension UIViewController {
         hideNavigationBar(hide: false)
     }
     
-    func hideNavigationBar(hide: Bool = true) {
+    public func hideNavigationBar(hide: Bool = true) {
         self.navigationController?.setNavigationBarHidden(hide, animated: false)
     }
     

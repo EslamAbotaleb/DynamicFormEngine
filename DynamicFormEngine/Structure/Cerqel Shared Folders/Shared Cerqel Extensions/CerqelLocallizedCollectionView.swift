@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//internal import MOLH
 
 public class LocallizedCollectionViewCerqel: UICollectionViewFlowLayout {
     override public var flipsHorizontallyInOppositeLayoutDirection: Bool {

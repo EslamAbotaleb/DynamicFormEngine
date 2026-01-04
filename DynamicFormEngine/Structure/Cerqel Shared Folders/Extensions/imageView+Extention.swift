@@ -9,8 +9,9 @@
 
 import Foundation
 import UIKit
+
 extension UIImageView {
-    func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
+   public func resizeImage(image: UIImage, targetSize: CGSize) -> UIImage? {
         let size = image.size
         
         let widthRatio  = targetSize.width  / size.width
@@ -36,7 +37,7 @@ extension UIImageView {
         return newImage
     }
     
-    func resizedImage(at url: URL, for size: CGSize) -> UIImage?
+    public func resizedImage(at url: URL, for size: CGSize) -> UIImage?
     {
         guard let image = UIImage(contentsOfFile: url.path) else {
         return nil
@@ -45,7 +46,7 @@ extension UIImageView {
         return renderer.image { (context) in
             image.draw(in: CGRect(origin: .zero, size: size))}}
     
-      func setImageColor(color: UIColor) {
+    public func setImageColor(color: UIColor) {
         let templateImage = self.image?.withRenderingMode(.alwaysTemplate)
         self.image = templateImage
         self.tintColor = color
@@ -69,7 +70,7 @@ extension UIImageView {
 //    return loadImage
 //}
 
-enum JPEGQuality: CGFloat {
+public enum JPEGQuality: CGFloat {
     case lowest  = 0
     case low     = 0.25
     case medium  = 0.5
@@ -79,13 +80,13 @@ enum JPEGQuality: CGFloat {
 
 extension UIImage {
     
-    func resized(to size: CGSize) -> UIImage {
+    public func resized(to size: CGSize) -> UIImage {
         return UIGraphicsImageRenderer(size: size).image { _ in
             draw(in: CGRect(origin: .zero, size: size))
         }
     }
     
-    func resizeImageTo(size: CGSize) -> UIImage? {
+    public func resizeImageTo(size: CGSize) -> UIImage? {
         
         UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
         self.draw(in: CGRect(origin: CGPoint.zero, size: size))
@@ -94,7 +95,7 @@ extension UIImage {
         return resizedImage
     }
     
-    func scalePreservingAspectRatio(targetSize: CGSize) -> UIImage {
+    public func scalePreservingAspectRatio(targetSize: CGSize) -> UIImage {
         // Determine the scale factor that preserves aspect ratio
         let widthRatio = targetSize.width / size.width
         let heightRatio = targetSize.height / size.height
@@ -122,18 +123,18 @@ extension UIImage {
         return scaledImage
     }
 
-    func toData() -> Data? {
+    public func toData() -> Data? {
         return self.pngData()
     }
 
-    func jpeg(_ jpegQuality: JPEGQuality) -> Data? {
+    public func jpeg(_ jpegQuality: JPEGQuality) -> Data? {
         return  self.jpegData(compressionQuality: jpegQuality.rawValue)
     }
 
 }
 extension UIImageView {
     
-    func makeRounded(borderColor : UIColor?) {
+    public func makeRounded(borderColor : UIColor?) {
         layer.borderWidth = 1
         layer.masksToBounds = true
         layer.borderColor = borderColor == nil ? UIColor.black.cgColor : borderColor?.cgColor

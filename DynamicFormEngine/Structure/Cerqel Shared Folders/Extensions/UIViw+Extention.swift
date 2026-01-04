@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-    func makeRounded(color : UIColor?, borderWidth : CGFloat?) {
+   public func makeRounded(color : UIColor?, borderWidth : CGFloat?) {
         layer.borderWidth = borderWidth ?? 1
         layer.masksToBounds = false
         layer.borderColor = color == nil ? UIColor.black.cgColor : color?.cgColor

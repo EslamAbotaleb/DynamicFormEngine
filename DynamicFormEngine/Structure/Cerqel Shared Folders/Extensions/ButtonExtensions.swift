@@ -11,7 +11,7 @@ import UIKit
 
 extension UIButton {
     
-    func setActiveButton(fontsize: CGFloat = 16, background: UIColor? = primaryMain, titleColor: UIColor = .white) {
+   public func setActiveButton(fontsize: CGFloat = 16, background: UIColor? = primaryMain, titleColor: UIColor = .white) {
         isUserInteractionEnabled = true
         setTitleColor(titleColor, for: .normal)
         titleLabel?.font = UIFont.buttonLSemibold()
@@ -21,7 +21,7 @@ extension UIButton {
         }
     }
     
-    func setUnActiveButton(fontsize: CGFloat = 16, background: UIColor? = .lightGray, titleColor: UIColor = .white){
+    public func setUnActiveButton(fontsize: CGFloat = 16, background: UIColor? = .lightGray, titleColor: UIColor = .white){
         isUserInteractionEnabled = false
         setTitleColor(titleColor, for: .disabled)
         setTitleColor(titleColor, for: .normal)
@@ -30,7 +30,7 @@ extension UIButton {
         }
     }
 
-    func underline() {
+    public func underline() {
         
         if let textUnwrapped = self.titleLabel?.text {
             let underlineAttribute: [NSAttributedString.Key: Any] = [
@@ -47,7 +47,7 @@ extension UIButton {
         }
     }
     
-    func setCancelButtonTheme() {
+    public func setCancelButtonTheme() {
         self.layer.borderColor = primaryMain.cgColor
         self.titleLabel?.font = UIFont.buttonLSemibold()
         self.layer.borderWidth = 1
@@ -55,7 +55,7 @@ extension UIButton {
         self.setTitleColor(primaryMain, for: .normal)
     }
     
-    func setSubmitButtonTheme() {
+    public func setSubmitButtonTheme() {
         self.titleLabel?.font = UIFont.buttonLSemibold()
         self.backgroundColor = primaryMain
         self.setTitleColor(.white, for: .normal)

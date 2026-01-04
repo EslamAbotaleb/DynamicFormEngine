@@ -81,7 +81,6 @@
 		AA6834252F066B040079DAD9 /* NewTextAreaTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6833EC2F066B040079DAD9 /* NewTextAreaTVcell.xib */; };
 		AA6834262F066B040079DAD9 /* SubmitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6834042F066B040079DAD9 /* SubmitTableViewCell.xib */; };
 		AA6834272F066B040079DAD9 /* NewOptionTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6833E82F066B040079DAD9 /* NewOptionTVCell.xib */; };
-		AA6834282F066B040079DAD9 /* SalaryItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6833FD2F066B040079DAD9 /* SalaryItem.xib */; };
 		AA6834292F066B040079DAD9 /* ChatFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6833A02F066B040079DAD9 /* ChatFooterView.xib */; };
 		AA68342A2F066B040079DAD9 /* LocationNameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6833D02F066B040079DAD9 /* LocationNameView.xib */; };
 		AA68342B2F066B040079DAD9 /* TableDetailsRowTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA68340A2F066B040079DAD9 /* TableDetailsRowTVCell.xib */; };
@@ -585,7 +584,6 @@
 		AAC0EE462EF61E0B00DDE9FF /* CerqelBaseWireFrameDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EE262EF61E0B00DDE9FF /* CerqelBaseWireFrameDynamicForm.swift */; };
 		AAC0EE512EF61E0B00DDE9FF /* CerqelUISearchBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDAE2EF61E0B00DDE9FF /* CerqelUISearchBar+Extensions.swift */; };
 		AAC0EE522EF61E0B00DDE9FF /* CerqelBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EE272EF61E0B00DDE9FF /* CerqelBaseViewModel.swift */; };
-		AAC0EE542EF61E0B00DDE9FF /* ImagePickerExternalImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECA02EF61E0B00DDE9FF /* ImagePickerExternalImpl.swift */; };
 		AAC0EE582EF61E0B00DDE9FF /* MultipartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED3A2EF61E0B00DDE9FF /* MultipartModel.swift */; };
 		AAC0EE5B2EF61E0B00DDE9FF /* UITableViewCell+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECB72EF61E0B00DDE9FF /* UITableViewCell+Extention.swift */; };
 		AAC0EE5D2EF61E0B00DDE9FF /* SettingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECAD2EF61E0B00DDE9FF /* SettingManager.swift */; };
@@ -597,9 +595,7 @@
 		AAC0EE6C2EF61E0B00DDE9FF /* imageView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECBB2EF61E0B00DDE9FF /* imageView+Extention.swift */; };
 		AAC0EE702EF61E0B00DDE9FF /* IntrinsicCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECA82EF61E0B00DDE9FF /* IntrinsicCollectionView.swift */; };
 		AAC0EE752EF61E0B00DDE9FF /* BaseRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECFE2EF61E0B00DDE9FF /* BaseRepo.swift */; };
-		AAC0EE792EF61E0B00DDE9FF /* SalaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED2B2EF61E0B00DDE9FF /* SalaryItem.swift */; };
 		AAC0EE7F2EF61E0B00DDE9FF /* cerqel_ArrayResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED8E2EF61E0B00DDE9FF /* cerqel_ArrayResource.swift */; };
-		AAC0EE872EF61E0B00DDE9FF /* ModelMyTaskCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED442EF61E0B00DDE9FF /* ModelMyTaskCerqel.swift */; };
 		AAC0EE882EF61E0B00DDE9FF /* BaseProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED982EF61E0B00DDE9FF /* BaseProcessor.swift */; };
 		AAC0EE8A2EF61E0B00DDE9FF /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED9A2EF61E0B00DDE9FF /* BaseVM.swift */; };
 		AAC0EE8C2EF61E0B00DDE9FF /* CerqelUINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDAD2EF61E0B00DDE9FF /* CerqelUINavigationController+Extensions.swift */; };
@@ -612,7 +608,6 @@
 		AAC0EE9D2EF61E0B00DDE9FF /* ModelRequestDetailsCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED472EF61E0B00DDE9FF /* ModelRequestDetailsCerqel.swift */; };
 		AAC0EE9E2EF61E0B00DDE9FF /* UIViw+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECBC2EF61E0B00DDE9FF /* UIViw+Extention.swift */; };
 		AAC0EEA02EF61E0B00DDE9FF /* TextViewPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECA92EF61E0B00DDE9FF /* TextViewPlaceHolder.swift */; };
-		AAC0EEA22EF61E0B00DDE9FF /* SearchPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED312EF61E0B00DDE9FF /* SearchPayload.swift */; };
 		AAC0EEA42EF61E0B00DDE9FF /* DateHelpersCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EC9F2EF61E0B00DDE9FF /* DateHelpersCerqel.swift */; };
 		AAC0EEA72EF61E0B00DDE9FF /* tasksStatisticsModelCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED362EF61E0B00DDE9FF /* tasksStatisticsModelCerqel.swift */; };
 		AAC0EEA82EF61E0B00DDE9FF /* CerqelDeleteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED232EF61E0B00DDE9FF /* CerqelDeleteSheet.swift */; };
@@ -628,7 +623,6 @@
 		AAC0EEB82EF61E0B00DDE9FF /* ModelCategoryCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED422EF61E0B00DDE9FF /* ModelCategoryCerqel.swift */; };
 		AAC0EEB92EF61E0B00DDE9FF /* CerqelUIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDA52EF61E0B00DDE9FF /* CerqelUIFont+Extensions.swift */; };
 		AAC0EEBA2EF61E0B00DDE9FF /* CerqelUIVIewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDA62EF61E0B00DDE9FF /* CerqelUIVIewController+Extensions.swift */; };
-		AAC0EEC12EF61E0B00DDE9FF /* ToggleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECBA2EF61E0B00DDE9FF /* ToggleExtensions.swift */; };
 		AAC0EEC22EF61E0B00DDE9FF /* CerqelDouble+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDAF2EF61E0B00DDE9FF /* CerqelDouble+Extensions.swift */; };
 		AAC0EECA2EF61E0B00DDE9FF /* CerqelConnectionPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EC942EF61E0B00DDE9FF /* CerqelConnectionPopup.swift */; };
 		AAC0EECB2EF61E0B00DDE9FF /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECB12EF61E0B00DDE9FF /* UIControl+Extension.swift */; };
@@ -653,7 +647,6 @@
 		AAC0EEF62EF61E0B00DDE9FF /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECAF2EF61E0B00DDE9FF /* Date+Extension.swift */; };
 		AAC0EEF82EF61E0B00DDE9FF /* cerqel_Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EE232EF61E0B00DDE9FF /* cerqel_Environment.swift */; };
 		AAC0EEF92EF61E0B00DDE9FF /* CerqelLocallizedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDAA2EF61E0B00DDE9FF /* CerqelLocallizedCollectionView.swift */; };
-		AAC0EEFC2EF61E0B00DDE9FF /* ModelSubmitFormCerqel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED462EF61E0B00DDE9FF /* ModelSubmitFormCerqel.swift */; };
 		AAC0EEFD2EF61E0B00DDE9FF /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECC12EF61E0B00DDE9FF /* SectionModel.swift */; };
 		AAC0EEFE2EF61E0B00DDE9FF /* BaseItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED992EF61E0B00DDE9FF /* BaseItem.swift */; };
 		AAC0EEFF2EF61E0B00DDE9FF /* cerqel_NormalAPIcallDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED8F2EF61E0B00DDE9FF /* cerqel_NormalAPIcallDynamicForm.swift */; };
@@ -670,7 +663,6 @@
 		AAC0EF1C2EF61E0B00DDE9FF /* TableViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECB62EF61E0B00DDE9FF /* TableViewExtensions.swift */; };
 		AAC0EF1F2EF61E0B00DDE9FF /* CerqelListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ED792EF61E0B00DDE9FF /* CerqelListModel.swift */; };
 		AAC0EF202EF61E0B00DDE9FF /* CerqelUIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EDAC2EF61E0B00DDE9FF /* CerqelUIApplication+Extension.swift */; };
-		AAC0EF232EF61E0B00DDE9FF /* ImagePickerExternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECA12EF61E0B00DDE9FF /* ImagePickerExternal.swift */; };
 		AAC0EF252EF61E0B00DDE9FF /* CodableHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0ECA72EF61E0B00DDE9FF /* CodableHelpers.swift */; };
 		AADDBDDF2F015987009145A7 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AADDBDDE2F015987009145A7 /* RxCocoa */; };
 		AADDBDE32F015987009145A7 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = AADDBDE22F015987009145A7 /* RxRelay */; };
@@ -875,7 +867,6 @@
 		AA6833FA2F066B040079DAD9 /* RequestSummaryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RequestSummaryVC.xib; sourceTree = "<group>"; };
 		AA6833FB2F066B040079DAD9 /* RichTextAreaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RichTextAreaTableViewCell.xib; sourceTree = "<group>"; };
 		AA6833FC2F066B040079DAD9 /* RichTextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RichTextView.xib; sourceTree = "<group>"; };
-		AA6833FD2F066B040079DAD9 /* SalaryItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalaryItem.xib; sourceTree = "<group>"; };
 		AA6833FE2F066B040079DAD9 /* SectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionTableViewCell.xib; sourceTree = "<group>"; };
 		AA6833FF2F066B040079DAD9 /* SendBackVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SendBackVC.xib; sourceTree = "<group>"; };
 		AA6834002F066B040079DAD9 /* ServiceSummaryPagesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServiceSummaryPagesVC.xib; sourceTree = "<group>"; };
@@ -1250,8 +1241,6 @@
 		AAC0EC922EF61E0B00DDE9FF /* ToastManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastManger.swift; sourceTree = "<group>"; };
 		AAC0EC942EF61E0B00DDE9FF /* CerqelConnectionPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelConnectionPopup.swift; sourceTree = "<group>"; };
 		AAC0EC9F2EF61E0B00DDE9FF /* DateHelpersCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpersCerqel.swift; sourceTree = "<group>"; };
-		AAC0ECA02EF61E0B00DDE9FF /* ImagePickerExternalImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerExternalImpl.swift; sourceTree = "<group>"; };
-		AAC0ECA12EF61E0B00DDE9FF /* ImagePickerExternal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerExternal.swift; sourceTree = "<group>"; };
 		AAC0ECA32EF61E0B00DDE9FF /* DocumentPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPicker.swift; sourceTree = "<group>"; };
 		AAC0ECA42EF61E0B00DDE9FF /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		AAC0ECA52EF61E0B00DDE9FF /* DocumentDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDelegate.swift; sourceTree = "<group>"; };
@@ -1271,7 +1260,6 @@
 		AAC0ECB72EF61E0B00DDE9FF /* UITableViewCell+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extention.swift"; sourceTree = "<group>"; };
 		AAC0ECB82EF61E0B00DDE9FF /* CollectionViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewExtensions.swift; sourceTree = "<group>"; };
 		AAC0ECB92EF61E0B00DDE9FF /* TextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtension.swift; sourceTree = "<group>"; };
-		AAC0ECBA2EF61E0B00DDE9FF /* ToggleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleExtensions.swift; sourceTree = "<group>"; };
 		AAC0ECBB2EF61E0B00DDE9FF /* imageView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "imageView+Extention.swift"; sourceTree = "<group>"; };
 		AAC0ECBC2EF61E0B00DDE9FF /* UIViw+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViw+Extention.swift"; sourceTree = "<group>"; };
 		AAC0ECBD2EF61E0B00DDE9FF /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
@@ -1291,17 +1279,13 @@
 		AAC0ED1E2EF61E0B00DDE9FF /* BussenissCardSheetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BussenissCardSheetVC.swift; sourceTree = "<group>"; };
 		AAC0ED212EF61E0B00DDE9FF /* SuccessBottomSheetWithNavigationLinkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessBottomSheetWithNavigationLinkVC.swift; sourceTree = "<group>"; };
 		AAC0ED232EF61E0B00DDE9FF /* CerqelDeleteSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelDeleteSheet.swift; sourceTree = "<group>"; };
-		AAC0ED2B2EF61E0B00DDE9FF /* SalaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryItem.swift; sourceTree = "<group>"; };
 		AAC0ED2D2EF61E0B00DDE9FF /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
-		AAC0ED312EF61E0B00DDE9FF /* SearchPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPayload.swift; sourceTree = "<group>"; };
 		AAC0ED342EF61E0B00DDE9FF /* ModelUsersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelUsersList.swift; sourceTree = "<group>"; };
 		AAC0ED362EF61E0B00DDE9FF /* tasksStatisticsModelCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tasksStatisticsModelCerqel.swift; sourceTree = "<group>"; };
 		AAC0ED3A2EF61E0B00DDE9FF /* MultipartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartModel.swift; sourceTree = "<group>"; };
 		AAC0ED422EF61E0B00DDE9FF /* ModelCategoryCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelCategoryCerqel.swift; sourceTree = "<group>"; };
 		AAC0ED432EF61E0B00DDE9FF /* ModelServiceSubCategoryCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelServiceSubCategoryCerqel.swift; sourceTree = "<group>"; };
-		AAC0ED442EF61E0B00DDE9FF /* ModelMyTaskCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelMyTaskCerqel.swift; sourceTree = "<group>"; };
 		AAC0ED452EF61E0B00DDE9FF /* ModelFormCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFormCerqel.swift; sourceTree = "<group>"; };
-		AAC0ED462EF61E0B00DDE9FF /* ModelSubmitFormCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelSubmitFormCerqel.swift; sourceTree = "<group>"; };
 		AAC0ED472EF61E0B00DDE9FF /* ModelRequestDetailsCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRequestDetailsCerqel.swift; sourceTree = "<group>"; };
 		AAC0ED6B2EF61E0B00DDE9FF /* ColorCustomizationModelCerqel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCustomizationModelCerqel.swift; sourceTree = "<group>"; };
 		AAC0ED792EF61E0B00DDE9FF /* CerqelListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CerqelListModel.swift; sourceTree = "<group>"; };
@@ -1655,7 +1639,6 @@
 				AA6833FA2F066B040079DAD9 /* RequestSummaryVC.xib */,
 				AA6833FB2F066B040079DAD9 /* RichTextAreaTableViewCell.xib */,
 				AA6833FC2F066B040079DAD9 /* RichTextView.xib */,
-				AA6833FD2F066B040079DAD9 /* SalaryItem.xib */,
 				AA6833FE2F066B040079DAD9 /* SectionTableViewCell.xib */,
 				AA6833FF2F066B040079DAD9 /* SendBackVC.xib */,
 				AA6834002F066B040079DAD9 /* ServiceSummaryPagesVC.xib */,
@@ -1907,6 +1890,15 @@
 				AAADB9432EF81CE400F696F3 /* Enum */,
 			);
 			path = MyPageXib;
+			sourceTree = "<group>";
+		};
+		AA98E7CF2F0A69FB00F94250 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				AAADB9672EF8348E00F696F3 /* PlatformsColor.swift */,
+				AAADB9652EF8347400F696F3 /* TenantListDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		AAA4CEB82EF87E760027ABEC /* My Calendar */ = {
@@ -3830,15 +3822,6 @@
 			path = Popups;
 			sourceTree = "<group>";
 		};
-		AAC0ECA22EF61E0B00DDE9FF /* ImagePicker */ = {
-			isa = PBXGroup;
-			children = (
-				AAC0ECA02EF61E0B00DDE9FF /* ImagePickerExternalImpl.swift */,
-				AAC0ECA12EF61E0B00DDE9FF /* ImagePickerExternal.swift */,
-			);
-			path = ImagePicker;
-			sourceTree = "<group>";
-		};
 		AAC0ECA62EF61E0B00DDE9FF /* DocumentPickerManeger */ = {
 			isa = PBXGroup;
 			children = (
@@ -3856,7 +3839,6 @@
 				AAA4CE4F2EF872480027ABEC /* DownloadManager.swift */,
 				AAADBB092EF85BF000F696F3 /* LocalNotificationManager.swift */,
 				AAC0EC9F2EF61E0B00DDE9FF /* DateHelpersCerqel.swift */,
-				AAC0ECA22EF61E0B00DDE9FF /* ImagePicker */,
 				AAC0ECA62EF61E0B00DDE9FF /* DocumentPickerManeger */,
 				AAC0ECA72EF61E0B00DDE9FF /* CodableHelpers.swift */,
 				AAC0ECA82EF61E0B00DDE9FF /* IntrinsicCollectionView.swift */,
@@ -3881,7 +3863,6 @@
 				AAC0ECB72EF61E0B00DDE9FF /* UITableViewCell+Extention.swift */,
 				AAC0ECB82EF61E0B00DDE9FF /* CollectionViewExtensions.swift */,
 				AAC0ECB92EF61E0B00DDE9FF /* TextFieldExtension.swift */,
-				AAC0ECBA2EF61E0B00DDE9FF /* ToggleExtensions.swift */,
 				AAC0ECBB2EF61E0B00DDE9FF /* imageView+Extention.swift */,
 				AAC0ECBC2EF61E0B00DDE9FF /* UIViw+Extention.swift */,
 				AAC0ECBD2EF61E0B00DDE9FF /* UITableView+Extension.swift */,
@@ -3925,6 +3906,7 @@
 		AAC0ED002EF61E0B00DDE9FF /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AA98E7CF2F0A69FB00F94250 /* DTO */,
 				AAE37A0C2F02BF91004EBA29 /* RepoImp */,
 				AAE379FD2F02BE78004EBA29 /* LocalStorage */,
 				AAADB9462EF82C0600F696F3 /* Network */,
@@ -4010,14 +3992,6 @@
 			path = BottomSheet;
 			sourceTree = "<group>";
 		};
-		AAC0ED2C2EF61E0B00DDE9FF /* SalaryReusableComponents */ = {
-			isa = PBXGroup;
-			children = (
-				AAC0ED2B2EF61E0B00DDE9FF /* SalaryItem.swift */,
-			);
-			path = SalaryReusableComponents;
-			sourceTree = "<group>";
-		};
 		AAC0ED2F2EF61E0B00DDE9FF /* UsersViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -4034,7 +4008,6 @@
 				AAC0ED0D2EF61E0B00DDE9FF /* ConfirmationBottomSheet */,
 				AAC0ED142EF61E0B00DDE9FF /* DeleteBottomSheet */,
 				AAC0ED292EF61E0B00DDE9FF /* BottomSheet */,
-				AAC0ED2C2EF61E0B00DDE9FF /* SalaryReusableComponents */,
 				AAC0ED2F2EF61E0B00DDE9FF /* UsersViewController */,
 				AAC0EA742EF61E0100DDE9FF /* ActionBaseList */,
 			);
@@ -4045,18 +4018,13 @@
 			isa = PBXGroup;
 			children = (
 				AAA5BFE42EFBF6B200FFE102 /* FormValueCerqel.swift */,
-				AAADB9672EF8348E00F696F3 /* PlatformsColor.swift */,
-				AAADB9652EF8347400F696F3 /* TenantListDTO.swift */,
-				AAC0ED312EF61E0B00DDE9FF /* SearchPayload.swift */,
 				AAC0ED342EF61E0B00DDE9FF /* ModelUsersList.swift */,
 				AAC0ED362EF61E0B00DDE9FF /* tasksStatisticsModelCerqel.swift */,
 				AAC0ED3A2EF61E0B00DDE9FF /* MultipartModel.swift */,
 				AAADB95F2EF82E2400F696F3 /* ModelAnnouncementCerqel.swift */,
 				AAC0ED422EF61E0B00DDE9FF /* ModelCategoryCerqel.swift */,
 				AAC0ED432EF61E0B00DDE9FF /* ModelServiceSubCategoryCerqel.swift */,
-				AAC0ED442EF61E0B00DDE9FF /* ModelMyTaskCerqel.swift */,
 				AAC0ED452EF61E0B00DDE9FF /* ModelFormCerqel.swift */,
-				AAC0ED462EF61E0B00DDE9FF /* ModelSubmitFormCerqel.swift */,
 				AAC0ED472EF61E0B00DDE9FF /* ModelRequestDetailsCerqel.swift */,
 				AAC0ED6B2EF61E0B00DDE9FF /* ColorCustomizationModelCerqel.swift */,
 				AAC0ED792EF61E0B00DDE9FF /* CerqelListModel.swift */,
@@ -4476,7 +4444,6 @@
 				AA6834252F066B040079DAD9 /* NewTextAreaTVcell.xib in Resources */,
 				AA6834262F066B040079DAD9 /* SubmitTableViewCell.xib in Resources */,
 				AA6834272F066B040079DAD9 /* NewOptionTVCell.xib in Resources */,
-				AA6834282F066B040079DAD9 /* SalaryItem.xib in Resources */,
 				AA6834292F066B040079DAD9 /* ChatFooterView.xib in Resources */,
 				AA68342A2F066B040079DAD9 /* LocationNameView.xib in Resources */,
 				AA68342B2F066B040079DAD9 /* TableDetailsRowTVCell.xib in Resources */,
@@ -4973,7 +4940,6 @@
 				AAC0EE462EF61E0B00DDE9FF /* CerqelBaseWireFrameDynamicForm.swift in Sources */,
 				AAC0EE512EF61E0B00DDE9FF /* CerqelUISearchBar+Extensions.swift in Sources */,
 				AAC0EE522EF61E0B00DDE9FF /* CerqelBaseViewModel.swift in Sources */,
-				AAC0EE542EF61E0B00DDE9FF /* ImagePickerExternalImpl.swift in Sources */,
 				AAC0EE582EF61E0B00DDE9FF /* MultipartModel.swift in Sources */,
 				AAC0EE5B2EF61E0B00DDE9FF /* UITableViewCell+Extention.swift in Sources */,
 				AAC0EE5D2EF61E0B00DDE9FF /* SettingManager.swift in Sources */,
@@ -4986,10 +4952,8 @@
 				AAC0EE6C2EF61E0B00DDE9FF /* imageView+Extention.swift in Sources */,
 				AAC0EE702EF61E0B00DDE9FF /* IntrinsicCollectionView.swift in Sources */,
 				AAC0EE752EF61E0B00DDE9FF /* BaseRepo.swift in Sources */,
-				AAC0EE792EF61E0B00DDE9FF /* SalaryItem.swift in Sources */,
 				AAC0EE7F2EF61E0B00DDE9FF /* cerqel_ArrayResource.swift in Sources */,
 				AA3C31122EF953B600C2778C /* FileActionCell.swift in Sources */,
-				AAC0EE872EF61E0B00DDE9FF /* ModelMyTaskCerqel.swift in Sources */,
 				AAC0EE882EF61E0B00DDE9FF /* BaseProcessor.swift in Sources */,
 				AAADBA072EF839E500F696F3 /* FilesActionsViewModel.swift in Sources */,
 				AAC0EE8A2EF61E0B00DDE9FF /* BaseVM.swift in Sources */,
@@ -5006,7 +4970,6 @@
 				AAC0EE9D2EF61E0B00DDE9FF /* ModelRequestDetailsCerqel.swift in Sources */,
 				AAC0EE9E2EF61E0B00DDE9FF /* UIViw+Extention.swift in Sources */,
 				AAC0EEA02EF61E0B00DDE9FF /* TextViewPlaceHolder.swift in Sources */,
-				AAC0EEA22EF61E0B00DDE9FF /* SearchPayload.swift in Sources */,
 				AAC0EEA42EF61E0B00DDE9FF /* DateHelpersCerqel.swift in Sources */,
 				AAC0EEA72EF61E0B00DDE9FF /* tasksStatisticsModelCerqel.swift in Sources */,
 				AAC0EEA82EF61E0B00DDE9FF /* CerqelDeleteSheet.swift in Sources */,
@@ -5026,7 +4989,6 @@
 				AAADB9622EF82F9900F696F3 /* ProfileSections.swift in Sources */,
 				AAA4CEBD2EF87E9A0027ABEC /* AddEditInvitedCV.swift in Sources */,
 				AAC0EEBA2EF61E0B00DDE9FF /* CerqelUIVIewController+Extensions.swift in Sources */,
-				AAC0EEC12EF61E0B00DDE9FF /* ToggleExtensions.swift in Sources */,
 				AAC0EEC22EF61E0B00DDE9FF /* CerqelDouble+Extensions.swift in Sources */,
 				AAC0EECA2EF61E0B00DDE9FF /* CerqelConnectionPopup.swift in Sources */,
 				AAC0EECB2EF61E0B00DDE9FF /* UIControl+Extension.swift in Sources */,
@@ -5051,7 +5013,6 @@
 				AAC0EEF62EF61E0B00DDE9FF /* Date+Extension.swift in Sources */,
 				AAC0EEF82EF61E0B00DDE9FF /* cerqel_Environment.swift in Sources */,
 				AAC0EEF92EF61E0B00DDE9FF /* CerqelLocallizedCollectionView.swift in Sources */,
-				AAC0EEFC2EF61E0B00DDE9FF /* ModelSubmitFormCerqel.swift in Sources */,
 				AAC0EEFD2EF61E0B00DDE9FF /* SectionModel.swift in Sources */,
 				AAC0EEFE2EF61E0B00DDE9FF /* BaseItem.swift in Sources */,
 				AAC0EEFF2EF61E0B00DDE9FF /* cerqel_NormalAPIcallDynamicForm.swift in Sources */,
@@ -5070,7 +5031,6 @@
 				AAC0EF202EF61E0B00DDE9FF /* CerqelUIApplication+Extension.swift in Sources */,
 				AAA8098E2EF941E9001E845F /* MaskedImageView.swift in Sources */,
 				AA3C31192EF954A900C2778C /* AcknowledgeVC.swift in Sources */,
-				AAC0EF232EF61E0B00DDE9FF /* ImagePickerExternal.swift in Sources */,
 				AAC0EF252EF61E0B00DDE9FF /* CodableHelpers.swift in Sources */,
 				AAA6A4352EF2E84000520357 /* RichTextAreaTableViewCell.swift in Sources */,
 				AAA6A4362EF2E84000520357 /* FormViewController.swift in Sources */,

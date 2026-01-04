@@ -26,7 +26,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
     case fetchAwaitingRequests
     case performSearchFromSearchControlInFormBuilder(url: String)
     case fetchProfile
-    case searchList(payload:SearchPayload)
+//    case searchList(payload:SearchPayload)
     case none
 
     public var actionParameters: [String : Any]{
@@ -52,10 +52,10 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
                 "Content-Type": "application/json"
             ]
             
-        case .searchList(let payload):
-            let  json: [String: Any] = payload.toJSON()
-            return json
-            
+//        case .searchList(let payload):
+//            let  json: [String: Any] = payload.toJSON()
+//            return json
+//            
         default:
             return [:]
         }
@@ -63,8 +63,6 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
     
     internal var method: HTTPMethod {
         switch self {
-        case .searchList:
-            return .post
         case .submitService, .addChatComment, .uploadFile, .executeAction, .reopenRequest, .withdrawRequest:
             return .post
         default:
@@ -124,9 +122,6 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
     
         case .performSearchFromSearchControlInFormBuilder(let url):
             return url
-      
-        case .searchList:
-            return "Engine/Autocomplete"
         }
     }
     
@@ -183,7 +178,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
        
         case .performSearchFromSearchControlInFormBuilder:
             return .none
-            case .fetchProfile, .searchList:
+            case .fetchProfile:
             return .userManager
     
         default:

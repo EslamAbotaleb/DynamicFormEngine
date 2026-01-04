@@ -11,7 +11,7 @@ import UIKit
 
 extension UITableView: NoDataProtocol {
     
-    func setNoDataPlaceholderWithButton(
+   public func setNoDataPlaceholderWithButton(
         title: String = "No Files Yet!",
         buttonTitle: String, // now mandatory
         buttonTitleColor: UIColor = .systemBlue,
@@ -89,7 +89,7 @@ extension UITableView: NoDataProtocol {
         self.backgroundView = emptyView
     }
 
-    func setNoDataPlaceholder(title: String = "No Files Yet!", message: String = "", messageImage: UIImage = UIImage(named: "emptyState")!, showImage: Bool = true, whiteBG: Bool = false) {
+    public func setNoDataPlaceholder(title: String = "No Files Yet!", message: String = "", messageImage: UIImage = UIImage(named: "emptyState")!, showImage: Bool = true, whiteBG: Bool = false) {
 
         let emptyView = UIView(frame: CGRect(x: self.center.x, y: self.center.y, width: self.bounds.size.width, height: self.bounds.size.height))
 
@@ -164,7 +164,7 @@ extension UITableView: NoDataProtocol {
         self.backgroundView = emptyView
     }
 
-    func removeNoDataPlaceholder() {
+    public func removeNoDataPlaceholder() {
         self.isScrollEnabled = true
         self.backgroundView = nil
     }

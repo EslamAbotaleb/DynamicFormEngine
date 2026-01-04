@@ -10,7 +10,7 @@ import Foundation
 
 extension Date {
 
-    func toFormattedString(format: String, calendar: Calendar = Calendar.current) -> String {
+   public func toFormattedString(format: String, calendar: Calendar = Calendar.current) -> String {
         let formatter = DateFormatter()
         formatter.calendar = calendar
 

@@ -14,7 +14,7 @@ import UIKit
     @objc optional func didSelectDate(sender: Any?, date: Date)
 }
 
-class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPickerViewDataSource {
+public class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var doneBtn: TransitionButton!
@@ -52,14 +52,14 @@ class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPickerViewDa
     }
 
     
-    override func viewDidLoad() {
+    override public  func viewDidLoad() {
         super.viewDidLoad()
 //        doneBtn.setTitle("Confirm".localized, for: .normal)
         titleLbl.text = pickerTitle
         
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         datePicker.isHidden = !isDate
@@ -100,29 +100,29 @@ class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPickerViewDa
         }
     }
     
-    override func didReceiveMemoryWarning() {
+    override public func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.cerqel_sheetCtl.closeSheet()
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return dataArray.count
     }
     
-   func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (dataArray.count > 0) {
             selectedIndex = row
         }
     }
     
-   func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         let title = dataArray[row]
         return title
     }
@@ -196,7 +196,7 @@ class DatePickerPopup: BottomSheetVCCerqel, UIPickerViewDelegate, UIPickerViewDa
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
 }
 

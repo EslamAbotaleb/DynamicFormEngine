@@ -15,7 +15,6 @@ class UsersRepoImp: UsersRepo {
     public init(network: Network = NetworkServiceImpl()) {
         self.network = network
     }
-
     
     public func getUsersList(payload: GetUsersPayload) -> Promise<BaseResponse<[UserDTO]>> {
         return self.network.callModel(BaseResponse<[UserDTO]>.self, endpoint: GetUsersEndPoint(payload: payload))

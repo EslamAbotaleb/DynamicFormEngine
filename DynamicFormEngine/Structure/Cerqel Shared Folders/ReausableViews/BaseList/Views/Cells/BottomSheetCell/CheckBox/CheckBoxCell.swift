@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CheckBoxCell: UITableViewCell {
+class CheckBoxCell: UITableViewCell {
     @IBOutlet weak var checkIcon: UIImageView!
     @IBOutlet weak var checkSortNameLbl: UILabel!
     

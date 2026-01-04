@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FileActionCell: UITableViewCell {
+public class FileActionCell: UITableViewCell {
    var isVisible : Bool = true
     
     @IBOutlet weak var title: UILabel!
@@ -16,7 +16,7 @@ class FileActionCell: UITableViewCell {
     @IBOutlet weak var actionImageView: UIView!
     
 
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         configureUI(itemIsVisible: true)
     }

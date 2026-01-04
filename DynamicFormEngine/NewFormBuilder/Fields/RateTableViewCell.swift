@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Cosmos
+internal import Cosmos
 
 class RateTableViewCell: ParentFieldTableViewCell {
     

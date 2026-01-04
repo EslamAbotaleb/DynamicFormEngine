@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class ProfilePhoneTypesCell: UITableViewCell {
+class ProfilePhoneTypesCell: UITableViewCell {
 
     @IBOutlet weak var checkIcon: UIImageView!
     @IBOutlet weak var checkSortNameLbl: UILabel!

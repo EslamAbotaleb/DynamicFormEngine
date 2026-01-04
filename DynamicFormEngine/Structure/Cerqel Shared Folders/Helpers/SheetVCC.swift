@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     public var stringsArray: [String] = []
     public var titleText: String = ""
@@ -53,11 +53,11 @@ public class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     // UITableViewDataSource Methods
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stringsArray.count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell(style: .default, reuseIdentifier: "cell")
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = stringsArray[indexPath.row]
@@ -65,7 +65,7 @@ public class SheetVCC: UIViewController, UITableViewDataSource, UITableViewDeleg
     }
     
     // UITableViewDelegate Methods
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

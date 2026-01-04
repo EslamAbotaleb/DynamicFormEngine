@@ -76,7 +76,7 @@ public class FileViewerManager : NSObject, FileViewer {
         DownloadManager.shared.downloadFiles(from: [file]) { (fileDownloaded, error) in
             if let fileDownloaded = fileDownloaded {
                 completion(fileDownloaded)
-            } else if let error = error {
+            } else if let _ = error {
                 self.downloadModifiedFile(file: file, completion: completion)
             }
         }
@@ -88,7 +88,7 @@ public class FileViewerManager : NSObject, FileViewer {
         DownloadManager.shared.downloadFiles(from: [fileModified]) { (fileDownloaded, error) in
             if let fileDownloaded = fileDownloaded {
                 completion(fileDownloaded)
-            } else if let error = error {
+            } else if let _ = error {
                 completion(nil)
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "DownloadFileForPreviewFailed"), object: nil, userInfo: nil)
             }
@@ -106,7 +106,7 @@ extension FileViewerManager: QLPreviewControllerDelegate, QLPreviewControllerDat
         return localFileURLToPreview! as QLPreviewItem
     }
     
-    public  func previewControllerDidDismiss(_ controller: QLPreviewController) {
+    public func previewControllerDidDismiss(_ controller: QLPreviewController) {
         controller.dismiss(animated: true, completion: nil)
     }
 }

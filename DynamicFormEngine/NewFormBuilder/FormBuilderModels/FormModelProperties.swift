@@ -5,20 +5,20 @@
 //  Created by Yasser Osama on 09/05/2022.
 //
 
-import ObjectMapper
+internal import ObjectMapper
 import ObjectiveC
 
-public typealias BaseLocalization = [String: BasePropertiesLocalization]
-public typealias NavigationLocalization = [String: NavigationPropertiesLocalization]
-public typealias InteractiveLocalization = [String: InteractivePropertiesLocalization]
-public typealias TextBoxLocalization = [String: TextboxPropertiesLocalization]
-public typealias ParagraphLocalization = [String: ParagraphPropertiesLocalization]
-public typealias MCQLocalization = [String: MCQBasePropertiesLocalization]
+typealias BaseLocalization = [String: BasePropertiesLocalization]
+typealias NavigationLocalization = [String: NavigationPropertiesLocalization]
+typealias InteractiveLocalization = [String: InteractivePropertiesLocalization]
+typealias TextBoxLocalization = [String: TextboxPropertiesLocalization]
+typealias ParagraphLocalization = [String: ParagraphPropertiesLocalization]
+typealias MCQLocalization = [String: MCQBasePropertiesLocalization]
 protocol UpdatableProperties {
     func updateProperty(propertyName: String, newValue: Any)
 }
 
-public class BaseProperties: Mappable, UpdatableProperties {
+class BaseProperties: Mappable, UpdatableProperties {
     public var label: String?
     public var subLabel: String?
     public var labelPosition: String?
@@ -112,7 +112,7 @@ public class BaseProperties: Mappable, UpdatableProperties {
 }
 
 
-public class NavigationProperties: BaseProperties {
+class NavigationProperties: BaseProperties {
     var submit: String?
     var next: String?
     var back: String?
@@ -135,7 +135,7 @@ public class NavigationProperties: BaseProperties {
     }
 }
 
-public class InteractiveProperties: BaseProperties {
+class InteractiveProperties: BaseProperties {
     var addAttachment: Bool?
     var addNote: Bool?
     var attachmentExtensions: String?
@@ -193,7 +193,7 @@ public class InteractiveProperties: BaseProperties {
     }
 }
 
-public class TextBaseProperties: InteractiveProperties {
+class TextBaseProperties: InteractiveProperties {
    
     public override func updateProperty(propertyName: String, newValue: Any) {
         switch propertyName {
@@ -249,7 +249,7 @@ public class TextBaseProperties: InteractiveProperties {
     }
 }
 
-public class TextBoxProperties: TextBaseProperties {
+class TextBoxProperties: TextBaseProperties {
     var defaultAnswer: DefaultTextboxAnswer?
     var newDefaultAnswer: DefaultTextboxAnswerNewFormat?
     var mask: String?
@@ -308,7 +308,7 @@ public class TextBoxProperties: TextBaseProperties {
 
 }
 
-public class TextAreaProperties: TextBaseProperties {
+class TextAreaProperties: TextBaseProperties {
     var autoExpand: Bool?
     var editor: EditorType?
     var fullScreen: Bool?
@@ -360,7 +360,7 @@ public class TextAreaProperties: TextBaseProperties {
       }
 }
 
-public class NumberProperties: InteractiveProperties {
+class NumberProperties: InteractiveProperties {
     var DecimalPlaces: Int?
     var Step: Int?
     var MinimumDigits: Int?
@@ -439,7 +439,7 @@ public class NumberProperties: InteractiveProperties {
     }
 }
 
-public class DateTimeProperties: InteractiveProperties {
+class DateTimeProperties: InteractiveProperties {
     var dateTimeType: DateTimeType?
     var dateSelectionMode: DateSelectionMode?
     var dateFormat: DateFormat?
@@ -617,7 +617,7 @@ public class DateTimeProperties: InteractiveProperties {
     }
 }
 
-public class ParagraphProperties: BaseProperties {
+class ParagraphProperties: BaseProperties {
     var paragraphText: String?
     var paragraphStyle: FormStyle?
     var paragraphSubType: ParagraphSubType?
@@ -687,7 +687,7 @@ public class ParagraphProperties: BaseProperties {
     }
 }
 
-public class MapProperties: BaseProperties {
+class MapProperties: BaseProperties {
     var showPostalCode: Bool?
     var place: Place?
     
@@ -703,7 +703,7 @@ public class MapProperties: BaseProperties {
     }
 }
 
-public class SliderProperties: InteractiveProperties {
+class SliderProperties: InteractiveProperties {
     var defaultAnswer: SliderAnswer?
     var start: Int?
     var end: Int?
@@ -725,7 +725,7 @@ public class SliderProperties: InteractiveProperties {
     }
 }
 
-public class NpsProperties: InteractiveProperties {
+class NpsProperties: InteractiveProperties {
     var defaultAnswer: BaseAnswerText?
     
     required init?(map: Map) {
@@ -739,7 +739,7 @@ public class NpsProperties: InteractiveProperties {
     }
 }
 
-public class RateProperties: InteractiveProperties {
+class RateProperties: InteractiveProperties {
     var rateType: RateType?
     var scale: Int?
     var rateColor: String?
@@ -759,7 +759,7 @@ public class RateProperties: InteractiveProperties {
     }
 }
 
-public class FaceRateProperties: InteractiveProperties {
+class FaceRateProperties: InteractiveProperties {
     var defaultAnswer: BaseAnswerText?
     
     required init?(map: Map) {
@@ -773,7 +773,7 @@ public class FaceRateProperties: InteractiveProperties {
     }
 }
 
-public class MCQBaseProperties: InteractiveProperties {
+class MCQBaseProperties: InteractiveProperties {
     var options: [MCQOption]?
     var isCascade: Bool?
 //    var dataSourcId: String?
@@ -861,7 +861,7 @@ public class MCQBaseProperties: InteractiveProperties {
     }
 }
 
-public class CheckboxProperties: MCQBaseProperties {
+class CheckboxProperties: MCQBaseProperties {
     var minNumberOfSelectedOptions: Int?
     var maxNumberOfSelectedOptions: Int?
     
@@ -892,7 +892,7 @@ public class CheckboxProperties: MCQBaseProperties {
     }
 }
 
-public class RadioProperties: MCQBaseProperties {
+class RadioProperties: MCQBaseProperties {
     required init?(map: Map) {
         super.init(map: map)
     }
@@ -902,7 +902,7 @@ public class RadioProperties: MCQBaseProperties {
     }
 }
 
-public class DropdownProperties: MCQBaseProperties {
+class DropdownProperties: MCQBaseProperties {
     var multiSelect: Bool?
     var selectAllBox: Bool?
     var minNumberOfSelectedOptions: Int?
@@ -951,7 +951,7 @@ public class DropdownProperties: MCQBaseProperties {
     }
 }
 
-public class TableProperties: InteractiveProperties {
+class TableProperties: InteractiveProperties {
     var minRows: Int?
     var maxRows: Int?
     var showTotals: Bool?
@@ -1015,7 +1015,7 @@ public class TableProperties: InteractiveProperties {
     }
 }
 
-public class FileUploadProperties: InteractiveProperties {
+class FileUploadProperties: InteractiveProperties {
     var defaultAnswer: DefaultFileUploadAnswer?
     var maxAttachmentsSize: Int?
     var maxAttachmentsNumber: Int?
@@ -1055,7 +1055,7 @@ public class FileUploadProperties: InteractiveProperties {
 }
 
 
-public class switchProperties: InteractiveProperties {
+class switchProperties: InteractiveProperties {
     var defaultAnswer: SwitchAnswer?
     
     required init?(map: Map) {
@@ -1071,7 +1071,7 @@ public class switchProperties: InteractiveProperties {
     }
 }
 
-public class Prefix: Mappable {
+class Prefix: Mappable {
     public var display: String?
     public var value: String?
     
@@ -1085,7 +1085,7 @@ public class Prefix: Mappable {
     }
 }
 
-public class Suffix: Prefix {
+class Suffix: Prefix {
     required init?(map: Map) {
         super.init(map: map)
     }
@@ -1227,7 +1227,7 @@ public enum RateType: String {
     case Thumb = "Thumb"
 }
 
-public struct FormStyle : Mappable {
+struct FormStyle : Mappable {
     var border : String?
     var borderType : String?
     var borderColor : String?
@@ -1266,7 +1266,7 @@ public struct FormStyle : Mappable {
 }
 
 
-public struct Place: Mappable {
+struct Place: Mappable {
     public var zoom: Int?
     public var lat: Double?
     public var lng: Double?
@@ -1300,7 +1300,7 @@ public struct Place: Mappable {
     }
 }
 
-public struct MCQOption: Codable, Mappable, Hashable {
+struct MCQOption: Codable, Mappable, Hashable {
     public var id: String?
     public var name: String?
     public var name_ar: String?
@@ -1322,7 +1322,7 @@ public struct MCQOption: Codable, Mappable, Hashable {
     }
 }
 
-public class MCQDataSource: Mappable {
+class MCQDataSource: Mappable {
     public var url: String?
     public var parameters: [String]?
     
@@ -1336,7 +1336,7 @@ public class MCQDataSource: Mappable {
     }
 }
 
-public class BasePropertiesLocalization: Mappable {
+class BasePropertiesLocalization: Mappable {
     public var label: String?
     public var sublabel: String?
     public var tooltip: String?
@@ -1356,7 +1356,7 @@ public class BasePropertiesLocalization: Mappable {
     }
 }
 
-public class NavigationPropertiesLocalization: BasePropertiesLocalization {
+class NavigationPropertiesLocalization: BasePropertiesLocalization {
     public var back: String?
     public var next: String?
     public var submit: String?
@@ -1374,7 +1374,7 @@ public class NavigationPropertiesLocalization: BasePropertiesLocalization {
     }
 }
 
-public class InteractivePropertiesLocalization: BasePropertiesLocalization {
+class InteractivePropertiesLocalization: BasePropertiesLocalization {
     public var placeholder: String?
     
     required init?(map: Map) {
@@ -1388,7 +1388,7 @@ public class InteractivePropertiesLocalization: BasePropertiesLocalization {
     }
 }
 
-public class TextboxPropertiesLocalization: InteractivePropertiesLocalization {
+class TextboxPropertiesLocalization: InteractivePropertiesLocalization {
     public var prefix: Prefix?
     public var suffix: Suffix?
     
@@ -1404,7 +1404,7 @@ public class TextboxPropertiesLocalization: InteractivePropertiesLocalization {
     }
 }
 
-public class ParagraphPropertiesLocalization: BasePropertiesLocalization {
+class ParagraphPropertiesLocalization: BasePropertiesLocalization {
     public var paragraphText: String?
     public var paragraphSubType:ParagraphSubType?
     public var paragraphStyle:FormStyle?
@@ -1422,7 +1422,7 @@ public class ParagraphPropertiesLocalization: BasePropertiesLocalization {
     }
 }
 
-public class MCQBasePropertiesLocalization: InteractivePropertiesLocalization {
+class MCQBasePropertiesLocalization: InteractivePropertiesLocalization {
     public var options: [MCQOption]?
     public var otherOptionText: String?
     public var naOptionText: String?
@@ -1440,7 +1440,7 @@ public class MCQBasePropertiesLocalization: InteractivePropertiesLocalization {
     }
 }
 
-public struct DataSource: Mappable {
+struct DataSource: Mappable {
     public var excludedViews: [ExcludedViews]?
     public var parameters: [String]?
     

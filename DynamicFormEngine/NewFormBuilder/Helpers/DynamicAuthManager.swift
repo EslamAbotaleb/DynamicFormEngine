@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public import RxCocoa
+internal import RxCocoa
 internal import RxSwift
 
 class DynamicAuthManager {

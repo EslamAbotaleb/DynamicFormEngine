@@ -5,7 +5,7 @@
 //  Created by Yasser Osama on 21/09/2022.
 //
 
-import ObjectMapper
+internal import ObjectMapper
 
 struct Warning: Mappable, Codable {
     var formWarning: FormWarning?

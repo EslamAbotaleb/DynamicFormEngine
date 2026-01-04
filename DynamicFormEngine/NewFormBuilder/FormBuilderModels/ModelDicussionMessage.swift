@@ -14,7 +14,7 @@ public struct ModelDicussionMessageData : Codable {
     public let comment : String?
     public let daysRequested : Int?
     public let createdDate : String?
-    public let employee : Employee?
+    let employee : Employee?
     public let attachments : [dicussionAttachemnt]?
 
     enum CodingKeys: String, CodingKey {

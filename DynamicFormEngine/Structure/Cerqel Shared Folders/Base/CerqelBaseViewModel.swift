@@ -7,28 +7,28 @@
 //
 
 import Foundation
-public import RxCocoa
-internal import RxSwift
+internal import RxCocoa
+public import RxSwift
 
-class CerqelBaseViewModel {
-    var errorsObservable: Observable<Error>!
-    var errorsSubject = PublishSubject<Error>()
+public class CerqelBaseViewModel {
+    public var errorsObservable: Observable<Error>!
+    public var errorsSubject = PublishSubject<Error>()
     
     private var alertMessage: DynamicObjects<String> = DynamicObjects("")
     
-    var loadingObservable: Observable<BaseLoading>!
-    let loadingSubject = PublishSubject<BaseLoading>()
+    public var loadingObservable: Observable<BaseLoading>!
+    public let loadingSubject = PublishSubject<BaseLoading>()
     // this should be required by all
-   init() {
+    public init() {
         self.errorsObservable = errorsSubject.asObservable()
         self.loadingObservable = loadingSubject.asObservable()
     }
     
-    func showSystemAlert(alert: String) {
+    public func showSystemAlert(alert: String) {
         alertMessage.value = alert
     }
     
-    func implementAlert(_ listener: @escaping (String) -> Void) {
+    public func implementAlert(_ listener: @escaping (String) -> Void) {
         alertMessage.bind(listener)
     }
 }

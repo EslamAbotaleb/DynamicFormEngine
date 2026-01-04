@@ -7,18 +7,18 @@
 //
 
 import Foundation
-import ObjectMapper
+internal import ObjectMapper
 
 public struct ModelMyTaskData : Codable {
     public let id : String?
     public let requestId : String?
-    public let employee : Employee?
+    let employee : Employee?
     public let serviceName : String?
     public let serviceImage : String?
     public let isCompleted : Bool?
-    public let status : Status?
+    let status : Status?
     public let daysRequested : Int?
-    public let requestPendingOn : RequestPendingOn?
+    let requestPendingOn : RequestPendingOn?
     public let requestDate : String?
     public let createdDate: String?
     public let modifiedDate: String?
@@ -42,7 +42,7 @@ public struct ModelMyTaskData : Codable {
     }
 }
 
-public struct Employee: Codable, Mappable {
+struct Employee: Codable, Mappable {
     public var id: String?
     public var personId: String?
     public var name: String?
@@ -101,7 +101,7 @@ public struct Employee: Codable, Mappable {
     }
 }
 
-public struct RequestPendingOn: Codable, Mappable {
+struct RequestPendingOn: Codable, Mappable {
     public var id: String?
     public var name: String?
     public var pendingOnCode: String?

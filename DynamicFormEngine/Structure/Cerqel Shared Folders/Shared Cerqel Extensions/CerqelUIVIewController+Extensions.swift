@@ -6,7 +6,7 @@
 //  Copyright © 2020 Youxel. All rights reserved.
 //
 import UIKit
-import JGProgressHUD
+internal import JGProgressHUD
 import MobileCoreServices
 import UniformTypeIdentifiers
 

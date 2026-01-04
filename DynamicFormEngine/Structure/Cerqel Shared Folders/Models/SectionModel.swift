@@ -7,25 +7,22 @@
 //
 
 import Foundation
-
-//struct SectionModel {
-//    var name: String
-//    var items: [SubCategoryModel]
-//    var collapsed: Bool
+//
+//public struct SectionModel {
+//    public var name: String
+//    public var items: [SubCategoryModel]
+//    public var collapsed: Bool
 //  
-//    
-//    init(name: String, items: [SubCategoryModel], collapsed: Bool = false) {
+//    public init(name: String, items: [SubCategoryModel], collapsed: Bool = false) {
 //        self.name = name
 //        self.items = items
 //        self.collapsed = collapsed
-//    
 //    }
 //    
-//    var collapseImage : String {
+//    public var collapseImage: String {
 //        return collapsed ? "arrow_down" : "arrow_up"
 //    }
 //}
-
 
 public struct CategoryModel {
     public var id: String

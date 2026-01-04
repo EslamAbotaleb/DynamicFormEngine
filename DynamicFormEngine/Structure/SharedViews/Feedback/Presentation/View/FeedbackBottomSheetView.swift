@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PanModal
+internal import PanModal
 
 class SurveyItem: BaseItem {
     var successCallBack: SuccessCallBack

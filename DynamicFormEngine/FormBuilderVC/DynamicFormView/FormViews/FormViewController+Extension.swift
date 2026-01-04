@@ -41,12 +41,12 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
     /// getting number of sections in table
     /// - Parameter tableView: current table view
     /// - Returns: number of sections
-    public func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return formBuilder.sectionObjects.count
     }
     
     // This function returns the number of rows in a given section of the table view
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Get the current section object from the formBuilder's sectionObjects array
         let currentSection = formBuilder.sectionObjects[section].item
         
@@ -65,7 +65,7 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
         }
     }
     // This function returns a view to be used as the header for a given section of the table view
-    public  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // Get the current section object from the formBuilder's sectionObjects array
         let currentSection = formBuilder.sectionObjects[section].item
         // Check if the current section type is .Section
@@ -89,14 +89,14 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     /// drawing header height
-    public  func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let currentSection = formBuilder.sectionObjects[section].item
         
         return (currentSection?.type == .Section && !(currentSection?.hidden ?? false) && !HelperFunctions.isHiddenSectionInForm(items: formBuilder.sectionObjects[section].items)) ? 72.0 : 0.0 // Adjust as needed
     }
     
     
-    public  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = indexPath.section
             let row = indexPath.row
 

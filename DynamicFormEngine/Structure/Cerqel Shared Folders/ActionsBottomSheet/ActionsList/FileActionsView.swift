@@ -7,7 +7,7 @@
 //
 
 import UIKit
-public import PanModal
+internal import PanModal
 
 public protocol PushFromPrsentedScreen {
     func push(fileId: String, actionId : Int)
@@ -38,7 +38,7 @@ public class FileActionItem: BaseItem {
     }
 }
 
-public class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
+class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
     
     public let fileActionCellIdintifier = String(describing: FileActionCell.self)
     
@@ -126,11 +126,11 @@ public class FileActionsView: BaseView<FileActionsViewModel, FileActionItem> {
 extension FileActionsView: UITableViewDataSource, UITableViewDelegate {
     
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.actions.value.count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let action = viewModel.actions.value[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: fileActionCellIdintifier) as! FileActionCell
         cell.configure(action,isVisible: nil,canDeleteImage: nil)
@@ -140,17 +140,17 @@ extension FileActionsView: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         return cell
     }
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let action : FileActions = viewModel.actions.value[indexPath.row]
         viewModel.push(fileId: item.file.id, actionId: action.id)
 
     }
     
-    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+   func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
     }
 
-    public func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
         let action : FileActions = viewModel.actions.value[indexPath.row]
         if action.id == 6 {
             return  viewModel.file.fileAcknowledgeStatus.isAcknowledge && !viewModel.file.fileAcknowledgeStatus.isAcknowledged ? true : false
@@ -162,7 +162,7 @@ extension FileActionsView: UITableViewDataSource, UITableViewDelegate {
         }
     }
     
-    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 51
     }
     

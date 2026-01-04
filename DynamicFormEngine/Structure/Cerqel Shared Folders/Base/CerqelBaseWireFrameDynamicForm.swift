@@ -7,14 +7,14 @@
 //
 
 import UIKit
-public import RxCocoa
-import RxRelay
+internal import RxCocoa
+internal import RxRelay
 internal import RxSwift
-import JGProgressHUD
+internal import JGProgressHUD
 internal import Kingfisher
-import SideMenu
-import Reachability
-import Toast
+internal import SideMenu
+internal import Reachability
+internal import Toast
 
 class CerqelBaseWireFrameDynamicForm<T: CerqelBaseViewModel>: BottomSheetVCCerqel {
     

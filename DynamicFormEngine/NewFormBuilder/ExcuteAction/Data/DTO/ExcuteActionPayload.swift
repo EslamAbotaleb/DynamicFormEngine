@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ObjectMapper
+internal import ObjectMapper
 
 struct ExcuteActionPayload : Codable,Mappable {
     var actionId : String?

@@ -7,13 +7,12 @@
 //
 
 import Foundation
-public import Promises
-
-public import Reachability
-import SwiftyJSON
+internal import Promises
+internal import Reachability
+internal import SwiftyJSON
 import CommonCrypto
 
-public protocol EndpointExecuter {
+protocol EndpointExecuter {
     func execute(_ endpoint: Endpoint) -> Promise<NetworkServiceResponse>
     func cancelUpload(_ fileVersionType: FileVersionType) -> Void
     func uploadMultipart(_ endpoint: Endpoint,progressCallBack: @escaping UploadProgrssCallBack) -> Promise<NetworkServiceResponse>
@@ -25,11 +24,11 @@ public protocol EndpointExecuter {
     func performRequest(_ request: URLRequest, completion: @escaping (BaseError?) -> Void)
 }
 
-public protocol ReachabilityProtocol {
+protocol ReachabilityProtocol {
     func connection() -> Reachability.Connection?
 }
 
-public class NetworkServiceImpl: Network {
+class NetworkServiceImpl: Network {
 
     public var endpointExecuter: EndpointExecuter = AlamofireService()
     public var reachability: ReachabilityProtocol = ReachabilityImpl()
@@ -253,8 +252,8 @@ public struct NetworkServiceResponse {
     public var headers: [AnyHashable: Any]?
 }
 
-public class ReachabilityImpl: ReachabilityProtocol {
-    public func connection() -> Reachability.Connection? {
+class ReachabilityImpl: ReachabilityProtocol {
+   func connection() -> Reachability.Connection? {
         return try? Reachability().connection
     }
 }

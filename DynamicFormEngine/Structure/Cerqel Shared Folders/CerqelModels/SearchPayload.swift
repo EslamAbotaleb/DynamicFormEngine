@@ -12,9 +12,9 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-import ObjectMapper
+internal import ObjectMapper
 
-public struct SearchPayload : Codable, Mappable {
+internal struct SearchPayload : Codable, Mappable {
     var keyword : String?
     var categories : [String]?
     var pagination : Pagination?
@@ -42,7 +42,7 @@ public struct SearchPayload : Codable, Mappable {
 
 }
 
-public struct Pagination :Codable , Mappable {
+internal struct Pagination :Codable , Mappable {
     var pageNumber : Int?
     var pageSize : Int?
 

@@ -7,13 +7,12 @@
 //
 
 import Foundation
-public import RxSwift
-public import RxAlamofire
+internal import RxSwift
+internal import RxAlamofire
 import UIKit
-public import Alamofire
+internal import Alamofire
 import CommonCrypto
-import JGProgressHUD
-
+internal import JGProgressHUD
 
 public struct cerqel_BasicNetworkServiceDynamicFormImpl: cerqel_NetworkServiceDynamicForm {
 
@@ -24,9 +23,8 @@ public struct cerqel_BasicNetworkServiceDynamicFormImpl: cerqel_NetworkServiceDy
 
     public init() {}
     
-    public func load<T>(_ resource: T) -> Observable<T> where T : cerqel_CodableResponseDynamicFormProtocol {
-        return
-        RxAlamofire
+    internal func load<T>(_ resource: T) -> Observable<T> where T : cerqel_CodableResponseDynamicFormProtocol {
+        return RxAlamofire
             .request(resource.action)
             .validate(statusCode: 200 ..< 401)
             .responseJSON()
@@ -52,7 +50,7 @@ public struct cerqel_BasicNetworkServiceDynamicFormImpl: cerqel_NetworkServiceDy
             .flatMap(resource.parse)
     }
     //
-    public func uploadImage<T>(_ resource: cerqel_CodableResponseObjectDynamicForm<T>,
+    internal func uploadImage<T>(_ resource: cerqel_CodableResponseObjectDynamicForm<T>,
                         image: UIImage?,
                         imageParam: String) -> Observable<cerqel_CodableResponseObjectDynamicForm<T>> where T: Decodable {
         
@@ -115,7 +113,7 @@ public struct cerqel_BasicNetworkServiceDynamicFormImpl: cerqel_NetworkServiceDy
         }
     }
 
-    public func load<T>(_ resource: cerqel_ArrayResource<T>) -> Observable<[T]> where T : Codable {
+    internal func load<T>(_ resource: cerqel_ArrayResource<T>) -> Observable<[T]> where T : Codable {
         return
         RxAlamofire
             .request(resource.action)

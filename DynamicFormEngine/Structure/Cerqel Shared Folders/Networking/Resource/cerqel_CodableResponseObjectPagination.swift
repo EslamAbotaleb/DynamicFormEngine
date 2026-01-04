@@ -7,8 +7,8 @@
 //
 
 import Foundation
-public import RxSwift
-public import Alamofire
+internal import RxSwift
+internal import Alamofire
 
 public class cerqel_CodableResponseObjectPagination<T: Decodable>: cerqel_CodableResponseObjectDynamicForm<T> {
     fileprivate(set) public var next:String?
@@ -30,7 +30,7 @@ public class cerqel_CodableResponseObjectPagination<T: Decodable>: cerqel_Codabl
         currentPage = try? values.decode(String.self, forKey: .currentPage)
     }
     
-    override public init(action: cerqel_APIActionDynamicForm, keyResult: String = "result") {
+    override internal init(action: cerqel_APIActionDynamicForm, keyResult: String = "result") {
         super.init(action: action, keyResult: keyResult)
     }
 }

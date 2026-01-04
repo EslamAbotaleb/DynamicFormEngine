@@ -7,12 +7,12 @@
 //
 
 import UIKit
-public import MOLH
+//public import MOLH
 //import PopupDialog
 import Network
-import Toast
-import JGProgressHUD
-public import Kingfisher
+internal import Toast
+internal import JGProgressHUD
+internal import Kingfisher
 import Photos
 import UIKit
 
@@ -39,7 +39,7 @@ public let globalHeaders = [
     "TimeZone": TimeZone.current.identifier,
 ]
 
-public let modifier = AnyModifier { request in
+internal let modifier = AnyModifier { request in
     var r = request
 
     let token = AuthManagerDynamicForm.shared.token

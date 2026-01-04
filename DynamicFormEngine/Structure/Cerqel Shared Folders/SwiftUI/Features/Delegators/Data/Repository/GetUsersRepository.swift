@@ -7,9 +7,9 @@
 //
 
 import Foundation
-public import Promises
+internal import Promises
 
-public class UsersRepoImp: UsersRepo {
+class UsersRepoImp: UsersRepo {
     private var network: Network
 
     public init(network: Network = NetworkServiceImpl()) {

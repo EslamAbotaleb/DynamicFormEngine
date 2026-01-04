@@ -8,10 +8,10 @@
 
 import UIKit
 import MobileCoreServices
-import DropDown
-internal import MOLH
+internal import DropDown
+//internal import MOLH
 
-public struct dataSoruceTableModel {
+struct dataSoruceTableModel {
     public var parentid: String?
     public var rowIndex: String?
     public var relatedItems: [Field]? = []
@@ -19,7 +19,7 @@ public struct dataSoruceTableModel {
     public var expanded: Bool? = false
     public var insideSection: Bool? = false
 }
-public struct sectionDataSourceModel {
+struct sectionDataSourceModel {
     public var id: String?
     public var order: String?
     public var relatedItems: [Field]? = []
@@ -33,7 +33,7 @@ public protocol HandlePayloadMethods {
     func handleActionPayload(actionId: String,payload: [[String:Any]])
 }
 
-public class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
+class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     // MARK: - IBOutlets
 //    @IBOutlet weak var showHideEmptyFieldsView: ShowHideEmptyFieldsView!
     @IBOutlet weak var bgTopView: UIView!
@@ -533,7 +533,7 @@ extension RequestDetailsView: UITableViewDelegate, UITableViewDataSource{
     /// Determines the number of sections in the table view.
     /// - Parameter tableView: The table view requesting the information.
     /// - Returns: The number of sections based on the selected tab ID.
-    public func numberOfSections(in tableView: UITableView) -> Int {
+   func numberOfSections(in tableView: UITableView) -> Int {
         if viewModel.selectedTabId.value == 1 {
             var detailsPageDataSourceArrayCount = formBuilder.detailsPageDataSourceArray.count
             return detailsPageDataSourceArrayCount + 3
@@ -542,7 +542,7 @@ extension RequestDetailsView: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 || section == 1 || section == 2 {
             return 1
         }
@@ -560,7 +560,7 @@ extension RequestDetailsView: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.section == 0 { //empInfo
             let cell = tableView.dequeueReusableCell(withIdentifier: EmpInfoTVC.cerqel_identifier, for: indexPath) as! EmpInfoTVC
@@ -757,7 +757,7 @@ extension RequestDetailsView: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-   public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section > 2 && viewModel.selectedTabId.value == 1 && formBuilder.detailsPageDataSourceArray.count > 0 && formBuilder.isPageMode {
             guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: ExpandedSectionHeader.cerqel_identifier) as? ExpandedSectionHeader else {return UIView()}
             let currentSection = formBuilder.detailsPageDataSourceArray[section - 3]
@@ -776,7 +776,7 @@ extension RequestDetailsView: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section > 2 && viewModel.selectedTabId.value == 1 {
             return formBuilder.isPageMode && formBuilder.pagesArray.count > 1 ? 72 : 0
         }else {
@@ -784,7 +784,7 @@ extension RequestDetailsView: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if isMyRequestFlag {
             if indexPath.section == 0 {
                 return 0
@@ -881,7 +881,7 @@ extension RequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDelegate {
     /// - Parameters:
     ///   - documentMenu: The `UIDocumentMenuViewController` instance.
     ///   - documentPicker: The `UIDocumentPickerViewController` instance to present.
-    public func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
+    func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
         // Present the document picker to the user.
         self.present(documentPicker, animated: true, completion: nil)
     }
@@ -891,7 +891,7 @@ extension RequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDelegate {
     /// - Parameters:
     ///   - controller: The `UIDocumentPickerViewController` instance.
     ///   - url: The URL of the picked document.
-    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+   func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
         var fileSize: Double = 0
         
         // Retrieve file attributes to calculate the file size.
@@ -918,7 +918,7 @@ extension RequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDelegate {
     ///
     /// - Parameters:
     ///   - controller: The `UIDocumentPickerViewController` instance.
-    public func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         // No additional action needed, but this method is required to handle cancellations.
         print("Document picker was cancelled.")
     }
@@ -933,7 +933,7 @@ extension RequestDetailsView: UIImagePickerControllerDelegate, UINavigationContr
     /// - Parameters:
     ///   - picker: The `UIImagePickerController` instance used for picking media.
     ///   - info: A dictionary containing the media info, such as the original image.
-    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
+   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         // Dismiss the picker before processing the selected media.
         self.dismiss(animated: true) {
             // Attempt to retrieve the selected image.
@@ -967,7 +967,7 @@ extension RequestDetailsView: UITextViewDelegate {
     /// Called when the text view begins editing.
     ///
     /// - Parameter textView: The text view that started editing.
-    public func textViewDidBeginEditing(_ textView: UITextView) {
+   func textViewDidBeginEditing(_ textView: UITextView) {
         // Clear placeholder text when the user starts typing.
         if textView.text == "Add discussion comment....".localized {
             textView.text = ""
@@ -978,7 +978,7 @@ extension RequestDetailsView: UITextViewDelegate {
     ///
     /// - Parameter textView: The text view requesting permission to begin editing.
     /// - Returns: `true` to allow editing to begin, otherwise `false`.
-    public func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         // Remove placeholder text and set appropriate text color when editing begins.
         if textView.text == "Add discussion comment....".localized {
             textView.text.removeAll()
@@ -991,7 +991,7 @@ extension RequestDetailsView: UITextViewDelegate {
     ///
     /// - Parameter textView: The text view requesting permission to end editing.
     /// - Returns: `true` to allow editing to end, otherwise `false`.
-    public func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         // Reset to placeholder text and color if the text view is empty when editing ends.
         if textView.text.isEmpty {
             textView.text = "Add discussion comment....".localized
@@ -1007,7 +1007,7 @@ extension RequestDetailsView: UITextViewDelegate {
     ///   - range: The range of the text to be replaced.
     ///   - text: The replacement text.
     /// - Returns: `true` if the replacement is allowed, otherwise `false`.
-    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         // Ensure the new text doesn't start with whitespace or a newline at the beginning of the text view.
         guard range.location == 0 else {
             return true
@@ -1027,7 +1027,7 @@ extension RequestDetailsView: UICollectionViewDataSource, UICollectionViewDelega
     ///   - collectionView: The collection view requesting this information.
     ///   - section: The index of the section in the collection view.
     /// - Returns: The number of items in the `arrayOfAttachment`.
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayOfAttachment.count
     }
 
@@ -1037,7 +1037,7 @@ extension RequestDetailsView: UICollectionViewDataSource, UICollectionViewDelega
     ///   - collectionView: The collection view requesting this information.
     ///   - indexPath: The index path specifying the location of the cell.
     /// - Returns: A configured `UICollectionViewCell` for the given index path.
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // Dequeue a reusable cell of type `ChatFooterAttachmentCVcell`.
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: ChatFooterAttachmentCVcell.cerqel_identifier,
@@ -1065,7 +1065,7 @@ extension RequestDetailsView: UICollectionViewDataSource, UICollectionViewDelega
     ///   - collectionViewLayout: The layout object of the collection view.
     ///   - indexPath: The index path of the item.
     /// - Returns: The size of the cell as a `CGSize`.
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width / 2.7 // Calculate the cell width.
         return CGSize(width: width, height: 36) // Fixed height of 36.
     }

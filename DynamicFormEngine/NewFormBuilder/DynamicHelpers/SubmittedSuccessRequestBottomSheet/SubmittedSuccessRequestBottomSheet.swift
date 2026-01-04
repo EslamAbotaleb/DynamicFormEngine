@@ -7,7 +7,7 @@
 //
 
 import UIKit
-public import RxCocoa
+internal import RxCocoa
 internal import RxSwift
 
 protocol Popup {

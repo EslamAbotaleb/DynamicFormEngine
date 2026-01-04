@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PanModal
+internal import PanModal
 
 class AddCommentItem: BaseItem {
     var didCommentSent:  ((String?)->())

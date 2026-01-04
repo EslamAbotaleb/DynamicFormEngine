@@ -7,9 +7,9 @@
 //
 
 import Foundation
-public import RxSwift
-public import Alamofire
-public import MOLH
+internal import RxSwift
+internal import Alamofire
+//public import MOLH
 
 public class cerqel_CodableResponseObjectDynamicForm<T: Decodable>: Decodable, cerqel_CodableResponseDynamicFormProtocol {
     fileprivate(set) public var success: Bool?
@@ -30,9 +30,9 @@ public class cerqel_CodableResponseObjectDynamicForm<T: Decodable>: Decodable, c
 
     
 //    fileprivate let objectType = T.self
-    public var action: cerqel_APIActionDynamicForm = cerqel_BasicActionDynamicForm.none
+    internal var action: cerqel_APIActionDynamicForm = cerqel_BasicActionDynamicForm.none
 
-    public init(action: cerqel_APIActionDynamicForm,keyResult:String = "result") {
+    internal init(action: cerqel_APIActionDynamicForm,keyResult:String = "result") {
         self.action = action
         self.keyResult = keyResult
         
@@ -69,7 +69,7 @@ public class cerqel_CodableResponseObjectDynamicForm<T: Decodable>: Decodable, c
         }
     }
 
-    public func parse<T: Decodable>(_ data: Data) -> Observable<T> {
+     func parse<T: Decodable>(_ data: Data) -> Observable<T> {
         return Observable.create { observer in
             
             do{

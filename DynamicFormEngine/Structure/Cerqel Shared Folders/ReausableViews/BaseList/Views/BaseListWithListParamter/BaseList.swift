@@ -43,10 +43,6 @@ public class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
     @IBOutlet weak var closeIcon: UIButton!
     @IBOutlet weak var tableView: UITableView!{
         didSet {
-//            self.tableView.registerCell(idintifier: RadioCell.cerqel_identifier)
-//            self.tableView.registerCell(idintifier: ActionBaseListTableViewCell.cerqel_identifier)
-//            self.tableView.registerCell(idintifier: CheckBoxCell.cerqel_identifier)
-//            self.tableView.registerCell(idintifier: ProfilePhoneTypesCell.cerqel_identifier)
             self.tableView.register(UINib(nibName: RadioCell.cerqel_identifier, bundle: Bundle(for: type(of: self))),
                                     forCellReuseIdentifier: RadioCell.cerqel_identifier)
 
@@ -186,7 +182,7 @@ extension BaseList: UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+   public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 51
     }
 }

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MultiSlider
+internal import MultiSlider
 
 class SliderTableViewCell: UITableViewCell {
 

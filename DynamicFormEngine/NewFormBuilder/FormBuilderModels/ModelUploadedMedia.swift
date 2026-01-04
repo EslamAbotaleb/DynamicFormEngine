@@ -8,9 +8,9 @@
 
 import Foundation
 import UIKit
-import ObjectMapper
+internal import ObjectMapper
 
-public struct ModelUploadedMedia : Mappable, Codable, FormValue {
+struct ModelUploadedMedia : Mappable, Codable, FormValue {
 
     var downloadUrl: String?
     var previewUrl: String?

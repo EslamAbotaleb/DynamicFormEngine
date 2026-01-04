@@ -6,8 +6,7 @@
 //
 
 import UIKit
-import EasyTipView
-
+internal import EasyTipView
 
 class AttachmentNoteView: UIView {
 

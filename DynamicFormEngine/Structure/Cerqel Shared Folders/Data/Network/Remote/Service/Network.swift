@@ -8,12 +8,12 @@
 
 import Foundation
 //
-public import Promises
+internal import Promises
 
-public typealias UploadProgrssCallBack = ((Double,FileVersionType)->())
-public typealias ProgressCallback = (Double) -> Void
+typealias UploadProgrssCallBack = ((Double,FileVersionType)->())
+typealias ProgressCallback = (Double) -> Void
 
-public protocol Network {
+protocol Network {
     func call(endpoint: Endpoint) -> Promise<Data>
     func callModel<Model: Codable>(_ model: Model.Type, endpoint: Endpoint) -> Promise<Model>
     func uploadModel<Model: Codable>(_ model: Model.Type, endpoint: Endpoint,progressCallBack: @escaping UploadProgrssCallBack) -> Promise<Model>

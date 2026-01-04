@@ -7,9 +7,9 @@
 //
 
 import Foundation
-public import Alamofire
+internal import Alamofire
 
-public enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
+enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
     case fetchService(Id: String)
     case fetchSubServicesByParent(parentId: String)
     case submitService(Id: String, payload: [String: Any])
@@ -61,7 +61,7 @@ public enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
         }
     }
     
-    public var method: HTTPMethod {
+    internal var method: HTTPMethod {
         switch self {
         case .searchList:
             return .post
@@ -148,7 +148,7 @@ public enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
         }
     }
     
-    public var encoding: ParameterEncoding {
+    internal var encoding: ParameterEncoding {
         switch method {
         case .post, .put, .delete, .patch :
             return JSONEncoding.default

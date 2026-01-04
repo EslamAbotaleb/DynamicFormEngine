@@ -7,9 +7,9 @@
 //
 
 import Foundation
-public import Alamofire
+internal import Alamofire
 
-public enum Dynamic_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
+enum Dynamic_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
     public var basicAction: cerqel_BasicActionDynamicForm{return .none}
     
     case submitService(Id: String, payload: [String: Any])
@@ -158,7 +158,7 @@ public enum Dynamic_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
         }
     }
 
-    public var method: HTTPMethod {
+    internal var method: HTTPMethod {
         switch self {
    
         case .submitService, .addChatComment, .uploadFile, .executeAction, .updateRequest, .reopenRequest, .withdrawRequest,.submitEditRequestService:
@@ -261,7 +261,7 @@ public enum Dynamic_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
         }
     }
     
-    public var encoding: ParameterEncoding {
+    internal var encoding: ParameterEncoding {
         switch method {
         case .post, .put, .delete, .patch :
             return JSONEncoding.default

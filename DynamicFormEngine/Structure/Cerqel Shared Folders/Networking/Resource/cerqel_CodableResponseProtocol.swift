@@ -7,10 +7,10 @@
 //
 
 import Foundation
-public import RxSwift
-public import Alamofire
+internal import RxSwift
+internal import Alamofire
 
-public protocol cerqel_CodableResponseDynamicFormProtocol: Decodable {
+protocol cerqel_CodableResponseDynamicFormProtocol: Decodable {
     func parse<T: Decodable>(_ data: Data) -> Observable<T>
     var action: cerqel_APIActionDynamicForm { get }
 }

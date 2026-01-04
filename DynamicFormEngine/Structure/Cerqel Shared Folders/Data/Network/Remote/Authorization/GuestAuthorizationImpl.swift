@@ -8,10 +8,9 @@
 
 
 import Foundation
-public import Promises
+internal import Promises
 
-
-public class NoneAuthorizationHandler: AuthorizationHandler {
+class NoneAuthorizationHandler: AuthorizationHandler {
     public func setClientManually(clientType: String) {}
     public func setUidManually(uid: String) {}
     public func setAuthManually(authToken: String) {}

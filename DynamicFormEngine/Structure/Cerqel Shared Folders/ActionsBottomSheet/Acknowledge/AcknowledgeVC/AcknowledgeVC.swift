@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
+class AcknowledgeVC: BaseView<AcknowledgeViewModel, FileItem> {
     
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var textLabel: UILabel!

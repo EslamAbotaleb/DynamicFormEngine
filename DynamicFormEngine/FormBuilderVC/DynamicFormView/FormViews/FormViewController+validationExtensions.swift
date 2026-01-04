@@ -1,12 +1,12 @@
 import UIKit
-public import EzPopup
-import Expression
+internal import EzPopup
+internal import Expression
 //import SwiftMessages
-public import RxCocoa
+internal import RxCocoa
 internal import RxSwift
 import SwiftUI
-import JGProgressHUD
-import EasyTipView
+internal import JGProgressHUD
+internal import EasyTipView
 
 extension FormViewController {
     

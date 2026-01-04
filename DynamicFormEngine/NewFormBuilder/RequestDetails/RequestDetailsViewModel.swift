@@ -7,11 +7,11 @@
 //
 
 import Foundation
-public import RxCocoa
-public import RxSwift
+internal import RxCocoa
+internal import RxSwift
 import Photos
 import SwiftUI
-import DropDown
+internal import DropDown
 
 public enum RequestDetailsSections {
     case oldActions_Dicussion
@@ -26,44 +26,44 @@ extension Notification.Name {
     static public let didPopAllServices = Notification.Name("didPopAllServices")
 }
 
-public class RequestDetailsViewModel: BaseVM {
+class RequestDetailsViewModel: BaseVM {
     
     // MARK: - Variables
     public var router: CerqelRouterManager
     private let service: cerqel_NetworkServiceDynamicForm
     private let disposeBag = DisposeBag()
-    public var details: BehaviorRelay<ModelRequestDetailsData?> = BehaviorRelay(value: nil)
-    public var backwardDetails: BehaviorRelay<BackwardModelRequestDetailsData?> = BehaviorRelay(value: nil)
-    public var formSummaryList: BehaviorRelay<[Field]?> = BehaviorRelay(value: nil)
+    internal var details: BehaviorRelay<ModelRequestDetailsData?> = BehaviorRelay(value: nil)
+    internal var backwardDetails: BehaviorRelay<BackwardModelRequestDetailsData?> = BehaviorRelay(value: nil)
+    internal var formSummaryList: BehaviorRelay<[Field]?> = BehaviorRelay(value: nil)
     public var reqIdForApprover = ""
-    public var messageSentSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
-    public var actionTakenSuccessfully: BehaviorRelay<(Bool,String)> = BehaviorRelay(value: (false,"Submitted".localized))
-    public var requestReopenedSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
-    public var requestWithdrawedSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
-    public var chatList: BehaviorRelay<[ModelDicussionMessageData]?> = BehaviorRelay(value: nil)
+    internal var messageSentSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
+    internal var actionTakenSuccessfully: BehaviorRelay<(Bool,String)> = BehaviorRelay(value: (false,"Submitted".localized))
+    internal var requestReopenedSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
+    internal var requestWithdrawedSuccessfully: BehaviorRelay<Bool?> = BehaviorRelay(value: nil)
+    internal var chatList: BehaviorRelay<[ModelDicussionMessageData]?> = BehaviorRelay(value: nil)
     public var view: UIViewController
     public var arrOfSections: [RequestDetailsSections] = [.empInfo, .reqInfo, .requestTabs]
     public var arrOfSectionsForTab1: [RequestDetailsSections] = [.empInfo, .reqInfo, .requestTabs]
     public var arrOfSectionsForSummary: [RequestDetailsSections] = []
-    public let dropDown = DropDown()
+    let dropDown = DropDown()
     
     /// 1 -> Details, 2-> Actions, 3-> Discussions
-    public var selectedTabId: BehaviorRelay<Int> = BehaviorRelay(value: 1)
+    internal var selectedTabId: BehaviorRelay<Int> = BehaviorRelay(value: 1)
     
-    public var arrayOfChatAttachments: BehaviorRelay<[ModelUploadedMedia]> = BehaviorRelay(value: [])
-    public var arrayOfAttachmentsinAction: BehaviorRelay<[ModelUploadedMedia]> = BehaviorRelay(value: [])
+    internal var arrayOfChatAttachments: BehaviorRelay<[ModelUploadedMedia]> = BehaviorRelay(value: [])
+    internal var arrayOfAttachmentsinAction: BehaviorRelay<[ModelUploadedMedia]> = BehaviorRelay(value: [])
     public var requestId: String
     public var commentSubmeted: DynamicObjects<String> = DynamicObjects("")
     public var userMail: DynamicObjects<String> = DynamicObjects("")
     public var actionName: DynamicObjects<[ListModel]> = DynamicObjects([ListModel()])
     public var selecteActionName: DynamicObjects<ListModel> = DynamicObjects(ListModel())
-    public var performCommentAction: ((Action, String) -> ())?
+    var performCommentAction: ((Action, String) -> ())?
     public var selectedUser: DynamicObjects<UserEntity> = DynamicObjects(UserEntity())
     
     public var isWithdrawal: DynamicObjects<Bool?> = DynamicObjects(nil)
-    public var isEditable: BehaviorRelay<Bool?> = BehaviorRelay(value: false)
+    internal var isEditable: BehaviorRelay<Bool?> = BehaviorRelay(value: false)
     //Bottom Action Buttons and Message Status (IsCanEdit,Alert Message,IsButtonsDimmed)
-    public var isEditableDimmedActions: BehaviorRelay<(Bool?,String?,Bool?)> = BehaviorRelay(value: (false,"",false))
+    internal var isEditableDimmedActions: BehaviorRelay<(Bool?,String?,Bool?)> = BehaviorRelay(value: (false,"",false))
     public var editRequestTitle: DynamicObjects<[ListModel]> = DynamicObjects([ListModel()])
     public var selectedRequestAction: DynamicObjects<ListModel> = DynamicObjects(ListModel())
     public var requestWithDrawId: DynamicObjects<String?> = DynamicObjects("")
@@ -73,7 +73,7 @@ public class RequestDetailsViewModel: BaseVM {
     public var formBuilder = FormBuilder.shared
     public  var rowIndices: [Int] = []
 
-    public init(_ service: cerqel_NetworkServiceDynamicForm, requestId: String, view: UIViewController, router: CerqelRouterManager) {
+    internal init(_ service: cerqel_NetworkServiceDynamicForm, requestId: String, view: UIViewController, router: CerqelRouterManager) {
         self.service = service
         self.requestId = requestId
         self.view = view

@@ -7,31 +7,31 @@
 //
 
 import Foundation
-public import RxCocoa
-public import RxSwift
-import Expression
+internal import RxCocoa
+internal import RxSwift
+internal import Expression
 import UIKit
 
-public protocol NestedFormDelegate {
+protocol NestedFormDelegate {
     func passDataToParentForm(parentControlIndex: Int?, controlData: [ModelControl]?, editNestedRowIndex: Int?)
 }
 
-public class FormBuilderViewModel: BaseViewModel {
+class FormBuilderViewModel: BaseViewModel {
     
     private let service: cerqel_NetworkServiceDynamicForm
     private let disposeBag = DisposeBag()
 
     
-    public var doReload: BehaviorRelay<[IndexPath]?> = BehaviorRelay(value: nil)
+    internal var doReload: BehaviorRelay<[IndexPath]?> = BehaviorRelay(value: nil)
     public var arrayOfControls: [ModelControl] = []
     public var arrayOfTypes: [ControlType] = []
     public var arrayOfReloadControlStatus: [Bool] = []
     
-    public var notValidList: BehaviorRelay<[Int]?> = BehaviorRelay(value: nil)
-    public var inValidCon: BehaviorRelay<Validations?> = BehaviorRelay(value: nil)
-    public var formData: BehaviorRelay<ModelForm?> = BehaviorRelay(value: nil)
-    public var subservicesResponse: BehaviorRelay<ModelSubServiceData?> = BehaviorRelay(value: nil)
-    public var serviceSubmittedResponse: BehaviorRelay<String?> = BehaviorRelay(value: nil)
+    internal var notValidList: BehaviorRelay<[Int]?> = BehaviorRelay(value: nil)
+    internal var inValidCon: BehaviorRelay<Validations?> = BehaviorRelay(value: nil)
+    internal var formData: BehaviorRelay<ModelForm?> = BehaviorRelay(value: nil)
+    internal var subservicesResponse: BehaviorRelay<ModelSubServiceData?> = BehaviorRelay(value: nil)
+    internal var serviceSubmittedResponse: BehaviorRelay<String?> = BehaviorRelay(value: nil)
 
     public var selectedMediaUploaderIdx: Int?
     public var categoryTitle: String?
@@ -51,7 +51,7 @@ public class FormBuilderViewModel: BaseViewModel {
     public var editNestedRowIndex: Int? = nil
 
  
-    public init(_ service: cerqel_NetworkServiceDynamicForm) {
+    internal init(_ service: cerqel_NetworkServiceDynamicForm) {
         self.service = service
         super.init()
     }

@@ -6,9 +6,9 @@
 //
 
 import Foundation
-public import RxCocoa
+internal import RxCocoa
 internal import RxSwift
-import Lottie
+internal import Lottie
 
 class FormViewModel: BaseViewModel {
     
@@ -214,7 +214,7 @@ public struct FormViewModelItemStruct {
 }
 
 
-public class FormViewModelItem:  ObservableObject, Identifiable {
+class FormViewModelItem:  ObservableObject, Identifiable {
     public var id: String {fieldId}
     public var rowIndex: String?
     public var isSectionItem: Bool? = false
@@ -306,7 +306,7 @@ public class FormViewModelItem:  ObservableObject, Identifiable {
     }
 }
 
-public class FormViewModelInteractiveItem: FormViewModelItem {
+class FormViewModelInteractiveItem: FormViewModelItem {
     public var required = false
     public var placeHolder: String! = ""
     public var note: String?
@@ -345,7 +345,7 @@ public class FormViewModelInteractiveItem: FormViewModelItem {
     }
 }
 
-public class FormViewModelPageItem: FormViewModelItem {
+class FormViewModelPageItem: FormViewModelItem {
     var backText: String?
     var nextText: String?
     var submitText: String?
@@ -369,13 +369,13 @@ public class FormViewModelPageItem: FormViewModelItem {
     }
 }
 
-public class FormViewModelSectionItem: FormViewModelItem {
+class FormViewModelSectionItem: FormViewModelItem {
     override init(field: Field?) {
         super.init(field: field)
     }
 }
 
-public class FormViewModelTextBaseItem: FormViewModelInteractiveItem {
+class FormViewModelTextBaseItem: FormViewModelInteractiveItem {
     public var allowSpellCheck: Bool?
     public var maximumLength: Int?
     public var minimumLength: Int?
@@ -401,7 +401,7 @@ public class FormViewModelTextBaseItem: FormViewModelInteractiveItem {
     }
 }
 
-public class FormViewModelNumberBaseItem: FormViewModelInteractiveItem {
+class FormViewModelNumberBaseItem: FormViewModelInteractiveItem {
     
     public var allowSpellCheck: Bool?
     public var maximumLength: Int?
@@ -435,7 +435,7 @@ public class FormViewModelNumberBaseItem: FormViewModelInteractiveItem {
     }
 }
 
-public class FormViewModelTextBoxItem: FormViewModelTextBaseItem, NSCopying {
+class FormViewModelTextBoxItem: FormViewModelTextBaseItem, NSCopying {
     public var regex: String?
     public var prefix: PrefixViewModel?
     public var suffix: PrefixViewModel?
@@ -486,7 +486,7 @@ public class FormViewModelTextBoxItem: FormViewModelTextBaseItem, NSCopying {
     }
 }
 
-public class FormViewModelTextAreaItem: FormViewModelTextBaseItem, NSCopying {
+class FormViewModelTextAreaItem: FormViewModelTextBaseItem, NSCopying {
     public var fullScreen: Bool?
     public var autoExpand: Bool?
     public var editorType: EditorType!
@@ -533,7 +533,7 @@ public class FormViewModelTextAreaItem: FormViewModelTextBaseItem, NSCopying {
     }
 }
 
-public class FormViewModelNumericItem: FormViewModelNumberBaseItem, NSCopying {
+class FormViewModelNumericItem: FormViewModelNumberBaseItem, NSCopying {
     public var minValue: Double?
     public var maxValue: Double?
     public var decimal: Int!
@@ -602,7 +602,7 @@ public class FormViewModelNumericItem: FormViewModelNumberBaseItem, NSCopying {
     }
 }
 
-public class FormViewModelFileUploadItem: FormViewModelInteractiveItem, NSCopying {
+class FormViewModelFileUploadItem: FormViewModelInteractiveItem, NSCopying {
     public var defaultAnswer: DefaultFileUploadAnswer?
     public var maxAttachmentsSize: Int?
     public var maxAttachmentsNumber:Int?
@@ -679,7 +679,7 @@ public class FormViewModelFileUploadItem: FormViewModelInteractiveItem, NSCopyin
     }
 
 
-public class FormViewModelSwitchItem: FormViewModelInteractiveItem, NSCopying {
+class FormViewModelSwitchItem: FormViewModelInteractiveItem, NSCopying {
     public var defaultAnswer: SwitchAnswer?
     
     override init(field: Field?) {
@@ -715,7 +715,7 @@ public class FormViewModelSwitchItem: FormViewModelInteractiveItem, NSCopying {
     
 }
 
-public class FormViewModelParagraphItem: FormViewModelInteractiveItem, NSCopying {
+class FormViewModelParagraphItem: FormViewModelInteractiveItem, NSCopying {
     
     override init(field: Field?) {
         super.init(field: field)
@@ -737,7 +737,7 @@ public class FormViewModelParagraphItem: FormViewModelInteractiveItem, NSCopying
     }
 }
 
-public class FormViewModelDateItem: FormViewModelInteractiveItem, NSCopying {
+class FormViewModelDateItem: FormViewModelInteractiveItem, NSCopying {
     public var dateTimeType: DateTimeType?
     public var disabledDates: [String]?
     public var disabledDays: [String]?
@@ -794,7 +794,7 @@ public class FormViewModelDateItem: FormViewModelInteractiveItem, NSCopying {
     }
 }
 
-public class FormViewModelSubmitItem: FormViewModelItem {
+class FormViewModelSubmitItem: FormViewModelItem {
     override public init(field: Field?) {
         super.init(field: nil)
         
@@ -803,7 +803,7 @@ public class FormViewModelSubmitItem: FormViewModelItem {
     }
 }
 
-public class FormViewModelMapItem: FormViewModelItem {
+class FormViewModelMapItem: FormViewModelItem {
     public var showPostalCode: Bool?
     public var zoom: Int?
     public var lat: Double?
@@ -825,7 +825,7 @@ public class FormViewModelMapItem: FormViewModelItem {
     }
 }
 
-public class FormViewModelLocationItem: FormViewModelInteractiveItem {
+class FormViewModelLocationItem: FormViewModelInteractiveItem {
     public var allShown: Bool!
     
     override init(field: Field?) {
@@ -849,7 +849,7 @@ public class FormViewModelLocationItem: FormViewModelInteractiveItem {
     }
 }
 
-public class FormViewModelSliderItem: FormViewModelInteractiveItem {
+class FormViewModelSliderItem: FormViewModelInteractiveItem {
     public var start: Int?
     public var end: Int?
     public var step: Int?
@@ -892,7 +892,7 @@ public class FormViewModelSliderItem: FormViewModelInteractiveItem {
     }
 }
 
-public class FormViewModelNPSItem: FormViewModelNumberBaseItem {
+class FormViewModelNPSItem: FormViewModelNumberBaseItem {
     public var defaultAnswer: BaseAnswerText?
     
     override init(field: Field?) {
@@ -904,7 +904,7 @@ public class FormViewModelNPSItem: FormViewModelNumberBaseItem {
     }
 }
 
-public class FormViewModelRateItem: FormViewModelNumberBaseItem {
+class FormViewModelRateItem: FormViewModelNumberBaseItem {
     public var rateType: RateType?
     public var scale: Int?
     public var rateColor: String?
@@ -922,7 +922,7 @@ public class FormViewModelRateItem: FormViewModelNumberBaseItem {
     }
 }
 
-public class FormViewModelFaceRateItem: FormViewModelNumberBaseItem {
+class FormViewModelFaceRateItem: FormViewModelNumberBaseItem {
     public var defaultAnswer: BaseAnswerText?
     
     override init(field: Field?) {
@@ -934,7 +934,7 @@ public class FormViewModelFaceRateItem: FormViewModelNumberBaseItem {
     }
 }
 
-public class FormViewModelMCQBaseItem: FormViewModelInteractiveItem {
+class FormViewModelMCQBaseItem: FormViewModelInteractiveItem {
     public var options: [MCQOption]?
     public var defaultAnswer: BaseAnswerMCQ?
     public var newDefAnswer: BaseAnswerMCQGUID?
@@ -1016,7 +1016,7 @@ public class FormViewModelMCQBaseItem: FormViewModelInteractiveItem {
     }
 }
 
-public class FormViewModelCheckboxItem: FormViewModelMCQBaseItem, NSCopying {
+class FormViewModelCheckboxItem: FormViewModelMCQBaseItem, NSCopying {
     public var representation: CheckBoxRepresentation! = .CheckBox
     public var minNumberOfSelectedOptions: Int?
     public var maxNumberOfSelectedOptions: Int?
@@ -1042,7 +1042,7 @@ public class FormViewModelCheckboxItem: FormViewModelMCQBaseItem, NSCopying {
     }
 }
 
-public class FormViewModelRadioItem: FormViewModelMCQBaseItem, NSCopying {
+class FormViewModelRadioItem: FormViewModelMCQBaseItem, NSCopying {
     public var representation: CheckBoxRepresentation! = .Radio
     public var minNumberOfSelectedOptions: Int?
     public var maxNumberOfSelectedOptions: Int?
@@ -1067,7 +1067,7 @@ public class FormViewModelRadioItem: FormViewModelMCQBaseItem, NSCopying {
     }
 }
 
-public class FormViewModelDropdownItem: FormViewModelMCQBaseItem, NSCopying {
+class FormViewModelDropdownItem: FormViewModelMCQBaseItem, NSCopying {
     public var multiSelect: Bool = false
     public var selectAllBox: Bool = false
     public var minNumberOfSelectedOptions: Int?
@@ -1096,7 +1096,7 @@ public class FormViewModelDropdownItem: FormViewModelMCQBaseItem, NSCopying {
     }
 }
 
-public class FormViewModelTableItem: FormViewModelInteractiveItem {
+class FormViewModelTableItem: FormViewModelInteractiveItem {
     public var minRows: Int?
     public var maxRows: Int?
     public var showTotals: Bool?
@@ -1128,7 +1128,7 @@ public class FormViewModelTableItem: FormViewModelInteractiveItem {
     }
 }
 
-public struct SectionObject: Equatable{
+struct SectionObject: Equatable{
     public static func == (lhs: SectionObject, rhs: SectionObject) -> Bool {
         return true
     }

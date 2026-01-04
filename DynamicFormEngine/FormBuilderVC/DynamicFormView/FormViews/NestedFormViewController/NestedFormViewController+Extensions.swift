@@ -7,9 +7,9 @@
 //
 
 import UIKit
-public import EzPopup
-import Expression
-public import RxCocoa
+internal import EzPopup
+internal import Expression
+internal import RxCocoa
 internal import RxSwift
 import SwiftUI
 

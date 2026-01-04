@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum CerqelAppStoryboard : String {
+public enum CerqelAppStoryboard : String {
     
     case Main = "Main"
     case Auth = "AuthStoryboard"
@@ -16,11 +16,11 @@ enum CerqelAppStoryboard : String {
     case form = "FormSB"
     case xibView
 
-    var instance : UIStoryboard {
+    public var instance : UIStoryboard {
         return UIStoryboard(name: self.rawValue, bundle: Bundle.main)
     }
     
-    func viewController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file) -> T {
+    public func viewController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file) -> T {
         
         if case .xibView = self{
             let scene = T()
@@ -36,7 +36,7 @@ enum CerqelAppStoryboard : String {
         return scene
     }
     
-    func navigationController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file, configurationHandler: ((T) -> Void)) -> UINavigationController {
+    public func navigationController<T : UIViewController>(viewControllerClass : T.Type, function : String = #function, line : Int = #line, file : String = #file, configurationHandler: ((T) -> Void)) -> UINavigationController {
         
         let storyboardID = (viewControllerClass as UIViewController.Type).cerqel_storyboardID
         guard let scene = instance.instantiateViewController(withIdentifier: storyboardID) as? T else {
@@ -49,7 +49,7 @@ enum CerqelAppStoryboard : String {
     }
 
     
-    func initialViewController() -> UIViewController? {
+    public func initialViewController() -> UIViewController? {
         
         return instance.instantiateInitialViewController()
     }

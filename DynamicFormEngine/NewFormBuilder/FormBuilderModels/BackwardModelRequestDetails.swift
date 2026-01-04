@@ -197,7 +197,7 @@ struct BackwardFileUploadDefaultAnswerValue: Codable, FormValue {
         }
 }
 
-public struct BackwardViewForm: Codable, Mappable {
+struct BackwardViewForm: Codable, Mappable {
     public var weight: BackwardWeight?
     public var rules: BackwardRules?
     public var id: String?
@@ -321,7 +321,7 @@ extension Array where Element == BackwardViewForm {
 //    }
 }
 
-public struct BackwardRules: Codable, Mappable {
+struct BackwardRules: Codable, Mappable {
     public var effectIn: [String]?
     public var dependOn: [String]?
     
@@ -362,9 +362,9 @@ extension BackwardRules {
     }
 }
 
-import ObjectMapper
+internal import ObjectMapper
 
-public struct BackwardWeight: Codable, Mappable {
+struct BackwardWeight: Codable, Mappable {
     public var value: Int?
     public var criteria: String?
     
@@ -403,7 +403,7 @@ extension BackwardWeight {
     }
 }
 
-public struct BackwardProperties: Codable, Mappable {
+struct BackwardProperties: Codable, Mappable {
     public var disabledMonths: String?
     public var placeholder: String?
     public var style: Style?
@@ -682,7 +682,7 @@ extension BackwardProperties {
 //}
 
 
-public struct BackwardTaskSubmittedRowDataModel: Codable {
+struct BackwardTaskSubmittedRowDataModel: Codable {
     public let id: String?
     public let name: String?
     public let rowIndex: String?
@@ -697,7 +697,7 @@ public struct BackwardTaskSubmittedRowDataModel: Codable {
     }
 }
 
-public struct BackwardDefaultAnswer: Codable, Mappable {
+struct BackwardDefaultAnswer: Codable, Mappable {
     
     public var id: String?
     public var name: String?
@@ -751,7 +751,7 @@ extension BackwardDefaultAnswer {
 }
 
 
-public class BackwardAttachmentForDefault: Mappable {
+class BackwardAttachmentForDefault: Mappable {
     public var fileId: String?
     public var url: String?
     public var downloadUrl: String?

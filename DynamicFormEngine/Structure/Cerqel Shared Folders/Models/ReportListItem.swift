@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct ReportListItem {
+public struct ReportListItem {
 //    var isSelected : Bool
     var title : String
     var id : Int

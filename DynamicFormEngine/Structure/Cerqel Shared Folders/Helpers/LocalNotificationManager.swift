@@ -21,7 +21,6 @@ public protocol LocalNotificationProtocol {
 }
 
 
-
 public class LocalNotificationManager : LocalNotificationProtocol {
     
     public var scheduledNotificationIdentifiers: [String] = []

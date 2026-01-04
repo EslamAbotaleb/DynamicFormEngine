@@ -8,10 +8,10 @@
 
 import UIKit
 import MobileCoreServices
-import DropDown
-internal import MOLH
+internal import DropDown
+//internal import MOLH
 
-public struct BackwardDataSoruceTableModel {
+struct BackwardDataSoruceTableModel {
     public var parentid: String?
     public var rowIndex: String?
     public var relatedItems: [BackwardViewForm]?
@@ -24,7 +24,7 @@ public struct BackwardDataSoruceTableModel {
 //    func handleActionPayload(actionId: String,payload: [[String:Any]])
 //}
 
-public class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
+class BackwardRequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     // MARK: - IBOutlets
     @IBOutlet weak var bgTopView: UIView!
     @IBOutlet weak var bgBottomView: UIView!
@@ -310,11 +310,11 @@ extension BackwardRequestDetailsView: Popup {
 }
 extension BackwardRequestDetailsView: UITableViewDelegate, UITableViewDataSource{
     
-    public func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel.arrOfSections.count
     }
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch viewModel.arrOfSections[section] {
         case .oldActions_Dicussion:
@@ -350,7 +350,7 @@ extension BackwardRequestDetailsView: UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch viewModel.arrOfSections[indexPath.section] {
         case .empInfo:
             let cell = tableView.dequeueReusableCell(withIdentifier: EmpInfoTVC.cerqel_identifier, for: indexPath) as! EmpInfoTVC
@@ -637,7 +637,7 @@ extension BackwardRequestDetailsView: UITableViewDelegate, UITableViewDataSource
     
     
     
-    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+   func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         switch viewModel.arrOfSections[section] {
         case .oldActions_Dicussion:
             return 60
@@ -649,7 +649,7 @@ extension BackwardRequestDetailsView: UITableViewDelegate, UITableViewDataSource
         }
     }
     
-    public  func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+   func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch viewModel.arrOfSections[section] {
             
         case .oldActions_Dicussion:
@@ -731,12 +731,12 @@ extension BackwardRequestDetailsView {
 }
 
 extension BackwardRequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDelegate{
-    public func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
+    func documentMenu(_ documentMenu: UIDocumentMenuViewController, didPickDocumentPicker documentPicker: UIDocumentPickerViewController) {
         self.present(documentPicker, animated: true, completion: nil)
         
     }
     
-    public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
         var fileSize : Double = 0
         do {
             let attr = try FileManager.default.attributesOfItem(atPath: url.path)
@@ -755,11 +755,11 @@ extension BackwardRequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDe
     }
     
     //    Method to handle cancel action.
-    public  func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
+    func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         
     }
     
-    public  func showWithdrawAller() {
+    func showWithdrawAller() {
         let alertVC = UIAlertController(title: "Withdraw Request".localized, message: ("Are you sure you want to withdraw the request?".localized), preferredStyle: .alert)
         let ok = UIAlertAction(title: " Withdraw Request ".localized, style: .destructive, handler: { (alertAction) in
             self.viewModel.doWithdrawAction(requestId: self.viewModel.backwardDetails.value?.requestOrder ?? "")
@@ -774,7 +774,7 @@ extension BackwardRequestDetailsView: UIDocumentMenuDelegate, UIDocumentPickerDe
 }
 
 extension BackwardRequestDetailsView: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    public  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+   func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         self.dismiss(animated: true) {
             if let photo = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
                 print("WE HAVE IMAGE !!!! 🚀")
@@ -795,7 +795,7 @@ extension BackwardRequestDetailsView: UIImagePickerControllerDelegate, UINavigat
 }
 
 extension BackwardRequestDetailsView: UITextViewDelegate {
-    public func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         if textView.text == "Add discussion comment....".localized{
             textView.text.removeAll()
             textView.textColor = .DarkBlack
@@ -803,7 +803,7 @@ extension BackwardRequestDetailsView: UITextViewDelegate {
         return true
     }
     
-    public func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
+    func textViewShouldEndEditing(_ textView: UITextView) -> Bool {
         if textView.text.count == 0{
             textView.text = "Add discussion comment....".localized
             textView.textColor = .slate_grey
@@ -811,7 +811,7 @@ extension BackwardRequestDetailsView: UITextViewDelegate {
         return true
     }
     
-    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         guard range.location == 0 else {
             return true
         }
@@ -824,11 +824,11 @@ extension BackwardRequestDetailsView: UITextViewDelegate {
 
 
 extension BackwardRequestDetailsView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
-    public  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrayOfAttachment.count
     }
     
-    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatFooterAttachmentCVcell.cerqel_identifier, for: indexPath) as! ChatFooterAttachmentCVcell
         cell.configure(arrayOfAttachment[indexPath.row])
         cell.removeBtnTapped = {
@@ -837,7 +837,7 @@ extension BackwardRequestDetailsView: UICollectionViewDataSource, UICollectionVi
         return cell
     }
     
-    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.bounds.width / 2.7
         return CGSize(width: width, height: 36)
     }

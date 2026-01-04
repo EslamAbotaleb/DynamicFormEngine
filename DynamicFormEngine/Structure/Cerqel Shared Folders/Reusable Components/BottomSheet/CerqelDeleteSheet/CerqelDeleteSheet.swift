@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import PanModal
+internal import PanModal
 
-public typealias DeleteCallBack =  (()->())
+typealias DeleteCallBack =  (()->())
 
-public class DeleteItem: BaseItem {
+class DeleteItem: BaseItem {
     public var deleteCallBack: DeleteCallBack
     public var deleteTitle:String
     public var deleteMessage:String?
@@ -31,7 +31,7 @@ public class DeleteItem: BaseItem {
     }
 }
 
-public class CerqelDeleteSheet: BaseView<FileActionsViewModel, DeleteItem> {
+class CerqelDeleteSheet: BaseView<FileActionsViewModel, DeleteItem> {
     @IBOutlet weak var sheetView: UIStackView!
     
     @IBOutlet weak var deleteIcon: UIImageView!

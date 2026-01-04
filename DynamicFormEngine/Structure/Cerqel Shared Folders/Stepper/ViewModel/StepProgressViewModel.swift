@@ -9,7 +9,7 @@
 import Foundation
 import Combine
 
-public class StepProgressViewModel: ObservableObject {
+class StepProgressViewModel: ObservableObject {
     @Published var totalPages: [FormViewModelItem] = []
     @Published var currentPage: Int = 0
     @Published var enablePageValidation:  Bool = true

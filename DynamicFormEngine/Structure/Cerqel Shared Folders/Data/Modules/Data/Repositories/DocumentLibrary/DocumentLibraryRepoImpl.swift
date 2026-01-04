@@ -7,10 +7,10 @@
 //
 
 
-public import Promises
+internal import Promises
 
 
-public class DocumentLibraryRepoImpl: DocumentLibraryRepo,BaseRepo {
+class DocumentLibraryRepoImpl: DocumentLibraryRepo,BaseRepo {
   
 
     private var network: Network

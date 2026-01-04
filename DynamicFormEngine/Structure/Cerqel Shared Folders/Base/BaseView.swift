@@ -8,10 +8,10 @@
 
 import Foundation
 import UIKit
-import PanModal
-import SkeletonView
-import JGProgressHUD
-public import Toast
+public import PanModal
+internal import SkeletonView
+internal import JGProgressHUD
+internal import Toast
 
 open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, PanModalPresentable {
     open var panScrollable: UIScrollView? {
@@ -39,7 +39,7 @@ open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, Pan
     
     public let frame = UIScreen.main.bounds
     public var item: Item!
-    public let hud = JGProgressHUD(style: .dark)
+    let hud = JGProgressHUD(style: .dark)
     
     public var viewModel: ViewModel! {
         didSet {

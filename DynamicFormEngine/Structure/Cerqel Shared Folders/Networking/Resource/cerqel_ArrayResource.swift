@@ -7,9 +7,9 @@
 //
 
 import Foundation
-public import RxSwift
+internal import RxSwift
 
-public struct cerqel_ArrayResource<T: Codable> {
+struct cerqel_ArrayResource<T: Codable> {
     public let objectType = T.self
     public let action: cerqel_APIActionDynamicForm
     

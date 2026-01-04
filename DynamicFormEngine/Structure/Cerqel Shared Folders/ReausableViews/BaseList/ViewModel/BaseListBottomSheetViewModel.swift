@@ -7,8 +7,7 @@
 //
 
 import Foundation
-public import Promises
-
+internal import Promises
 
 public class BaseListBottomSheetViewModel: BaseVM {
     

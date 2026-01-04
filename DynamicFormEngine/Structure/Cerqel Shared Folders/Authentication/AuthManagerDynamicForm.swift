@@ -7,13 +7,13 @@
 //
 
 import Foundation
-public import RxCocoa
-public import RxSwift
-public import MOLH
-public import SideMenu
+internal import RxCocoa
+internal import RxSwift
+//public import MOLH
+internal import SideMenu
 import UIKit
 
-public class AuthManagerDynamicForm {
+class AuthManagerDynamicForm {
 
     private let service: cerqel_NetworkServiceDynamicForm = cerqel_BasicNetworkServiceDynamicFormImpl.shared
     private let disposeBag = DisposeBag()

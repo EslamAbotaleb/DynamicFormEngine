@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import ObjectMapper
+internal import ObjectMapper
 
-public struct ModelRequestDetailsDataCerqel : Codable {
+struct ModelRequestDetailsDataCerqel : Codable {
     public var requestId : String?
     public var requestOrder : String?
     public var bpmTaskId : String?
@@ -90,7 +90,7 @@ public struct TakenActionCerqel : Codable {
     }
 }
 
-public struct PreviousActionsCerqel : Codable {
+struct PreviousActionsCerqel : Codable {
     public let id : String?
     public let bpmTaskId : String?
     public let taskOnUserName : String?

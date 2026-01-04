@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import EzPopup
-import JGProgressHUD
-public import RxCocoa
+internal import EzPopup
+internal import JGProgressHUD
+internal import RxCocoa
 internal import RxSwift
 import Photos
 

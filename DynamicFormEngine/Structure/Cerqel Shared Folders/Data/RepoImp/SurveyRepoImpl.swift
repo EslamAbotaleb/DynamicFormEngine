@@ -7,10 +7,10 @@
 //
 
 import Foundation
-public import Promises
+internal import Promises
 
 
-public class SurveyRepoImpl: SurveyRepo{
+class SurveyRepoImpl: SurveyRepo{
  
     private var network: Network
     private var localData: LocalData

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-public import PanModal
+internal import PanModal
 
 typealias ConfirmationCallBack =  (()->())
 

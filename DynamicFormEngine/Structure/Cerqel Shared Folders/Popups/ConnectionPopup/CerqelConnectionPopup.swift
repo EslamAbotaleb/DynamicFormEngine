@@ -8,12 +8,12 @@
 
 import UIKit
 
-class CerqelConnectionPopup: BottomSheetVCCerqel {
+public class CerqelConnectionPopup: BottomSheetVCCerqel {
     @IBOutlet weak var okBtn: UIButton!
 
     var didTapOk: (()->())?
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

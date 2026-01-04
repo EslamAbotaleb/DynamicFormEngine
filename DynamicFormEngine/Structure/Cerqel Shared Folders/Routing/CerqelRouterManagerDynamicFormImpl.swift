@@ -8,11 +8,11 @@
 
 import Foundation
 import UIKit
-public import PanModal
+internal import PanModal
 import AVFoundation
 import AVKit
 
-public enum CerqelView {
+enum CerqelView {
     static public func baseController<ViewController: UIViewController>(viewControllerType: ViewController.Type) -> ViewController {
         let controller =  ViewController(nibName: ViewController.identifier , bundle: nil)
         return controller

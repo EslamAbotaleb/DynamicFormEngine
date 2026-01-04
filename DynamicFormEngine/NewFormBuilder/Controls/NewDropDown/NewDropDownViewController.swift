@@ -12,7 +12,7 @@ protocol NewDropDownDelegate: AnyObject {
     func userSelected(_ ids: [MCQOption])
 }
 
-public class NewDropDownViewController: BottomSheetVCCerqel {
+class NewDropDownViewController: BottomSheetVCCerqel {
 
     // MARK: - IBOutlets
     
@@ -43,7 +43,7 @@ public class NewDropDownViewController: BottomSheetVCCerqel {
             titleLabel.text = questionTitle
         }
     }
-    public var allOptions = [MCQOption]() {
+   var allOptions = [MCQOption]() {
         didSet {
             if allOptions.count > 0 {
                 tableView.isHidden = false
@@ -54,17 +54,17 @@ public class NewDropDownViewController: BottomSheetVCCerqel {
             }
         }
     }
-    public var filteredOptions = [MCQOption]()
-    public var options: [MCQOption] {
+    var filteredOptions = [MCQOption]()
+    var options: [MCQOption] {
         return allOptions
     }
-    public var selectedValues = [MCQOption]()
+    var selectedValues = [MCQOption]()
     public var otherValue = ""
     public var representation: CheckBoxRepresentation?
     public var multiSelect = false
     public var selectAllEnabled = false
     public var dismiss: (()->())?
-    public var selectOption: ((_ selectedOptions: [MCQOption],_ otherOption: String)->())?
+    var selectOption: ((_ selectedOptions: [MCQOption],_ otherOption: String)->())?
     public var isEditable:Bool? = false
     
     
@@ -175,11 +175,11 @@ public class NewDropDownViewController: BottomSheetVCCerqel {
 }
 
 extension NewDropDownViewController: UITableViewDataSource, UITableViewDelegate {
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
     
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NewOptionTVCell.cerqel_identifier, for: indexPath) as! NewOptionTVCell
         if isArabicCerqel() {
             cell.value = options[indexPath.row].name_ar
@@ -192,24 +192,24 @@ extension NewDropDownViewController: UITableViewDataSource, UITableViewDelegate 
         return cell
     }
     
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectCellAt(indexPath.row)
     }
 }
 
 extension NewDropDownViewController: UISearchBarDelegate {
-    public func filterContentForSearchText(searchText: String, scope: String = "All") {
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
         filteredOptions = allOptions.filter({ (value) -> Bool in
             value.name?.lowercased().contains(searchText.lowercased()) ?? false
         })
     }
     
-    public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterContentForSearchText(searchText: searchText)
         tableView.reloadData()
     }
     
-    public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
 }

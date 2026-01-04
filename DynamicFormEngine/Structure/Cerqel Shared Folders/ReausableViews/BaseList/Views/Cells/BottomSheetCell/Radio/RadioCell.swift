@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class RadioCell: UITableViewCell {
+class RadioCell: UITableViewCell {
     @IBOutlet weak var sortNameLbl: UILabel!
     @IBOutlet weak var sortIcon: UIImageView!
     @IBOutlet weak var bottomView: UIView!
@@ -23,7 +23,7 @@ public class RadioCell: UITableViewCell {
         
     }
     
-    public  func configure(indexPath: IndexPath, totalRows: Int, item: ListModel) {
+    public func configure(indexPath: IndexPath, totalRows: Int, item: ListModel) {
         if indexPath.row == totalRows - 1 {
             bottomView.isHidden = true
         } else {

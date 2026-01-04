@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import DropDown
+internal import DropDown
 
 class WithdrawDDOptionTVcell: DropDownCell {
 

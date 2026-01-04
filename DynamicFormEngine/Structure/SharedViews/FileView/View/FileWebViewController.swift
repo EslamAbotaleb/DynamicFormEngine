@@ -10,7 +10,7 @@
 import UIKit
 import WebKit
 
-public class FileWebViewController: BaseView<FileViewModel, BaseItem>, WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate {
+class FileWebViewController: BaseView<FileViewModel, BaseItem>, WKNavigationDelegate, WKUIDelegate, UIScrollViewDelegate {
 
     public var file: FileModel!
 

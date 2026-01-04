@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ObjectMapper
+public import ObjectMapper
 
 enum ViewFormType: /*Codable,*/ Mappable {
     case viewForm(ViewForm)
@@ -77,42 +77,6 @@ public struct ModelRequestDetailsData: /*Codable,*/Mappable {
     var customerSystemCode: String?
     
     public  init?(map: Map) {}
-    
-//    init(id: String? = nil, requestSubmissionMobileVisibilityAndroid: Bool? = nil, status: Status? = nil, isCompleted: Bool? = nil, isWithdrawal: Bool? = nil, serviceName: String? = nil, serviceId: String? = nil, previousActions: [PreviousActions]? = nil, formCode: String? = nil, itRequestId: String? = nil, modifiedDate: String? = nil, hasComments: Bool? = nil, requestOrder: String? = nil, createdDate: String? = nil, employee: Employee? = nil, attachments: [ReqDetailsAttachmentValue]? = nil, isEditable: Bool? = nil, isTaskEditable: Bool? = nil, viewFromMobile: Bool? = nil, displayServiceName: String? = nil, requestSubmissionMobileVisibilityIos: Bool? = nil, isReopenAllowed: Bool? = nil, actions: [Action]? = nil, bpmTaskId: String? = nil, taskId: String? = nil, viewForm: ViewFormType? = nil, actionsMobileVisibility: Bool? = nil, serviceImage: String? = nil, requestPendingOn: RequestPendingOn? = nil, requestPendingOnText: String? = nil, attachmentsCount: Int? = nil, commentsCount: Int? = nil, customerSystemCode: String? = nil) {
-//        self.id = id
-//        self.requestSubmissionMobileVisibilityAndroid = requestSubmissionMobileVisibilityAndroid
-//        self.status = status
-//        self.isCompleted = isCompleted
-//        self.isWithdrawal = isWithdrawal
-//        self.serviceName = serviceName
-//        self.serviceId = serviceId
-//        self.previousActions = previousActions
-//        self.formCode = formCode
-//        self.itRequestId = itRequestId
-//        self.modifiedDate = modifiedDate
-//        self.hasComments = hasComments
-//        self.requestOrder = requestOrder
-//        self.createdDate = createdDate
-//        self.employee = employee
-//        self.attachments = attachments
-//        self.isEditable = isEditable
-//        self.isTaskEditable = isTaskEditable
-//        self.viewFromMobile = viewFromMobile
-//        self.displayServiceName = displayServiceName
-//        self.requestSubmissionMobileVisibilityIos = requestSubmissionMobileVisibilityIos
-//        self.isReopenAllowed = isReopenAllowed
-//        self.actions = actions
-//        self.bpmTaskId = bpmTaskId
-//        self.taskId = taskId
-//        self.viewForm = viewForm
-//        self.actionsMobileVisibility = actionsMobileVisibility
-//        self.serviceImage = serviceImage
-//        self.requestPendingOn = requestPendingOn
-//        self.requestPendingOnText = requestPendingOnText
-//        self.attachmentsCount = attachmentsCount
-//        self.commentsCount = commentsCount
-//        self.customerSystemCode = customerSystemCode
-//    }
 
     mutating public func mapping(map: Map) {
         id <- map["id"]
@@ -151,24 +115,7 @@ public struct ModelRequestDetailsData: /*Codable,*/Mappable {
     }
 }
 
-//struct RequestPendingOn: Codable {
-//    let id : String?
-//    let name : String?
-//    let pendingOnCode: String?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, name, pendingOnCode
-//    }
-//
-//    init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        id = try values.decodeIfPresent(String.self, forKey: .id)
-//        name = try values.decodeIfPresent(String.self, forKey: .name)
-//        pendingOnCode = try values.decodeIfPresent(String.self, forKey: .pendingOnCode)
-//    }
-//}
-
-struct DropdownDefaultAnswerValue : Codable, FormValue {
+public struct DropdownDefaultAnswerValue : Codable, FormValue {
     let key : String?
     let text : String?
     let selectedKey : String?
@@ -180,7 +127,7 @@ struct DropdownDefaultAnswerValue : Codable, FormValue {
         case selectedKey = "selectedKey"
     }
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         key = try values.decodeIfPresent(String.self, forKey: .key)
         text = try values.decodeIfPresent(String.self, forKey: .text)
@@ -189,7 +136,7 @@ struct DropdownDefaultAnswerValue : Codable, FormValue {
 
 }
 
-struct FileUploadDefaultAnswerValue: Codable, FormValue {
+public struct FileUploadDefaultAnswerValue: Codable, FormValue {
         let fileId : String?
         let isSuccess : Bool?
         let isFaild : Bool?
@@ -215,7 +162,7 @@ struct FileUploadDefaultAnswerValue: Codable, FormValue {
             case url = "url"
         }
 
-        init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
             fileId = try values.decodeIfPresent(String.self, forKey: .fileId)
             isSuccess = try values.decodeIfPresent(Bool.self, forKey: .isSuccess)
@@ -285,7 +232,7 @@ struct FileUploadDefaultAnswerValue: Codable, FormValue {
 //}
 
 
-public struct Rules : Codable, Mappable {
+struct Rules : Codable, Mappable {
     public var effectIn : [String]?
     public var dependOn : [String]?
 
@@ -314,7 +261,7 @@ public struct Rules : Codable, Mappable {
 
 }
 
-public struct Weight : Codable, Mappable {
+struct Weight : Codable, Mappable {
     public var value : Int?
 //    var criteria : String?
 
@@ -344,7 +291,7 @@ public struct Weight : Codable, Mappable {
 }
 
 
-public struct Properties: Codable, Mappable {
+struct Properties: Codable, Mappable {
     
     public var disabledMonths: String?
     public var placeholder: String?
@@ -553,7 +500,7 @@ public struct Properties: Codable, Mappable {
 }
 
 
-public struct Localization : Codable, Mappable {
+struct Localization : Codable, Mappable {
     public var en : En?
     public var ar : Ar?
 
@@ -579,7 +526,7 @@ public struct Localization : Codable, Mappable {
 }
 
 
-public struct En : Codable, Mappable {
+struct En : Codable, Mappable {
     public var label : String?
     public var placeholder : String?
     public var sublabel : String?
@@ -617,7 +564,7 @@ public struct En : Codable, Mappable {
 
 }
 
-public struct Ar: Codable, Mappable {
+struct Ar: Codable, Mappable {
     public var label : String?
     public var placeholder : String?
     public var sublabel : String?
@@ -655,7 +602,7 @@ public struct Ar: Codable, Mappable {
 }
 
 
-public struct FieldWarning: Codable, Mappable {
+struct FieldWarning: Codable, Mappable {
     
     public var maximumDate : String?
     public var minimumDate : String?
@@ -698,7 +645,7 @@ public struct FieldWarning: Codable, Mappable {
 }
 
 
-public struct TaskSubmittedRowDataModel: Codable, Mappable {
+struct TaskSubmittedRowDataModel: Codable, Mappable {
     public var id: String?
     public var name: String?
     public var rowIndex: String?
@@ -726,7 +673,7 @@ public struct TaskSubmittedRowDataModel: Codable, Mappable {
     }
 }
 
-public struct DefaultAnswer: Codable, Mappable {
+struct DefaultAnswer: Codable, Mappable {
     
     public var id: String?
     public var name: String?
@@ -781,7 +728,7 @@ public struct DefaultAnswer: Codable, Mappable {
     
 }
 
-public struct AttachmentForDefault: Mappable, Codable {
+struct AttachmentForDefault: Mappable, Codable {
     public var fileId: String?
     public var attachmentDisplaySize: String?
     public var fileName: String?
@@ -830,7 +777,7 @@ public struct AttachmentForDefault: Mappable, Codable {
 
 }
 
-public class AttachmentForNewDefault: Mappable, Codable {
+class AttachmentForNewDefault: Mappable, Codable {
     public var attachmentName : String?
     public var attachmentId : String?
     public var attachmentExtension : String?
@@ -852,7 +799,7 @@ public class AttachmentForNewDefault: Mappable, Codable {
     
 }
 
-public struct DDL: Codable, Mappable {
+struct DDL: Codable, Mappable {
     public var Name: String?
     public var Value: [MCQOption]?
     public var RowIndex: String?
@@ -875,7 +822,7 @@ public struct DDL: Codable, Mappable {
     }
 }
 
-public struct BCDDL: Codable, Mappable {
+struct BCDDL: Codable, Mappable {
     public var Name: String?
     public var Value: [BCMCQOption]?
     public var RowIndex: String?
@@ -898,7 +845,7 @@ public struct BCDDL: Codable, Mappable {
     }
 }
 
-public struct BCMCQOption: Codable, Mappable, Hashable {
+struct BCMCQOption: Codable, Mappable, Hashable {
     public var id: String?
     public var name: String?
     public var name_ar: String?
@@ -927,7 +874,7 @@ public struct BCMCQOption: Codable, Mappable, Hashable {
 }
 
 
-public struct Filee: Codable, Mappable {
+struct Filee: Codable, Mappable {
     
     public var fileId: String?
     public var previewUrl: String?
@@ -969,7 +916,7 @@ public struct Filee: Codable, Mappable {
     }
 }
 
-public enum ValueType: Codable, Mappable {
+enum ValueType: Codable, Mappable {
     
     case singleDouble(Double)
     case double([Double])
@@ -1225,7 +1172,7 @@ struct PreviousActions : Codable, Mappable {
     }
 }
 
-public struct PreviousActionsAttachments : Codable, Mappable {
+struct PreviousActionsAttachments : Codable, Mappable {
     public var fileId : String?
     public var fileName : String?
     public var url : String?
@@ -1253,7 +1200,7 @@ public struct PreviousActionsAttachments : Codable, Mappable {
 
 }
 
-public struct ReqDetailsAttachmentValue : Codable, FormValue, Mappable {
+struct ReqDetailsAttachmentValue : Codable, FormValue, Mappable {
     public var url : String?
     public var attachmentName : String?
     public var attachmentExtension : String?
@@ -1292,70 +1239,79 @@ public struct ReqDetailsAttachmentValue : Codable, FormValue, Mappable {
     }
 }
 
-public struct Action : Codable, Mappable {
-    public var id : String?
-    public var name : String?
-    public var label : String?
-    public var actionTakenLabel : String?
-    public var styleCode : String?
-    public var buttonStyleCode : String?
-    public var actionCode : String?
-    public var isCommentRequired : Bool?
-    public var isFormValidateBeforeExecuteActionRequired : Bool?
-    public var isAttachmentRequired : Bool?
+public struct Action: Codable {
+    public var id: String?
+    public var name: String?
+    public var label: String?
+    public var actionTakenLabel: String?
+    public var styleCode: String?
+    public var buttonStyleCode: String?
+    public var actionCode: String?
+    public var isCommentRequired: Bool?
+    public var isFormValidateBeforeExecuteActionRequired: Bool?
+    public var isAttachmentRequired: Bool?
     public var actionFormId: String?
     public var actionOrder: Int?
-    public var buttonStyle : ButtonStyle?
+    public var buttonStyle: ButtonStyle?
     
-    public init?(map: Map) {}
-
-    public init(id: String?, name: String?, label: String?, actionTakenLabel: String?, styleCode: String?, buttonStyleCode: String?, actionCode: String?, isCommentRequired: Bool?, isFormValidateBeforeExecuteActionRequired: Bool?, isAttachmentRequired: Bool?, actionFormId: String?, actionOrder: Int?, buttonStyle : ButtonStyle?) {
-        self.id = id
-        self.name = name
-        self.label = label
-        self.actionTakenLabel = actionTakenLabel
-        self.styleCode = styleCode
-        self.buttonStyleCode = buttonStyleCode
-        self.actionCode = actionCode
-        self.isCommentRequired = isCommentRequired
-        self.isFormValidateBeforeExecuteActionRequired = isFormValidateBeforeExecuteActionRequired
-        self.isAttachmentRequired = isAttachmentRequired
-        self.actionFormId = actionFormId
-        self.actionOrder = actionOrder
-        self.buttonStyle = buttonStyle
-    }
-    init() {
-        self.id = ""
-        self.name = ""
-        self.label = ""
-        self.actionTakenLabel = ""
-        self.styleCode = ""
-        self.buttonStyleCode = ""
-        self.actionCode = ""
-        self.isCommentRequired = false
-        self.isFormValidateBeforeExecuteActionRequired = false
-        self.isAttachmentRequired = false
-        self.actionFormId = ""
-        self.actionOrder = 0
-        self.buttonStyle = ButtonStyle()
-    }
-    enum CodingKeys: String, CodingKey {
-
-        case id = "id"
-        case name = "name"
-        case label = "label"
-        case actionTakenLabel = "actionTakenLabel"
-        case styleCode = "styleCode"
-        case buttonStyleCode = "buttonStyleCode"
-        case actionCode = "actionCode"
-        case isCommentRequired = "isCommentRequired"
-        case isFormValidateBeforeExecuteActionRequired = "isFormValidateBeforeExecuteActionRequired"
-        case isAttachmentRequired = "isAttachmentRequired"
-        case actionFormId, actionOrder
-        case buttonStyle
+    public init() {
+        self.id = nil
+        self.name = nil
+        self.label = nil
+        self.actionTakenLabel = nil
+        self.styleCode = nil
+        self.buttonStyleCode = nil
+        self.actionCode = nil
+        self.isCommentRequired = nil
+        self.isFormValidateBeforeExecuteActionRequired = nil
+        self.isAttachmentRequired = nil
+        self.actionFormId = nil
+        self.actionOrder = nil
+        self.buttonStyle = nil
     }
     
-    public mutating func mapping(map: Map) {
+    internal init(from internalAction: ActionInternal) {
+        self.id = internalAction.id
+        self.name = internalAction.name
+        self.label = internalAction.label
+        self.actionTakenLabel = internalAction.actionTakenLabel
+        self.styleCode = internalAction.styleCode
+        self.buttonStyleCode = internalAction.buttonStyleCode
+        self.actionCode = internalAction.actionCode
+        self.isCommentRequired = internalAction.isCommentRequired
+        self.isFormValidateBeforeExecuteActionRequired = internalAction.isFormValidateBeforeExecuteActionRequired
+        self.isAttachmentRequired = internalAction.isAttachmentRequired
+        self.actionFormId = internalAction.actionFormId
+        self.actionOrder = internalAction.actionOrder
+        self.buttonStyle = internalAction.buttonStyle.map { ButtonStyle(from: $0) }
+    }
+}
+
+extension Action {
+    internal static func fromInternalList(_ list: [ActionInternal]) -> [Action] {
+        return list.map { Action(from: $0) }
+    }
+}
+
+internal struct ActionInternal: Mappable {
+    var id: String?
+    var name: String?
+    var label: String?
+    var actionTakenLabel: String?
+    var styleCode: String?
+    var buttonStyleCode: String?
+    var actionCode: String?
+    var isCommentRequired: Bool?
+    var isFormValidateBeforeExecuteActionRequired: Bool?
+    var isAttachmentRequired: Bool?
+    var actionFormId: String?
+    var actionOrder: Int?
+    var buttonStyle: ButtonStyleInternal?
+    
+    init() {}
+    init?(map: Map) {}
+    
+    mutating func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         label <- map["label"]
@@ -1372,23 +1328,37 @@ public struct Action : Codable, Mappable {
     }
 }
 
-public struct ButtonStyle: Codable, Mappable {
+public struct ButtonStyle: Codable {
     public var backgroundColor: String?
     public var borderColor: String?
     public var textColor: String?
     public var opacity: Float?
     
     public init() {
-        self.backgroundColor = ""
-        self.borderColor = ""
-        self.textColor = ""
-        self.opacity = 0.0
-    
+        self.backgroundColor = nil
+        self.borderColor = nil
+        self.textColor = nil
+        self.opacity = nil
     }
     
-    public init?(map: Map) {}
+    internal init(from internalStyle: ButtonStyleInternal) {
+        self.backgroundColor = internalStyle.backgroundColor
+        self.borderColor = internalStyle.borderColor
+        self.textColor = internalStyle.textColor
+        self.opacity = internalStyle.opacity
+    }
+}
 
-    public mutating func mapping(map: Map) {
+internal struct ButtonStyleInternal: Mappable {
+    var backgroundColor: String?
+    var borderColor: String?
+    var textColor: String?
+    var opacity: Float?
+
+    init() {}
+    init?(map: Map) {}
+    
+    mutating func mapping(map: Map) {
         backgroundColor <- map["backgroundColor"]
         borderColor <- map["borderColor"]
         textColor <- map["textColor"]
@@ -1396,7 +1366,7 @@ public struct ButtonStyle: Codable, Mappable {
     }
 }
 
-public struct FormWarningg: Codable, Mappable {
+struct FormWarningg: Codable, Mappable {
     var fieldValidation: FieldValidationn?
     var formValidation: FormValidationn?
 
@@ -1938,7 +1908,7 @@ struct ViewForm : /*Codable,*/ Mappable {
 
 }
 
-public struct Fields : Codable, Mappable {
+struct Fields : Codable, Mappable {
     public var weight : Weight?
     public var rules : Rules?
     public var id : String?

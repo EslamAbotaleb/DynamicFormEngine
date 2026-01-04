@@ -10,7 +10,7 @@ import Foundation
 import SwiftUI
 
 extension View {
-    func dismissingGesture(tolerance: Double = 24, direction: DragGesture.Value.Direction, action: @escaping () -> ()) -> some View {
+    public func dismissingGesture(tolerance: Double = 24, direction: DragGesture.Value.Direction, action: @escaping () -> ()) -> some View {
         gesture(DragGesture()
             .onEnded { value in
                 let swipeDirection = value.detectDirection(tolerance)
@@ -23,7 +23,7 @@ extension View {
 }
 
 extension DragGesture.Value {
-    func detectDirection(_ tolerance: Double = 24) -> Direction? {
+    public func detectDirection(_ tolerance: Double = 24) -> Direction? {
         if startLocation.x < location.x - tolerance { return .left }
         if startLocation.x > location.x + tolerance { return .right }
         if startLocation.y > location.y + tolerance { return .up }
@@ -31,7 +31,7 @@ extension DragGesture.Value {
         return nil
     }
 
-    enum Direction {
+    public enum Direction {
         case left
         case right
         case up
@@ -40,7 +40,7 @@ extension DragGesture.Value {
 }
 
 extension UIView {
-    func addBottomShadow() {
+    public func addBottomShadow() {
         layer.masksToBounds = false
         layer.shadowRadius = 1
         layer.shadowOpacity = 0.5

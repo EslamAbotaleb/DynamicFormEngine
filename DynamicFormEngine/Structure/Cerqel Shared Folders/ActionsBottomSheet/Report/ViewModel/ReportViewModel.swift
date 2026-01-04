@@ -14,7 +14,7 @@ public enum FileActionType {
     case pin
 }
 
-public class ReportViewModel: BaseVM {
+class ReportViewModel: BaseVM {
     
     private var router:CerqelRouterManager
     private var documentRepo: DocumentLibraryRepo!

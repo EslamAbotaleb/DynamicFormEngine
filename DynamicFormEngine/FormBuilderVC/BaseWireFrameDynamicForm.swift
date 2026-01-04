@@ -7,13 +7,13 @@
 //
 
 import UIKit
-public import RxCocoa
-import RxRelay
-public import RxSwift
-import JGProgressHUD
+internal import RxCocoa
+internal import RxRelay
+internal import RxSwift
+internal import JGProgressHUD
 internal import Kingfisher
-import SideMenu
-import Reachability
+internal import SideMenu
+internal import Reachability
 //import PopupDialog
 import SwiftUI
 
@@ -21,7 +21,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
     
     var disposeBag = DisposeBag()
     public var viewModel: T!
-    public let reachability = try! Reachability()
+    let reachability = try! Reachability()
 
     public func configure(with viewModel: T) {
         fatalError("You did not override configure method.. ")
@@ -95,7 +95,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
         return dateFormatted
     }
 
-    public func errorObsereve(errorsObservable: Observable<Error>){
+    internal func errorObsereve(errorsObservable: Observable<Error>){
         
         errorsObservable.subscribe(onNext:{ [unowned self](error) in
             self.viewModel.loadingSubject.onNext(BaseLoading.hide)
@@ -104,7 +104,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
         
     }
     
-    public func loadingViewObsereve(loadingObservable: Observable<BaseLoading>){
+    internal func loadingViewObsereve(loadingObservable: Observable<BaseLoading>){
         
         loadingObservable.subscribe(onNext:{ [unowned self] (loading) in
             switch loading {
@@ -377,7 +377,7 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
     
 }
 
-public func flashHud(message:String,view:UIView,indicator:JGProgressHUDIndicatorView) -> JGProgressHUD {
+func flashHud(message:String,view:UIView,indicator:JGProgressHUDIndicatorView) -> JGProgressHUD {
     let hud = JGProgressHUD(style: .dark)
     hud.textLabel.text = message
     hud.indicatorView = nil

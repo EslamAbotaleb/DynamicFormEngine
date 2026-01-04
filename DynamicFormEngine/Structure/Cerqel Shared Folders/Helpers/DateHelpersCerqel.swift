@@ -11,7 +11,6 @@ import Foundation
 
 extension String {
     
-    
    public var to24Hours: String {
         if let date = Formatter.Hours12.date(from: self) {
             let outputTime = Formatter.Hours24.string(from: date)

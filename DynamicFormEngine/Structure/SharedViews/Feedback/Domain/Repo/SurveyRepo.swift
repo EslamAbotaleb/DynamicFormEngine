@@ -7,9 +7,8 @@
 //
 
 import Foundation
-public import Promises
-import DynamicFormEngine
+internal import Promises
 
-public protocol SurveyRepo {
+protocol SurveyRepo {
     func survey(surveyPayload: SurveyPayload) -> Promise<BaseSuccessResponse>
 }

@@ -6,13 +6,11 @@
 //  Copyright © 2020 MahmoudOrganization. All rights reserved.
 //
 
-
 import Foundation
-import KeychainSwift
-public import Promises
+internal import KeychainSwift
+internal import Promises
 
-
-public class UserAuthoriationHandler: AuthorizationHandler {
+class UserAuthoriationHandler: AuthorizationHandler {
     
     private let keychainKey = "CustomerAuthorizationHandler"
     private let clientKey = "clientAuthoriztionHeader"

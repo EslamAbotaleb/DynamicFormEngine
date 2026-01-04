@@ -7,10 +7,10 @@
 //
 
 internal import Alamofire
-import Expression
+internal import Expression
 import Foundation
-import ObjectMapper
-public import RxCocoa
+internal import ObjectMapper
+internal import RxCocoa
 internal import RxSwift
 import UIKit
 
@@ -917,7 +917,7 @@ extension FormBuilder {
     ///   - max: max options to be selected
     ///   - row: control's field id
     /// - Returns: (error, errorMessage)
-    public func handleCheckboxValidation(
+   func handleCheckboxValidation(
         item: FormViewModelMCQBaseItem, selectedOptions: [MCQOption], min: Int,
         max: Int?, row: String
     ) -> (error: Bool, errorMessage: String) {

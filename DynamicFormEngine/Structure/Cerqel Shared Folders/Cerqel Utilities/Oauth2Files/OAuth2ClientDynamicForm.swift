@@ -25,10 +25,10 @@
 
 import Foundation
 import SafariServices
-import KeychainAccess
+internal import KeychainAccess
 internal import Alamofire
-import SwiftyJSON
-internal import MOLH
+internal import SwiftyJSON
+//internal import MOLH
 
 open class OAuth2ClientDynamicForm {
 

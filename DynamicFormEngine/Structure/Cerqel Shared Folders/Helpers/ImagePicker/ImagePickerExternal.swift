@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import YPImagePicker
+public import YPImagePicker
 
 public enum MediaType:String{
     case video = "video"

@@ -65,7 +65,7 @@ public enum AppStoryboardDynamicForm: String {
     }
 }
 
-public enum ViewControllerNameDynamicForm {
+enum ViewControllerNameDynamicForm {
     case dynamicForm(ServiceId: String, categoryTitle: String?, hasSubService: Bool?, subParentName: String?)
     case requestDetails(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: ModelRequestDetailsData? = nil, view: UIViewController?)
     case delegatorView(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: ModelRequestDetailsData? = nil, view: UIViewController?)
@@ -73,7 +73,7 @@ public enum ViewControllerNameDynamicForm {
     case newFormBuilderSearch(code: String)
 }
 
-public class RouterDynamicForm {
+class RouterDynamicForm {
     static public func goTo(viewName: ViewControllerNameDynamicForm)-> BottomSheetVCCerqel{
         switch viewName {
             

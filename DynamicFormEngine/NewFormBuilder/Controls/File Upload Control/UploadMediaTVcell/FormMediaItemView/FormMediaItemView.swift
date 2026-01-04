@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import NicoProgress
+internal import NicoProgress
 
 class FormMediaItemView: UIView {
     

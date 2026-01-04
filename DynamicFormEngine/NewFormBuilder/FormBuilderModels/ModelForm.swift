@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ObjectMapper
+internal import ObjectMapper
 
 public let Service_Name_Leaves = "Leaves"
 public let service_Name_NewEmployeeImprovement_Plan = "newEmployeeImprovementPlan"
@@ -16,7 +16,7 @@ public let Service_Name_newtransferRequest = "newtransferRequest"
 public let Service_Name_EmployeeInfo = "EmployeeInfo"
 
 
-public struct ModelForm : Codable {
+struct ModelForm : Codable {
     public let requestForm : RequestForm?
     public let serviceName : String?
     public let formVersion: String?
@@ -29,7 +29,7 @@ public struct ModelForm : Codable {
     }
 }
 
-public struct ModelNestedFormValue {
+struct ModelNestedFormValue {
     public let val : [FormViewModelItem]? //[ModelControl]?
 //    enum CodingKeys: String, CodingKey {
 //
@@ -49,8 +49,8 @@ extension dic: FormValue {}
 
 
 
-public struct ModelControl : Codable, FormValue {
-    public var options : [Options]?
+struct ModelControl : Codable, FormValue {
+    var options : [Options]?
     public var id : String?
     public var type : ControlType?
     public var format : String?
@@ -362,7 +362,7 @@ public struct AdditionalProperty : Codable {
 
 }
 
-public struct RequestForm : Codable {
+struct RequestForm : Codable {
     public var id : String?
     public var name : String?
     public var controls : [ModelControl]?
@@ -379,7 +379,7 @@ public struct RequestForm : Codable {
     }
 }
 
-public struct OptionsInProp : Codable, Mappable {
+struct OptionsInProp : Codable, Mappable {
     public var id : String?
     public var name : String?
     public var name_ar : String?
@@ -408,7 +408,7 @@ public struct OptionsInProp : Codable, Mappable {
 
 }
 
-public struct Options : Codable, Mappable, FormValue {
+struct Options : Codable, Mappable, FormValue {
     public var key : String?
     public var text : String?
     public var icon : String?
@@ -679,7 +679,7 @@ public struct RelationEquation : Codable {
 
 
 
-public struct VisitorInfo : Codable, Mappable, FormValue {
+struct VisitorInfo : Codable, Mappable, FormValue {
     public var name : String?
     public var mobileNumber : String?
     public var nationalPassport : String?
@@ -808,7 +808,7 @@ public protocol SearchControlResult: FormValue {
 }
 
 
-public struct SearchControlResult_EmployeeModel : Codable, Mappable, SearchControlResult {
+struct SearchControlResult_EmployeeModel : Codable, Mappable, SearchControlResult {
     
     public var name : String?
     public var arabicName : String?

@@ -7,7 +7,7 @@
 
 import UIKit
 //import ActionSheetPicker_3_0
-import IQKeyboardManagerSwift
+internal import IQKeyboardManagerSwift
 
 class DropDownTableViewCell: ParentFieldTableViewCell {
 

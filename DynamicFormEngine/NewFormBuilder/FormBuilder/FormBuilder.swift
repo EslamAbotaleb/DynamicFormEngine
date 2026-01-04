@@ -6,15 +6,15 @@
 //
 
 internal import Alamofire
-import Expression
+internal import Expression
 import Foundation
-import ObjectMapper
-public import RxCocoa
+internal import ObjectMapper
+internal import RxCocoa
 internal import RxSwift
 import UIKit
 
 
-public class FormBuilder {
+class FormBuilder {
     
     // MARK: - Singleton Instance
     static public var shared = FormBuilder()

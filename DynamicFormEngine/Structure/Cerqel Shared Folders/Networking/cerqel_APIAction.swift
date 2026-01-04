@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public import Alamofire
+internal import Alamofire
 
 public enum cerqel_URLType{
     case Content
@@ -30,7 +30,7 @@ public enum UrlBaseEndpoints: String {
     case mocking = "https:/$()/m6djv.wiremockapi.cloud/"
 }
 
-public protocol cerqel_APIActionDynamicForm: URLRequestConvertible {
+internal protocol cerqel_APIActionDynamicForm: URLRequestConvertible {
     var method: HTTPMethod { get }
     var path: String { get }
     var actionParameters: [String: Any] { get }

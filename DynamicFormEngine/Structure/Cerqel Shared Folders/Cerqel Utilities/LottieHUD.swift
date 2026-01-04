@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Lottie
+internal import Lottie
 import UIKit
 
 

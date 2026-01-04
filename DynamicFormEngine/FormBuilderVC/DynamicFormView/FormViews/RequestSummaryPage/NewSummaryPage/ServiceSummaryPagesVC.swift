@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import EasyTipView
+internal import EasyTipView
 
 // MARK: - SectionPagesControl
 /// Represents a section in the summary page, including its id, title, and content.

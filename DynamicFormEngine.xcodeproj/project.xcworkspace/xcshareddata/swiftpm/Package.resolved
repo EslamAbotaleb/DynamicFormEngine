@@ -1,5 +1,5 @@
 {
-  "originHash" : "07fd5d58a1963d23a8932b956f9a6d11e0012b030db2bf7718204096dd66ea31",
+  "originHash" : "b2a68b8bd8f962b9946b9080da237f6e2ef400f4fbd1ae9a04c364f28fff8b7f",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -112,10 +112,10 @@
     {
       "identity" : "keychain-swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/evgenyneu/keychain-swift.git",
+      "location" : "https://github.com/EslamAbotaleb/keychain-swift.git",
       "state" : {
-        "revision" : "5e1b02b6a9dac2a759a1d5dbc175c86bd192a608",
-        "version" : "24.0.0"
+        "branch" : "master",
+        "revision" : "122956616e3767a8aa1bf9b43564611b245e9304"
       }
     },
     {
@@ -143,15 +143,6 @@
       "state" : {
         "revision" : "b4bd0604ded9574807f41b4004b57dd1226a30a4",
         "version" : "3.5.0"
-      }
-    },
-    {
-      "identity" : "molh",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/MoathOthman/MOLH.git",
-      "state" : {
-        "revision" : "c78502b5a5e9d5add901c2c6de546d6b320e7b73",
-        "version" : "1.4.3"
       }
     },
     {
@@ -220,10 +211,10 @@
     {
       "identity" : "reachability.swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ashleymills/Reachability.swift.git",
+      "location" : "https://github.com/EslamAbotaleb/Reachability.swift.git",
       "state" : {
         "branch" : "master",
-        "revision" : "21d1dc412cfecbe6e34f1f4c4eb88d3f912654a6"
+        "revision" : "09a1d552e527ca3f8cd3c84f52fad37c9fa8a9c6"
       }
     },
     {
@@ -355,10 +346,10 @@
     {
       "identity" : "toast-swift",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/scalessec/Toast-Swift.git",
+      "location" : "https://github.com/EslamAbotaleb/Toast-Swift.git",
       "state" : {
-        "revision" : "ddccd20d6fb718448d9b179c454c561653fda7d5",
-        "version" : "5.1.1"
+        "branch" : "master",
+        "revision" : "4b82317156467694e87395bdc67a6260ff12a1a5"
       }
     },
     {

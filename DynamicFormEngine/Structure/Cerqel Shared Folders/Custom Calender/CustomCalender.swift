@@ -7,8 +7,8 @@
 //
 
 import UIKit
-public import PanModal
-import FSCalendar
+internal import PanModal
+internal import FSCalendar
 
 class CustomCalender: UIViewController,  FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance{
     

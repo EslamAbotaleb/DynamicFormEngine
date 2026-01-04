@@ -8,7 +8,7 @@
 
 import UIKit
 import MobileCoreServices
-import DropDown
+internal import DropDown
 
 
 class FormBuilderVC: BaseWireFrameDynamicForm<FormBuilderViewModel> {

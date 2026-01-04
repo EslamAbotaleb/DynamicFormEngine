@@ -7,11 +7,11 @@
 //
 
 import Foundation
-import YPImagePicker
+internal import YPImagePicker
 import Photos
 import PhotosUI
 
-public class PickImageManager: PickImageProtocol {
+class PickImageManager: PickImageProtocol {
     
     var viewController: UIViewController
     

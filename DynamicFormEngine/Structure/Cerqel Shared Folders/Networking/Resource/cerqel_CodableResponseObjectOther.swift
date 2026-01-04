@@ -7,8 +7,8 @@
 //
 
 import Foundation
-public import RxSwift
-public import Alamofire
+internal import RxSwift
+internal import Alamofire
 
 public class cerqel_CodableResponseObjectOther<T: Decodable, X: Decodable>: cerqel_CodableResponseObjectDynamicForm<T> {
     // x = Other
@@ -26,7 +26,7 @@ public class cerqel_CodableResponseObjectOther<T: Decodable, X: Decodable>: cerq
         other = try? values.decode(X.self, forKey: .other)
     }
     
-    override public init(action: cerqel_APIActionDynamicForm, keyResult: String = "result") {
+    override internal init(action: cerqel_APIActionDynamicForm, keyResult: String = "result") {
         super.init(action: action, keyResult: keyResult)
     }
     

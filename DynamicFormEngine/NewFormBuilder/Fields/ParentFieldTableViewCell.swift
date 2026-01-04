@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import EasyTipView
-import IQKeyboardManagerSwift
+internal import EasyTipView
+internal import IQKeyboardManagerSwift
 
 protocol ParentFieldTableViewCellDelegate: AnyObject {
     func dismissToolTip()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class LabelBottomSheetVC: BottomSheetVCCerqel {
+class LabelBottomSheetVC: BottomSheetVCCerqel {
     
     
     // MARK: - IBOutlets

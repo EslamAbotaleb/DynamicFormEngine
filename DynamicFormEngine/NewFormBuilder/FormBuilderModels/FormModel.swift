@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import ObjectMapper
+internal import ObjectMapper
 
-public struct FormModel: Mappable {
+struct FormModel: Mappable {
     public var id: String?
     public var title: String?
     var score: Int?
@@ -44,7 +44,7 @@ public struct FormModel: Mappable {
     }
 }
 
-public struct Settings: Mappable, Codable {
+struct Settings: Mappable, Codable {
     var format: String?
     var enableScoreCalculation: Bool?
     var defaultLanguage: String?
@@ -82,7 +82,7 @@ public struct Settings: Mappable, Codable {
     }
 }
 
-public struct FormLanguage: Mappable {
+struct FormLanguage: Mappable {
     var name: String?
     var code: String?
     var rTL: Bool?
@@ -98,7 +98,7 @@ public struct FormLanguage: Mappable {
     }
 }
 
-public struct FormProperties: Mappable {
+struct FormProperties: Mappable {
     var themeId: String?
     var campaign: Campaign?
     var navigationProperties: NavigationProperties?
@@ -114,7 +114,7 @@ public struct FormProperties: Mappable {
     }
 }
 
-public struct Campaign: Mappable, Codable {
+struct Campaign: Mappable, Codable {
     var header: CampaignObject?
     var footer: CampaignObject?
     var welcome: CampaignObject?
@@ -144,7 +144,7 @@ public struct Campaign: Mappable, Codable {
     }
 }
 
-public struct CampaignObject: Mappable, Codable {
+struct CampaignObject: Mappable, Codable {
     var logo: String?
     var title: String?
     var description: String?
@@ -179,7 +179,7 @@ public struct CampaignObject: Mappable, Codable {
 
 }
 
-public struct Field: Mappable {
+struct Field: Mappable {
     var id: String?
     var type: FieldType?
     var subType: TextBoxSubType?
@@ -342,7 +342,7 @@ public enum FieldType: String, Codable {
     case switchControl = "Switch"
 }
 
-public struct Rule: Mappable {
+struct Rule: Mappable {
     var id: String?
     var disabled: Bool?
     var operation: RuleOperation?
@@ -368,7 +368,7 @@ public struct Rule: Mappable {
     }
 }
 
-public struct IfCondition: Mappable {
+struct IfCondition: Mappable {
     var fieldId: String?
     var fieldState: FieldState?
     var target: String?
@@ -400,7 +400,7 @@ public struct Payload {
     var parameters: [String]?
 }
 
-public struct DoAction: Mappable {
+struct DoAction: Mappable {
     var type: ActionType?
     var sourceFieldsIds: [String]?
     var targetFieldsIds: [String]?
@@ -422,7 +422,7 @@ public struct DoAction: Mappable {
     }
 }
 
-public struct FieldRule: Mappable {
+struct FieldRule: Mappable {
     var effectIn: [String]?
     var dependOn: [String]?
     

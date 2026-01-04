@@ -7,9 +7,9 @@
 //
 
 import UIKit
-public import PanModal
+internal import PanModal
 
-public class FileItem : BaseItem {
+class FileItem : BaseItem {
     public var fileId: String
     
     public init (fileId: String) {
@@ -17,7 +17,7 @@ public class FileItem : BaseItem {
     }
 }
 
-public class ReportView: BaseView<ReportViewModel, FileItem> {
+class ReportView: BaseView<ReportViewModel, FileItem> {
     
     @IBOutlet weak var sendButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!

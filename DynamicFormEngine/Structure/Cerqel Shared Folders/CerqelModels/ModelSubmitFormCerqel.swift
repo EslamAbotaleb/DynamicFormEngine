@@ -7,9 +7,9 @@
 //
 
 import Foundation
-import ObjectMapper
+internal import ObjectMapper
 
-public struct ModelSubmitFormCerqel : Mappable {
+struct ModelSubmitFormCerqel : Mappable {
     var payload : [SubmitFormPayloadCerqel]?
     var formCode : String?
     var formVersion : Int?
@@ -33,7 +33,7 @@ public struct ModelSubmitFormCerqel : Mappable {
 }
 
 
-public struct SubmitFormPayloadCerqel : Mappable {
+struct SubmitFormPayloadCerqel : Mappable {
     var id : String?
     var name : String?
     var value : [[String: Any]]?

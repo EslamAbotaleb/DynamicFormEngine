@@ -9,9 +9,8 @@
 import Foundation
 import UIKit
 internal import Kingfisher
-import SDWebImage
-import SDWebImageSVGCoder
-
+internal import SDWebImage
+internal import SDWebImageSVGCoder
 
 extension UIImageView {
     

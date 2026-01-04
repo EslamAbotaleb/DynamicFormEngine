@@ -41,7 +41,7 @@ extension FormBuilder {
     ///   - photo: The UIImage to be uploaded (optional).
     ///   - fileUrl: The URL of the file to be uploaded (optional).
     ///   - completion: A closure that returns a FileUploadAnswer upon success.
-    public func uploadMedia(
+    func uploadMedia(
         fieldID: String, photo: UIImage?, fileUrl: URL?,
         completion: @escaping ((FileUploadAnswer) -> Void)
     ) {

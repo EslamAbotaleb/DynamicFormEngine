@@ -9,10 +9,10 @@
 import Foundation
 internal import RxSwift
 internal import Alamofire
-internal import MOLH
+//internal import MOLH
 import UIKit
 
-public class cerqel_NormalAPIcallDynamicForm{
+class cerqel_NormalAPIcallDynamicForm{
     
     public init() {}
     

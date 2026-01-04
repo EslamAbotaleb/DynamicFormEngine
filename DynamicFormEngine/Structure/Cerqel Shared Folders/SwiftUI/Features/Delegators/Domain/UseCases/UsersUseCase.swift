@@ -7,15 +7,14 @@
 //
 
 import Foundation
-public import Promises
+internal import Promises
 
-
-public protocol UserUseCase {
+protocol UserUseCase {
     func getUsersList(payload: GetUsersPayload) -> Promise<BaseResponse<[UserEntity]>>
 }
 
 
-public class UserUseCaseImpl: UserUseCase {
+class UserUseCaseImpl: UserUseCase {
     
     private let repository: UsersRepo
     private let mapper: any EntityMapper

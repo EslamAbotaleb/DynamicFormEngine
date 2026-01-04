@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public import ObjectMapper
+internal import ObjectMapper
 
 public struct ModelPerviewUser : Codable {
     public var data : UserProfileInfoAD? = nil
@@ -41,7 +41,7 @@ public struct ModelPerviewUser : Codable {
 
 }
 
-public struct ModelUserProfileData : Codable {
+struct ModelUserProfileData : Codable {
     public let id : String?
     public let employeeId : String?
     public let personId : String?
@@ -160,7 +160,7 @@ public struct TopTag: Codable {
     }
 }
 
-public struct UserProfileInfoERP : Codable {
+struct UserProfileInfoERP : Codable {
     public let header : Header?
     public let data : ProfileInfoData?
 
@@ -250,7 +250,7 @@ public struct JobInfo : Codable {
     }
 }
 
-public struct Status: Codable, Mappable {
+internal struct Status: Codable, Mappable {
     public var id: Int?
     public var name: String?
     public var statusCode: String?
@@ -458,11 +458,9 @@ public struct Manager : Codable {
         case manager = "manager"
     }
 
-
 }
 
-
-public struct Header : Codable {
+internal struct Header : Codable {
     public let requestID : String?
     public let status : Status?
 

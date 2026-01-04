@@ -7,8 +7,7 @@
 //
 
 import Foundation
-public import Promises
-
+internal import Promises
 
 protocol SendBackRecipientsUseCase {
     func excute(requestId: String) -> Promise<BaseResponse<[ListModel]>>

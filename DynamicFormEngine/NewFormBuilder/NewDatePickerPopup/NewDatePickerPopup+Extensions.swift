@@ -9,7 +9,7 @@
 import UIKit
 
 extension NewDatePickerPopup: UIPickerViewDelegate, UIPickerViewDataSource {
-    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+  public func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     

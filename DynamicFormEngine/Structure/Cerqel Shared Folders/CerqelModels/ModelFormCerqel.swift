@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ObjectMapper
+internal import ObjectMapper
 
 public let Service_Name_LeavesCerqel = "Leaves"
 public let service_Name_NewEmployeeImprovement_PlanCerqel = "newEmployeeImprovementPlan"
@@ -39,7 +39,7 @@ public struct ModelNestedFormValueCerqel : Codable, FormValueCerqel {
 
 
 public struct ModelControlCerqel : Codable, FormValueCerqel {
-    public var options : [OptionsCerqel]?
+    var options : [OptionsCerqel]?
     public var id : String?
     public var type : ControlType?
     public var format : String?
@@ -400,7 +400,7 @@ public struct RequestFormCerqel : Codable {
 }
 
 
-public struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
+internal struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
     public var key : String?
     public var text : String?
     public var icon : String?
@@ -676,7 +676,7 @@ public struct RelationEquationCerqel : Codable {
 
 
 
-public struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
+internal struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
     public var name : String?
     public var mobileNumber : String?
     public var nationalPassport : String?
@@ -805,7 +805,7 @@ public protocol SearchControlResultCerqel: FormValueCerqel {
 }
 
 
-public struct SearchControlResult_EmployeeModelCerqel : Codable, Mappable, SearchControlResultCerqel {
+internal struct SearchControlResult_EmployeeModelCerqel : Codable, Mappable, SearchControlResultCerqel {
     
     public var name : String?
     public var arabicName : String?

@@ -7,11 +7,11 @@
 //
 
 import UIKit
-public import PanModal
+internal import PanModal
 
 public typealias SuccessCallBack =  (()->())
 
-open class SuccessItem: BaseItem {
+public class SuccessItem: BaseItem {
     var successCallBack: SuccessCallBack
     var successMessage:String
     var successDescription:String?
@@ -23,8 +23,7 @@ open class SuccessItem: BaseItem {
     }
 }
 
-
-open class SuccessBottomSheetViewController: BaseView<FileActionsViewModel, SuccessItem> {
+class SuccessBottomSheetViewController: BaseView<FileActionsViewModel, SuccessItem> {
 
     @IBOutlet weak var successBodyLbl: UILabel!
     @IBOutlet weak var sheetView: UIView!

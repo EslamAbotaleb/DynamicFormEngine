@@ -7,9 +7,9 @@
 //
 
 import Foundation
-public import RxSwift
+internal import RxSwift
 
-public protocol cerqel_NetworkServiceDynamicForm {
+protocol cerqel_NetworkServiceDynamicForm {
      func load<T>(_ resource: T) -> Observable<T> where T : cerqel_CodableResponseDynamicFormProtocol
      func load<T>(_ resource: cerqel_ArrayResource<T>) -> Observable<[T]>
 }

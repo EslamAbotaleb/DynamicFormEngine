@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public import Promises
+internal import Promises
 
 
 protocol ExcuteActionUseCase {

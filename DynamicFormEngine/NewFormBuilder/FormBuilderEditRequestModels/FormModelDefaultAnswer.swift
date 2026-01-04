@@ -13,9 +13,9 @@
 //  Created by Yasser Osama on 09/05/2022.
 //
 
-import ObjectMapper
+internal import ObjectMapper
 
-public class DefaultBaseAnswer: Mappable, Equatable {
+class DefaultBaseAnswer: Mappable, Equatable {
     public static func == (lhs: DefaultBaseAnswer, rhs: DefaultBaseAnswer) -> Bool {
         return true
     }
@@ -38,7 +38,7 @@ public class DefaultBaseAnswer: Mappable, Equatable {
     }
 }
 
-public class DefaultBaseAnswerText: DefaultBaseAnswer {
+class DefaultBaseAnswerText: DefaultBaseAnswer {
     public var value: [String]?
     public var name: String = ""
     public var rowIndex: String?
@@ -72,7 +72,7 @@ public class DefaultBaseAnswerText: DefaultBaseAnswer {
     }
 }
 
-public class DefaultBaseAnswerTextForNumberControl: DefaultBaseAnswer {
+class DefaultBaseAnswerTextForNumberControl: DefaultBaseAnswer {
     public var value: Double?
     public var name: String = ""
     public var rowIndex: String?
@@ -97,7 +97,7 @@ public class DefaultBaseAnswerTextForNumberControl: DefaultBaseAnswer {
     }
 }
 
-public class DefaultBaseAnswerTextNewFormat: DefaultBaseAnswer {
+class DefaultBaseAnswerTextNewFormat: DefaultBaseAnswer {
     public var value: String?
     public var name: String = ""
     public var rowIndex: String?
@@ -133,7 +133,7 @@ public class DefaultBaseAnswerTextNewFormat: DefaultBaseAnswer {
     }
 }
 
-public class DefaultTextboxAnswer: DefaultBaseAnswerText {
+class DefaultTextboxAnswer: DefaultBaseAnswerText {
     public var prefix: String?
     public var suffix: String?
     
@@ -156,7 +156,7 @@ public class DefaultTextboxAnswer: DefaultBaseAnswerText {
     }
 }
 
-public class DefaultTextboxAnswerNewFormat: DefaultBaseAnswerTextNewFormat {
+class DefaultTextboxAnswerNewFormat: DefaultBaseAnswerTextNewFormat {
     public var prefix: String?
     public var suffix: String?
     
@@ -179,7 +179,7 @@ public class DefaultTextboxAnswerNewFormat: DefaultBaseAnswerTextNewFormat {
     }
 }
 
-public class DefaultNumberBoxAnswer: DefaultBaseAnswerText {
+class DefaultNumberBoxAnswer: DefaultBaseAnswerText {
     
     required init?(map: Map) {
         super.init(map: map)
@@ -190,7 +190,7 @@ public class DefaultNumberBoxAnswer: DefaultBaseAnswerText {
     }
 }
 
-public class DefaultNumberBoxAnswerNewFormat: DefaultBaseAnswerTextForNumberControl {
+class DefaultNumberBoxAnswerNewFormat: DefaultBaseAnswerTextForNumberControl {
     
     required init?(map: Map) {
         super.init(map: map)
@@ -203,7 +203,7 @@ public class DefaultNumberBoxAnswerNewFormat: DefaultBaseAnswerTextForNumberCont
 
 
 
-public class DefaultTextAreaAnswer: DefaultBaseAnswerText {
+class DefaultTextAreaAnswer: DefaultBaseAnswerText {
     public var htmlValue: [String]?
     
     required init?(map: Map) {
@@ -223,7 +223,7 @@ public class DefaultTextAreaAnswer: DefaultBaseAnswerText {
     }
 }
 
-public class DefaultTextAreaAnswerNewFormat: DefaultBaseAnswerTextNewFormat {
+class DefaultTextAreaAnswerNewFormat: DefaultBaseAnswerTextNewFormat {
     public var htmlValue: String?
     required init?(map: Map) {
         super.init(map: map)
@@ -241,7 +241,7 @@ public class DefaultTextAreaAnswerNewFormat: DefaultBaseAnswerTextNewFormat {
     }
 }
 
-public class DefaultDateTimeAnswer: DefaultBaseAnswer {
+class DefaultDateTimeAnswer: DefaultBaseAnswer {
     public var value: [DateRange]?
     public var name: String = ""
     public var rowIndex: String?
@@ -274,7 +274,7 @@ public class DefaultDateTimeAnswer: DefaultBaseAnswer {
     }
 }
 
-public class DateRangeTransform: TransformType {
+class DateRangeTransform: TransformType {
     public typealias Object = [DateRange]
     public typealias JSON = [[String: String]]
     
@@ -294,7 +294,8 @@ public class DateRangeTransform: TransformType {
         return nil
     }
 }
-public class DateStringToRangeTransform: TransformType {
+
+class DateStringToRangeTransform: TransformType {
     public typealias Object = [DateRange]
     public typealias JSON = [String]
 
@@ -344,7 +345,7 @@ public class DateStringToRangeTransform: TransformType {
 }
 
 
-public class DateRange: Mappable {
+class DateRange: Mappable {
     public var to: Date?
     public var from: Date?
     
@@ -371,7 +372,7 @@ public class DateRange: Mappable {
 }
 
 
-public class CustomDateFormatTransform: TransformType {
+class CustomDateFormatTransform: TransformType {
     public typealias Object = Date
     public typealias JSON = String
     
@@ -441,7 +442,7 @@ public class CustomDateFormatTransform: TransformType {
 //    }
 //}
 
-public class DefaultFileUploadAnswer: DefaultBaseAnswer {
+class DefaultFileUploadAnswer: DefaultBaseAnswer {
     public var value: [AttachmentForDefault]?
     public var name: String = ""
     public var rowIndex: String?

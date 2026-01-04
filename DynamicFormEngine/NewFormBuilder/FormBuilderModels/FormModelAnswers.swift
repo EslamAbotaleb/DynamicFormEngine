@@ -5,9 +5,9 @@
 //  Created by Yasser Osama on 09/05/2022.
 //
 
-import ObjectMapper
+internal import ObjectMapper
 
-public class BaseAnswer: Mappable, Equatable {
+class BaseAnswer: Mappable, Equatable {
     public static func == (lhs: BaseAnswer, rhs: BaseAnswer) -> Bool {
         return true
     }
@@ -30,7 +30,7 @@ public class BaseAnswer: Mappable, Equatable {
     }
 }
 
-public class BaseAnswerText: BaseAnswer {
+class BaseAnswerText: BaseAnswer {
     public var value: String?
     
     required init?(map: Map) {
@@ -51,7 +51,7 @@ public class BaseAnswerText: BaseAnswer {
 }
 
 
-public class TextboxAnswer: BaseAnswerText {
+class TextboxAnswer: BaseAnswerText {
     public var prefix: String?
     public var suffix: String?
     
@@ -74,7 +74,7 @@ public class TextboxAnswer: BaseAnswerText {
     }
 }
 
-public class TextAreaAnswer: BaseAnswerText {
+class TextAreaAnswer: BaseAnswerText {
     public var htmlValue: String?
     
     required init?(map: Map) {
@@ -94,7 +94,7 @@ public class TextAreaAnswer: BaseAnswerText {
     }
 }
 
-public class DateTimeAnswer: BaseAnswer {
+class DateTimeAnswer: BaseAnswer {
     public var value: [String]?
     public var timeValues: [String]?
     public var type: FormCalendarType?
@@ -119,7 +119,7 @@ public class DateTimeAnswer: BaseAnswer {
     }
 }
 
-public class LocationAnswer: BaseAnswer {
+class LocationAnswer: BaseAnswer {
     public var value: [Place]?
     
     required init?(map: Map) {
@@ -139,7 +139,7 @@ public class LocationAnswer: BaseAnswer {
     }
 }
 
-public class FileUploadAnswer: BaseAnswer {
+class FileUploadAnswer: BaseAnswer {
     public var value: [ModelUploadedMedia]?
     
     required init?(map: Map) {
@@ -158,7 +158,7 @@ public class FileUploadAnswer: BaseAnswer {
     }
 }
 
-public class SwitchAnswer: BaseAnswer {
+class SwitchAnswer: BaseAnswer {
     public var value: Bool = false
     
     required init?(map: Map) {
@@ -179,7 +179,7 @@ public class SwitchAnswer: BaseAnswer {
 }
 
 
-public class SliderAnswer: BaseAnswer {
+class SliderAnswer: BaseAnswer {
     public var value: [Double]?
     
     required init?(map: Map) {
@@ -199,7 +199,7 @@ public class SliderAnswer: BaseAnswer {
     }
 }
 
-public class BaseAnswerMCQ: BaseAnswer {
+class BaseAnswerMCQ: BaseAnswer {
     public var value: [MCQOption]?
     public var otherAnswer: String?
     
@@ -221,7 +221,7 @@ public class BaseAnswerMCQ: BaseAnswer {
         otherAnswer <- map["otherAnswer"]
     }
 }
-public class BaseAnswerMCQGUID: BaseAnswer {
+class BaseAnswerMCQGUID: BaseAnswer {
     public var value: [String]?
     public var otherAnswer: String?
     
@@ -244,7 +244,7 @@ public class BaseAnswerMCQGUID: BaseAnswer {
     }
 }
 
-public class ParagraphAnswer: BaseAnswer {
+class ParagraphAnswer: BaseAnswer {
     public var value: String?
     public var htmlValue: String?
     public var rowIndex: String?
@@ -272,7 +272,7 @@ public class ParagraphAnswer: BaseAnswer {
         name <- map["name"]
     }
 }
-public class ParagraphAnswerWithBoolValue: BaseAnswer {
+class ParagraphAnswerWithBoolValue: BaseAnswer {
     public var value: Bool?
     public var htmlValue: String?
     public var rowIndex: String?

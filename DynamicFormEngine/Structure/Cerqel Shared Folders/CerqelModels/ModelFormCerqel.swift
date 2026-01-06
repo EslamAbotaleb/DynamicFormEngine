@@ -7,14 +7,13 @@
 //
 
 import Foundation
-internal import ObjectMapper
+public import ObjectMapper
 
 public let Service_Name_LeavesCerqel = "Leaves"
 public let service_Name_NewEmployeeImprovement_PlanCerqel = "newEmployeeImprovementPlan"
 public let Service_Name_newEmployeeStatusCerqel = "newEmployeeStatus"
 public let Service_Name_newtransferRequestCerqel = "newtransferRequest"
 public let Service_Name_EmployeeInfoCerqel = "EmployeeInfo"
-
 
 
 public struct ModelFormCerqel : Codable {
@@ -28,7 +27,7 @@ public struct ModelFormCerqel : Codable {
     }
 }
 
-public struct ModelNestedFormValueCerqel : Codable, FormValueCerqel {
+struct ModelNestedFormValueCerqel : Codable, FormValueCerqel {
     public let val : [ModelControlCerqel]?
     enum CodingKeys: String, CodingKey {
 
@@ -37,9 +36,8 @@ public struct ModelNestedFormValueCerqel : Codable, FormValueCerqel {
 
 }
 
-
-public struct ModelControlCerqel : Codable, FormValueCerqel {
-    var options : [OptionsCerqel]?
+struct ModelControlCerqel : Codable, FormValueCerqel {
+    public var options : [OptionsCerqel]?
     public var id : String?
     public var type : ControlType?
     public var format : String?
@@ -385,7 +383,7 @@ public struct AdditionalPropertyCerqel : Codable {
 public struct RequestFormCerqel : Codable {
     public var id : String?
     public var name : String?
-    public var controls : [ModelControlCerqel]?
+    var controls : [ModelControlCerqel]?
     public var formCode : String?
     public var version : Int?
 
@@ -399,14 +397,86 @@ public struct RequestFormCerqel : Codable {
     }
 }
 
-
-internal struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
+/*
+public struct OptionsCerqel : Codable, PublicMappable, FormValueCerqel {
     public var key : String?
     public var text : String?
     public var icon : String?
     public var selectedKey : String?
     
     public var isSelected: Bool = false
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case key = "key"
+        case text = "text"
+        case icon = "icon"
+        case selectedKey
+    }
+    
+    public func encode(to encoder: Encoder) throws {}
+    
+    public init(){}
+        //    public init?(map: Map) {}
+        //
+        //    mutating public func mapping(map: Map) {
+        ////        key <- map["key"]
+        ////        text <- map["text"]
+        //
+        //    }
+    public init?(map: [String: Any]) {
+        
+    }
+    
+    public func mapping() -> [String: Any] {
+        [:]
+    }
+    
+}
+
+internal struct OptionsCerqelAdapter: Mappable {
+    var wrapped: OptionsCerqel
+
+    init?(map: Map) {
+        self.wrapped = OptionsCerqel()
+        self.mapping(map: map)
+    }
+
+    mutating func mapping(map: Map) {
+        var key = wrapped.key
+        var text = wrapped.text
+        var icon = wrapped.icon
+        var selectedKey = wrapped.selectedKey
+
+        key      <- map["key"]
+        text    <- map["text"]
+        icon <- map["icon"]
+        selectedKey <- map["selectedKey"]
+        
+        wrapped.key = key
+        wrapped.text = text
+        wrapped.icon = icon
+        wrapped.selectedKey = selectedKey
+    }
+
+    // Helper to convert back to public struct
+    func toPublic() -> OptionsCerqel {
+        return wrapped
+    }
+}
+public extension Array where Element == OptionsCerqel {
+    func toJSON() -> [[String: Any]] {
+        return self.map { $0.mapping() }
+    }
+}
+*/
+struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
+    var key : String?
+    var text : String?
+    var icon : String?
+    var selectedKey : String?
+    
+    var isSelected: Bool = false
 
     enum CodingKeys: String, CodingKey {
 
@@ -416,12 +486,12 @@ internal struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
         case selectedKey
     }
     
-    public func encode(to encoder: Encoder) throws {}
+    func encode(to encoder: Encoder) throws {}
 
-    public init(){}
-    public init?(map: Map) {}
+    init(){}
+    init?(map: Map) {}
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
 //        key <- map["key"]
 //        text <- map["text"]
 
@@ -429,7 +499,6 @@ internal struct OptionsCerqel : Codable, Mappable, FormValueCerqel {
     
 
 }
-
 public struct ConditionalViewCerqel : Codable {
     public var validConditions : Int?
     public var conditions : [ModelconditionCerqel]?
@@ -674,9 +743,7 @@ public struct RelationEquationCerqel : Codable {
 
 }
 
-
-
-internal struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
+public struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
     public var name : String?
     public var mobileNumber : String?
     public var nationalPassport : String?
@@ -804,7 +871,7 @@ public protocol SearchControlResultCerqel: FormValueCerqel {
     var presentedText: String { set get}
 }
 
-
+/*
 internal struct SearchControlResult_EmployeeModelCerqel : Codable, Mappable, SearchControlResultCerqel {
     
     public var name : String?
@@ -854,7 +921,89 @@ internal struct SearchControlResult_EmployeeModelCerqel : Codable, Mappable, Sea
     }
 
 }
+*/
+public struct SearchControlResult_EmployeeModelCerqel: Codable, Hashable {
+    public var name: String?
+    public var arabicName: String?
+    public var email: String?
+    public var department: String?
+    public var phone: String?
+    public var employeePF: String?
+    public var isSelected: Bool = false
+    public var presentedText: String = ""
 
+    public init() {}
+
+    // Host-project-friendly initializer
+    public init?(map: [String: Any]) {
+        self.name = map["name"] as? String
+        self.arabicName = map["arabicName"] as? String
+        self.email = map["email"] as? String
+        self.department = map["department"] as? String
+        self.phone = map["phone"] as? String
+        self.employeePF = map["employeePF"] as? String
+        self.presentedText = self.arabicName ?? ""
+    }
+
+    public func toJSON() -> [String: Any] {
+        [
+            "name": name as Any,
+            "arabicName": arabicName as Any,
+            "email": email as Any,
+            "department": department as Any,
+            "phone": phone as Any,
+            "employeePF": employeePF as Any
+        ]
+    }
+}
+
+internal struct SearchEmployeeAdapter: Mappable {
+
+    var wrapped: SearchControlResult_EmployeeModelCerqel
+
+    init?(map: Map) {
+        self.wrapped = SearchControlResult_EmployeeModelCerqel()
+        self.mapping(map: map)
+    }
+
+    mutating func mapping(map: Map) {
+        var name: String?
+        var arabicName: String?
+        var email: String?
+        var department: String?
+        var phone: String?
+        var employeePF: String?
+
+        name        <- map["name"]
+        arabicName  <- map["arabicName"]
+        email       <- map["email"]
+        department  <- map["department"]
+        phone       <- map["phone"]
+        employeePF  <- map["employeePF"]
+
+        wrapped.name = name
+        wrapped.arabicName = arabicName
+        wrapped.email = email
+        wrapped.department = department
+        wrapped.phone = phone
+        wrapped.employeePF = employeePF
+        wrapped.presentedText = arabicName ?? ""
+    }
+
+    func toPublic() -> SearchControlResult_EmployeeModelCerqel {
+        wrapped
+    }
+}
+
+public extension SearchControlResult_EmployeeModelCerqel {
+
+    static func DTO(data: [[String: Any]]) -> [SearchControlResult_EmployeeModelCerqel] {
+        let adapters = Mapper<SearchEmployeeAdapter>()
+            .mapArray(JSONArray: data)
+
+        return adapters.map { $0.toPublic() }
+    }
+}
 
 public enum SearchControlResultTypesCerqel: String{
     case EmployeeModel

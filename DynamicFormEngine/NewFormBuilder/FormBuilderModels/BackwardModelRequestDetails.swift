@@ -7,6 +7,7 @@
 //
 
 import Foundation
+public import ObjectMapper
 
 public struct BackwardModelRequestDetailsData : Codable {
     var id: String?
@@ -197,7 +198,7 @@ struct BackwardFileUploadDefaultAnswerValue: Codable, FormValue {
         }
 }
 
-struct BackwardViewForm: Codable, Mappable {
+public struct BackwardViewForm: Codable, Mappable {
     public var weight: BackwardWeight?
     public var rules: BackwardRules?
     public var id: String?
@@ -321,7 +322,7 @@ extension Array where Element == BackwardViewForm {
 //    }
 }
 
-struct BackwardRules: Codable, Mappable {
+public struct BackwardRules: Codable, Mappable {
     public var effectIn: [String]?
     public var dependOn: [String]?
     
@@ -362,9 +363,8 @@ extension BackwardRules {
     }
 }
 
-internal import ObjectMapper
 
-struct BackwardWeight: Codable, Mappable {
+public struct BackwardWeight: Codable, Mappable {
     public var value: Int?
     public var criteria: String?
     
@@ -403,7 +403,7 @@ extension BackwardWeight {
     }
 }
 
-struct BackwardProperties: Codable, Mappable {
+public struct BackwardProperties: Codable, Mappable {
     public var disabledMonths: String?
     public var placeholder: String?
     public var style: Style?
@@ -697,7 +697,7 @@ struct BackwardTaskSubmittedRowDataModel: Codable {
     }
 }
 
-struct BackwardDefaultAnswer: Codable, Mappable {
+public struct BackwardDefaultAnswer: Codable, Mappable {
     
     public var id: String?
     public var name: String?

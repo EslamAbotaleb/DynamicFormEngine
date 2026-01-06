@@ -9,6 +9,90 @@ import Foundation
 import UIKit
 
 public class FormBuilderManager: NSObject {
+
+    public override init() {
+        super.init()
+    }
+
+    public func navigateToRequestDetails(
+        Id: String,
+        isMyRequestFlag: Bool,
+        requestId: String,
+        isFromNotifications: Bool = false,
+        navigationController: UINavigationController?,
+        commentID: String? = "",
+        token: String
+    ) {
+        guard let nav = navigationController else { return }
+
+        // Call the internal router and get a UIViewController
+        let vc = DynamicSharedRouterDynamicForm.goTo(viewName: .requestDetails(
+            Id: Id,
+            isMyRequestFlag: isMyRequestFlag,
+            requestId: requestId,
+            isFromNotifications: isFromNotifications,
+            det: nil,
+            view: nav,
+            commentID: commentID
+        ))
+
+        nav.pushViewController(vc, animated: true)
+    }
+
+    public func navigateToFormVC(
+        navigationController: UINavigationController?,
+        serviceId: String,
+        actionId: String?,
+        buttonId: String?,
+        isEditable: Bool = false,
+        isApproverForm: Bool = false,
+        requestId: String?,
+        serviceIdFromDetails: String? = "",
+        token: String
+    ) {
+        guard let nav = navigationController else { return }
+
+        let vc = DynamicSharedRouterDynamicForm.goTo(viewName: .formViewController(
+            serviceId: serviceId,
+            actionId: actionId,
+            buttonId: buttonId,
+            isEditable: isEditable,
+            isApproverForm: isApproverForm,
+            requestId: requestId
+        ))
+
+        nav.pushViewController(vc, animated: true)
+    }
+    
+    public func navigateToBackwardRequestDetails(
+        Id: String,
+        isMyRequestFlag: Bool,
+        requestId: String,
+        isFromNotifications: Bool = false,
+        navigationController: UINavigationController?,
+        commentID: String? = "",
+        token: String
+    ) {
+        guard let nav = navigationController else { return }
+
+        let vc = DynamicSharedRouterDynamicForm.goTo(
+            viewName: .backwardRequestDetails(
+                Id: Id,
+                isMyRequestFlag: isMyRequestFlag,
+                requestId: requestId,
+                isFromNotifications: isFromNotifications,
+                det: nil,
+                view: nav,
+                commentID: commentID
+            )
+        )
+
+        nav.pushViewController(vc, animated: true)
+    }
+}
+
+/*
+public class FormBuilderManager: NSObject {
     
     public override init() {
         super.init()
@@ -74,5 +158,4 @@ public class FormBuilderManager: NSObject {
 //        let storyboard = UIStoryboard(name: "NewFormBuilder", bundle: bundle)
 //    }
 }
-
-
+*/

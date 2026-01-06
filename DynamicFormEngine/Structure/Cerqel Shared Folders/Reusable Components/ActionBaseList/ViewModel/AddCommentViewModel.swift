@@ -18,7 +18,7 @@ class AddCommentViewModel: BaseVM {
         self.item = item
     }
     
-    override func hydrate() {
+    override public func hydrate() {
         
     }
     

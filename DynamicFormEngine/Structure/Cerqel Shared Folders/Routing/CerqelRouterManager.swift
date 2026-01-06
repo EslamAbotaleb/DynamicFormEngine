@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-public protocol CerqelRouterManager {
+protocol CerqelRouterManager {
     func push(vc: UIViewController)
     func present(vc: UIViewController)
     func pushTo<ViewController: UIViewController,viewModel: BaseVM, Item: BaseItem>(controller: ViewController.Type, viewModel: viewModel.Type, item: Item )

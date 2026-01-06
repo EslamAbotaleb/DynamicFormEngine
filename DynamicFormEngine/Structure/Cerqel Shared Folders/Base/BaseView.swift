@@ -8,18 +8,17 @@
 
 import Foundation
 import UIKit
-public import PanModal
+internal import PanModal
 internal import SkeletonView
 internal import JGProgressHUD
 internal import Toast
 
-open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, PanModalPresentable {
+class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, PanModalPresentable {
     open var panScrollable: UIScrollView? {
         return nil
     }
     open var longFormHeight: PanModalHeight {
         return .maxHeightWithTopInset(10)
-        
     }
     
     open var shortFormHeight: PanModalHeight {
@@ -69,15 +68,15 @@ open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, Pan
         }
     }
     
-    //   public func puplicAlert(title: String, message: String, theme: Theme){
-    //      //  self.showAlertMessage(title: "", message: message, theme: theme)
-    //    }
+        //   public func puplicAlert(title: String, message: String, theme: Theme){
+        //      //  self.showAlertMessage(title: "", message: message, theme: theme)
+        //    }
     
     override open func viewDidLoad() {
         super.viewDidLoad()
         bindind()
     }
-
+    
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationItem.backBarButtonItem?.title = ""
@@ -86,12 +85,12 @@ open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, Pan
     
     
     open func showLoadingCerqel() {
-        // self.view.showGradientSkeleton()
+            // self.view.showGradientSkeleton()
         self.cerqel_showLoading()
     }
     open func showHudLoading() {
         self.cerqel_showLoading()
-        //self.hud.show(in: self.view)
+            //self.hud.show(in: self.view)
     }
     
     open func hideLoadingCerqel(){
@@ -105,8 +104,7 @@ open class BaseView<ViewModel: BaseVM, Item: BaseItem>: BottomSheetVCCerqel, Pan
 }
 
 extension BaseView {
-    
-    open func showToastCerqel(parentView: UIViewController, msg: String){
+    public func showToastCerqel(parentView: UIViewController, msg: String){
         
         var style = ToastStyle()
         style.imageSize = CGSize(width: 20, height: 20)
@@ -117,18 +115,5 @@ extension BaseView {
         
         parentView.view.makeToast(msg, point: CGPoint(x: UIScreen.main.bounds.midX, y: UIScreen.main.bounds.maxY - 140), title: nil, image: nil, style: style, completion: nil)
     }
-    
-    //private func showAlertMessage(title: String, message: String, theme: Theme) {
-    //        let success = MessageView.viewFromNib(layout: .messageView)
-    //        success.configureTheme(theme)
-    //        success.configureDropShadow()
-    //        success.configureContent(title: title, body: message)
-    //        success.button?.isHidden = true
-    //        var successConfig = SwiftMessages.defaultConfig
-    //        successConfig.dimMode = .blur(style: .dark, alpha: 0.4, interactive: true)
-    //        successConfig.presentationStyle = .top
-    //        successConfig.presentationContext = .window(windowLevel: UIWindow.Level.normal)
-    //        SwiftMessages.show(config: successConfig, view: success)
-    
-    //  }
 }
+

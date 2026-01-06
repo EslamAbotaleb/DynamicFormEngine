@@ -9,13 +9,13 @@
 import Foundation
 public import ObjectMapper
 
-enum ViewFormType: /*Codable,*/ Mappable {
+public enum ViewFormType: /*Codable,*/ Mappable {
     case viewForm(ViewForm)
     case backwardViewForm([BackwardViewForm])
 
     // MARK: - Mappable Implementation
 
-    init?(map: Map) {
+    public init?(map: Map) {
         if let viewForm: ViewForm = try? map.value("viewForm") {
             self = .viewForm(viewForm)
             return
@@ -29,7 +29,7 @@ enum ViewFormType: /*Codable,*/ Mappable {
         return nil
     }
 
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         switch self {
         case .viewForm(var viewForm):
             viewForm <- map["viewForm"]
@@ -177,62 +177,7 @@ public struct FileUploadDefaultAnswerValue: Codable, FormValue {
         }
 }
 
-//struct ViewForm : Codable {
-//    let weight : Weight?
-//    let rules : Rules?
-//    let id : String?
-//    let templateQuestionId : String?
-//    let type : String?
-//    let parentId : String?
-//    let order : String?
-//    let properties : Properties?
-//    let RowIndex: String?
-//    var visibilityPermissions: [String]?
-//
-//    enum CodingKeys: String, CodingKey {
-//
-//        case weight = "Weight"
-//        case rules = "Rules"
-//        case id = "Id"
-//        case templateQuestionId = "TemplateQuestionId"
-//        case type = "Type"
-//        case parentId = "ParentId"
-//        case order = "Order"
-//        case properties = "Properties"
-//        case RowIndex
-//        case visibilityPermissions = "visibilityPermissions"
-//    }
-//
-//    init(from decoder: Decoder) throws {
-//        let values = try decoder.container(keyedBy: CodingKeys.self)
-//        weight = try values.decodeIfPresent(Weight.self, forKey: .weight)
-//        rules = try values.decodeIfPresent(Rules.self, forKey: .rules)
-//        id = try values.decodeIfPresent(String.self, forKey: .id)
-//        templateQuestionId = try values.decodeIfPresent(String.self, forKey: .templateQuestionId)
-//        type = try values.decodeIfPresent(String.self, forKey: .type)
-//        parentId = try values.decodeIfPresent(String.self, forKey: .parentId)
-//        order = try values.decodeIfPresent(String.self, forKey: .order)
-//        properties = try values.decodeIfPresent(Properties.self, forKey: .properties)
-//        RowIndex = try values.decodeIfPresent(String.self, forKey: .RowIndex)
-//        visibilityPermissions = try values.decodeIfPresent([String].self, forKey: .visibilityPermissions)
-//    }
-//
-//    init(weight: Weight?, rules: Rules?, id: String?, templateQuestionId: String?, type: String?, parentId: String?, order: String?, properties: Properties?, RowIndex: String?) {
-//           self.weight = weight
-//           self.rules = rules
-//           self.id = id
-//           self.templateQuestionId = templateQuestionId
-//           self.type = type
-//           self.parentId = parentId
-//           self.order = order
-//           self.properties = properties
-//           self.RowIndex = RowIndex
-//       }
-//
-//}
-
-
-struct Rules : Codable, Mappable {
+public struct Rules : Codable, Mappable {
     public var effectIn : [String]?
     public var dependOn : [String]?
 
@@ -261,7 +206,7 @@ struct Rules : Codable, Mappable {
 
 }
 
-struct Weight : Codable, Mappable {
+public struct Weight : Codable, Mappable {
     public var value : Int?
 //    var criteria : String?
 
@@ -290,8 +235,7 @@ struct Weight : Codable, Mappable {
 
 }
 
-
-struct Properties: Codable, Mappable {
+public struct Properties: Codable, Mappable {
     
     public var disabledMonths: String?
     public var placeholder: String?
@@ -500,7 +444,7 @@ struct Properties: Codable, Mappable {
 }
 
 
-struct Localization : Codable, Mappable {
+public struct Localization : Codable, Mappable {
     public var en : En?
     public var ar : Ar?
 
@@ -526,7 +470,7 @@ struct Localization : Codable, Mappable {
 }
 
 
-struct En : Codable, Mappable {
+public struct En : Codable, Mappable {
     public var label : String?
     public var placeholder : String?
     public var sublabel : String?
@@ -564,7 +508,7 @@ struct En : Codable, Mappable {
 
 }
 
-struct Ar: Codable, Mappable {
+public struct Ar: Codable, Mappable {
     public var label : String?
     public var placeholder : String?
     public var sublabel : String?
@@ -602,7 +546,7 @@ struct Ar: Codable, Mappable {
 }
 
 
-struct FieldWarning: Codable, Mappable {
+public struct FieldWarning: Codable, Mappable {
     
     public var maximumDate : String?
     public var minimumDate : String?
@@ -673,7 +617,7 @@ struct TaskSubmittedRowDataModel: Codable, Mappable {
     }
 }
 
-struct DefaultAnswer: Codable, Mappable {
+public struct DefaultAnswer: Codable, Mappable {
     
     public var id: String?
     public var name: String?
@@ -728,7 +672,7 @@ struct DefaultAnswer: Codable, Mappable {
     
 }
 
-struct AttachmentForDefault: Mappable, Codable {
+public struct AttachmentForDefault: Mappable, Codable {
     public var fileId: String?
     public var attachmentDisplaySize: String?
     public var fileName: String?
@@ -799,7 +743,7 @@ class AttachmentForNewDefault: Mappable, Codable {
     
 }
 
-struct DDL: Codable, Mappable {
+public struct DDL: Codable, Mappable {
     public var Name: String?
     public var Value: [MCQOption]?
     public var RowIndex: String?
@@ -822,7 +766,7 @@ struct DDL: Codable, Mappable {
     }
 }
 
-struct BCDDL: Codable, Mappable {
+public struct BCDDL: Codable, Mappable {
     public var Name: String?
     public var Value: [BCMCQOption]?
     public var RowIndex: String?
@@ -845,7 +789,7 @@ struct BCDDL: Codable, Mappable {
     }
 }
 
-struct BCMCQOption: Codable, Mappable, Hashable {
+public struct BCMCQOption: Codable, Mappable, Hashable {
     public var id: String?
     public var name: String?
     public var name_ar: String?
@@ -916,7 +860,7 @@ struct Filee: Codable, Mappable {
     }
 }
 
-enum ValueType: Codable, Mappable {
+public enum ValueType: Codable, Mappable {
     
     case singleDouble(Double)
     case double([Double])
@@ -1883,7 +1827,7 @@ struct Schema: Codable, Mappable {
 
 }
 
-struct ViewForm : /*Codable,*/ Mappable {
+public struct ViewForm : /*Codable,*/ Mappable {
     var schema : FormModel?
     var versionId : String?
 
@@ -1893,9 +1837,9 @@ struct ViewForm : /*Codable,*/ Mappable {
 //        case versionId = "versionId"
 //    }
     
-    init?(map: Map) {}
+    public init?(map: Map) {}
     
-    mutating func mapping(map: Map) {
+    mutating public func mapping(map: Map) {
         schema <- map["schema"]
         versionId <- map["versionId"]
     }
@@ -1908,7 +1852,7 @@ struct ViewForm : /*Codable,*/ Mappable {
 
 }
 
-struct Fields : Codable, Mappable {
+public struct Fields : Codable, Mappable {
     public var weight : Weight?
     public var rules : Rules?
     public var id : String?

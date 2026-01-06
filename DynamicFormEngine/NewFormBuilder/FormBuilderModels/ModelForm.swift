@@ -7,7 +7,7 @@
 //
 
 import Foundation
-internal import ObjectMapper
+public import ObjectMapper
 
 public let Service_Name_Leaves = "Leaves"
 public let service_Name_NewEmployeeImprovement_Plan = "newEmployeeImprovementPlan"
@@ -379,7 +379,7 @@ struct RequestForm : Codable {
     }
 }
 
-struct OptionsInProp : Codable, Mappable {
+public struct OptionsInProp : Codable, Mappable {
     public var id : String?
     public var name : String?
     public var name_ar : String?

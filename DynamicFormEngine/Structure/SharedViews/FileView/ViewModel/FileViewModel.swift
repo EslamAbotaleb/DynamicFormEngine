@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class FileViewModel: BaseVM {
+class FileViewModel: BaseVM {
     private var router:CerqelRouterManager
     private var documentRepo: DocumentLibraryRepo!
     private var localNotification: LocalNotificationProtocol!

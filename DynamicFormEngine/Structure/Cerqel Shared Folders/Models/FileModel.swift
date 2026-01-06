@@ -70,8 +70,6 @@ public enum FileType:  String {
     case jpeg
 }
 
-
-
 public struct FileModel {
     public var id: String
     public var title: String
@@ -142,8 +140,7 @@ public struct FileCheckBox {
     }
 }
 
-public struct File {
-    
+struct File {
     public var fileName: String?
     public var fileExtension: String?
     public var url: URL?
@@ -196,7 +193,7 @@ public struct FileInformation {
     }
 }
 // MARK: - Datum
-public struct FileDTO : Codable {
+struct FileDTO : Codable {
     public let files: [FileResponse]
     public let highlightedFilters: HighlightedFilters?
     
@@ -219,7 +216,7 @@ public struct HighlightedValue: Codable {
     public let value: String
 }
 
-public struct FileResponse: Codable {
+struct FileResponse: Codable {
     
     public let attachmentEn: Attachment
     public let dateCreated: String

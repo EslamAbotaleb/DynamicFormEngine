@@ -30,7 +30,7 @@ public enum UrlBaseEndpoints: String {
     case mocking = "https:/$()/m6djv.wiremockapi.cloud/"
 }
 
-internal protocol cerqel_APIActionDynamicForm: URLRequestConvertible {
+protocol cerqel_APIActionDynamicForm: URLRequestConvertible {
     var method: HTTPMethod { get }
     var path: String { get }
     var actionParameters: [String: Any] { get }

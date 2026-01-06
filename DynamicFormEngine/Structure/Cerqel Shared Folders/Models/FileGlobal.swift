@@ -30,7 +30,7 @@ public enum FileUploadStatus {
 public protocol ProfileSectionResponse: Codable { }
 
 // MARK: - Welcome
-public struct UploadFileRequest: Codable {
+struct UploadFileRequest: Codable {
     public var categoryID: String? = nil
     public var subcategoryID: String? = nil
     public var description: String? = nil
@@ -58,7 +58,7 @@ public struct UploadFileRequest: Codable {
 }
 
 // MARK: - Attachment
-public struct Attachment: Codable,Equatable {
+struct Attachment: Codable,Equatable {
     public var attachmentID, attachmentType, attachmentURL, fileID : String?
     public var storageFileId : String?
     public var attachmentName, attachmentExtension: String?
@@ -76,7 +76,7 @@ public struct Attachment: Codable,Equatable {
     
 }
 
-public struct ProfileAttachment: Codable, Equatable {
+struct ProfileAttachment: Codable, Equatable {
     public let attachmentDisplaySize : String?
     public let downloadUrl : String?
     public let id : String?
@@ -90,7 +90,7 @@ public struct ProfileAttachment: Codable, Equatable {
     public var state: AttachmentState? = .old
 }
 
-public struct EntityDifference {
+struct EntityDifference {
     public var key: String
     public var oldValue: Any
     public var newValue: Any
@@ -104,7 +104,7 @@ public struct EntityDifference {
 
 
 
-public struct Section<T> : ProfileMapper{
+struct Section<T> : ProfileMapper{
     public typealias DTO = Section
 
     public var id: String?
@@ -146,7 +146,7 @@ public struct Section<T> : ProfileMapper{
 }
 
 extension Section {
-    public func toAnySection() -> Section<Any> {
+   func toAnySection() -> Section<Any> {
         return Section<Any>(
             id: self.id,
             title: self.title,
@@ -157,7 +157,7 @@ extension Section {
     }
 }
 
-public protocol ProfileMapper {
+protocol ProfileMapper {
     associatedtype DTO: ProfileMapper
     var objectState: Int? { get set }
     var attachments: [ProfileAttachment]? { get set }
@@ -170,12 +170,12 @@ public protocol ProfileMapper {
 // Default implementations
 extension ProfileMapper {
 
-    public func toDictionary() -> Section<DTO> {
+   func toDictionary() -> Section<DTO> {
         fatalError("toDictionary() has not been implemented")
     }
 
 
-    public func modifiedFields(comparedTo other: DTO) -> [String: (oldValue: Any, newValue: Any)] {
+   func modifiedFields(comparedTo other: DTO) -> [String: (oldValue: Any, newValue: Any)] {
         fatalError("modifiedFields(comparedTo:) has not been implemented")
     }
 
@@ -196,7 +196,7 @@ extension ProfileMapper {
 
 }
 
-public enum SummaryState: Int, Codable {
+enum SummaryState: Int, Codable {
     case old = 0
     case updated = 2
     case added = 1
@@ -204,7 +204,7 @@ public enum SummaryState: Int, Codable {
     case subHeader = 4
 }
 
-public struct Entry {
+struct Entry {
     public var headerTitle: String? = nil
     public var title: String
     public var value: Any
@@ -237,7 +237,7 @@ public struct Entry {
     }
 }
 
-public struct UploadedCVEntity: ProfileMapper, Codable, Equatable {
+struct UploadedCVEntity: ProfileMapper, Codable, Equatable {
     public var id: String?
     public var name: String = ""
     public var isPublic: Bool = true
@@ -277,7 +277,7 @@ public struct UploadedCVEntity: ProfileMapper, Codable, Equatable {
     }
 }
 
-public struct ProfilePicture : Codable, Equatable {
+struct ProfilePicture : Codable, Equatable {
     public var mediaId : String? = ""
     public var fileName : String? = ""
     public var base64File : String? = ""
@@ -313,7 +313,7 @@ public struct ProfilePicture : Codable, Equatable {
         case disableDeleteIcon = "disableDeleteIcon"
     }
     
-    public func map(from data: ProfilePicture) -> UploadedCVEntity {
+  func map(from data: ProfilePicture) -> UploadedCVEntity {
         return UploadedCVEntity(id: data.mediaId,
                                 name: data.fileName ?? "",
                                 isPublic: true,

@@ -7,9 +7,9 @@
 //
 
 import UIKit
-public import PanModal
+internal import PanModal
 
-public class BaseListItem: BaseItem,Equatable {
+internal class BaseListItem: BaseItem,Equatable {
     static public func == (lhs: BaseListItem, rhs: BaseListItem) -> Bool {
         return true
     }
@@ -37,7 +37,7 @@ public class BaseListItem: BaseItem,Equatable {
 }
 
 
-public class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
+internal class BaseList: BaseView<BaseListBottomSheetViewModel, BaseListItem> {
     
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var closeIcon: UIButton!

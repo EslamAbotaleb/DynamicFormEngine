@@ -42,15 +42,6 @@ public struct StatusDtoCerqel: Codable {
 }
 
 public struct ModelUserProfileDataCerqel: Codable {
-//    var basicInfo : profileBasicInfo?
-//    var contactInfo : profileContactInfo?
-//    var jobDetails : profileJobDetails?
-//    var medicalInsuranceInfo: profileInsuranceInfo?
-//    var qrCode: String?
-//    var profilePicture: String?
-//    var canDeletePicture: Bool
-    
-    
     // new structure
     public let id : String?
     public let name : String?

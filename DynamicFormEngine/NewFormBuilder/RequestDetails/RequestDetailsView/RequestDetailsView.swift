@@ -83,7 +83,7 @@ class RequestDetailsView: BaseWireFrameDynamicForm<RequestDetailsViewModel> {
     // MARK: - Functions
      override public func viewDidLoad() {
         super.viewDidLoad()
-        
+
         viewModel.getDetailsFormJson(id: id, isRequest: isMyRequestFlag)
         self.viewModel.formBuilder.resetValues()
         create()

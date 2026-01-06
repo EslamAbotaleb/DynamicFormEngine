@@ -14,10 +14,9 @@ internal import JGProgressHUD
 internal import Kingfisher
 internal import SideMenu
 internal import Reachability
-//import PopupDialog
 import SwiftUI
 
-public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
+class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
     
     var disposeBag = DisposeBag()
     public var viewModel: T!
@@ -27,7 +26,6 @@ public class BaseWireFrameDynamicForm<T: BaseViewModel>: BottomSheetVCCerqel {
         fatalError("You did not override configure method.. ")
     }
     
-
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.view = view

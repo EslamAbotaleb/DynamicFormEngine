@@ -7,7 +7,7 @@
 //
 
 import Foundation
-public import Promises
+internal import Promises
 
 public enum EndPointServiceCerqel {
     case categories
@@ -19,7 +19,7 @@ public enum EndPointServiceCerqel {
 }
 
 
-public protocol BaseRepo {
+protocol BaseRepo {
     func categories() -> Promise<BaseResponse<[ListModel]>>
     func subCategories(categoryId: String)  -> Promise<BaseResponse<[ListModel]>>
     func fileTypes() -> Promise<BaseResponse<[ListModel]>>

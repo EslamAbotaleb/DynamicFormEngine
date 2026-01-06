@@ -60,21 +60,19 @@ public enum DynamicAppStoryboard: String {
     }
 }
 
-public enum DynamicViewControllerNameDynamicForm {
+enum DynamicViewControllerNameDynamicForm {
     case backwardRequestDetails(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: BackwardModelRequestDetailsData? = nil, view: UIViewController?,commentID: String? = "")
     case requestDetails(Id: String, isMyRequestFlag: Bool, requestId: String, isFromNotifications: Bool = false , det: ModelRequestDetailsData? = nil, view: UIViewController?,commentID: String? = "")
     case newFormBuilderDropDown
     case newFormBuilderSearch(code: String)
     case formViewController(serviceId: String,actionId: String?,buttonId: String?, isEditable: Bool? = false, isApproverForm: Bool? = false, requestId: String?)
     case serviceSummaryPagesVC(buttonId: String?, actionId: String?, isEditable: Bool?,isApproverForm: Bool?, requestIdForApprover: String?,view: UIViewController?)
-
 }
 
-public class DynamicSharedRouterDynamicForm {
+class DynamicSharedRouterDynamicForm {
 
     static public func goTo(viewName: DynamicViewControllerNameDynamicForm)-> BottomSheetVCCerqel{
         switch viewName {
-                
         case .serviceSummaryPagesVC(let buttonId, let actionId,let isEditable, let isApproverForm, let requestIdForApprover, let view):
             let storyboard: AppStoryboardDynamicForm = .xibView
             let controller = storyboard.viewController(viewControllerClass: ServiceSummaryPagesVC.self)

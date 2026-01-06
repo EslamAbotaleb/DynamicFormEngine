@@ -52,7 +52,7 @@ public struct FileActions {
     }
 }
 
-public class FileActionsViewModel: BaseVM {
+internal class FileActionsViewModel: BaseVM {
 
     // Dependencies
     private var router:CerqelRouterManager

@@ -61,7 +61,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
         }
     }
     
-    internal var method: HTTPMethod {
+    public var method: HTTPMethod {
         switch self {
         case .submitService, .addChatComment, .uploadFile, .executeAction, .reopenRequest, .withdrawRequest:
             return .post
@@ -143,7 +143,7 @@ enum cerqel_BasicActionDynamicForm: cerqel_APIActionDynamicForm {
         }
     }
     
-    internal var encoding: ParameterEncoding {
+    public var encoding: ParameterEncoding {
         switch method {
         case .post, .put, .delete, .patch :
             return JSONEncoding.default

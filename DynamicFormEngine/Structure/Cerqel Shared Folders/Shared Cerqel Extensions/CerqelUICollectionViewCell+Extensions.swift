@@ -9,11 +9,11 @@
 import UIKit
 
 extension UICollectionViewCell{
-    static var cerqel_identifier: String {
+    static public var cerqel_identifier: String {
         return String(describing: self)
     }
     
-    static var cerqel_nib : UINib{
+    static public var cerqel_nib : UINib{
         return UINib(nibName: cerqel_identifier, bundle: Bundle(for: Self.self))
     }
     

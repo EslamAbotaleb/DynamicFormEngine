@@ -7,7 +7,7 @@
 //
 
 import UIKit
-//public import MOLH
+//internal import MOLH
 //import PopupDialog
 import Network
 internal import Toast

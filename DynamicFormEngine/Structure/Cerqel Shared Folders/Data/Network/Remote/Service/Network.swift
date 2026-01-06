@@ -7,11 +7,11 @@
 //
 
 import Foundation
-//
+
 internal import Promises
 
-typealias UploadProgrssCallBack = ((Double,FileVersionType)->())
-typealias ProgressCallback = (Double) -> Void
+public typealias UploadProgrssCallBack = ((Double,FileVersionType)->())
+public typealias ProgressCallback = (Double) -> Void
 
 protocol Network {
     func call(endpoint: Endpoint) -> Promise<Data>

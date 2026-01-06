@@ -13,7 +13,6 @@ protocol UserUseCase {
     func getUsersList(payload: GetUsersPayload) -> Promise<BaseResponse<[UserEntity]>>
 }
 
-
 class UserUseCaseImpl: UserUseCase {
     
     private let repository: UsersRepo

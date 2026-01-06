@@ -12,7 +12,7 @@ public typealias SelectedCallBack = ((ListModel) -> ())
 public typealias MultiSelectedCallBack = (([ListModel]) -> ())
 public typealias CerqelSelectedCallBack = ((CerqelListModel) -> ())
 
-public class BottomSheetItem: BaseItem,Equatable {
+class BottomSheetItem: BaseItem,Equatable {
 
     public var repo: BaseRepo
     public var endPoint: EndPointServiceCerqel

@@ -9,7 +9,7 @@
 import Foundation
 internal import Promises
 
-public class BaseProcessor<T: Codable> {
+internal class BaseProcessor<T: Codable> {
     
     func execute() -> Promise<T> {
         do {

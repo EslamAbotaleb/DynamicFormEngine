@@ -146,7 +146,7 @@ extension UIViewController {
         return "\(self)"
     }
     
-    static func cerqel_instantiate(fromAppStoryboard appStoryboard: CerqelAppStoryboard) -> Self {
+    static public func cerqel_instantiate(fromAppStoryboard appStoryboard: CerqelAppStoryboard) -> Self {
         
         return appStoryboard.viewController(viewControllerClass: self)
     }

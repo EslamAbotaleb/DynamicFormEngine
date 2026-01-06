@@ -9,7 +9,7 @@
 import UIKit
 import SwiftUI
 
-public class UsersViewController: UIViewController {
+class UsersViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
     public var presentedFromProfile = false

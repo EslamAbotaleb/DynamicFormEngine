@@ -8,6 +8,6 @@
 
 import Foundation
 
-open class BaseItem {
+public class BaseItem {
     public init() {}
 }

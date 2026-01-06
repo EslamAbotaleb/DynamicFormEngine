@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct UserEntity : Codable,Identifiable {
+struct UserEntity : Codable,Identifiable {
    public var sharedBCID : String? = ""
    public var bcid : String? = ""
    public var cn : String? = ""

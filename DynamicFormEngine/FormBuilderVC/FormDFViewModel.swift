@@ -11,7 +11,7 @@ internal import RxCocoa
 import Photos
 import UIKit
 
-public class  FormDFViewModel: BaseViewModel {
+class FormDFViewModel: BaseViewModel {
     
     // MARK: - Variables
     

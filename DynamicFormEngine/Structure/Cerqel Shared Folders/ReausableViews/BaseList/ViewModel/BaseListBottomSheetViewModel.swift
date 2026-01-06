@@ -9,7 +9,7 @@
 import Foundation
 internal import Promises
 
-public class BaseListBottomSheetViewModel: BaseVM {
+class BaseListBottomSheetViewModel: BaseVM {
     
     // Dependencies
     

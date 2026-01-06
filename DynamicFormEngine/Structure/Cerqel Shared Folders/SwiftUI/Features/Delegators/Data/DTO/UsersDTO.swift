@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct UserDTO : Codable {
+struct UserDTO : Codable {
     public let sharedBCID : String?
     public let bcid : String?
     public let cn : String?

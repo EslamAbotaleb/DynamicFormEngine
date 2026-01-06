@@ -7,7 +7,7 @@
 //
 
 import UIKit
-public import PanModal
+internal import PanModal
 
 public typealias ConfirmationCallBack =  (()->())
 
@@ -27,7 +27,7 @@ public class ConfirmationItem: BaseItem {
     }
 }
 
-public class ConfirmationBottomSheetVC: BaseView<BottomSheetBaseViewModel, ConfirmationItem> {
+class ConfirmationBottomSheetVC: BaseView<BottomSheetBaseViewModel, ConfirmationItem> {
     
     @IBOutlet weak var titleLbl: LocalizedLabel!
     @IBOutlet weak var closeIcon: UIButton!

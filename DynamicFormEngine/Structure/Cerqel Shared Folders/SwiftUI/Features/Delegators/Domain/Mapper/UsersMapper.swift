@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class UsersListMapper: EntityMapper{
+class UsersListMapper: EntityMapper{
 
     public typealias DTO = UserDTO
     public typealias Entity = UserEntity

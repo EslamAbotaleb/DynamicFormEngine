@@ -9,11 +9,11 @@
 import Foundation
 internal import RxCocoa
 internal import RxSwift
-//public import MOLH
+//internal import MOLH
 internal import SideMenu
 import UIKit
 
-class AuthManagerDynamicForm {
+public class AuthManagerDynamicForm {
 
     private let service: cerqel_NetworkServiceDynamicForm = cerqel_BasicNetworkServiceDynamicFormImpl.shared
     private let disposeBag = DisposeBag()
@@ -21,7 +21,7 @@ class AuthManagerDynamicForm {
     public var isAuthorized = false
     public var userProfile = ""
     public var isPopUpFromFormBuilder:((String) -> ())?
-    public var items: [[FormViewModelItem]] = []
+//    public var items: [[FormViewModelItem]] = []
     static public var shared = AuthManagerDynamicForm()
     var isRequestSubmitted = false
     public var token: String = ""{
@@ -63,7 +63,7 @@ class AuthManagerDynamicForm {
     var isInboxRefreshRequired = false
     var optionsRetreived = [MCQOption]()
 //    public var profile: BehaviorRelay<ModelUserProfileDataCerqel?> = BehaviorRelay(value: nil)
-    public  var profile: DynamicObjects<ModelUserProfileDataCerqel?> = DynamicObjects( nil)
+    var profile: DynamicObjects<ModelUserProfileDataCerqel?> = DynamicObjects( nil)
 
     var profilePicture: DynamicObjects<(UIImage?,Data?)?> = DynamicObjects(nil)
 

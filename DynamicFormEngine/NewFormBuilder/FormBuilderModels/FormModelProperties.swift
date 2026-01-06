@@ -5,7 +5,7 @@
 //  Created by Yasser Osama on 09/05/2022.
 //
 
-internal import ObjectMapper
+public import ObjectMapper
 import ObjectiveC
 
 typealias BaseLocalization = [String: BasePropertiesLocalization]
@@ -1300,7 +1300,14 @@ struct Place: Mappable {
     }
 }
 
-struct MCQOption: Codable, Mappable, Hashable {
+//public extension Array where Element == MCQOption {
+//    func toJSON() -> [[String: Any]] {
+//        return self.map { $0.mapping() }
+//    }
+//}
+
+
+public struct MCQOption: Codable, Mappable, Hashable {
     public var id: String?
     public var name: String?
     public var name_ar: String?
@@ -1321,6 +1328,65 @@ struct MCQOption: Codable, Mappable, Hashable {
         name_ar <- map["name_ar"]
     }
 }
+
+// Public struct for host project usage
+//public struct MCQOption: Codable, Hashable, PublicMappable {
+//    public var id: String?
+//    public var name: String?
+//    public var name_ar: String?
+//
+//    public init() {}
+//
+//    public init(id: String?,other: Bool, name: String?, name_ar: String?) {
+//        self.id = id
+//        self.name = name
+//        self.name_ar = name_ar
+//    }
+//
+//    // Simple dict-based initializer for host project
+//    public init?(map: [String: Any]) {
+//        self.id = map["id"] as? String
+//        self.name = map["name"] as? String
+//        self.name_ar = map["name_ar"] as? String
+//    }
+//
+//    // Simple dictionary mapping for host project
+//    public func mapping() -> [String: Any] {
+//        [
+//            "id": id as Any,
+//            "name": name as Any,
+//            "name_ar": name_ar as Any
+//        ]
+//    }
+//}
+//
+//internal struct MCQOptionAdapter: Mappable {
+//    var wrapped: MCQOption
+//
+//    init?(map: Map) {
+//        self.wrapped = MCQOption()
+//        self.mapping(map: map)
+//    }
+//
+//    mutating func mapping(map: Map) {
+//        var id = wrapped.id
+//        var name = wrapped.name
+//        var name_ar = wrapped.name_ar
+//
+//        id      <- map["id"]
+//        name    <- map["name"]
+//        name_ar <- map["name_ar"]
+//
+//        wrapped.id = id
+//        wrapped.name = name
+//        wrapped.name_ar = name_ar
+//    }
+//
+//    // Helper to convert back to public struct
+//    func toPublic() -> MCQOption {
+//        return wrapped
+//    }
+//}
 
 class MCQDataSource: Mappable {
     public var url: String?

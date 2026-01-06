@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class SuccessAddEditEventVC: BottomSheetVCCerqel  {
+public class SuccessAddEditEventVC: BottomSheetVCCerqel  {
     
     open var isEdit: Bool?
     

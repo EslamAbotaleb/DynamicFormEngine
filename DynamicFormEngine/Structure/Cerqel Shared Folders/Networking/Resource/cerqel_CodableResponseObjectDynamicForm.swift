@@ -9,7 +9,7 @@
 import Foundation
 internal import RxSwift
 internal import Alamofire
-//public import MOLH
+//internal import MOLH
 
 public class cerqel_CodableResponseObjectDynamicForm<T: Decodable>: Decodable, cerqel_CodableResponseDynamicFormProtocol {
     fileprivate(set) public var success: Bool?

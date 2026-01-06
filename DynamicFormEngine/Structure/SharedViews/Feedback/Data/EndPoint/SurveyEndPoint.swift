@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct SurveyEndPoint: Endpoint {
+internal struct SurveyEndPoint: Endpoint {
     public var urlPrefix: String = ""
     public var service: EndpointService = .survey
     public var method: EndpointMethod = .post
@@ -23,7 +23,6 @@ public struct SurveyEndPoint: Endpoint {
         multipart = []
     }
 }
-
 
 public struct SurveyPayload: Codable {
     public var serviceId: String?

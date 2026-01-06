@@ -9,7 +9,7 @@
 import UIKit
 internal import PanModal
 
-class AddCommentItem: BaseItem {
+public class AddCommentItem: BaseItem {
     var didCommentSent:  ((String?)->())
     var mainTitle: String
     var isCommentRequired: Bool
@@ -38,7 +38,7 @@ class AddCommentBottomSheet: BaseView<AddCommentViewModel, AddCommentItem> {
     let textViewPadding = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16)
     var currentHeight : CGFloat  = 380
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
         initialConfiguration()
@@ -96,7 +96,7 @@ class AddCommentBottomSheet: BaseView<AddCommentViewModel, AddCommentItem> {
 }
 
 extension AddCommentBottomSheet:UITextViewDelegate {
-    func textViewDidChange(_ textView: UITextView) {
+    public func textViewDidChange(_ textView: UITextView) {
         placeholderLbl.isHidden = !textView.text.isEmpty
         if item.isCommentRequired == true {
             submittButton.isUserInteractionEnabled = !textView.text.isEmpty
@@ -107,7 +107,7 @@ extension AddCommentBottomSheet:UITextViewDelegate {
         }
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         let newText = (textView.text as NSString).replacingCharacters(in: range, with: text)
         return newText.count < 500
     }

@@ -9,7 +9,7 @@
 
 import Foundation
 
-public class AcknowledgeViewModel: BaseVM {
+class AcknowledgeViewModel: BaseVM {
     
     
     private var router:CerqelRouterManager

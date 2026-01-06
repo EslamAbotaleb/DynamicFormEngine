@@ -6,10 +6,10 @@
 //
 
 import UIKit
-//public import EzPopup
+//internal import EzPopup
 internal import Expression
 //import SwiftMessages
-//public import RxCocoa
+//internal import RxCocoa
 //internal import RxSwift
 import SwiftUI
 internal import JGProgressHUD

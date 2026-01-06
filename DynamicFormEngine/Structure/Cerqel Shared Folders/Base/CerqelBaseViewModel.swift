@@ -8,9 +8,9 @@
 
 import Foundation
 internal import RxCocoa
-public import RxSwift
+internal import RxSwift
 
-public class CerqelBaseViewModel {
+internal class CerqelBaseViewModel {
     public var errorsObservable: Observable<Error>!
     public var errorsSubject = PublishSubject<Error>()
     

@@ -16,7 +16,7 @@ public protocol FileViewer {
 }
 
 
-public class FileViewerManager : NSObject, FileViewer {
+class FileViewerManager : NSObject, FileViewer {
  
 //    var viewController: UIViewController
     public var router : CerqelRouterManager

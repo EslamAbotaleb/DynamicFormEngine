@@ -28,7 +28,7 @@ protocol DocumentLibraryRepo {
 
 }
 
-public struct UploadResponseModel: Codable {
+struct UploadResponseModel: Codable {
     public let name, id, fileSize: String?
     public let previewURL, downloadURL: String?
     public let contentType, documentType: String?
@@ -44,7 +44,7 @@ public struct UploadResponseModel: Codable {
     }
 }
 extension UploadResponseModel {
-    public func toAttachment() -> Attachment {
+    func toAttachment() -> Attachment {
         return Attachment(
             attachmentID: id ?? "",
             attachmentType: contentType ?? "",
@@ -59,7 +59,7 @@ extension UploadResponseModel {
         )
     }
     
-    public func toProfilePicture() -> ProfilePicture {
+   public func toProfilePicture() -> ProfilePicture {
         let mediaId = id ?? ""
         let fileName = name ?? ""
         let contentType = contentType ?? ""

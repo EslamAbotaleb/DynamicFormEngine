@@ -28,6 +28,7 @@
 		AA0707E82EF58E3700B55C22 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707C92EF58E3700B55C22 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA0707E92EF58E3700B55C22 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707CB2EF58E3700B55C22 /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AA1CCA3C2F06882C002F88AC /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AA1CCA3B2F06882C002F88AC /* IQKeyboardManagerSwift */; };
+		AA1E91132F0B30AA0034DCA2 /* DelegatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E91112F0B30AA0034DCA2 /* DelegatorModel.swift */; };
 		AA3C31122EF953B600C2778C /* FileActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C310F2EF953B600C2778C /* FileActionCell.swift */; };
 		AA3C31192EF954A900C2778C /* AcknowledgeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C31142EF954A900C2778C /* AcknowledgeVC.swift */; };
 		AA51BD402EF4203B00488B90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AA51BD042EF4203B00488B90 /* Localizable.strings */; };
@@ -229,11 +230,13 @@
 		AA7196A12EF44E6E00D31A70 /* FastAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7196712EF44E6E00D31A70 /* FastAnimator.swift */; };
 		AA7196A22EF44E6E00D31A70 /* CRRefreshBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7196862EF44E6E00D31A70 /* CRRefreshBundle.swift */; };
 		AA7196A32EF44E6E00D31A70 /* FastCircleLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7196742EF44E6E00D31A70 /* FastCircleLayer.swift */; };
+		AA817C682F0D0CCB00A19B6B /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = AA817C672F0D0CCB00A19B6B /* DropDown */; };
+		AA817C772F0D188300A19B6B /* EmptyTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA817C762F0D188300A19B6B /* EmptyTVcell.xib */; };
+		AA817C852F0D306800A19B6B /* AddEditInvitedCV.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA817C842F0D306800A19B6B /* AddEditInvitedCV.xib */; };
 		AA820A1C2EF6308D0022BCA4 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = AA820A1B2EF6308D0022BCA4 /* DGCharts */; };
 		AA856BDD2F03D1D90084FA53 /* FileViewerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA856BDC2F03D1D90084FA53 /* FileViewerManager.swift */; };
 		AA856BE52F03D2700084FA53 /* FileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA856BDE2F03D2700084FA53 /* FileViewModel.swift */; };
 		AA856BE62F03D2700084FA53 /* FileWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA856BE02F03D2700084FA53 /* FileWebViewController.swift */; };
-		AA8612FD2F06A8BF000D3274 /* DropDown in Frameworks */ = {isa = PBXBuildFile; productRef = AA8612FC2F06A8BF000D3274 /* DropDown */; };
 		AA8613002F06AB29000D3274 /* RichEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = AA8612FF2F06AB29000D3274 /* RichEditorView */; };
 		AA8613092F06B2DD000D3274 /* Expression in Frameworks */ = {isa = PBXBuildFile; productRef = AA8613082F06B2DD000D3274 /* Expression */; };
 		AA86130F2F06B377000D3274 /* EasyTipView in Frameworks */ = {isa = PBXBuildFile; productRef = AA86130E2F06B377000D3274 /* EasyTipView */; };
@@ -542,7 +545,6 @@
 		AAC0EBCD2EF61E0100DDE9FF /* BaseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EA852EF61E0100DDE9FF /* BaseList.swift */; };
 		AAC0EBCF2EF61E0100DDE9FF /* DelegatorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAB82EF61E0100DDE9FF /* DelegatorItem.swift */; };
 		AAC0EBD22EF61E0100DDE9FF /* StepsUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EA242EF61E0100DDE9FF /* StepsUIView.swift */; };
-		AAC0EBD72EF61E0100DDE9FF /* DelegatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAB92EF61E0100DDE9FF /* DelegatorModel.swift */; };
 		AAC0EBDD2EF61E0100DDE9FF /* CerqelColorsDynamicForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAA12EF61E0100DDE9FF /* CerqelColorsDynamicForm.swift */; };
 		AAC0EBE12EF61E0100DDE9FF /* UsersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAA52EF61E0100DDE9FF /* UsersUseCase.swift */; };
 		AAC0EBE22EF61E0100DDE9FF /* DelegatorsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC0EAB52EF61E0100DDE9FF /* DelegatorsViewModel.swift */; };
@@ -724,6 +726,7 @@
 		AA0707D22EF58E3700B55C22 /* DistancePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
 		AA0707D32EF58E3700B55C22 /* SWActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
 		AA0707D52EF58E3700B55C22 /* SWActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		AA1E91112F0B30AA0034DCA2 /* DelegatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatorModel.swift; sourceTree = "<group>"; };
 		AA3C310F2EF953B600C2778C /* FileActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileActionCell.swift; sourceTree = "<group>"; };
 		AA3C31142EF954A900C2778C /* AcknowledgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgeVC.swift; sourceTree = "<group>"; };
 		AA51BCE72EF4203B00488B90 /* OAuth2Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuth2Error.swift; sourceTree = "<group>"; };
@@ -923,6 +926,8 @@
 		AA71968A2EF44E6E00D31A70 /* CRRefreshHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRefreshHeaderView.swift; sourceTree = "<group>"; };
 		AA71968B2EF44E6E00D31A70 /* CRRefreshProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CRRefreshProtocol.swift; sourceTree = "<group>"; };
 		AA71968C2EF44E6E00D31A70 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		AA817C762F0D188300A19B6B /* EmptyTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTVcell.xib; sourceTree = "<group>"; };
+		AA817C842F0D306800A19B6B /* AddEditInvitedCV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEditInvitedCV.xib; sourceTree = "<group>"; };
 		AA856BDC2F03D1D90084FA53 /* FileViewerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewerManager.swift; sourceTree = "<group>"; };
 		AA856BDE2F03D2700084FA53 /* FileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewModel.swift; sourceTree = "<group>"; };
 		AA856BE02F03D2700084FA53 /* FileWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWebViewController.swift; sourceTree = "<group>"; };
@@ -1231,7 +1236,6 @@
 		AAC0EAB52EF61E0100DDE9FF /* DelegatorsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatorsViewModel.swift; sourceTree = "<group>"; };
 		AAC0EAB72EF61E0100DDE9FF /* DelegatorNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatorNames.swift; sourceTree = "<group>"; };
 		AAC0EAB82EF61E0100DDE9FF /* DelegatorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatorItem.swift; sourceTree = "<group>"; };
-		AAC0EAB92EF61E0100DDE9FF /* DelegatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatorModel.swift; sourceTree = "<group>"; };
 		AAC0EAD42EF61E0100DDE9FF /* ExtensionView + Swiftui.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionView + Swiftui.swift"; sourceTree = "<group>"; };
 		AAC0EAD82EF61E0100DDE9FF /* DynamicHeightModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHeightModifier.swift; sourceTree = "<group>"; };
 		AAC0EAD92EF61E0100DDE9FF /* NavigationBarBackButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarBackButtonModifier.swift; sourceTree = "<group>"; };
@@ -1360,6 +1364,7 @@
 				AAC0E63F2EF6068100DDE9FF /* KeychainAccess in Frameworks */,
 				AAB7BA1F2EF334C3000E4A20 /* NicoProgress in Frameworks */,
 				AAA6A4992EF303F000520357 /* Kingfisher in Frameworks */,
+				AA817C682F0D0CCB00A19B6B /* DropDown in Frameworks */,
 				AA820A1C2EF6308D0022BCA4 /* DGCharts in Frameworks */,
 				AA86141A2F06D9C3000D3274 /* Toast in Frameworks */,
 				AAB7BA012EF330C0000E4A20 /* SideMenu in Frameworks */,
@@ -1380,7 +1385,6 @@
 				AA8613092F06B2DD000D3274 /* Expression in Frameworks */,
 				AAA922AF2F06A429007C7AB6 /* Promises in Frameworks */,
 				AA71963D2EF44A1900D31A70 /* Lottie in Frameworks */,
-				AA8612FD2F06A8BF000D3274 /* DropDown in Frameworks */,
 				AAEC9B132F009EC200B449E2 /* RxAlamofire in Frameworks */,
 				AAB7BA4E2EF37272000E4A20 /* EFQRCode in Frameworks */,
 			);
@@ -1548,6 +1552,8 @@
 		AA6833762F066AC30079DAD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AA817C842F0D306800A19B6B /* AddEditInvitedCV.xib */,
+				AA817C762F0D188300A19B6B /* EmptyTVcell.xib */,
 				AAA921F92F068E3C007C7AB6 /* DropDownCell.xib */,
 				AA6833772F066B040079DAD9 /* ActionBaseListTableViewCell.xib */,
 				AA6833782F066B040079DAD9 /* ActionCommentTVcell.xib */,
@@ -3762,7 +3768,6 @@
 			children = (
 				AAC0EAB72EF61E0100DDE9FF /* DelegatorNames.swift */,
 				AAC0EAB82EF61E0100DDE9FF /* DelegatorItem.swift */,
-				AAC0EAB92EF61E0100DDE9FF /* DelegatorModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -3883,6 +3888,7 @@
 				AAC0ECC22EF61E0B00DDE9FF /* BaseResponse.swift */,
 				AAC0ECC32EF61E0B00DDE9FF /* FilterSectionCerqelModel.swift */,
 				AAADBA2E2EF83AE000F696F3 /* FileModel.swift */,
+				AA1E91112F0B30AA0034DCA2 /* DelegatorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -4313,13 +4319,13 @@
 				AAA9220B2F069297007C7AB6 /* Cosmos */,
 				AAA922AC2F06A429007C7AB6 /* FBLPromises */,
 				AAA922AE2F06A429007C7AB6 /* Promises */,
-				AA8612FC2F06A8BF000D3274 /* DropDown */,
 				AA8612FF2F06AB29000D3274 /* RichEditorView */,
 				AA8613082F06B2DD000D3274 /* Expression */,
 				AA86130E2F06B377000D3274 /* EasyTipView */,
 				AA8614192F06D9C3000D3274 /* Toast */,
 				AA6B85342F07446300653243 /* KeychainSwift */,
 				AA6B853A2F07456A00653243 /* Reachability */,
+				AA817C672F0D0CCB00A19B6B /* DropDown */,
 			);
 			productName = DynamicFormEngine;
 			productReference = E47B1BE22B8F5D9D00E22A45 /* DynamicFormEngine.framework */;
@@ -4395,13 +4401,13 @@
 				AA1CCA3A2F06882C002F88AC /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				AAA9220A2F069297007C7AB6 /* XCRemoteSwiftPackageReference "Cosmos" */,
 				AAA922AB2F06A429007C7AB6 /* XCRemoteSwiftPackageReference "promises" */,
-				AA8612FB2F06A8BF000D3274 /* XCRemoteSwiftPackageReference "DropDown" */,
 				AA8612FE2F06AB29000D3274 /* XCRemoteSwiftPackageReference "RichEditorView" */,
 				AA8613072F06B2DD000D3274 /* XCRemoteSwiftPackageReference "Expression" */,
 				AA86130D2F06B377000D3274 /* XCRemoteSwiftPackageReference "EasyTipView" */,
 				AA8614182F06D9C3000D3274 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 				AA6B85332F07446300653243 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				AA6B85392F07456A00653243 /* XCRemoteSwiftPackageReference "Reachability.swift" */,
+				AA817C662F0D0CCB00A19B6B /* XCRemoteSwiftPackageReference "DropDown" */,
 			);
 			productRefGroup = E47B1BE32B8F5D9D00E22A45 /* Products */;
 			projectDirPath = "";
@@ -4458,6 +4464,7 @@
 				AA6834342F066B040079DAD9 /* NewInfoIndicatorTVcell.xib in Resources */,
 				AA6834352F066B040079DAD9 /* SliderTableViewCell.xib in Resources */,
 				AA6834362F066B040079DAD9 /* NestedValueDetailsVC.xib in Resources */,
+				AA817C852F0D306800A19B6B /* AddEditInvitedCV.xib in Resources */,
 				AA6834372F066B040079DAD9 /* PreviousActionV2TVC.xib in Resources */,
 				AA6834382F066B040079DAD9 /* NestedFormViewController.storyboard in Resources */,
 				AA6834392F066B040079DAD9 /* NPSTableViewCell.xib in Resources */,
@@ -4515,6 +4522,7 @@
 				AA68346C2F066B040079DAD9 /* ChatEmptyTVcell.xib in Resources */,
 				AA68346D2F066B040079DAD9 /* CheckBoxCell.xib in Resources */,
 				AA68346E2F066B040079DAD9 /* MCQTableViewCell.xib in Resources */,
+				AA817C772F0D188300A19B6B /* EmptyTVcell.xib in Resources */,
 				AA68346F2F066B040079DAD9 /* WithdrawDDOptionTVcell.xib in Resources */,
 				AA6834702F066B040079DAD9 /* NewFormBuilder.storyboard in Resources */,
 				AA6834712F066B040079DAD9 /* DeleteBottomSheet.xib in Resources */,
@@ -4672,7 +4680,6 @@
 				AAC0EBCD2EF61E0100DDE9FF /* BaseList.swift in Sources */,
 				AAC0EBCF2EF61E0100DDE9FF /* DelegatorItem.swift in Sources */,
 				AAC0EBD22EF61E0100DDE9FF /* StepsUIView.swift in Sources */,
-				AAC0EBD72EF61E0100DDE9FF /* DelegatorModel.swift in Sources */,
 				AAADA1852EF6D3430036FD04 /* DRPLoadingSpinnerTimingFunction.m in Sources */,
 				AAADA1862EF6D3430036FD04 /* DRPLoadingSpinner.m in Sources */,
 				AAADA1872EF6D3430036FD04 /* DRPRefreshControl.m in Sources */,
@@ -4800,6 +4807,7 @@
 				AAA6A3D62EF2E84000520357 /* ActionCommentTVcell.swift in Sources */,
 				AAE37A0D2F02BF91004EBA29 /* SurveyRepoImpl.swift in Sources */,
 				AAA6A3D72EF2E84000520357 /* ChatTVcell.swift in Sources */,
+				AA1E91132F0B30AA0034DCA2 /* DelegatorModel.swift in Sources */,
 				AAA6A3D82EF2E84000520357 /* BackwardRequestDetailsView.swift in Sources */,
 				AAA6A3D92EF2E84000520357 /* FunctionNode.swift in Sources */,
 				AAA6A3DA2EF2E84000520357 /* BackwardModelRequestDetails.swift in Sources */,
@@ -5681,20 +5689,20 @@
 				version = 3.5.0;
 			};
 		};
+		AA817C662F0D0CCB00A19B6B /* XCRemoteSwiftPackageReference "DropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AssistoLab/DropDown.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		AA820A1A2EF6308D0022BCA4 /* XCRemoteSwiftPackageReference "Charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ChartsOrg/Charts.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.1.0;
-			};
-		};
-		AA8612FB2F06A8BF000D3274 /* XCRemoteSwiftPackageReference "DropDown" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AssistoLab/DropDown.git";
-			requirement = {
-				branch = master;
-				kind = branch;
 			};
 		};
 		AA8612FE2F06AB29000D3274 /* XCRemoteSwiftPackageReference "RichEditorView" */ = {
@@ -5923,15 +5931,15 @@
 			package = AA71963B2EF44A1900D31A70 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
+		AA817C672F0D0CCB00A19B6B /* DropDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA817C662F0D0CCB00A19B6B /* XCRemoteSwiftPackageReference "DropDown" */;
+			productName = DropDown;
+		};
 		AA820A1B2EF6308D0022BCA4 /* DGCharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AA820A1A2EF6308D0022BCA4 /* XCRemoteSwiftPackageReference "Charts" */;
 			productName = DGCharts;
-		};
-		AA8612FC2F06A8BF000D3274 /* DropDown */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AA8612FB2F06A8BF000D3274 /* XCRemoteSwiftPackageReference "DropDown" */;
-			productName = DropDown;
 		};
 		AA8612FF2F06AB29000D3274 /* RichEditorView */ = {
 			isa = XCSwiftPackageProductDependency;

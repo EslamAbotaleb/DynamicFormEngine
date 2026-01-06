@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct UploadEndPoint: Endpoint {
+struct UploadEndPoint: Endpoint {
     
     public var urlPrefix: String = ""
     public var service: EndpointService = .upload
@@ -27,7 +27,7 @@ public struct UploadEndPoint: Endpoint {
     }
 }
 
-public struct UploadUserProfileEndPoint: Endpoint {
+struct UploadUserProfileEndPoint: Endpoint {
 
     public var urlPrefix: String = ""
     public var service: EndpointService = .uploadUserProfile

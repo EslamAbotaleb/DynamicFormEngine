@@ -19,7 +19,7 @@ struct ServerError: Codable, Error, LocalizedError {
         self.status = status
     }
 
-    struct ErrorValue : Codable {
+    public struct ErrorValue : Codable {
         var errorAsString : String?
         var errorAsList : [String]?
         init(from decoder: Decoder) throws {

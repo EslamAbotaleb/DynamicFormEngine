@@ -26,7 +26,7 @@ public protocol ActionsProtocol {
     func handleFileAction(fileId: String, actionId : Int)
 }
 
-public class FileActionItem: BaseItem {
+class FileActionItem: BaseItem {
     public var file: FileModel
     public var router:CerqelRouterManager
     public var delegate:ActionsProtocol?

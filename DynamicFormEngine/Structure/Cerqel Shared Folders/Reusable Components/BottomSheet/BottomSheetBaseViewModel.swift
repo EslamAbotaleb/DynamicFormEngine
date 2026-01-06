@@ -8,4 +8,4 @@
 
 import Foundation
 
-public class BottomSheetBaseViewModel: BaseVM {}
+class BottomSheetBaseViewModel: BaseVM {}

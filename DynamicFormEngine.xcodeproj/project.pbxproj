@@ -27,6 +27,7 @@
 		AA0707E72EF58E3700B55C22 /* ActionSheetDatePicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707CC2EF58E3700B55C22 /* ActionSheetDatePicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA0707E82EF58E3700B55C22 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707C92EF58E3700B55C22 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA0707E92EF58E3700B55C22 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707CB2EF58E3700B55C22 /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		AA0F65672F0D3DB200D07A75 /* OptionTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65662F0D3DB200D07A75 /* OptionTVcell.xib */; };
 		AA1CCA3C2F06882C002F88AC /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AA1CCA3B2F06882C002F88AC /* IQKeyboardManagerSwift */; };
 		AA1E91132F0B30AA0034DCA2 /* DelegatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E91112F0B30AA0034DCA2 /* DelegatorModel.swift */; };
 		AA3C31122EF953B600C2778C /* FileActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C310F2EF953B600C2778C /* FileActionCell.swift */; };
@@ -726,6 +727,7 @@
 		AA0707D22EF58E3700B55C22 /* DistancePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
 		AA0707D32EF58E3700B55C22 /* SWActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
 		AA0707D52EF58E3700B55C22 /* SWActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
+		AA0F65662F0D3DB200D07A75 /* OptionTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionTVcell.xib; sourceTree = "<group>"; };
 		AA1E91112F0B30AA0034DCA2 /* DelegatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatorModel.swift; sourceTree = "<group>"; };
 		AA3C310F2EF953B600C2778C /* FileActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileActionCell.swift; sourceTree = "<group>"; };
 		AA3C31142EF954A900C2778C /* AcknowledgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgeVC.swift; sourceTree = "<group>"; };
@@ -1552,6 +1554,7 @@
 		AA6833762F066AC30079DAD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AA0F65662F0D3DB200D07A75 /* OptionTVcell.xib */,
 				AA817C842F0D306800A19B6B /* AddEditInvitedCV.xib */,
 				AA817C762F0D188300A19B6B /* EmptyTVcell.xib */,
 				AAA921F92F068E3C007C7AB6 /* DropDownCell.xib */,
@@ -4480,6 +4483,7 @@
 				AA6834432F066B040079DAD9 /* Assets.xcassets in Resources */,
 				AA6834442F066B040079DAD9 /* SectionTableViewCell.xib in Resources */,
 				AA6834452F066B040079DAD9 /* ChatFooterAttachmentCVcell.xib in Resources */,
+				AA0F65672F0D3DB200D07A75 /* OptionTVcell.xib in Resources */,
 				AA6834462F066B040079DAD9 /* SendBackVC.xib in Resources */,
 				AA6834472F066B040079DAD9 /* FileActionCell.xib in Resources */,
 				AA6834482F066B040079DAD9 /* TextAreaTableViewCell.xib in Resources */,

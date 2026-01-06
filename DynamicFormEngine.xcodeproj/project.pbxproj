@@ -28,6 +28,24 @@
 		AA0707E82EF58E3700B55C22 /* AbstractActionSheetPicker.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707C92EF58E3700B55C22 /* AbstractActionSheetPicker.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AA0707E92EF58E3700B55C22 /* ActionSheetCustomPickerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AA0707CB2EF58E3700B55C22 /* ActionSheetCustomPickerDelegate.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		AA0F65672F0D3DB200D07A75 /* OptionTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65662F0D3DB200D07A75 /* OptionTVcell.xib */; };
+		AA0F65692F0D3E0200D07A75 /* SearchControlTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65682F0D3E0200D07A75 /* SearchControlTVcell.xib */; };
+		AA0F656B2F0D3E3B00D07A75 /* tableControlTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F656A2F0D3E3B00D07A75 /* tableControlTVcell.xib */; };
+		AA0F656D2F0D3E5200D07A75 /* SwitchTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F656C2F0D3E5200D07A75 /* SwitchTVcell.xib */; };
+		AA0F65702F0D3E6100D07A75 /* SingleVisitorInfoTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F656E2F0D3E6100D07A75 /* SingleVisitorInfoTVcell.xib */; };
+		AA0F65712F0D3E6100D07A75 /* EmployeeInfoControlTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F656F2F0D3E6100D07A75 /* EmployeeInfoControlTVcell.xib */; };
+		AA0F65732F0D3E6900D07A75 /* InfoIndicatorTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65722F0D3E6900D07A75 /* InfoIndicatorTVcell.xib */; };
+		AA0F65752F0D3E6E00D07A75 /* CheckBoxControlTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65742F0D3E6E00D07A75 /* CheckBoxControlTVcell.xib */; };
+		AA0F65772F0D3E7400D07A75 /* Radio2ItemsOnlyTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65762F0D3E7400D07A75 /* Radio2ItemsOnlyTVcell.xib */; };
+		AA0F65792F0D3E7E00D07A75 /* TimePickerTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65782F0D3E7E00D07A75 /* TimePickerTVcell.xib */; };
+		AA0F657B2F0D3EA000D07A75 /* TextAreaTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F657A2F0D3EA000D07A75 /* TextAreaTVcell.xib */; };
+		AA0F657D2F0D3EA600D07A75 /* DatePickerTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F657C2F0D3EA600D07A75 /* DatePickerTVcell.xib */; };
+		AA0F657F2F0D3EAB00D07A75 /* RangeDatePickerTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F657E2F0D3EAB00D07A75 /* RangeDatePickerTVcell.xib */; };
+		AA0F65812F0D3EB000D07A75 /* TextBoxTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65802F0D3EB000D07A75 /* TextBoxTVcell.xib */; };
+		AA0F65832F0D3EB500D07A75 /* LabelControleTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65822F0D3EB500D07A75 /* LabelControleTVcell.xib */; };
+		AA0F65852F0D3EBA00D07A75 /* LinkTVcellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65842F0D3EBA00D07A75 /* LinkTVcellTableViewCell.xib */; };
+		AA0F65872F0D3EBF00D07A75 /* DateTimeRangePickerTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65862F0D3EBF00D07A75 /* DateTimeRangePickerTVcell.xib */; };
+		AA0F65892F0D3EC500D07A75 /* UploadMediaTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F65882F0D3EC500D07A75 /* UploadMediaTVcell.xib */; };
+		AA0F658B2F0D3EC900D07A75 /* MediaItemTVcell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA0F658A2F0D3EC900D07A75 /* MediaItemTVcell.xib */; };
 		AA1CCA3C2F06882C002F88AC /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AA1CCA3B2F06882C002F88AC /* IQKeyboardManagerSwift */; };
 		AA1E91132F0B30AA0034DCA2 /* DelegatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1E91112F0B30AA0034DCA2 /* DelegatorModel.swift */; };
 		AA3C31122EF953B600C2778C /* FileActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3C310F2EF953B600C2778C /* FileActionCell.swift */; };
@@ -728,6 +746,24 @@
 		AA0707D32EF58E3700B55C22 /* SWActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SWActionSheet.h; sourceTree = "<group>"; };
 		AA0707D52EF58E3700B55C22 /* SWActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWActionSheet.m; sourceTree = "<group>"; };
 		AA0F65662F0D3DB200D07A75 /* OptionTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OptionTVcell.xib; sourceTree = "<group>"; };
+		AA0F65682F0D3E0200D07A75 /* SearchControlTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchControlTVcell.xib; sourceTree = "<group>"; };
+		AA0F656A2F0D3E3B00D07A75 /* tableControlTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tableControlTVcell.xib; sourceTree = "<group>"; };
+		AA0F656C2F0D3E5200D07A75 /* SwitchTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SwitchTVcell.xib; sourceTree = "<group>"; };
+		AA0F656E2F0D3E6100D07A75 /* SingleVisitorInfoTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SingleVisitorInfoTVcell.xib; sourceTree = "<group>"; };
+		AA0F656F2F0D3E6100D07A75 /* EmployeeInfoControlTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmployeeInfoControlTVcell.xib; sourceTree = "<group>"; };
+		AA0F65722F0D3E6900D07A75 /* InfoIndicatorTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoIndicatorTVcell.xib; sourceTree = "<group>"; };
+		AA0F65742F0D3E6E00D07A75 /* CheckBoxControlTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckBoxControlTVcell.xib; sourceTree = "<group>"; };
+		AA0F65762F0D3E7400D07A75 /* Radio2ItemsOnlyTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Radio2ItemsOnlyTVcell.xib; sourceTree = "<group>"; };
+		AA0F65782F0D3E7E00D07A75 /* TimePickerTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePickerTVcell.xib; sourceTree = "<group>"; };
+		AA0F657A2F0D3EA000D07A75 /* TextAreaTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextAreaTVcell.xib; sourceTree = "<group>"; };
+		AA0F657C2F0D3EA600D07A75 /* DatePickerTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DatePickerTVcell.xib; sourceTree = "<group>"; };
+		AA0F657E2F0D3EAB00D07A75 /* RangeDatePickerTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RangeDatePickerTVcell.xib; sourceTree = "<group>"; };
+		AA0F65802F0D3EB000D07A75 /* TextBoxTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextBoxTVcell.xib; sourceTree = "<group>"; };
+		AA0F65822F0D3EB500D07A75 /* LabelControleTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelControleTVcell.xib; sourceTree = "<group>"; };
+		AA0F65842F0D3EBA00D07A75 /* LinkTVcellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LinkTVcellTableViewCell.xib; sourceTree = "<group>"; };
+		AA0F65862F0D3EBF00D07A75 /* DateTimeRangePickerTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTimeRangePickerTVcell.xib; sourceTree = "<group>"; };
+		AA0F65882F0D3EC500D07A75 /* UploadMediaTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UploadMediaTVcell.xib; sourceTree = "<group>"; };
+		AA0F658A2F0D3EC900D07A75 /* MediaItemTVcell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MediaItemTVcell.xib; sourceTree = "<group>"; };
 		AA1E91112F0B30AA0034DCA2 /* DelegatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegatorModel.swift; sourceTree = "<group>"; };
 		AA3C310F2EF953B600C2778C /* FileActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileActionCell.swift; sourceTree = "<group>"; };
 		AA3C31142EF954A900C2778C /* AcknowledgeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AcknowledgeVC.swift; sourceTree = "<group>"; };
@@ -1554,6 +1590,14 @@
 		AA6833762F066AC30079DAD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AA0F65762F0D3E7400D07A75 /* Radio2ItemsOnlyTVcell.xib */,
+				AA0F65742F0D3E6E00D07A75 /* CheckBoxControlTVcell.xib */,
+				AA0F65722F0D3E6900D07A75 /* InfoIndicatorTVcell.xib */,
+				AA0F656E2F0D3E6100D07A75 /* SingleVisitorInfoTVcell.xib */,
+				AA0F656F2F0D3E6100D07A75 /* EmployeeInfoControlTVcell.xib */,
+				AA0F656C2F0D3E5200D07A75 /* SwitchTVcell.xib */,
+				AA0F656A2F0D3E3B00D07A75 /* tableControlTVcell.xib */,
+				AA0F65682F0D3E0200D07A75 /* SearchControlTVcell.xib */,
 				AA0F65662F0D3DB200D07A75 /* OptionTVcell.xib */,
 				AA817C842F0D306800A19B6B /* AddEditInvitedCV.xib */,
 				AA817C762F0D188300A19B6B /* EmptyTVcell.xib */,
@@ -1658,14 +1702,24 @@
 				AA6834052F066B040079DAD9 /* SubmittedSuccessRequestBottomSheet.xib */,
 				AA6834062F066B040079DAD9 /* SuccessAddEditEventVC.xib */,
 				AA6834072F066B040079DAD9 /* SuccessBottomSheetWithNavigationLinkVC.xib */,
+				AA0F65882F0D3EC500D07A75 /* UploadMediaTVcell.xib */,
 				AA6834082F066B040079DAD9 /* SummaryPagesTableViewCell.xib */,
 				AA6834092F066B040079DAD9 /* TableControlValueTVcell.xib */,
 				AA68340A2F066B040079DAD9 /* TableDetailsRowTVCell.xib */,
+				AA0F657E2F0D3EAB00D07A75 /* RangeDatePickerTVcell.xib */,
+				AA0F65802F0D3EB000D07A75 /* TextBoxTVcell.xib */,
+				AA0F657C2F0D3EA600D07A75 /* DatePickerTVcell.xib */,
 				AA68340B2F066B040079DAD9 /* TakeActionTVC.xib */,
+				AA0F658A2F0D3EC900D07A75 /* MediaItemTVcell.xib */,
+				AA0F65862F0D3EBF00D07A75 /* DateTimeRangePickerTVcell.xib */,
+				AA0F65842F0D3EBA00D07A75 /* LinkTVcellTableViewCell.xib */,
 				AA68340C2F066B040079DAD9 /* TextAreaTableViewCell.xib */,
 				AA68340D2F066B040079DAD9 /* TextBoxTableViewCell.xib */,
+				AA0F65822F0D3EB500D07A75 /* LabelControleTVcell.xib */,
+				AA0F657A2F0D3EA000D07A75 /* TextAreaTVcell.xib */,
 				AA68340E2F066B040079DAD9 /* UsersViewController.xib */,
 				AA68340F2F066B040079DAD9 /* WithdrawDDOptionTVcell.xib */,
+				AA0F65782F0D3E7E00D07A75 /* TimePickerTVcell.xib */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -4439,13 +4493,16 @@
 				AA6834172F066B040079DAD9 /* DeleteBottomSheet.strings in Resources */,
 				AA6834182F066B040079DAD9 /* ActionControlAttachmentsTVcell.xib in Resources */,
 				AA6834192F066B040079DAD9 /* BaseList.xib in Resources */,
+				AA0F65772F0D3E7400D07A75 /* Radio2ItemsOnlyTVcell.xib in Resources */,
 				AA68341A2F066B040079DAD9 /* DropDownTableViewCell.xib in Resources */,
+				AA0F65792F0D3E7E00D07A75 /* TimePickerTVcell.xib in Resources */,
 				AA68341B2F066B040079DAD9 /* AttachCommentCVcell.xib in Resources */,
 				AA68341C2F066B040079DAD9 /* ReportView.xib in Resources */,
 				AA68341D2F066B040079DAD9 /* SST Arabic Light.ttf in Resources */,
 				AA68341E2F066B040079DAD9 /* DatePickerPopup.xib in Resources */,
 				AA68341F2F066B040079DAD9 /* FillFreeSpaceTVcell.xib in Resources */,
 				AA6834202F066B040079DAD9 /* LocationTableViewCell.xib in Resources */,
+				AA0F65732F0D3E6900D07A75 /* InfoIndicatorTVcell.xib in Resources */,
 				AA6834212F066B040079DAD9 /* LabelView.xib in Resources */,
 				AA6834222F066B040079DAD9 /* SST Arabic Bold.ttf in Resources */,
 				AA6834232F066B040079DAD9 /* Poppins-Regular.ttf in Resources */,
@@ -4462,8 +4519,11 @@
 				AA68342F2F066B040079DAD9 /* LabelBottomSheetVC.xib in Resources */,
 				AA6834302F066B040079DAD9 /* DetailsEmptyStateTVcell.xib in Resources */,
 				AA6834312F066B040079DAD9 /* ConfirmationBottomSheetVC.xib in Resources */,
+				AA0F657F2F0D3EAB00D07A75 /* RangeDatePickerTVcell.xib in Resources */,
 				AA6834322F066B040079DAD9 /* AcknowledgeVC.xib in Resources */,
 				AA6834332F066B040079DAD9 /* ExpandedSectionHeader.xib in Resources */,
+				AA0F65702F0D3E6100D07A75 /* SingleVisitorInfoTVcell.xib in Resources */,
+				AA0F65712F0D3E6100D07A75 /* EmployeeInfoControlTVcell.xib in Resources */,
 				AA6834342F066B040079DAD9 /* NewInfoIndicatorTVcell.xib in Resources */,
 				AA6834352F066B040079DAD9 /* SliderTableViewCell.xib in Resources */,
 				AA6834362F066B040079DAD9 /* NestedValueDetailsVC.xib in Resources */,
@@ -4478,8 +4538,10 @@
 				AA68343E2F066B040079DAD9 /* EmpInfoTVC.xib in Resources */,
 				AA68343F2F066B040079DAD9 /* FaceRateTableViewCell.xib in Resources */,
 				AA6834402F066B040079DAD9 /* ShowMoreView.xib in Resources */,
+				AA0F65832F0D3EB500D07A75 /* LabelControleTVcell.xib in Resources */,
 				AA6834412F066B040079DAD9 /* SuccessAddEditEventVC.xib in Resources */,
 				AA6834422F066B040079DAD9 /* FormMediaItemView.xib in Resources */,
+				AA0F65692F0D3E0200D07A75 /* SearchControlTVcell.xib in Resources */,
 				AA6834432F066B040079DAD9 /* Assets.xcassets in Resources */,
 				AA6834442F066B040079DAD9 /* SectionTableViewCell.xib in Resources */,
 				AA6834452F066B040079DAD9 /* ChatFooterAttachmentCVcell.xib in Resources */,
@@ -4499,6 +4561,7 @@
 				AA6834522F066B040079DAD9 /* NewDropDownViewController.xib in Resources */,
 				AA6834532F066B040079DAD9 /* Poppins-Thin.ttf in Resources */,
 				AA6834542F066B040079DAD9 /* Poppins-Bold.ttf in Resources */,
+				AA0F656D2F0D3E5200D07A75 /* SwitchTVcell.xib in Resources */,
 				AA6834552F066B040079DAD9 /* DelegatorVC.xib in Resources */,
 				AA6834562F066B040079DAD9 /* mediaItemCVcell.xib in Resources */,
 				AA6834572F066B040079DAD9 /* NewSearchVC.xib in Resources */,
@@ -4514,24 +4577,31 @@
 				AA6834612F066B040079DAD9 /* DetailsTabsTVcell.xib in Resources */,
 				AA6834622F066B040079DAD9 /* NewCheckboxView.xib in Resources */,
 				AA6834632F066B040079DAD9 /* ActionControlTVcell.xib in Resources */,
+				AA0F65752F0D3E6E00D07A75 /* CheckBoxControlTVcell.xib in Resources */,
 				AA6834642F066B040079DAD9 /* NewSwitchCell.xib in Resources */,
 				AA6834652F066B040079DAD9 /* RichTextAreaTableViewCell.xib in Resources */,
+				AA0F657B2F0D3EA000D07A75 /* TextAreaTVcell.xib in Resources */,
 				AA6834662F066B040079DAD9 /* AttrebutedMediaItemTVcell.xib in Resources */,
+				AA0F65872F0D3EBF00D07A75 /* DateTimeRangePickerTVcell.xib in Resources */,
+				AA0F658B2F0D3EC900D07A75 /* MediaItemTVcell.xib in Resources */,
 				AA6834672F066B040079DAD9 /* NewMediaItemTVcell.xib in Resources */,
 				AA6834682F066B040079DAD9 /* TakeActionTVC.xib in Resources */,
 				AA6834692F066B040079DAD9 /* NewDatePickerPopup.xib in Resources */,
 				AA68346A2F066B040079DAD9 /* FileActionsView.xib in Resources */,
+				AA0F657D2F0D3EA600D07A75 /* DatePickerTVcell.xib in Resources */,
 				AA68346B2F066B040079DAD9 /* DateTableViewCell.xib in Resources */,
 				AAA921FF2F068E3C007C7AB6 /* DropDownCell.xib in Resources */,
 				AA68346C2F066B040079DAD9 /* ChatEmptyTVcell.xib in Resources */,
 				AA68346D2F066B040079DAD9 /* CheckBoxCell.xib in Resources */,
 				AA68346E2F066B040079DAD9 /* MCQTableViewCell.xib in Resources */,
+				AA0F65852F0D3EBA00D07A75 /* LinkTVcellTableViewCell.xib in Resources */,
 				AA817C772F0D188300A19B6B /* EmptyTVcell.xib in Resources */,
 				AA68346F2F066B040079DAD9 /* WithdrawDDOptionTVcell.xib in Resources */,
 				AA6834702F066B040079DAD9 /* NewFormBuilder.storyboard in Resources */,
 				AA6834712F066B040079DAD9 /* DeleteBottomSheet.xib in Resources */,
 				AA6834722F066B040079DAD9 /* ExpandedTableHeader.xib in Resources */,
 				AA6834732F066B040079DAD9 /* Poppins-Medium.ttf in Resources */,
+				AA0F65892F0D3EC500D07A75 /* UploadMediaTVcell.xib in Resources */,
 				AA6834742F066B040079DAD9 /* MapTableViewCell.xib in Resources */,
 				AA6834752F066B040079DAD9 /* SuccessBottomSheetWithNavigationLinkVC.xib in Resources */,
 				AA6834762F066B040079DAD9 /* ExecuteActionTVcell.xcstrings in Resources */,
@@ -4552,6 +4622,7 @@
 				AA6834852F066B040079DAD9 /* FileWebViewController.xib in Resources */,
 				AA6834862F066B040079DAD9 /* DeleteBottomSheet.strings in Resources */,
 				AA6834872F066B040079DAD9 /* Poppins-SemiBold.ttf in Resources */,
+				AA0F656B2F0D3E3B00D07A75 /* tableControlTVcell.xib in Resources */,
 				AA6834882F066B040079DAD9 /* SST Arabic Medium.ttf in Resources */,
 				AA6834892F066B040079DAD9 /* WithDrawBottomSheet.xcstrings in Resources */,
 				AA68348A2F066B040079DAD9 /* RequestDetailsView.xib in Resources */,
@@ -4563,6 +4634,7 @@
 				AA6834902F066B040079DAD9 /* ParagraphTableViewCell.xib in Resources */,
 				AA6834912F066B040079DAD9 /* ActionBaseListTableViewCell.xib in Resources */,
 				AA6834922F066B040079DAD9 /* CustomCalender.xib in Resources */,
+				AA0F65812F0D3EB000D07A75 /* TextBoxTVcell.xib in Resources */,
 				AA6834932F066B040079DAD9 /* ReqInfoTVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

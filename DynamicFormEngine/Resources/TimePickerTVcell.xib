@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SST Arabic Roman.ttf">
+            <string>SSTArabic-Roman</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="97" id="KGk-i7-Jjw" customClass="TimePickerTVcell" customModule="GAZT" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ap3-Zs-OiA">
+                        <rect key="frame" x="20" y="8" width="280" height="81"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TG-aa-os7">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="14"/>
+                                <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="12"/>
+                                <color key="textColor" name="DarkBlack"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1mh-6C-QcZ">
+                                <rect key="frame" x="0.0" y="22" width="280" height="7"/>
+                                <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="10"/>
+                                <color key="textColor" name="blue_grey"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8L-oF-6pp">
+                                <rect key="frame" x="0.0" y="37" width="280" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcG-Qc-AMh">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="P4w-w7-MXP"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SSTArabic-Roman" family="SST Arabic" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                                <real key="value" value="0.5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nOI-X5-4Ue">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="44"/>
+                                        <connections>
+                                            <action selector="didTapFromDateBtn" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dsu-mx-di9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="beige"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RcG-Qc-AMh" secondAttribute="bottom" id="0Lp-Gt-TDF"/>
+                                    <constraint firstItem="RcG-Qc-AMh" firstAttribute="leading" secondItem="M8L-oF-6pp" secondAttribute="leading" id="6kn-YE-Bns"/>
+                                    <constraint firstAttribute="bottom" secondItem="nOI-X5-4Ue" secondAttribute="bottom" id="76G-vc-xbg"/>
+                                    <constraint firstAttribute="trailing" secondItem="nOI-X5-4Ue" secondAttribute="trailing" id="EnW-jq-Xr8"/>
+                                    <constraint firstItem="nOI-X5-4Ue" firstAttribute="leading" secondItem="M8L-oF-6pp" secondAttribute="leading" id="LGq-zb-tvV"/>
+                                    <constraint firstAttribute="trailing" secondItem="RcG-Qc-AMh" secondAttribute="trailing" id="aOU-Y0-u1N"/>
+                                    <constraint firstItem="RcG-Qc-AMh" firstAttribute="top" secondItem="M8L-oF-6pp" secondAttribute="top" id="hKa-1j-3Ra"/>
+                                    <constraint firstItem="nOI-X5-4Ue" firstAttribute="top" secondItem="M8L-oF-6pp" secondAttribute="top" id="yUU-Mu-max"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                        <color key="value" name="light_periwinkle"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ap3-Zs-OiA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Dtg-Bq-tBY"/>
+                    <constraint firstAttribute="trailing" secondItem="ap3-Zs-OiA" secondAttribute="trailing" constant="20" id="b4j-wF-mBt"/>
+                    <constraint firstItem="ap3-Zs-OiA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="hk3-fm-qH4"/>
+                    <constraint firstAttribute="bottom" secondItem="ap3-Zs-OiA" secondAttribute="bottom" constant="8" id="xx3-gU-zmN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="descriptionLbl" destination="1mh-6C-QcZ" id="6NI-Nv-ahR"/>
+                <outlet property="titleLbl" destination="2TG-aa-os7" id="Ulb-v4-djk"/>
+                <outlet property="valueTF" destination="RcG-Qc-AMh" id="NcN-0p-aqC"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="61.272321428571423"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DarkBlack">
+            <color red="0.13725490196078433" green="0.16078431372549021" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="beige">
+            <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="blue_grey">
+            <color red="0.52499997615814209" green="0.53299999237060547" blue="0.57999998331069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="light_periwinkle">
+            <color red="0.86274509803921573" green="0.8666666666666667" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

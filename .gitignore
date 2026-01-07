@@ -4,7 +4,7 @@ xcuserdata/
 *.ipa
 *.dSYM.zip
 *.dSYM
-*.DS_Store
+**/.DS_Store
 timeline.xctimeline
 playground.xcworkspace
 

@@ -5,7 +5,6 @@
 //  Created by Yasser Osama on 09/05/2022.
 //
 
-public import ObjectMapper
 import ObjectiveC
 
 typealias BaseLocalization = [String: BasePropertiesLocalization]
@@ -1312,7 +1311,7 @@ public struct MCQOption: Codable, Mappable, Hashable {
     public var name: String?
     public var name_ar: String?
     
-    public init?(map: Map) {
+     init?(map: Map) {
         //empty
     }
     
@@ -1322,7 +1321,7 @@ public struct MCQOption: Codable, Mappable, Hashable {
         self.name_ar = name_ar
     }
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         name_ar <- map["name_ar"]

@@ -7,7 +7,7 @@
 //
 
 import Foundation
-internal import ObjectMapper
+
 
 public struct ModelPerviewUser : Codable {
     public var data : UserProfileInfoAD? = nil

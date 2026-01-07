@@ -7,7 +7,6 @@
 //
 
 import Foundation
-public import ObjectMapper
 
 public let Service_Name_LeavesCerqel = "Leaves"
 public let service_Name_NewEmployeeImprovement_PlanCerqel = "newEmployeeImprovementPlan"
@@ -759,9 +758,9 @@ public struct VisitorInfoCerqel : Codable, Mappable, FormValueCerqel {
 
     
     public init(){}
-    public init?(map: Map) {}
+    init?(map: Map) {}
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         name <- map["name"]
         mobileNumber <- map["mobileNumber"]
         nationalPassport <- map["nationalPassport"]

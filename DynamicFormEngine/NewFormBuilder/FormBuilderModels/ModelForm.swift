@@ -7,7 +7,6 @@
 //
 
 import Foundation
-public import ObjectMapper
 
 public let Service_Name_Leaves = "Leaves"
 public let service_Name_NewEmployeeImprovement_Plan = "newEmployeeImprovementPlan"
@@ -384,9 +383,9 @@ public struct OptionsInProp : Codable, Mappable {
     public var name : String?
     public var name_ar : String?
 
-    public init?(map: Map) {}
+    init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         name_ar <- map["name_ar"]

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-public import ObjectMapper
 
 public struct BackwardModelRequestDetailsData : Codable {
     var id: String?
@@ -259,9 +258,9 @@ public struct BackwardViewForm: Codable, Mappable {
     
     // MARK: - Mappable Implementation
     
-    public init?(map: Map) {}
+     init?(map: Map) {}
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         weight               <- map["Weight"]
         rules                <- map["Rules"]
         id                   <- map["Id"]
@@ -346,9 +345,9 @@ public struct BackwardRules: Codable, Mappable {
     
     // MARK: - Mappable Implementation
     
-    public init?(map: Map) {}
+    init?(map: Map) {}
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         effectIn  <- map["EffectIn"]
         dependOn  <- map["DependOn"]
     }
@@ -383,9 +382,9 @@ public struct BackwardWeight: Codable, Mappable {
     
     // MARK: - Mappable Implementation
     
-    public init?(map: Map) {}
+    init?(map: Map) {}
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         value      <- map["Value"]
         criteria   <- map["Criteria"]
     }
@@ -502,9 +501,9 @@ public struct BackwardProperties: Codable, Mappable {
     }
     
     // MARK: - Mappable Implementation
-    public init?(map: Map) {}
+    init?(map: Map) {}
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         disabledMonths      <- map["DisabledMonths"]
         placeholder         <- map["Placeholder"]
         style               <- map["Style"]
@@ -721,7 +720,7 @@ public struct BackwardDefaultAnswer: Codable, Mappable {
     }
     
     // Mappable initializer
-    public init?(map: Map) {
+    init?(map: Map) {
         id = nil
         name = nil
         rowIndex = nil
@@ -729,7 +728,7 @@ public struct BackwardDefaultAnswer: Codable, Mappable {
     }
     
     // Mappable mapping function
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         id <- map["Id"]
         name <- map["Name"]
         rowIndex <- map["RowIndex"]

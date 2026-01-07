@@ -1,5 +1,5 @@
 {
-  "originHash" : "6e18c0cd495052b2fab5f3e300fa8e0116eb30d30c77aa95054ac9e8dd9fde7a",
+  "originHash" : "b54f9dcb6a8726d4dc46d20dfb0dd67f78e897f9cb1d1850518fbcc79ef9c71d",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -161,15 +161,6 @@
       "state" : {
         "revision" : "8696b2e3e89dd3a5dc502f53329b0d70858c4175",
         "version" : "0.4.0"
-      }
-    },
-    {
-      "identity" : "objectmapper",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/tristanhimmelman/ObjectMapper.git",
-      "state" : {
-        "revision" : "6021c6035e83a306047348666f6400dc61445d3b",
-        "version" : "4.4.3"
       }
     },
     {

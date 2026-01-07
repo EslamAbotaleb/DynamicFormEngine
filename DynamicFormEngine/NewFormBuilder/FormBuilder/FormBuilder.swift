@@ -8,7 +8,7 @@
 internal import Alamofire
 internal import Expression
 import Foundation
-internal import ObjectMapper
+
 internal import RxCocoa
 internal import RxSwift
 import UIKit

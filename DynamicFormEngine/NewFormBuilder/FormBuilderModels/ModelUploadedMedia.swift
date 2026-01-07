@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-internal import ObjectMapper
+
 
 struct ModelUploadedMedia : Mappable, Codable, FormValue {
 

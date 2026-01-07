@@ -7,7 +7,6 @@
 //
 
 import Foundation
-public import ObjectMapper
 
 public enum ViewFormType: /*Codable,*/ Mappable {
     case viewForm(ViewForm)
@@ -15,7 +14,7 @@ public enum ViewFormType: /*Codable,*/ Mappable {
 
     // MARK: - Mappable Implementation
 
-    public init?(map: Map) {
+   init?(map: Map) {
         if let viewForm: ViewForm = try? map.value("viewForm") {
             self = .viewForm(viewForm)
             return
@@ -29,7 +28,7 @@ public enum ViewFormType: /*Codable,*/ Mappable {
         return nil
     }
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         switch self {
         case .viewForm(var viewForm):
             viewForm <- map["viewForm"]
@@ -76,9 +75,9 @@ public struct ModelRequestDetailsData: /*Codable,*/Mappable {
     var commentsCount: Int?
     var customerSystemCode: String?
     
-    public  init?(map: Map) {}
+    init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         id <- map["id"]
         requestSubmissionMobileVisibilityAndroid <- map["requestSubmissionMobileVisibilityAndroid"]
         status <- map["status"]
@@ -186,9 +185,9 @@ public struct Rules : Codable, Mappable {
         case dependOn = "dependOn"
     }
 
-    public init?(map: Map) {}
+    init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         effectIn <- map["effectIn"]
         dependOn <- map["dependOn"]
     }
@@ -210,9 +209,9 @@ public struct Weight : Codable, Mappable {
     public var value : Int?
 //    var criteria : String?
 
-    public init?(map: Map) {}
+    init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         value <- map["value"]
 //        criteria <- map["criteria"]
     }
@@ -269,9 +268,9 @@ public struct Properties: Codable, Mappable {
     public var options : [OptionsInProp]?
     public var isCollapsed: Bool?
     
-    public init?(map: Map) {}
+    init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         disabledMonths <- map["disabledMonths"]
         placeholder <- map["placeholder"]
         style <- map["style"]
@@ -448,9 +447,9 @@ public struct Localization : Codable, Mappable {
     public var en : En?
     public var ar : Ar?
 
-    public init?(map: Map) {}
+   init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         en <- map["en"]
         ar <- map["ar"]
     }
@@ -477,9 +476,9 @@ public struct En : Codable, Mappable {
     public var tooltip : String?
     public var fieldWarning : FieldWarning?
     
-    public init?(map: Map) {}
+    init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         label <- map["label"]
         placeholder <- map["placeholder"]
         sublabel <- map["sublabel"]
@@ -515,9 +514,9 @@ public struct Ar: Codable, Mappable {
     public var tooltip : String?
     public var fieldWarning : FieldWarning?
 
-    public init?(map: Map) {}
+    init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         label <- map["label"]
         placeholder <- map["placeholder"]
         sublabel <- map["sublabel"]
@@ -555,9 +554,9 @@ public struct FieldWarning: Codable, Mappable {
     public var minimumTime : String?
     public var allowedDaysRange : String?
     
-    public init?(map: Map) {}
+    init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         maximumDate <- map["maximumDate"]
         minimumDate <- map["minimumDate"]
         maximumTime <- map["maximumTime"]
@@ -625,7 +624,7 @@ public struct DefaultAnswer: Codable, Mappable {
     public var defaultValue: ValueType?
     public var type : String?
     
-    public init?(map: Map) {
+    init?(map: Map) {
     }
     
     public init(id: String?, name: String?, rowIndex: String?, defaultValue: ValueType?, type: String?) {
@@ -636,7 +635,7 @@ public struct DefaultAnswer: Codable, Mappable {
         self.type = type
     }
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
         rowIndex <- map["rowIndex"]
@@ -690,15 +689,15 @@ public struct AttachmentForDefault: Mappable, Codable {
         return  fileId != nil ? "\(cerqel_Environment.Api_Base_URL)Storage/api/FileManager/Preview/\(fileId!)" : nil
     }
     
-    public init?(map: Map) {}
+    init?(map: Map) {}
     
-    public  init?(id: String, name: String, fileExtension: String) {
+    public init?(id: String, name: String, fileExtension: String) {
         self.fileId = id
         self.fileName = name
         self.fileExtension = fileExtension
     }
 
-    public mutating func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         fileId <- map["attachmentId"]
         fileName <- map["attachmentName"]
         fileExtension <- map["attachmentExtension"]
@@ -749,9 +748,9 @@ public struct DDL: Codable, Mappable {
     public var RowIndex: String?
     public var Id: String?
     
-    public init?(map: Map) {}
+   init?(map: Map) {}
     
-    public mutating func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         Name <- map["name"]
         Value <- map["value"]
         RowIndex <- map["rowIndex"]
@@ -772,9 +771,9 @@ public struct BCDDL: Codable, Mappable {
     public var RowIndex: String?
     public var Id: String?
     
-    public init?(map: Map) {}
+   init?(map: Map) {}
     
-    public mutating func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         Name <- map["Name"]
         Value <- map["Value"]
         RowIndex <- map["RowIndex"]
@@ -794,7 +793,7 @@ public struct BCMCQOption: Codable, Mappable, Hashable {
     public var name: String?
     public var name_ar: String?
     
-    public init?(map: Map) {
+    init?(map: Map) {
         //empty
     }
     
@@ -810,7 +809,7 @@ public struct BCMCQOption: Codable, Mappable, Hashable {
         case name_ar = "nameAR"
     }
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         id <- map["id"]
         name <- map["nameEN"]
         name_ar <- map["nameAR"]
@@ -939,12 +938,12 @@ public enum ValueType: Codable, Mappable {
     }
     
     // Mappable initializer
-    public init?(map: Map) {
+    init?(map: Map) {
         self = .empty
     }
     
     // Mappable mapping function
-    public mutating func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         var singleString: String?
         var singleDouble: Double?
         var double: [Double]?
@@ -1837,9 +1836,9 @@ public struct ViewForm : /*Codable,*/ Mappable {
 //        case versionId = "versionId"
 //    }
     
-    public init?(map: Map) {}
+   init?(map: Map) {}
     
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         schema <- map["schema"]
         versionId <- map["versionId"]
     }
@@ -1867,9 +1866,9 @@ public struct Fields : Codable, Mappable {
         return !(visibilityPermissions?.contains("View") ?? true)
     }
     public var isInsideSection: Bool? = false
-    public  init?(map: Map) {}
+    init?(map: Map) {}
 
-    mutating public func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         weight <- map["weight"]
         rules <- map["rules"]
         id <- map["id"]

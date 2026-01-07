@@ -7,7 +7,7 @@
 //
 
 import Foundation
-internal import ObjectMapper
+
 
 struct ModelSubmitForm : Mappable {
     var payload : [SubmitFormPayload]?

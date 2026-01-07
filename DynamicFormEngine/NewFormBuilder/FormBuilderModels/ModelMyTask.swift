@@ -7,7 +7,7 @@
 //
 
 import Foundation
-internal import ObjectMapper
+
 
 public struct ModelMyTaskData : Codable {
     public let id : String?

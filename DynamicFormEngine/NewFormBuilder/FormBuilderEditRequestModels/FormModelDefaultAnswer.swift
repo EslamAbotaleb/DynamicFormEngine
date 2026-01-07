@@ -13,7 +13,7 @@
 //  Created by Yasser Osama on 09/05/2022.
 //
 
-internal import ObjectMapper
+
 
 class DefaultBaseAnswer: Mappable, Equatable {
     public static func == (lhs: DefaultBaseAnswer, rhs: DefaultBaseAnswer) -> Bool {

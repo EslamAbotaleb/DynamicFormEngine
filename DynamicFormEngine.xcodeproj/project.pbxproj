@@ -1940,7 +1940,7 @@
 		AA964ECF2EF4C3BA007651C2 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				AAC0E60E2EF6059200DDE9FF /* FormBuilder */,
+				AAC0E60E2EF6059200DDE9FF /* OldFormBuilder */,
 				AA964ED02EF4C3BF007651C2 /* MyPageXib */,
 			);
 			path = Xibs;
@@ -3535,7 +3535,24 @@
 			path = Packages;
 			sourceTree = "<group>";
 		};
-		AAC0E60E2EF6059200DDE9FF /* FormBuilder */ = {
+		AAB9595B2F0E57F2003F4100 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AAB9595C2F0E57FD003F4100 /* ViewModel */,
+				AA7193A52EF4331A00D31A70 /* BaseWireFrameDynamicForm.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AAB9595C2F0E57FD003F4100 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA7193A62EF4331A00D31A70 /* BaseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AAC0E60E2EF6059200DDE9FF /* OldFormBuilder */ = {
 			isa = PBXGroup;
 			children = (
 				AAADA0B72EF6C2210036FD04 /* ControlTVcell */,
@@ -3546,7 +3563,7 @@
 				AAADA0F82EF6C2210036FD04 /* ControlValidation.swift */,
 				AAADA0F92EF6C2210036FD04 /* ControlType.swift */,
 			);
-			path = FormBuilder;
+			path = OldFormBuilder;
 			sourceTree = "<group>";
 		};
 		AAC0E6672EF60CDF00DDE9FF /* Manager */ = {
@@ -3587,7 +3604,6 @@
 				AAC0ECD32EF61E0B00DDE9FF /* Models */,
 				AAC0ED002EF61E0B00DDE9FF /* Data */,
 				AAC0ED302EF61E0B00DDE9FF /* Reusable Components */,
-				AAC0ED852EF61E0B00DDE9FF /* CerqelModels */,
 				AAC0ED942EF61E0B00DDE9FF /* Networking */,
 				AAC0ED972EF61E0B00DDE9FF /* CERQEL Helpers */,
 				AAC0ED9C2EF61E0B00DDE9FF /* Base */,
@@ -3936,6 +3952,19 @@
 		AAC0ECD32EF61E0B00DDE9FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AAA5BFE42EFBF6B200FFE102 /* FormValueCerqel.swift */,
+				AAC0ED342EF61E0B00DDE9FF /* ModelUsersList.swift */,
+				AAC0ED362EF61E0B00DDE9FF /* tasksStatisticsModelCerqel.swift */,
+				AAC0ED3A2EF61E0B00DDE9FF /* MultipartModel.swift */,
+				AAADB95F2EF82E2400F696F3 /* ModelAnnouncementCerqel.swift */,
+				AAC0ED422EF61E0B00DDE9FF /* ModelCategoryCerqel.swift */,
+				AAC0ED432EF61E0B00DDE9FF /* ModelServiceSubCategoryCerqel.swift */,
+				AAC0ED452EF61E0B00DDE9FF /* ModelFormCerqel.swift */,
+				AAC0ED472EF61E0B00DDE9FF /* ModelRequestDetailsCerqel.swift */,
+				AAC0ED6B2EF61E0B00DDE9FF /* ColorCustomizationModelCerqel.swift */,
+				AAC0ED792EF61E0B00DDE9FF /* CerqelListModel.swift */,
+				AAC0ED802EF61E0B00DDE9FF /* ModelQuoteCerqel.swift */,
+				AAC0ED812EF61E0B00DDE9FF /* SuccessMessageResponse.swift */,
 				AAADBB2E2EF8607000F696F3 /* ListDTOModel.swift */,
 				AAADBA312EF83B3100F696F3 /* FilterModel */,
 				AAC0ECC52EF61E0B00DDE9FF /* ReportListItem.swift */,
@@ -4075,26 +4104,6 @@
 				AAC0EA742EF61E0100DDE9FF /* ActionBaseList */,
 			);
 			path = "Reusable Components";
-			sourceTree = "<group>";
-		};
-		AAC0ED852EF61E0B00DDE9FF /* CerqelModels */ = {
-			isa = PBXGroup;
-			children = (
-				AAA5BFE42EFBF6B200FFE102 /* FormValueCerqel.swift */,
-				AAC0ED342EF61E0B00DDE9FF /* ModelUsersList.swift */,
-				AAC0ED362EF61E0B00DDE9FF /* tasksStatisticsModelCerqel.swift */,
-				AAC0ED3A2EF61E0B00DDE9FF /* MultipartModel.swift */,
-				AAADB95F2EF82E2400F696F3 /* ModelAnnouncementCerqel.swift */,
-				AAC0ED422EF61E0B00DDE9FF /* ModelCategoryCerqel.swift */,
-				AAC0ED432EF61E0B00DDE9FF /* ModelServiceSubCategoryCerqel.swift */,
-				AAC0ED452EF61E0B00DDE9FF /* ModelFormCerqel.swift */,
-				AAC0ED472EF61E0B00DDE9FF /* ModelRequestDetailsCerqel.swift */,
-				AAC0ED6B2EF61E0B00DDE9FF /* ColorCustomizationModelCerqel.swift */,
-				AAC0ED792EF61E0B00DDE9FF /* CerqelListModel.swift */,
-				AAC0ED802EF61E0B00DDE9FF /* ModelQuoteCerqel.swift */,
-				AAC0ED812EF61E0B00DDE9FF /* SuccessMessageResponse.swift */,
-			);
-			path = CerqelModels;
 			sourceTree = "<group>";
 		};
 		AAC0ED902EF61E0B00DDE9FF /* Resource */ = {
@@ -4280,8 +4289,7 @@
 			isa = PBXGroup;
 			children = (
 				AA964ECF2EF4C3BA007651C2 /* Xibs */,
-				AA7193A52EF4331A00D31A70 /* BaseWireFrameDynamicForm.swift */,
-				AA7193A62EF4331A00D31A70 /* BaseViewModel.swift */,
+				AAB9595B2F0E57F2003F4100 /* Base */,
 				E47B21482B8F688000E22A45 /* DynamicFormView */,
 				E47B1E792B8F5EE000E22A45 /* FormDFViewModel.swift */,
 			);

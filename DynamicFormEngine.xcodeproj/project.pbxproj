@@ -1590,136 +1590,34 @@
 		AA6833762F066AC30079DAD9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				AA0F65762F0D3E7400D07A75 /* Radio2ItemsOnlyTVcell.xib */,
-				AA0F65742F0D3E6E00D07A75 /* CheckBoxControlTVcell.xib */,
-				AA0F65722F0D3E6900D07A75 /* InfoIndicatorTVcell.xib */,
-				AA0F656E2F0D3E6100D07A75 /* SingleVisitorInfoTVcell.xib */,
-				AA0F656F2F0D3E6100D07A75 /* EmployeeInfoControlTVcell.xib */,
-				AA0F656C2F0D3E5200D07A75 /* SwitchTVcell.xib */,
-				AA0F656A2F0D3E3B00D07A75 /* tableControlTVcell.xib */,
-				AA0F65682F0D3E0200D07A75 /* SearchControlTVcell.xib */,
-				AA0F65662F0D3DB200D07A75 /* OptionTVcell.xib */,
-				AA817C842F0D306800A19B6B /* AddEditInvitedCV.xib */,
-				AA817C762F0D188300A19B6B /* EmptyTVcell.xib */,
-				AAA921F92F068E3C007C7AB6 /* DropDownCell.xib */,
-				AA6833772F066B040079DAD9 /* ActionBaseListTableViewCell.xib */,
-				AA6833782F066B040079DAD9 /* ActionCommentTVcell.xib */,
-				AA6833792F066B040079DAD9 /* ActionControlAttachmentsTVcell.xib */,
-				AA68337A2F066B040079DAD9 /* ActionControlTVcell.xib */,
-				AA68337B2F066B040079DAD9 /* AddCommentBottomSheet.xib */,
+				AAB62F392F0E83C9003835B8 /* Radio */,
+				AAB62F382F0E839F003835B8 /* CheckBox */,
+				AAB62F4E2F0E8943003835B8 /* Common */,
+				AAB62F472F0E86DF003835B8 /* Table */,
+				AAB62F4B2F0E8852003835B8 /* Option */,
+				AAB62F3A2F0E83F8003835B8 /* Action */,
 				AA6833862F066B040079DAD9 /* ar.lproj */,
 				AA6833892F066B040079DAD9 /* assets */,
-				AA68338A2F066B040079DAD9 /* AttachCommentCVcell.xib */,
-				AA68338B2F066B040079DAD9 /* AttachmentNoteView.xib */,
-				AA68338C2F066B040079DAD9 /* AttrebutedMediaItemTVcell.xib */,
-				AA68338D2F066B040079DAD9 /* BackwardRequestDetailsView.xib */,
+				AAB62F4A2F0E87C3003835B8 /* Attachment */,
 				AA68339C2F066B040079DAD9 /* Base.lproj */,
-				AA68339D2F066B040079DAD9 /* BussenissCardSheetVC.xib */,
-				AA68339E2F066B040079DAD9 /* ChatEmptyTVcell.xib */,
-				AA68339F2F066B040079DAD9 /* ChatFooterAttachmentCVcell.xib */,
-				AA6833A02F066B040079DAD9 /* ChatFooterView.xib */,
-				AA6833A12F066B040079DAD9 /* ChatTVcell.xib */,
-				AA6833A22F066B040079DAD9 /* CheckBoxCell.xib */,
-				AA6833A32F066B040079DAD9 /* CheckBoxView.xib */,
-				AA6833A42F066B040079DAD9 /* ConfirmationBottomSheetVC.xib */,
-				AA6833A52F066B040079DAD9 /* CustomCalender.xib */,
-				AA6833A62F066B040079DAD9 /* DatePickerPopup.xib */,
-				AA6833A72F066B040079DAD9 /* DateTableViewCell.xib */,
-				AA6833A82F066B040079DAD9 /* DelegatorVC.xib */,
-				AA6833A92F066B040079DAD9 /* DetailsEmptyStateTVcell.xib */,
-				AA6833AA2F066B040079DAD9 /* DetailsTabsTVcell.xib */,
-				AA6833AB2F066B040079DAD9 /* DownloadAttTvcell.xib */,
-				AA6833AC2F066B040079DAD9 /* DropDownItemTableViewCell.xib */,
-				AA6833AD2F066B040079DAD9 /* DropDownTableViewCell.xib */,
-				AA6833AE2F066B040079DAD9 /* EmpInfoTVC.xib */,
-				AA6833AF2F066B040079DAD9 /* EmptyPreviousActionsTVcell.xib */,
-				AA6833B02F066B040079DAD9 /* EmptyTableViewCell.xib */,
+				AAB62F3B2F0E8419003835B8 /* Chat */,
+				AAB62F3E2F0E846C003835B8 /* DateTime */,
+				AAB62F442F0E8655003835B8 /* Details */,
+				AAB62F412F0E84F8003835B8 /* DropDown */,
+				AAB62F422F0E8545003835B8 /* Empty */,
 				AA6833B32F066B040079DAD9 /* en.lproj */,
-				AA6833B42F066B040079DAD9 /* ExpandedSectionHeader.xib */,
-				AA6833B52F066B040079DAD9 /* ExpandedTableHeader.xib */,
-				AA6833B62F066B040079DAD9 /* ExpandNoteFooterView.xib */,
-				AA6833B72F066B040079DAD9 /* FaceRateTableViewCell.xib */,
-				AA6833B82F066B040079DAD9 /* FeedbackBottomSheetView.xib */,
-				AA6833B92F066B040079DAD9 /* FileActionCell.xib */,
-				AA6833BA2F066B040079DAD9 /* FileActionsView.xib */,
-				AA6833BB2F066B040079DAD9 /* FileView.xib */,
-				AA6833BC2F066B040079DAD9 /* FileWebViewController.xib */,
-				AA6833BD2F066B040079DAD9 /* FillFreeSpaceTVcell.xib */,
+				AAB62F3D2F0E844F003835B8 /* Expanded */,
+				AAB62F3C2F0E8438003835B8 /* File */,
 				AA6833CA2F066B040079DAD9 /* Fonts */,
-				AA6833CB2F066B040079DAD9 /* FormMediaItemView.xib */,
-				AA6833CC2F066B040079DAD9 /* FormVC.xib */,
-				AA6833CD2F066B040079DAD9 /* LabelBottomSheetVC.xib */,
-				AA6833CE2F066B040079DAD9 /* LabelSheetWithSwitchTVCell.xib */,
-				AA6833CF2F066B040079DAD9 /* LabelView.xib */,
-				AA6833D02F066B040079DAD9 /* LocationNameView.xib */,
-				AA6833D12F066B040079DAD9 /* LocationTableViewCell.xib */,
-				AA6833D22F066B040079DAD9 /* MapTableViewCell.xib */,
-				AA6833D32F066B040079DAD9 /* MCQTableViewCell.xib */,
-				AA6833D42F066B040079DAD9 /* mediaItemCVcell.xib */,
+				AAB62F4C2F0E889B003835B8 /* Media */,
+				AAB62F3F2F0E84B6003835B8 /* Label */,
+				AAB62F402F0E84D4003835B8 /* Location */,
 				AA6833D92F066B040079DAD9 /* mul.lproj */,
-				AA6833DA2F066B040079DAD9 /* NestedFormViewController.storyboard */,
-				AA6833DB2F066B040079DAD9 /* NestedValueDetailsVC.xib */,
-				AA6833DC2F066B040079DAD9 /* NewChatTVCell.xib */,
-				AA6833DD2F066B040079DAD9 /* NewCheckBoxTVCell.xib */,
-				AA6833DE2F066B040079DAD9 /* NewCheckboxView.xib */,
-				AA6833DF2F066B040079DAD9 /* NewDatePickerPopup.xib */,
-				AA6833E02F066B040079DAD9 /* NewDatePickerTVCell.xib */,
-				AA6833E12F066B040079DAD9 /* NewDropDownTVCell.xib */,
-				AA6833E22F066B040079DAD9 /* NewDropDownViewController.xib */,
-				AA6833E32F066B040079DAD9 /* NewFormBuilder.storyboard */,
-				AA6833E42F066B040079DAD9 /* NewInfoIndicatorTVcell.xib */,
-				AA6833E52F066B040079DAD9 /* NewLblTVcell.xib */,
-				AA6833E62F066B040079DAD9 /* NewLinkControlTVcell.xib */,
-				AA6833E72F066B040079DAD9 /* NewMediaItemTVcell.xib */,
-				AA6833E82F066B040079DAD9 /* NewOptionTVCell.xib */,
-				AA6833E92F066B040079DAD9 /* NewSearchVC.xib */,
-				AA6833EA2F066B040079DAD9 /* NewSwitchCell.xib */,
-				AA6833EB2F066B040079DAD9 /* NewTableControlTVCell.xib */,
-				AA6833EC2F066B040079DAD9 /* NewTextAreaTVcell.xib */,
-				AA6833ED2F066B040079DAD9 /* NewTextBoxTVCell.xib */,
-				AA6833EE2F066B040079DAD9 /* NewUploadMediaTVcell.xib */,
-				AA6833EF2F066B040079DAD9 /* NPSTableViewCell.xib */,
-				AA6833F02F066B040079DAD9 /* OtherOptionView.xib */,
-				AA6833F12F066B040079DAD9 /* ParagraphTableViewCell.xib */,
-				AA6833F22F066B040079DAD9 /* PreviousActionsTVC.xib */,
-				AA6833F32F066B040079DAD9 /* PreviousActionV2TVC.xib */,
-				AA6833F42F066B040079DAD9 /* ProfilePhoneTypesCell.xib */,
-				AA6833F52F066B040079DAD9 /* RadioCell.xib */,
-				AA6833F62F066B040079DAD9 /* RateTableViewCell.xib */,
-				AA6833F72F066B040079DAD9 /* ReqInfoTVC.xib */,
-				AA6833F82F066B040079DAD9 /* reqTaskCommentTVcell.xib */,
-				AA6833F92F066B040079DAD9 /* RequestDetailsView.xib */,
-				AA6833FA2F066B040079DAD9 /* RequestSummaryVC.xib */,
-				AA6833FB2F066B040079DAD9 /* RichTextAreaTableViewCell.xib */,
-				AA6833FC2F066B040079DAD9 /* RichTextView.xib */,
-				AA6833FE2F066B040079DAD9 /* SectionTableViewCell.xib */,
-				AA6833FF2F066B040079DAD9 /* SendBackVC.xib */,
-				AA6834002F066B040079DAD9 /* ServiceSummaryPagesVC.xib */,
-				AA6834012F066B040079DAD9 /* ShowHideEmptyFieldsView.xib */,
-				AA6834022F066B040079DAD9 /* ShowMoreView.xib */,
-				AA6834032F066B040079DAD9 /* SliderTableViewCell.xib */,
-				AA6834042F066B040079DAD9 /* SubmitTableViewCell.xib */,
-				AA6834052F066B040079DAD9 /* SubmittedSuccessRequestBottomSheet.xib */,
-				AA6834062F066B040079DAD9 /* SuccessAddEditEventVC.xib */,
-				AA6834072F066B040079DAD9 /* SuccessBottomSheetWithNavigationLinkVC.xib */,
-				AA0F65882F0D3EC500D07A75 /* UploadMediaTVcell.xib */,
-				AA6834082F066B040079DAD9 /* SummaryPagesTableViewCell.xib */,
-				AA6834092F066B040079DAD9 /* TableControlValueTVcell.xib */,
-				AA68340A2F066B040079DAD9 /* TableDetailsRowTVCell.xib */,
-				AA0F657E2F0D3EAB00D07A75 /* RangeDatePickerTVcell.xib */,
-				AA0F65802F0D3EB000D07A75 /* TextBoxTVcell.xib */,
-				AA0F657C2F0D3EA600D07A75 /* DatePickerTVcell.xib */,
-				AA68340B2F066B040079DAD9 /* TakeActionTVC.xib */,
-				AA0F658A2F0D3EC900D07A75 /* MediaItemTVcell.xib */,
-				AA0F65862F0D3EBF00D07A75 /* DateTimeRangePickerTVcell.xib */,
-				AA0F65842F0D3EBA00D07A75 /* LinkTVcellTableViewCell.xib */,
-				AA68340C2F066B040079DAD9 /* TextAreaTableViewCell.xib */,
-				AA68340D2F066B040079DAD9 /* TextBoxTableViewCell.xib */,
-				AA0F65822F0D3EB500D07A75 /* LabelControleTVcell.xib */,
-				AA0F657A2F0D3EA000D07A75 /* TextAreaTVcell.xib */,
-				AA68340E2F066B040079DAD9 /* UsersViewController.xib */,
-				AA68340F2F066B040079DAD9 /* WithdrawDDOptionTVcell.xib */,
-				AA0F65782F0D3E7E00D07A75 /* TimePickerTVcell.xib */,
+				AAB62F492F0E879A003835B8 /* Storyboard */,
+				AAB62F452F0E8699003835B8 /* Text */,
+				AAB62F462F0E86BE003835B8 /* Request */,
+				AAB62F432F0E8563003835B8 /* RichText */,
+				AAB62F482F0E873F003835B8 /* Submit */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -3521,6 +3419,284 @@
 			path = AcknowledgeVM;
 			sourceTree = "<group>";
 		};
+		AAB62F382F0E839F003835B8 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833DD2F066B040079DAD9 /* NewCheckBoxTVCell.xib */,
+				AA6833DE2F066B040079DAD9 /* NewCheckboxView.xib */,
+				AA0F65742F0D3E6E00D07A75 /* CheckBoxControlTVcell.xib */,
+				AA6833A22F066B040079DAD9 /* CheckBoxCell.xib */,
+				AA6833A32F066B040079DAD9 /* CheckBoxView.xib */,
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
+		AAB62F392F0E83C9003835B8 /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				AA0F65762F0D3E7400D07A75 /* Radio2ItemsOnlyTVcell.xib */,
+				AA6833F52F066B040079DAD9 /* RadioCell.xib */,
+				AA6833F62F066B040079DAD9 /* RateTableViewCell.xib */,
+			);
+			path = Radio;
+			sourceTree = "<group>";
+		};
+		AAB62F3A2F0E83F8003835B8 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				AA68340B2F066B040079DAD9 /* TakeActionTVC.xib */,
+				AA6833F22F066B040079DAD9 /* PreviousActionsTVC.xib */,
+				AA6833F32F066B040079DAD9 /* PreviousActionV2TVC.xib */,
+				AA6833772F066B040079DAD9 /* ActionBaseListTableViewCell.xib */,
+				AA6833782F066B040079DAD9 /* ActionCommentTVcell.xib */,
+				AA6833792F066B040079DAD9 /* ActionControlAttachmentsTVcell.xib */,
+				AA68337A2F066B040079DAD9 /* ActionControlTVcell.xib */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		AAB62F3B2F0E8419003835B8 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				AA68339E2F066B040079DAD9 /* ChatEmptyTVcell.xib */,
+				AA68339F2F066B040079DAD9 /* ChatFooterAttachmentCVcell.xib */,
+				AA6833A02F066B040079DAD9 /* ChatFooterView.xib */,
+				AA6833A12F066B040079DAD9 /* ChatTVcell.xib */,
+				AA6833DC2F066B040079DAD9 /* NewChatTVCell.xib */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		AAB62F3C2F0E8438003835B8 /* File */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833B92F066B040079DAD9 /* FileActionCell.xib */,
+				AA6833BA2F066B040079DAD9 /* FileActionsView.xib */,
+				AA6833BB2F066B040079DAD9 /* FileView.xib */,
+				AA6833BC2F066B040079DAD9 /* FileWebViewController.xib */,
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		AAB62F3D2F0E844F003835B8 /* Expanded */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833B42F066B040079DAD9 /* ExpandedSectionHeader.xib */,
+				AA6833B52F066B040079DAD9 /* ExpandedTableHeader.xib */,
+				AA6833B62F066B040079DAD9 /* ExpandNoteFooterView.xib */,
+			);
+			path = Expanded;
+			sourceTree = "<group>";
+		};
+		AAB62F3E2F0E846C003835B8 /* DateTime */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833A52F066B040079DAD9 /* CustomCalender.xib */,
+				AA0F65862F0D3EBF00D07A75 /* DateTimeRangePickerTVcell.xib */,
+				AA0F657E2F0D3EAB00D07A75 /* RangeDatePickerTVcell.xib */,
+				AA6833DF2F066B040079DAD9 /* NewDatePickerPopup.xib */,
+				AA6833E02F066B040079DAD9 /* NewDatePickerTVCell.xib */,
+				AA6833A62F066B040079DAD9 /* DatePickerPopup.xib */,
+				AA6833A72F066B040079DAD9 /* DateTableViewCell.xib */,
+				AA0F657C2F0D3EA600D07A75 /* DatePickerTVcell.xib */,
+				AA0F65782F0D3E7E00D07A75 /* TimePickerTVcell.xib */,
+			);
+			path = DateTime;
+			sourceTree = "<group>";
+		};
+		AAB62F3F2F0E84B6003835B8 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833CD2F066B040079DAD9 /* LabelBottomSheetVC.xib */,
+				AA6833CE2F066B040079DAD9 /* LabelSheetWithSwitchTVCell.xib */,
+				AA6833CF2F066B040079DAD9 /* LabelView.xib */,
+				AA0F65822F0D3EB500D07A75 /* LabelControleTVcell.xib */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		AAB62F402F0E84D4003835B8 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833D02F066B040079DAD9 /* LocationNameView.xib */,
+				AA6833D12F066B040079DAD9 /* LocationTableViewCell.xib */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		AAB62F412F0E84F8003835B8 /* DropDown */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833AC2F066B040079DAD9 /* DropDownItemTableViewCell.xib */,
+				AA6833AD2F066B040079DAD9 /* DropDownTableViewCell.xib */,
+				AA6833E12F066B040079DAD9 /* NewDropDownTVCell.xib */,
+				AA6833E22F066B040079DAD9 /* NewDropDownViewController.xib */,
+			);
+			path = DropDown;
+			sourceTree = "<group>";
+		};
+		AAB62F422F0E8545003835B8 /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833AF2F066B040079DAD9 /* EmptyPreviousActionsTVcell.xib */,
+				AA6833B02F066B040079DAD9 /* EmptyTableViewCell.xib */,
+				AA817C762F0D188300A19B6B /* EmptyTVcell.xib */,
+			);
+			path = Empty;
+			sourceTree = "<group>";
+		};
+		AAB62F432F0E8563003835B8 /* RichText */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833FB2F066B040079DAD9 /* RichTextAreaTableViewCell.xib */,
+				AA6833FC2F066B040079DAD9 /* RichTextView.xib */,
+			);
+			path = RichText;
+			sourceTree = "<group>";
+		};
+		AAB62F442F0E8655003835B8 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				AA68338D2F066B040079DAD9 /* BackwardRequestDetailsView.xib */,
+				AA6833A92F066B040079DAD9 /* DetailsEmptyStateTVcell.xib */,
+				AA6833AA2F066B040079DAD9 /* DetailsTabsTVcell.xib */,
+				AA6833DB2F066B040079DAD9 /* NestedValueDetailsVC.xib */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		AAB62F452F0E8699003835B8 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833EC2F066B040079DAD9 /* NewTextAreaTVcell.xib */,
+				AA6833ED2F066B040079DAD9 /* NewTextBoxTVCell.xib */,
+				AA0F65802F0D3EB000D07A75 /* TextBoxTVcell.xib */,
+				AA68340C2F066B040079DAD9 /* TextAreaTableViewCell.xib */,
+				AA68340D2F066B040079DAD9 /* TextBoxTableViewCell.xib */,
+				AA0F657A2F0D3EA000D07A75 /* TextAreaTVcell.xib */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		AAB62F462F0E86BE003835B8 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833F72F066B040079DAD9 /* ReqInfoTVC.xib */,
+				AA6833F82F066B040079DAD9 /* reqTaskCommentTVcell.xib */,
+				AA6833F92F066B040079DAD9 /* RequestDetailsView.xib */,
+				AA6833FA2F066B040079DAD9 /* RequestSummaryVC.xib */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		AAB62F472F0E86DF003835B8 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				AA6834082F066B040079DAD9 /* SummaryPagesTableViewCell.xib */,
+				AA0F65842F0D3EBA00D07A75 /* LinkTVcellTableViewCell.xib */,
+				AA6833B72F066B040079DAD9 /* FaceRateTableViewCell.xib */,
+				AA6833D22F066B040079DAD9 /* MapTableViewCell.xib */,
+				AA6833D32F066B040079DAD9 /* MCQTableViewCell.xib */,
+				AA6833EB2F066B040079DAD9 /* NewTableControlTVCell.xib */,
+				AA6833EF2F066B040079DAD9 /* NPSTableViewCell.xib */,
+				AA6833FE2F066B040079DAD9 /* SectionTableViewCell.xib */,
+				AA6834032F066B040079DAD9 /* SliderTableViewCell.xib */,
+				AA0F656A2F0D3E3B00D07A75 /* tableControlTVcell.xib */,
+				AA6834092F066B040079DAD9 /* TableControlValueTVcell.xib */,
+				AA68340A2F066B040079DAD9 /* TableDetailsRowTVCell.xib */,
+				AA6833F12F066B040079DAD9 /* ParagraphTableViewCell.xib */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		AAB62F482F0E873F003835B8 /* Submit */ = {
+			isa = PBXGroup;
+			children = (
+				AA6834042F066B040079DAD9 /* SubmitTableViewCell.xib */,
+				AA6834052F066B040079DAD9 /* SubmittedSuccessRequestBottomSheet.xib */,
+			);
+			path = Submit;
+			sourceTree = "<group>";
+		};
+		AAB62F492F0E879A003835B8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833DA2F066B040079DAD9 /* NestedFormViewController.storyboard */,
+				AA6833E32F066B040079DAD9 /* NewFormBuilder.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		AAB62F4A2F0E87C3003835B8 /* Attachment */ = {
+			isa = PBXGroup;
+			children = (
+				AA6833AB2F066B040079DAD9 /* DownloadAttTvcell.xib */,
+				AA68338A2F066B040079DAD9 /* AttachCommentCVcell.xib */,
+				AA68338B2F066B040079DAD9 /* AttachmentNoteView.xib */,
+			);
+			path = Attachment;
+			sourceTree = "<group>";
+		};
+		AAB62F4B2F0E8852003835B8 /* Option */ = {
+			isa = PBXGroup;
+			children = (
+				AA0F65662F0D3DB200D07A75 /* OptionTVcell.xib */,
+				AA6833E82F066B040079DAD9 /* NewOptionTVCell.xib */,
+				AA6833F02F066B040079DAD9 /* OtherOptionView.xib */,
+				AA68340F2F066B040079DAD9 /* WithdrawDDOptionTVcell.xib */,
+			);
+			path = Option;
+			sourceTree = "<group>";
+		};
+		AAB62F4C2F0E889B003835B8 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				AA68338C2F066B040079DAD9 /* AttrebutedMediaItemTVcell.xib */,
+				AA6833CB2F066B040079DAD9 /* FormMediaItemView.xib */,
+				AA6833D42F066B040079DAD9 /* mediaItemCVcell.xib */,
+				AA6833E72F066B040079DAD9 /* NewMediaItemTVcell.xib */,
+				AA6833EE2F066B040079DAD9 /* NewUploadMediaTVcell.xib */,
+				AA0F65882F0D3EC500D07A75 /* UploadMediaTVcell.xib */,
+				AA0F658A2F0D3EC900D07A75 /* MediaItemTVcell.xib */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		AAB62F4E2F0E8943003835B8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AA0F65722F0D3E6900D07A75 /* InfoIndicatorTVcell.xib */,
+				AA0F656E2F0D3E6100D07A75 /* SingleVisitorInfoTVcell.xib */,
+				AA0F656F2F0D3E6100D07A75 /* EmployeeInfoControlTVcell.xib */,
+				AA0F656C2F0D3E5200D07A75 /* SwitchTVcell.xib */,
+				AA0F65682F0D3E0200D07A75 /* SearchControlTVcell.xib */,
+				AA817C842F0D306800A19B6B /* AddEditInvitedCV.xib */,
+				AAA921F92F068E3C007C7AB6 /* DropDownCell.xib */,
+				AA68337B2F066B040079DAD9 /* AddCommentBottomSheet.xib */,
+				AA68339D2F066B040079DAD9 /* BussenissCardSheetVC.xib */,
+				AA6833A42F066B040079DAD9 /* ConfirmationBottomSheetVC.xib */,
+				AA6833A82F066B040079DAD9 /* DelegatorVC.xib */,
+				AA6833AE2F066B040079DAD9 /* EmpInfoTVC.xib */,
+				AA6833B82F066B040079DAD9 /* FeedbackBottomSheetView.xib */,
+				AA6833BD2F066B040079DAD9 /* FillFreeSpaceTVcell.xib */,
+				AA6833CC2F066B040079DAD9 /* FormVC.xib */,
+				AA6833E42F066B040079DAD9 /* NewInfoIndicatorTVcell.xib */,
+				AA6833E62F066B040079DAD9 /* NewLinkControlTVcell.xib */,
+				AA6833E52F066B040079DAD9 /* NewLblTVcell.xib */,
+				AA6833E92F066B040079DAD9 /* NewSearchVC.xib */,
+				AA6833EA2F066B040079DAD9 /* NewSwitchCell.xib */,
+				AA6833F42F066B040079DAD9 /* ProfilePhoneTypesCell.xib */,
+				AA6833FF2F066B040079DAD9 /* SendBackVC.xib */,
+				AA6834002F066B040079DAD9 /* ServiceSummaryPagesVC.xib */,
+				AA6834012F066B040079DAD9 /* ShowHideEmptyFieldsView.xib */,
+				AA6834022F066B040079DAD9 /* ShowMoreView.xib */,
+				AA6834062F066B040079DAD9 /* SuccessAddEditEventVC.xib */,
+				AA6834072F066B040079DAD9 /* SuccessBottomSheetWithNavigationLinkVC.xib */,
+				AA68340E2F066B040079DAD9 /* UsersViewController.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		AAB7BA632EF380FE000E4A20 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
@@ -3569,6 +3745,7 @@
 		AAC0E6672EF60CDF00DDE9FF /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				AAC0EC932EF61E0B00DDE9FF /* Toast */,
 				AAADB9692EF836B800F696F3 /* TokenManager.swift */,
 				AAADB9632EF82FEF00F696F3 /* BottomSheetItem.swift */,
 				AAC0E67F2EF60DA700DDE9FF /* CerqelUIManager.swift */,
@@ -3597,7 +3774,6 @@
 				AA3C310A2EF9469200C2778C /* SwiftUI */,
 				AAC0E6672EF60CDF00DDE9FF /* Manager */,
 				AAA8098C2EF93EC1001E845F /* Authentication */,
-				AAC0EC932EF61E0B00DDE9FF /* Toast */,
 				AAC0EC962EF61E0B00DDE9FF /* Popups */,
 				AAC0ECAE2EF61E0B00DDE9FF /* Helpers */,
 				AAC0ECBF2EF61E0B00DDE9FF /* Extensions */,
